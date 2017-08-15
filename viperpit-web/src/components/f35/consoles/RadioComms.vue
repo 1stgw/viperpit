@@ -1,0 +1,21 @@
+<template>
+<div class="container-fluid">
+  <h2>Radio Comms</h2>
+  <div class="row">
+  <div class="col-sm-12">
+    <general-radio-options />
+  </div>
+  </div>
+</div>
+</template>
+
+<script>
+import GeneralRadioOptions from '../panels/generalradiooptions/GeneralRadioOptions'
+
+export default {
+  name: 'RadioComms',
+  components: {
+    GeneralRadioOptions
+  }
+}
+</script>

@@ -1,0 +1,49 @@
+<div class="col-md-«12 / panelRow.groups.size»">
+    «IF group.type == "switch"»
+    <div>
+        <div align="center" style="padding: 0px;">
+            <div class="btn-group-vertical" role="group"
+                aria-label="«group.description»">
+                «FOR control : group.controls» <a
+                    [class.«group.type»-«control.role»-active]="isActive('«control.callback»')"
+                    (click)="request('«control.callback»')"
+                    type="button"
+                    class="btn «group.type»-«control.role» btn-block">«control.label»</a>
+                «ENDFOR»
+            </div>
+        </div>
+    </div>
+    «ELSE»
+    <div>
+        <div align="center" style="padding: 0px;">
+            <div class="btn-group-vertical" role="group"
+                aria-label="«group.description»">
+                «FOR control : group.controls» «IF control.role == "up"»
+                <a (click)="request('«control.callback»')" type="button"
+                    class="btn «group.type»-«control.role»"><span
+                    class="glyphicon glyphicon-triangle-top"
+                    aria-hidden="true"></span></a> «ELSEIF control.role ==
+                "down"» <a (click)="request('«control.callback»')"
+                    type="button"
+                    class="btn «group.type»-«control.role»"><span
+                    class="glyphicon glyphicon-triangle-bottom"
+                    aria-hidden="true"></span></a> «ELSEIF control.role ==
+                "left"» <a (click)="request('«control.callback»')"
+                    type="button"
+                    class="btn «group.type»-«control.role»"><span
+                    class="glyphicon glyphicon-triangle-left"
+                    aria-hidden="true"></span></a> «ELSEIF control.role ==
+                "right"» <a (click)="request('«control.callback»')"
+                    type="button"
+                    class="btn «group.type»-«control.role»"><span
+                    class="glyphicon glyphicon-triangle-right"
+                    aria-hidden="true"></span></a> «ELSE» <a
+                    (click)="request('«control.callback»')"
+                    type="button"
+                    class="btn «group.type»-«control.role»">«control.label»</a>
+                «ENDIF» «ENDFOR»
+            </div>
+        </div>
+    </div>
+    «ENDIF»
+</div>

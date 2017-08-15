@@ -1,0 +1,13 @@
+plugins {
+	id "org.xtext.xtend" version "1.0.15"
+}
+
+apply plugin: "java"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+	compile "com.google.code.gson:gson:2.2.4"
+	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.12.0")
+}

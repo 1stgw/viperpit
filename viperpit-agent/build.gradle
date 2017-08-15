@@ -1,0 +1,25 @@
+plugins {
+	id "org.xtext.xtend" version "1.0.15"
+}
+
+apply plugin: "java"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+	compile project(":viperpit-commons")
+	compile("org.slf4j:slf4j-api:1.7.24")
+	compile("ch.qos.logback:logback-classic:1.1.11")
+	compile("net.java.dev.jna:jna:4.2.2")
+	compile("net.java.dev.jna:jna-platform:4.2.2")
+	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.12.0")
+	compile("javax.websocket:javax.websocket-client-api:1.1")
+    compile("org.eclipse.jetty.websocket:javax-websocket-server-impl:9.4.6.v20170531")
+    compile("org.eclipse.jetty.websocket:javax-websocket-client-impl:9.4.6.v20170531")
+	compile("org.springframework.boot:spring-boot-starter:1.5.6.RELEASE")
+	compile("org.springframework.boot:spring-boot-starter-websocket:1.5.6.RELEASE") {
+		exclude module: "spring-boot-starter-tomcat"
+	}
+	testCompile("org.springframework.boot:spring-boot-starter-test:1.5.6.RELEASE")
+}

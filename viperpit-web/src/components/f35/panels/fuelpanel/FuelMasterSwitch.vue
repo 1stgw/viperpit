@@ -1,0 +1,33 @@
+<template>
+  <switch-group
+    id="FUEL: MASTER Switch"
+    description="FUEL: MASTER Switch - ON"
+    label="MASTER" 
+    type="switch">
+    <control
+      id="fuelmasterswitchon"
+      description="FUEL: MASTER Switch - ON"
+      label="ON"
+      type="switch"
+      role="on"/>
+    <control
+      id="fuelmasterswitchoff"
+      description="FUEL: MASTER Switch - OFF"
+      label="OFF"
+      type="switch"
+      role="off"/>
+  </switch-group>
+</template>
+
+<script>
+import Control from '../../controls/Control'
+import SwitchGroup from '../../controls/SwitchGroup'
+
+export default {
+  name: 'FuelMasterSwitch',
+  components: {
+    Control,
+    SwitchGroup
+  }
+}
+</script>

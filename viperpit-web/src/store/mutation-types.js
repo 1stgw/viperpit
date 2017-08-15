@@ -1,0 +1,4 @@
+export const FIRE_ACTION = 'FIRE_ACTION'
+export const LOAD_AGENTS = 'LOAD_AGENTS'
+export const LOAD_STATE = 'LOAD_STATE'
+export const LOAD_CONFIGURATION = 'LOAD_CONFIGURATION'
