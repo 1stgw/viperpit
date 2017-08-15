@@ -1,6 +1,5 @@
 <template>
 <div class="container-fluid">
-  <h2>Radio Comms</h2>
   <div class="row">
   <div class="col-sm-12">
     <general-radio-options />

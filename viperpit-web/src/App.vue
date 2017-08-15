@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-    Navigation Header
+    <router-link to="/maps">Maps</router-link> | Cockpits: <router-link to="/cockpits/f16">F-16</router-link> | <router-link to="/cockpits/f35">F-35</router-link>
     <router-view></router-view>
 </div>
 </template>

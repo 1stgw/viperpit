@@ -136,7 +136,6 @@ class WebApplicationGenerator {
 			write('''
 				<template>
 				<div class="container-fluid">
-					<h2>«console.name»</h2>
 					«FOR consoleRow : consoleRows»
 						<div class="row">
 						«FOR panelRowSet : consoleRow.panelRowSets»

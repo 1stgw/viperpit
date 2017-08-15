@@ -1,6 +1,5 @@
 <template>
 <div class="container-fluid">
-  <h2>Left Aux Console</h2>
   <div class="row">
   <div class="col-sm-6">
     <alt-gear-control />
