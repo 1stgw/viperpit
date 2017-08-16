@@ -1,4 +1,5 @@
 {
+  "agent" : null,
   "actions" : [ {
     "id" : "testfireoheatdetectbuttonhold",
     "callback" : "SimOverHeat",
@@ -5717,5 +5718,7 @@
     "active" : false,
     "stateful" : false,
     "relatedActions" : null
-  } ]
+  } ],
+  "byCallback" : null,
+  "byId" : null
 }

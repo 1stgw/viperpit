@@ -29,17 +29,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/services': {
-        target: 'http://localhost:9000',
+        target: 'http://[::1]:9000',
         changeOrigin: true,
         pathRewrite: {
           '^/services': '/viperpit/services'
-        }
-      },
-      '/sockets': {
-        target: 'ws://localhost:9000',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/sockets': '/viperpit/sockets'
         }
       }
     },

@@ -1,22 +1,32 @@
 <template>
 <div class="container-fluid">
-  <h1>F16</h1>
-  <div class="row">
-    <router-link to="/cockpits/f16/consoles/leftconsole">Left Console</router-link> | 
-    <router-link to="/cockpits/f16/consoles/leftauxconsole">Left Aux Console</router-link> | 
-    <router-link to="/cockpits/f16/consoles/centerconsole">Center Console</router-link> | 
-    <router-link to="/cockpits/f16/consoles/rightconsole">Right Console</router-link> | 
-    <router-link to="/cockpits/f16/consoles/miscellaneous">Miscellaneous</router-link> | 
-    <router-link to="/cockpits/f16/consoles/views">Views</router-link> | 
-    <router-link to="/cockpits/f16/consoles/radiocomms">Radio Comms</router-link>
+  <div v-if="isConnected">
+    <div class="row">
+      <router-link to="/cockpits/f16/consoles/leftconsole">Left Console</router-link> | 
+      <router-link to="/cockpits/f16/consoles/leftauxconsole">Left Aux Console</router-link> | 
+      <router-link to="/cockpits/f16/consoles/centerconsole">Center Console</router-link> | 
+      <router-link to="/cockpits/f16/consoles/rightconsole">Right Console</router-link> | 
+      <router-link to="/cockpits/f16/consoles/miscellaneous">Miscellaneous</router-link> | 
+      <router-link to="/cockpits/f16/consoles/views">Views</router-link> | 
+      <router-link to="/cockpits/f16/consoles/radiocomms">Radio Comms</router-link>
+    </div>
+    <div class="row">
+      <small>Connected to {{ getAgent }}</small>
+    </div>
+    <hr/>
+    <router-view></router-view>
   </div>
-  <hr/>
-  <router-view></router-view>
+  <div v-else>
+    <div class="alert alert-danger" role="alert">
+      <p><strong>No Joy...</strong></p>
+      <p>There is no Agent on Air.</p>
+    </div>
+  </div>
 </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import LeftConsole from '../consoles/LeftConsole'
 import LeftAuxConsole from '../consoles/LeftAuxConsole'
 import CenterConsole from '../consoles/CenterConsole'
@@ -40,11 +50,17 @@ export default {
   },
   methods: {
     ...mapActions([
-      'loadState'
+      'initialize'
+    ])
+  },
+  computed: {
+    ...mapGetters([
+      'getAgent',
+      'isConnected'
     ])
   },
   created () {
-    this.loadState()
+    this.initialize()
   }
 }
 </script>

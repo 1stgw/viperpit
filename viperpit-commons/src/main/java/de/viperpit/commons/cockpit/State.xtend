@@ -6,12 +6,23 @@ import org.eclipse.xtend.lib.annotations.Accessors
 import org.eclipse.xtend.lib.annotations.EqualsHashCode
 import org.eclipse.xtend.lib.annotations.ToString
 
+@Accessors
+@EqualsHashCode
 @ToString
 class State {
-	@Accessors Collection<Action> actions
+	Agent agent
+	Collection<Action> actions
 
 	transient var Map<String, Action> byCallback
 	transient var Map<String, Action> byId
+
+	new() {
+	}
+
+	new(Agent agent, Collection<Action> actions) {
+		this.agent = agent
+		this.actions = actions
+	}
 
 	def getBy(ActionEvent it) {
 		return getByCallback(callback)

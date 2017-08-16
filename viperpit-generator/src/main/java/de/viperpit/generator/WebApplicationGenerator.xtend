@@ -92,19 +92,29 @@ class WebApplicationGenerator {
 		write('''
 			<template>
 			<div class="container-fluid">
-				<h1>«profile.toFirstUpper»</h1>
-				<div class="row">
-					«FOR console : cockpit.consoles SEPARATOR " | "»
-						<router-link to="/cockpits/«profile»/consoles/«console.id»">«console.name»</router-link>
-					«ENDFOR»
+				<div v-if="isConnected">
+					<div class="row">
+						«FOR console : cockpit.consoles SEPARATOR " | "»
+							<router-link to="/cockpits/«profile»/consoles/«console.id»">«console.name»</router-link>
+						«ENDFOR»
+					</div>
+					<div class="row">
+						<small>Connected to {{ getAgent }}</small>
+					</div>
+					<hr/>
+					<router-view></router-view>
 				</div>
-				<hr/>
-				<router-view></router-view>
+				<div v-else>
+					<div class="alert alert-danger" role="alert">
+						<p><strong>No Joy...</strong></p>
+						<p>There is no Agent on Air.</p>
+					</div>
+				</div>
 			</div>
 			</template>
 			
 			<script>
-			import { mapActions } from 'vuex'
+			import { mapActions, mapGetters } from 'vuex'
 			«FOR console : cockpit.consoles»
 				import «console.clazz» from '../consoles/«console.clazz»'
 			«ENDFOR»
@@ -120,11 +130,17 @@ class WebApplicationGenerator {
 				},
 				methods: {
 					...mapActions([
-						'loadState'
+						'initialize'
+					])
+				},
+				computed: {
+					...mapGetters([
+						'getAgent',
+						'isConnected'
 					])
 				},
 				created () {
-					this.loadState()
+					this.initialize()
 				}
 			}
 			</script>
@@ -278,58 +294,55 @@ class WebApplicationGenerator {
 		]
 		write(cockpitConfiguration.writeValueAsString,
 			new File(pathForMetadata, '''configuration_cockpit.json'''.toString), UTF_8)
-		val stateConfigurationForRamp = new de.viperpit.commons.cockpit.State() => [
-			actions = configuration.actions.map [ action |
-				new de.viperpit.commons.cockpit.Action() => [
-					id = action.id
-					callback = action.callback
-					if (action.state !== null) {
-						active = action.state.ramp
-						stateful = true
-					} else {
-						active = false
-						stateful = false
-					}
-					relatedActions = action.relatedActions
-				]
-			].toList
-		]
+		val actionsForRamp = configuration.actions.map [ action |
+			new de.viperpit.commons.cockpit.Action() => [
+				id = action.id
+				callback = action.callback
+				if (action.state !== null) {
+					active = action.state.ramp
+					stateful = true
+				} else {
+					active = false
+					stateful = false
+				}
+				relatedActions = action.relatedActions
+			]
+		].toList
+		val stateConfigurationForRamp = new de.viperpit.commons.cockpit.State(null, actionsForRamp) => []
 		write(stateConfigurationForRamp.writeValueAsString, new File(pathForMetadata, '''states_air.json'''.toString),
 			UTF_8)
-		val stateConfigurationForGround = new de.viperpit.commons.cockpit.State() => [
-			actions = configuration.actions.map [ action |
-				new de.viperpit.commons.cockpit.Action() => [
-					id = action.id
-					callback = action.callback
-					if (action.state !== null) {
-						active = action.state.ground
-						stateful = true
-					} else {
-						active = false
-						stateful = false
-					}
-					relatedActions = action.relatedActions
-				]
-			].toList
-		]
+		val actionsForGround = configuration.actions.map [ action |
+			new de.viperpit.commons.cockpit.Action() => [
+				id = action.id
+				callback = action.callback
+				if (action.state !== null) {
+					active = action.state.ground
+					stateful = true
+				} else {
+					active = false
+					stateful = false
+				}
+				relatedActions = action.relatedActions
+			]
+		].toList
+		val stateConfigurationForGround = new de.viperpit.commons.cockpit.State(null, actionsForGround) => []
 		write(stateConfigurationForGround.writeValueAsString,
 			new File(pathForMetadata, '''states_ground.json'''.toString), UTF_8)
-		val stateConfigurationForAir = new de.viperpit.commons.cockpit.State() => [
-			actions = configuration.actions.map [ action |
-				new de.viperpit.commons.cockpit.Action() => [
-					id = action.id
-					callback = action.callback
-					if (action.state !== null) {
-						active = action.state.air
-						stateful = true
-					} else {
-						active = false
-						stateful = false
-					}
-					relatedActions = action.relatedActions
-				]
-			].toList
-		]
+		val actionsForAir = configuration.actions.map [ action |
+			new de.viperpit.commons.cockpit.Action() => [
+				id = action.id
+				callback = action.callback
+				if (action.state !== null) {
+					active = action.state.air
+					stateful = true
+				} else {
+					active = false
+					stateful = false
+				}
+				relatedActions = action.relatedActions
+			]
+		].toList
+		val stateConfigurationForAir = new de.viperpit.commons.cockpit.State(null, actionsForAir) => []
 		write(stateConfigurationForAir.writeValueAsString, new File(pathForMetadata, '''states_air.json'''.toString),
 			UTF_8)
 	}

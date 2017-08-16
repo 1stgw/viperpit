@@ -45,9 +45,12 @@ public class CockpitService {
 	}
 
 	public void disconnect(String sessionId) {
-		String agentId = agentIdsBySessionId.get(sessionId);
-		agents.remove(agentId);
-		agentIdsBySessionId.remove(sessionId);
+		Agent agent = getAgentBySessionId(sessionId);
+		if (agent != null) {
+			states.remove(agent);
+			agents.remove(agent.getId());
+			agentIdsBySessionId.remove(sessionId);
+		}
 	}
 
 	public Agent getAgentById(String agentId) {
@@ -76,8 +79,8 @@ public class CockpitService {
 			Resource resource = resourceLoader.getResource(location);
 			if (resource.exists()) {
 				try {
-					state = new State();
-					state.setActions(objectMapper.readValue(resource.getFile(), State.class).getActions());
+					Collection<Action> actions = objectMapper.readValue(resource.getFile(), State.class).getActions();
+					state = new State(agent, actions);
 					states.put(agent, state);
 				} catch (IOException exception) {
 					logger.error("Error while loading: " + location, exception);
@@ -101,25 +104,21 @@ public class CockpitService {
 			return null;
 		}
 		Action action = state.getByCallback(callback);
-		if (action == null || !action.isStateful()) {
+		if (action == null || !action.isStateful() || action.isActive()) {
 			return null;
 		}
-		State delta = new State();
-		if (!action.isActive()) {
-			List<Action> affectedActions = newArrayList();
-			boolean active = !action.isActive();
-			action.setActive(active);
-			affectedActions.add(action);
-			for (String relatedActionId : action.getRelatedActions()) {
-				Action relatedAction = state.getById(relatedActionId);
-				if (relatedAction != null) {
-					relatedAction.setActive(!active);
-					affectedActions.add(relatedAction);
-				}
+		boolean active = !action.isActive();
+		action.setActive(active);
+		List<Action> affectedActions = newArrayList();
+		affectedActions.add(action);
+		for (String relatedActionId : action.getRelatedActions()) {
+			Action relatedAction = state.getById(relatedActionId);
+			if (relatedAction != null) {
+				relatedAction.setActive(!active);
+				affectedActions.add(relatedAction);
 			}
-			delta.setActions(affectedActions);
 		}
-		return delta;
+		return new State(agent, affectedActions);
 	}
 
 }

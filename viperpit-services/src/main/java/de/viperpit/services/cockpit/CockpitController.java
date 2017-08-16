@@ -94,13 +94,14 @@ public class CockpitController implements ApplicationListener<ApplicationEvent> 
 		}
 	}
 
+	@SendTo(TOPIC_STATES_UPDATE)
 	@MessageMapping(APP_STATES_UPDATE)
-	public void onStatesUpdate(ActionEvent actionEvent, StompHeaderAccessor stompHeaderAccessor) throws Exception {
+	public State onStatesUpdate(ActionEvent actionEvent, StompHeaderAccessor stompHeaderAccessor) throws Exception {
 		Agent agent = cockpitService.getAgentBySessionId(stompHeaderAccessor.getSessionId());
 		if (agent != null) {
-			State delta = cockpitService.toggle(agent, actionEvent.getCallback());
-			template.convertAndSend(forAgent(agent, TOPIC_STATES_UPDATE), delta);
+			return cockpitService.toggle(agent, actionEvent.getCallback());
 		}
+		return null;
 	}
 
 }

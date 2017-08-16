@@ -13,7 +13,7 @@ const state = {
 }
 
 const mutations = {
-  [types.LOAD_CONFIGURATION] (state, configuration) {
+  [types.CONFIGURATION_LOAD] (state, configuration) {
     state.consoles = configuration.consoles
     state.panels = configuration.panels
     state.groups = configuration.groups
