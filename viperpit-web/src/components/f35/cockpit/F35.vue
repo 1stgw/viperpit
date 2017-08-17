@@ -17,9 +17,10 @@
     <router-view></router-view>
   </div>
   <div v-else>
-    <div class="alert alert-danger" role="alert">
-      <p><strong>No Joy...</strong></p>
-      <p>There is no Agent on Air.</p>
+    <div class="alert alert-warning" role="alert">
+      <p><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> No Joy...</p>
+      <p>Currently there is nothing Airborne.</p>
+      <p>Please connect an Agent to the server...</p>
     </div>
   </div>
 </div>
