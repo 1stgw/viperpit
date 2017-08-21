@@ -29,7 +29,7 @@ node {
 task npmRunBuild(type: NpmTask, dependsOn: 'npmInstall') {
 	args = ['run', 'build']
 }
-jar.dependsOn 'npmRunBuild'
+processResources.dependsOn 'npmRunBuild'
 
 task npmRunDev(type: NpmTask) {
 	args = ['run', 'dev']

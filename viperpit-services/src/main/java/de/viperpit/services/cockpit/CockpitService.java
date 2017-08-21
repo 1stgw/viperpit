@@ -79,7 +79,7 @@ public class CockpitService {
 			Resource resource = resourceLoader.getResource(location);
 			if (resource.exists()) {
 				try {
-					Collection<Action> actions = objectMapper.readValue(resource.getFile(), State.class).getActions();
+					Collection<Action> actions = objectMapper.readValue(resource.getInputStream(), State.class).getActions();
 					state = new State(agent, actions);
 					states.put(agent, state);
 				} catch (IOException exception) {

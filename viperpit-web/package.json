@@ -1,8 +1,8 @@
 {
   "name": "viperpit-web",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Web Client for Falcon BMS",
-  "author": "sneakpeek <jochen.schmich@web.de>",
+  "author": "sneakpeek <sneakpeek@viperpit.de>",
   "private": true,
   "scripts": {
     "dev": "node webpack/dev-server.js",
