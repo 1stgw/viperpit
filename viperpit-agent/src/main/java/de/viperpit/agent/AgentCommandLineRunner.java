@@ -32,9 +32,9 @@ public class AgentCommandLineRunner implements CommandLineRunner {
 			WebSocketClient webSocketClient = new StandardWebSocketClient();
 			WebSocketStompClient stompClient = new WebSocketStompClient(webSocketClient);
 			stompClient.setMessageConverter(new MappingJackson2MessageConverter());
-			String url = "ws://{host}:{port}/viperpit/agents";
+			String url = "ws://{host}:{port}/agents";
 			try {
-				StompSession stompSession = stompClient.connect(url, headers, agentSessionHandler, "localhost", 9000)
+				StompSession stompSession = stompClient.connect(url, headers, agentSessionHandler, "localhost", 8090)
 						.get();
 				LOGGER.info("Subscribing to topic using session " + stompSession.getSessionId());
 				while (stompSession.isConnected()) {

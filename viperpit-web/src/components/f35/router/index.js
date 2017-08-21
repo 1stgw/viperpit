@@ -7,7 +7,6 @@ import Views from '@/components/f35/consoles/Views'
 import RadioComms from '@/components/f35/consoles/RadioComms'
 
 export default class F35Router {
-
   static getRoutes () {
     return [
       {
@@ -47,5 +46,4 @@ export default class F35Router {
       }
     ]
   }
-
 }

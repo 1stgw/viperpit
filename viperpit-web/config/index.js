@@ -4,8 +4,8 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.html'),
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    index: path.resolve(__dirname, '../dist/META-INF/resources/index.html'),
+    assetsRoot: path.resolve(__dirname, '../dist/META-INF/resources'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     productionSourceMap: true,
@@ -29,11 +29,8 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/services': {
-        target: 'http://[::1]:9000',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/services': '/viperpit/services'
-        }
+        target: 'http://[::1]:8090',
+        changeOrigin: true
       }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"

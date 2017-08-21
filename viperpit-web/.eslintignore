@@ -1,2 +1,2 @@
-build/*.js
+webpack/*.js
 config/*.js

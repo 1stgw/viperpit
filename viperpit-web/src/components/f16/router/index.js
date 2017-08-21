@@ -7,7 +7,6 @@ import Views from '@/components/f16/consoles/Views'
 import RadioComms from '@/components/f16/consoles/RadioComms'
 
 export default class F16Router {
-
   static getRoutes () {
     return [
       {
@@ -47,5 +46,4 @@ export default class F16Router {
       }
     ]
   }
-
 }

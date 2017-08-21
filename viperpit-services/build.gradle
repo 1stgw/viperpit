@@ -17,6 +17,7 @@ springBoot {
 
 dependencies {
 	compile project(":viperpit-commons")
+	compile project(":viperpit-web")
 	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.12.0")
 	compile("org.springframework.boot:spring-boot-starter-cache:1.5.6.RELEASE")
 	compile("org.springframework.boot:spring-boot-starter-web:1.5.6.RELEASE") {
