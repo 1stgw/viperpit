@@ -2,7 +2,7 @@ import Stomp from 'webstomp-client'
 import * as types from '../store/mutation-types'
 
 export function connectToWebSocket (connectCallback, errorCallback) {
-  const client = Stomp.client('ws://office:8090/sockets', {
+  const client = Stomp.client('ws://' + window.location.hostname + ':8090' + '/sockets', {
     debug: false
   })
   if (!connectCallback) {

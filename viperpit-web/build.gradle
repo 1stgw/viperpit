@@ -2,7 +2,7 @@ import com.moowork.gradle.node.task.NodeTask
 
 buildscript {
 	dependencies {
-		classpath 'com.moowork.gradle:gradle-node-plugin:1.2.0'
+		classpath "com.moowork.gradle:gradle-node-plugin:1.2.0"
 	}
 }
 apply plugin: "java"
@@ -26,14 +26,14 @@ node {
 	download = true
 }
 
-task npmRunBuild(type: NpmTask, dependsOn: 'npmInstall') {
-	args = ['run', 'build']
+task npmRunBuild(type: NpmTask, dependsOn: "npmInstall") {
+	args = ["run", "build"]
 }
-processResources.dependsOn 'npmRunBuild'
+processResources.dependsOn "npmRunBuild"
 
-task npmRunDev(type: NpmTask) {
-	args = ['run', 'dev']
+task npmRunDev(type: NodeTask, dependsOn: "npmInstall") {
+	script = file("webpack/dev-server.js")
 }
 
-clean.delete << file('node_modules')
-clean.delete << file('dist')
+clean.delete << file("node_modules")
+clean.delete << file("dist")
