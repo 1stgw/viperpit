@@ -1,4 +1,4 @@
-package de.viperpit.services.cockpit;
+package de.viperpit.hub.cockpit;
 
 import static de.viperpit.commons.Topics.APP_AGENTS_CONNECT;
 import static de.viperpit.commons.Topics.APP_STATES_UPDATE;

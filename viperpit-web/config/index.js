@@ -28,7 +28,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/services': {
+      '/hub': {
         target: 'http://[::1]:8090',
         changeOrigin: true
       }

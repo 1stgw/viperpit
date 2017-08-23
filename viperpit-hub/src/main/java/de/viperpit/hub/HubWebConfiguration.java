@@ -1,4 +1,4 @@
-package de.viperpit.services;
+package de.viperpit.hub;
 
 import static org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.json;
 
@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration
 @EnableWebMvc
-public class ServicesWebConfiguration extends WebMvcConfigurerAdapter {
+public class HubWebConfiguration extends WebMvcConfigurerAdapter {
 
 	@SuppressWarnings("serial")
 	public static class SafeCharacterEscapes extends CharacterEscapes {
@@ -46,7 +46,7 @@ public class ServicesWebConfiguration extends WebMvcConfigurerAdapter {
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		super.addCorsMappings(registry);
-		registry.addMapping("/services/**").allowedOrigins("http://office:8080", "http://localhost:8080");
+		registry.addMapping("/hub/**").allowedOrigins("http://office:8080", "http://localhost:8080");
 	}
 
 	@Override

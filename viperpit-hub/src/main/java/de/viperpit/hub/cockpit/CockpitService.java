@@ -1,4 +1,4 @@
-package de.viperpit.services.cockpit;
+package de.viperpit.hub.cockpit;
 
 import static com.google.common.base.CharMatcher.JAVA_LETTER_OR_DIGIT;
 import static com.google.common.collect.Lists.newArrayList;

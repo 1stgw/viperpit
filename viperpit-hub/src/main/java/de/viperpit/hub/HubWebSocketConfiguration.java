@@ -1,4 +1,4 @@
-package de.viperpit.services;
+package de.viperpit.hub;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
@@ -8,7 +8,7 @@ import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 
 @Configuration
 @EnableWebSocketMessageBroker
-public class ServicesWebSocketConfiguration extends AbstractWebSocketMessageBrokerConfigurer {
+public class HubWebSocketConfiguration extends AbstractWebSocketMessageBrokerConfigurer {
 
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry messageBrokerRegistry) {

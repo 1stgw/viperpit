@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
-public class Agent {
+public class AgentApplication {
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(Agent.class).bannerMode(OFF).web(false).build(args).run(args);
+		new SpringApplicationBuilder(AgentApplication.class).bannerMode(OFF).web(false).build(args).run(args);
 	}
 
 }

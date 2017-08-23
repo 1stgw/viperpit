@@ -1,9 +1,9 @@
-package de.viperpit.services;
+package de.viperpit.hub;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("de.viperpit.services")
-public class ServicesConfiguration {
+@ComponentScan("de.viperpit.hub")
+public class HubConfiguration {
 }

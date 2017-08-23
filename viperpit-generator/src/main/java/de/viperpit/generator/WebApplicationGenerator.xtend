@@ -253,7 +253,7 @@ class WebApplicationGenerator {
 				'''.process, new File(pathForPanels, '''«group.clazz».vue'''.toString), UTF_8)
 			]
 		]
-		val pathForMetadata = new File('''«path.absolutePath»/viperpit-services/src/main/resources''')
+		val pathForMetadata = new File('''«path.absolutePath»/viperpit-hub/src/main/resources''')
 		val builder = new Jackson2ObjectMapperBuilder()
 		builder.featuresToEnable(INDENT_OUTPUT)
 		val extension objectMapper = builder.build
