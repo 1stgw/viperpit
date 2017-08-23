@@ -1,12 +1,12 @@
 package de.viperpit.agent;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.io.Resource;
 
 import de.viperpit.agent.keys.KeyFile;
 
@@ -15,8 +15,8 @@ import de.viperpit.agent.keys.KeyFile;
 public class AgentLocalConfiguration {
 
 	@Bean
-	public KeyFile keyFile(@Value("${local.bms.keyfile}") Resource keyFileResource) throws IOException {
-		return new KeyFile(keyFileResource.getFile());
+	public KeyFile keyFile(@Value("${keyFile}") File file) throws IOException {
+		return new KeyFile(file);
 	}
 
 }
