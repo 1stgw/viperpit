@@ -74,6 +74,7 @@ class ConfigurationGenerator {
 				case group.contains("Switch") && label !== null && label.startsWith("Toggle"): "button"
 				case group.contains("Switch") && label !== null && label.startsWith("Tog."): "button"
 				case group.contains("Switch") && label !== null && label.startsWith("Step"): "button"
+				case group.contains("Switch") && relatedCallbacks.empty: "button"
 				case group.contains("Switch"): "switch"
 				case group.contains("Knob"): "knob"
 				case group.contains("Handle") && label !== null && label.startsWith("Toggle"): "button"

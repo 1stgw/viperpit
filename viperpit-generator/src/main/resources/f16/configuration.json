@@ -294,7 +294,7 @@
       "role": "on",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": true,
         "air": true
       }
@@ -410,7 +410,7 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": false,
         "air": false
       }
@@ -522,7 +522,7 @@
       "role": "on",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": true,
         "air": true
       }
@@ -619,7 +619,7 @@
       "role": "on",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": true,
         "air": true
       }
@@ -640,7 +640,7 @@
       "role": "off",
       "type": "switch",
       "state": {
-        "ramp": true,
+        "ramp": false,
         "ground": false,
         "air": false
       }
@@ -869,7 +869,7 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": false,
         "air": false
       }
@@ -1146,7 +1146,7 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": false,
         "air": false
       }
@@ -1262,7 +1262,7 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": false,
         "air": false
       }
@@ -1460,8 +1460,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -1483,7 +1483,7 @@
       "role": "on",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": true,
         "air": true
       }
@@ -1507,7 +1507,7 @@
       "role": "off",
       "type": "switch",
       "state": {
-        "ramp": true,
+        "ramp": false,
         "ground": false,
         "air": false
       }
@@ -1730,8 +1730,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -1780,8 +1780,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -1875,8 +1875,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -1932,9 +1932,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -2021,8 +2021,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -2042,8 +2042,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -2244,9 +2244,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -2302,9 +2302,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -3078,8 +3078,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -3101,8 +3101,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -3212,9 +3212,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -3248,7 +3248,7 @@
       "category": "LEFT CONSOLE",
       "section": "LEFT SIDE WALL",
       "group": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-      "style": "switch",
+      "style": "button",
       "role": "none",
       "type": "button"
     },
@@ -3368,7 +3368,7 @@
       "category": "LEFT CONSOLE",
       "section": "THROTTLE QUADRANT SYSTEM",
       "group": "TQS: COMMS Switch Up",
-      "style": "switch",
+      "style": "button",
       "role": "none",
       "type": "button"
     },
@@ -3380,7 +3380,7 @@
       "category": "LEFT CONSOLE",
       "section": "THROTTLE QUADRANT SYSTEM",
       "group": "TQS: COMMS Switch Down",
-      "style": "switch",
+      "style": "button",
       "role": "none",
       "type": "button"
     },
@@ -3392,7 +3392,7 @@
       "category": "LEFT CONSOLE",
       "section": "THROTTLE QUADRANT SYSTEM",
       "group": "TQS: COMMS Switch Left",
-      "style": "switch",
+      "style": "button",
       "role": "none",
       "type": "button"
     },
@@ -3404,7 +3404,7 @@
       "category": "LEFT CONSOLE",
       "section": "THROTTLE QUADRANT SYSTEM",
       "group": "TQS: COMMS Switch Right",
-      "style": "switch",
+      "style": "button",
       "role": "none",
       "type": "button"
     },
@@ -4453,8 +4453,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -4474,8 +4474,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -4535,9 +4535,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -4702,8 +4702,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -4854,9 +4854,9 @@
       "role": "up",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -4913,8 +4913,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -4934,8 +4934,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -4971,8 +4971,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -4992,8 +4992,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -5107,9 +5107,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -5178,8 +5178,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -5258,7 +5258,7 @@
       "role": "on",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": true,
         "air": true
       }
@@ -5365,8 +5365,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -5446,8 +5446,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -5470,8 +5470,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -5610,9 +5610,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -5740,8 +5740,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -6529,8 +6529,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -6550,7 +6550,7 @@
       "role": "on",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": true,
         "air": true
       }
@@ -7101,9 +7101,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -7220,7 +7220,7 @@
       "role": "on",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": true,
         "air": true
       }
@@ -7361,7 +7361,7 @@
       "role": "on",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": true,
         "air": true
       }
@@ -7886,8 +7886,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -7932,8 +7932,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -8036,9 +8036,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -8060,7 +8060,7 @@
       "role": "off",
       "type": "switch",
       "state": {
-        "ramp": true,
+        "ramp": false,
         "ground": false,
         "air": false
       }
@@ -8141,9 +8141,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -8189,7 +8189,7 @@
       "role": "off",
       "type": "switch",
       "state": {
-        "ramp": true,
+        "ramp": false,
         "ground": false,
         "air": false
       }
@@ -8319,8 +8319,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -8448,8 +8448,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -8528,9 +8528,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -8705,9 +8705,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -8786,9 +8786,9 @@
       "role": "none",
       "type": "switch",
       "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
+        "ramp": true,
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -9149,7 +9149,7 @@
       "role": "on",
       "type": "switch",
       "state": {
-        "ramp": false,
+        "ramp": true,
         "ground": true,
         "air": true
       }
@@ -9257,8 +9257,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -9281,8 +9281,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -13630,7 +13630,7 @@
       "category": "RADIO COMMS",
       "section": "WINGMAN COMMANDS",
       "group": "WINGMAN: Switch Side",
-      "style": "switch",
+      "style": "button",
       "role": "none",
       "type": "button"
     },
@@ -14086,7 +14086,7 @@
       "category": "RADIO COMMS",
       "section": "ELEMENT COMMANDS",
       "group": "ELEMENT: Switch Side",
-      "style": "switch",
+      "style": "button",
       "role": "none",
       "type": "button"
     },
@@ -14542,7 +14542,7 @@
       "category": "RADIO COMMS",
       "section": "FLIGHT COMMANDS",
       "group": "FLIGHT: Switch Side",
-      "style": "switch",
+      "style": "button",
       "role": "none",
       "type": "button"
     },

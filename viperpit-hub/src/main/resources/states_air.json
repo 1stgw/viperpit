@@ -459,7 +459,7 @@
   }, {
     "id" : "epuepuswitchon",
     "callback" : "SimEpuOn",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "epuepuswitchcycle", "epuepuswitchstepup", "epuepuswitchstepdown", "epuepuswitchnorm", "epuepuswitchoff" ]
   }, {
@@ -537,7 +537,7 @@
   }, {
     "id" : "avtravtrswitchon",
     "callback" : "SimAVTRSwitchOn",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchauto", "avtravtrswitchoff" ]
   }, {
@@ -549,7 +549,7 @@
   }, {
     "id" : "avtravtrswitchoff",
     "callback" : "SimAVTRSwitchOff",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchauto" ]
   }, {
@@ -579,7 +579,7 @@
   }, {
     "id" : "engjfsswitchoff",
     "callback" : "SimJfsStart_Off",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "engjfsswitchtogglestart2off", "engjfsswitchstart2" ]
   }, {
@@ -597,7 +597,7 @@
   }, {
     "id" : "engengcontswitchpri",
     "callback" : "SimEngContPri",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "engengcontswitchtoggle", "engengcontswitchsec" ]
   }, {
@@ -627,13 +627,13 @@
   }, {
     "id" : "audio2ilsknobon",
     "callback" : "SimILSOn",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "audio2ilsknobtoggle", "audio2ilsknoboff" ]
   }, {
     "id" : "audio2ilsknoboff",
     "callback" : "SimILSOff",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "audio2ilsknobtoggle", "audio2ilsknobon" ]
   }, {
@@ -705,7 +705,7 @@
   }, {
     "id" : "audio1comm1modeknobsql",
     "callback" : "SimAud1Com1Sql",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "audio1comm1modeknobtoggle", "audio1comm1modeknobgd" ]
   }, {
@@ -723,7 +723,7 @@
   }, {
     "id" : "audio1comm2modeknobsql",
     "callback" : "SimAud1Com2Sql",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "audio1comm2modeknobtoggle", "audio1comm2modeknobgd" ]
   }, {
@@ -1065,13 +1065,13 @@
   }, {
     "id" : "uhffunctionknobmain",
     "callback" : "SimBupUhfMain",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "uhffunctionknobstepup", "uhffunctionknobstepdown", "uhffunctionknoboff", "uhffunctionknobboth" ]
   }, {
     "id" : "uhffunctionknobboth",
     "callback" : "SimBupUhfBoth",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "uhffunctionknobstepup", "uhffunctionknobstepdown", "uhffunctionknoboff", "uhffunctionknobmain" ]
   }, {
@@ -1107,7 +1107,7 @@
   }, {
     "id" : "uhfmodeknobpreset",
     "callback" : "SimBupUhfPreset",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "uhfmodeknobstepup", "uhfmodeknobstepdown", "uhfmodeknobmnl", "uhfmodeknobgrd" ]
   }, {
@@ -1527,13 +1527,13 @@
   }, {
     "id" : "cmdsjettswitchon",
     "callback" : "SimEwsJettOn",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "cmdsjettswitchtoggle", "cmdsjettswitchoff" ]
   }, {
     "id" : "cmdsjettswitchoff",
     "callback" : "SimEwsJettOff",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "cmdsjettswitchtoggle", "cmdsjettswitchon" ]
   }, {
@@ -1551,7 +1551,7 @@
   }, {
     "id" : "cmdsprgmknob1",
     "callback" : "SimEWSProgOne",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "cmdsprgmknobstepup", "cmdsprgmknobstepdown", "cmdsprgmknob2", "cmdsprgmknob3", "cmdsprgmknob4" ]
   }, {
@@ -1593,7 +1593,7 @@
   }, {
     "id" : "cmdsmodeknobstby",
     "callback" : "SimEWSModeStby",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "cmdsmodeknobstepup", "cmdsmodeknobstepdown", "cmdsmodeknoboff", "cmdsmodeknobman", "cmdsmodeknobsemi", "cmdsmodeknobauto", "cmdsmodeknobbyp" ]
   }, {
@@ -1635,7 +1635,7 @@
   }, {
     "id" : "gearhookswitchup",
     "callback" : "SimHookUp",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "gearhookswitchtoggle", "gearhookswitchdn" ]
   }, {
@@ -1653,13 +1653,13 @@
   }, {
     "id" : "geargndjettswitchenable",
     "callback" : "SimGndJettOn",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "geargndjettswitchtoggle", "geargndjettswitchoff" ]
   }, {
     "id" : "geargndjettswitchoff",
     "callback" : "SimGndJettOff",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "geargndjettswitchtoggle", "geargndjettswitchenable" ]
   }, {
@@ -1671,13 +1671,13 @@
   }, {
     "id" : "gearparkingbreakswitchon",
     "callback" : "SimParkingBrakeOn",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "gearparkingbreakswitchtoggle", "gearparkingbreakswitchoff" ]
   }, {
     "id" : "gearparkingbreakswitchoff",
     "callback" : "SimParkingBrakeOff",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "gearparkingbreakswitchtoggle", "gearparkingbreakswitchon" ]
   }, {
@@ -1713,7 +1713,7 @@
   }, {
     "id" : "gearstoresconfigswitchcatiii",
     "callback" : "SimCATIII",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "gearstoresconfigswitchtoggle", "gearstoresconfigswitchcati" ]
   }, {
@@ -1737,7 +1737,7 @@
   }, {
     "id" : "gearlightsswitchoff",
     "callback" : "SimLandingLightOff",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "gearlightsswitchtoggle", "gearlightsswitchlanding" ]
   }, {
@@ -1791,7 +1791,7 @@
   }, {
     "id" : "misclaserswitchoff",
     "callback" : "SimLaserArmOff",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "misclaserswitchtoggle", "misclaserswitcharm" ]
   }, {
@@ -1815,13 +1815,13 @@
   }, {
     "id" : "miscmasterarmswitchon",
     "callback" : "SimArmMasterArm",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "miscmasterarmswitchcycle", "miscmasterarmswitchstepup", "miscmasterarmswitchstepdown", "miscmasterarmswitchoff", "miscmasterarmswitchsim" ]
   }, {
     "id" : "miscmasterarmswitchoff",
     "callback" : "SimSafeMasterArm",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "miscmasterarmswitchcycle", "miscmasterarmswitchstepup", "miscmasterarmswitchstepdown", "miscmasterarmswitchon", "miscmasterarmswitchsim" ]
   }, {
@@ -1863,7 +1863,7 @@
   }, {
     "id" : "miscrollswitchatthold",
     "callback" : "SimLeftAPMid",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "miscrollswitchcycle", "miscrollswitchstepup", "miscrollswitchstepdown", "miscrollswitchhdgsel", "miscrollswitchstrgsel" ]
   }, {
@@ -1899,7 +1899,7 @@
   }, {
     "id" : "miscpitchswitchapoff",
     "callback" : "SimRightAPMid",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepup", "miscpitchswitchstepdown", "miscpitchswitchalthold", "miscpitchswitchatthold" ]
   }, {
@@ -2271,7 +2271,7 @@
   }, {
     "id" : "icpdriftcoswitchon",
     "callback" : "SimDriftCOOn",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "icpdriftcoswitchtogonnorm", "icpdriftcoswitchnorm", "icpdriftcoswitchwarnreset" ]
   }, {
@@ -2463,7 +2463,7 @@
   }, {
     "id" : "instrmodeknobnav",
     "callback" : "SimHSINav",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepup", "instrmodeknobstepdown", "instrmodeknobilstcn", "instrmodeknobtcn", "instrmodeknobilsnav" ]
   }, {
@@ -2739,7 +2739,7 @@
   }, {
     "id" : "snsrrdraltswitchon",
     "callback" : "SimRALTON",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "snsrrdraltswitchstepup", "snsrrdraltswitchstepdown", "snsrrdraltswitchstdby", "snsrrdraltswitchoff" ]
   }, {
@@ -2751,7 +2751,7 @@
   }, {
     "id" : "snsrrdraltswitchoff",
     "callback" : "SimRALTOFF",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "snsrrdraltswitchstepup", "snsrrdraltswitchstepdown", "snsrrdraltswitchon", "snsrrdraltswitchstdby" ]
   }, {
@@ -2781,7 +2781,7 @@
   }, {
     "id" : "hudscalesswitchvah",
     "callback" : "SimScalesVAH",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "hudscalesswitchcycle", "hudscalesswitchstepup", "hudscalesswitchstepdown", "hudscalesswitchvvvah", "hudscalesswitchoff" ]
   }, {
@@ -2811,7 +2811,7 @@
   }, {
     "id" : "hudfpmswitchattfpm",
     "callback" : "SimPitchLadderATTFPM",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "hudfpmswitchcycle", "hudfpmswitchstepup", "hudfpmswitchstepdown", "hudfpmswitchfpm", "hudfpmswitchoff" ]
   }, {
@@ -2859,7 +2859,7 @@
   }, {
     "id" : "huddeddataswitchoff",
     "callback" : "SimHUDDEDOff",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "huddeddataswitchcycle", "huddeddataswitchstepup", "huddeddataswitchstepdn", "huddeddataswitchded", "huddeddataswitchpfl" ]
   }, {
@@ -2895,7 +2895,7 @@
   }, {
     "id" : "huddeprretswitchoff",
     "callback" : "SimReticleOff",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "huddeprretswitchcycle", "huddeprretswitchstepup", "huddeprretswitchstepdown", "huddeprretswitchstby", "huddeprretswitchpri" ]
   }, {
@@ -2919,7 +2919,7 @@
   }, {
     "id" : "hudvelocityswitchcas",
     "callback" : "SimHUDVelocityCAS",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "hudvelocityswitchcycle", "hudvelocityswitchstepup", "hudvelocityswitchstepdn", "hudvelocityswitchtas", "hudvelocityswitchgndspd" ]
   }, {
@@ -2967,7 +2967,7 @@
   }, {
     "id" : "hudaltitudeswitchauto",
     "callback" : "SimHUDAltAuto",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "hudaltitudeswitchcycle", "hudaltitudeswitchstepup", "hudaltitudeswitchstepdn", "hudaltitudeswitchradar", "hudaltitudeswitchbaro" ]
   }, {
@@ -2991,7 +2991,7 @@
   }, {
     "id" : "hudbrightnessswitchday",
     "callback" : "SimHUDBrtDay",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepup", "hudbrightnessswitchstepdn", "hudbrightnessswitchautobrt", "hudbrightnessswitchnig" ]
   }, {
@@ -3135,13 +3135,13 @@
   }, {
     "id" : "avionicsinsknobnorm",
     "callback" : "SimINSNorm",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknobstepdown", "avionicsinsknoboff", "avionicsinsknobnav", "avionicsinsknobinfltalign" ]
   }, {
     "id" : "avionicsinsknobnav",
     "callback" : "SimINSNav",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknobstepdown", "avionicsinsknoboff", "avionicsinsknobnorm", "avionicsinsknobinfltalign" ]
   }, {

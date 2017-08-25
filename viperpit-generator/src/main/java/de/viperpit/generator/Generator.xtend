@@ -19,8 +19,8 @@ class Generator {
 		LOGGER.info("Running the Filter Generator...")
 		val workspace = args.head.toPath
 		val source = '''«args.head»/viperpit-generator/src/main/resources/«profile»'''.toPath
-		LOGGER.info("Running the State Generator...")
-		new StateGenerator().run(source)
+//		LOGGER.info("Running the State Generator...")
+//		new StateGenerator().run(source)
 		LOGGER.info("Running the Filter Generator...")
 		new FilterGenerator().run(source)
 		LOGGER.info("Running the Configuration Generator...")
