@@ -267,13 +267,13 @@
   }, {
     "id" : "fuelairrefuelswitchopen",
     "callback" : "SimFuelDoorOpen",
-    "active" : true,
+    "active" : false,
     "stateful" : true,
     "relatedActions" : [ "fuelairrefuelswitchtoggle", "fuelairrefuelswitchclose" ]
   }, {
     "id" : "fuelairrefuelswitchclose",
     "callback" : "SimFuelDoorClose",
-    "active" : false,
+    "active" : true,
     "stateful" : true,
     "relatedActions" : [ "fuelairrefuelswitchtoggle", "fuelairrefuelswitchopen" ]
   }, {
@@ -651,14 +651,14 @@
   }, {
     "id" : "audio1comm1knobpoweron",
     "callback" : "SimComm1PowerOn",
-    "active" : false,
-    "stateful" : false,
+    "active" : true,
+    "stateful" : true,
     "relatedActions" : [ "audio1comm1knobvolumeincr", "audio1comm1knobvolumedecr", "audio1comm1knobpoweroff" ]
   }, {
     "id" : "audio1comm1knobpoweroff",
     "callback" : "SimComm1PowerOff",
     "active" : false,
-    "stateful" : false,
+    "stateful" : true,
     "relatedActions" : [ "audio1comm1knobvolumeincr", "audio1comm1knobvolumedecr", "audio1comm1knobpoweron" ]
   }, {
     "id" : "audio1comm2knobvolumeincr",
@@ -675,14 +675,14 @@
   }, {
     "id" : "audio1comm2knobpoweron",
     "callback" : "SimComm2PowerOn",
-    "active" : false,
-    "stateful" : false,
+    "active" : true,
+    "stateful" : true,
     "relatedActions" : [ "audio1comm2knobvolumeincr", "audio1comm2knobvolumedecr", "audio1comm2knobpoweroff" ]
   }, {
     "id" : "audio1comm2knobpoweroff",
     "callback" : "SimComm2PowerOff",
     "active" : false,
-    "stateful" : false,
+    "stateful" : true,
     "relatedActions" : [ "audio1comm2knobvolumeincr", "audio1comm2knobvolumedecr", "audio1comm2knobpoweron" ]
   }, {
     "id" : "audio1mslknobvolumeincr",
@@ -1132,13 +1132,13 @@
     "id" : "leftwallcanopyopen",
     "callback" : "AFCanopyOpen",
     "active" : false,
-    "stateful" : false,
+    "stateful" : true,
     "relatedActions" : [ "leftwallcanopytoggleopenclose", "leftwallcanopyclose" ]
   }, {
     "id" : "leftwallcanopyclose",
     "callback" : "AFCanopyClose",
-    "active" : false,
-    "stateful" : false,
+    "active" : true,
+    "stateful" : true,
     "relatedActions" : [ "leftwallcanopytoggleopenclose", "leftwallcanopyopen" ]
   }, {
     "id" : "seatsafetylevertoggle",
@@ -1149,14 +1149,14 @@
   }, {
     "id" : "seatsafetyleverarmed",
     "callback" : "SimSeatOn",
-    "active" : false,
-    "stateful" : false,
+    "active" : true,
+    "stateful" : true,
     "relatedActions" : [ "seatsafetylevertoggle", "seatsafetyleverlocked" ]
   }, {
     "id" : "seatsafetyleverlocked",
     "callback" : "SimSeatOff",
     "active" : false,
-    "stateful" : false,
+    "stateful" : true,
     "relatedActions" : [ "seatsafetylevertoggle", "seatsafetyleverarmed" ]
   }, {
     "id" : "seatejecthandleholdforeject",
@@ -1204,7 +1204,7 @@
     "id" : "tqsmanrangeknobuncage",
     "callback" : "SimToggleMissileCage",
     "active" : false,
-    "stateful" : true,
+    "stateful" : false,
     "relatedActions" : [ "tqsmanrangeknobup", "tqsmanrangeknobdown" ]
   }, {
     "id" : "tqsdogfightswitchdfoverride",
@@ -1690,13 +1690,13 @@
     "id" : "gearlghandleup",
     "callback" : "AFGearUp",
     "active" : false,
-    "stateful" : true,
+    "stateful" : false,
     "relatedActions" : [ "gearlghandletoggle", "gearlghandledn" ]
   }, {
     "id" : "gearlghandledn",
     "callback" : "AFGearDown",
     "active" : false,
-    "stateful" : true,
+    "stateful" : false,
     "relatedActions" : [ "gearlghandletoggle", "gearlghandleup" ]
   }, {
     "id" : "gearstoresconfigswitchtoggle",
@@ -3009,56 +3009,56 @@
   }, {
     "id" : "lightinstpnlknobprimarycycle",
     "callback" : "SimInstrumentLight",
-    "active" : false,
-    "stateful" : false,
+    "active" : true,
+    "stateful" : true,
     "relatedActions" : [ "lightinstpnlknobprimarystepup", "lightinstpnlknobprimarystepdown" ]
   }, {
     "id" : "lightinstpnlknobprimarystepup",
     "callback" : "SimInstrumentLightCW",
     "active" : false,
-    "stateful" : false,
+    "stateful" : true,
     "relatedActions" : [ "lightinstpnlknobprimarycycle", "lightinstpnlknobprimarystepdown" ]
   }, {
     "id" : "lightinstpnlknobprimarystepdown",
     "callback" : "SimInstrumentLightCCW",
     "active" : false,
-    "stateful" : false,
+    "stateful" : true,
     "relatedActions" : [ "lightinstpnlknobprimarycycle", "lightinstpnlknobprimarystepup" ]
   }, {
     "id" : "lightdedknobprimarycycle",
     "callback" : "SimDedBrightness",
     "active" : false,
-    "stateful" : false,
+    "stateful" : true,
     "relatedActions" : [ "lightdedknobprimarystepup", "lightdedknobprimarystepdown" ]
   }, {
     "id" : "lightdedknobprimarystepup",
     "callback" : "SimDedBrightnessCW",
     "active" : false,
-    "stateful" : false,
+    "stateful" : true,
     "relatedActions" : [ "lightdedknobprimarycycle", "lightdedknobprimarystepdown" ]
   }, {
     "id" : "lightdedknobprimarystepdown",
     "callback" : "SimDedBrightnessCCW",
-    "active" : false,
-    "stateful" : false,
+    "active" : true,
+    "stateful" : true,
     "relatedActions" : [ "lightdedknobprimarycycle", "lightdedknobprimarystepup" ]
   }, {
     "id" : "lightconsolesknobfloodcycle",
     "callback" : "SimInteriorLight",
-    "active" : false,
-    "stateful" : false,
+    "active" : true,
+    "stateful" : true,
     "relatedActions" : [ "lightconsolesknobfloodstepup", "lightconsolesknobfloodstepdown" ]
   }, {
     "id" : "lightconsolesknobfloodstepup",
     "callback" : "SimInteriorLightCW",
     "active" : false,
-    "stateful" : false,
+    "stateful" : true,
     "relatedActions" : [ "lightconsolesknobfloodcycle", "lightconsolesknobfloodstepdown" ]
   }, {
     "id" : "lightconsolesknobfloodstepdown",
     "callback" : "SimInteriorLightCCW",
     "active" : false,
-    "stateful" : false,
+    "stateful" : true,
     "relatedActions" : [ "lightconsolesknobfloodcycle", "lightconsolesknobfloodstepup" ]
   }, {
     "id" : "airairsourceknobstepup",

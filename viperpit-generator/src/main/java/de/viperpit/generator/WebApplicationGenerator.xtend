@@ -303,7 +303,7 @@ class WebApplicationGenerator {
 			]
 		].toList
 		val stateConfigurationForRamp = new de.viperpit.commons.cockpit.State(null, actionsForRamp) => []
-		write(stateConfigurationForRamp.writeValueAsString, new File(pathForMetadata, '''states_air.json'''.toString),
+		write(stateConfigurationForRamp.writeValueAsString, new File(pathForMetadata, '''states_ramp.json'''.toString),
 			UTF_8)
 		val actionsForGround = configuration.actions.map [ action |
 			new de.viperpit.commons.cockpit.Action() => [

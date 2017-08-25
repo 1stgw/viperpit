@@ -35,9 +35,7 @@ public class AgentWebSocketClient {
 			stompClient.setMessageConverter(new MappingJackson2MessageConverter());
 			try {
 				StompSession stompSession = stompClient.connect(url, headers, agentSessionHandler).get();
-				LOGGER.info("Subscribing to topic using session " + stompSession.getSessionId());
-				while (stompSession.isConnected()) {
-				}
+				LOGGER.info("Subscribed to topic using session " + stompSession.getSessionId());
 			} catch (InterruptedException | ExecutionException exception) {
 				LOGGER.error("Error while establishing session: " + exception.getMessage(), exception);
 			}

@@ -14,7 +14,6 @@ import static com.google.common.base.CharMatcher.JAVA_LETTER_OR_DIGIT
 import static com.google.common.base.CharMatcher.JAVA_LOWER_CASE
 import static com.google.common.base.CharMatcher.WHITESPACE
 import static com.google.common.base.Charsets.UTF_8
-import static com.google.common.base.Optional.fromNullable
 import static com.google.common.base.Splitter.on
 import static com.google.common.base.Strings.commonPrefix
 import static com.google.common.io.Files.write
@@ -114,11 +113,14 @@ class ConfigurationGenerator {
 				action.role = role
 			}
 			action.type = type
-			if (type == "switch") {
+			val stateForRamp = states.get(callback -> "ramp")
+			val stateForGround = states.get(callback -> "ground")
+			val stateForAir = states.get(callback -> "air")
+			if (stateForRamp !== null || stateForGround !== null || stateForAir !== null) {
 				val state = new State
-				state.ramp = fromNullable(states.get(callback -> "ramp")).or(role == "off")
-				state.ground = fromNullable(states.get(callback -> "ground")).or(role == "on")
-				state.air = fromNullable(states.get(callback -> "air")).or(role == "on")
+				state.ramp = stateForRamp
+				state.ground = stateForGround
+				state.air = stateForAir
 				action.state = state
 			}
 			action

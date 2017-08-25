@@ -812,8 +812,8 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": true,
-        "air": true
+        "ground": false,
+        "air": false
       }
     },
     {
@@ -833,8 +833,8 @@
       "type": "switch",
       "state": {
         "ramp": true,
-        "ground": false,
-        "air": false
+        "ground": true,
+        "air": true
       }
     },
     {
@@ -2095,7 +2095,12 @@
       "group": "AUDIO1: COMM 1 Knob",
       "style": "knob",
       "role": "on",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
     },
     {
       "id": "audio1comm1knobpoweroff",
@@ -2112,7 +2117,12 @@
       "group": "AUDIO1: COMM 1 Knob",
       "style": "knob",
       "role": "off",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
     },
     {
       "id": "audio1comm2knobvolumeincr",
@@ -2163,7 +2173,12 @@
       "group": "AUDIO1: COMM 2 Knob",
       "style": "knob",
       "role": "on",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
     },
     {
       "id": "audio1comm2knobpoweroff",
@@ -2180,7 +2195,12 @@
       "group": "AUDIO1: COMM 2 Knob",
       "style": "knob",
       "role": "off",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
     },
     {
       "id": "audio1mslknobvolumeincr",
@@ -3282,7 +3302,12 @@
       "group": "LEFT WALL: CANOPY",
       "style": "button",
       "role": "none",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
     },
     {
       "id": "leftwallcanopyclose",
@@ -3298,7 +3323,12 @@
       "group": "LEFT WALL: CANOPY",
       "style": "button",
       "role": "none",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
     },
     {
       "id": "seatsafetylevertoggle",
@@ -3330,7 +3360,12 @@
       "group": "SEAT: Safety Lever",
       "style": "button",
       "role": "none",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
     },
     {
       "id": "seatsafetyleverlocked",
@@ -3346,7 +3381,12 @@
       "group": "SEAT: Safety Lever",
       "style": "button",
       "role": "none",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
     },
     {
       "id": "seatejecthandleholdforeject",
@@ -3454,12 +3494,7 @@
       "group": "TQS: MAN RANGE Knob",
       "style": "knob",
       "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
+      "type": "switch"
     },
     {
       "id": "tqsdogfightswitchdfoverride",
@@ -5026,12 +5061,7 @@
       "group": "GEAR: LG Handle",
       "style": "handle",
       "role": "up",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
+      "type": "switch"
     },
     {
       "id": "gearlghandledn",
@@ -5047,12 +5077,7 @@
       "group": "GEAR: LG Handle",
       "style": "handle",
       "role": "down",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
+      "type": "switch"
     },
     {
       "id": "gearstoresconfigswitchtoggle",
@@ -8853,7 +8878,12 @@
       "group": "LIGHT: INST PNL Knob (Primary)",
       "style": "knob",
       "role": "none",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
     },
     {
       "id": "lightinstpnlknobprimarystepup",
@@ -8869,7 +8899,12 @@
       "group": "LIGHT: INST PNL Knob (Primary)",
       "style": "knob",
       "role": "up",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
     },
     {
       "id": "lightinstpnlknobprimarystepdown",
@@ -8885,7 +8920,12 @@
       "group": "LIGHT: INST PNL Knob (Primary)",
       "style": "knob",
       "role": "down",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
     },
     {
       "id": "lightdedknobprimarycycle",
@@ -8901,7 +8941,12 @@
       "group": "LIGHT: DED Knob (Primary)",
       "style": "knob",
       "role": "none",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
     },
     {
       "id": "lightdedknobprimarystepup",
@@ -8917,7 +8962,12 @@
       "group": "LIGHT: DED Knob (Primary)",
       "style": "knob",
       "role": "up",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
     },
     {
       "id": "lightdedknobprimarystepdown",
@@ -8933,7 +8983,12 @@
       "group": "LIGHT: DED Knob (Primary)",
       "style": "knob",
       "role": "down",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
     },
     {
       "id": "lightconsolesknobfloodcycle",
@@ -8949,7 +9004,12 @@
       "group": "LIGHT: CONSOLES Knob (Flood)",
       "style": "knob",
       "role": "none",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
     },
     {
       "id": "lightconsolesknobfloodstepup",
@@ -8965,7 +9025,12 @@
       "group": "LIGHT: CONSOLES Knob (Flood)",
       "style": "knob",
       "role": "up",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
     },
     {
       "id": "lightconsolesknobfloodstepdown",
@@ -8981,7 +9046,12 @@
       "group": "LIGHT: CONSOLES Knob (Flood)",
       "style": "knob",
       "role": "down",
-      "type": "button"
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
     },
     {
       "id": "airairsourceknobstepup",
