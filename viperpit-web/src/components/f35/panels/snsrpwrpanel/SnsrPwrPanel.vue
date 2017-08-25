@@ -3,24 +3,24 @@
     <div class="panel-heading">SNSR PWR PANEL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <snsr-left-hdpt-switch />
+            <snsr-rdr-alt-switch />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <snsr-right-hdpt-switch />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
             <snsr-fcr-switch />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <snsr-rdr-alt-switch />
+            <snsr-right-hdpt-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <snsr-left-hdpt-switch />
           </div>
         </div>
       </div>
@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import SnsrLeftHdptSwitch from './SnsrLeftHdptSwitch'
-import SnsrRightHdptSwitch from './SnsrRightHdptSwitch'
-import SnsrFcrSwitch from './SnsrFcrSwitch'
 import SnsrRdrAltSwitch from './SnsrRdrAltSwitch'
+import SnsrFcrSwitch from './SnsrFcrSwitch'
+import SnsrRightHdptSwitch from './SnsrRightHdptSwitch'
+import SnsrLeftHdptSwitch from './SnsrLeftHdptSwitch'
 
 export default {
   name: 'SnsrPwrPanel',
   components: {
-    SnsrLeftHdptSwitch,
-    SnsrRightHdptSwitch,
+    SnsrRdrAltSwitch,
     SnsrFcrSwitch,
-    SnsrRdrAltSwitch
+    SnsrRightHdptSwitch,
+    SnsrLeftHdptSwitch
   }
 }
 </script>

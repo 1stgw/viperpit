@@ -3,14 +3,14 @@
     <div class="panel-heading">FUEL QTY PANEL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <qty-fuel-qty-sel-knob />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
             <qty-ext-fuel-trans-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <qty-fuel-qty-sel-knob />
           </div>
         </div>
       </div>
@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import QtyFuelQtySelKnob from './QtyFuelQtySelKnob'
 import QtyExtFuelTransSwitch from './QtyExtFuelTransSwitch'
+import QtyFuelQtySelKnob from './QtyFuelQtySelKnob'
 
 export default {
   name: 'FuelQtyPanel',
   components: {
-    QtyFuelQtySelKnob,
-    QtyExtFuelTransSwitch
+    QtyExtFuelTransSwitch,
+    QtyFuelQtySelKnob
   }
 }
 </script>

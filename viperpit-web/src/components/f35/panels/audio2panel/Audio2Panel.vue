@@ -3,14 +3,14 @@
     <div class="panel-heading">AUDIO 2 PANEL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <audio2-intercom-knob />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
             <audio2-ils-knob />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <audio2-intercom-knob />
           </div>
         </div>
       </div>
@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import Audio2IntercomKnob from './Audio2IntercomKnob'
 import Audio2IlsKnob from './Audio2IlsKnob'
+import Audio2IntercomKnob from './Audio2IntercomKnob'
 
 export default {
   name: 'Audio2Panel',
   components: {
-    Audio2IntercomKnob,
-    Audio2IlsKnob
+    Audio2IlsKnob,
+    Audio2IntercomKnob
   }
 }
 </script>

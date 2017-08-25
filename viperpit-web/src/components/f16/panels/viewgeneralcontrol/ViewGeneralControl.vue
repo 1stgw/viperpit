@@ -3,24 +3,24 @@
     <div class="panel-heading">VIEW GENERAL CONTROL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <viewgen-rotate-view-up />
+            <viewgen-rotate-view-right />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <viewgen-rotate-view-down />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
             <viewgen-rotate-view-left />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <viewgen-rotate-view-right />
+            <viewgen-rotate-view-down />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <viewgen-rotate-view-up />
           </div>
         </div>
       </div>
@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import ViewgenRotateViewUp from './ViewgenRotateViewUp'
-import ViewgenRotateViewDown from './ViewgenRotateViewDown'
-import ViewgenRotateViewLeft from './ViewgenRotateViewLeft'
 import ViewgenRotateViewRight from './ViewgenRotateViewRight'
+import ViewgenRotateViewLeft from './ViewgenRotateViewLeft'
+import ViewgenRotateViewDown from './ViewgenRotateViewDown'
+import ViewgenRotateViewUp from './ViewgenRotateViewUp'
 
 export default {
   name: 'ViewGeneralControl',
   components: {
-    ViewgenRotateViewUp,
-    ViewgenRotateViewDown,
+    ViewgenRotateViewRight,
     ViewgenRotateViewLeft,
-    ViewgenRotateViewRight
+    ViewgenRotateViewDown,
+    ViewgenRotateViewUp
   }
 }
 </script>

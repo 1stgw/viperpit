@@ -6,195 +6,53 @@
         {
           "panelRowSet": [
             {
-              "panel": "testpanel",
+              "panel": "seat",
               "panelRow": [
                 {
                   "group": [
-                    "TEST: FIRE & OHEAT DETECT Button",
-                    "TEST: OXY QTY Switch",
-                    "TEST: MAL & IND LTS Button",
-                    "TEST: PROBE HEAT Switch"
+                    "SEAT: EJECT Handle",
+                    "SEAT: Safety Lever"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "leftsidewall",
+              "panelRow": [
+                {
+                  "group": [
+                    "LEFT WALL: CANOPY",
+                    "LEFT WALL: SLAP Switch (ECM-PGRM # 5)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "uhfpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "UHF: MODE Knob",
+                    "UHF: VOL Knob",
+                    "UHF: FUNCTION Knob",
+                    "UHF: Manual Frequency ___._XX"
                   ]
                 },
                 {
                   "group": [
-                    "TEST: EPU/GEN Switch",
-                    "TEST: FLCS PWR TEST Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "fltcontrolpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "FLT: DIGITAL Switch",
-                    "FLT: ALT FLAPS Switch",
-                    "FLT: MANUAL TF FLYUP Switch",
-                    "FLT: LE FLAPS Switch"
+                    "UHF: Manual Frequency ___.X__",
+                    "UHF: Manual Frequency __X.___",
+                    "UHF: Manual Frequency _X_.___",
+                    "UHF: A-3-2-T Rotary X__.___"
                   ]
                 },
                 {
                   "group": [
-                    "FLT: FLCS Switch",
-                    "FLT: BIT Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "manualtrimpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "TRIM: ROLL TRIM Wheel",
-                    "TRIM: TRIM/AP DISC Switch",
-                    "TRIM: YAW TRIM Knob",
-                    "TRIM: PITCH TRIM Wheel"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "fuelpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "FUEL: MASTER Switch",
-                    "FUEL: ENG FEED Knob",
-                    "FUEL: AIR REFUEL Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "auxcommpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "AUX: CNI Knob Switch",
-                    "AUX: CHANNEL",
-                    "AUX: STATION SELECTOR Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "extlightingpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "EXT: ANTI COLLISION Switch",
-                    "EXT: POSITION Switch",
-                    "EXT: WING/TAIL Switch",
-                    "EXT: MASTER Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "epupanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "EPU: EPU Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "elecpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "ELEC: MAIN PWR Switch",
-                    "ELEC: CAUTION RESET Button"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "avtrpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "AVTR: AVTR Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "ecmpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "ECM: OPR Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "engjetstartpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "ENG: JFS Switch",
-                    "ENG: ENG CONT Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "audio2panel",
-              "panelRow": [
-                {
-                  "group": [
-                    "AUDIO2: INTERCOM Knob",
-                    "AUDIO2: ILS Knob"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "audio1panel",
-              "panelRow": [
-                {
-                  "group": [
-                    "AUDIO1: COMM 1 Knob",
-                    "AUDIO1: COMM 2 Knob",
-                    "AUDIO1: MSL Knob",
-                    "AUDIO1: COMM 1 Mode Knob"
-                  ]
-                },
-                {
-                  "group": [
-                    "AUDIO1: COMM 2 Mode Knob",
-                    "AUDIO1: THREAT Knob"
+                    "UHF: PRESET CHANNEL Knob"
                   ]
                 }
               ]
@@ -214,38 +72,31 @@
         {
           "panelRowSet": [
             {
-              "panel": "uhfpanel",
+              "panel": "audio1panel",
               "panelRow": [
                 {
                   "group": [
-                    "UHF: PRESET CHANNEL Knob",
-                    "UHF: A-3-2-T Rotary X__.___",
-                    "UHF: Manual Frequency _X_.___",
-                    "UHF: Manual Frequency __X.___"
+                    "AUDIO1: THREAT Knob",
+                    "AUDIO1: COMM 2 Mode Knob",
+                    "AUDIO1: COMM 1 Mode Knob",
+                    "AUDIO1: MSL Knob"
                   ]
                 },
                 {
                   "group": [
-                    "UHF: Manual Frequency ___.X__",
-                    "UHF: Manual Frequency ___._XX",
-                    "UHF: FUNCTION Knob",
-                    "UHF: VOL Knob"
-                  ]
-                },
-                {
-                  "group": [
-                    "UHF: MODE Knob"
+                    "AUDIO1: COMM 2 Knob",
+                    "AUDIO1: COMM 1 Knob"
                   ]
                 }
               ]
             },
             {
-              "panel": "leftsidewall",
+              "panel": "audio2panel",
               "panelRow": [
                 {
                   "group": [
-                    "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-                    "LEFT WALL: CANOPY"
+                    "AUDIO2: ILS Knob",
+                    "AUDIO2: INTERCOM Knob"
                   ]
                 }
               ]
@@ -255,12 +106,161 @@
         {
           "panelRowSet": [
             {
-              "panel": "seat",
+              "panel": "engjetstartpanel",
               "panelRow": [
                 {
                   "group": [
-                    "SEAT: Safety Lever",
-                    "SEAT: EJECT Handle"
+                    "ENG: ENG CONT Switch",
+                    "ENG: JFS Switch"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "ecmpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "ECM: OPR Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "avtrpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "AVTR: AVTR Switch"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "elecpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "ELEC: CAUTION RESET Button",
+                    "ELEC: MAIN PWR Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "epupanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "EPU: EPU Switch"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "extlightingpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "EXT: MASTER Switch",
+                    "EXT: WING/TAIL Switch",
+                    "EXT: POSITION Switch",
+                    "EXT: ANTI COLLISION Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "auxcommpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "AUX: STATION SELECTOR Switch",
+                    "AUX: CHANNEL",
+                    "AUX: CNI Knob Switch"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "fuelpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "FUEL: AIR REFUEL Switch",
+                    "FUEL: ENG FEED Knob",
+                    "FUEL: MASTER Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "manualtrimpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "TRIM: PITCH TRIM Wheel",
+                    "TRIM: YAW TRIM Knob",
+                    "TRIM: TRIM/AP DISC Switch",
+                    "TRIM: ROLL TRIM Wheel"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "fltcontrolpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "FLT: BIT Switch",
+                    "FLT: FLCS Switch",
+                    "FLT: LE FLAPS Switch",
+                    "FLT: MANUAL TF FLYUP Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "FLT: ALT FLAPS Switch",
+                    "FLT: DIGITAL Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "testpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "TEST: FLCS PWR TEST Switch",
+                    "TEST: EPU/GEN Switch",
+                    "TEST: PROBE HEAT Switch",
+                    "TEST: MAL & IND LTS Button"
+                  ]
+                },
+                {
+                  "group": [
+                    "TEST: OXY QTY Switch",
+                    "TEST: FIRE & OHEAT DETECT Button"
                   ]
                 }
               ]
@@ -275,22 +275,49 @@
         {
           "panelRowSet": [
             {
-              "panel": "altgearcontrol",
+              "panel": "gearpanel",
               "panelRow": [
                 {
                   "group": [
-                    "ALT GEAR: Extend Gear Handle",
-                    "ALT GEAR: Reset Button"
+                    "GEAR: LIGHTS Switch",
+                    "GEAR: HORN SILENCER Button",
+                    "GEAR: STORES CONFIG Switch",
+                    "GEAR: LG Handle"
+                  ]
+                },
+                {
+                  "group": [
+                    "GEAR: PARKING BREAK Switch",
+                    "GEAR: GND JETT Switch",
+                    "GEAR: HOOK Switch",
+                    "GEAR: EMER STORES JETTISON Button"
                   ]
                 }
               ]
             },
             {
-              "panel": "twapanel",
+              "panel": "cmdspanel",
               "panelRow": [
                 {
                   "group": [
-                    "TWA: POWER Button"
+                    "CMDS: MODE Knob",
+                    "CMDS: PRGM Knob",
+                    "CMDS: JETT Switch",
+                    "CMDS: FL Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "CMDS: CH Switch",
+                    "CMDS: O2 Switch",
+                    "CMDS: O1 Switch",
+                    "CMDS: MWS Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "CMDS: JMR Switch",
+                    "CMDS: RWR Switch"
                   ]
                 }
               ]
@@ -310,28 +337,11 @@
               ]
             },
             {
-              "panel": "cmdspanel",
+              "panel": "twapanel",
               "panelRow": [
                 {
                   "group": [
-                    "CMDS: RWR Switch",
-                    "CMDS: JMR Switch",
-                    "CMDS: MWS Switch",
-                    "CMDS: O1 Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "CMDS: O2 Switch",
-                    "CMDS: CH Switch",
-                    "CMDS: FL Switch",
-                    "CMDS: JETT Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "CMDS: PRGM Knob",
-                    "CMDS: MODE Knob"
+                    "TWA: POWER Button"
                   ]
                 }
               ]
@@ -341,22 +351,12 @@
         {
           "panelRowSet": [
             {
-              "panel": "gearpanel",
+              "panel": "altgearcontrol",
               "panelRow": [
                 {
                   "group": [
-                    "GEAR: EMER STORES JETTISON Button",
-                    "GEAR: HOOK Switch",
-                    "GEAR: GND JETT Switch",
-                    "GEAR: PARKING BREAK Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "GEAR: LG Handle",
-                    "GEAR: STORES CONFIG Switch",
-                    "GEAR: HORN SILENCER Button",
-                    "GEAR: LIGHTS Switch"
+                    "ALT GEAR: Reset Button",
+                    "ALT GEAR: Extend Gear Handle"
                   ]
                 }
               ]
@@ -371,74 +371,12 @@
         {
           "panelRowSet": [
             {
-              "panel": "miscpanel",
+              "panel": "fuelqtypanel",
               "panelRow": [
                 {
                   "group": [
-                    "MISC: RF Switch",
-                    "MISC: LASER Switch",
-                    "MISC: MASTER ARM Switch",
-                    "MISC: ADV MODE"
-                  ]
-                },
-                {
-                  "group": [
-                    "MISC: ROLL Switch",
-                    "MISC: PITCH Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "lefteyebrow",
-              "panelRow": [
-                {
-                  "group": [
-                    "EYE: MASTER CAUTION Button",
-                    "EYE: F ACK Button"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "twp",
-              "panelRow": [
-                {
-                  "group": [
-                    "TWP: HANDOFF",
-                    "TWP: MISSILE LAUNCH",
-                    "TWP: SYS TEST",
-                    "TWP: TGT SEP"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "rwr",
-              "panelRow": [
-                {
-                  "group": [
-                    "RWR: Brightness Knob"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "maininstrument",
-              "panelRow": [
-                {
-                  "group": [
-                    "MAIN: HSI HDG Knob",
-                    "MAIN: HSI CRS Knob",
-                    "MAIN: Altimeter Pressure Knob"
+                    "QTY: EXT FUEL TRANS Switch",
+                    "QTY: FUEL QTY SEL Knob"
                   ]
                 }
               ]
@@ -458,12 +396,74 @@
         {
           "panelRowSet": [
             {
-              "panel": "fuelqtypanel",
+              "panel": "maininstrument",
               "panelRow": [
                 {
                   "group": [
-                    "QTY: FUEL QTY SEL Knob",
-                    "QTY: EXT FUEL TRANS Switch"
+                    "MAIN: Altimeter Pressure Knob",
+                    "MAIN: HSI CRS Knob",
+                    "MAIN: HSI HDG Knob"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "rwr",
+              "panelRow": [
+                {
+                  "group": [
+                    "RWR: Brightness Knob"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "twp",
+              "panelRow": [
+                {
+                  "group": [
+                    "TWP: TGT SEP",
+                    "TWP: SYS TEST",
+                    "TWP: MISSILE LAUNCH",
+                    "TWP: HANDOFF"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "lefteyebrow",
+              "panelRow": [
+                {
+                  "group": [
+                    "EYE: F ACK Button",
+                    "EYE: MASTER CAUTION Button"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "miscpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "MISC: PITCH Switch",
+                    "MISC: ROLL Switch",
+                    "MISC: ADV MODE",
+                    "MISC: MASTER ARM Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "MISC: LASER Switch",
+                    "MISC: RF Switch"
                   ]
                 }
               ]
@@ -478,60 +478,31 @@
         {
           "panelRowSet": [
             {
-              "panel": "snsrpwrpanel",
+              "panel": "oxygenpanel",
               "panelRow": [
                 {
                   "group": [
-                    "SNSR: LEFT HDPT Switch",
-                    "SNSR: RIGHT HDPT Switch",
-                    "SNSR: FCR Switch",
-                    "SNSR: RDR ALT Switch"
+                    "OXY: Setting 2"
                   ]
                 }
               ]
             },
             {
-              "panel": "hudpanel",
+              "panel": "avionicpowerpanel",
               "panelRow": [
                 {
                   "group": [
-                    "HUD: Scales Switch",
-                    "HUD: FPM Switch",
-                    "HUD: DED Data Switch",
-                    "HUD: DEPR RET Switch"
+                    "AVIONICS: DL Switch",
+                    "AVIONICS: GPS Switch",
+                    "AVIONICS: UFC Switch",
+                    "AVIONICS: MFD Switch"
                   ]
                 },
                 {
                   "group": [
-                    "HUD: Velocity Switch",
-                    "HUD: Altitude Switch",
-                    "HUD: Brightness Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "lightingpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "LIGHT: INST PNL Knob (Primary)",
-                    "LIGHT: DED Knob (Primary)",
-                    "LIGHT: CONSOLES Knob (Flood)"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "aircondpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "AIR: AIR SOURCE Knob"
+                    "AVIONICS: SMS Switch",
+                    "AVIONICS: FCC Switch",
+                    "AVIONICS: INS Knob"
                   ]
                 }
               ]
@@ -551,21 +522,11 @@
               ]
             },
             {
-              "panel": "avionicpowerpanel",
+              "panel": "aircondpanel",
               "panelRow": [
                 {
                   "group": [
-                    "AVIONICS: INS Knob",
-                    "AVIONICS: FCC Switch",
-                    "AVIONICS: SMS Switch",
-                    "AVIONICS: MFD Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "AVIONICS: UFC Switch",
-                    "AVIONICS: GPS Switch",
-                    "AVIONICS: DL Switch"
+                    "AIR: AIR SOURCE Knob"
                   ]
                 }
               ]
@@ -575,11 +536,50 @@
         {
           "panelRowSet": [
             {
-              "panel": "oxygenpanel",
+              "panel": "lightingpanel",
               "panelRow": [
                 {
                   "group": [
-                    "OXY: Setting 2"
+                    "LIGHT: CONSOLES Knob (Flood)",
+                    "LIGHT: DED Knob (Primary)",
+                    "LIGHT: INST PNL Knob (Primary)"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "hudpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "HUD: Brightness Switch",
+                    "HUD: Altitude Switch",
+                    "HUD: Velocity Switch",
+                    "HUD: DEPR RET Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "HUD: DED Data Switch",
+                    "HUD: FPM Switch",
+                    "HUD: Scales Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "snsrpwrpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "SNSR: RDR ALT Switch",
+                    "SNSR: FCR Switch",
+                    "SNSR: RIGHT HDPT Switch",
+                    "SNSR: LEFT HDPT Switch"
                   ]
                 }
               ]
@@ -594,23 +594,23 @@
         {
           "panelRowSet": [
             {
-              "panel": "othercockpitcallbacks",
+              "panel": "simulationhardware",
               "panelRow": [
                 {
                   "group": [
-                    "CKPIT: Wheel Brakes"
+                    "SIM: Toggle Exit Sim Menu",
+                    "SIM: Chat",
+                    "SIM: Time Acceleration"
                   ]
                 }
               ]
             },
             {
-              "panel": "simulationhardware",
+              "panel": "othercockpitcallbacks",
               "panelRow": [
                 {
                   "group": [
-                    "SIM: Time Acceleration",
-                    "SIM: Chat",
-                    "SIM: Toggle Exit Sim Menu"
+                    "CKPIT: Wheel Brakes"
                   ]
                 }
               ]
@@ -625,14 +625,14 @@
         {
           "panelRowSet": [
             {
-              "panel": "viewgeneralcontrol",
+              "panel": "viewexternal",
               "panelRow": [
                 {
                   "group": [
-                    "VIEWGEN: Rotate View Up",
-                    "VIEWGEN: Rotate View Down",
-                    "VIEWGEN: Rotate View Left",
-                    "VIEWGEN: Rotate View Right"
+                    "VIEWEXT: Chase Camera",
+                    "VIEWEXT: Flyby Camera",
+                    "VIEWEXT: Satellite Camera",
+                    "VIEWEXT: Orbit Camera"
                   ]
                 }
               ]
@@ -642,16 +642,16 @@
               "panelRow": [
                 {
                   "group": [
-                    "VIEWINT: Padlock",
-                    "VIEWINT: HUD Only",
-                    "VIEWINT: Snap (3D) Cockpit",
-                    "VIEWINT: Pan (3D) Cockpit"
+                    "VIEWINT: Glance Backward",
+                    "VIEWINT: Glance Forward",
+                    "VIEWINT: Pan (3D) Cockpit",
+                    "VIEWINT: Snap (3D) Cockpit"
                   ]
                 },
                 {
                   "group": [
-                    "VIEWINT: Glance Forward",
-                    "VIEWINT: Glance Backward"
+                    "VIEWINT: HUD Only",
+                    "VIEWINT: Padlock"
                   ]
                 }
               ]
@@ -661,14 +661,14 @@
         {
           "panelRowSet": [
             {
-              "panel": "viewexternal",
+              "panel": "viewgeneralcontrol",
               "panelRow": [
                 {
                   "group": [
-                    "VIEWEXT: Orbit Camera",
-                    "VIEWEXT: Satellite Camera",
-                    "VIEWEXT: Flyby Camera",
-                    "VIEWEXT: Chase Camera"
+                    "VIEWGEN: Rotate View Right",
+                    "VIEWGEN: Rotate View Left",
+                    "VIEWGEN: Rotate View Down",
+                    "VIEWGEN: Rotate View Up"
                   ]
                 }
               ]
@@ -687,23 +687,23 @@
               "panelRow": [
                 {
                   "group": [
-                    "RADIO: AWACS Menu",
-                    "RADIO: Wingman Menu",
-                    "RADIO: Element Menu",
-                    "RADIO: Flight Menu"
+                    "Radio-Previous Menu Tanker",
+                    "Radio-Next Menu Tanker",
+                    "Radio-Send Message Tanker",
+                    "RADIO: Tanker Menu"
                   ]
                 },
                 {
                   "group": [
                     "RADIO: ATC Menu",
-                    "RADIO: Tanker Menu",
-                    "Radio-Send Message Tanker",
-                    "Radio-Next Menu Tanker"
+                    "RADIO: Flight Menu",
+                    "RADIO: Element Menu",
+                    "RADIO: Wingman Menu"
                   ]
                 },
                 {
                   "group": [
-                    "Radio-Previous Menu Tanker"
+                    "RADIO: AWACS Menu"
                   ]
                 }
               ]

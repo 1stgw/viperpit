@@ -1,7 +1,6 @@
 package de.viperpit.agent.keys
 
 import java.io.File
-import java.nio.charset.StandardCharsets
 import java.util.Map
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.eclipse.xtend.lib.annotations.EqualsHashCode
@@ -15,6 +14,7 @@ import static com.google.common.base.Preconditions.checkArgument
 import static com.google.common.base.Preconditions.checkNotNull
 import static com.google.common.base.Splitter.on
 import static com.google.common.collect.Lists.newArrayList
+import static java.nio.charset.StandardCharsets.ISO_8859_1
 import static java.nio.file.Files.readAllLines
 
 import static extension java.lang.Integer.parseInt
@@ -66,7 +66,9 @@ public class KeyFile {
 			val keyCodeLines = newArrayList
 			val currentCategory = new StringBuilder
 			val currentSection = new StringBuilder
-			readAllLines(file.toPath, StandardCharsets.UTF_8).filter[!startsWith("#")].tail.forEach [ line |
+			readAllLines(file.toPath, ISO_8859_1).filter [
+				!startsWith("#")
+			].tail.forEach [ line |
 				val category = line.toCategory
 				if (category !== null) {
 					currentCategory.delete(0, currentCategory.length)

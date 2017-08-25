@@ -3,39 +3,39 @@
     <div class="panel-heading">HUD  PANEL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <hud-scales-switch />
+            <hud-brightness-switch />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <hud-fpm-switch />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <hud-ded-data-switch />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <hud-depr-ret-switch />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <hud-velocity-switch />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
             <hud-altitude-switch />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <hud-brightness-switch />
+            <hud-velocity-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <hud-depr-ret-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <hud-ded-data-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <hud-fpm-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <hud-scales-switch />
           </div>
         </div>
       </div>
@@ -44,24 +44,24 @@
 </template>
 
 <script>
-import HudScalesSwitch from './HudScalesSwitch'
-import HudFpmSwitch from './HudFpmSwitch'
-import HudDedDataSwitch from './HudDedDataSwitch'
-import HudDeprRetSwitch from './HudDeprRetSwitch'
-import HudVelocitySwitch from './HudVelocitySwitch'
-import HudAltitudeSwitch from './HudAltitudeSwitch'
 import HudBrightnessSwitch from './HudBrightnessSwitch'
+import HudAltitudeSwitch from './HudAltitudeSwitch'
+import HudVelocitySwitch from './HudVelocitySwitch'
+import HudDeprRetSwitch from './HudDeprRetSwitch'
+import HudDedDataSwitch from './HudDedDataSwitch'
+import HudFpmSwitch from './HudFpmSwitch'
+import HudScalesSwitch from './HudScalesSwitch'
 
 export default {
   name: 'HudPanel',
   components: {
-    HudScalesSwitch,
-    HudFpmSwitch,
-    HudDedDataSwitch,
-    HudDeprRetSwitch,
-    HudVelocitySwitch,
+    HudBrightnessSwitch,
     HudAltitudeSwitch,
-    HudBrightnessSwitch
+    HudVelocitySwitch,
+    HudDeprRetSwitch,
+    HudDedDataSwitch,
+    HudFpmSwitch,
+    HudScalesSwitch
   }
 }
 </script>

@@ -3,24 +3,24 @@
     <div class="panel-heading">VIEW EXTERNAL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <viewext-orbit-camera />
+            <viewext-chase-camera />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <viewext-satellite-camera />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
             <viewext-flyby-camera />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <viewext-chase-camera />
+            <viewext-satellite-camera />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <viewext-orbit-camera />
           </div>
         </div>
       </div>
@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import ViewextOrbitCamera from './ViewextOrbitCamera'
-import ViewextSatelliteCamera from './ViewextSatelliteCamera'
-import ViewextFlybyCamera from './ViewextFlybyCamera'
 import ViewextChaseCamera from './ViewextChaseCamera'
+import ViewextFlybyCamera from './ViewextFlybyCamera'
+import ViewextSatelliteCamera from './ViewextSatelliteCamera'
+import ViewextOrbitCamera from './ViewextOrbitCamera'
 
 export default {
   name: 'ViewExternal',
   components: {
-    ViewextOrbitCamera,
-    ViewextSatelliteCamera,
+    ViewextChaseCamera,
     ViewextFlybyCamera,
-    ViewextChaseCamera
+    ViewextSatelliteCamera,
+    ViewextOrbitCamera
   }
 }
 </script>

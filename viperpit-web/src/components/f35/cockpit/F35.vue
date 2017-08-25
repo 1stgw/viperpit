@@ -10,10 +10,6 @@
       <router-link to="/cockpits/f35/consoles/views">Views</router-link> | 
       <router-link to="/cockpits/f35/consoles/radiocomms">Radio Comms</router-link>
     </div>
-    <div class="row">
-      <small>Connected to {{ getAgent }}</small>
-    </div>
-    <hr/>
     <router-view></router-view>
   </div>
   <div v-else>
@@ -56,7 +52,6 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'getAgent',
       'isConnected'
     ])
   },

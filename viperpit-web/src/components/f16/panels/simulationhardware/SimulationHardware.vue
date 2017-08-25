@@ -3,19 +3,19 @@
     <div class="panel-heading">SIMULATION & HARDWARE</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <sim-time-acceleration />
+            <sim-toggle-exit-sim-menu />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
             <sim-chat />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <sim-toggle-exit-sim-menu />
+            <sim-time-acceleration />
           </div>
         </div>
       </div>
@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import SimTimeAcceleration from './SimTimeAcceleration'
-import SimChat from './SimChat'
 import SimToggleExitSimMenu from './SimToggleExitSimMenu'
+import SimChat from './SimChat'
+import SimTimeAcceleration from './SimTimeAcceleration'
 
 export default {
   name: 'SimulationHardware',
   components: {
-    SimTimeAcceleration,
+    SimToggleExitSimMenu,
     SimChat,
-    SimToggleExitSimMenu
+    SimTimeAcceleration
   }
 }
 </script>

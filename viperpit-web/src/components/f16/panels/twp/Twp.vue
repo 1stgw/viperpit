@@ -3,24 +3,24 @@
     <div class="panel-heading">TWP</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <twp-handoff />
+            <twp-tgt-sep />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <twp-missile-launch />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
             <twp-sys-test />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <twp-tgt-sep />
+            <twp-missile-launch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <twp-handoff />
           </div>
         </div>
       </div>
@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import TwpHandoff from './TwpHandoff'
-import TwpMissileLaunch from './TwpMissileLaunch'
-import TwpSysTest from './TwpSysTest'
 import TwpTgtSep from './TwpTgtSep'
+import TwpSysTest from './TwpSysTest'
+import TwpMissileLaunch from './TwpMissileLaunch'
+import TwpHandoff from './TwpHandoff'
 
 export default {
   name: 'Twp',
   components: {
-    TwpHandoff,
-    TwpMissileLaunch,
+    TwpTgtSep,
     TwpSysTest,
-    TwpTgtSep
+    TwpMissileLaunch,
+    TwpHandoff
   }
 }
 </script>

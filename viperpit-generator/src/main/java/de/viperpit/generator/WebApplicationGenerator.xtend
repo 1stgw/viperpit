@@ -72,7 +72,6 @@ class WebApplicationGenerator {
 			«ENDFOR»
 			
 			export default class «profile.toUpperCase»Router {
-			
 				static getRoutes () {
 					return [
 						«FOR console : cockpit.consoles SEPARATOR ','»
@@ -84,7 +83,6 @@ class WebApplicationGenerator {
 						«ENDFOR»
 					]
 				}
-			
 			}
 		'''.process, new File(pathForRouter, '''index.js'''.toString), UTF_8)
 		val pathForCockpit = new File('''«pathForModule»/cockpit''')
@@ -98,10 +96,6 @@ class WebApplicationGenerator {
 							<router-link to="/cockpits/«profile»/consoles/«console.id»">«console.name»</router-link>
 						«ENDFOR»
 					</div>
-					<div class="row">
-						<small>Connected to {{ getAgent }}</small>
-					</div>
-					<hr/>
 					<router-view></router-view>
 				</div>
 				<div v-else>
@@ -136,7 +130,6 @@ class WebApplicationGenerator {
 				},
 				computed: {
 					...mapGetters([
-						'getAgent',
 						'isConnected'
 					])
 				},
@@ -192,7 +185,7 @@ class WebApplicationGenerator {
 						<div class="panel-body">
 							<div class="row">
 								«FOR group : panel.groups»
-									<div class="col-sm-6 col-md-4">
+									<div class="col-xs-6 col-sm-4">
 										<div align="center" style="padding: 0px;">
 											<«group.clazz.kebapCaseName» />
 										</div>

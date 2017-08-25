@@ -3,34 +3,34 @@
     <div class="panel-heading">FLT CONTROL PANEL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <flt-digital-switch />
+            <flt-bit-switch />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <flt-alt-flaps-switch />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <flt-manual-tf-flyup-switch />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div align="center" style="padding: 0px;">
-            <flt-le-flaps-switch />
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
             <flt-flcs-switch />
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <flt-bit-switch />
+            <flt-le-flaps-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <flt-manual-tf-flyup-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <flt-alt-flaps-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <flt-digital-switch />
           </div>
         </div>
       </div>
@@ -39,22 +39,22 @@
 </template>
 
 <script>
-import FltDigitalSwitch from './FltDigitalSwitch'
-import FltAltFlapsSwitch from './FltAltFlapsSwitch'
-import FltManualTfFlyupSwitch from './FltManualTfFlyupSwitch'
-import FltLeFlapsSwitch from './FltLeFlapsSwitch'
-import FltFlcsSwitch from './FltFlcsSwitch'
 import FltBitSwitch from './FltBitSwitch'
+import FltFlcsSwitch from './FltFlcsSwitch'
+import FltLeFlapsSwitch from './FltLeFlapsSwitch'
+import FltManualTfFlyupSwitch from './FltManualTfFlyupSwitch'
+import FltAltFlapsSwitch from './FltAltFlapsSwitch'
+import FltDigitalSwitch from './FltDigitalSwitch'
 
 export default {
   name: 'FltControlPanel',
   components: {
-    FltDigitalSwitch,
-    FltAltFlapsSwitch,
-    FltManualTfFlyupSwitch,
-    FltLeFlapsSwitch,
+    FltBitSwitch,
     FltFlcsSwitch,
-    FltBitSwitch
+    FltLeFlapsSwitch,
+    FltManualTfFlyupSwitch,
+    FltAltFlapsSwitch,
+    FltDigitalSwitch
   }
 }
 </script>
