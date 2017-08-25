@@ -1,6 +1,289 @@
 {
   "consoleRowSet": [
     {
+      "console": "cmds",
+      "consoleRow": [
+        {
+          "panelRowSet": [
+            {
+              "panel": "rwr",
+              "panelRow": [
+                {
+                  "group": [
+                    "RWR: Brightness Knob"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "twp",
+              "panelRow": [
+                {
+                  "group": [
+                    "TWP: TGT SEP",
+                    "TWP: SYS TEST",
+                    "TWP: UNKNOWN",
+                    "TWP: PRIORITY MODE"
+                  ]
+                },
+                {
+                  "group": [
+                    "TWP: MISSILE LAUNCH",
+                    "TWP: HANDOFF"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "twapanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "TWA: POWER Button",
+                    "TWA: SEARCH Button",
+                    "TWA: LOW Button"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "cmdspanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "CMDS: MODE Knob",
+                    "CMDS: PRGM Knob",
+                    "CMDS: JETT Switch",
+                    "CMDS: FL Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "CMDS: CH Switch",
+                    "CMDS: O2 Switch",
+                    "CMDS: O1 Switch",
+                    "CMDS: MWS Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "CMDS: JMR Switch",
+                    "CMDS: RWR Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "console": "comms",
+      "consoleRow": [
+        {
+          "panelRowSet": [
+            {
+              "panel": "uhfpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "UHF: MODE Knob",
+                    "UHF: VOL Knob",
+                    "UHF: FUNCTION Knob",
+                    "UHF: Manual Frequency ___._XX"
+                  ]
+                },
+                {
+                  "group": [
+                    "UHF: Manual Frequency ___.X__",
+                    "UHF: Manual Frequency __X.___",
+                    "UHF: Manual Frequency _X_.___",
+                    "UHF: A-3-2-T Rotary X__.___"
+                  ]
+                },
+                {
+                  "group": [
+                    "UHF: PRESET CHANNEL Knob"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "audio1panel",
+              "panelRow": [
+                {
+                  "group": [
+                    "AUDIO1: THREAT Knob",
+                    "AUDIO1: COMM 2 Mode Knob",
+                    "AUDIO1: COMM 1 Mode Knob",
+                    "AUDIO1: MSL Knob"
+                  ]
+                },
+                {
+                  "group": [
+                    "AUDIO1: COMM 2 Knob",
+                    "AUDIO1: COMM 1 Knob"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "audio2panel",
+              "panelRow": [
+                {
+                  "group": [
+                    "AUDIO2: ILS Knob",
+                    "AUDIO2: INTERCOM Knob"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "auxcommpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "AUX: STATION SELECTOR Switch",
+                    "AUX: CHANNEL",
+                    "AUX: CNI Knob Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "console": "fuel",
+      "consoleRow": [
+        {
+          "panelRowSet": [
+            {
+              "panel": "fuelqtypanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "QTY: EXT FUEL TRANS Switch",
+                    "QTY: FUEL QTY SEL Knob"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "fuelpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "FUEL: AIR REFUEL Switch",
+                    "FUEL: ENG FEED Knob",
+                    "FUEL: MASTER Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "console": "test",
+      "consoleRow": [
+        {
+          "panelRowSet": [
+            {
+              "panel": "testpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "TEST: FLCS PWR TEST Switch",
+                    "TEST: EPU/GEN Switch",
+                    "TEST: PROBE HEAT Switch",
+                    "TEST: MAL & IND LTS Button"
+                  ]
+                },
+                {
+                  "group": [
+                    "TEST: OXY QTY Switch",
+                    "TEST: FIRE & OHEAT DETECT Button"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "console": "lights",
+      "consoleRow": [
+        {
+          "panelRowSet": [
+            {
+              "panel": "lightingpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "LIGHT: CONSOLES Knob (Flood)",
+                    "LIGHT: DED Knob (Primary)",
+                    "LIGHT: INST PNL Knob (Primary)"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "extlightingpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "EXT: MASTER Switch",
+                    "EXT: WING/TAIL Switch",
+                    "EXT: POSITION Switch",
+                    "EXT: ANTI COLLISION Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "console": "sensors",
+      "consoleRow": [
+        {
+          "panelRowSet": [
+            {
+              "panel": "snsrpwrpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "MISC: RF Switch",
+                    "SNSR: RDR ALT Switch",
+                    "SNSR: FCR Switch",
+                    "SNSR: RIGHT HDPT Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "SNSR: LEFT HDPT Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "console": "leftconsole",
       "consoleRow": [
         {
@@ -32,32 +315,6 @@
         {
           "panelRowSet": [
             {
-              "panel": "uhfpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "UHF: MODE Knob",
-                    "UHF: VOL Knob",
-                    "UHF: FUNCTION Knob",
-                    "UHF: Manual Frequency ___._XX"
-                  ]
-                },
-                {
-                  "group": [
-                    "UHF: Manual Frequency ___.X__",
-                    "UHF: Manual Frequency __X.___",
-                    "UHF: Manual Frequency _X_.___",
-                    "UHF: A-3-2-T Rotary X__.___"
-                  ]
-                },
-                {
-                  "group": [
-                    "UHF: PRESET CHANNEL Knob"
-                  ]
-                }
-              ]
-            },
-            {
               "panel": "mpopanel",
               "panelRow": [
                 {
@@ -66,45 +323,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "audio1panel",
-              "panelRow": [
-                {
-                  "group": [
-                    "AUDIO1: THREAT Knob",
-                    "AUDIO1: COMM 2 Mode Knob",
-                    "AUDIO1: COMM 1 Mode Knob",
-                    "AUDIO1: MSL Knob"
-                  ]
-                },
-                {
-                  "group": [
-                    "AUDIO1: COMM 2 Knob",
-                    "AUDIO1: COMM 1 Knob"
-                  ]
-                }
-              ]
             },
-            {
-              "panel": "audio2panel",
-              "panelRow": [
-                {
-                  "group": [
-                    "AUDIO2: ILS Knob",
-                    "AUDIO2: INTERCOM Knob"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
             {
               "panel": "engjetstartpanel",
               "panelRow": [
@@ -115,7 +334,11 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
             {
               "panel": "ecmpanel",
               "panelRow": [
@@ -125,11 +348,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
+            },
             {
               "panel": "avtrpanel",
               "panelRow": [
@@ -139,7 +358,11 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
             {
               "panel": "elecpanel",
               "panelRow": [
@@ -150,58 +373,13 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
+            },
             {
               "panel": "epupanel",
               "panelRow": [
                 {
                   "group": [
                     "EPU: EPU Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "extlightingpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "EXT: MASTER Switch",
-                    "EXT: WING/TAIL Switch",
-                    "EXT: POSITION Switch",
-                    "EXT: ANTI COLLISION Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "auxcommpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "AUX: STATION SELECTOR Switch",
-                    "AUX: CHANNEL",
-                    "AUX: CNI Knob Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "fuelpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "FUEL: AIR REFUEL Switch",
-                    "FUEL: ENG FEED Knob",
-                    "FUEL: MASTER Switch"
                   ]
                 }
               ]
@@ -243,29 +421,6 @@
               ]
             }
           ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "testpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "TEST: FLCS PWR TEST Switch",
-                    "TEST: EPU/GEN Switch",
-                    "TEST: PROBE HEAT Switch",
-                    "TEST: MAL & IND LTS Button"
-                  ]
-                },
-                {
-                  "group": [
-                    "TEST: OXY QTY Switch",
-                    "TEST: FIRE & OHEAT DETECT Button"
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -296,52 +451,11 @@
               ]
             },
             {
-              "panel": "cmdspanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "CMDS: MODE Knob",
-                    "CMDS: PRGM Knob",
-                    "CMDS: JETT Switch",
-                    "CMDS: FL Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "CMDS: CH Switch",
-                    "CMDS: O2 Switch",
-                    "CMDS: O1 Switch",
-                    "CMDS: MWS Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "CMDS: JMR Switch",
-                    "CMDS: RWR Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
               "panel": "hmcspanel",
               "panelRow": [
                 {
                   "group": [
                     "HMCS: HMSC Knob"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "twapanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "TWA: POWER Button"
                   ]
                 }
               ]
@@ -371,17 +485,6 @@
         {
           "panelRowSet": [
             {
-              "panel": "fuelqtypanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "QTY: EXT FUEL TRANS Switch",
-                    "QTY: FUEL QTY SEL Knob"
-                  ]
-                }
-              ]
-            },
-            {
               "panel": "instrmodepanel",
               "panelRow": [
                 {
@@ -390,11 +493,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
+            },
             {
               "panel": "maininstrument",
               "panelRow": [
@@ -406,34 +505,11 @@
                   ]
                 }
               ]
-            },
-            {
-              "panel": "rwr",
-              "panelRow": [
-                {
-                  "group": [
-                    "RWR: Brightness Knob"
-                  ]
-                }
-              ]
             }
           ]
         },
         {
           "panelRowSet": [
-            {
-              "panel": "twp",
-              "panelRow": [
-                {
-                  "group": [
-                    "TWP: TGT SEP",
-                    "TWP: SYS TEST",
-                    "TWP: MISSILE LAUNCH",
-                    "TWP: HANDOFF"
-                  ]
-                }
-              ]
-            },
             {
               "panel": "lefteyebrow",
               "panelRow": [
@@ -444,11 +520,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
+            },
             {
               "panel": "miscpanel",
               "panelRow": [
@@ -462,8 +534,7 @@
                 },
                 {
                   "group": [
-                    "MISC: LASER Switch",
-                    "MISC: RF Switch"
+                    "MISC: LASER Switch"
                   ]
                 }
               ]
@@ -536,18 +607,6 @@
         {
           "panelRowSet": [
             {
-              "panel": "lightingpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "LIGHT: CONSOLES Knob (Flood)",
-                    "LIGHT: DED Knob (Primary)",
-                    "LIGHT: INST PNL Knob (Primary)"
-                  ]
-                }
-              ]
-            },
-            {
               "panel": "hudpanel",
               "panelRow": [
                 {
@@ -563,23 +622,6 @@
                     "HUD: DED Data Switch",
                     "HUD: FPM Switch",
                     "HUD: Scales Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "snsrpwrpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "SNSR: RDR ALT Switch",
-                    "SNSR: FCR Switch",
-                    "SNSR: RIGHT HDPT Switch",
-                    "SNSR: LEFT HDPT Switch"
                   ]
                 }
               ]

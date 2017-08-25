@@ -15,6 +15,16 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
+            <twp-unknown />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <twp-priority-mode />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
             <twp-missile-launch />
           </div>
         </div>
@@ -31,6 +41,8 @@
 <script>
 import TwpTgtSep from './TwpTgtSep'
 import TwpSysTest from './TwpSysTest'
+import TwpUnknown from './TwpUnknown'
+import TwpPriorityMode from './TwpPriorityMode'
 import TwpMissileLaunch from './TwpMissileLaunch'
 import TwpHandoff from './TwpHandoff'
 
@@ -39,6 +51,8 @@ export default {
   components: {
     TwpTgtSep,
     TwpSysTest,
+    TwpUnknown,
+    TwpPriorityMode,
     TwpMissileLaunch,
     TwpHandoff
   }

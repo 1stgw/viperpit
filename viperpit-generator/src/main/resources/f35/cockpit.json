@@ -1,348 +1,36 @@
 {
   "console": [
     {
-      "id": "leftconsole",
-      "class": "LeftConsole",
-      "name": "Left Console",
+      "id": "cmds",
+      "class": "Cmds",
+      "name": "Cmds",
       "panel": [
         {
-          "id": "seat",
-          "class": "Seat",
-          "name": "SEAT",
+          "id": "rwr",
+          "class": "Rwr",
+          "name": "RWR",
           "group": [
             {
-              "id": "SEAT: EJECT Handle",
-              "class": "SeatEjectHandle",
-              "description": "SEAT: EJECT Handle - Hold For Eject",
+              "id": "RWR: Brightness Knob",
+              "class": "RwrBrightnessKnob",
+              "description": "RWR: Brightness Knob - Increase",
+              "label": "Brightness",
               "type": "button",
               "control": [
                 {
-                  "id": "seatejecthandleholdforeject",
-                  "clazz": "SeatEjectHandleHoldForEject",
-                  "callback": "SimEject",
-                  "description": "SEAT: EJECT Handle - Hold For Eject",
-                  "label": "EJECT",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "SEAT: Safety Lever",
-              "class": "SeatSafetyLever",
-              "description": "SEAT: Safety Lever - Armed",
-              "label": "Safety Lever",
-              "type": "button",
-              "control": [
-                {
-                  "id": "seatsafetyleverarmed",
-                  "clazz": "SeatSafetyLeverArmed",
-                  "callback": "SimSeatOn",
-                  "description": "SEAT: Safety Lever - Armed",
-                  "label": "Armed",
-                  "role": "none"
-                },
-                {
-                  "id": "seatsafetyleverlocked",
-                  "clazz": "SeatSafetyLeverLocked",
-                  "callback": "SimSeatOff",
-                  "description": "SEAT: Safety Lever - Locked",
-                  "label": "Locked",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "leftsidewall",
-          "class": "LeftSideWall",
-          "name": "LEFT SIDE WALL",
-          "group": [
-            {
-              "id": "LEFT WALL: CANOPY",
-              "class": "LeftWallCanopy",
-              "description": "LEFT WALL: CANOPY - Open",
-              "label": "CANOPY",
-              "type": "button",
-              "control": [
-                {
-                  "id": "leftwallcanopyopen",
-                  "clazz": "LeftWallCanopyOpen",
-                  "callback": "AFCanopyOpen",
-                  "description": "LEFT WALL: CANOPY - Open",
-                  "label": "Open",
-                  "role": "none"
-                },
-                {
-                  "id": "leftwallcanopyclose",
-                  "clazz": "LeftWallCanopyClose",
-                  "callback": "AFCanopyClose",
-                  "description": "LEFT WALL: CANOPY - Close",
-                  "label": "Close",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-              "class": "LeftWallSlapSwitchEcmPgrm5",
-              "description": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-              "type": "button",
-              "control": [
-                {
-                  "id": "leftwallslapswitchecmpgrm5",
-                  "clazz": "LeftWallSlapSwitchEcmPgrm5",
-                  "callback": "SimSlapSwitch",
-                  "description": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-                  "label": "SLAP Switch (ECM-PGRM # 5)",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "uhfpanel",
-          "class": "UhfPanel",
-          "name": "UHF PANEL",
-          "group": [
-            {
-              "id": "UHF: MODE Knob",
-              "class": "UhfModeKnob",
-              "description": "UHF: MODE Knob - MNL",
-              "label": "MODE",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "uhfmodeknobmnl",
-                  "clazz": "UhfModeKnobMnl",
-                  "callback": "SimBupUhfManual",
-                  "description": "UHF: MODE Knob - MNL",
-                  "label": "MNL",
-                  "role": "none"
-                },
-                {
-                  "id": "uhfmodeknobpreset",
-                  "clazz": "UhfModeKnobPreset",
-                  "callback": "SimBupUhfPreset",
-                  "description": "UHF: MODE Knob - PRESET",
-                  "label": "PRESET",
-                  "role": "none"
-                },
-                {
-                  "id": "uhfmodeknobgrd",
-                  "clazz": "UhfModeKnobGrd",
-                  "callback": "SimBupUhfGuard",
-                  "description": "UHF: MODE Knob - GRD",
-                  "label": "GRD",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "UHF: VOL Knob",
-              "class": "UhfVolKnob",
-              "description": "UHF: VOL Knob - AI vs IVC Volume Incr",
-              "label": "VOL",
-              "type": "button",
-              "control": [
-                {
-                  "id": "uhfvolknobaivsivcvolumeincr",
-                  "clazz": "UhfVolKnobAiVsIvcVolumeIncr",
-                  "callback": "OTWBalanceIVCvsAIUp",
-                  "description": "UHF: VOL Knob - AI vs IVC Volume Incr",
-                  "label": "AI vs IVC Volume Incr",
-                  "role": "none"
-                },
-                {
-                  "id": "uhfvolknobaivsivcvolumedecr",
-                  "clazz": "UhfVolKnobAiVsIvcVolumeDecr",
-                  "callback": "OTWBalanceIVCvsAIDown",
-                  "description": "UHF: VOL Knob - AI vs IVC Volume Decr",
-                  "label": "AI vs IVC Volume Decr",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "UHF: FUNCTION Knob",
-              "class": "UhfFunctionKnob",
-              "description": "UHF: FUNCTION Knob - OFF",
-              "label": "FUNCTION",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "uhffunctionknoboff",
-                  "clazz": "UhfFunctionKnobOff",
-                  "callback": "SimBupUhfOff",
-                  "description": "UHF: FUNCTION Knob - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                },
-                {
-                  "id": "uhffunctionknobmain",
-                  "clazz": "UhfFunctionKnobMain",
-                  "callback": "SimBupUhfMain",
-                  "description": "UHF: FUNCTION Knob - MAIN",
-                  "label": "MAIN",
-                  "role": "on"
-                },
-                {
-                  "id": "uhffunctionknobboth",
-                  "clazz": "UhfFunctionKnobBoth",
-                  "callback": "SimBupUhfBoth",
-                  "description": "UHF: FUNCTION Knob - BOTH",
-                  "label": "BOTH",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "UHF: Manual Frequency ___._XX",
-              "class": "UhfManualFrequencyZzzzxx",
-              "description": "UHF: Manual Frequency ___._XX - Cycle Up",
-              "label": "Manual Frequency ___._XX",
-              "type": "button",
-              "control": [
-                {
-                  "id": "uhfmanualfrequencyxxcycleup",
-                  "clazz": "UhfManualFrequencyZzzzxxCycleUp",
-                  "callback": "SimBupUhfFreq5Inc",
-                  "description": "UHF: Manual Frequency ___._XX - Cycle Up",
-                  "label": "Cycle Up",
+                  "id": "rwrbrightnessknobincrease",
+                  "clazz": "RwrBrightnessKnobIncrease",
+                  "callback": "SimRWRBrightnessUp",
+                  "description": "RWR: Brightness Knob - Increase",
+                  "label": "Increase",
                   "role": "up"
                 },
                 {
-                  "id": "uhfmanualfrequencyxxcycledown",
-                  "clazz": "UhfManualFrequencyZzzzxxCycleDown",
-                  "callback": "SimBupUhfFreq5Dec",
-                  "description": "UHF: Manual Frequency ___._XX - Cycle Down",
-                  "label": "Cycle Down",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "UHF: Manual Frequency ___.X__",
-              "class": "UhfManualFrequencyZzzxzz",
-              "description": "UHF: Manual Frequency ___.X__ - Cycle Up",
-              "label": "Manual Frequency ___.X__",
-              "type": "button",
-              "control": [
-                {
-                  "id": "uhfmanualfrequencyxcycleup",
-                  "clazz": "UhfManualFrequencyZzzxzzCycleUp",
-                  "callback": "SimBupUhfFreq4Inc",
-                  "description": "UHF: Manual Frequency ___.X__ - Cycle Up",
-                  "label": "Cycle Up",
-                  "role": "up"
-                },
-                {
-                  "id": "uhfmanualfrequencyxcycledown",
-                  "clazz": "UhfManualFrequencyZzzxzzCycleDown",
-                  "callback": "SimBupUhfFreq4Dec",
-                  "description": "UHF: Manual Frequency ___.X__ - Cycle Down",
-                  "label": "Cycle Down",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "UHF: Manual Frequency __X.___",
-              "class": "UhfManualFrequencyZzxzzz",
-              "description": "UHF: Manual Frequency __X.___ - Cycle Up",
-              "label": "Manual Frequency __X.___",
-              "type": "button",
-              "control": [
-                {
-                  "id": "uhfmanualfrequencyxcycleup",
-                  "clazz": "UhfManualFrequencyZzxzzzCycleUp",
-                  "callback": "SimBupUhfFreq3Inc",
-                  "description": "UHF: Manual Frequency __X.___ - Cycle Up",
-                  "label": "Cycle Up",
-                  "role": "up"
-                },
-                {
-                  "id": "uhfmanualfrequencyxcycledown",
-                  "clazz": "UhfManualFrequencyZzxzzzCycleDown",
-                  "callback": "SimBupUhfFreq3Dec",
-                  "description": "UHF: Manual Frequency __X.___ - Cycle Down",
-                  "label": "Cycle Down",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "UHF: Manual Frequency _X_.___",
-              "class": "UhfManualFrequencyZxzzzz",
-              "description": "UHF: Manual Frequency _X_.___ - Cycle Up",
-              "label": "Manual Frequency _X_.___",
-              "type": "button",
-              "control": [
-                {
-                  "id": "uhfmanualfrequencyxcycleup",
-                  "clazz": "UhfManualFrequencyZxzzzzCycleUp",
-                  "callback": "SimBupUhfFreq2Inc",
-                  "description": "UHF: Manual Frequency _X_.___ - Cycle Up",
-                  "label": "Cycle Up",
-                  "role": "up"
-                },
-                {
-                  "id": "uhfmanualfrequencyxcycledown",
-                  "clazz": "UhfManualFrequencyZxzzzzCycleDown",
-                  "callback": "SimBupUhfFreq2Dec",
-                  "description": "UHF: Manual Frequency _X_.___ - Cycle Down",
-                  "label": "Cycle Down",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "UHF: A-3-2-T Rotary X__.___",
-              "class": "UhfA32TRotaryXzzzzz",
-              "description": "UHF: A-3-2-T Rotary X__.___ - Step Up",
-              "label": "A-3-2-T Rotary X__.___",
-              "type": "button",
-              "control": [
-                {
-                  "id": "uhfa32trotaryxstepup",
-                  "clazz": "UhfA32TRotaryXzzzzzStepUp",
-                  "callback": "SimBupUhfFreq1Inc",
-                  "description": "UHF: A-3-2-T Rotary X__.___ - Step Up",
-                  "label": "Step Up",
-                  "role": "up"
-                },
-                {
-                  "id": "uhfa32trotaryxstepdown",
-                  "clazz": "UhfA32TRotaryXzzzzzStepDown",
-                  "callback": "SimBupUhfFreq1Dec",
-                  "description": "UHF: A-3-2-T Rotary X__.___ - Step Down",
-                  "label": "Step Down",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "UHF: PRESET CHANNEL Knob",
-              "class": "UhfPresetChannelKnob",
-              "description": "UHF: PRESET CHANNEL Knob - Cycle Up",
-              "label": "PRESET CHANNEL",
-              "type": "button",
-              "control": [
-                {
-                  "id": "uhfpresetchannelknobcycleup",
-                  "clazz": "UhfPresetChannelKnobCycleUp",
-                  "callback": "SimCycleRadioChannel",
-                  "description": "UHF: PRESET CHANNEL Knob - Cycle Up",
-                  "label": "Cycle Up",
-                  "role": "up"
-                },
-                {
-                  "id": "uhfpresetchannelknobcycledown",
-                  "clazz": "UhfPresetChannelKnobCycleDown",
-                  "callback": "SimDecRadioChannel",
-                  "description": "UHF: PRESET CHANNEL Knob - Cycle Down",
-                  "label": "Cycle Down",
+                  "id": "rwrbrightnessknobdecrease",
+                  "clazz": "RwrBrightnessKnobDecrease",
+                  "callback": "SimRWRBrightnessDown",
+                  "description": "RWR: Brightness Knob - Decrease",
+                  "label": "Decrease",
                   "role": "down"
                 }
               ]
@@ -350,22 +38,102 @@
           ]
         },
         {
-          "id": "mpopanel",
-          "class": "MpoPanel",
-          "name": "MPO PANEL",
+          "id": "twp",
+          "class": "Twp",
+          "name": "TWP",
           "group": [
             {
-              "id": "MPO: MANUAL PITCH Switch",
-              "class": "MpoManualPitchSwitch",
-              "description": "MPO: MANUAL PITCH Switch - Hold",
+              "id": "TWP: TGT SEP",
+              "class": "TwpTgtSep",
+              "description": "TWP: TGT SEP - Push",
               "type": "button",
               "control": [
                 {
-                  "id": "mpomanualpitchswitchhold",
-                  "clazz": "MpoManualPitchSwitchHold",
-                  "callback": "SimMPO",
-                  "description": "MPO: MANUAL PITCH Switch - Hold",
-                  "label": "MANUAL PITCH",
+                  "id": "twptgtseppush",
+                  "clazz": "TwpTgtSepPush",
+                  "callback": "SimRWRSetTargetSep",
+                  "description": "TWP: TGT SEP - Push",
+                  "label": "TGT SEP",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "TWP: SYS TEST",
+              "class": "TwpSysTest",
+              "description": "TWP: SYS TEST - Push",
+              "type": "button",
+              "control": [
+                {
+                  "id": "twpsystestpush",
+                  "clazz": "TwpSysTestPush",
+                  "callback": "SimRWRSysTest",
+                  "description": "TWP: SYS TEST - Push",
+                  "label": "SYS TEST",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "TWP: UNKNOWN",
+              "class": "TwpUnknown",
+              "description": "TWP: UNKNOWN - Toggle",
+              "type": "button",
+              "control": [
+                {
+                  "id": "twpunknowntoggle",
+                  "clazz": "TwpUnknownToggle",
+                  "callback": "SimRWRSetUnknowns",
+                  "description": "TWP: UNKNOWN - Toggle",
+                  "label": "UNKNOWN",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "TWP: PRIORITY MODE",
+              "class": "TwpPriorityMode",
+              "description": "TWP: PRIORITY MODE - Toggle",
+              "type": "button",
+              "control": [
+                {
+                  "id": "twpprioritymodetoggle",
+                  "clazz": "TwpPriorityModeToggle",
+                  "callback": "SimRWRSetPriority",
+                  "description": "TWP: PRIORITY MODE - Toggle",
+                  "label": "PRIORITY MODE",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "TWP: MISSILE LAUNCH",
+              "class": "TwpMissileLaunch",
+              "description": "TWP: MISSILE LAUNCH - Push",
+              "type": "button",
+              "control": [
+                {
+                  "id": "twpmissilelaunchpush",
+                  "clazz": "TwpMissileLaunchPush",
+                  "callback": "SimRWRLaunch",
+                  "description": "TWP: MISSILE LAUNCH - Push",
+                  "label": "MISSILE LAUNCH",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "TWP: HANDOFF",
+              "class": "TwpHandoff",
+              "description": "TWP: HANDOFF - Push",
+              "type": "button",
+              "control": [
+                {
+                  "id": "twphandoffpush",
+                  "clazz": "TwpHandoffPush",
+                  "callback": "SimRWRHandoff",
+                  "description": "TWP: HANDOFF - Push",
+                  "label": "HANDOFF",
                   "role": "none"
                 }
               ]
@@ -373,1375 +141,63 @@
           ]
         },
         {
-          "id": "audio1panel",
-          "class": "Audio1Panel",
-          "name": "AUDIO 1 PANEL",
+          "id": "twapanel",
+          "class": "TwaPanel",
+          "name": "TWA PANEL",
           "group": [
             {
-              "id": "AUDIO1: THREAT Knob",
-              "class": "Audio1ThreatKnob",
-              "description": "AUDIO1: THREAT Knob - Volume Incr.",
-              "label": "THREAT",
+              "id": "TWA: POWER Button",
+              "class": "TwaPowerButton",
+              "description": "TWA: POWER Button - On",
+              "label": "POWER",
               "type": "button",
               "control": [
                 {
-                  "id": "audio1threatknobvolumeincr",
-                  "clazz": "Audio1ThreatKnobVolumeIncr",
-                  "callback": "SimStepThreatVolumeUp",
-                  "description": "AUDIO1: THREAT Knob - Volume Incr.",
-                  "label": "Volume Incr.",
-                  "role": "up"
-                },
-                {
-                  "id": "audio1threatknobvolumedecr",
-                  "clazz": "Audio1ThreatKnobVolumeDecr",
-                  "callback": "SimStepThreatVolumeDown",
-                  "description": "AUDIO1: THREAT Knob - Volume Decr.",
-                  "label": "Volume Decr.",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "AUDIO1: COMM 2 Mode Knob",
-              "class": "Audio1Comm2ModeKnob",
-              "description": "AUDIO1: COMM 2 Mode Knob - SQL",
-              "label": "COMM 2 Mode",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "audio1comm2modeknobsql",
-                  "clazz": "Audio1Comm2ModeKnobSql",
-                  "callback": "SimAud1Com2Sql",
-                  "description": "AUDIO1: COMM 2 Mode Knob - SQL",
-                  "label": "SQL",
-                  "role": "none"
-                },
-                {
-                  "id": "audio1comm2modeknobgd",
-                  "clazz": "Audio1Comm2ModeKnobGd",
-                  "callback": "SimAud1Com2Gd",
-                  "description": "AUDIO1: COMM 2 Mode Knob - GD",
-                  "label": "GD",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "AUDIO1: COMM 1 Mode Knob",
-              "class": "Audio1Comm1ModeKnob",
-              "description": "AUDIO1: COMM 1 Mode Knob - SQL",
-              "label": "COMM 1 Mode",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "audio1comm1modeknobsql",
-                  "clazz": "Audio1Comm1ModeKnobSql",
-                  "callback": "SimAud1Com1Sql",
-                  "description": "AUDIO1: COMM 1 Mode Knob - SQL",
-                  "label": "SQL",
-                  "role": "none"
-                },
-                {
-                  "id": "audio1comm1modeknobgd",
-                  "clazz": "Audio1Comm1ModeKnobGd",
-                  "callback": "SimAud1Com1Gd",
-                  "description": "AUDIO1: COMM 1 Mode Knob - GD",
-                  "label": "GD",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "AUDIO1: MSL Knob",
-              "class": "Audio1MslKnob",
-              "description": "AUDIO1: MSL Knob - Volume Incr.",
-              "label": "MSL",
-              "type": "button",
-              "control": [
-                {
-                  "id": "audio1mslknobvolumeincr",
-                  "clazz": "Audio1MslKnobVolumeIncr",
-                  "callback": "SimStepMissileVolumeUp",
-                  "description": "AUDIO1: MSL Knob - Volume Incr.",
-                  "label": "Volume Incr.",
-                  "role": "up"
-                },
-                {
-                  "id": "audio1mslknobvolumedecr",
-                  "clazz": "Audio1MslKnobVolumeDecr",
-                  "callback": "SimStepMissileVolumeDown",
-                  "description": "AUDIO1: MSL Knob - Volume Decr.",
-                  "label": "Volume Decr.",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "AUDIO1: COMM 2 Knob",
-              "class": "Audio1Comm2Knob",
-              "description": "AUDIO1: COMM 2 Knob - Volume Incr.",
-              "label": "COMM 2",
-              "type": "button",
-              "control": [
-                {
-                  "id": "audio1comm2knobvolumeincr",
-                  "clazz": "Audio1Comm2KnobVolumeIncr",
-                  "callback": "SimStepComm2VolumeUp",
-                  "description": "AUDIO1: COMM 2 Knob - Volume Incr.",
-                  "label": "Volume Incr.",
-                  "role": "up"
-                },
-                {
-                  "id": "audio1comm2knobvolumedecr",
-                  "clazz": "Audio1Comm2KnobVolumeDecr",
-                  "callback": "SimStepComm2VolumeDown",
-                  "description": "AUDIO1: COMM 2 Knob - Volume Decr.",
-                  "label": "Volume Decr.",
-                  "role": "down"
-                },
-                {
-                  "id": "audio1comm2knobpoweron",
-                  "clazz": "Audio1Comm2KnobPowerOn",
-                  "callback": "SimComm2PowerOn",
-                  "description": "AUDIO1: COMM 2 Knob - Power On",
-                  "label": "Power On",
+                  "id": "twapowerbuttonon",
+                  "clazz": "TwaPowerButtonOn",
+                  "callback": "SimRwrPowerOn",
+                  "description": "TWA: POWER Button - On",
+                  "label": "On",
                   "role": "on"
                 },
                 {
-                  "id": "audio1comm2knobpoweroff",
-                  "clazz": "Audio1Comm2KnobPowerOff",
-                  "callback": "SimComm2PowerOff",
-                  "description": "AUDIO1: COMM 2 Knob - Power Off",
-                  "label": "Power Off",
+                  "id": "twapowerbuttonoff",
+                  "clazz": "TwaPowerButtonOff",
+                  "callback": "SimRwrPowerOff",
+                  "description": "TWA: POWER Button - Off",
+                  "label": "Off",
                   "role": "off"
                 }
               ]
             },
             {
-              "id": "AUDIO1: COMM 1 Knob",
-              "class": "Audio1Comm1Knob",
-              "description": "AUDIO1: COMM 1 Knob - Volume Incr.",
-              "label": "COMM 1",
+              "id": "TWA: SEARCH Button",
+              "class": "TwaSearchButton",
+              "description": "TWA: SEARCH Button - Toggle",
               "type": "button",
               "control": [
                 {
-                  "id": "audio1comm1knobvolumeincr",
-                  "clazz": "Audio1Comm1KnobVolumeIncr",
-                  "callback": "SimStepComm1VolumeUp",
-                  "description": "AUDIO1: COMM 1 Knob - Volume Incr.",
-                  "label": "Volume Incr.",
-                  "role": "up"
-                },
-                {
-                  "id": "audio1comm1knobvolumedecr",
-                  "clazz": "Audio1Comm1KnobVolumeDecr",
-                  "callback": "SimStepComm1VolumeDown",
-                  "description": "AUDIO1: COMM 1 Knob - Volume Decr.",
-                  "label": "Volume Decr.",
-                  "role": "down"
-                },
-                {
-                  "id": "audio1comm1knobpoweron",
-                  "clazz": "Audio1Comm1KnobPowerOn",
-                  "callback": "SimComm1PowerOn",
-                  "description": "AUDIO1: COMM 1 Knob - Power On",
-                  "label": "Power On",
-                  "role": "on"
-                },
-                {
-                  "id": "audio1comm1knobpoweroff",
-                  "clazz": "Audio1Comm1KnobPowerOff",
-                  "callback": "SimComm1PowerOff",
-                  "description": "AUDIO1: COMM 1 Knob - Power Off",
-                  "label": "Power Off",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "audio2panel",
-          "class": "Audio2Panel",
-          "name": "AUDIO 2 PANEL",
-          "group": [
-            {
-              "id": "AUDIO2: ILS Knob",
-              "class": "Audio2IlsKnob",
-              "description": "AUDIO2: ILS Knob - ON",
-              "label": "ILS",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "audio2ilsknobon",
-                  "clazz": "Audio2IlsKnobOn",
-                  "callback": "SimILSOn",
-                  "description": "AUDIO2: ILS Knob - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "audio2ilsknoboff",
-                  "clazz": "Audio2IlsKnobOff",
-                  "callback": "SimILSOff",
-                  "description": "AUDIO2: ILS Knob - OFF",
-                  "label": "OFF",
-                  "role": "off"
+                  "id": "twasearchbuttontoggle",
+                  "clazz": "TwaSearchButtonToggle",
+                  "callback": "SimRWRSetSearch",
+                  "description": "TWA: SEARCH Button - Toggle",
+                  "label": "SEARCH",
+                  "role": "none"
                 }
               ]
             },
             {
-              "id": "AUDIO2: INTERCOM Knob",
-              "class": "Audio2IntercomKnob",
-              "description": "AUDIO2: INTERCOM Knob - Volume Incr.",
-              "label": "INTERCOM",
+              "id": "TWA: LOW Button",
+              "class": "TwaLowButton",
+              "description": "TWA: LOW Button - Toggle",
               "type": "button",
               "control": [
                 {
-                  "id": "audio2intercomknobvolumeincr",
-                  "clazz": "Audio2IntercomKnobVolumeIncr",
-                  "callback": "SimStepIntercomVolumeUp",
-                  "description": "AUDIO2: INTERCOM Knob - Volume Incr.",
-                  "label": "Volume Incr.",
-                  "role": "up"
-                },
-                {
-                  "id": "audio2intercomknobvolumedecr",
-                  "clazz": "Audio2IntercomKnobVolumeDecr",
-                  "callback": "SimStepIntercomVolumeDown",
-                  "description": "AUDIO2: INTERCOM Knob - Volume Decr.",
-                  "label": "Volume Decr.",
-                  "role": "down"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "engjetstartpanel",
-          "class": "EngJetStartPanel",
-          "name": "ENG & JET START PANEL",
-          "group": [
-            {
-              "id": "ENG: ENG CONT Switch",
-              "class": "EngEngContSwitch",
-              "description": "ENG: ENG CONT Switch - PRI",
-              "label": "ENG CONT",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "engengcontswitchpri",
-                  "clazz": "EngEngContSwitchPri",
-                  "callback": "SimEngContPri",
-                  "description": "ENG: ENG CONT Switch - PRI",
-                  "label": "PRI",
-                  "role": "none"
-                },
-                {
-                  "id": "engengcontswitchsec",
-                  "clazz": "EngEngContSwitchSec",
-                  "callback": "SimEngContSec",
-                  "description": "ENG: ENG CONT Switch - SEC",
-                  "label": "SEC",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "ENG: JFS Switch",
-              "class": "EngJfsSwitch",
-              "description": "ENG: JFS Switch - OFF",
-              "label": "JFS",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "engjfsswitchoff",
-                  "clazz": "EngJfsSwitchOff",
-                  "callback": "SimJfsStart_Off",
-                  "description": "ENG: JFS Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                },
-                {
-                  "id": "engjfsswitchstart2",
-                  "clazz": "EngJfsSwitchStart2",
-                  "callback": "SimJfsStart_Start2",
-                  "description": "ENG: JFS Switch - START 2",
-                  "label": "START 2",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "ecmpanel",
-          "class": "EcmPanel",
-          "name": "ECM PANEL",
-          "group": [
-            {
-              "id": "ECM: OPR Switch",
-              "class": "EcmOprSwitch",
-              "description": "ECM: OPR Switch - OPR",
-              "label": "OPR",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "ecmoprswitchopr",
-                  "clazz": "EcmOprSwitchOpr",
-                  "callback": "SimEcmPowerOn",
-                  "description": "ECM: OPR Switch - OPR",
-                  "label": "OPR",
-                  "role": "on"
-                },
-                {
-                  "id": "ecmoprswitchoff",
-                  "clazz": "EcmOprSwitchOff",
-                  "callback": "SimEcmPowerOff",
-                  "description": "ECM: OPR Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "avtrpanel",
-          "class": "AvtrPanel",
-          "name": "AVTR PANEL",
-          "group": [
-            {
-              "id": "AVTR: AVTR Switch",
-              "class": "AvtrAvtrSwitch",
-              "description": "AVTR: AVTR Switch - Toggle ON / OFF",
-              "label": "AVTR",
-              "type": "button",
-              "control": [
-                {
-                  "id": "avtravtrswitchtoggleonoff",
-                  "clazz": "AvtrAvtrSwitchToggleOnOff",
-                  "callback": "SimAVTRToggle",
-                  "description": "AVTR: AVTR Switch - Toggle ON / OFF",
-                  "label": "Toggle ON / OFF",
-                  "role": "off"
-                },
-                {
-                  "id": "avtravtrswitchon",
-                  "clazz": "AvtrAvtrSwitchOn",
-                  "callback": "SimAVTRSwitchOn",
-                  "description": "AVTR: AVTR Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "avtravtrswitchauto",
-                  "clazz": "AvtrAvtrSwitchAuto",
-                  "callback": "SimAVTRSwitchAuto",
-                  "description": "AVTR: AVTR Switch - AUTO",
-                  "label": "AUTO",
-                  "role": "none"
-                },
-                {
-                  "id": "avtravtrswitchoff",
-                  "clazz": "AvtrAvtrSwitchOff",
-                  "callback": "SimAVTRSwitchOff",
-                  "description": "AVTR: AVTR Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "elecpanel",
-          "class": "ElecPanel",
-          "name": "ELEC PANEL",
-          "group": [
-            {
-              "id": "ELEC: CAUTION RESET Button",
-              "class": "ElecCautionResetButton",
-              "description": "ELEC: CAUTION RESET Button - Push",
-              "type": "button",
-              "control": [
-                {
-                  "id": "eleccautionresetbuttonpush",
-                  "clazz": "ElecCautionResetButtonPush",
-                  "callback": "SimElecReset",
-                  "description": "ELEC: CAUTION RESET Button - Push",
-                  "label": "CAUTION RESET",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "ELEC: MAIN PWR Switch",
-              "class": "ElecMainPwrSwitch",
-              "description": "ELEC: MAIN PWR Switch - MAIN",
-              "label": "MAIN PWR",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "elecmainpwrswitchmain",
-                  "clazz": "ElecMainPwrSwitchMain",
-                  "callback": "SimMainPowerMain",
-                  "description": "ELEC: MAIN PWR Switch - MAIN",
-                  "label": "MAIN",
-                  "role": "on"
-                },
-                {
-                  "id": "elecmainpwrswitchbatt",
-                  "clazz": "ElecMainPwrSwitchBatt",
-                  "callback": "SimMainPowerBatt",
-                  "description": "ELEC: MAIN PWR Switch - BATT",
-                  "label": "BATT",
-                  "role": "none"
-                },
-                {
-                  "id": "elecmainpwrswitchoff",
-                  "clazz": "ElecMainPwrSwitchOff",
-                  "callback": "SimMainPowerOff",
-                  "description": "ELEC: MAIN PWR Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "epupanel",
-          "class": "EpuPanel",
-          "name": "EPU PANEL",
-          "group": [
-            {
-              "id": "EPU: EPU Switch",
-              "class": "EpuEpuSwitch",
-              "description": "EPU: EPU Switch - ON",
-              "label": "EPU",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "epuepuswitchon",
-                  "clazz": "EpuEpuSwitchOn",
-                  "callback": "SimEpuOn",
-                  "description": "EPU: EPU Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "epuepuswitchnorm",
-                  "clazz": "EpuEpuSwitchNorm",
-                  "callback": "SimEpuAuto",
-                  "description": "EPU: EPU Switch - NORM",
-                  "label": "NORM",
-                  "role": "on"
-                },
-                {
-                  "id": "epuepuswitchoff",
-                  "clazz": "EpuEpuSwitchOff",
-                  "callback": "SimEpuOff",
-                  "description": "EPU: EPU Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "extlightingpanel",
-          "class": "ExtLightingPanel",
-          "name": "EXT LIGHTING PANEL",
-          "group": [
-            {
-              "id": "EXT: MASTER Switch",
-              "class": "ExtMasterSwitch",
-              "description": "EXT: MASTER Switch - NORM",
-              "label": "MASTER",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "extmasterswitchnorm",
-                  "clazz": "ExtMasterSwitchNorm",
-                  "callback": "SimExtlMasterNorm",
-                  "description": "EXT: MASTER Switch - NORM",
-                  "label": "NORM",
-                  "role": "on"
-                },
-                {
-                  "id": "extmasterswitchoff",
-                  "clazz": "ExtMasterSwitchOff",
-                  "callback": "SimExtlMasterOff",
-                  "description": "EXT: MASTER Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "EXT: WING/TAIL Switch",
-              "class": "ExtWingTailSwitch",
-              "description": "EXT: WING/TAIL Switch - BRT",
-              "label": "WING/TAIL",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "extwingtailswitchbrt",
-                  "clazz": "ExtWingTailSwitchBrt",
-                  "callback": "SimWingLightBrt",
-                  "description": "EXT: WING/TAIL Switch - BRT",
-                  "label": "BRT",
-                  "role": "none"
-                },
-                {
-                  "id": "extwingtailswitchoff",
-                  "clazz": "ExtWingTailSwitchOff",
-                  "callback": "SimWingLightOff",
-                  "description": "EXT: WING/TAIL Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "EXT: POSITION Switch",
-              "class": "ExtPositionSwitch",
-              "description": "EXT: POSITION Switch - FLASH",
-              "label": "POSITION",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "extpositionswitchflash",
-                  "clazz": "ExtPositionSwitchFlash",
-                  "callback": "SimLightsFlash",
-                  "description": "EXT: POSITION Switch - FLASH",
-                  "label": "FLASH",
-                  "role": "none"
-                },
-                {
-                  "id": "extpositionswitchsteady",
-                  "clazz": "ExtPositionSwitchSteady",
-                  "callback": "SimLightsSteady",
-                  "description": "EXT: POSITION Switch - STEADY",
-                  "label": "STEADY",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "EXT: ANTI COLLISION Switch",
-              "class": "ExtAntiCollisionSwitch",
-              "description": "EXT: ANTI COLLISION Switch - ON",
-              "label": "ANTI COLLISION",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "extanticollisionswitchon",
-                  "clazz": "ExtAntiCollisionSwitchOn",
-                  "callback": "SimAntiCollOn",
-                  "description": "EXT: ANTI COLLISION Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "extanticollisionswitchoff",
-                  "clazz": "ExtAntiCollisionSwitchOff",
-                  "callback": "SimAntiCollOff",
-                  "description": "EXT: ANTI COLLISION Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "auxcommpanel",
-          "class": "AuxCommPanel",
-          "name": "AUX COMM PANEL",
-          "group": [
-            {
-              "id": "AUX: STATION SELECTOR Switch",
-              "class": "AuxStationSelectorSwitch",
-              "description": "AUX: STATION SELECTOR Switch - T/R",
-              "label": "STATION SELECTOR",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "auxstationselectorswitchtr",
-                  "clazz": "AuxStationSelectorSwitchTR",
-                  "callback": "SimTACANTR",
-                  "description": "AUX: STATION SELECTOR Switch - T/R",
-                  "label": "T/R",
-                  "role": "none"
-                },
-                {
-                  "id": "auxstationselectorswitchaatr",
-                  "clazz": "AuxStationSelectorSwitchAATr",
-                  "callback": "SimTACANAATR",
-                  "description": "AUX: STATION SELECTOR Switch - A/A TR",
-                  "label": "A/A TR",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "AUX: CHANNEL",
-              "class": "AuxChannel",
-              "description": "AUX: CHANNEL - Cycle Up Left Digit",
-              "label": "CHANNEL",
-              "type": "button",
-              "control": [
-                {
-                  "id": "auxchannelcycleupleftdigit",
-                  "clazz": "AuxChannelCycleUpLeftDigit",
-                  "callback": "SimCycleLeftAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Up Left Digit",
-                  "label": "Cycle Up Left Digit",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchannelcycledownleftdigit",
-                  "clazz": "AuxChannelCycleDownLeftDigit",
-                  "callback": "SimDecLeftAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Down Left Digit",
-                  "label": "Cycle Down Left Digit",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchannelcycleupcenterdigit",
-                  "clazz": "AuxChannelCycleUpCenterDigit",
-                  "callback": "SimCycleCenterAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Up Center Digit",
-                  "label": "Cycle Up Center Digit",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchannelcycledowncenterdig",
-                  "clazz": "AuxChannelCycleDownCenterDig",
-                  "callback": "SimDecCenterAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Down Center Dig.",
-                  "label": "Cycle Down Center Dig.",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchannelcycleuprightdigit",
-                  "clazz": "AuxChannelCycleUpRightDigit",
-                  "callback": "SimCycleRightAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Up Right Digit",
-                  "label": "Cycle Up Right Digit",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchannelcycledownrightdigit",
-                  "clazz": "AuxChannelCycleDownRightDigit",
-                  "callback": "SimDecRightAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Down Right Digit",
-                  "label": "Cycle Down Right Digit",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchanneltogglebandx",
-                  "clazz": "AuxChannelToggleBandX",
-                  "callback": "SimXBandAuxComDigit",
-                  "description": "AUX: CHANNEL - Toggle Band X",
-                  "label": "Toggle Band X",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchanneltogglebandy",
-                  "clazz": "AuxChannelToggleBandY",
-                  "callback": "SimYBandAuxComDigit",
-                  "description": "AUX: CHANNEL - Toggle Band Y",
-                  "label": "Toggle Band Y",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "AUX: CNI Knob Switch",
-              "class": "AuxCniKnobSwitch",
-              "description": "AUX: CNI Knob Switch - BACKUP",
-              "label": "CNI Knob",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "auxcniknobswitchbackup",
-                  "clazz": "AuxCniKnobSwitchBackup",
-                  "callback": "SimAuxComBackup",
-                  "description": "AUX: CNI Knob Switch - BACKUP",
-                  "label": "BACKUP",
-                  "role": "none"
-                },
-                {
-                  "id": "auxcniknobswitchufc",
-                  "clazz": "AuxCniKnobSwitchUfc",
-                  "callback": "SimAuxComUFC",
-                  "description": "AUX: CNI Knob Switch - UFC",
-                  "label": "UFC",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "fuelpanel",
-          "class": "FuelPanel",
-          "name": "FUEL PANEL",
-          "group": [
-            {
-              "id": "FUEL: AIR REFUEL Switch",
-              "class": "FuelAirRefuelSwitch",
-              "description": "FUEL: AIR REFUEL Switch - OPEN",
-              "label": "AIR REFUEL",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "fuelairrefuelswitchopen",
-                  "clazz": "FuelAirRefuelSwitchOpen",
-                  "callback": "SimFuelDoorOpen",
-                  "description": "FUEL: AIR REFUEL Switch - OPEN",
-                  "label": "OPEN",
-                  "role": "on"
-                },
-                {
-                  "id": "fuelairrefuelswitchclose",
-                  "clazz": "FuelAirRefuelSwitchClose",
-                  "callback": "SimFuelDoorClose",
-                  "description": "FUEL: AIR REFUEL Switch - CLOSE",
-                  "label": "CLOSE",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "FUEL: ENG FEED Knob",
-              "class": "FuelEngFeedKnob",
-              "description": "FUEL: ENG FEED Knob - OFF",
-              "label": "ENG FEED",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "fuelengfeedknoboff",
-                  "clazz": "FuelEngFeedKnobOff",
-                  "callback": "SimFuelPumpOff",
-                  "description": "FUEL: ENG FEED Knob - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                },
-                {
-                  "id": "fuelengfeedknobnorm",
-                  "clazz": "FuelEngFeedKnobNorm",
-                  "callback": "SimFuelPumpNorm",
-                  "description": "FUEL: ENG FEED Knob - NORM",
-                  "label": "NORM",
-                  "role": "on"
-                },
-                {
-                  "id": "fuelengfeedknobaft",
-                  "clazz": "FuelEngFeedKnobAft",
-                  "callback": "SimFuelPumpAft",
-                  "description": "FUEL: ENG FEED Knob - AFT",
-                  "label": "AFT",
-                  "role": "none"
-                },
-                {
-                  "id": "fuelengfeedknobfwd",
-                  "clazz": "FuelEngFeedKnobFwd",
-                  "callback": "SimFuelPumpFwd",
-                  "description": "FUEL: ENG FEED Knob - FWD",
-                  "label": "FWD",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "FUEL: MASTER Switch",
-              "class": "FuelMasterSwitch",
-              "description": "FUEL: MASTER Switch - ON",
-              "label": "MASTER",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "fuelmasterswitchon",
-                  "clazz": "FuelMasterSwitchOn",
-                  "callback": "SimMasterFuelOn",
-                  "description": "FUEL: MASTER Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "fuelmasterswitchoff",
-                  "clazz": "FuelMasterSwitchOff",
-                  "callback": "SimMasterFuelOff",
-                  "description": "FUEL: MASTER Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "manualtrimpanel",
-          "class": "ManualTrimPanel",
-          "name": "MANUAL TRIM PANEL",
-          "group": [
-            {
-              "id": "TRIM: PITCH TRIM Wheel",
-              "class": "TrimPitchTrimWheel",
-              "description": "TRIM: PITCH TRIM Wheel - NOSE UP",
-              "label": "PITCH TRIM",
-              "type": "button",
-              "control": [
-                {
-                  "id": "trimpitchtrimwheelnoseup",
-                  "clazz": "TrimPitchTrimWheelNoseUp",
-                  "callback": "SimTrimNoseUp",
-                  "description": "TRIM: PITCH TRIM Wheel - NOSE UP",
-                  "label": "NOSE UP",
-                  "role": "up"
-                },
-                {
-                  "id": "trimpitchtrimwheelnosedn",
-                  "clazz": "TrimPitchTrimWheelNoseDn",
-                  "callback": "SimTrimNoseDown",
-                  "description": "TRIM: PITCH TRIM Wheel - NOSE DN",
-                  "label": "NOSE DN",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "TRIM: YAW TRIM Knob",
-              "class": "TrimYawTrimKnob",
-              "description": "TRIM: YAW TRIM Knob - L",
-              "label": "YAW TRIM",
-              "type": "button",
-              "control": [
-                {
-                  "id": "trimyawtrimknobl",
-                  "clazz": "TrimYawTrimKnobL",
-                  "callback": "SimTrimYawLeft",
-                  "description": "TRIM: YAW TRIM Knob - L",
-                  "label": "L",
-                  "role": "left"
-                },
-                {
-                  "id": "trimyawtrimknobr",
-                  "clazz": "TrimYawTrimKnobR",
-                  "callback": "SimTrimYawRight",
-                  "description": "TRIM: YAW TRIM Knob - R",
-                  "label": "R",
-                  "role": "right"
-                }
-              ]
-            },
-            {
-              "id": "TRIM: TRIM/AP DISC Switch",
-              "class": "TrimTrimApDiscSwitch",
-              "description": "TRIM: TRIM/AP DISC Switch - DISC",
-              "label": "TRIM/AP DISC",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "trimtrimapdiscswitchdisc",
-                  "clazz": "TrimTrimApDiscSwitchDisc",
-                  "callback": "SimTrimAPDISC",
-                  "description": "TRIM: TRIM/AP DISC Switch - DISC",
-                  "label": "DISC",
-                  "role": "none"
-                },
-                {
-                  "id": "trimtrimapdiscswitchnorm",
-                  "clazz": "TrimTrimApDiscSwitchNorm",
-                  "callback": "SimTrimAPNORM",
-                  "description": "TRIM: TRIM/AP DISC Switch - NORM",
-                  "label": "NORM",
-                  "role": "on"
-                }
-              ]
-            },
-            {
-              "id": "TRIM: ROLL TRIM Wheel",
-              "class": "TrimRollTrimWheel",
-              "description": "TRIM: ROLL TRIM Wheel - L WING DN",
-              "label": "ROLL TRIM",
-              "type": "button",
-              "control": [
-                {
-                  "id": "trimrolltrimwheellwingdn",
-                  "clazz": "TrimRollTrimWheelLWingDn",
-                  "callback": "SimTrimRollLeft",
-                  "description": "TRIM: ROLL TRIM Wheel - L WING DN",
-                  "label": "L WING DN",
-                  "role": "down"
-                },
-                {
-                  "id": "trimrolltrimwheelrwingdn",
-                  "clazz": "TrimRollTrimWheelRWingDn",
-                  "callback": "SimTrimRollRight",
-                  "description": "TRIM: ROLL TRIM Wheel - R WING DN",
-                  "label": "R WING DN",
-                  "role": "down"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "fltcontrolpanel",
-          "class": "FltControlPanel",
-          "name": "FLT CONTROL PANEL",
-          "group": [
-            {
-              "id": "FLT: BIT Switch",
-              "class": "FltBitSwitch",
-              "description": "FLT: BIT Switch - Push",
-              "type": "button",
-              "control": [
-                {
-                  "id": "fltbitswitchpush",
-                  "clazz": "FltBitSwitchPush",
-                  "callback": "SimFLTBIT",
-                  "description": "FLT: BIT Switch - Push",
-                  "label": "BIT",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "FLT: FLCS Switch",
-              "class": "FltFlcsSwitch",
-              "description": "FLT: FLCS Switch - Hold",
-              "type": "button",
-              "control": [
-                {
-                  "id": "fltflcsswitchhold",
-                  "clazz": "FltFlcsSwitchHold",
-                  "callback": "SimFLCSReset",
-                  "description": "FLT: FLCS Switch - Hold",
-                  "label": "FLCS",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "FLT: LE FLAPS Switch",
-              "class": "FltLeFlapsSwitch",
-              "description": "FLT: LE FLAPS Switch - LOCK",
-              "label": "LE FLAPS",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "fltleflapsswitchlock",
-                  "clazz": "FltLeFlapsSwitchLock",
-                  "callback": "SimLEFLock",
-                  "description": "FLT: LE FLAPS Switch - LOCK",
-                  "label": "LOCK",
-                  "role": "none"
-                },
-                {
-                  "id": "fltleflapsswitchauto",
-                  "clazz": "FltLeFlapsSwitchAuto",
-                  "callback": "SimLEFAuto",
-                  "description": "FLT: LE FLAPS Switch - AUTO",
-                  "label": "AUTO",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "FLT: MANUAL TF FLYUP Switch",
-              "class": "FltManualTfFlyupSwitch",
-              "description": "FLT: MANUAL TF FLYUP Switch - DISABLE",
-              "label": "MANUAL TF FLYUP",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "fltmanualtfflyupswitchdisable",
-                  "clazz": "FltManualTfFlyupSwitchDisable",
-                  "callback": "SimManualFlyupDisable",
-                  "description": "FLT: MANUAL TF FLYUP Switch - DISABLE",
-                  "label": "DISABLE",
-                  "role": "off"
-                },
-                {
-                  "id": "fltmanualtfflyupswitchenable",
-                  "clazz": "FltManualTfFlyupSwitchEnable",
-                  "callback": "SimManualFlyupEnable",
-                  "description": "FLT: MANUAL TF FLYUP Switch - ENABLE",
-                  "label": "ENABLE",
-                  "role": "on"
-                }
-              ]
-            },
-            {
-              "id": "FLT: ALT FLAPS Switch",
-              "class": "FltAltFlapsSwitch",
-              "description": "FLT: ALT FLAPS Switch - EXTEND",
-              "label": "ALT FLAPS",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "fltaltflapsswitchextend",
-                  "clazz": "FltAltFlapsSwitchExtend",
-                  "callback": "SimAltFlapsExtend",
-                  "description": "FLT: ALT FLAPS Switch - EXTEND",
-                  "label": "EXTEND",
-                  "role": "none"
-                },
-                {
-                  "id": "fltaltflapsswitchnorm",
-                  "clazz": "FltAltFlapsSwitchNorm",
-                  "callback": "SimAltFlapsNorm",
-                  "description": "FLT: ALT FLAPS Switch - NORM",
-                  "label": "NORM",
-                  "role": "on"
-                }
-              ]
-            },
-            {
-              "id": "FLT: DIGITAL Switch",
-              "class": "FltDigitalSwitch",
-              "description": "FLT: DIGITAL Switch - BACKUP",
-              "label": "DIGITAL",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "fltdigitalswitchbackup",
-                  "clazz": "FltDigitalSwitchBackup",
-                  "callback": "SimDigitalBUPBackup",
-                  "description": "FLT: DIGITAL Switch - BACKUP",
-                  "label": "BACKUP",
-                  "role": "none"
-                },
-                {
-                  "id": "fltdigitalswitchoff",
-                  "clazz": "FltDigitalSwitchOff",
-                  "callback": "SimDigitalBUPOff",
-                  "description": "FLT: DIGITAL Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "testpanel",
-          "class": "TestPanel",
-          "name": "TEST PANEL",
-          "group": [
-            {
-              "id": "TEST: FLCS PWR TEST Switch",
-              "class": "TestFlcsPwrTestSwitch",
-              "description": "TEST: FLCS PWR TEST Switch - Hold",
-              "type": "button",
-              "control": [
-                {
-                  "id": "testflcspwrtestswitchhold",
-                  "clazz": "TestFlcsPwrTestSwitchHold",
-                  "callback": "SimFlcsPowerTest",
-                  "description": "TEST: FLCS PWR TEST Switch - Hold",
-                  "label": "FLCS PWR TEST",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "TEST: EPU/GEN Switch",
-              "class": "TestEpuGenSwitch",
-              "description": "TEST: EPU/GEN Switch - Hold",
-              "type": "button",
-              "control": [
-                {
-                  "id": "testepugenswitchhold",
-                  "clazz": "TestEpuGenSwitchHold",
-                  "callback": "SimEpuGenTest",
-                  "description": "TEST: EPU/GEN Switch - Hold",
-                  "label": "EPU/GEN",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "TEST: PROBE HEAT Switch",
-              "class": "TestProbeHeatSwitch",
-              "description": "TEST: PROBE HEAT Switch - ON",
-              "label": "PROBE HEAT",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "testprobeheatswitchon",
-                  "clazz": "TestProbeHeatSwitchOn",
-                  "callback": "SimProbeHeatOn",
-                  "description": "TEST: PROBE HEAT Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "testprobeheatswitchoff",
-                  "clazz": "TestProbeHeatSwitchOff",
-                  "callback": "SimProbeHeatOff",
-                  "description": "TEST: PROBE HEAT Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                },
-                {
-                  "id": "testprobeheatswitchtest",
-                  "clazz": "TestProbeHeatSwitchTest",
-                  "callback": "SimProbeHeatTest",
-                  "description": "TEST: PROBE HEAT Switch - TEST",
-                  "label": "TEST",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "TEST: MAL & IND LTS Button",
-              "class": "TestMalIndLtsButton",
-              "description": "TEST: MAL & IND LTS Button - Hold",
-              "type": "button",
-              "control": [
-                {
-                  "id": "testmalindltsbuttonhold",
-                  "clazz": "TestMalIndLtsButtonHold",
-                  "callback": "SimMalIndLights",
-                  "description": "TEST: MAL & IND LTS Button - Hold",
-                  "label": "MAL & IND LTS",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "TEST: OXY QTY Switch",
-              "class": "TestOxyQtySwitch",
-              "description": "TEST: OXY QTY Switch - Hold",
-              "type": "button",
-              "control": [
-                {
-                  "id": "testoxyqtyswitchhold",
-                  "clazz": "TestOxyQtySwitchHold",
-                  "callback": "SimOBOGSBit",
-                  "description": "TEST: OXY QTY Switch - Hold",
-                  "label": "OXY QTY",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "TEST: FIRE & OHEAT DETECT Button",
-              "class": "TestFireOheatDetectButton",
-              "description": "TEST: FIRE & OHEAT DETECT Button - Hold",
-              "type": "button",
-              "control": [
-                {
-                  "id": "testfireoheatdetectbuttonhold",
-                  "clazz": "TestFireOheatDetectButtonHold",
-                  "callback": "SimOverHeat",
-                  "description": "TEST: FIRE & OHEAT DETECT Button - Hold",
-                  "label": "FIRE & OHEAT DETECT",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "leftauxconsole",
-      "class": "LeftAuxConsole",
-      "name": "Left Aux Console",
-      "panel": [
-        {
-          "id": "gearpanel",
-          "class": "GearPanel",
-          "name": "GEAR PANEL",
-          "group": [
-            {
-              "id": "GEAR: LIGHTS Switch",
-              "class": "GearLightsSwitch",
-              "description": "GEAR: LIGHTS Switch - LANDING",
-              "label": "LIGHTS",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "gearlightsswitchlanding",
-                  "clazz": "GearLightsSwitchLanding",
-                  "callback": "SimLandingLightOn",
-                  "description": "GEAR: LIGHTS Switch - LANDING",
-                  "label": "LANDING",
-                  "role": "none"
-                },
-                {
-                  "id": "gearlightsswitchoff",
-                  "clazz": "GearLightsSwitchOff",
-                  "callback": "SimLandingLightOff",
-                  "description": "GEAR: LIGHTS Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: HORN SILENCER Button",
-              "class": "GearHornSilencerButton",
-              "description": "GEAR: HORN SILENCER Button - Push",
-              "type": "button",
-              "control": [
-                {
-                  "id": "gearhornsilencerbuttonpush",
-                  "clazz": "GearHornSilencerButtonPush",
-                  "callback": "SimSilenceHorn",
-                  "description": "GEAR: HORN SILENCER Button - Push",
-                  "label": "HORN SILENCER",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: STORES CONFIG Switch",
-              "class": "GearStoresConfigSwitch",
-              "description": "GEAR: STORES CONFIG Switch - CAT I",
-              "label": "STORES CONFIG",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "gearstoresconfigswitchcati",
-                  "clazz": "GearStoresConfigSwitchCatI",
-                  "callback": "SimCATI",
-                  "description": "GEAR: STORES CONFIG Switch - CAT I",
-                  "label": "CAT I",
-                  "role": "none"
-                },
-                {
-                  "id": "gearstoresconfigswitchcatiii",
-                  "clazz": "GearStoresConfigSwitchCatIii",
-                  "callback": "SimCATIII",
-                  "description": "GEAR: STORES CONFIG Switch - CAT III",
-                  "label": "CAT III",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: LG Handle",
-              "class": "GearLgHandle",
-              "description": "GEAR: LG Handle - UP",
-              "label": "LG",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "gearlghandleup",
-                  "clazz": "GearLgHandleUp",
-                  "callback": "AFGearUp",
-                  "description": "GEAR: LG Handle - UP",
-                  "label": "UP",
-                  "role": "up"
-                },
-                {
-                  "id": "gearlghandledn",
-                  "clazz": "GearLgHandleDn",
-                  "callback": "AFGearDown",
-                  "description": "GEAR: LG Handle - DN",
-                  "label": "DN",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: PARKING BREAK Switch",
-              "class": "GearParkingBreakSwitch",
-              "description": "GEAR: PARKING BREAK Switch - ON",
-              "label": "PARKING BREAK",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "gearparkingbreakswitchon",
-                  "clazz": "GearParkingBreakSwitchOn",
-                  "callback": "SimParkingBrakeOn",
-                  "description": "GEAR: PARKING BREAK Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "gearparkingbreakswitchoff",
-                  "clazz": "GearParkingBreakSwitchOff",
-                  "callback": "SimParkingBrakeOff",
-                  "description": "GEAR: PARKING BREAK Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: GND JETT Switch",
-              "class": "GearGndJettSwitch",
-              "description": "GEAR: GND JETT Switch - ENABLE",
-              "label": "GND JETT",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "geargndjettswitchenable",
-                  "clazz": "GearGndJettSwitchEnable",
-                  "callback": "SimGndJettOn",
-                  "description": "GEAR: GND JETT Switch - ENABLE",
-                  "label": "ENABLE",
-                  "role": "on"
-                },
-                {
-                  "id": "geargndjettswitchoff",
-                  "clazz": "GearGndJettSwitchOff",
-                  "callback": "SimGndJettOff",
-                  "description": "GEAR: GND JETT Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: HOOK Switch",
-              "class": "GearHookSwitch",
-              "description": "GEAR: HOOK Switch - UP",
-              "label": "HOOK",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "gearhookswitchup",
-                  "clazz": "GearHookSwitchUp",
-                  "callback": "SimHookUp",
-                  "description": "GEAR: HOOK Switch - UP",
-                  "label": "UP",
-                  "role": "up"
-                },
-                {
-                  "id": "gearhookswitchdn",
-                  "clazz": "GearHookSwitchDn",
-                  "callback": "SimHookDown",
-                  "description": "GEAR: HOOK Switch - DN",
-                  "label": "DN",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: EMER STORES JETTISON Button",
-              "class": "GearEmerStoresJettisonButton",
-              "description": "GEAR: EMER STORES JETTISON Button - Hold",
-              "type": "button",
-              "control": [
-                {
-                  "id": "gearemerstoresjettisonbuttonhold",
-                  "clazz": "GearEmerStoresJettisonButtonHold",
-                  "callback": "SimEmergencyJettison",
-                  "description": "GEAR: EMER STORES JETTISON Button - Hold",
-                  "label": "EMER STORES JETTISON",
+                  "id": "twalowbuttontoggle",
+                  "clazz": "TwaLowButtonToggle",
+                  "callback": "SimRWRSetGroundPriority",
+                  "description": "TWA: LOW Button - Toggle",
+                  "label": "LOW",
                   "role": "none"
                 }
               ]
@@ -2052,120 +508,632 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "comms",
+      "class": "Comms",
+      "name": "Comms",
+      "panel": [
         {
-          "id": "hmcspanel",
-          "class": "HmcsPanel",
-          "name": "HMCS PANEL",
+          "id": "uhfpanel",
+          "class": "UhfPanel",
+          "name": "UHF PANEL",
           "group": [
             {
-              "id": "HMCS: HMSC Knob",
-              "class": "HmcsHmscKnob",
-              "description": "HMCS: HMSC Knob - Brightness Incr.",
-              "label": "HMSC",
-              "type": "button",
+              "id": "UHF: MODE Knob",
+              "class": "UhfModeKnob",
+              "description": "UHF: MODE Knob - MNL",
+              "label": "MODE",
+              "type": "switch",
               "control": [
                 {
-                  "id": "hmcshmscknobbrightnessincr",
-                  "clazz": "HmcsHmscKnobBrightnessIncr",
-                  "callback": "SimHmsSymWheelUp",
-                  "description": "HMCS: HMSC Knob - Brightness Incr.",
-                  "label": "Brightness Incr.",
-                  "role": "up"
+                  "id": "uhfmodeknobmnl",
+                  "clazz": "UhfModeKnobMnl",
+                  "callback": "SimBupUhfManual",
+                  "description": "UHF: MODE Knob - MNL",
+                  "label": "MNL",
+                  "role": "none"
                 },
                 {
-                  "id": "hmcshmscknobbrightnessdecr",
-                  "clazz": "HmcsHmscKnobBrightnessDecr",
-                  "callback": "SimHmsSymWheelDn",
-                  "description": "HMCS: HMSC Knob - Brightness Decr.",
-                  "label": "Brightness Decr.",
-                  "role": "down"
+                  "id": "uhfmodeknobpreset",
+                  "clazz": "UhfModeKnobPreset",
+                  "callback": "SimBupUhfPreset",
+                  "description": "UHF: MODE Knob - PRESET",
+                  "label": "PRESET",
+                  "role": "none"
                 },
                 {
-                  "id": "hmcshmscknobon",
-                  "clazz": "HmcsHmscKnobOn",
-                  "callback": "SimHmsOn",
-                  "description": "HMCS: HMSC Knob - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "hmcshmscknoboff",
-                  "clazz": "HmcsHmscKnobOff",
-                  "callback": "SimHmsOff",
-                  "description": "HMCS: HMSC Knob - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "twapanel",
-          "class": "TwaPanel",
-          "name": "TWA PANEL",
-          "group": [
-            {
-              "id": "TWA: POWER Button",
-              "class": "TwaPowerButton",
-              "description": "TWA: POWER Button - On",
-              "label": "POWER",
-              "type": "button",
-              "control": [
-                {
-                  "id": "twapowerbuttonon",
-                  "clazz": "TwaPowerButtonOn",
-                  "callback": "SimRwrPowerOn",
-                  "description": "TWA: POWER Button - On",
-                  "label": "On",
-                  "role": "on"
-                },
-                {
-                  "id": "twapowerbuttonoff",
-                  "clazz": "TwaPowerButtonOff",
-                  "callback": "SimRwrPowerOff",
-                  "description": "TWA: POWER Button - Off",
-                  "label": "Off",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "altgearcontrol",
-          "class": "AltGearControl",
-          "name": "ALT GEAR CONTROL",
-          "group": [
-            {
-              "id": "ALT GEAR: Reset Button",
-              "class": "AltGearResetButton",
-              "description": "ALT GEAR: Reset Button - Push",
-              "type": "button",
-              "control": [
-                {
-                  "id": "altgearresetbuttonpush",
-                  "clazz": "AltGearResetButtonPush",
-                  "callback": "AFAlternateGearReset",
-                  "description": "ALT GEAR: Reset Button - Push",
-                  "label": "Reset",
+                  "id": "uhfmodeknobgrd",
+                  "clazz": "UhfModeKnobGrd",
+                  "callback": "SimBupUhfGuard",
+                  "description": "UHF: MODE Knob - GRD",
+                  "label": "GRD",
                   "role": "none"
                 }
               ]
             },
             {
-              "id": "ALT GEAR: Extend Gear Handle",
-              "class": "AltGearExtendGearHandle",
-              "description": "ALT GEAR: Extend Gear Handle - Push",
+              "id": "UHF: VOL Knob",
+              "class": "UhfVolKnob",
+              "description": "UHF: VOL Knob - AI vs IVC Volume Incr",
+              "label": "VOL",
               "type": "button",
               "control": [
                 {
-                  "id": "altgearextendgearhandlepush",
-                  "clazz": "AltGearExtendGearHandlePush",
-                  "callback": "AFAlternateGear",
-                  "description": "ALT GEAR: Extend Gear Handle - Push",
-                  "label": "Extend Gear",
+                  "id": "uhfvolknobaivsivcvolumeincr",
+                  "clazz": "UhfVolKnobAiVsIvcVolumeIncr",
+                  "callback": "OTWBalanceIVCvsAIUp",
+                  "description": "UHF: VOL Knob - AI vs IVC Volume Incr",
+                  "label": "AI vs IVC Volume Incr",
+                  "role": "none"
+                },
+                {
+                  "id": "uhfvolknobaivsivcvolumedecr",
+                  "clazz": "UhfVolKnobAiVsIvcVolumeDecr",
+                  "callback": "OTWBalanceIVCvsAIDown",
+                  "description": "UHF: VOL Knob - AI vs IVC Volume Decr",
+                  "label": "AI vs IVC Volume Decr",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "UHF: FUNCTION Knob",
+              "class": "UhfFunctionKnob",
+              "description": "UHF: FUNCTION Knob - OFF",
+              "label": "FUNCTION",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "uhffunctionknoboff",
+                  "clazz": "UhfFunctionKnobOff",
+                  "callback": "SimBupUhfOff",
+                  "description": "UHF: FUNCTION Knob - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                },
+                {
+                  "id": "uhffunctionknobmain",
+                  "clazz": "UhfFunctionKnobMain",
+                  "callback": "SimBupUhfMain",
+                  "description": "UHF: FUNCTION Knob - MAIN",
+                  "label": "MAIN",
+                  "role": "on"
+                },
+                {
+                  "id": "uhffunctionknobboth",
+                  "clazz": "UhfFunctionKnobBoth",
+                  "callback": "SimBupUhfBoth",
+                  "description": "UHF: FUNCTION Knob - BOTH",
+                  "label": "BOTH",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "UHF: Manual Frequency ___._XX",
+              "class": "UhfManualFrequencyZzzzxx",
+              "description": "UHF: Manual Frequency ___._XX - Cycle Up",
+              "label": "Manual Frequency ___._XX",
+              "type": "button",
+              "control": [
+                {
+                  "id": "uhfmanualfrequencyxxcycleup",
+                  "clazz": "UhfManualFrequencyZzzzxxCycleUp",
+                  "callback": "SimBupUhfFreq5Inc",
+                  "description": "UHF: Manual Frequency ___._XX - Cycle Up",
+                  "label": "Cycle Up",
+                  "role": "up"
+                },
+                {
+                  "id": "uhfmanualfrequencyxxcycledown",
+                  "clazz": "UhfManualFrequencyZzzzxxCycleDown",
+                  "callback": "SimBupUhfFreq5Dec",
+                  "description": "UHF: Manual Frequency ___._XX - Cycle Down",
+                  "label": "Cycle Down",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "UHF: Manual Frequency ___.X__",
+              "class": "UhfManualFrequencyZzzxzz",
+              "description": "UHF: Manual Frequency ___.X__ - Cycle Up",
+              "label": "Manual Frequency ___.X__",
+              "type": "button",
+              "control": [
+                {
+                  "id": "uhfmanualfrequencyxcycleup",
+                  "clazz": "UhfManualFrequencyZzzxzzCycleUp",
+                  "callback": "SimBupUhfFreq4Inc",
+                  "description": "UHF: Manual Frequency ___.X__ - Cycle Up",
+                  "label": "Cycle Up",
+                  "role": "up"
+                },
+                {
+                  "id": "uhfmanualfrequencyxcycledown",
+                  "clazz": "UhfManualFrequencyZzzxzzCycleDown",
+                  "callback": "SimBupUhfFreq4Dec",
+                  "description": "UHF: Manual Frequency ___.X__ - Cycle Down",
+                  "label": "Cycle Down",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "UHF: Manual Frequency __X.___",
+              "class": "UhfManualFrequencyZzxzzz",
+              "description": "UHF: Manual Frequency __X.___ - Cycle Up",
+              "label": "Manual Frequency __X.___",
+              "type": "button",
+              "control": [
+                {
+                  "id": "uhfmanualfrequencyxcycleup",
+                  "clazz": "UhfManualFrequencyZzxzzzCycleUp",
+                  "callback": "SimBupUhfFreq3Inc",
+                  "description": "UHF: Manual Frequency __X.___ - Cycle Up",
+                  "label": "Cycle Up",
+                  "role": "up"
+                },
+                {
+                  "id": "uhfmanualfrequencyxcycledown",
+                  "clazz": "UhfManualFrequencyZzxzzzCycleDown",
+                  "callback": "SimBupUhfFreq3Dec",
+                  "description": "UHF: Manual Frequency __X.___ - Cycle Down",
+                  "label": "Cycle Down",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "UHF: Manual Frequency _X_.___",
+              "class": "UhfManualFrequencyZxzzzz",
+              "description": "UHF: Manual Frequency _X_.___ - Cycle Up",
+              "label": "Manual Frequency _X_.___",
+              "type": "button",
+              "control": [
+                {
+                  "id": "uhfmanualfrequencyxcycleup",
+                  "clazz": "UhfManualFrequencyZxzzzzCycleUp",
+                  "callback": "SimBupUhfFreq2Inc",
+                  "description": "UHF: Manual Frequency _X_.___ - Cycle Up",
+                  "label": "Cycle Up",
+                  "role": "up"
+                },
+                {
+                  "id": "uhfmanualfrequencyxcycledown",
+                  "clazz": "UhfManualFrequencyZxzzzzCycleDown",
+                  "callback": "SimBupUhfFreq2Dec",
+                  "description": "UHF: Manual Frequency _X_.___ - Cycle Down",
+                  "label": "Cycle Down",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "UHF: A-3-2-T Rotary X__.___",
+              "class": "UhfA32TRotaryXzzzzz",
+              "description": "UHF: A-3-2-T Rotary X__.___ - Step Up",
+              "label": "A-3-2-T Rotary X__.___",
+              "type": "button",
+              "control": [
+                {
+                  "id": "uhfa32trotaryxstepup",
+                  "clazz": "UhfA32TRotaryXzzzzzStepUp",
+                  "callback": "SimBupUhfFreq1Inc",
+                  "description": "UHF: A-3-2-T Rotary X__.___ - Step Up",
+                  "label": "Step Up",
+                  "role": "up"
+                },
+                {
+                  "id": "uhfa32trotaryxstepdown",
+                  "clazz": "UhfA32TRotaryXzzzzzStepDown",
+                  "callback": "SimBupUhfFreq1Dec",
+                  "description": "UHF: A-3-2-T Rotary X__.___ - Step Down",
+                  "label": "Step Down",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "UHF: PRESET CHANNEL Knob",
+              "class": "UhfPresetChannelKnob",
+              "description": "UHF: PRESET CHANNEL Knob - Cycle Up",
+              "label": "PRESET CHANNEL",
+              "type": "button",
+              "control": [
+                {
+                  "id": "uhfpresetchannelknobcycleup",
+                  "clazz": "UhfPresetChannelKnobCycleUp",
+                  "callback": "SimCycleRadioChannel",
+                  "description": "UHF: PRESET CHANNEL Knob - Cycle Up",
+                  "label": "Cycle Up",
+                  "role": "up"
+                },
+                {
+                  "id": "uhfpresetchannelknobcycledown",
+                  "clazz": "UhfPresetChannelKnobCycleDown",
+                  "callback": "SimDecRadioChannel",
+                  "description": "UHF: PRESET CHANNEL Knob - Cycle Down",
+                  "label": "Cycle Down",
+                  "role": "down"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "audio1panel",
+          "class": "Audio1Panel",
+          "name": "AUDIO 1 PANEL",
+          "group": [
+            {
+              "id": "AUDIO1: THREAT Knob",
+              "class": "Audio1ThreatKnob",
+              "description": "AUDIO1: THREAT Knob - Volume Incr.",
+              "label": "THREAT",
+              "type": "button",
+              "control": [
+                {
+                  "id": "audio1threatknobvolumeincr",
+                  "clazz": "Audio1ThreatKnobVolumeIncr",
+                  "callback": "SimStepThreatVolumeUp",
+                  "description": "AUDIO1: THREAT Knob - Volume Incr.",
+                  "label": "Volume Incr.",
+                  "role": "up"
+                },
+                {
+                  "id": "audio1threatknobvolumedecr",
+                  "clazz": "Audio1ThreatKnobVolumeDecr",
+                  "callback": "SimStepThreatVolumeDown",
+                  "description": "AUDIO1: THREAT Knob - Volume Decr.",
+                  "label": "Volume Decr.",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "AUDIO1: COMM 2 Mode Knob",
+              "class": "Audio1Comm2ModeKnob",
+              "description": "AUDIO1: COMM 2 Mode Knob - SQL",
+              "label": "COMM 2 Mode",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "audio1comm2modeknobsql",
+                  "clazz": "Audio1Comm2ModeKnobSql",
+                  "callback": "SimAud1Com2Sql",
+                  "description": "AUDIO1: COMM 2 Mode Knob - SQL",
+                  "label": "SQL",
+                  "role": "none"
+                },
+                {
+                  "id": "audio1comm2modeknobgd",
+                  "clazz": "Audio1Comm2ModeKnobGd",
+                  "callback": "SimAud1Com2Gd",
+                  "description": "AUDIO1: COMM 2 Mode Knob - GD",
+                  "label": "GD",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "AUDIO1: COMM 1 Mode Knob",
+              "class": "Audio1Comm1ModeKnob",
+              "description": "AUDIO1: COMM 1 Mode Knob - SQL",
+              "label": "COMM 1 Mode",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "audio1comm1modeknobsql",
+                  "clazz": "Audio1Comm1ModeKnobSql",
+                  "callback": "SimAud1Com1Sql",
+                  "description": "AUDIO1: COMM 1 Mode Knob - SQL",
+                  "label": "SQL",
+                  "role": "none"
+                },
+                {
+                  "id": "audio1comm1modeknobgd",
+                  "clazz": "Audio1Comm1ModeKnobGd",
+                  "callback": "SimAud1Com1Gd",
+                  "description": "AUDIO1: COMM 1 Mode Knob - GD",
+                  "label": "GD",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "AUDIO1: MSL Knob",
+              "class": "Audio1MslKnob",
+              "description": "AUDIO1: MSL Knob - Volume Incr.",
+              "label": "MSL",
+              "type": "button",
+              "control": [
+                {
+                  "id": "audio1mslknobvolumeincr",
+                  "clazz": "Audio1MslKnobVolumeIncr",
+                  "callback": "SimStepMissileVolumeUp",
+                  "description": "AUDIO1: MSL Knob - Volume Incr.",
+                  "label": "Volume Incr.",
+                  "role": "up"
+                },
+                {
+                  "id": "audio1mslknobvolumedecr",
+                  "clazz": "Audio1MslKnobVolumeDecr",
+                  "callback": "SimStepMissileVolumeDown",
+                  "description": "AUDIO1: MSL Knob - Volume Decr.",
+                  "label": "Volume Decr.",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "AUDIO1: COMM 2 Knob",
+              "class": "Audio1Comm2Knob",
+              "description": "AUDIO1: COMM 2 Knob - Volume Incr.",
+              "label": "COMM 2",
+              "type": "button",
+              "control": [
+                {
+                  "id": "audio1comm2knobvolumeincr",
+                  "clazz": "Audio1Comm2KnobVolumeIncr",
+                  "callback": "SimStepComm2VolumeUp",
+                  "description": "AUDIO1: COMM 2 Knob - Volume Incr.",
+                  "label": "Volume Incr.",
+                  "role": "up"
+                },
+                {
+                  "id": "audio1comm2knobvolumedecr",
+                  "clazz": "Audio1Comm2KnobVolumeDecr",
+                  "callback": "SimStepComm2VolumeDown",
+                  "description": "AUDIO1: COMM 2 Knob - Volume Decr.",
+                  "label": "Volume Decr.",
+                  "role": "down"
+                },
+                {
+                  "id": "audio1comm2knobpoweron",
+                  "clazz": "Audio1Comm2KnobPowerOn",
+                  "callback": "SimComm2PowerOn",
+                  "description": "AUDIO1: COMM 2 Knob - Power On",
+                  "label": "Power On",
+                  "role": "on"
+                },
+                {
+                  "id": "audio1comm2knobpoweroff",
+                  "clazz": "Audio1Comm2KnobPowerOff",
+                  "callback": "SimComm2PowerOff",
+                  "description": "AUDIO1: COMM 2 Knob - Power Off",
+                  "label": "Power Off",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "AUDIO1: COMM 1 Knob",
+              "class": "Audio1Comm1Knob",
+              "description": "AUDIO1: COMM 1 Knob - Volume Incr.",
+              "label": "COMM 1",
+              "type": "button",
+              "control": [
+                {
+                  "id": "audio1comm1knobvolumeincr",
+                  "clazz": "Audio1Comm1KnobVolumeIncr",
+                  "callback": "SimStepComm1VolumeUp",
+                  "description": "AUDIO1: COMM 1 Knob - Volume Incr.",
+                  "label": "Volume Incr.",
+                  "role": "up"
+                },
+                {
+                  "id": "audio1comm1knobvolumedecr",
+                  "clazz": "Audio1Comm1KnobVolumeDecr",
+                  "callback": "SimStepComm1VolumeDown",
+                  "description": "AUDIO1: COMM 1 Knob - Volume Decr.",
+                  "label": "Volume Decr.",
+                  "role": "down"
+                },
+                {
+                  "id": "audio1comm1knobpoweron",
+                  "clazz": "Audio1Comm1KnobPowerOn",
+                  "callback": "SimComm1PowerOn",
+                  "description": "AUDIO1: COMM 1 Knob - Power On",
+                  "label": "Power On",
+                  "role": "on"
+                },
+                {
+                  "id": "audio1comm1knobpoweroff",
+                  "clazz": "Audio1Comm1KnobPowerOff",
+                  "callback": "SimComm1PowerOff",
+                  "description": "AUDIO1: COMM 1 Knob - Power Off",
+                  "label": "Power Off",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "audio2panel",
+          "class": "Audio2Panel",
+          "name": "AUDIO 2 PANEL",
+          "group": [
+            {
+              "id": "AUDIO2: ILS Knob",
+              "class": "Audio2IlsKnob",
+              "description": "AUDIO2: ILS Knob - ON",
+              "label": "ILS",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "audio2ilsknobon",
+                  "clazz": "Audio2IlsKnobOn",
+                  "callback": "SimILSOn",
+                  "description": "AUDIO2: ILS Knob - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "audio2ilsknoboff",
+                  "clazz": "Audio2IlsKnobOff",
+                  "callback": "SimILSOff",
+                  "description": "AUDIO2: ILS Knob - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "AUDIO2: INTERCOM Knob",
+              "class": "Audio2IntercomKnob",
+              "description": "AUDIO2: INTERCOM Knob - Volume Incr.",
+              "label": "INTERCOM",
+              "type": "button",
+              "control": [
+                {
+                  "id": "audio2intercomknobvolumeincr",
+                  "clazz": "Audio2IntercomKnobVolumeIncr",
+                  "callback": "SimStepIntercomVolumeUp",
+                  "description": "AUDIO2: INTERCOM Knob - Volume Incr.",
+                  "label": "Volume Incr.",
+                  "role": "up"
+                },
+                {
+                  "id": "audio2intercomknobvolumedecr",
+                  "clazz": "Audio2IntercomKnobVolumeDecr",
+                  "callback": "SimStepIntercomVolumeDown",
+                  "description": "AUDIO2: INTERCOM Knob - Volume Decr.",
+                  "label": "Volume Decr.",
+                  "role": "down"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "auxcommpanel",
+          "class": "AuxCommPanel",
+          "name": "AUX COMM PANEL",
+          "group": [
+            {
+              "id": "AUX: STATION SELECTOR Switch",
+              "class": "AuxStationSelectorSwitch",
+              "description": "AUX: STATION SELECTOR Switch - T/R",
+              "label": "STATION SELECTOR",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "auxstationselectorswitchtr",
+                  "clazz": "AuxStationSelectorSwitchTR",
+                  "callback": "SimTACANTR",
+                  "description": "AUX: STATION SELECTOR Switch - T/R",
+                  "label": "T/R",
+                  "role": "none"
+                },
+                {
+                  "id": "auxstationselectorswitchaatr",
+                  "clazz": "AuxStationSelectorSwitchAATr",
+                  "callback": "SimTACANAATR",
+                  "description": "AUX: STATION SELECTOR Switch - A/A TR",
+                  "label": "A/A TR",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "AUX: CHANNEL",
+              "class": "AuxChannel",
+              "description": "AUX: CHANNEL - Cycle Up Left Digit",
+              "label": "CHANNEL",
+              "type": "button",
+              "control": [
+                {
+                  "id": "auxchannelcycleupleftdigit",
+                  "clazz": "AuxChannelCycleUpLeftDigit",
+                  "callback": "SimCycleLeftAuxComDigit",
+                  "description": "AUX: CHANNEL - Cycle Up Left Digit",
+                  "label": "Cycle Up Left Digit",
+                  "role": "none"
+                },
+                {
+                  "id": "auxchannelcycledownleftdigit",
+                  "clazz": "AuxChannelCycleDownLeftDigit",
+                  "callback": "SimDecLeftAuxComDigit",
+                  "description": "AUX: CHANNEL - Cycle Down Left Digit",
+                  "label": "Cycle Down Left Digit",
+                  "role": "none"
+                },
+                {
+                  "id": "auxchannelcycleupcenterdigit",
+                  "clazz": "AuxChannelCycleUpCenterDigit",
+                  "callback": "SimCycleCenterAuxComDigit",
+                  "description": "AUX: CHANNEL - Cycle Up Center Digit",
+                  "label": "Cycle Up Center Digit",
+                  "role": "none"
+                },
+                {
+                  "id": "auxchannelcycledowncenterdig",
+                  "clazz": "AuxChannelCycleDownCenterDig",
+                  "callback": "SimDecCenterAuxComDigit",
+                  "description": "AUX: CHANNEL - Cycle Down Center Dig.",
+                  "label": "Cycle Down Center Dig.",
+                  "role": "none"
+                },
+                {
+                  "id": "auxchannelcycleuprightdigit",
+                  "clazz": "AuxChannelCycleUpRightDigit",
+                  "callback": "SimCycleRightAuxComDigit",
+                  "description": "AUX: CHANNEL - Cycle Up Right Digit",
+                  "label": "Cycle Up Right Digit",
+                  "role": "none"
+                },
+                {
+                  "id": "auxchannelcycledownrightdigit",
+                  "clazz": "AuxChannelCycleDownRightDigit",
+                  "callback": "SimDecRightAuxComDigit",
+                  "description": "AUX: CHANNEL - Cycle Down Right Digit",
+                  "label": "Cycle Down Right Digit",
+                  "role": "none"
+                },
+                {
+                  "id": "auxchanneltogglebandx",
+                  "clazz": "AuxChannelToggleBandX",
+                  "callback": "SimXBandAuxComDigit",
+                  "description": "AUX: CHANNEL - Toggle Band X",
+                  "label": "Toggle Band X",
+                  "role": "none"
+                },
+                {
+                  "id": "auxchanneltogglebandy",
+                  "clazz": "AuxChannelToggleBandY",
+                  "callback": "SimYBandAuxComDigit",
+                  "description": "AUX: CHANNEL - Toggle Band Y",
+                  "label": "Toggle Band Y",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "AUX: CNI Knob Switch",
+              "class": "AuxCniKnobSwitch",
+              "description": "AUX: CNI Knob Switch - BACKUP",
+              "label": "CNI Knob",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "auxcniknobswitchbackup",
+                  "clazz": "AuxCniKnobSwitchBackup",
+                  "callback": "SimAuxComBackup",
+                  "description": "AUX: CNI Knob Switch - BACKUP",
+                  "label": "BACKUP",
+                  "role": "none"
+                },
+                {
+                  "id": "auxcniknobswitchufc",
+                  "clazz": "AuxCniKnobSwitchUfc",
+                  "callback": "SimAuxComUFC",
+                  "description": "AUX: CNI Knob Switch - UFC",
+                  "label": "UFC",
                   "role": "none"
                 }
               ]
@@ -2175,9 +1143,9 @@
       ]
     },
     {
-      "id": "centerconsole",
-      "class": "CenterConsole",
-      "name": "Center Console",
+      "id": "fuel",
+      "class": "Fuel",
+      "name": "Fuel",
       "panel": [
         {
           "id": "fuelqtypanel",
@@ -2268,6 +1236,1477 @@
             }
           ]
         },
+        {
+          "id": "fuelpanel",
+          "class": "FuelPanel",
+          "name": "FUEL PANEL",
+          "group": [
+            {
+              "id": "FUEL: AIR REFUEL Switch",
+              "class": "FuelAirRefuelSwitch",
+              "description": "FUEL: AIR REFUEL Switch - OPEN",
+              "label": "AIR REFUEL",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "fuelairrefuelswitchopen",
+                  "clazz": "FuelAirRefuelSwitchOpen",
+                  "callback": "SimFuelDoorOpen",
+                  "description": "FUEL: AIR REFUEL Switch - OPEN",
+                  "label": "OPEN",
+                  "role": "on"
+                },
+                {
+                  "id": "fuelairrefuelswitchclose",
+                  "clazz": "FuelAirRefuelSwitchClose",
+                  "callback": "SimFuelDoorClose",
+                  "description": "FUEL: AIR REFUEL Switch - CLOSE",
+                  "label": "CLOSE",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "FUEL: ENG FEED Knob",
+              "class": "FuelEngFeedKnob",
+              "description": "FUEL: ENG FEED Knob - OFF",
+              "label": "ENG FEED",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "fuelengfeedknoboff",
+                  "clazz": "FuelEngFeedKnobOff",
+                  "callback": "SimFuelPumpOff",
+                  "description": "FUEL: ENG FEED Knob - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                },
+                {
+                  "id": "fuelengfeedknobnorm",
+                  "clazz": "FuelEngFeedKnobNorm",
+                  "callback": "SimFuelPumpNorm",
+                  "description": "FUEL: ENG FEED Knob - NORM",
+                  "label": "NORM",
+                  "role": "on"
+                },
+                {
+                  "id": "fuelengfeedknobaft",
+                  "clazz": "FuelEngFeedKnobAft",
+                  "callback": "SimFuelPumpAft",
+                  "description": "FUEL: ENG FEED Knob - AFT",
+                  "label": "AFT",
+                  "role": "none"
+                },
+                {
+                  "id": "fuelengfeedknobfwd",
+                  "clazz": "FuelEngFeedKnobFwd",
+                  "callback": "SimFuelPumpFwd",
+                  "description": "FUEL: ENG FEED Knob - FWD",
+                  "label": "FWD",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "FUEL: MASTER Switch",
+              "class": "FuelMasterSwitch",
+              "description": "FUEL: MASTER Switch - ON",
+              "label": "MASTER",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "fuelmasterswitchon",
+                  "clazz": "FuelMasterSwitchOn",
+                  "callback": "SimMasterFuelOn",
+                  "description": "FUEL: MASTER Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "fuelmasterswitchoff",
+                  "clazz": "FuelMasterSwitchOff",
+                  "callback": "SimMasterFuelOff",
+                  "description": "FUEL: MASTER Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "class": "Test",
+      "name": "Test",
+      "panel": [
+        {
+          "id": "testpanel",
+          "class": "TestPanel",
+          "name": "TEST PANEL",
+          "group": [
+            {
+              "id": "TEST: FLCS PWR TEST Switch",
+              "class": "TestFlcsPwrTestSwitch",
+              "description": "TEST: FLCS PWR TEST Switch - Hold",
+              "type": "button",
+              "control": [
+                {
+                  "id": "testflcspwrtestswitchhold",
+                  "clazz": "TestFlcsPwrTestSwitchHold",
+                  "callback": "SimFlcsPowerTest",
+                  "description": "TEST: FLCS PWR TEST Switch - Hold",
+                  "label": "FLCS PWR TEST",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "TEST: EPU/GEN Switch",
+              "class": "TestEpuGenSwitch",
+              "description": "TEST: EPU/GEN Switch - Hold",
+              "type": "button",
+              "control": [
+                {
+                  "id": "testepugenswitchhold",
+                  "clazz": "TestEpuGenSwitchHold",
+                  "callback": "SimEpuGenTest",
+                  "description": "TEST: EPU/GEN Switch - Hold",
+                  "label": "EPU/GEN",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "TEST: PROBE HEAT Switch",
+              "class": "TestProbeHeatSwitch",
+              "description": "TEST: PROBE HEAT Switch - ON",
+              "label": "PROBE HEAT",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "testprobeheatswitchon",
+                  "clazz": "TestProbeHeatSwitchOn",
+                  "callback": "SimProbeHeatOn",
+                  "description": "TEST: PROBE HEAT Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "testprobeheatswitchoff",
+                  "clazz": "TestProbeHeatSwitchOff",
+                  "callback": "SimProbeHeatOff",
+                  "description": "TEST: PROBE HEAT Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                },
+                {
+                  "id": "testprobeheatswitchtest",
+                  "clazz": "TestProbeHeatSwitchTest",
+                  "callback": "SimProbeHeatTest",
+                  "description": "TEST: PROBE HEAT Switch - TEST",
+                  "label": "TEST",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "TEST: MAL & IND LTS Button",
+              "class": "TestMalIndLtsButton",
+              "description": "TEST: MAL & IND LTS Button - Hold",
+              "type": "button",
+              "control": [
+                {
+                  "id": "testmalindltsbuttonhold",
+                  "clazz": "TestMalIndLtsButtonHold",
+                  "callback": "SimMalIndLights",
+                  "description": "TEST: MAL & IND LTS Button - Hold",
+                  "label": "MAL & IND LTS",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "TEST: OXY QTY Switch",
+              "class": "TestOxyQtySwitch",
+              "description": "TEST: OXY QTY Switch - Hold",
+              "type": "button",
+              "control": [
+                {
+                  "id": "testoxyqtyswitchhold",
+                  "clazz": "TestOxyQtySwitchHold",
+                  "callback": "SimOBOGSBit",
+                  "description": "TEST: OXY QTY Switch - Hold",
+                  "label": "OXY QTY",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "TEST: FIRE & OHEAT DETECT Button",
+              "class": "TestFireOheatDetectButton",
+              "description": "TEST: FIRE & OHEAT DETECT Button - Hold",
+              "type": "button",
+              "control": [
+                {
+                  "id": "testfireoheatdetectbuttonhold",
+                  "clazz": "TestFireOheatDetectButtonHold",
+                  "callback": "SimOverHeat",
+                  "description": "TEST: FIRE & OHEAT DETECT Button - Hold",
+                  "label": "FIRE & OHEAT DETECT",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lights",
+      "class": "Lights",
+      "name": "Lights",
+      "panel": [
+        {
+          "id": "lightingpanel",
+          "class": "LightingPanel",
+          "name": "LIGHTING  PANEL",
+          "group": [
+            {
+              "id": "LIGHT: CONSOLES Knob (Flood)",
+              "class": "LightConsolesKnobFlood",
+              "description": "LIGHT: CONSOLES Knob (Flood) - Step Up",
+              "label": "CONSOLES Knob (Flood)",
+              "type": "button",
+              "control": [
+                {
+                  "id": "lightconsolesknobfloodstepup",
+                  "clazz": "LightConsolesKnobFloodStepUp",
+                  "callback": "SimInteriorLightCW",
+                  "description": "LIGHT: CONSOLES Knob (Flood) - Step Up",
+                  "label": "Step Up",
+                  "role": "up"
+                },
+                {
+                  "id": "lightconsolesknobfloodstepdown",
+                  "clazz": "LightConsolesKnobFloodStepDown",
+                  "callback": "SimInteriorLightCCW",
+                  "description": "LIGHT: CONSOLES Knob (Flood) - Step Down",
+                  "label": "Step Down",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "LIGHT: DED Knob (Primary)",
+              "class": "LightDedKnobPrimary",
+              "description": "LIGHT: DED Knob (Primary) - Step Up",
+              "label": "DED Knob (Primary)",
+              "type": "button",
+              "control": [
+                {
+                  "id": "lightdedknobprimarystepup",
+                  "clazz": "LightDedKnobPrimaryStepUp",
+                  "callback": "SimDedBrightnessCW",
+                  "description": "LIGHT: DED Knob (Primary) - Step Up",
+                  "label": "Step Up",
+                  "role": "up"
+                },
+                {
+                  "id": "lightdedknobprimarystepdown",
+                  "clazz": "LightDedKnobPrimaryStepDown",
+                  "callback": "SimDedBrightnessCCW",
+                  "description": "LIGHT: DED Knob (Primary) - Step Down",
+                  "label": "Step Down",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "LIGHT: INST PNL Knob (Primary)",
+              "class": "LightInstPnlKnobPrimary",
+              "description": "LIGHT: INST PNL Knob (Primary) - Step Up",
+              "label": "INST PNL Knob (Primary)",
+              "type": "button",
+              "control": [
+                {
+                  "id": "lightinstpnlknobprimarystepup",
+                  "clazz": "LightInstPnlKnobPrimaryStepUp",
+                  "callback": "SimInstrumentLightCW",
+                  "description": "LIGHT: INST PNL Knob (Primary) - Step Up",
+                  "label": "Step Up",
+                  "role": "up"
+                },
+                {
+                  "id": "lightinstpnlknobprimarystepdown",
+                  "clazz": "LightInstPnlKnobPrimaryStepDown",
+                  "callback": "SimInstrumentLightCCW",
+                  "description": "LIGHT: INST PNL Knob (Primary) - Step Down",
+                  "label": "Step Down",
+                  "role": "down"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "extlightingpanel",
+          "class": "ExtLightingPanel",
+          "name": "EXT LIGHTING PANEL",
+          "group": [
+            {
+              "id": "EXT: MASTER Switch",
+              "class": "ExtMasterSwitch",
+              "description": "EXT: MASTER Switch - NORM",
+              "label": "MASTER",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "extmasterswitchnorm",
+                  "clazz": "ExtMasterSwitchNorm",
+                  "callback": "SimExtlMasterNorm",
+                  "description": "EXT: MASTER Switch - NORM",
+                  "label": "NORM",
+                  "role": "on"
+                },
+                {
+                  "id": "extmasterswitchoff",
+                  "clazz": "ExtMasterSwitchOff",
+                  "callback": "SimExtlMasterOff",
+                  "description": "EXT: MASTER Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "EXT: WING/TAIL Switch",
+              "class": "ExtWingTailSwitch",
+              "description": "EXT: WING/TAIL Switch - BRT",
+              "label": "WING/TAIL",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "extwingtailswitchbrt",
+                  "clazz": "ExtWingTailSwitchBrt",
+                  "callback": "SimWingLightBrt",
+                  "description": "EXT: WING/TAIL Switch - BRT",
+                  "label": "BRT",
+                  "role": "none"
+                },
+                {
+                  "id": "extwingtailswitchoff",
+                  "clazz": "ExtWingTailSwitchOff",
+                  "callback": "SimWingLightOff",
+                  "description": "EXT: WING/TAIL Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "EXT: POSITION Switch",
+              "class": "ExtPositionSwitch",
+              "description": "EXT: POSITION Switch - FLASH",
+              "label": "POSITION",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "extpositionswitchflash",
+                  "clazz": "ExtPositionSwitchFlash",
+                  "callback": "SimLightsFlash",
+                  "description": "EXT: POSITION Switch - FLASH",
+                  "label": "FLASH",
+                  "role": "none"
+                },
+                {
+                  "id": "extpositionswitchsteady",
+                  "clazz": "ExtPositionSwitchSteady",
+                  "callback": "SimLightsSteady",
+                  "description": "EXT: POSITION Switch - STEADY",
+                  "label": "STEADY",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "EXT: ANTI COLLISION Switch",
+              "class": "ExtAntiCollisionSwitch",
+              "description": "EXT: ANTI COLLISION Switch - ON",
+              "label": "ANTI COLLISION",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "extanticollisionswitchon",
+                  "clazz": "ExtAntiCollisionSwitchOn",
+                  "callback": "SimAntiCollOn",
+                  "description": "EXT: ANTI COLLISION Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "extanticollisionswitchoff",
+                  "clazz": "ExtAntiCollisionSwitchOff",
+                  "callback": "SimAntiCollOff",
+                  "description": "EXT: ANTI COLLISION Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sensors",
+      "class": "Sensors",
+      "name": "Sensors",
+      "panel": [
+        {
+          "id": "snsrpwrpanel",
+          "class": "SnsrPwrPanel",
+          "name": "SNSR PWR PANEL",
+          "group": [
+            {
+              "id": "MISC: RF Switch",
+              "class": "MiscRfSwitch",
+              "description": "MISC: RF Switch - NORM",
+              "label": "RF",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "miscrfswitchnorm",
+                  "clazz": "MiscRfSwitchNorm",
+                  "callback": "SimRFNorm",
+                  "description": "MISC: RF Switch - NORM",
+                  "label": "NORM",
+                  "role": "on"
+                },
+                {
+                  "id": "miscrfswitchquiet",
+                  "clazz": "MiscRfSwitchQuiet",
+                  "callback": "SimRFQuiet",
+                  "description": "MISC: RF Switch - QUIET",
+                  "label": "QUIET",
+                  "role": "none"
+                },
+                {
+                  "id": "miscrfswitchsilent",
+                  "clazz": "MiscRfSwitchSilent",
+                  "callback": "SimRFSilent",
+                  "description": "MISC: RF Switch - SILENT",
+                  "label": "SILENT",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "SNSR: RDR ALT Switch",
+              "class": "SnsrRdrAltSwitch",
+              "description": "SNSR: RDR ALT Switch - ON",
+              "label": "RDR ALT",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "snsrrdraltswitchon",
+                  "clazz": "SnsrRdrAltSwitchOn",
+                  "callback": "SimRALTON",
+                  "description": "SNSR: RDR ALT Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "snsrrdraltswitchstdby",
+                  "clazz": "SnsrRdrAltSwitchStdby",
+                  "callback": "SimRALTSTDBY",
+                  "description": "SNSR: RDR ALT Switch - STDBY",
+                  "label": "STDBY",
+                  "role": "none"
+                },
+                {
+                  "id": "snsrrdraltswitchoff",
+                  "clazz": "SnsrRdrAltSwitchOff",
+                  "callback": "SimRALTOFF",
+                  "description": "SNSR: RDR ALT Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "SNSR: FCR Switch",
+              "class": "SnsrFcrSwitch",
+              "description": "SNSR: FCR Switch - ON",
+              "label": "FCR",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "snsrfcrswitchon",
+                  "clazz": "SnsrFcrSwitchOn",
+                  "callback": "SimFCROn",
+                  "description": "SNSR: FCR Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "snsrfcrswitchoff",
+                  "clazz": "SnsrFcrSwitchOff",
+                  "callback": "SimFCROff",
+                  "description": "SNSR: FCR Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "SNSR: RIGHT HDPT Switch",
+              "class": "SnsrRightHdptSwitch",
+              "description": "SNSR: RIGHT HDPT Switch - ON",
+              "label": "RIGHT HDPT",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "snsrrighthdptswitchon",
+                  "clazz": "SnsrRightHdptSwitchOn",
+                  "callback": "SimRightHptOn",
+                  "description": "SNSR: RIGHT HDPT Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "snsrrighthdptswitchoff",
+                  "clazz": "SnsrRightHdptSwitchOff",
+                  "callback": "SimRightHptOff",
+                  "description": "SNSR: RIGHT HDPT Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "SNSR: LEFT HDPT Switch",
+              "class": "SnsrLeftHdptSwitch",
+              "description": "SNSR: LEFT HDPT Switch - ON",
+              "label": "LEFT HDPT",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "snsrlefthdptswitchon",
+                  "clazz": "SnsrLeftHdptSwitchOn",
+                  "callback": "SimLeftHptOn",
+                  "description": "SNSR: LEFT HDPT Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "snsrlefthdptswitchoff",
+                  "clazz": "SnsrLeftHdptSwitchOff",
+                  "callback": "SimLeftHptOff",
+                  "description": "SNSR: LEFT HDPT Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leftconsole",
+      "class": "LeftConsole",
+      "name": "Left Console",
+      "panel": [
+        {
+          "id": "seat",
+          "class": "Seat",
+          "name": "SEAT",
+          "group": [
+            {
+              "id": "SEAT: EJECT Handle",
+              "class": "SeatEjectHandle",
+              "description": "SEAT: EJECT Handle - Hold For Eject",
+              "type": "button",
+              "control": [
+                {
+                  "id": "seatejecthandleholdforeject",
+                  "clazz": "SeatEjectHandleHoldForEject",
+                  "callback": "SimEject",
+                  "description": "SEAT: EJECT Handle - Hold For Eject",
+                  "label": "EJECT",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "SEAT: Safety Lever",
+              "class": "SeatSafetyLever",
+              "description": "SEAT: Safety Lever - Armed",
+              "label": "Safety Lever",
+              "type": "button",
+              "control": [
+                {
+                  "id": "seatsafetyleverarmed",
+                  "clazz": "SeatSafetyLeverArmed",
+                  "callback": "SimSeatOn",
+                  "description": "SEAT: Safety Lever - Armed",
+                  "label": "Armed",
+                  "role": "none"
+                },
+                {
+                  "id": "seatsafetyleverlocked",
+                  "clazz": "SeatSafetyLeverLocked",
+                  "callback": "SimSeatOff",
+                  "description": "SEAT: Safety Lever - Locked",
+                  "label": "Locked",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "leftsidewall",
+          "class": "LeftSideWall",
+          "name": "LEFT SIDE WALL",
+          "group": [
+            {
+              "id": "LEFT WALL: CANOPY",
+              "class": "LeftWallCanopy",
+              "description": "LEFT WALL: CANOPY - Open",
+              "label": "CANOPY",
+              "type": "button",
+              "control": [
+                {
+                  "id": "leftwallcanopyopen",
+                  "clazz": "LeftWallCanopyOpen",
+                  "callback": "AFCanopyOpen",
+                  "description": "LEFT WALL: CANOPY - Open",
+                  "label": "Open",
+                  "role": "none"
+                },
+                {
+                  "id": "leftwallcanopyclose",
+                  "clazz": "LeftWallCanopyClose",
+                  "callback": "AFCanopyClose",
+                  "description": "LEFT WALL: CANOPY - Close",
+                  "label": "Close",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+              "class": "LeftWallSlapSwitchEcmPgrm5",
+              "description": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+              "type": "button",
+              "control": [
+                {
+                  "id": "leftwallslapswitchecmpgrm5",
+                  "clazz": "LeftWallSlapSwitchEcmPgrm5",
+                  "callback": "SimSlapSwitch",
+                  "description": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+                  "label": "SLAP Switch (ECM-PGRM # 5)",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mpopanel",
+          "class": "MpoPanel",
+          "name": "MPO PANEL",
+          "group": [
+            {
+              "id": "MPO: MANUAL PITCH Switch",
+              "class": "MpoManualPitchSwitch",
+              "description": "MPO: MANUAL PITCH Switch - Hold",
+              "type": "button",
+              "control": [
+                {
+                  "id": "mpomanualpitchswitchhold",
+                  "clazz": "MpoManualPitchSwitchHold",
+                  "callback": "SimMPO",
+                  "description": "MPO: MANUAL PITCH Switch - Hold",
+                  "label": "MANUAL PITCH",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "engjetstartpanel",
+          "class": "EngJetStartPanel",
+          "name": "ENG & JET START PANEL",
+          "group": [
+            {
+              "id": "ENG: ENG CONT Switch",
+              "class": "EngEngContSwitch",
+              "description": "ENG: ENG CONT Switch - PRI",
+              "label": "ENG CONT",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "engengcontswitchpri",
+                  "clazz": "EngEngContSwitchPri",
+                  "callback": "SimEngContPri",
+                  "description": "ENG: ENG CONT Switch - PRI",
+                  "label": "PRI",
+                  "role": "none"
+                },
+                {
+                  "id": "engengcontswitchsec",
+                  "clazz": "EngEngContSwitchSec",
+                  "callback": "SimEngContSec",
+                  "description": "ENG: ENG CONT Switch - SEC",
+                  "label": "SEC",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "ENG: JFS Switch",
+              "class": "EngJfsSwitch",
+              "description": "ENG: JFS Switch - OFF",
+              "label": "JFS",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "engjfsswitchoff",
+                  "clazz": "EngJfsSwitchOff",
+                  "callback": "SimJfsStart_Off",
+                  "description": "ENG: JFS Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                },
+                {
+                  "id": "engjfsswitchstart2",
+                  "clazz": "EngJfsSwitchStart2",
+                  "callback": "SimJfsStart_Start2",
+                  "description": "ENG: JFS Switch - START 2",
+                  "label": "START 2",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ecmpanel",
+          "class": "EcmPanel",
+          "name": "ECM PANEL",
+          "group": [
+            {
+              "id": "ECM: OPR Switch",
+              "class": "EcmOprSwitch",
+              "description": "ECM: OPR Switch - OPR",
+              "label": "OPR",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "ecmoprswitchopr",
+                  "clazz": "EcmOprSwitchOpr",
+                  "callback": "SimEcmPowerOn",
+                  "description": "ECM: OPR Switch - OPR",
+                  "label": "OPR",
+                  "role": "on"
+                },
+                {
+                  "id": "ecmoprswitchoff",
+                  "clazz": "EcmOprSwitchOff",
+                  "callback": "SimEcmPowerOff",
+                  "description": "ECM: OPR Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "avtrpanel",
+          "class": "AvtrPanel",
+          "name": "AVTR PANEL",
+          "group": [
+            {
+              "id": "AVTR: AVTR Switch",
+              "class": "AvtrAvtrSwitch",
+              "description": "AVTR: AVTR Switch - Toggle ON / OFF",
+              "label": "AVTR",
+              "type": "button",
+              "control": [
+                {
+                  "id": "avtravtrswitchtoggleonoff",
+                  "clazz": "AvtrAvtrSwitchToggleOnOff",
+                  "callback": "SimAVTRToggle",
+                  "description": "AVTR: AVTR Switch - Toggle ON / OFF",
+                  "label": "Toggle ON / OFF",
+                  "role": "off"
+                },
+                {
+                  "id": "avtravtrswitchon",
+                  "clazz": "AvtrAvtrSwitchOn",
+                  "callback": "SimAVTRSwitchOn",
+                  "description": "AVTR: AVTR Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "avtravtrswitchauto",
+                  "clazz": "AvtrAvtrSwitchAuto",
+                  "callback": "SimAVTRSwitchAuto",
+                  "description": "AVTR: AVTR Switch - AUTO",
+                  "label": "AUTO",
+                  "role": "none"
+                },
+                {
+                  "id": "avtravtrswitchoff",
+                  "clazz": "AvtrAvtrSwitchOff",
+                  "callback": "SimAVTRSwitchOff",
+                  "description": "AVTR: AVTR Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "elecpanel",
+          "class": "ElecPanel",
+          "name": "ELEC PANEL",
+          "group": [
+            {
+              "id": "ELEC: CAUTION RESET Button",
+              "class": "ElecCautionResetButton",
+              "description": "ELEC: CAUTION RESET Button - Push",
+              "type": "button",
+              "control": [
+                {
+                  "id": "eleccautionresetbuttonpush",
+                  "clazz": "ElecCautionResetButtonPush",
+                  "callback": "SimElecReset",
+                  "description": "ELEC: CAUTION RESET Button - Push",
+                  "label": "CAUTION RESET",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "ELEC: MAIN PWR Switch",
+              "class": "ElecMainPwrSwitch",
+              "description": "ELEC: MAIN PWR Switch - MAIN",
+              "label": "MAIN PWR",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "elecmainpwrswitchmain",
+                  "clazz": "ElecMainPwrSwitchMain",
+                  "callback": "SimMainPowerMain",
+                  "description": "ELEC: MAIN PWR Switch - MAIN",
+                  "label": "MAIN",
+                  "role": "on"
+                },
+                {
+                  "id": "elecmainpwrswitchbatt",
+                  "clazz": "ElecMainPwrSwitchBatt",
+                  "callback": "SimMainPowerBatt",
+                  "description": "ELEC: MAIN PWR Switch - BATT",
+                  "label": "BATT",
+                  "role": "none"
+                },
+                {
+                  "id": "elecmainpwrswitchoff",
+                  "clazz": "ElecMainPwrSwitchOff",
+                  "callback": "SimMainPowerOff",
+                  "description": "ELEC: MAIN PWR Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "epupanel",
+          "class": "EpuPanel",
+          "name": "EPU PANEL",
+          "group": [
+            {
+              "id": "EPU: EPU Switch",
+              "class": "EpuEpuSwitch",
+              "description": "EPU: EPU Switch - ON",
+              "label": "EPU",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "epuepuswitchon",
+                  "clazz": "EpuEpuSwitchOn",
+                  "callback": "SimEpuOn",
+                  "description": "EPU: EPU Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "epuepuswitchnorm",
+                  "clazz": "EpuEpuSwitchNorm",
+                  "callback": "SimEpuAuto",
+                  "description": "EPU: EPU Switch - NORM",
+                  "label": "NORM",
+                  "role": "on"
+                },
+                {
+                  "id": "epuepuswitchoff",
+                  "clazz": "EpuEpuSwitchOff",
+                  "callback": "SimEpuOff",
+                  "description": "EPU: EPU Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "manualtrimpanel",
+          "class": "ManualTrimPanel",
+          "name": "MANUAL TRIM PANEL",
+          "group": [
+            {
+              "id": "TRIM: PITCH TRIM Wheel",
+              "class": "TrimPitchTrimWheel",
+              "description": "TRIM: PITCH TRIM Wheel - NOSE UP",
+              "label": "PITCH TRIM",
+              "type": "button",
+              "control": [
+                {
+                  "id": "trimpitchtrimwheelnoseup",
+                  "clazz": "TrimPitchTrimWheelNoseUp",
+                  "callback": "SimTrimNoseUp",
+                  "description": "TRIM: PITCH TRIM Wheel - NOSE UP",
+                  "label": "NOSE UP",
+                  "role": "up"
+                },
+                {
+                  "id": "trimpitchtrimwheelnosedn",
+                  "clazz": "TrimPitchTrimWheelNoseDn",
+                  "callback": "SimTrimNoseDown",
+                  "description": "TRIM: PITCH TRIM Wheel - NOSE DN",
+                  "label": "NOSE DN",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "TRIM: YAW TRIM Knob",
+              "class": "TrimYawTrimKnob",
+              "description": "TRIM: YAW TRIM Knob - L",
+              "label": "YAW TRIM",
+              "type": "button",
+              "control": [
+                {
+                  "id": "trimyawtrimknobl",
+                  "clazz": "TrimYawTrimKnobL",
+                  "callback": "SimTrimYawLeft",
+                  "description": "TRIM: YAW TRIM Knob - L",
+                  "label": "L",
+                  "role": "left"
+                },
+                {
+                  "id": "trimyawtrimknobr",
+                  "clazz": "TrimYawTrimKnobR",
+                  "callback": "SimTrimYawRight",
+                  "description": "TRIM: YAW TRIM Knob - R",
+                  "label": "R",
+                  "role": "right"
+                }
+              ]
+            },
+            {
+              "id": "TRIM: TRIM/AP DISC Switch",
+              "class": "TrimTrimApDiscSwitch",
+              "description": "TRIM: TRIM/AP DISC Switch - DISC",
+              "label": "TRIM/AP DISC",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "trimtrimapdiscswitchdisc",
+                  "clazz": "TrimTrimApDiscSwitchDisc",
+                  "callback": "SimTrimAPDISC",
+                  "description": "TRIM: TRIM/AP DISC Switch - DISC",
+                  "label": "DISC",
+                  "role": "none"
+                },
+                {
+                  "id": "trimtrimapdiscswitchnorm",
+                  "clazz": "TrimTrimApDiscSwitchNorm",
+                  "callback": "SimTrimAPNORM",
+                  "description": "TRIM: TRIM/AP DISC Switch - NORM",
+                  "label": "NORM",
+                  "role": "on"
+                }
+              ]
+            },
+            {
+              "id": "TRIM: ROLL TRIM Wheel",
+              "class": "TrimRollTrimWheel",
+              "description": "TRIM: ROLL TRIM Wheel - L WING DN",
+              "label": "ROLL TRIM",
+              "type": "button",
+              "control": [
+                {
+                  "id": "trimrolltrimwheellwingdn",
+                  "clazz": "TrimRollTrimWheelLWingDn",
+                  "callback": "SimTrimRollLeft",
+                  "description": "TRIM: ROLL TRIM Wheel - L WING DN",
+                  "label": "L WING DN",
+                  "role": "down"
+                },
+                {
+                  "id": "trimrolltrimwheelrwingdn",
+                  "clazz": "TrimRollTrimWheelRWingDn",
+                  "callback": "SimTrimRollRight",
+                  "description": "TRIM: ROLL TRIM Wheel - R WING DN",
+                  "label": "R WING DN",
+                  "role": "down"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fltcontrolpanel",
+          "class": "FltControlPanel",
+          "name": "FLT CONTROL PANEL",
+          "group": [
+            {
+              "id": "FLT: BIT Switch",
+              "class": "FltBitSwitch",
+              "description": "FLT: BIT Switch - Push",
+              "type": "button",
+              "control": [
+                {
+                  "id": "fltbitswitchpush",
+                  "clazz": "FltBitSwitchPush",
+                  "callback": "SimFLTBIT",
+                  "description": "FLT: BIT Switch - Push",
+                  "label": "BIT",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "FLT: FLCS Switch",
+              "class": "FltFlcsSwitch",
+              "description": "FLT: FLCS Switch - Hold",
+              "type": "button",
+              "control": [
+                {
+                  "id": "fltflcsswitchhold",
+                  "clazz": "FltFlcsSwitchHold",
+                  "callback": "SimFLCSReset",
+                  "description": "FLT: FLCS Switch - Hold",
+                  "label": "FLCS",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "FLT: LE FLAPS Switch",
+              "class": "FltLeFlapsSwitch",
+              "description": "FLT: LE FLAPS Switch - LOCK",
+              "label": "LE FLAPS",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "fltleflapsswitchlock",
+                  "clazz": "FltLeFlapsSwitchLock",
+                  "callback": "SimLEFLock",
+                  "description": "FLT: LE FLAPS Switch - LOCK",
+                  "label": "LOCK",
+                  "role": "none"
+                },
+                {
+                  "id": "fltleflapsswitchauto",
+                  "clazz": "FltLeFlapsSwitchAuto",
+                  "callback": "SimLEFAuto",
+                  "description": "FLT: LE FLAPS Switch - AUTO",
+                  "label": "AUTO",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "FLT: MANUAL TF FLYUP Switch",
+              "class": "FltManualTfFlyupSwitch",
+              "description": "FLT: MANUAL TF FLYUP Switch - DISABLE",
+              "label": "MANUAL TF FLYUP",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "fltmanualtfflyupswitchdisable",
+                  "clazz": "FltManualTfFlyupSwitchDisable",
+                  "callback": "SimManualFlyupDisable",
+                  "description": "FLT: MANUAL TF FLYUP Switch - DISABLE",
+                  "label": "DISABLE",
+                  "role": "off"
+                },
+                {
+                  "id": "fltmanualtfflyupswitchenable",
+                  "clazz": "FltManualTfFlyupSwitchEnable",
+                  "callback": "SimManualFlyupEnable",
+                  "description": "FLT: MANUAL TF FLYUP Switch - ENABLE",
+                  "label": "ENABLE",
+                  "role": "on"
+                }
+              ]
+            },
+            {
+              "id": "FLT: ALT FLAPS Switch",
+              "class": "FltAltFlapsSwitch",
+              "description": "FLT: ALT FLAPS Switch - EXTEND",
+              "label": "ALT FLAPS",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "fltaltflapsswitchextend",
+                  "clazz": "FltAltFlapsSwitchExtend",
+                  "callback": "SimAltFlapsExtend",
+                  "description": "FLT: ALT FLAPS Switch - EXTEND",
+                  "label": "EXTEND",
+                  "role": "none"
+                },
+                {
+                  "id": "fltaltflapsswitchnorm",
+                  "clazz": "FltAltFlapsSwitchNorm",
+                  "callback": "SimAltFlapsNorm",
+                  "description": "FLT: ALT FLAPS Switch - NORM",
+                  "label": "NORM",
+                  "role": "on"
+                }
+              ]
+            },
+            {
+              "id": "FLT: DIGITAL Switch",
+              "class": "FltDigitalSwitch",
+              "description": "FLT: DIGITAL Switch - BACKUP",
+              "label": "DIGITAL",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "fltdigitalswitchbackup",
+                  "clazz": "FltDigitalSwitchBackup",
+                  "callback": "SimDigitalBUPBackup",
+                  "description": "FLT: DIGITAL Switch - BACKUP",
+                  "label": "BACKUP",
+                  "role": "none"
+                },
+                {
+                  "id": "fltdigitalswitchoff",
+                  "clazz": "FltDigitalSwitchOff",
+                  "callback": "SimDigitalBUPOff",
+                  "description": "FLT: DIGITAL Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leftauxconsole",
+      "class": "LeftAuxConsole",
+      "name": "Left Aux Console",
+      "panel": [
+        {
+          "id": "gearpanel",
+          "class": "GearPanel",
+          "name": "GEAR PANEL",
+          "group": [
+            {
+              "id": "GEAR: LIGHTS Switch",
+              "class": "GearLightsSwitch",
+              "description": "GEAR: LIGHTS Switch - LANDING",
+              "label": "LIGHTS",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "gearlightsswitchlanding",
+                  "clazz": "GearLightsSwitchLanding",
+                  "callback": "SimLandingLightOn",
+                  "description": "GEAR: LIGHTS Switch - LANDING",
+                  "label": "LANDING",
+                  "role": "none"
+                },
+                {
+                  "id": "gearlightsswitchoff",
+                  "clazz": "GearLightsSwitchOff",
+                  "callback": "SimLandingLightOff",
+                  "description": "GEAR: LIGHTS Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: HORN SILENCER Button",
+              "class": "GearHornSilencerButton",
+              "description": "GEAR: HORN SILENCER Button - Push",
+              "type": "button",
+              "control": [
+                {
+                  "id": "gearhornsilencerbuttonpush",
+                  "clazz": "GearHornSilencerButtonPush",
+                  "callback": "SimSilenceHorn",
+                  "description": "GEAR: HORN SILENCER Button - Push",
+                  "label": "HORN SILENCER",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: STORES CONFIG Switch",
+              "class": "GearStoresConfigSwitch",
+              "description": "GEAR: STORES CONFIG Switch - CAT I",
+              "label": "STORES CONFIG",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "gearstoresconfigswitchcati",
+                  "clazz": "GearStoresConfigSwitchCatI",
+                  "callback": "SimCATI",
+                  "description": "GEAR: STORES CONFIG Switch - CAT I",
+                  "label": "CAT I",
+                  "role": "none"
+                },
+                {
+                  "id": "gearstoresconfigswitchcatiii",
+                  "clazz": "GearStoresConfigSwitchCatIii",
+                  "callback": "SimCATIII",
+                  "description": "GEAR: STORES CONFIG Switch - CAT III",
+                  "label": "CAT III",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: LG Handle",
+              "class": "GearLgHandle",
+              "description": "GEAR: LG Handle - UP",
+              "label": "LG",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "gearlghandleup",
+                  "clazz": "GearLgHandleUp",
+                  "callback": "AFGearUp",
+                  "description": "GEAR: LG Handle - UP",
+                  "label": "UP",
+                  "role": "up"
+                },
+                {
+                  "id": "gearlghandledn",
+                  "clazz": "GearLgHandleDn",
+                  "callback": "AFGearDown",
+                  "description": "GEAR: LG Handle - DN",
+                  "label": "DN",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: PARKING BREAK Switch",
+              "class": "GearParkingBreakSwitch",
+              "description": "GEAR: PARKING BREAK Switch - ON",
+              "label": "PARKING BREAK",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "gearparkingbreakswitchon",
+                  "clazz": "GearParkingBreakSwitchOn",
+                  "callback": "SimParkingBrakeOn",
+                  "description": "GEAR: PARKING BREAK Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "gearparkingbreakswitchoff",
+                  "clazz": "GearParkingBreakSwitchOff",
+                  "callback": "SimParkingBrakeOff",
+                  "description": "GEAR: PARKING BREAK Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: GND JETT Switch",
+              "class": "GearGndJettSwitch",
+              "description": "GEAR: GND JETT Switch - ENABLE",
+              "label": "GND JETT",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "geargndjettswitchenable",
+                  "clazz": "GearGndJettSwitchEnable",
+                  "callback": "SimGndJettOn",
+                  "description": "GEAR: GND JETT Switch - ENABLE",
+                  "label": "ENABLE",
+                  "role": "on"
+                },
+                {
+                  "id": "geargndjettswitchoff",
+                  "clazz": "GearGndJettSwitchOff",
+                  "callback": "SimGndJettOff",
+                  "description": "GEAR: GND JETT Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: HOOK Switch",
+              "class": "GearHookSwitch",
+              "description": "GEAR: HOOK Switch - UP",
+              "label": "HOOK",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "gearhookswitchup",
+                  "clazz": "GearHookSwitchUp",
+                  "callback": "SimHookUp",
+                  "description": "GEAR: HOOK Switch - UP",
+                  "label": "UP",
+                  "role": "up"
+                },
+                {
+                  "id": "gearhookswitchdn",
+                  "clazz": "GearHookSwitchDn",
+                  "callback": "SimHookDown",
+                  "description": "GEAR: HOOK Switch - DN",
+                  "label": "DN",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: EMER STORES JETTISON Button",
+              "class": "GearEmerStoresJettisonButton",
+              "description": "GEAR: EMER STORES JETTISON Button - Hold",
+              "type": "button",
+              "control": [
+                {
+                  "id": "gearemerstoresjettisonbuttonhold",
+                  "clazz": "GearEmerStoresJettisonButtonHold",
+                  "callback": "SimEmergencyJettison",
+                  "description": "GEAR: EMER STORES JETTISON Button - Hold",
+                  "label": "EMER STORES JETTISON",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hmcspanel",
+          "class": "HmcsPanel",
+          "name": "HMCS PANEL",
+          "group": [
+            {
+              "id": "HMCS: HMSC Knob",
+              "class": "HmcsHmscKnob",
+              "description": "HMCS: HMSC Knob - Brightness Incr.",
+              "label": "HMSC",
+              "type": "button",
+              "control": [
+                {
+                  "id": "hmcshmscknobbrightnessincr",
+                  "clazz": "HmcsHmscKnobBrightnessIncr",
+                  "callback": "SimHmsSymWheelUp",
+                  "description": "HMCS: HMSC Knob - Brightness Incr.",
+                  "label": "Brightness Incr.",
+                  "role": "up"
+                },
+                {
+                  "id": "hmcshmscknobbrightnessdecr",
+                  "clazz": "HmcsHmscKnobBrightnessDecr",
+                  "callback": "SimHmsSymWheelDn",
+                  "description": "HMCS: HMSC Knob - Brightness Decr.",
+                  "label": "Brightness Decr.",
+                  "role": "down"
+                },
+                {
+                  "id": "hmcshmscknobon",
+                  "clazz": "HmcsHmscKnobOn",
+                  "callback": "SimHmsOn",
+                  "description": "HMCS: HMSC Knob - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "hmcshmscknoboff",
+                  "clazz": "HmcsHmscKnobOff",
+                  "callback": "SimHmsOff",
+                  "description": "HMCS: HMSC Knob - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "altgearcontrol",
+          "class": "AltGearControl",
+          "name": "ALT GEAR CONTROL",
+          "group": [
+            {
+              "id": "ALT GEAR: Reset Button",
+              "class": "AltGearResetButton",
+              "description": "ALT GEAR: Reset Button - Push",
+              "type": "button",
+              "control": [
+                {
+                  "id": "altgearresetbuttonpush",
+                  "clazz": "AltGearResetButtonPush",
+                  "callback": "AFAlternateGearReset",
+                  "description": "ALT GEAR: Reset Button - Push",
+                  "label": "Reset",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "ALT GEAR: Extend Gear Handle",
+              "class": "AltGearExtendGearHandle",
+              "description": "ALT GEAR: Extend Gear Handle - Push",
+              "type": "button",
+              "control": [
+                {
+                  "id": "altgearextendgearhandlepush",
+                  "clazz": "AltGearExtendGearHandlePush",
+                  "callback": "AFAlternateGear",
+                  "description": "ALT GEAR: Extend Gear Handle - Push",
+                  "label": "Extend Gear",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "centerconsole",
+      "class": "CenterConsole",
+      "name": "Center Console",
+      "panel": [
         {
           "id": "instrmodepanel",
           "class": "InstrModePanel",
@@ -2440,109 +2879,6 @@
                   "callback": "SimHsiHdgDecBy1",
                   "description": "MAIN: HSI HDG Knob - Decrease (1°)",
                   "label": "Decrease (1°)",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "rwr",
-          "class": "Rwr",
-          "name": "RWR",
-          "group": [
-            {
-              "id": "RWR: Brightness Knob",
-              "class": "RwrBrightnessKnob",
-              "description": "RWR: Brightness Knob - Increase",
-              "label": "Brightness",
-              "type": "button",
-              "control": [
-                {
-                  "id": "rwrbrightnessknobincrease",
-                  "clazz": "RwrBrightnessKnobIncrease",
-                  "callback": "SimRWRBrightnessUp",
-                  "description": "RWR: Brightness Knob - Increase",
-                  "label": "Increase",
-                  "role": "up"
-                },
-                {
-                  "id": "rwrbrightnessknobdecrease",
-                  "clazz": "RwrBrightnessKnobDecrease",
-                  "callback": "SimRWRBrightnessDown",
-                  "description": "RWR: Brightness Knob - Decrease",
-                  "label": "Decrease",
-                  "role": "down"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "twp",
-          "class": "Twp",
-          "name": "TWP",
-          "group": [
-            {
-              "id": "TWP: TGT SEP",
-              "class": "TwpTgtSep",
-              "description": "TWP: TGT SEP - Push",
-              "type": "button",
-              "control": [
-                {
-                  "id": "twptgtseppush",
-                  "clazz": "TwpTgtSepPush",
-                  "callback": "SimRWRSetTargetSep",
-                  "description": "TWP: TGT SEP - Push",
-                  "label": "TGT SEP",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "TWP: SYS TEST",
-              "class": "TwpSysTest",
-              "description": "TWP: SYS TEST - Push",
-              "type": "button",
-              "control": [
-                {
-                  "id": "twpsystestpush",
-                  "clazz": "TwpSysTestPush",
-                  "callback": "SimRWRSysTest",
-                  "description": "TWP: SYS TEST - Push",
-                  "label": "SYS TEST",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "TWP: MISSILE LAUNCH",
-              "class": "TwpMissileLaunch",
-              "description": "TWP: MISSILE LAUNCH - Push",
-              "type": "button",
-              "control": [
-                {
-                  "id": "twpmissilelaunchpush",
-                  "clazz": "TwpMissileLaunchPush",
-                  "callback": "SimRWRLaunch",
-                  "description": "TWP: MISSILE LAUNCH - Push",
-                  "label": "MISSILE LAUNCH",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "TWP: HANDOFF",
-              "class": "TwpHandoff",
-              "description": "TWP: HANDOFF - Push",
-              "type": "button",
-              "control": [
-                {
-                  "id": "twphandoffpush",
-                  "clazz": "TwpHandoffPush",
-                  "callback": "SimRWRHandoff",
-                  "description": "TWP: HANDOFF - Push",
-                  "label": "HANDOFF",
                   "role": "none"
                 }
               ]
@@ -2730,39 +3066,6 @@
                   "description": "MISC: LASER Switch - OFF",
                   "label": "OFF",
                   "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "MISC: RF Switch",
-              "class": "MiscRfSwitch",
-              "description": "MISC: RF Switch - NORM",
-              "label": "RF",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "miscrfswitchnorm",
-                  "clazz": "MiscRfSwitchNorm",
-                  "callback": "SimRFNorm",
-                  "description": "MISC: RF Switch - NORM",
-                  "label": "NORM",
-                  "role": "on"
-                },
-                {
-                  "id": "miscrfswitchquiet",
-                  "clazz": "MiscRfSwitchQuiet",
-                  "callback": "SimRFQuiet",
-                  "description": "MISC: RF Switch - QUIET",
-                  "label": "QUIET",
-                  "role": "none"
-                },
-                {
-                  "id": "miscrfswitchsilent",
-                  "clazz": "MiscRfSwitchSilent",
-                  "callback": "SimRFSilent",
-                  "description": "MISC: RF Switch - SILENT",
-                  "label": "SILENT",
-                  "role": "none"
                 }
               ]
             }
@@ -3086,88 +3389,6 @@
           ]
         },
         {
-          "id": "lightingpanel",
-          "class": "LightingPanel",
-          "name": "LIGHTING  PANEL",
-          "group": [
-            {
-              "id": "LIGHT: CONSOLES Knob (Flood)",
-              "class": "LightConsolesKnobFlood",
-              "description": "LIGHT: CONSOLES Knob (Flood) - Step Up",
-              "label": "CONSOLES Knob (Flood)",
-              "type": "button",
-              "control": [
-                {
-                  "id": "lightconsolesknobfloodstepup",
-                  "clazz": "LightConsolesKnobFloodStepUp",
-                  "callback": "SimInteriorLightCW",
-                  "description": "LIGHT: CONSOLES Knob (Flood) - Step Up",
-                  "label": "Step Up",
-                  "role": "up"
-                },
-                {
-                  "id": "lightconsolesknobfloodstepdown",
-                  "clazz": "LightConsolesKnobFloodStepDown",
-                  "callback": "SimInteriorLightCCW",
-                  "description": "LIGHT: CONSOLES Knob (Flood) - Step Down",
-                  "label": "Step Down",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "LIGHT: DED Knob (Primary)",
-              "class": "LightDedKnobPrimary",
-              "description": "LIGHT: DED Knob (Primary) - Step Up",
-              "label": "DED Knob (Primary)",
-              "type": "button",
-              "control": [
-                {
-                  "id": "lightdedknobprimarystepup",
-                  "clazz": "LightDedKnobPrimaryStepUp",
-                  "callback": "SimDedBrightnessCW",
-                  "description": "LIGHT: DED Knob (Primary) - Step Up",
-                  "label": "Step Up",
-                  "role": "up"
-                },
-                {
-                  "id": "lightdedknobprimarystepdown",
-                  "clazz": "LightDedKnobPrimaryStepDown",
-                  "callback": "SimDedBrightnessCCW",
-                  "description": "LIGHT: DED Knob (Primary) - Step Down",
-                  "label": "Step Down",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "LIGHT: INST PNL Knob (Primary)",
-              "class": "LightInstPnlKnobPrimary",
-              "description": "LIGHT: INST PNL Knob (Primary) - Step Up",
-              "label": "INST PNL Knob (Primary)",
-              "type": "button",
-              "control": [
-                {
-                  "id": "lightinstpnlknobprimarystepup",
-                  "clazz": "LightInstPnlKnobPrimaryStepUp",
-                  "callback": "SimInstrumentLightCW",
-                  "description": "LIGHT: INST PNL Knob (Primary) - Step Up",
-                  "label": "Step Up",
-                  "role": "up"
-                },
-                {
-                  "id": "lightinstpnlknobprimarystepdown",
-                  "clazz": "LightInstPnlKnobPrimaryStepDown",
-                  "callback": "SimInstrumentLightCCW",
-                  "description": "LIGHT: INST PNL Knob (Primary) - Step Down",
-                  "label": "Step Down",
-                  "role": "down"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "id": "hudpanel",
           "class": "HudPanel",
           "name": "HUD  PANEL",
@@ -3398,121 +3619,6 @@
                   "clazz": "HudScalesSwitchOff",
                   "callback": "SimScalesOff",
                   "description": "HUD: Scales Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "snsrpwrpanel",
-          "class": "SnsrPwrPanel",
-          "name": "SNSR PWR PANEL",
-          "group": [
-            {
-              "id": "SNSR: RDR ALT Switch",
-              "class": "SnsrRdrAltSwitch",
-              "description": "SNSR: RDR ALT Switch - ON",
-              "label": "RDR ALT",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "snsrrdraltswitchon",
-                  "clazz": "SnsrRdrAltSwitchOn",
-                  "callback": "SimRALTON",
-                  "description": "SNSR: RDR ALT Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "snsrrdraltswitchstdby",
-                  "clazz": "SnsrRdrAltSwitchStdby",
-                  "callback": "SimRALTSTDBY",
-                  "description": "SNSR: RDR ALT Switch - STDBY",
-                  "label": "STDBY",
-                  "role": "none"
-                },
-                {
-                  "id": "snsrrdraltswitchoff",
-                  "clazz": "SnsrRdrAltSwitchOff",
-                  "callback": "SimRALTOFF",
-                  "description": "SNSR: RDR ALT Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "SNSR: FCR Switch",
-              "class": "SnsrFcrSwitch",
-              "description": "SNSR: FCR Switch - ON",
-              "label": "FCR",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "snsrfcrswitchon",
-                  "clazz": "SnsrFcrSwitchOn",
-                  "callback": "SimFCROn",
-                  "description": "SNSR: FCR Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "snsrfcrswitchoff",
-                  "clazz": "SnsrFcrSwitchOff",
-                  "callback": "SimFCROff",
-                  "description": "SNSR: FCR Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "SNSR: RIGHT HDPT Switch",
-              "class": "SnsrRightHdptSwitch",
-              "description": "SNSR: RIGHT HDPT Switch - ON",
-              "label": "RIGHT HDPT",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "snsrrighthdptswitchon",
-                  "clazz": "SnsrRightHdptSwitchOn",
-                  "callback": "SimRightHptOn",
-                  "description": "SNSR: RIGHT HDPT Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "snsrrighthdptswitchoff",
-                  "clazz": "SnsrRightHdptSwitchOff",
-                  "callback": "SimRightHptOff",
-                  "description": "SNSR: RIGHT HDPT Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "SNSR: LEFT HDPT Switch",
-              "class": "SnsrLeftHdptSwitch",
-              "description": "SNSR: LEFT HDPT Switch - ON",
-              "label": "LEFT HDPT",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "snsrlefthdptswitchon",
-                  "clazz": "SnsrLeftHdptSwitchOn",
-                  "callback": "SimLeftHptOn",
-                  "description": "SNSR: LEFT HDPT Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "snsrlefthdptswitchoff",
-                  "clazz": "SnsrLeftHdptSwitchOff",
-                  "callback": "SimLeftHptOff",
-                  "description": "SNSR: LEFT HDPT Switch - OFF",
                   "label": "OFF",
                   "role": "off"
                 }

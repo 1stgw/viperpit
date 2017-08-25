@@ -2,6 +2,30 @@
   "id" : "f35",
   "name" : "F35",
   "consoles" : [ {
+    "id" : "cmds",
+    "className" : "Cmds",
+    "name" : "Cmds"
+  }, {
+    "id" : "comms",
+    "className" : "Comms",
+    "name" : "Comms"
+  }, {
+    "id" : "fuel",
+    "className" : "Fuel",
+    "name" : "Fuel"
+  }, {
+    "id" : "test",
+    "className" : "Test",
+    "name" : "Test"
+  }, {
+    "id" : "lights",
+    "className" : "Lights",
+    "name" : "Lights"
+  }, {
+    "id" : "sensors",
+    "className" : "Sensors",
+    "name" : "Sensors"
+  }, {
     "id" : "leftconsole",
     "className" : "LeftConsole",
     "name" : "Left Console"
@@ -31,21 +55,25 @@
     "name" : "Radio Comms"
   } ],
   "panels" : [ {
-    "id" : "seat",
-    "className" : "Seat",
-    "name" : "SEAT"
+    "id" : "rwr",
+    "className" : "Rwr",
+    "name" : "RWR"
   }, {
-    "id" : "leftsidewall",
-    "className" : "LeftSideWall",
-    "name" : "LEFT SIDE WALL"
+    "id" : "twp",
+    "className" : "Twp",
+    "name" : "TWP"
+  }, {
+    "id" : "twapanel",
+    "className" : "TwaPanel",
+    "name" : "TWA PANEL"
+  }, {
+    "id" : "cmdspanel",
+    "className" : "CmdsPanel",
+    "name" : "CMDS PANEL"
   }, {
     "id" : "uhfpanel",
     "className" : "UhfPanel",
     "name" : "UHF PANEL"
-  }, {
-    "id" : "mpopanel",
-    "className" : "MpoPanel",
-    "name" : "MPO PANEL"
   }, {
     "id" : "audio1panel",
     "className" : "Audio1Panel",
@@ -54,6 +82,46 @@
     "id" : "audio2panel",
     "className" : "Audio2Panel",
     "name" : "AUDIO 2 PANEL"
+  }, {
+    "id" : "auxcommpanel",
+    "className" : "AuxCommPanel",
+    "name" : "AUX COMM PANEL"
+  }, {
+    "id" : "fuelqtypanel",
+    "className" : "FuelQtyPanel",
+    "name" : "FUEL QTY PANEL"
+  }, {
+    "id" : "fuelpanel",
+    "className" : "FuelPanel",
+    "name" : "FUEL PANEL"
+  }, {
+    "id" : "testpanel",
+    "className" : "TestPanel",
+    "name" : "TEST PANEL"
+  }, {
+    "id" : "lightingpanel",
+    "className" : "LightingPanel",
+    "name" : "LIGHTING  PANEL"
+  }, {
+    "id" : "extlightingpanel",
+    "className" : "ExtLightingPanel",
+    "name" : "EXT LIGHTING PANEL"
+  }, {
+    "id" : "snsrpwrpanel",
+    "className" : "SnsrPwrPanel",
+    "name" : "SNSR PWR PANEL"
+  }, {
+    "id" : "seat",
+    "className" : "Seat",
+    "name" : "SEAT"
+  }, {
+    "id" : "leftsidewall",
+    "className" : "LeftSideWall",
+    "name" : "LEFT SIDE WALL"
+  }, {
+    "id" : "mpopanel",
+    "className" : "MpoPanel",
+    "name" : "MPO PANEL"
   }, {
     "id" : "engjetstartpanel",
     "className" : "EngJetStartPanel",
@@ -75,18 +143,6 @@
     "className" : "EpuPanel",
     "name" : "EPU PANEL"
   }, {
-    "id" : "extlightingpanel",
-    "className" : "ExtLightingPanel",
-    "name" : "EXT LIGHTING PANEL"
-  }, {
-    "id" : "auxcommpanel",
-    "className" : "AuxCommPanel",
-    "name" : "AUX COMM PANEL"
-  }, {
-    "id" : "fuelpanel",
-    "className" : "FuelPanel",
-    "name" : "FUEL PANEL"
-  }, {
     "id" : "manualtrimpanel",
     "className" : "ManualTrimPanel",
     "name" : "MANUAL TRIM PANEL"
@@ -95,33 +151,17 @@
     "className" : "FltControlPanel",
     "name" : "FLT CONTROL PANEL"
   }, {
-    "id" : "testpanel",
-    "className" : "TestPanel",
-    "name" : "TEST PANEL"
-  }, {
     "id" : "gearpanel",
     "className" : "GearPanel",
     "name" : "GEAR PANEL"
-  }, {
-    "id" : "cmdspanel",
-    "className" : "CmdsPanel",
-    "name" : "CMDS PANEL"
   }, {
     "id" : "hmcspanel",
     "className" : "HmcsPanel",
     "name" : "HMCS PANEL"
   }, {
-    "id" : "twapanel",
-    "className" : "TwaPanel",
-    "name" : "TWA PANEL"
-  }, {
     "id" : "altgearcontrol",
     "className" : "AltGearControl",
     "name" : "ALT GEAR CONTROL"
-  }, {
-    "id" : "fuelqtypanel",
-    "className" : "FuelQtyPanel",
-    "name" : "FUEL QTY PANEL"
   }, {
     "id" : "instrmodepanel",
     "className" : "InstrModePanel",
@@ -130,14 +170,6 @@
     "id" : "maininstrument",
     "className" : "MainInstrument",
     "name" : "MAIN INSTRUMENT"
-  }, {
-    "id" : "rwr",
-    "className" : "Rwr",
-    "name" : "RWR"
-  }, {
-    "id" : "twp",
-    "className" : "Twp",
-    "name" : "TWP"
   }, {
     "id" : "lefteyebrow",
     "className" : "LeftEyebrow",
@@ -163,17 +195,9 @@
     "className" : "AirCondPanel",
     "name" : "AIR COND PANEL"
   }, {
-    "id" : "lightingpanel",
-    "className" : "LightingPanel",
-    "name" : "LIGHTING  PANEL"
-  }, {
     "id" : "hudpanel",
     "className" : "HudPanel",
     "name" : "HUD  PANEL"
-  }, {
-    "id" : "snsrpwrpanel",
-    "className" : "SnsrPwrPanel",
-    "name" : "SNSR PWR PANEL"
   }, {
     "id" : "simulationhardware",
     "className" : "SimulationHardware",
@@ -200,381 +224,63 @@
     "name" : "GENERAL RADIO OPTIONS"
   } ],
   "groups" : [ {
-    "id" : "SEAT: EJECT Handle",
-    "className" : "SeatEjectHandle",
-    "description" : "SEAT: EJECT Handle - Hold For Eject",
+    "id" : "RWR: Brightness Knob",
+    "className" : "RwrBrightnessKnob",
+    "description" : "RWR: Brightness Knob - Increase",
+    "label" : "Brightness",
+    "type" : "button"
+  }, {
+    "id" : "TWP: TGT SEP",
+    "className" : "TwpTgtSep",
+    "description" : "TWP: TGT SEP - Push",
     "label" : null,
     "type" : "button"
   }, {
-    "id" : "SEAT: Safety Lever",
-    "className" : "SeatSafetyLever",
-    "description" : "SEAT: Safety Lever - Armed",
-    "label" : "Safety Lever",
-    "type" : "button"
-  }, {
-    "id" : "LEFT WALL: CANOPY",
-    "className" : "LeftWallCanopy",
-    "description" : "LEFT WALL: CANOPY - Open",
-    "label" : "CANOPY",
-    "type" : "button"
-  }, {
-    "id" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-    "className" : "LeftWallSlapSwitchEcmPgrm5",
-    "description" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+    "id" : "TWP: SYS TEST",
+    "className" : "TwpSysTest",
+    "description" : "TWP: SYS TEST - Push",
     "label" : null,
     "type" : "button"
   }, {
-    "id" : "UHF: MODE Knob",
-    "className" : "UhfModeKnob",
-    "description" : "UHF: MODE Knob - MNL",
-    "label" : "MODE",
-    "type" : "switch"
-  }, {
-    "id" : "UHF: VOL Knob",
-    "className" : "UhfVolKnob",
-    "description" : "UHF: VOL Knob - AI vs IVC Volume Incr",
-    "label" : "VOL",
-    "type" : "button"
-  }, {
-    "id" : "UHF: FUNCTION Knob",
-    "className" : "UhfFunctionKnob",
-    "description" : "UHF: FUNCTION Knob - OFF",
-    "label" : "FUNCTION",
-    "type" : "switch"
-  }, {
-    "id" : "UHF: Manual Frequency ___._XX",
-    "className" : "UhfManualFrequencyZzzzxx",
-    "description" : "UHF: Manual Frequency ___._XX - Cycle Up",
-    "label" : "Manual Frequency ___._XX",
-    "type" : "button"
-  }, {
-    "id" : "UHF: Manual Frequency ___.X__",
-    "className" : "UhfManualFrequencyZzzxzz",
-    "description" : "UHF: Manual Frequency ___.X__ - Cycle Up",
-    "label" : "Manual Frequency ___.X__",
-    "type" : "button"
-  }, {
-    "id" : "UHF: Manual Frequency __X.___",
-    "className" : "UhfManualFrequencyZzxzzz",
-    "description" : "UHF: Manual Frequency __X.___ - Cycle Up",
-    "label" : "Manual Frequency __X.___",
-    "type" : "button"
-  }, {
-    "id" : "UHF: Manual Frequency _X_.___",
-    "className" : "UhfManualFrequencyZxzzzz",
-    "description" : "UHF: Manual Frequency _X_.___ - Cycle Up",
-    "label" : "Manual Frequency _X_.___",
-    "type" : "button"
-  }, {
-    "id" : "UHF: A-3-2-T Rotary X__.___",
-    "className" : "UhfA32TRotaryXzzzzz",
-    "description" : "UHF: A-3-2-T Rotary X__.___ - Step Up",
-    "label" : "A-3-2-T Rotary X__.___",
-    "type" : "button"
-  }, {
-    "id" : "UHF: PRESET CHANNEL Knob",
-    "className" : "UhfPresetChannelKnob",
-    "description" : "UHF: PRESET CHANNEL Knob - Cycle Up",
-    "label" : "PRESET CHANNEL",
-    "type" : "button"
-  }, {
-    "id" : "MPO: MANUAL PITCH Switch",
-    "className" : "MpoManualPitchSwitch",
-    "description" : "MPO: MANUAL PITCH Switch - Hold",
+    "id" : "TWP: UNKNOWN",
+    "className" : "TwpUnknown",
+    "description" : "TWP: UNKNOWN - Toggle",
     "label" : null,
     "type" : "button"
   }, {
-    "id" : "AUDIO1: THREAT Knob",
-    "className" : "Audio1ThreatKnob",
-    "description" : "AUDIO1: THREAT Knob - Volume Incr.",
-    "label" : "THREAT",
-    "type" : "button"
-  }, {
-    "id" : "AUDIO1: COMM 2 Mode Knob",
-    "className" : "Audio1Comm2ModeKnob",
-    "description" : "AUDIO1: COMM 2 Mode Knob - SQL",
-    "label" : "COMM 2 Mode",
-    "type" : "switch"
-  }, {
-    "id" : "AUDIO1: COMM 1 Mode Knob",
-    "className" : "Audio1Comm1ModeKnob",
-    "description" : "AUDIO1: COMM 1 Mode Knob - SQL",
-    "label" : "COMM 1 Mode",
-    "type" : "switch"
-  }, {
-    "id" : "AUDIO1: MSL Knob",
-    "className" : "Audio1MslKnob",
-    "description" : "AUDIO1: MSL Knob - Volume Incr.",
-    "label" : "MSL",
-    "type" : "button"
-  }, {
-    "id" : "AUDIO1: COMM 2 Knob",
-    "className" : "Audio1Comm2Knob",
-    "description" : "AUDIO1: COMM 2 Knob - Volume Incr.",
-    "label" : "COMM 2",
-    "type" : "button"
-  }, {
-    "id" : "AUDIO1: COMM 1 Knob",
-    "className" : "Audio1Comm1Knob",
-    "description" : "AUDIO1: COMM 1 Knob - Volume Incr.",
-    "label" : "COMM 1",
-    "type" : "button"
-  }, {
-    "id" : "AUDIO2: ILS Knob",
-    "className" : "Audio2IlsKnob",
-    "description" : "AUDIO2: ILS Knob - ON",
-    "label" : "ILS",
-    "type" : "switch"
-  }, {
-    "id" : "AUDIO2: INTERCOM Knob",
-    "className" : "Audio2IntercomKnob",
-    "description" : "AUDIO2: INTERCOM Knob - Volume Incr.",
-    "label" : "INTERCOM",
-    "type" : "button"
-  }, {
-    "id" : "ENG: ENG CONT Switch",
-    "className" : "EngEngContSwitch",
-    "description" : "ENG: ENG CONT Switch - PRI",
-    "label" : "ENG CONT",
-    "type" : "switch"
-  }, {
-    "id" : "ENG: JFS Switch",
-    "className" : "EngJfsSwitch",
-    "description" : "ENG: JFS Switch - OFF",
-    "label" : "JFS",
-    "type" : "switch"
-  }, {
-    "id" : "ECM: OPR Switch",
-    "className" : "EcmOprSwitch",
-    "description" : "ECM: OPR Switch - OPR",
-    "label" : "OPR",
-    "type" : "switch"
-  }, {
-    "id" : "AVTR: AVTR Switch",
-    "className" : "AvtrAvtrSwitch",
-    "description" : "AVTR: AVTR Switch - Toggle ON / OFF",
-    "label" : "AVTR",
-    "type" : "button"
-  }, {
-    "id" : "ELEC: CAUTION RESET Button",
-    "className" : "ElecCautionResetButton",
-    "description" : "ELEC: CAUTION RESET Button - Push",
+    "id" : "TWP: PRIORITY MODE",
+    "className" : "TwpPriorityMode",
+    "description" : "TWP: PRIORITY MODE - Toggle",
     "label" : null,
     "type" : "button"
   }, {
-    "id" : "ELEC: MAIN PWR Switch",
-    "className" : "ElecMainPwrSwitch",
-    "description" : "ELEC: MAIN PWR Switch - MAIN",
-    "label" : "MAIN PWR",
-    "type" : "switch"
-  }, {
-    "id" : "EPU: EPU Switch",
-    "className" : "EpuEpuSwitch",
-    "description" : "EPU: EPU Switch - ON",
-    "label" : "EPU",
-    "type" : "switch"
-  }, {
-    "id" : "EXT: MASTER Switch",
-    "className" : "ExtMasterSwitch",
-    "description" : "EXT: MASTER Switch - NORM",
-    "label" : "MASTER",
-    "type" : "switch"
-  }, {
-    "id" : "EXT: WING/TAIL Switch",
-    "className" : "ExtWingTailSwitch",
-    "description" : "EXT: WING/TAIL Switch - BRT",
-    "label" : "WING/TAIL",
-    "type" : "switch"
-  }, {
-    "id" : "EXT: POSITION Switch",
-    "className" : "ExtPositionSwitch",
-    "description" : "EXT: POSITION Switch - FLASH",
-    "label" : "POSITION",
-    "type" : "switch"
-  }, {
-    "id" : "EXT: ANTI COLLISION Switch",
-    "className" : "ExtAntiCollisionSwitch",
-    "description" : "EXT: ANTI COLLISION Switch - ON",
-    "label" : "ANTI COLLISION",
-    "type" : "switch"
-  }, {
-    "id" : "AUX: STATION SELECTOR Switch",
-    "className" : "AuxStationSelectorSwitch",
-    "description" : "AUX: STATION SELECTOR Switch - T/R",
-    "label" : "STATION SELECTOR",
-    "type" : "switch"
-  }, {
-    "id" : "AUX: CHANNEL",
-    "className" : "AuxChannel",
-    "description" : "AUX: CHANNEL - Cycle Up Left Digit",
-    "label" : "CHANNEL",
-    "type" : "button"
-  }, {
-    "id" : "AUX: CNI Knob Switch",
-    "className" : "AuxCniKnobSwitch",
-    "description" : "AUX: CNI Knob Switch - BACKUP",
-    "label" : "CNI Knob",
-    "type" : "switch"
-  }, {
-    "id" : "FUEL: AIR REFUEL Switch",
-    "className" : "FuelAirRefuelSwitch",
-    "description" : "FUEL: AIR REFUEL Switch - OPEN",
-    "label" : "AIR REFUEL",
-    "type" : "switch"
-  }, {
-    "id" : "FUEL: ENG FEED Knob",
-    "className" : "FuelEngFeedKnob",
-    "description" : "FUEL: ENG FEED Knob - OFF",
-    "label" : "ENG FEED",
-    "type" : "switch"
-  }, {
-    "id" : "FUEL: MASTER Switch",
-    "className" : "FuelMasterSwitch",
-    "description" : "FUEL: MASTER Switch - ON",
-    "label" : "MASTER",
-    "type" : "switch"
-  }, {
-    "id" : "TRIM: PITCH TRIM Wheel",
-    "className" : "TrimPitchTrimWheel",
-    "description" : "TRIM: PITCH TRIM Wheel - NOSE UP",
-    "label" : "PITCH TRIM",
-    "type" : "button"
-  }, {
-    "id" : "TRIM: YAW TRIM Knob",
-    "className" : "TrimYawTrimKnob",
-    "description" : "TRIM: YAW TRIM Knob - L",
-    "label" : "YAW TRIM",
-    "type" : "button"
-  }, {
-    "id" : "TRIM: TRIM/AP DISC Switch",
-    "className" : "TrimTrimApDiscSwitch",
-    "description" : "TRIM: TRIM/AP DISC Switch - DISC",
-    "label" : "TRIM/AP DISC",
-    "type" : "switch"
-  }, {
-    "id" : "TRIM: ROLL TRIM Wheel",
-    "className" : "TrimRollTrimWheel",
-    "description" : "TRIM: ROLL TRIM Wheel - L WING DN",
-    "label" : "ROLL TRIM",
-    "type" : "button"
-  }, {
-    "id" : "FLT: BIT Switch",
-    "className" : "FltBitSwitch",
-    "description" : "FLT: BIT Switch - Push",
+    "id" : "TWP: MISSILE LAUNCH",
+    "className" : "TwpMissileLaunch",
+    "description" : "TWP: MISSILE LAUNCH - Push",
     "label" : null,
     "type" : "button"
   }, {
-    "id" : "FLT: FLCS Switch",
-    "className" : "FltFlcsSwitch",
-    "description" : "FLT: FLCS Switch - Hold",
+    "id" : "TWP: HANDOFF",
+    "className" : "TwpHandoff",
+    "description" : "TWP: HANDOFF - Push",
     "label" : null,
     "type" : "button"
   }, {
-    "id" : "FLT: LE FLAPS Switch",
-    "className" : "FltLeFlapsSwitch",
-    "description" : "FLT: LE FLAPS Switch - LOCK",
-    "label" : "LE FLAPS",
-    "type" : "switch"
+    "id" : "TWA: POWER Button",
+    "className" : "TwaPowerButton",
+    "description" : "TWA: POWER Button - On",
+    "label" : "POWER",
+    "type" : "button"
   }, {
-    "id" : "FLT: MANUAL TF FLYUP Switch",
-    "className" : "FltManualTfFlyupSwitch",
-    "description" : "FLT: MANUAL TF FLYUP Switch - DISABLE",
-    "label" : "MANUAL TF FLYUP",
-    "type" : "switch"
-  }, {
-    "id" : "FLT: ALT FLAPS Switch",
-    "className" : "FltAltFlapsSwitch",
-    "description" : "FLT: ALT FLAPS Switch - EXTEND",
-    "label" : "ALT FLAPS",
-    "type" : "switch"
-  }, {
-    "id" : "FLT: DIGITAL Switch",
-    "className" : "FltDigitalSwitch",
-    "description" : "FLT: DIGITAL Switch - BACKUP",
-    "label" : "DIGITAL",
-    "type" : "switch"
-  }, {
-    "id" : "TEST: FLCS PWR TEST Switch",
-    "className" : "TestFlcsPwrTestSwitch",
-    "description" : "TEST: FLCS PWR TEST Switch - Hold",
+    "id" : "TWA: SEARCH Button",
+    "className" : "TwaSearchButton",
+    "description" : "TWA: SEARCH Button - Toggle",
     "label" : null,
     "type" : "button"
   }, {
-    "id" : "TEST: EPU/GEN Switch",
-    "className" : "TestEpuGenSwitch",
-    "description" : "TEST: EPU/GEN Switch - Hold",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "TEST: PROBE HEAT Switch",
-    "className" : "TestProbeHeatSwitch",
-    "description" : "TEST: PROBE HEAT Switch - ON",
-    "label" : "PROBE HEAT",
-    "type" : "switch"
-  }, {
-    "id" : "TEST: MAL & IND LTS Button",
-    "className" : "TestMalIndLtsButton",
-    "description" : "TEST: MAL & IND LTS Button - Hold",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "TEST: OXY QTY Switch",
-    "className" : "TestOxyQtySwitch",
-    "description" : "TEST: OXY QTY Switch - Hold",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "TEST: FIRE & OHEAT DETECT Button",
-    "className" : "TestFireOheatDetectButton",
-    "description" : "TEST: FIRE & OHEAT DETECT Button - Hold",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "GEAR: LIGHTS Switch",
-    "className" : "GearLightsSwitch",
-    "description" : "GEAR: LIGHTS Switch - LANDING",
-    "label" : "LIGHTS",
-    "type" : "switch"
-  }, {
-    "id" : "GEAR: HORN SILENCER Button",
-    "className" : "GearHornSilencerButton",
-    "description" : "GEAR: HORN SILENCER Button - Push",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "GEAR: STORES CONFIG Switch",
-    "className" : "GearStoresConfigSwitch",
-    "description" : "GEAR: STORES CONFIG Switch - CAT I",
-    "label" : "STORES CONFIG",
-    "type" : "switch"
-  }, {
-    "id" : "GEAR: LG Handle",
-    "className" : "GearLgHandle",
-    "description" : "GEAR: LG Handle - UP",
-    "label" : "LG",
-    "type" : "switch"
-  }, {
-    "id" : "GEAR: PARKING BREAK Switch",
-    "className" : "GearParkingBreakSwitch",
-    "description" : "GEAR: PARKING BREAK Switch - ON",
-    "label" : "PARKING BREAK",
-    "type" : "switch"
-  }, {
-    "id" : "GEAR: GND JETT Switch",
-    "className" : "GearGndJettSwitch",
-    "description" : "GEAR: GND JETT Switch - ENABLE",
-    "label" : "GND JETT",
-    "type" : "switch"
-  }, {
-    "id" : "GEAR: HOOK Switch",
-    "className" : "GearHookSwitch",
-    "description" : "GEAR: HOOK Switch - UP",
-    "label" : "HOOK",
-    "type" : "switch"
-  }, {
-    "id" : "GEAR: EMER STORES JETTISON Button",
-    "className" : "GearEmerStoresJettisonButton",
-    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
+    "id" : "TWA: LOW Button",
+    "className" : "TwaLowButton",
+    "description" : "TWA: LOW Button - Toggle",
     "label" : null,
     "type" : "button"
   }, {
@@ -638,16 +344,448 @@
     "label" : "RWR",
     "type" : "switch"
   }, {
+    "id" : "UHF: MODE Knob",
+    "className" : "UhfModeKnob",
+    "description" : "UHF: MODE Knob - MNL",
+    "label" : "MODE",
+    "type" : "switch"
+  }, {
+    "id" : "UHF: VOL Knob",
+    "className" : "UhfVolKnob",
+    "description" : "UHF: VOL Knob - AI vs IVC Volume Incr",
+    "label" : "VOL",
+    "type" : "button"
+  }, {
+    "id" : "UHF: FUNCTION Knob",
+    "className" : "UhfFunctionKnob",
+    "description" : "UHF: FUNCTION Knob - OFF",
+    "label" : "FUNCTION",
+    "type" : "switch"
+  }, {
+    "id" : "UHF: Manual Frequency ___._XX",
+    "className" : "UhfManualFrequencyZzzzxx",
+    "description" : "UHF: Manual Frequency ___._XX - Cycle Up",
+    "label" : "Manual Frequency ___._XX",
+    "type" : "button"
+  }, {
+    "id" : "UHF: Manual Frequency ___.X__",
+    "className" : "UhfManualFrequencyZzzxzz",
+    "description" : "UHF: Manual Frequency ___.X__ - Cycle Up",
+    "label" : "Manual Frequency ___.X__",
+    "type" : "button"
+  }, {
+    "id" : "UHF: Manual Frequency __X.___",
+    "className" : "UhfManualFrequencyZzxzzz",
+    "description" : "UHF: Manual Frequency __X.___ - Cycle Up",
+    "label" : "Manual Frequency __X.___",
+    "type" : "button"
+  }, {
+    "id" : "UHF: Manual Frequency _X_.___",
+    "className" : "UhfManualFrequencyZxzzzz",
+    "description" : "UHF: Manual Frequency _X_.___ - Cycle Up",
+    "label" : "Manual Frequency _X_.___",
+    "type" : "button"
+  }, {
+    "id" : "UHF: A-3-2-T Rotary X__.___",
+    "className" : "UhfA32TRotaryXzzzzz",
+    "description" : "UHF: A-3-2-T Rotary X__.___ - Step Up",
+    "label" : "A-3-2-T Rotary X__.___",
+    "type" : "button"
+  }, {
+    "id" : "UHF: PRESET CHANNEL Knob",
+    "className" : "UhfPresetChannelKnob",
+    "description" : "UHF: PRESET CHANNEL Knob - Cycle Up",
+    "label" : "PRESET CHANNEL",
+    "type" : "button"
+  }, {
+    "id" : "AUDIO1: THREAT Knob",
+    "className" : "Audio1ThreatKnob",
+    "description" : "AUDIO1: THREAT Knob - Volume Incr.",
+    "label" : "THREAT",
+    "type" : "button"
+  }, {
+    "id" : "AUDIO1: COMM 2 Mode Knob",
+    "className" : "Audio1Comm2ModeKnob",
+    "description" : "AUDIO1: COMM 2 Mode Knob - SQL",
+    "label" : "COMM 2 Mode",
+    "type" : "switch"
+  }, {
+    "id" : "AUDIO1: COMM 1 Mode Knob",
+    "className" : "Audio1Comm1ModeKnob",
+    "description" : "AUDIO1: COMM 1 Mode Knob - SQL",
+    "label" : "COMM 1 Mode",
+    "type" : "switch"
+  }, {
+    "id" : "AUDIO1: MSL Knob",
+    "className" : "Audio1MslKnob",
+    "description" : "AUDIO1: MSL Knob - Volume Incr.",
+    "label" : "MSL",
+    "type" : "button"
+  }, {
+    "id" : "AUDIO1: COMM 2 Knob",
+    "className" : "Audio1Comm2Knob",
+    "description" : "AUDIO1: COMM 2 Knob - Volume Incr.",
+    "label" : "COMM 2",
+    "type" : "button"
+  }, {
+    "id" : "AUDIO1: COMM 1 Knob",
+    "className" : "Audio1Comm1Knob",
+    "description" : "AUDIO1: COMM 1 Knob - Volume Incr.",
+    "label" : "COMM 1",
+    "type" : "button"
+  }, {
+    "id" : "AUDIO2: ILS Knob",
+    "className" : "Audio2IlsKnob",
+    "description" : "AUDIO2: ILS Knob - ON",
+    "label" : "ILS",
+    "type" : "switch"
+  }, {
+    "id" : "AUDIO2: INTERCOM Knob",
+    "className" : "Audio2IntercomKnob",
+    "description" : "AUDIO2: INTERCOM Knob - Volume Incr.",
+    "label" : "INTERCOM",
+    "type" : "button"
+  }, {
+    "id" : "AUX: STATION SELECTOR Switch",
+    "className" : "AuxStationSelectorSwitch",
+    "description" : "AUX: STATION SELECTOR Switch - T/R",
+    "label" : "STATION SELECTOR",
+    "type" : "switch"
+  }, {
+    "id" : "AUX: CHANNEL",
+    "className" : "AuxChannel",
+    "description" : "AUX: CHANNEL - Cycle Up Left Digit",
+    "label" : "CHANNEL",
+    "type" : "button"
+  }, {
+    "id" : "AUX: CNI Knob Switch",
+    "className" : "AuxCniKnobSwitch",
+    "description" : "AUX: CNI Knob Switch - BACKUP",
+    "label" : "CNI Knob",
+    "type" : "switch"
+  }, {
+    "id" : "QTY: EXT FUEL TRANS Switch",
+    "className" : "QtyExtFuelTransSwitch",
+    "description" : "QTY: EXT FUEL TRANS Switch - NORM",
+    "label" : "EXT FUEL TRANS",
+    "type" : "switch"
+  }, {
+    "id" : "QTY: FUEL QTY SEL Knob",
+    "className" : "QtyFuelQtySelKnob",
+    "description" : "QTY: FUEL QTY SEL Knob - TEST",
+    "label" : "FUEL QTY SEL",
+    "type" : "switch"
+  }, {
+    "id" : "FUEL: AIR REFUEL Switch",
+    "className" : "FuelAirRefuelSwitch",
+    "description" : "FUEL: AIR REFUEL Switch - OPEN",
+    "label" : "AIR REFUEL",
+    "type" : "switch"
+  }, {
+    "id" : "FUEL: ENG FEED Knob",
+    "className" : "FuelEngFeedKnob",
+    "description" : "FUEL: ENG FEED Knob - OFF",
+    "label" : "ENG FEED",
+    "type" : "switch"
+  }, {
+    "id" : "FUEL: MASTER Switch",
+    "className" : "FuelMasterSwitch",
+    "description" : "FUEL: MASTER Switch - ON",
+    "label" : "MASTER",
+    "type" : "switch"
+  }, {
+    "id" : "TEST: FLCS PWR TEST Switch",
+    "className" : "TestFlcsPwrTestSwitch",
+    "description" : "TEST: FLCS PWR TEST Switch - Hold",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "TEST: EPU/GEN Switch",
+    "className" : "TestEpuGenSwitch",
+    "description" : "TEST: EPU/GEN Switch - Hold",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "TEST: PROBE HEAT Switch",
+    "className" : "TestProbeHeatSwitch",
+    "description" : "TEST: PROBE HEAT Switch - ON",
+    "label" : "PROBE HEAT",
+    "type" : "switch"
+  }, {
+    "id" : "TEST: MAL & IND LTS Button",
+    "className" : "TestMalIndLtsButton",
+    "description" : "TEST: MAL & IND LTS Button - Hold",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "TEST: OXY QTY Switch",
+    "className" : "TestOxyQtySwitch",
+    "description" : "TEST: OXY QTY Switch - Hold",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "TEST: FIRE & OHEAT DETECT Button",
+    "className" : "TestFireOheatDetectButton",
+    "description" : "TEST: FIRE & OHEAT DETECT Button - Hold",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "LIGHT: CONSOLES Knob (Flood)",
+    "className" : "LightConsolesKnobFlood",
+    "description" : "LIGHT: CONSOLES Knob (Flood) - Step Up",
+    "label" : "CONSOLES Knob (Flood)",
+    "type" : "button"
+  }, {
+    "id" : "LIGHT: DED Knob (Primary)",
+    "className" : "LightDedKnobPrimary",
+    "description" : "LIGHT: DED Knob (Primary) - Step Up",
+    "label" : "DED Knob (Primary)",
+    "type" : "button"
+  }, {
+    "id" : "LIGHT: INST PNL Knob (Primary)",
+    "className" : "LightInstPnlKnobPrimary",
+    "description" : "LIGHT: INST PNL Knob (Primary) - Step Up",
+    "label" : "INST PNL Knob (Primary)",
+    "type" : "button"
+  }, {
+    "id" : "EXT: MASTER Switch",
+    "className" : "ExtMasterSwitch",
+    "description" : "EXT: MASTER Switch - NORM",
+    "label" : "MASTER",
+    "type" : "switch"
+  }, {
+    "id" : "EXT: WING/TAIL Switch",
+    "className" : "ExtWingTailSwitch",
+    "description" : "EXT: WING/TAIL Switch - BRT",
+    "label" : "WING/TAIL",
+    "type" : "switch"
+  }, {
+    "id" : "EXT: POSITION Switch",
+    "className" : "ExtPositionSwitch",
+    "description" : "EXT: POSITION Switch - FLASH",
+    "label" : "POSITION",
+    "type" : "switch"
+  }, {
+    "id" : "EXT: ANTI COLLISION Switch",
+    "className" : "ExtAntiCollisionSwitch",
+    "description" : "EXT: ANTI COLLISION Switch - ON",
+    "label" : "ANTI COLLISION",
+    "type" : "switch"
+  }, {
+    "id" : "MISC: RF Switch",
+    "className" : "MiscRfSwitch",
+    "description" : "MISC: RF Switch - NORM",
+    "label" : "RF",
+    "type" : "switch"
+  }, {
+    "id" : "SNSR: RDR ALT Switch",
+    "className" : "SnsrRdrAltSwitch",
+    "description" : "SNSR: RDR ALT Switch - ON",
+    "label" : "RDR ALT",
+    "type" : "switch"
+  }, {
+    "id" : "SNSR: FCR Switch",
+    "className" : "SnsrFcrSwitch",
+    "description" : "SNSR: FCR Switch - ON",
+    "label" : "FCR",
+    "type" : "switch"
+  }, {
+    "id" : "SNSR: RIGHT HDPT Switch",
+    "className" : "SnsrRightHdptSwitch",
+    "description" : "SNSR: RIGHT HDPT Switch - ON",
+    "label" : "RIGHT HDPT",
+    "type" : "switch"
+  }, {
+    "id" : "SNSR: LEFT HDPT Switch",
+    "className" : "SnsrLeftHdptSwitch",
+    "description" : "SNSR: LEFT HDPT Switch - ON",
+    "label" : "LEFT HDPT",
+    "type" : "switch"
+  }, {
+    "id" : "SEAT: EJECT Handle",
+    "className" : "SeatEjectHandle",
+    "description" : "SEAT: EJECT Handle - Hold For Eject",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "SEAT: Safety Lever",
+    "className" : "SeatSafetyLever",
+    "description" : "SEAT: Safety Lever - Armed",
+    "label" : "Safety Lever",
+    "type" : "button"
+  }, {
+    "id" : "LEFT WALL: CANOPY",
+    "className" : "LeftWallCanopy",
+    "description" : "LEFT WALL: CANOPY - Open",
+    "label" : "CANOPY",
+    "type" : "button"
+  }, {
+    "id" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+    "className" : "LeftWallSlapSwitchEcmPgrm5",
+    "description" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "MPO: MANUAL PITCH Switch",
+    "className" : "MpoManualPitchSwitch",
+    "description" : "MPO: MANUAL PITCH Switch - Hold",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "ENG: ENG CONT Switch",
+    "className" : "EngEngContSwitch",
+    "description" : "ENG: ENG CONT Switch - PRI",
+    "label" : "ENG CONT",
+    "type" : "switch"
+  }, {
+    "id" : "ENG: JFS Switch",
+    "className" : "EngJfsSwitch",
+    "description" : "ENG: JFS Switch - OFF",
+    "label" : "JFS",
+    "type" : "switch"
+  }, {
+    "id" : "ECM: OPR Switch",
+    "className" : "EcmOprSwitch",
+    "description" : "ECM: OPR Switch - OPR",
+    "label" : "OPR",
+    "type" : "switch"
+  }, {
+    "id" : "AVTR: AVTR Switch",
+    "className" : "AvtrAvtrSwitch",
+    "description" : "AVTR: AVTR Switch - Toggle ON / OFF",
+    "label" : "AVTR",
+    "type" : "button"
+  }, {
+    "id" : "ELEC: CAUTION RESET Button",
+    "className" : "ElecCautionResetButton",
+    "description" : "ELEC: CAUTION RESET Button - Push",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "ELEC: MAIN PWR Switch",
+    "className" : "ElecMainPwrSwitch",
+    "description" : "ELEC: MAIN PWR Switch - MAIN",
+    "label" : "MAIN PWR",
+    "type" : "switch"
+  }, {
+    "id" : "EPU: EPU Switch",
+    "className" : "EpuEpuSwitch",
+    "description" : "EPU: EPU Switch - ON",
+    "label" : "EPU",
+    "type" : "switch"
+  }, {
+    "id" : "TRIM: PITCH TRIM Wheel",
+    "className" : "TrimPitchTrimWheel",
+    "description" : "TRIM: PITCH TRIM Wheel - NOSE UP",
+    "label" : "PITCH TRIM",
+    "type" : "button"
+  }, {
+    "id" : "TRIM: YAW TRIM Knob",
+    "className" : "TrimYawTrimKnob",
+    "description" : "TRIM: YAW TRIM Knob - L",
+    "label" : "YAW TRIM",
+    "type" : "button"
+  }, {
+    "id" : "TRIM: TRIM/AP DISC Switch",
+    "className" : "TrimTrimApDiscSwitch",
+    "description" : "TRIM: TRIM/AP DISC Switch - DISC",
+    "label" : "TRIM/AP DISC",
+    "type" : "switch"
+  }, {
+    "id" : "TRIM: ROLL TRIM Wheel",
+    "className" : "TrimRollTrimWheel",
+    "description" : "TRIM: ROLL TRIM Wheel - L WING DN",
+    "label" : "ROLL TRIM",
+    "type" : "button"
+  }, {
+    "id" : "FLT: BIT Switch",
+    "className" : "FltBitSwitch",
+    "description" : "FLT: BIT Switch - Push",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "FLT: FLCS Switch",
+    "className" : "FltFlcsSwitch",
+    "description" : "FLT: FLCS Switch - Hold",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "FLT: LE FLAPS Switch",
+    "className" : "FltLeFlapsSwitch",
+    "description" : "FLT: LE FLAPS Switch - LOCK",
+    "label" : "LE FLAPS",
+    "type" : "switch"
+  }, {
+    "id" : "FLT: MANUAL TF FLYUP Switch",
+    "className" : "FltManualTfFlyupSwitch",
+    "description" : "FLT: MANUAL TF FLYUP Switch - DISABLE",
+    "label" : "MANUAL TF FLYUP",
+    "type" : "switch"
+  }, {
+    "id" : "FLT: ALT FLAPS Switch",
+    "className" : "FltAltFlapsSwitch",
+    "description" : "FLT: ALT FLAPS Switch - EXTEND",
+    "label" : "ALT FLAPS",
+    "type" : "switch"
+  }, {
+    "id" : "FLT: DIGITAL Switch",
+    "className" : "FltDigitalSwitch",
+    "description" : "FLT: DIGITAL Switch - BACKUP",
+    "label" : "DIGITAL",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: LIGHTS Switch",
+    "className" : "GearLightsSwitch",
+    "description" : "GEAR: LIGHTS Switch - LANDING",
+    "label" : "LIGHTS",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: HORN SILENCER Button",
+    "className" : "GearHornSilencerButton",
+    "description" : "GEAR: HORN SILENCER Button - Push",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "GEAR: STORES CONFIG Switch",
+    "className" : "GearStoresConfigSwitch",
+    "description" : "GEAR: STORES CONFIG Switch - CAT I",
+    "label" : "STORES CONFIG",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: LG Handle",
+    "className" : "GearLgHandle",
+    "description" : "GEAR: LG Handle - UP",
+    "label" : "LG",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: PARKING BREAK Switch",
+    "className" : "GearParkingBreakSwitch",
+    "description" : "GEAR: PARKING BREAK Switch - ON",
+    "label" : "PARKING BREAK",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: GND JETT Switch",
+    "className" : "GearGndJettSwitch",
+    "description" : "GEAR: GND JETT Switch - ENABLE",
+    "label" : "GND JETT",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: HOOK Switch",
+    "className" : "GearHookSwitch",
+    "description" : "GEAR: HOOK Switch - UP",
+    "label" : "HOOK",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: EMER STORES JETTISON Button",
+    "className" : "GearEmerStoresJettisonButton",
+    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
+    "label" : null,
+    "type" : "button"
+  }, {
     "id" : "HMCS: HMSC Knob",
     "className" : "HmcsHmscKnob",
     "description" : "HMCS: HMSC Knob - Brightness Incr.",
     "label" : "HMSC",
-    "type" : "button"
-  }, {
-    "id" : "TWA: POWER Button",
-    "className" : "TwaPowerButton",
-    "description" : "TWA: POWER Button - On",
-    "label" : "POWER",
     "type" : "button"
   }, {
     "id" : "ALT GEAR: Reset Button",
@@ -661,18 +799,6 @@
     "description" : "ALT GEAR: Extend Gear Handle - Push",
     "label" : null,
     "type" : "button"
-  }, {
-    "id" : "QTY: EXT FUEL TRANS Switch",
-    "className" : "QtyExtFuelTransSwitch",
-    "description" : "QTY: EXT FUEL TRANS Switch - NORM",
-    "label" : "EXT FUEL TRANS",
-    "type" : "switch"
-  }, {
-    "id" : "QTY: FUEL QTY SEL Knob",
-    "className" : "QtyFuelQtySelKnob",
-    "description" : "QTY: FUEL QTY SEL Knob - TEST",
-    "label" : "FUEL QTY SEL",
-    "type" : "switch"
   }, {
     "id" : "INSTR: MODE Knob",
     "className" : "InstrModeKnob",
@@ -696,36 +822,6 @@
     "className" : "MainHsiHdgKnob",
     "description" : "MAIN: HSI HDG Knob - Increase (5°)",
     "label" : "HSI HDG",
-    "type" : "button"
-  }, {
-    "id" : "RWR: Brightness Knob",
-    "className" : "RwrBrightnessKnob",
-    "description" : "RWR: Brightness Knob - Increase",
-    "label" : "Brightness",
-    "type" : "button"
-  }, {
-    "id" : "TWP: TGT SEP",
-    "className" : "TwpTgtSep",
-    "description" : "TWP: TGT SEP - Push",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "TWP: SYS TEST",
-    "className" : "TwpSysTest",
-    "description" : "TWP: SYS TEST - Push",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "TWP: MISSILE LAUNCH",
-    "className" : "TwpMissileLaunch",
-    "description" : "TWP: MISSILE LAUNCH - Push",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "TWP: HANDOFF",
-    "className" : "TwpHandoff",
-    "description" : "TWP: HANDOFF - Push",
-    "label" : null,
     "type" : "button"
   }, {
     "id" : "EYE: F ACK Button",
@@ -768,12 +864,6 @@
     "className" : "MiscLaserSwitch",
     "description" : "MISC: LASER Switch - ARM",
     "label" : "LASER",
-    "type" : "switch"
-  }, {
-    "id" : "MISC: RF Switch",
-    "className" : "MiscRfSwitch",
-    "description" : "MISC: RF Switch - NORM",
-    "label" : "RF",
     "type" : "switch"
   }, {
     "id" : "OXY: Setting 2",
@@ -836,24 +926,6 @@
     "label" : "AIR SOURCE",
     "type" : "switch"
   }, {
-    "id" : "LIGHT: CONSOLES Knob (Flood)",
-    "className" : "LightConsolesKnobFlood",
-    "description" : "LIGHT: CONSOLES Knob (Flood) - Step Up",
-    "label" : "CONSOLES Knob (Flood)",
-    "type" : "button"
-  }, {
-    "id" : "LIGHT: DED Knob (Primary)",
-    "className" : "LightDedKnobPrimary",
-    "description" : "LIGHT: DED Knob (Primary) - Step Up",
-    "label" : "DED Knob (Primary)",
-    "type" : "button"
-  }, {
-    "id" : "LIGHT: INST PNL Knob (Primary)",
-    "className" : "LightInstPnlKnobPrimary",
-    "description" : "LIGHT: INST PNL Knob (Primary) - Step Up",
-    "label" : "INST PNL Knob (Primary)",
-    "type" : "button"
-  }, {
     "id" : "HUD: Brightness Switch",
     "className" : "HudBrightnessSwitch",
     "description" : "HUD: Brightness Switch - DAY",
@@ -894,30 +966,6 @@
     "className" : "HudScalesSwitch",
     "description" : "HUD: Scales Switch - VV/VAH",
     "label" : "Scales",
-    "type" : "switch"
-  }, {
-    "id" : "SNSR: RDR ALT Switch",
-    "className" : "SnsrRdrAltSwitch",
-    "description" : "SNSR: RDR ALT Switch - ON",
-    "label" : "RDR ALT",
-    "type" : "switch"
-  }, {
-    "id" : "SNSR: FCR Switch",
-    "className" : "SnsrFcrSwitch",
-    "description" : "SNSR: FCR Switch - ON",
-    "label" : "FCR",
-    "type" : "switch"
-  }, {
-    "id" : "SNSR: RIGHT HDPT Switch",
-    "className" : "SnsrRightHdptSwitch",
-    "description" : "SNSR: RIGHT HDPT Switch - ON",
-    "label" : "RIGHT HDPT",
-    "type" : "switch"
-  }, {
-    "id" : "SNSR: LEFT HDPT Switch",
-    "className" : "SnsrLeftHdptSwitch",
-    "description" : "SNSR: LEFT HDPT Switch - ON",
-    "label" : "LEFT HDPT",
     "type" : "switch"
   }, {
     "id" : "SIM: Toggle Exit Sim Menu",
@@ -1083,796 +1131,76 @@
     "type" : "button"
   } ],
   "controls" : [ {
-    "id" : "seatejecthandleholdforeject",
-    "className" : "SeatEjectHandleHoldForEject",
-    "description" : "SEAT: EJECT Handle - Hold For Eject",
-    "label" : "EJECT",
-    "role" : "none"
-  }, {
-    "id" : "seatsafetyleverarmed",
-    "className" : "SeatSafetyLeverArmed",
-    "description" : "SEAT: Safety Lever - Armed",
-    "label" : "Armed",
-    "role" : "none"
-  }, {
-    "id" : "seatsafetyleverlocked",
-    "className" : "SeatSafetyLeverLocked",
-    "description" : "SEAT: Safety Lever - Locked",
-    "label" : "Locked",
-    "role" : "none"
-  }, {
-    "id" : "leftwallcanopyopen",
-    "className" : "LeftWallCanopyOpen",
-    "description" : "LEFT WALL: CANOPY - Open",
-    "label" : "Open",
-    "role" : "none"
-  }, {
-    "id" : "leftwallcanopyclose",
-    "className" : "LeftWallCanopyClose",
-    "description" : "LEFT WALL: CANOPY - Close",
-    "label" : "Close",
-    "role" : "none"
-  }, {
-    "id" : "leftwallslapswitchecmpgrm5",
-    "className" : "LeftWallSlapSwitchEcmPgrm5",
-    "description" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-    "label" : "SLAP Switch (ECM-PGRM # 5)",
-    "role" : "none"
-  }, {
-    "id" : "uhfmodeknobmnl",
-    "className" : "UhfModeKnobMnl",
-    "description" : "UHF: MODE Knob - MNL",
-    "label" : "MNL",
-    "role" : "none"
-  }, {
-    "id" : "uhfmodeknobpreset",
-    "className" : "UhfModeKnobPreset",
-    "description" : "UHF: MODE Knob - PRESET",
-    "label" : "PRESET",
-    "role" : "none"
-  }, {
-    "id" : "uhfmodeknobgrd",
-    "className" : "UhfModeKnobGrd",
-    "description" : "UHF: MODE Knob - GRD",
-    "label" : "GRD",
-    "role" : "none"
-  }, {
-    "id" : "uhfvolknobaivsivcvolumeincr",
-    "className" : "UhfVolKnobAiVsIvcVolumeIncr",
-    "description" : "UHF: VOL Knob - AI vs IVC Volume Incr",
-    "label" : "AI vs IVC Volume Incr",
-    "role" : "none"
-  }, {
-    "id" : "uhfvolknobaivsivcvolumedecr",
-    "className" : "UhfVolKnobAiVsIvcVolumeDecr",
-    "description" : "UHF: VOL Knob - AI vs IVC Volume Decr",
-    "label" : "AI vs IVC Volume Decr",
-    "role" : "none"
-  }, {
-    "id" : "uhffunctionknoboff",
-    "className" : "UhfFunctionKnobOff",
-    "description" : "UHF: FUNCTION Knob - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "uhffunctionknobmain",
-    "className" : "UhfFunctionKnobMain",
-    "description" : "UHF: FUNCTION Knob - MAIN",
-    "label" : "MAIN",
-    "role" : "on"
-  }, {
-    "id" : "uhffunctionknobboth",
-    "className" : "UhfFunctionKnobBoth",
-    "description" : "UHF: FUNCTION Knob - BOTH",
-    "label" : "BOTH",
-    "role" : "none"
-  }, {
-    "id" : "uhfmanualfrequencyxxcycleup",
-    "className" : "UhfManualFrequencyZzzzxxCycleUp",
-    "description" : "UHF: Manual Frequency ___._XX - Cycle Up",
-    "label" : "Cycle Up",
+    "id" : "rwrbrightnessknobincrease",
+    "className" : "RwrBrightnessKnobIncrease",
+    "description" : "RWR: Brightness Knob - Increase",
+    "label" : "Increase",
     "role" : "up"
   }, {
-    "id" : "uhfmanualfrequencyxxcycledown",
-    "className" : "UhfManualFrequencyZzzzxxCycleDown",
-    "description" : "UHF: Manual Frequency ___._XX - Cycle Down",
-    "label" : "Cycle Down",
+    "id" : "rwrbrightnessknobdecrease",
+    "className" : "RwrBrightnessKnobDecrease",
+    "description" : "RWR: Brightness Knob - Decrease",
+    "label" : "Decrease",
     "role" : "down"
   }, {
-    "id" : "uhfmanualfrequencyxcycleup",
-    "className" : "UhfManualFrequencyZzzxzzCycleUp",
-    "description" : "UHF: Manual Frequency ___.X__ - Cycle Up",
-    "label" : "Cycle Up",
-    "role" : "up"
-  }, {
-    "id" : "uhfmanualfrequencyxcycledown",
-    "className" : "UhfManualFrequencyZzzxzzCycleDown",
-    "description" : "UHF: Manual Frequency ___.X__ - Cycle Down",
-    "label" : "Cycle Down",
-    "role" : "down"
-  }, {
-    "id" : "uhfmanualfrequencyxcycleup",
-    "className" : "UhfManualFrequencyZzxzzzCycleUp",
-    "description" : "UHF: Manual Frequency __X.___ - Cycle Up",
-    "label" : "Cycle Up",
-    "role" : "up"
-  }, {
-    "id" : "uhfmanualfrequencyxcycledown",
-    "className" : "UhfManualFrequencyZzxzzzCycleDown",
-    "description" : "UHF: Manual Frequency __X.___ - Cycle Down",
-    "label" : "Cycle Down",
-    "role" : "down"
-  }, {
-    "id" : "uhfmanualfrequencyxcycleup",
-    "className" : "UhfManualFrequencyZxzzzzCycleUp",
-    "description" : "UHF: Manual Frequency _X_.___ - Cycle Up",
-    "label" : "Cycle Up",
-    "role" : "up"
-  }, {
-    "id" : "uhfmanualfrequencyxcycledown",
-    "className" : "UhfManualFrequencyZxzzzzCycleDown",
-    "description" : "UHF: Manual Frequency _X_.___ - Cycle Down",
-    "label" : "Cycle Down",
-    "role" : "down"
-  }, {
-    "id" : "uhfa32trotaryxstepup",
-    "className" : "UhfA32TRotaryXzzzzzStepUp",
-    "description" : "UHF: A-3-2-T Rotary X__.___ - Step Up",
-    "label" : "Step Up",
-    "role" : "up"
-  }, {
-    "id" : "uhfa32trotaryxstepdown",
-    "className" : "UhfA32TRotaryXzzzzzStepDown",
-    "description" : "UHF: A-3-2-T Rotary X__.___ - Step Down",
-    "label" : "Step Down",
-    "role" : "down"
-  }, {
-    "id" : "uhfpresetchannelknobcycleup",
-    "className" : "UhfPresetChannelKnobCycleUp",
-    "description" : "UHF: PRESET CHANNEL Knob - Cycle Up",
-    "label" : "Cycle Up",
-    "role" : "up"
-  }, {
-    "id" : "uhfpresetchannelknobcycledown",
-    "className" : "UhfPresetChannelKnobCycleDown",
-    "description" : "UHF: PRESET CHANNEL Knob - Cycle Down",
-    "label" : "Cycle Down",
-    "role" : "down"
-  }, {
-    "id" : "mpomanualpitchswitchhold",
-    "className" : "MpoManualPitchSwitchHold",
-    "description" : "MPO: MANUAL PITCH Switch - Hold",
-    "label" : "MANUAL PITCH",
+    "id" : "twptgtseppush",
+    "className" : "TwpTgtSepPush",
+    "description" : "TWP: TGT SEP - Push",
+    "label" : "TGT SEP",
     "role" : "none"
   }, {
-    "id" : "audio1threatknobvolumeincr",
-    "className" : "Audio1ThreatKnobVolumeIncr",
-    "description" : "AUDIO1: THREAT Knob - Volume Incr.",
-    "label" : "Volume Incr.",
-    "role" : "up"
-  }, {
-    "id" : "audio1threatknobvolumedecr",
-    "className" : "Audio1ThreatKnobVolumeDecr",
-    "description" : "AUDIO1: THREAT Knob - Volume Decr.",
-    "label" : "Volume Decr.",
-    "role" : "down"
-  }, {
-    "id" : "audio1comm2modeknobsql",
-    "className" : "Audio1Comm2ModeKnobSql",
-    "description" : "AUDIO1: COMM 2 Mode Knob - SQL",
-    "label" : "SQL",
+    "id" : "twpsystestpush",
+    "className" : "TwpSysTestPush",
+    "description" : "TWP: SYS TEST - Push",
+    "label" : "SYS TEST",
     "role" : "none"
   }, {
-    "id" : "audio1comm2modeknobgd",
-    "className" : "Audio1Comm2ModeKnobGd",
-    "description" : "AUDIO1: COMM 2 Mode Knob - GD",
-    "label" : "GD",
+    "id" : "twpunknowntoggle",
+    "className" : "TwpUnknownToggle",
+    "description" : "TWP: UNKNOWN - Toggle",
+    "label" : "UNKNOWN",
     "role" : "none"
   }, {
-    "id" : "audio1comm1modeknobsql",
-    "className" : "Audio1Comm1ModeKnobSql",
-    "description" : "AUDIO1: COMM 1 Mode Knob - SQL",
-    "label" : "SQL",
+    "id" : "twpprioritymodetoggle",
+    "className" : "TwpPriorityModeToggle",
+    "description" : "TWP: PRIORITY MODE - Toggle",
+    "label" : "PRIORITY MODE",
     "role" : "none"
   }, {
-    "id" : "audio1comm1modeknobgd",
-    "className" : "Audio1Comm1ModeKnobGd",
-    "description" : "AUDIO1: COMM 1 Mode Knob - GD",
-    "label" : "GD",
+    "id" : "twpmissilelaunchpush",
+    "className" : "TwpMissileLaunchPush",
+    "description" : "TWP: MISSILE LAUNCH - Push",
+    "label" : "MISSILE LAUNCH",
     "role" : "none"
   }, {
-    "id" : "audio1mslknobvolumeincr",
-    "className" : "Audio1MslKnobVolumeIncr",
-    "description" : "AUDIO1: MSL Knob - Volume Incr.",
-    "label" : "Volume Incr.",
-    "role" : "up"
+    "id" : "twphandoffpush",
+    "className" : "TwpHandoffPush",
+    "description" : "TWP: HANDOFF - Push",
+    "label" : "HANDOFF",
+    "role" : "none"
   }, {
-    "id" : "audio1mslknobvolumedecr",
-    "className" : "Audio1MslKnobVolumeDecr",
-    "description" : "AUDIO1: MSL Knob - Volume Decr.",
-    "label" : "Volume Decr.",
-    "role" : "down"
-  }, {
-    "id" : "audio1comm2knobvolumeincr",
-    "className" : "Audio1Comm2KnobVolumeIncr",
-    "description" : "AUDIO1: COMM 2 Knob - Volume Incr.",
-    "label" : "Volume Incr.",
-    "role" : "up"
-  }, {
-    "id" : "audio1comm2knobvolumedecr",
-    "className" : "Audio1Comm2KnobVolumeDecr",
-    "description" : "AUDIO1: COMM 2 Knob - Volume Decr.",
-    "label" : "Volume Decr.",
-    "role" : "down"
-  }, {
-    "id" : "audio1comm2knobpoweron",
-    "className" : "Audio1Comm2KnobPowerOn",
-    "description" : "AUDIO1: COMM 2 Knob - Power On",
-    "label" : "Power On",
+    "id" : "twapowerbuttonon",
+    "className" : "TwaPowerButtonOn",
+    "description" : "TWA: POWER Button - On",
+    "label" : "On",
     "role" : "on"
   }, {
-    "id" : "audio1comm2knobpoweroff",
-    "className" : "Audio1Comm2KnobPowerOff",
-    "description" : "AUDIO1: COMM 2 Knob - Power Off",
-    "label" : "Power Off",
+    "id" : "twapowerbuttonoff",
+    "className" : "TwaPowerButtonOff",
+    "description" : "TWA: POWER Button - Off",
+    "label" : "Off",
     "role" : "off"
   }, {
-    "id" : "audio1comm1knobvolumeincr",
-    "className" : "Audio1Comm1KnobVolumeIncr",
-    "description" : "AUDIO1: COMM 1 Knob - Volume Incr.",
-    "label" : "Volume Incr.",
-    "role" : "up"
-  }, {
-    "id" : "audio1comm1knobvolumedecr",
-    "className" : "Audio1Comm1KnobVolumeDecr",
-    "description" : "AUDIO1: COMM 1 Knob - Volume Decr.",
-    "label" : "Volume Decr.",
-    "role" : "down"
-  }, {
-    "id" : "audio1comm1knobpoweron",
-    "className" : "Audio1Comm1KnobPowerOn",
-    "description" : "AUDIO1: COMM 1 Knob - Power On",
-    "label" : "Power On",
-    "role" : "on"
-  }, {
-    "id" : "audio1comm1knobpoweroff",
-    "className" : "Audio1Comm1KnobPowerOff",
-    "description" : "AUDIO1: COMM 1 Knob - Power Off",
-    "label" : "Power Off",
-    "role" : "off"
-  }, {
-    "id" : "audio2ilsknobon",
-    "className" : "Audio2IlsKnobOn",
-    "description" : "AUDIO2: ILS Knob - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "audio2ilsknoboff",
-    "className" : "Audio2IlsKnobOff",
-    "description" : "AUDIO2: ILS Knob - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "audio2intercomknobvolumeincr",
-    "className" : "Audio2IntercomKnobVolumeIncr",
-    "description" : "AUDIO2: INTERCOM Knob - Volume Incr.",
-    "label" : "Volume Incr.",
-    "role" : "up"
-  }, {
-    "id" : "audio2intercomknobvolumedecr",
-    "className" : "Audio2IntercomKnobVolumeDecr",
-    "description" : "AUDIO2: INTERCOM Knob - Volume Decr.",
-    "label" : "Volume Decr.",
-    "role" : "down"
-  }, {
-    "id" : "engengcontswitchpri",
-    "className" : "EngEngContSwitchPri",
-    "description" : "ENG: ENG CONT Switch - PRI",
-    "label" : "PRI",
+    "id" : "twasearchbuttontoggle",
+    "className" : "TwaSearchButtonToggle",
+    "description" : "TWA: SEARCH Button - Toggle",
+    "label" : "SEARCH",
     "role" : "none"
   }, {
-    "id" : "engengcontswitchsec",
-    "className" : "EngEngContSwitchSec",
-    "description" : "ENG: ENG CONT Switch - SEC",
-    "label" : "SEC",
-    "role" : "none"
-  }, {
-    "id" : "engjfsswitchoff",
-    "className" : "EngJfsSwitchOff",
-    "description" : "ENG: JFS Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "engjfsswitchstart2",
-    "className" : "EngJfsSwitchStart2",
-    "description" : "ENG: JFS Switch - START 2",
-    "label" : "START 2",
-    "role" : "none"
-  }, {
-    "id" : "ecmoprswitchopr",
-    "className" : "EcmOprSwitchOpr",
-    "description" : "ECM: OPR Switch - OPR",
-    "label" : "OPR",
-    "role" : "on"
-  }, {
-    "id" : "ecmoprswitchoff",
-    "className" : "EcmOprSwitchOff",
-    "description" : "ECM: OPR Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "avtravtrswitchtoggleonoff",
-    "className" : "AvtrAvtrSwitchToggleOnOff",
-    "description" : "AVTR: AVTR Switch - Toggle ON / OFF",
-    "label" : "Toggle ON / OFF",
-    "role" : "off"
-  }, {
-    "id" : "avtravtrswitchon",
-    "className" : "AvtrAvtrSwitchOn",
-    "description" : "AVTR: AVTR Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "avtravtrswitchauto",
-    "className" : "AvtrAvtrSwitchAuto",
-    "description" : "AVTR: AVTR Switch - AUTO",
-    "label" : "AUTO",
-    "role" : "none"
-  }, {
-    "id" : "avtravtrswitchoff",
-    "className" : "AvtrAvtrSwitchOff",
-    "description" : "AVTR: AVTR Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "eleccautionresetbuttonpush",
-    "className" : "ElecCautionResetButtonPush",
-    "description" : "ELEC: CAUTION RESET Button - Push",
-    "label" : "CAUTION RESET",
-    "role" : "none"
-  }, {
-    "id" : "elecmainpwrswitchmain",
-    "className" : "ElecMainPwrSwitchMain",
-    "description" : "ELEC: MAIN PWR Switch - MAIN",
-    "label" : "MAIN",
-    "role" : "on"
-  }, {
-    "id" : "elecmainpwrswitchbatt",
-    "className" : "ElecMainPwrSwitchBatt",
-    "description" : "ELEC: MAIN PWR Switch - BATT",
-    "label" : "BATT",
-    "role" : "none"
-  }, {
-    "id" : "elecmainpwrswitchoff",
-    "className" : "ElecMainPwrSwitchOff",
-    "description" : "ELEC: MAIN PWR Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "epuepuswitchon",
-    "className" : "EpuEpuSwitchOn",
-    "description" : "EPU: EPU Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "epuepuswitchnorm",
-    "className" : "EpuEpuSwitchNorm",
-    "description" : "EPU: EPU Switch - NORM",
-    "label" : "NORM",
-    "role" : "on"
-  }, {
-    "id" : "epuepuswitchoff",
-    "className" : "EpuEpuSwitchOff",
-    "description" : "EPU: EPU Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "extmasterswitchnorm",
-    "className" : "ExtMasterSwitchNorm",
-    "description" : "EXT: MASTER Switch - NORM",
-    "label" : "NORM",
-    "role" : "on"
-  }, {
-    "id" : "extmasterswitchoff",
-    "className" : "ExtMasterSwitchOff",
-    "description" : "EXT: MASTER Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "extwingtailswitchbrt",
-    "className" : "ExtWingTailSwitchBrt",
-    "description" : "EXT: WING/TAIL Switch - BRT",
-    "label" : "BRT",
-    "role" : "none"
-  }, {
-    "id" : "extwingtailswitchoff",
-    "className" : "ExtWingTailSwitchOff",
-    "description" : "EXT: WING/TAIL Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "extpositionswitchflash",
-    "className" : "ExtPositionSwitchFlash",
-    "description" : "EXT: POSITION Switch - FLASH",
-    "label" : "FLASH",
-    "role" : "none"
-  }, {
-    "id" : "extpositionswitchsteady",
-    "className" : "ExtPositionSwitchSteady",
-    "description" : "EXT: POSITION Switch - STEADY",
-    "label" : "STEADY",
-    "role" : "none"
-  }, {
-    "id" : "extanticollisionswitchon",
-    "className" : "ExtAntiCollisionSwitchOn",
-    "description" : "EXT: ANTI COLLISION Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "extanticollisionswitchoff",
-    "className" : "ExtAntiCollisionSwitchOff",
-    "description" : "EXT: ANTI COLLISION Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "auxstationselectorswitchtr",
-    "className" : "AuxStationSelectorSwitchTR",
-    "description" : "AUX: STATION SELECTOR Switch - T/R",
-    "label" : "T/R",
-    "role" : "none"
-  }, {
-    "id" : "auxstationselectorswitchaatr",
-    "className" : "AuxStationSelectorSwitchAATr",
-    "description" : "AUX: STATION SELECTOR Switch - A/A TR",
-    "label" : "A/A TR",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycleupleftdigit",
-    "className" : "AuxChannelCycleUpLeftDigit",
-    "description" : "AUX: CHANNEL - Cycle Up Left Digit",
-    "label" : "Cycle Up Left Digit",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycledownleftdigit",
-    "className" : "AuxChannelCycleDownLeftDigit",
-    "description" : "AUX: CHANNEL - Cycle Down Left Digit",
-    "label" : "Cycle Down Left Digit",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycleupcenterdigit",
-    "className" : "AuxChannelCycleUpCenterDigit",
-    "description" : "AUX: CHANNEL - Cycle Up Center Digit",
-    "label" : "Cycle Up Center Digit",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycledowncenterdig",
-    "className" : "AuxChannelCycleDownCenterDig",
-    "description" : "AUX: CHANNEL - Cycle Down Center Dig.",
-    "label" : "Cycle Down Center Dig.",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycleuprightdigit",
-    "className" : "AuxChannelCycleUpRightDigit",
-    "description" : "AUX: CHANNEL - Cycle Up Right Digit",
-    "label" : "Cycle Up Right Digit",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycledownrightdigit",
-    "className" : "AuxChannelCycleDownRightDigit",
-    "description" : "AUX: CHANNEL - Cycle Down Right Digit",
-    "label" : "Cycle Down Right Digit",
-    "role" : "none"
-  }, {
-    "id" : "auxchanneltogglebandx",
-    "className" : "AuxChannelToggleBandX",
-    "description" : "AUX: CHANNEL - Toggle Band X",
-    "label" : "Toggle Band X",
-    "role" : "none"
-  }, {
-    "id" : "auxchanneltogglebandy",
-    "className" : "AuxChannelToggleBandY",
-    "description" : "AUX: CHANNEL - Toggle Band Y",
-    "label" : "Toggle Band Y",
-    "role" : "none"
-  }, {
-    "id" : "auxcniknobswitchbackup",
-    "className" : "AuxCniKnobSwitchBackup",
-    "description" : "AUX: CNI Knob Switch - BACKUP",
-    "label" : "BACKUP",
-    "role" : "none"
-  }, {
-    "id" : "auxcniknobswitchufc",
-    "className" : "AuxCniKnobSwitchUfc",
-    "description" : "AUX: CNI Knob Switch - UFC",
-    "label" : "UFC",
-    "role" : "none"
-  }, {
-    "id" : "fuelairrefuelswitchopen",
-    "className" : "FuelAirRefuelSwitchOpen",
-    "description" : "FUEL: AIR REFUEL Switch - OPEN",
-    "label" : "OPEN",
-    "role" : "on"
-  }, {
-    "id" : "fuelairrefuelswitchclose",
-    "className" : "FuelAirRefuelSwitchClose",
-    "description" : "FUEL: AIR REFUEL Switch - CLOSE",
-    "label" : "CLOSE",
-    "role" : "off"
-  }, {
-    "id" : "fuelengfeedknoboff",
-    "className" : "FuelEngFeedKnobOff",
-    "description" : "FUEL: ENG FEED Knob - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "fuelengfeedknobnorm",
-    "className" : "FuelEngFeedKnobNorm",
-    "description" : "FUEL: ENG FEED Knob - NORM",
-    "label" : "NORM",
-    "role" : "on"
-  }, {
-    "id" : "fuelengfeedknobaft",
-    "className" : "FuelEngFeedKnobAft",
-    "description" : "FUEL: ENG FEED Knob - AFT",
-    "label" : "AFT",
-    "role" : "none"
-  }, {
-    "id" : "fuelengfeedknobfwd",
-    "className" : "FuelEngFeedKnobFwd",
-    "description" : "FUEL: ENG FEED Knob - FWD",
-    "label" : "FWD",
-    "role" : "none"
-  }, {
-    "id" : "fuelmasterswitchon",
-    "className" : "FuelMasterSwitchOn",
-    "description" : "FUEL: MASTER Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "fuelmasterswitchoff",
-    "className" : "FuelMasterSwitchOff",
-    "description" : "FUEL: MASTER Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "trimpitchtrimwheelnoseup",
-    "className" : "TrimPitchTrimWheelNoseUp",
-    "description" : "TRIM: PITCH TRIM Wheel - NOSE UP",
-    "label" : "NOSE UP",
-    "role" : "up"
-  }, {
-    "id" : "trimpitchtrimwheelnosedn",
-    "className" : "TrimPitchTrimWheelNoseDn",
-    "description" : "TRIM: PITCH TRIM Wheel - NOSE DN",
-    "label" : "NOSE DN",
-    "role" : "down"
-  }, {
-    "id" : "trimyawtrimknobl",
-    "className" : "TrimYawTrimKnobL",
-    "description" : "TRIM: YAW TRIM Knob - L",
-    "label" : "L",
-    "role" : "left"
-  }, {
-    "id" : "trimyawtrimknobr",
-    "className" : "TrimYawTrimKnobR",
-    "description" : "TRIM: YAW TRIM Knob - R",
-    "label" : "R",
-    "role" : "right"
-  }, {
-    "id" : "trimtrimapdiscswitchdisc",
-    "className" : "TrimTrimApDiscSwitchDisc",
-    "description" : "TRIM: TRIM/AP DISC Switch - DISC",
-    "label" : "DISC",
-    "role" : "none"
-  }, {
-    "id" : "trimtrimapdiscswitchnorm",
-    "className" : "TrimTrimApDiscSwitchNorm",
-    "description" : "TRIM: TRIM/AP DISC Switch - NORM",
-    "label" : "NORM",
-    "role" : "on"
-  }, {
-    "id" : "trimrolltrimwheellwingdn",
-    "className" : "TrimRollTrimWheelLWingDn",
-    "description" : "TRIM: ROLL TRIM Wheel - L WING DN",
-    "label" : "L WING DN",
-    "role" : "down"
-  }, {
-    "id" : "trimrolltrimwheelrwingdn",
-    "className" : "TrimRollTrimWheelRWingDn",
-    "description" : "TRIM: ROLL TRIM Wheel - R WING DN",
-    "label" : "R WING DN",
-    "role" : "down"
-  }, {
-    "id" : "fltbitswitchpush",
-    "className" : "FltBitSwitchPush",
-    "description" : "FLT: BIT Switch - Push",
-    "label" : "BIT",
-    "role" : "none"
-  }, {
-    "id" : "fltflcsswitchhold",
-    "className" : "FltFlcsSwitchHold",
-    "description" : "FLT: FLCS Switch - Hold",
-    "label" : "FLCS",
-    "role" : "none"
-  }, {
-    "id" : "fltleflapsswitchlock",
-    "className" : "FltLeFlapsSwitchLock",
-    "description" : "FLT: LE FLAPS Switch - LOCK",
-    "label" : "LOCK",
-    "role" : "none"
-  }, {
-    "id" : "fltleflapsswitchauto",
-    "className" : "FltLeFlapsSwitchAuto",
-    "description" : "FLT: LE FLAPS Switch - AUTO",
-    "label" : "AUTO",
-    "role" : "none"
-  }, {
-    "id" : "fltmanualtfflyupswitchdisable",
-    "className" : "FltManualTfFlyupSwitchDisable",
-    "description" : "FLT: MANUAL TF FLYUP Switch - DISABLE",
-    "label" : "DISABLE",
-    "role" : "off"
-  }, {
-    "id" : "fltmanualtfflyupswitchenable",
-    "className" : "FltManualTfFlyupSwitchEnable",
-    "description" : "FLT: MANUAL TF FLYUP Switch - ENABLE",
-    "label" : "ENABLE",
-    "role" : "on"
-  }, {
-    "id" : "fltaltflapsswitchextend",
-    "className" : "FltAltFlapsSwitchExtend",
-    "description" : "FLT: ALT FLAPS Switch - EXTEND",
-    "label" : "EXTEND",
-    "role" : "none"
-  }, {
-    "id" : "fltaltflapsswitchnorm",
-    "className" : "FltAltFlapsSwitchNorm",
-    "description" : "FLT: ALT FLAPS Switch - NORM",
-    "label" : "NORM",
-    "role" : "on"
-  }, {
-    "id" : "fltdigitalswitchbackup",
-    "className" : "FltDigitalSwitchBackup",
-    "description" : "FLT: DIGITAL Switch - BACKUP",
-    "label" : "BACKUP",
-    "role" : "none"
-  }, {
-    "id" : "fltdigitalswitchoff",
-    "className" : "FltDigitalSwitchOff",
-    "description" : "FLT: DIGITAL Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "testflcspwrtestswitchhold",
-    "className" : "TestFlcsPwrTestSwitchHold",
-    "description" : "TEST: FLCS PWR TEST Switch - Hold",
-    "label" : "FLCS PWR TEST",
-    "role" : "none"
-  }, {
-    "id" : "testepugenswitchhold",
-    "className" : "TestEpuGenSwitchHold",
-    "description" : "TEST: EPU/GEN Switch - Hold",
-    "label" : "EPU/GEN",
-    "role" : "none"
-  }, {
-    "id" : "testprobeheatswitchon",
-    "className" : "TestProbeHeatSwitchOn",
-    "description" : "TEST: PROBE HEAT Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "testprobeheatswitchoff",
-    "className" : "TestProbeHeatSwitchOff",
-    "description" : "TEST: PROBE HEAT Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "testprobeheatswitchtest",
-    "className" : "TestProbeHeatSwitchTest",
-    "description" : "TEST: PROBE HEAT Switch - TEST",
-    "label" : "TEST",
-    "role" : "none"
-  }, {
-    "id" : "testmalindltsbuttonhold",
-    "className" : "TestMalIndLtsButtonHold",
-    "description" : "TEST: MAL & IND LTS Button - Hold",
-    "label" : "MAL & IND LTS",
-    "role" : "none"
-  }, {
-    "id" : "testoxyqtyswitchhold",
-    "className" : "TestOxyQtySwitchHold",
-    "description" : "TEST: OXY QTY Switch - Hold",
-    "label" : "OXY QTY",
-    "role" : "none"
-  }, {
-    "id" : "testfireoheatdetectbuttonhold",
-    "className" : "TestFireOheatDetectButtonHold",
-    "description" : "TEST: FIRE & OHEAT DETECT Button - Hold",
-    "label" : "FIRE & OHEAT DETECT",
-    "role" : "none"
-  }, {
-    "id" : "gearlightsswitchlanding",
-    "className" : "GearLightsSwitchLanding",
-    "description" : "GEAR: LIGHTS Switch - LANDING",
-    "label" : "LANDING",
-    "role" : "none"
-  }, {
-    "id" : "gearlightsswitchoff",
-    "className" : "GearLightsSwitchOff",
-    "description" : "GEAR: LIGHTS Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "gearhornsilencerbuttonpush",
-    "className" : "GearHornSilencerButtonPush",
-    "description" : "GEAR: HORN SILENCER Button - Push",
-    "label" : "HORN SILENCER",
-    "role" : "none"
-  }, {
-    "id" : "gearstoresconfigswitchcati",
-    "className" : "GearStoresConfigSwitchCatI",
-    "description" : "GEAR: STORES CONFIG Switch - CAT I",
-    "label" : "CAT I",
-    "role" : "none"
-  }, {
-    "id" : "gearstoresconfigswitchcatiii",
-    "className" : "GearStoresConfigSwitchCatIii",
-    "description" : "GEAR: STORES CONFIG Switch - CAT III",
-    "label" : "CAT III",
-    "role" : "none"
-  }, {
-    "id" : "gearlghandleup",
-    "className" : "GearLgHandleUp",
-    "description" : "GEAR: LG Handle - UP",
-    "label" : "UP",
-    "role" : "up"
-  }, {
-    "id" : "gearlghandledn",
-    "className" : "GearLgHandleDn",
-    "description" : "GEAR: LG Handle - DN",
-    "label" : "DN",
-    "role" : "down"
-  }, {
-    "id" : "gearparkingbreakswitchon",
-    "className" : "GearParkingBreakSwitchOn",
-    "description" : "GEAR: PARKING BREAK Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "gearparkingbreakswitchoff",
-    "className" : "GearParkingBreakSwitchOff",
-    "description" : "GEAR: PARKING BREAK Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "geargndjettswitchenable",
-    "className" : "GearGndJettSwitchEnable",
-    "description" : "GEAR: GND JETT Switch - ENABLE",
-    "label" : "ENABLE",
-    "role" : "on"
-  }, {
-    "id" : "geargndjettswitchoff",
-    "className" : "GearGndJettSwitchOff",
-    "description" : "GEAR: GND JETT Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "gearhookswitchup",
-    "className" : "GearHookSwitchUp",
-    "description" : "GEAR: HOOK Switch - UP",
-    "label" : "UP",
-    "role" : "up"
-  }, {
-    "id" : "gearhookswitchdn",
-    "className" : "GearHookSwitchDn",
-    "description" : "GEAR: HOOK Switch - DN",
-    "label" : "DN",
-    "role" : "down"
-  }, {
-    "id" : "gearemerstoresjettisonbuttonhold",
-    "className" : "GearEmerStoresJettisonButtonHold",
-    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
-    "label" : "EMER STORES JETTISON",
+    "id" : "twalowbuttontoggle",
+    "className" : "TwaLowButtonToggle",
+    "description" : "TWA: LOW Button - Toggle",
+    "label" : "LOW",
     "role" : "none"
   }, {
     "id" : "cmdsmodeknoboff",
@@ -2031,52 +1359,316 @@
     "label" : "Power OFF",
     "role" : "off"
   }, {
-    "id" : "hmcshmscknobbrightnessincr",
-    "className" : "HmcsHmscKnobBrightnessIncr",
-    "description" : "HMCS: HMSC Knob - Brightness Incr.",
-    "label" : "Brightness Incr.",
-    "role" : "up"
+    "id" : "uhfmodeknobmnl",
+    "className" : "UhfModeKnobMnl",
+    "description" : "UHF: MODE Knob - MNL",
+    "label" : "MNL",
+    "role" : "none"
   }, {
-    "id" : "hmcshmscknobbrightnessdecr",
-    "className" : "HmcsHmscKnobBrightnessDecr",
-    "description" : "HMCS: HMSC Knob - Brightness Decr.",
-    "label" : "Brightness Decr.",
-    "role" : "down"
+    "id" : "uhfmodeknobpreset",
+    "className" : "UhfModeKnobPreset",
+    "description" : "UHF: MODE Knob - PRESET",
+    "label" : "PRESET",
+    "role" : "none"
   }, {
-    "id" : "hmcshmscknobon",
-    "className" : "HmcsHmscKnobOn",
-    "description" : "HMCS: HMSC Knob - ON",
-    "label" : "ON",
-    "role" : "on"
+    "id" : "uhfmodeknobgrd",
+    "className" : "UhfModeKnobGrd",
+    "description" : "UHF: MODE Knob - GRD",
+    "label" : "GRD",
+    "role" : "none"
   }, {
-    "id" : "hmcshmscknoboff",
-    "className" : "HmcsHmscKnobOff",
-    "description" : "HMCS: HMSC Knob - OFF",
+    "id" : "uhfvolknobaivsivcvolumeincr",
+    "className" : "UhfVolKnobAiVsIvcVolumeIncr",
+    "description" : "UHF: VOL Knob - AI vs IVC Volume Incr",
+    "label" : "AI vs IVC Volume Incr",
+    "role" : "none"
+  }, {
+    "id" : "uhfvolknobaivsivcvolumedecr",
+    "className" : "UhfVolKnobAiVsIvcVolumeDecr",
+    "description" : "UHF: VOL Knob - AI vs IVC Volume Decr",
+    "label" : "AI vs IVC Volume Decr",
+    "role" : "none"
+  }, {
+    "id" : "uhffunctionknoboff",
+    "className" : "UhfFunctionKnobOff",
+    "description" : "UHF: FUNCTION Knob - OFF",
     "label" : "OFF",
     "role" : "off"
   }, {
-    "id" : "twapowerbuttonon",
-    "className" : "TwaPowerButtonOn",
-    "description" : "TWA: POWER Button - On",
-    "label" : "On",
+    "id" : "uhffunctionknobmain",
+    "className" : "UhfFunctionKnobMain",
+    "description" : "UHF: FUNCTION Knob - MAIN",
+    "label" : "MAIN",
     "role" : "on"
   }, {
-    "id" : "twapowerbuttonoff",
-    "className" : "TwaPowerButtonOff",
-    "description" : "TWA: POWER Button - Off",
-    "label" : "Off",
-    "role" : "off"
-  }, {
-    "id" : "altgearresetbuttonpush",
-    "className" : "AltGearResetButtonPush",
-    "description" : "ALT GEAR: Reset Button - Push",
-    "label" : "Reset",
+    "id" : "uhffunctionknobboth",
+    "className" : "UhfFunctionKnobBoth",
+    "description" : "UHF: FUNCTION Knob - BOTH",
+    "label" : "BOTH",
     "role" : "none"
   }, {
-    "id" : "altgearextendgearhandlepush",
-    "className" : "AltGearExtendGearHandlePush",
-    "description" : "ALT GEAR: Extend Gear Handle - Push",
-    "label" : "Extend Gear",
+    "id" : "uhfmanualfrequencyxxcycleup",
+    "className" : "UhfManualFrequencyZzzzxxCycleUp",
+    "description" : "UHF: Manual Frequency ___._XX - Cycle Up",
+    "label" : "Cycle Up",
+    "role" : "up"
+  }, {
+    "id" : "uhfmanualfrequencyxxcycledown",
+    "className" : "UhfManualFrequencyZzzzxxCycleDown",
+    "description" : "UHF: Manual Frequency ___._XX - Cycle Down",
+    "label" : "Cycle Down",
+    "role" : "down"
+  }, {
+    "id" : "uhfmanualfrequencyxcycleup",
+    "className" : "UhfManualFrequencyZzzxzzCycleUp",
+    "description" : "UHF: Manual Frequency ___.X__ - Cycle Up",
+    "label" : "Cycle Up",
+    "role" : "up"
+  }, {
+    "id" : "uhfmanualfrequencyxcycledown",
+    "className" : "UhfManualFrequencyZzzxzzCycleDown",
+    "description" : "UHF: Manual Frequency ___.X__ - Cycle Down",
+    "label" : "Cycle Down",
+    "role" : "down"
+  }, {
+    "id" : "uhfmanualfrequencyxcycleup",
+    "className" : "UhfManualFrequencyZzxzzzCycleUp",
+    "description" : "UHF: Manual Frequency __X.___ - Cycle Up",
+    "label" : "Cycle Up",
+    "role" : "up"
+  }, {
+    "id" : "uhfmanualfrequencyxcycledown",
+    "className" : "UhfManualFrequencyZzxzzzCycleDown",
+    "description" : "UHF: Manual Frequency __X.___ - Cycle Down",
+    "label" : "Cycle Down",
+    "role" : "down"
+  }, {
+    "id" : "uhfmanualfrequencyxcycleup",
+    "className" : "UhfManualFrequencyZxzzzzCycleUp",
+    "description" : "UHF: Manual Frequency _X_.___ - Cycle Up",
+    "label" : "Cycle Up",
+    "role" : "up"
+  }, {
+    "id" : "uhfmanualfrequencyxcycledown",
+    "className" : "UhfManualFrequencyZxzzzzCycleDown",
+    "description" : "UHF: Manual Frequency _X_.___ - Cycle Down",
+    "label" : "Cycle Down",
+    "role" : "down"
+  }, {
+    "id" : "uhfa32trotaryxstepup",
+    "className" : "UhfA32TRotaryXzzzzzStepUp",
+    "description" : "UHF: A-3-2-T Rotary X__.___ - Step Up",
+    "label" : "Step Up",
+    "role" : "up"
+  }, {
+    "id" : "uhfa32trotaryxstepdown",
+    "className" : "UhfA32TRotaryXzzzzzStepDown",
+    "description" : "UHF: A-3-2-T Rotary X__.___ - Step Down",
+    "label" : "Step Down",
+    "role" : "down"
+  }, {
+    "id" : "uhfpresetchannelknobcycleup",
+    "className" : "UhfPresetChannelKnobCycleUp",
+    "description" : "UHF: PRESET CHANNEL Knob - Cycle Up",
+    "label" : "Cycle Up",
+    "role" : "up"
+  }, {
+    "id" : "uhfpresetchannelknobcycledown",
+    "className" : "UhfPresetChannelKnobCycleDown",
+    "description" : "UHF: PRESET CHANNEL Knob - Cycle Down",
+    "label" : "Cycle Down",
+    "role" : "down"
+  }, {
+    "id" : "audio1threatknobvolumeincr",
+    "className" : "Audio1ThreatKnobVolumeIncr",
+    "description" : "AUDIO1: THREAT Knob - Volume Incr.",
+    "label" : "Volume Incr.",
+    "role" : "up"
+  }, {
+    "id" : "audio1threatknobvolumedecr",
+    "className" : "Audio1ThreatKnobVolumeDecr",
+    "description" : "AUDIO1: THREAT Knob - Volume Decr.",
+    "label" : "Volume Decr.",
+    "role" : "down"
+  }, {
+    "id" : "audio1comm2modeknobsql",
+    "className" : "Audio1Comm2ModeKnobSql",
+    "description" : "AUDIO1: COMM 2 Mode Knob - SQL",
+    "label" : "SQL",
+    "role" : "none"
+  }, {
+    "id" : "audio1comm2modeknobgd",
+    "className" : "Audio1Comm2ModeKnobGd",
+    "description" : "AUDIO1: COMM 2 Mode Knob - GD",
+    "label" : "GD",
+    "role" : "none"
+  }, {
+    "id" : "audio1comm1modeknobsql",
+    "className" : "Audio1Comm1ModeKnobSql",
+    "description" : "AUDIO1: COMM 1 Mode Knob - SQL",
+    "label" : "SQL",
+    "role" : "none"
+  }, {
+    "id" : "audio1comm1modeknobgd",
+    "className" : "Audio1Comm1ModeKnobGd",
+    "description" : "AUDIO1: COMM 1 Mode Knob - GD",
+    "label" : "GD",
+    "role" : "none"
+  }, {
+    "id" : "audio1mslknobvolumeincr",
+    "className" : "Audio1MslKnobVolumeIncr",
+    "description" : "AUDIO1: MSL Knob - Volume Incr.",
+    "label" : "Volume Incr.",
+    "role" : "up"
+  }, {
+    "id" : "audio1mslknobvolumedecr",
+    "className" : "Audio1MslKnobVolumeDecr",
+    "description" : "AUDIO1: MSL Knob - Volume Decr.",
+    "label" : "Volume Decr.",
+    "role" : "down"
+  }, {
+    "id" : "audio1comm2knobvolumeincr",
+    "className" : "Audio1Comm2KnobVolumeIncr",
+    "description" : "AUDIO1: COMM 2 Knob - Volume Incr.",
+    "label" : "Volume Incr.",
+    "role" : "up"
+  }, {
+    "id" : "audio1comm2knobvolumedecr",
+    "className" : "Audio1Comm2KnobVolumeDecr",
+    "description" : "AUDIO1: COMM 2 Knob - Volume Decr.",
+    "label" : "Volume Decr.",
+    "role" : "down"
+  }, {
+    "id" : "audio1comm2knobpoweron",
+    "className" : "Audio1Comm2KnobPowerOn",
+    "description" : "AUDIO1: COMM 2 Knob - Power On",
+    "label" : "Power On",
+    "role" : "on"
+  }, {
+    "id" : "audio1comm2knobpoweroff",
+    "className" : "Audio1Comm2KnobPowerOff",
+    "description" : "AUDIO1: COMM 2 Knob - Power Off",
+    "label" : "Power Off",
+    "role" : "off"
+  }, {
+    "id" : "audio1comm1knobvolumeincr",
+    "className" : "Audio1Comm1KnobVolumeIncr",
+    "description" : "AUDIO1: COMM 1 Knob - Volume Incr.",
+    "label" : "Volume Incr.",
+    "role" : "up"
+  }, {
+    "id" : "audio1comm1knobvolumedecr",
+    "className" : "Audio1Comm1KnobVolumeDecr",
+    "description" : "AUDIO1: COMM 1 Knob - Volume Decr.",
+    "label" : "Volume Decr.",
+    "role" : "down"
+  }, {
+    "id" : "audio1comm1knobpoweron",
+    "className" : "Audio1Comm1KnobPowerOn",
+    "description" : "AUDIO1: COMM 1 Knob - Power On",
+    "label" : "Power On",
+    "role" : "on"
+  }, {
+    "id" : "audio1comm1knobpoweroff",
+    "className" : "Audio1Comm1KnobPowerOff",
+    "description" : "AUDIO1: COMM 1 Knob - Power Off",
+    "label" : "Power Off",
+    "role" : "off"
+  }, {
+    "id" : "audio2ilsknobon",
+    "className" : "Audio2IlsKnobOn",
+    "description" : "AUDIO2: ILS Knob - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "audio2ilsknoboff",
+    "className" : "Audio2IlsKnobOff",
+    "description" : "AUDIO2: ILS Knob - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "audio2intercomknobvolumeincr",
+    "className" : "Audio2IntercomKnobVolumeIncr",
+    "description" : "AUDIO2: INTERCOM Knob - Volume Incr.",
+    "label" : "Volume Incr.",
+    "role" : "up"
+  }, {
+    "id" : "audio2intercomknobvolumedecr",
+    "className" : "Audio2IntercomKnobVolumeDecr",
+    "description" : "AUDIO2: INTERCOM Knob - Volume Decr.",
+    "label" : "Volume Decr.",
+    "role" : "down"
+  }, {
+    "id" : "auxstationselectorswitchtr",
+    "className" : "AuxStationSelectorSwitchTR",
+    "description" : "AUX: STATION SELECTOR Switch - T/R",
+    "label" : "T/R",
+    "role" : "none"
+  }, {
+    "id" : "auxstationselectorswitchaatr",
+    "className" : "AuxStationSelectorSwitchAATr",
+    "description" : "AUX: STATION SELECTOR Switch - A/A TR",
+    "label" : "A/A TR",
+    "role" : "none"
+  }, {
+    "id" : "auxchannelcycleupleftdigit",
+    "className" : "AuxChannelCycleUpLeftDigit",
+    "description" : "AUX: CHANNEL - Cycle Up Left Digit",
+    "label" : "Cycle Up Left Digit",
+    "role" : "none"
+  }, {
+    "id" : "auxchannelcycledownleftdigit",
+    "className" : "AuxChannelCycleDownLeftDigit",
+    "description" : "AUX: CHANNEL - Cycle Down Left Digit",
+    "label" : "Cycle Down Left Digit",
+    "role" : "none"
+  }, {
+    "id" : "auxchannelcycleupcenterdigit",
+    "className" : "AuxChannelCycleUpCenterDigit",
+    "description" : "AUX: CHANNEL - Cycle Up Center Digit",
+    "label" : "Cycle Up Center Digit",
+    "role" : "none"
+  }, {
+    "id" : "auxchannelcycledowncenterdig",
+    "className" : "AuxChannelCycleDownCenterDig",
+    "description" : "AUX: CHANNEL - Cycle Down Center Dig.",
+    "label" : "Cycle Down Center Dig.",
+    "role" : "none"
+  }, {
+    "id" : "auxchannelcycleuprightdigit",
+    "className" : "AuxChannelCycleUpRightDigit",
+    "description" : "AUX: CHANNEL - Cycle Up Right Digit",
+    "label" : "Cycle Up Right Digit",
+    "role" : "none"
+  }, {
+    "id" : "auxchannelcycledownrightdigit",
+    "className" : "AuxChannelCycleDownRightDigit",
+    "description" : "AUX: CHANNEL - Cycle Down Right Digit",
+    "label" : "Cycle Down Right Digit",
+    "role" : "none"
+  }, {
+    "id" : "auxchanneltogglebandx",
+    "className" : "AuxChannelToggleBandX",
+    "description" : "AUX: CHANNEL - Toggle Band X",
+    "label" : "Toggle Band X",
+    "role" : "none"
+  }, {
+    "id" : "auxchanneltogglebandy",
+    "className" : "AuxChannelToggleBandY",
+    "description" : "AUX: CHANNEL - Toggle Band Y",
+    "label" : "Toggle Band Y",
+    "role" : "none"
+  }, {
+    "id" : "auxcniknobswitchbackup",
+    "className" : "AuxCniKnobSwitchBackup",
+    "description" : "AUX: CNI Knob Switch - BACKUP",
+    "label" : "BACKUP",
+    "role" : "none"
+  }, {
+    "id" : "auxcniknobswitchufc",
+    "className" : "AuxCniKnobSwitchUfc",
+    "description" : "AUX: CNI Knob Switch - UFC",
+    "label" : "UFC",
     "role" : "none"
   }, {
     "id" : "qtyextfueltransswitchnorm",
@@ -2125,6 +1717,630 @@
     "className" : "QtyFuelQtySelKnobExtCtr",
     "description" : "QTY: FUEL QTY SEL Knob - EXT CTR",
     "label" : "EXT CTR",
+    "role" : "none"
+  }, {
+    "id" : "fuelairrefuelswitchopen",
+    "className" : "FuelAirRefuelSwitchOpen",
+    "description" : "FUEL: AIR REFUEL Switch - OPEN",
+    "label" : "OPEN",
+    "role" : "on"
+  }, {
+    "id" : "fuelairrefuelswitchclose",
+    "className" : "FuelAirRefuelSwitchClose",
+    "description" : "FUEL: AIR REFUEL Switch - CLOSE",
+    "label" : "CLOSE",
+    "role" : "off"
+  }, {
+    "id" : "fuelengfeedknoboff",
+    "className" : "FuelEngFeedKnobOff",
+    "description" : "FUEL: ENG FEED Knob - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "fuelengfeedknobnorm",
+    "className" : "FuelEngFeedKnobNorm",
+    "description" : "FUEL: ENG FEED Knob - NORM",
+    "label" : "NORM",
+    "role" : "on"
+  }, {
+    "id" : "fuelengfeedknobaft",
+    "className" : "FuelEngFeedKnobAft",
+    "description" : "FUEL: ENG FEED Knob - AFT",
+    "label" : "AFT",
+    "role" : "none"
+  }, {
+    "id" : "fuelengfeedknobfwd",
+    "className" : "FuelEngFeedKnobFwd",
+    "description" : "FUEL: ENG FEED Knob - FWD",
+    "label" : "FWD",
+    "role" : "none"
+  }, {
+    "id" : "fuelmasterswitchon",
+    "className" : "FuelMasterSwitchOn",
+    "description" : "FUEL: MASTER Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "fuelmasterswitchoff",
+    "className" : "FuelMasterSwitchOff",
+    "description" : "FUEL: MASTER Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "testflcspwrtestswitchhold",
+    "className" : "TestFlcsPwrTestSwitchHold",
+    "description" : "TEST: FLCS PWR TEST Switch - Hold",
+    "label" : "FLCS PWR TEST",
+    "role" : "none"
+  }, {
+    "id" : "testepugenswitchhold",
+    "className" : "TestEpuGenSwitchHold",
+    "description" : "TEST: EPU/GEN Switch - Hold",
+    "label" : "EPU/GEN",
+    "role" : "none"
+  }, {
+    "id" : "testprobeheatswitchon",
+    "className" : "TestProbeHeatSwitchOn",
+    "description" : "TEST: PROBE HEAT Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "testprobeheatswitchoff",
+    "className" : "TestProbeHeatSwitchOff",
+    "description" : "TEST: PROBE HEAT Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "testprobeheatswitchtest",
+    "className" : "TestProbeHeatSwitchTest",
+    "description" : "TEST: PROBE HEAT Switch - TEST",
+    "label" : "TEST",
+    "role" : "none"
+  }, {
+    "id" : "testmalindltsbuttonhold",
+    "className" : "TestMalIndLtsButtonHold",
+    "description" : "TEST: MAL & IND LTS Button - Hold",
+    "label" : "MAL & IND LTS",
+    "role" : "none"
+  }, {
+    "id" : "testoxyqtyswitchhold",
+    "className" : "TestOxyQtySwitchHold",
+    "description" : "TEST: OXY QTY Switch - Hold",
+    "label" : "OXY QTY",
+    "role" : "none"
+  }, {
+    "id" : "testfireoheatdetectbuttonhold",
+    "className" : "TestFireOheatDetectButtonHold",
+    "description" : "TEST: FIRE & OHEAT DETECT Button - Hold",
+    "label" : "FIRE & OHEAT DETECT",
+    "role" : "none"
+  }, {
+    "id" : "lightconsolesknobfloodstepup",
+    "className" : "LightConsolesKnobFloodStepUp",
+    "description" : "LIGHT: CONSOLES Knob (Flood) - Step Up",
+    "label" : "Step Up",
+    "role" : "up"
+  }, {
+    "id" : "lightconsolesknobfloodstepdown",
+    "className" : "LightConsolesKnobFloodStepDown",
+    "description" : "LIGHT: CONSOLES Knob (Flood) - Step Down",
+    "label" : "Step Down",
+    "role" : "down"
+  }, {
+    "id" : "lightdedknobprimarystepup",
+    "className" : "LightDedKnobPrimaryStepUp",
+    "description" : "LIGHT: DED Knob (Primary) - Step Up",
+    "label" : "Step Up",
+    "role" : "up"
+  }, {
+    "id" : "lightdedknobprimarystepdown",
+    "className" : "LightDedKnobPrimaryStepDown",
+    "description" : "LIGHT: DED Knob (Primary) - Step Down",
+    "label" : "Step Down",
+    "role" : "down"
+  }, {
+    "id" : "lightinstpnlknobprimarystepup",
+    "className" : "LightInstPnlKnobPrimaryStepUp",
+    "description" : "LIGHT: INST PNL Knob (Primary) - Step Up",
+    "label" : "Step Up",
+    "role" : "up"
+  }, {
+    "id" : "lightinstpnlknobprimarystepdown",
+    "className" : "LightInstPnlKnobPrimaryStepDown",
+    "description" : "LIGHT: INST PNL Knob (Primary) - Step Down",
+    "label" : "Step Down",
+    "role" : "down"
+  }, {
+    "id" : "extmasterswitchnorm",
+    "className" : "ExtMasterSwitchNorm",
+    "description" : "EXT: MASTER Switch - NORM",
+    "label" : "NORM",
+    "role" : "on"
+  }, {
+    "id" : "extmasterswitchoff",
+    "className" : "ExtMasterSwitchOff",
+    "description" : "EXT: MASTER Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "extwingtailswitchbrt",
+    "className" : "ExtWingTailSwitchBrt",
+    "description" : "EXT: WING/TAIL Switch - BRT",
+    "label" : "BRT",
+    "role" : "none"
+  }, {
+    "id" : "extwingtailswitchoff",
+    "className" : "ExtWingTailSwitchOff",
+    "description" : "EXT: WING/TAIL Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "extpositionswitchflash",
+    "className" : "ExtPositionSwitchFlash",
+    "description" : "EXT: POSITION Switch - FLASH",
+    "label" : "FLASH",
+    "role" : "none"
+  }, {
+    "id" : "extpositionswitchsteady",
+    "className" : "ExtPositionSwitchSteady",
+    "description" : "EXT: POSITION Switch - STEADY",
+    "label" : "STEADY",
+    "role" : "none"
+  }, {
+    "id" : "extanticollisionswitchon",
+    "className" : "ExtAntiCollisionSwitchOn",
+    "description" : "EXT: ANTI COLLISION Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "extanticollisionswitchoff",
+    "className" : "ExtAntiCollisionSwitchOff",
+    "description" : "EXT: ANTI COLLISION Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "miscrfswitchnorm",
+    "className" : "MiscRfSwitchNorm",
+    "description" : "MISC: RF Switch - NORM",
+    "label" : "NORM",
+    "role" : "on"
+  }, {
+    "id" : "miscrfswitchquiet",
+    "className" : "MiscRfSwitchQuiet",
+    "description" : "MISC: RF Switch - QUIET",
+    "label" : "QUIET",
+    "role" : "none"
+  }, {
+    "id" : "miscrfswitchsilent",
+    "className" : "MiscRfSwitchSilent",
+    "description" : "MISC: RF Switch - SILENT",
+    "label" : "SILENT",
+    "role" : "none"
+  }, {
+    "id" : "snsrrdraltswitchon",
+    "className" : "SnsrRdrAltSwitchOn",
+    "description" : "SNSR: RDR ALT Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "snsrrdraltswitchstdby",
+    "className" : "SnsrRdrAltSwitchStdby",
+    "description" : "SNSR: RDR ALT Switch - STDBY",
+    "label" : "STDBY",
+    "role" : "none"
+  }, {
+    "id" : "snsrrdraltswitchoff",
+    "className" : "SnsrRdrAltSwitchOff",
+    "description" : "SNSR: RDR ALT Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "snsrfcrswitchon",
+    "className" : "SnsrFcrSwitchOn",
+    "description" : "SNSR: FCR Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "snsrfcrswitchoff",
+    "className" : "SnsrFcrSwitchOff",
+    "description" : "SNSR: FCR Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "snsrrighthdptswitchon",
+    "className" : "SnsrRightHdptSwitchOn",
+    "description" : "SNSR: RIGHT HDPT Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "snsrrighthdptswitchoff",
+    "className" : "SnsrRightHdptSwitchOff",
+    "description" : "SNSR: RIGHT HDPT Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "snsrlefthdptswitchon",
+    "className" : "SnsrLeftHdptSwitchOn",
+    "description" : "SNSR: LEFT HDPT Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "snsrlefthdptswitchoff",
+    "className" : "SnsrLeftHdptSwitchOff",
+    "description" : "SNSR: LEFT HDPT Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "seatejecthandleholdforeject",
+    "className" : "SeatEjectHandleHoldForEject",
+    "description" : "SEAT: EJECT Handle - Hold For Eject",
+    "label" : "EJECT",
+    "role" : "none"
+  }, {
+    "id" : "seatsafetyleverarmed",
+    "className" : "SeatSafetyLeverArmed",
+    "description" : "SEAT: Safety Lever - Armed",
+    "label" : "Armed",
+    "role" : "none"
+  }, {
+    "id" : "seatsafetyleverlocked",
+    "className" : "SeatSafetyLeverLocked",
+    "description" : "SEAT: Safety Lever - Locked",
+    "label" : "Locked",
+    "role" : "none"
+  }, {
+    "id" : "leftwallcanopyopen",
+    "className" : "LeftWallCanopyOpen",
+    "description" : "LEFT WALL: CANOPY - Open",
+    "label" : "Open",
+    "role" : "none"
+  }, {
+    "id" : "leftwallcanopyclose",
+    "className" : "LeftWallCanopyClose",
+    "description" : "LEFT WALL: CANOPY - Close",
+    "label" : "Close",
+    "role" : "none"
+  }, {
+    "id" : "leftwallslapswitchecmpgrm5",
+    "className" : "LeftWallSlapSwitchEcmPgrm5",
+    "description" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+    "label" : "SLAP Switch (ECM-PGRM # 5)",
+    "role" : "none"
+  }, {
+    "id" : "mpomanualpitchswitchhold",
+    "className" : "MpoManualPitchSwitchHold",
+    "description" : "MPO: MANUAL PITCH Switch - Hold",
+    "label" : "MANUAL PITCH",
+    "role" : "none"
+  }, {
+    "id" : "engengcontswitchpri",
+    "className" : "EngEngContSwitchPri",
+    "description" : "ENG: ENG CONT Switch - PRI",
+    "label" : "PRI",
+    "role" : "none"
+  }, {
+    "id" : "engengcontswitchsec",
+    "className" : "EngEngContSwitchSec",
+    "description" : "ENG: ENG CONT Switch - SEC",
+    "label" : "SEC",
+    "role" : "none"
+  }, {
+    "id" : "engjfsswitchoff",
+    "className" : "EngJfsSwitchOff",
+    "description" : "ENG: JFS Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "engjfsswitchstart2",
+    "className" : "EngJfsSwitchStart2",
+    "description" : "ENG: JFS Switch - START 2",
+    "label" : "START 2",
+    "role" : "none"
+  }, {
+    "id" : "ecmoprswitchopr",
+    "className" : "EcmOprSwitchOpr",
+    "description" : "ECM: OPR Switch - OPR",
+    "label" : "OPR",
+    "role" : "on"
+  }, {
+    "id" : "ecmoprswitchoff",
+    "className" : "EcmOprSwitchOff",
+    "description" : "ECM: OPR Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "avtravtrswitchtoggleonoff",
+    "className" : "AvtrAvtrSwitchToggleOnOff",
+    "description" : "AVTR: AVTR Switch - Toggle ON / OFF",
+    "label" : "Toggle ON / OFF",
+    "role" : "off"
+  }, {
+    "id" : "avtravtrswitchon",
+    "className" : "AvtrAvtrSwitchOn",
+    "description" : "AVTR: AVTR Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "avtravtrswitchauto",
+    "className" : "AvtrAvtrSwitchAuto",
+    "description" : "AVTR: AVTR Switch - AUTO",
+    "label" : "AUTO",
+    "role" : "none"
+  }, {
+    "id" : "avtravtrswitchoff",
+    "className" : "AvtrAvtrSwitchOff",
+    "description" : "AVTR: AVTR Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "eleccautionresetbuttonpush",
+    "className" : "ElecCautionResetButtonPush",
+    "description" : "ELEC: CAUTION RESET Button - Push",
+    "label" : "CAUTION RESET",
+    "role" : "none"
+  }, {
+    "id" : "elecmainpwrswitchmain",
+    "className" : "ElecMainPwrSwitchMain",
+    "description" : "ELEC: MAIN PWR Switch - MAIN",
+    "label" : "MAIN",
+    "role" : "on"
+  }, {
+    "id" : "elecmainpwrswitchbatt",
+    "className" : "ElecMainPwrSwitchBatt",
+    "description" : "ELEC: MAIN PWR Switch - BATT",
+    "label" : "BATT",
+    "role" : "none"
+  }, {
+    "id" : "elecmainpwrswitchoff",
+    "className" : "ElecMainPwrSwitchOff",
+    "description" : "ELEC: MAIN PWR Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "epuepuswitchon",
+    "className" : "EpuEpuSwitchOn",
+    "description" : "EPU: EPU Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "epuepuswitchnorm",
+    "className" : "EpuEpuSwitchNorm",
+    "description" : "EPU: EPU Switch - NORM",
+    "label" : "NORM",
+    "role" : "on"
+  }, {
+    "id" : "epuepuswitchoff",
+    "className" : "EpuEpuSwitchOff",
+    "description" : "EPU: EPU Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "trimpitchtrimwheelnoseup",
+    "className" : "TrimPitchTrimWheelNoseUp",
+    "description" : "TRIM: PITCH TRIM Wheel - NOSE UP",
+    "label" : "NOSE UP",
+    "role" : "up"
+  }, {
+    "id" : "trimpitchtrimwheelnosedn",
+    "className" : "TrimPitchTrimWheelNoseDn",
+    "description" : "TRIM: PITCH TRIM Wheel - NOSE DN",
+    "label" : "NOSE DN",
+    "role" : "down"
+  }, {
+    "id" : "trimyawtrimknobl",
+    "className" : "TrimYawTrimKnobL",
+    "description" : "TRIM: YAW TRIM Knob - L",
+    "label" : "L",
+    "role" : "left"
+  }, {
+    "id" : "trimyawtrimknobr",
+    "className" : "TrimYawTrimKnobR",
+    "description" : "TRIM: YAW TRIM Knob - R",
+    "label" : "R",
+    "role" : "right"
+  }, {
+    "id" : "trimtrimapdiscswitchdisc",
+    "className" : "TrimTrimApDiscSwitchDisc",
+    "description" : "TRIM: TRIM/AP DISC Switch - DISC",
+    "label" : "DISC",
+    "role" : "none"
+  }, {
+    "id" : "trimtrimapdiscswitchnorm",
+    "className" : "TrimTrimApDiscSwitchNorm",
+    "description" : "TRIM: TRIM/AP DISC Switch - NORM",
+    "label" : "NORM",
+    "role" : "on"
+  }, {
+    "id" : "trimrolltrimwheellwingdn",
+    "className" : "TrimRollTrimWheelLWingDn",
+    "description" : "TRIM: ROLL TRIM Wheel - L WING DN",
+    "label" : "L WING DN",
+    "role" : "down"
+  }, {
+    "id" : "trimrolltrimwheelrwingdn",
+    "className" : "TrimRollTrimWheelRWingDn",
+    "description" : "TRIM: ROLL TRIM Wheel - R WING DN",
+    "label" : "R WING DN",
+    "role" : "down"
+  }, {
+    "id" : "fltbitswitchpush",
+    "className" : "FltBitSwitchPush",
+    "description" : "FLT: BIT Switch - Push",
+    "label" : "BIT",
+    "role" : "none"
+  }, {
+    "id" : "fltflcsswitchhold",
+    "className" : "FltFlcsSwitchHold",
+    "description" : "FLT: FLCS Switch - Hold",
+    "label" : "FLCS",
+    "role" : "none"
+  }, {
+    "id" : "fltleflapsswitchlock",
+    "className" : "FltLeFlapsSwitchLock",
+    "description" : "FLT: LE FLAPS Switch - LOCK",
+    "label" : "LOCK",
+    "role" : "none"
+  }, {
+    "id" : "fltleflapsswitchauto",
+    "className" : "FltLeFlapsSwitchAuto",
+    "description" : "FLT: LE FLAPS Switch - AUTO",
+    "label" : "AUTO",
+    "role" : "none"
+  }, {
+    "id" : "fltmanualtfflyupswitchdisable",
+    "className" : "FltManualTfFlyupSwitchDisable",
+    "description" : "FLT: MANUAL TF FLYUP Switch - DISABLE",
+    "label" : "DISABLE",
+    "role" : "off"
+  }, {
+    "id" : "fltmanualtfflyupswitchenable",
+    "className" : "FltManualTfFlyupSwitchEnable",
+    "description" : "FLT: MANUAL TF FLYUP Switch - ENABLE",
+    "label" : "ENABLE",
+    "role" : "on"
+  }, {
+    "id" : "fltaltflapsswitchextend",
+    "className" : "FltAltFlapsSwitchExtend",
+    "description" : "FLT: ALT FLAPS Switch - EXTEND",
+    "label" : "EXTEND",
+    "role" : "none"
+  }, {
+    "id" : "fltaltflapsswitchnorm",
+    "className" : "FltAltFlapsSwitchNorm",
+    "description" : "FLT: ALT FLAPS Switch - NORM",
+    "label" : "NORM",
+    "role" : "on"
+  }, {
+    "id" : "fltdigitalswitchbackup",
+    "className" : "FltDigitalSwitchBackup",
+    "description" : "FLT: DIGITAL Switch - BACKUP",
+    "label" : "BACKUP",
+    "role" : "none"
+  }, {
+    "id" : "fltdigitalswitchoff",
+    "className" : "FltDigitalSwitchOff",
+    "description" : "FLT: DIGITAL Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "gearlightsswitchlanding",
+    "className" : "GearLightsSwitchLanding",
+    "description" : "GEAR: LIGHTS Switch - LANDING",
+    "label" : "LANDING",
+    "role" : "none"
+  }, {
+    "id" : "gearlightsswitchoff",
+    "className" : "GearLightsSwitchOff",
+    "description" : "GEAR: LIGHTS Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "gearhornsilencerbuttonpush",
+    "className" : "GearHornSilencerButtonPush",
+    "description" : "GEAR: HORN SILENCER Button - Push",
+    "label" : "HORN SILENCER",
+    "role" : "none"
+  }, {
+    "id" : "gearstoresconfigswitchcati",
+    "className" : "GearStoresConfigSwitchCatI",
+    "description" : "GEAR: STORES CONFIG Switch - CAT I",
+    "label" : "CAT I",
+    "role" : "none"
+  }, {
+    "id" : "gearstoresconfigswitchcatiii",
+    "className" : "GearStoresConfigSwitchCatIii",
+    "description" : "GEAR: STORES CONFIG Switch - CAT III",
+    "label" : "CAT III",
+    "role" : "none"
+  }, {
+    "id" : "gearlghandleup",
+    "className" : "GearLgHandleUp",
+    "description" : "GEAR: LG Handle - UP",
+    "label" : "UP",
+    "role" : "up"
+  }, {
+    "id" : "gearlghandledn",
+    "className" : "GearLgHandleDn",
+    "description" : "GEAR: LG Handle - DN",
+    "label" : "DN",
+    "role" : "down"
+  }, {
+    "id" : "gearparkingbreakswitchon",
+    "className" : "GearParkingBreakSwitchOn",
+    "description" : "GEAR: PARKING BREAK Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "gearparkingbreakswitchoff",
+    "className" : "GearParkingBreakSwitchOff",
+    "description" : "GEAR: PARKING BREAK Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "geargndjettswitchenable",
+    "className" : "GearGndJettSwitchEnable",
+    "description" : "GEAR: GND JETT Switch - ENABLE",
+    "label" : "ENABLE",
+    "role" : "on"
+  }, {
+    "id" : "geargndjettswitchoff",
+    "className" : "GearGndJettSwitchOff",
+    "description" : "GEAR: GND JETT Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "gearhookswitchup",
+    "className" : "GearHookSwitchUp",
+    "description" : "GEAR: HOOK Switch - UP",
+    "label" : "UP",
+    "role" : "up"
+  }, {
+    "id" : "gearhookswitchdn",
+    "className" : "GearHookSwitchDn",
+    "description" : "GEAR: HOOK Switch - DN",
+    "label" : "DN",
+    "role" : "down"
+  }, {
+    "id" : "gearemerstoresjettisonbuttonhold",
+    "className" : "GearEmerStoresJettisonButtonHold",
+    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
+    "label" : "EMER STORES JETTISON",
+    "role" : "none"
+  }, {
+    "id" : "hmcshmscknobbrightnessincr",
+    "className" : "HmcsHmscKnobBrightnessIncr",
+    "description" : "HMCS: HMSC Knob - Brightness Incr.",
+    "label" : "Brightness Incr.",
+    "role" : "up"
+  }, {
+    "id" : "hmcshmscknobbrightnessdecr",
+    "className" : "HmcsHmscKnobBrightnessDecr",
+    "description" : "HMCS: HMSC Knob - Brightness Decr.",
+    "label" : "Brightness Decr.",
+    "role" : "down"
+  }, {
+    "id" : "hmcshmscknobon",
+    "className" : "HmcsHmscKnobOn",
+    "description" : "HMCS: HMSC Knob - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "hmcshmscknoboff",
+    "className" : "HmcsHmscKnobOff",
+    "description" : "HMCS: HMSC Knob - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "altgearresetbuttonpush",
+    "className" : "AltGearResetButtonPush",
+    "description" : "ALT GEAR: Reset Button - Push",
+    "label" : "Reset",
+    "role" : "none"
+  }, {
+    "id" : "altgearextendgearhandlepush",
+    "className" : "AltGearExtendGearHandlePush",
+    "description" : "ALT GEAR: Extend Gear Handle - Push",
+    "label" : "Extend Gear",
     "role" : "none"
   }, {
     "id" : "instrmodeknobilstcn",
@@ -2223,42 +2439,6 @@
     "label" : "Decrease (1°)",
     "role" : "none"
   }, {
-    "id" : "rwrbrightnessknobincrease",
-    "className" : "RwrBrightnessKnobIncrease",
-    "description" : "RWR: Brightness Knob - Increase",
-    "label" : "Increase",
-    "role" : "up"
-  }, {
-    "id" : "rwrbrightnessknobdecrease",
-    "className" : "RwrBrightnessKnobDecrease",
-    "description" : "RWR: Brightness Knob - Decrease",
-    "label" : "Decrease",
-    "role" : "down"
-  }, {
-    "id" : "twptgtseppush",
-    "className" : "TwpTgtSepPush",
-    "description" : "TWP: TGT SEP - Push",
-    "label" : "TGT SEP",
-    "role" : "none"
-  }, {
-    "id" : "twpsystestpush",
-    "className" : "TwpSysTestPush",
-    "description" : "TWP: SYS TEST - Push",
-    "label" : "SYS TEST",
-    "role" : "none"
-  }, {
-    "id" : "twpmissilelaunchpush",
-    "className" : "TwpMissileLaunchPush",
-    "description" : "TWP: MISSILE LAUNCH - Push",
-    "label" : "MISSILE LAUNCH",
-    "role" : "none"
-  }, {
-    "id" : "twphandoffpush",
-    "className" : "TwpHandoffPush",
-    "description" : "TWP: HANDOFF - Push",
-    "label" : "HANDOFF",
-    "role" : "none"
-  }, {
     "id" : "eyefackbuttonpush",
     "className" : "EyeFAckButtonPush",
     "description" : "EYE: F ACK Button - Push",
@@ -2342,24 +2522,6 @@
     "description" : "MISC: LASER Switch - OFF",
     "label" : "OFF",
     "role" : "off"
-  }, {
-    "id" : "miscrfswitchnorm",
-    "className" : "MiscRfSwitchNorm",
-    "description" : "MISC: RF Switch - NORM",
-    "label" : "NORM",
-    "role" : "on"
-  }, {
-    "id" : "miscrfswitchquiet",
-    "className" : "MiscRfSwitchQuiet",
-    "description" : "MISC: RF Switch - QUIET",
-    "label" : "QUIET",
-    "role" : "none"
-  }, {
-    "id" : "miscrfswitchsilent",
-    "className" : "MiscRfSwitchSilent",
-    "description" : "MISC: RF Switch - SILENT",
-    "label" : "SILENT",
-    "role" : "none"
   }, {
     "id" : "oxysetting2onpilotbreathing",
     "className" : "OxySetting2OnPilotBreathing",
@@ -2505,42 +2667,6 @@
     "label" : "RAM",
     "role" : "none"
   }, {
-    "id" : "lightconsolesknobfloodstepup",
-    "className" : "LightConsolesKnobFloodStepUp",
-    "description" : "LIGHT: CONSOLES Knob (Flood) - Step Up",
-    "label" : "Step Up",
-    "role" : "up"
-  }, {
-    "id" : "lightconsolesknobfloodstepdown",
-    "className" : "LightConsolesKnobFloodStepDown",
-    "description" : "LIGHT: CONSOLES Knob (Flood) - Step Down",
-    "label" : "Step Down",
-    "role" : "down"
-  }, {
-    "id" : "lightdedknobprimarystepup",
-    "className" : "LightDedKnobPrimaryStepUp",
-    "description" : "LIGHT: DED Knob (Primary) - Step Up",
-    "label" : "Step Up",
-    "role" : "up"
-  }, {
-    "id" : "lightdedknobprimarystepdown",
-    "className" : "LightDedKnobPrimaryStepDown",
-    "description" : "LIGHT: DED Knob (Primary) - Step Down",
-    "label" : "Step Down",
-    "role" : "down"
-  }, {
-    "id" : "lightinstpnlknobprimarystepup",
-    "className" : "LightInstPnlKnobPrimaryStepUp",
-    "description" : "LIGHT: INST PNL Knob (Primary) - Step Up",
-    "label" : "Step Up",
-    "role" : "up"
-  }, {
-    "id" : "lightinstpnlknobprimarystepdown",
-    "className" : "LightInstPnlKnobPrimaryStepDown",
-    "description" : "LIGHT: INST PNL Knob (Primary) - Step Down",
-    "label" : "Step Down",
-    "role" : "down"
-  }, {
     "id" : "hudbrightnessswitchday",
     "className" : "HudBrightnessSwitchDay",
     "description" : "HUD: Brightness Switch - DAY",
@@ -2664,60 +2790,6 @@
     "id" : "hudscalesswitchoff",
     "className" : "HudScalesSwitchOff",
     "description" : "HUD: Scales Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "snsrrdraltswitchon",
-    "className" : "SnsrRdrAltSwitchOn",
-    "description" : "SNSR: RDR ALT Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "snsrrdraltswitchstdby",
-    "className" : "SnsrRdrAltSwitchStdby",
-    "description" : "SNSR: RDR ALT Switch - STDBY",
-    "label" : "STDBY",
-    "role" : "none"
-  }, {
-    "id" : "snsrrdraltswitchoff",
-    "className" : "SnsrRdrAltSwitchOff",
-    "description" : "SNSR: RDR ALT Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "snsrfcrswitchon",
-    "className" : "SnsrFcrSwitchOn",
-    "description" : "SNSR: FCR Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "snsrfcrswitchoff",
-    "className" : "SnsrFcrSwitchOff",
-    "description" : "SNSR: FCR Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "snsrrighthdptswitchon",
-    "className" : "SnsrRightHdptSwitchOn",
-    "description" : "SNSR: RIGHT HDPT Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "snsrrighthdptswitchoff",
-    "className" : "SnsrRightHdptSwitchOff",
-    "description" : "SNSR: RIGHT HDPT Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "snsrlefthdptswitchon",
-    "className" : "SnsrLeftHdptSwitchOn",
-    "description" : "SNSR: LEFT HDPT Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "snsrlefthdptswitchoff",
-    "className" : "SnsrLeftHdptSwitchOff",
-    "description" : "SNSR: LEFT HDPT Switch - OFF",
     "label" : "OFF",
     "role" : "off"
   }, {

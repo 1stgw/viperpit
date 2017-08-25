@@ -28,11 +28,6 @@
             <misc-laser-switch />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <misc-rf-switch />
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -44,7 +39,6 @@ import MiscRollSwitch from './MiscRollSwitch'
 import MiscAdvMode from './MiscAdvMode'
 import MiscMasterArmSwitch from './MiscMasterArmSwitch'
 import MiscLaserSwitch from './MiscLaserSwitch'
-import MiscRfSwitch from './MiscRfSwitch'
 
 export default {
   name: 'MiscPanel',
@@ -53,8 +47,7 @@ export default {
     MiscRollSwitch,
     MiscAdvMode,
     MiscMasterArmSwitch,
-    MiscLaserSwitch,
-    MiscRfSwitch
+    MiscLaserSwitch
   }
 }
 </script>
