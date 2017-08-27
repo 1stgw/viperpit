@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <twa-power-button />
+            <twa-low-button />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -15,7 +15,7 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <twa-low-button />
+            <twa-power-button />
           </div>
         </div>
       </div>
@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import TwaPowerButton from './TwaPowerButton'
-import TwaSearchButton from './TwaSearchButton'
 import TwaLowButton from './TwaLowButton'
+import TwaSearchButton from './TwaSearchButton'
+import TwaPowerButton from './TwaPowerButton'
 
 export default {
   name: 'TwaPanel',
   components: {
-    TwaPowerButton,
+    TwaLowButton,
     TwaSearchButton,
-    TwaLowButton
+    TwaPowerButton
   }
 }
 </script>

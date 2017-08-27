@@ -52,7 +52,7 @@ class CockpitGenerator {
 
 	private def generateCockpit(File path, Predicate<String> filter, Configuration it) {
 		val groups = toGroups(filter)
-		val categories = new LinkedHashSet(groups.map[category].toList.reverseView)
+		val categories = new LinkedHashSet(groups.map[category].toList)
 		val groupedBySection = groups.groupBy[section]
 		val sections = [ String category |
 			new LinkedHashSet(groups.filter[it.category == category].map[section].toList)

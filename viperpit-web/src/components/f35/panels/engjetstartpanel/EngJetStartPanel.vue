@@ -5,12 +5,12 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <eng-eng-cont-switch />
+            <eng-jfs-switch />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <eng-jfs-switch />
+            <eng-eng-cont-switch />
           </div>
         </div>
       </div>
@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import EngEngContSwitch from './EngEngContSwitch'
 import EngJfsSwitch from './EngJfsSwitch'
+import EngEngContSwitch from './EngEngContSwitch'
 
 export default {
   name: 'EngJetStartPanel',
   components: {
-    EngEngContSwitch,
-    EngJfsSwitch
+    EngJfsSwitch,
+    EngEngContSwitch
   }
 }
 </script>

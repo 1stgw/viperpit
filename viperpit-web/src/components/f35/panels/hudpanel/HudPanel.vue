@@ -5,27 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <hud-brightness-switch />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <hud-altitude-switch />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <hud-velocity-switch />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <hud-depr-ret-switch />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <hud-ded-data-switch />
+            <hud-scales-switch />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -35,7 +15,27 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <hud-scales-switch />
+            <hud-ded-data-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <hud-depr-ret-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <hud-velocity-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <hud-altitude-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <hud-brightness-switch />
           </div>
         </div>
       </div>
@@ -44,24 +44,24 @@
 </template>
 
 <script>
-import HudBrightnessSwitch from './HudBrightnessSwitch'
-import HudAltitudeSwitch from './HudAltitudeSwitch'
-import HudVelocitySwitch from './HudVelocitySwitch'
-import HudDeprRetSwitch from './HudDeprRetSwitch'
-import HudDedDataSwitch from './HudDedDataSwitch'
-import HudFpmSwitch from './HudFpmSwitch'
 import HudScalesSwitch from './HudScalesSwitch'
+import HudFpmSwitch from './HudFpmSwitch'
+import HudDedDataSwitch from './HudDedDataSwitch'
+import HudDeprRetSwitch from './HudDeprRetSwitch'
+import HudVelocitySwitch from './HudVelocitySwitch'
+import HudAltitudeSwitch from './HudAltitudeSwitch'
+import HudBrightnessSwitch from './HudBrightnessSwitch'
 
 export default {
   name: 'HudPanel',
   components: {
-    HudBrightnessSwitch,
-    HudAltitudeSwitch,
-    HudVelocitySwitch,
-    HudDeprRetSwitch,
-    HudDedDataSwitch,
+    HudScalesSwitch,
     HudFpmSwitch,
-    HudScalesSwitch
+    HudDedDataSwitch,
+    HudDeprRetSwitch,
+    HudVelocitySwitch,
+    HudAltitudeSwitch,
+    HudBrightnessSwitch
   }
 }
 </script>

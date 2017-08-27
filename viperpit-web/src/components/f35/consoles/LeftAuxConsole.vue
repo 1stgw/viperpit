@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <div class="row">
   <div class="col-sm-6">
-    <gear-panel />
+    <alt-gear-control />
   </div>
   <div class="col-sm-6">
     <hmcs-panel />
@@ -10,23 +10,23 @@
   </div>
   <div class="row">
   <div class="col-sm-12">
-    <alt-gear-control />
+    <gear-panel />
   </div>
   </div>
 </div>
 </template>
 
 <script>
-import GearPanel from '../panels/gearpanel/GearPanel'
-import HmcsPanel from '../panels/hmcspanel/HmcsPanel'
 import AltGearControl from '../panels/altgearcontrol/AltGearControl'
+import HmcsPanel from '../panels/hmcspanel/HmcsPanel'
+import GearPanel from '../panels/gearpanel/GearPanel'
 
 export default {
   name: 'LeftAuxConsole',
   components: {
-    GearPanel,
+    AltGearControl,
     HmcsPanel,
-    AltGearControl
+    GearPanel
   }
 }
 </script>

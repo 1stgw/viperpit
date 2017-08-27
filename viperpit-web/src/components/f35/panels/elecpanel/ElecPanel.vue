@@ -5,12 +5,12 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <elec-caution-reset-button />
+            <elec-main-pwr-switch />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <elec-main-pwr-switch />
+            <elec-caution-reset-button />
           </div>
         </div>
       </div>
@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import ElecCautionResetButton from './ElecCautionResetButton'
 import ElecMainPwrSwitch from './ElecMainPwrSwitch'
+import ElecCautionResetButton from './ElecCautionResetButton'
 
 export default {
   name: 'ElecPanel',
   components: {
-    ElecCautionResetButton,
-    ElecMainPwrSwitch
+    ElecMainPwrSwitch,
+    ElecCautionResetButton
   }
 }
 </script>

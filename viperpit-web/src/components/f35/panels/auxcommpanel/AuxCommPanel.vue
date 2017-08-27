@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <aux-station-selector-switch />
+            <aux-cni-knob-switch />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -15,7 +15,7 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <aux-cni-knob-switch />
+            <aux-station-selector-switch />
           </div>
         </div>
       </div>
@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import AuxStationSelectorSwitch from './AuxStationSelectorSwitch'
-import AuxChannel from './AuxChannel'
 import AuxCniKnobSwitch from './AuxCniKnobSwitch'
+import AuxChannel from './AuxChannel'
+import AuxStationSelectorSwitch from './AuxStationSelectorSwitch'
 
 export default {
   name: 'AuxCommPanel',
   components: {
-    AuxStationSelectorSwitch,
+    AuxCniKnobSwitch,
     AuxChannel,
-    AuxCniKnobSwitch
+    AuxStationSelectorSwitch
   }
 }
 </script>

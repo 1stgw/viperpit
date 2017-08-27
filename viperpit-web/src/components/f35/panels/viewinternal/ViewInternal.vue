@@ -5,22 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <viewint-glance-backward />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <viewint-glance-forward />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <viewint-pan3d-cockpit />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <viewint-snap3d-cockpit />
+            <viewint-padlock />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -30,7 +15,22 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <viewint-padlock />
+            <viewint-snap3d-cockpit />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <viewint-pan3d-cockpit />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <viewint-glance-forward />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <viewint-glance-backward />
           </div>
         </div>
       </div>
@@ -39,22 +39,22 @@
 </template>
 
 <script>
-import ViewintGlanceBackward from './ViewintGlanceBackward'
-import ViewintGlanceForward from './ViewintGlanceForward'
-import ViewintPan3dCockpit from './ViewintPan3dCockpit'
-import ViewintSnap3dCockpit from './ViewintSnap3dCockpit'
-import ViewintHudOnly from './ViewintHudOnly'
 import ViewintPadlock from './ViewintPadlock'
+import ViewintHudOnly from './ViewintHudOnly'
+import ViewintSnap3dCockpit from './ViewintSnap3dCockpit'
+import ViewintPan3dCockpit from './ViewintPan3dCockpit'
+import ViewintGlanceForward from './ViewintGlanceForward'
+import ViewintGlanceBackward from './ViewintGlanceBackward'
 
 export default {
   name: 'ViewInternal',
   components: {
-    ViewintGlanceBackward,
-    ViewintGlanceForward,
-    ViewintPan3dCockpit,
-    ViewintSnap3dCockpit,
+    ViewintPadlock,
     ViewintHudOnly,
-    ViewintPadlock
+    ViewintSnap3dCockpit,
+    ViewintPan3dCockpit,
+    ViewintGlanceForward,
+    ViewintGlanceBackward
   }
 }
 </script>

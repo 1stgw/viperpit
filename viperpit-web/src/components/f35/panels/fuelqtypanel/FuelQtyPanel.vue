@@ -5,12 +5,12 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <qty-ext-fuel-trans-switch />
+            <qty-fuel-qty-sel-knob />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <qty-fuel-qty-sel-knob />
+            <qty-ext-fuel-trans-switch />
           </div>
         </div>
       </div>
@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import QtyExtFuelTransSwitch from './QtyExtFuelTransSwitch'
 import QtyFuelQtySelKnob from './QtyFuelQtySelKnob'
+import QtyExtFuelTransSwitch from './QtyExtFuelTransSwitch'
 
 export default {
   name: 'FuelQtyPanel',
   components: {
-    QtyExtFuelTransSwitch,
-    QtyFuelQtySelKnob
+    QtyFuelQtySelKnob,
+    QtyExtFuelTransSwitch
   }
 }
 </script>

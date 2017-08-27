@@ -5,22 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <twp-tgt-sep />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <twp-sys-test />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <twp-unknown />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <twp-priority-mode />
+            <twp-handoff />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -30,7 +15,22 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <twp-handoff />
+            <twp-priority-mode />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <twp-unknown />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <twp-sys-test />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <twp-tgt-sep />
           </div>
         </div>
       </div>
@@ -39,22 +39,22 @@
 </template>
 
 <script>
-import TwpTgtSep from './TwpTgtSep'
-import TwpSysTest from './TwpSysTest'
-import TwpUnknown from './TwpUnknown'
-import TwpPriorityMode from './TwpPriorityMode'
-import TwpMissileLaunch from './TwpMissileLaunch'
 import TwpHandoff from './TwpHandoff'
+import TwpMissileLaunch from './TwpMissileLaunch'
+import TwpPriorityMode from './TwpPriorityMode'
+import TwpUnknown from './TwpUnknown'
+import TwpSysTest from './TwpSysTest'
+import TwpTgtSep from './TwpTgtSep'
 
 export default {
   name: 'Twp',
   components: {
-    TwpTgtSep,
-    TwpSysTest,
-    TwpUnknown,
-    TwpPriorityMode,
+    TwpHandoff,
     TwpMissileLaunch,
-    TwpHandoff
+    TwpPriorityMode,
+    TwpUnknown,
+    TwpSysTest,
+    TwpTgtSep
   }
 }
 </script>

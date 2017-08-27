@@ -5,12 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <viewgen-rotate-view-right />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <viewgen-rotate-view-left />
+            <viewgen-rotate-view-up />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -20,7 +15,12 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <viewgen-rotate-view-up />
+            <viewgen-rotate-view-left />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <viewgen-rotate-view-right />
           </div>
         </div>
       </div>
@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import ViewgenRotateViewRight from './ViewgenRotateViewRight'
-import ViewgenRotateViewLeft from './ViewgenRotateViewLeft'
-import ViewgenRotateViewDown from './ViewgenRotateViewDown'
 import ViewgenRotateViewUp from './ViewgenRotateViewUp'
+import ViewgenRotateViewDown from './ViewgenRotateViewDown'
+import ViewgenRotateViewLeft from './ViewgenRotateViewLeft'
+import ViewgenRotateViewRight from './ViewgenRotateViewRight'
 
 export default {
   name: 'ViewGeneralControl',
   components: {
-    ViewgenRotateViewRight,
-    ViewgenRotateViewLeft,
+    ViewgenRotateViewUp,
     ViewgenRotateViewDown,
-    ViewgenRotateViewUp
+    ViewgenRotateViewLeft,
+    ViewgenRotateViewRight
   }
 }
 </script>

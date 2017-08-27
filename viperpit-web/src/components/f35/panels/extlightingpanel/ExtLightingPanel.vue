@@ -5,12 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <ext-master-switch />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <ext-wing-tail-switch />
+            <ext-anti-collision-switch />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -20,7 +15,12 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <ext-anti-collision-switch />
+            <ext-wing-tail-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <ext-master-switch />
           </div>
         </div>
       </div>
@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import ExtMasterSwitch from './ExtMasterSwitch'
-import ExtWingTailSwitch from './ExtWingTailSwitch'
-import ExtPositionSwitch from './ExtPositionSwitch'
 import ExtAntiCollisionSwitch from './ExtAntiCollisionSwitch'
+import ExtPositionSwitch from './ExtPositionSwitch'
+import ExtWingTailSwitch from './ExtWingTailSwitch'
+import ExtMasterSwitch from './ExtMasterSwitch'
 
 export default {
   name: 'ExtLightingPanel',
   components: {
-    ExtMasterSwitch,
-    ExtWingTailSwitch,
+    ExtAntiCollisionSwitch,
     ExtPositionSwitch,
-    ExtAntiCollisionSwitch
+    ExtWingTailSwitch,
+    ExtMasterSwitch
   }
 }
 </script>

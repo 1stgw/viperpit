@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <fuel-air-refuel-switch />
+            <fuel-master-switch />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -15,7 +15,7 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <fuel-master-switch />
+            <fuel-air-refuel-switch />
           </div>
         </div>
       </div>
@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import FuelAirRefuelSwitch from './FuelAirRefuelSwitch'
-import FuelEngFeedKnob from './FuelEngFeedKnob'
 import FuelMasterSwitch from './FuelMasterSwitch'
+import FuelEngFeedKnob from './FuelEngFeedKnob'
+import FuelAirRefuelSwitch from './FuelAirRefuelSwitch'
 
 export default {
   name: 'FuelPanel',
   components: {
-    FuelAirRefuelSwitch,
+    FuelMasterSwitch,
     FuelEngFeedKnob,
-    FuelMasterSwitch
+    FuelAirRefuelSwitch
   }
 }
 </script>

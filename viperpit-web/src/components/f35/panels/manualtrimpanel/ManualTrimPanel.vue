@@ -5,12 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <trim-pitch-trim-wheel />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <trim-yaw-trim-knob />
+            <trim-roll-trim-wheel />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -20,7 +15,12 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <trim-roll-trim-wheel />
+            <trim-yaw-trim-knob />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <trim-pitch-trim-wheel />
           </div>
         </div>
       </div>
@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import TrimPitchTrimWheel from './TrimPitchTrimWheel'
-import TrimYawTrimKnob from './TrimYawTrimKnob'
-import TrimTrimApDiscSwitch from './TrimTrimApDiscSwitch'
 import TrimRollTrimWheel from './TrimRollTrimWheel'
+import TrimTrimApDiscSwitch from './TrimTrimApDiscSwitch'
+import TrimYawTrimKnob from './TrimYawTrimKnob'
+import TrimPitchTrimWheel from './TrimPitchTrimWheel'
 
 export default {
   name: 'ManualTrimPanel',
   components: {
-    TrimPitchTrimWheel,
-    TrimYawTrimKnob,
+    TrimRollTrimWheel,
     TrimTrimApDiscSwitch,
-    TrimRollTrimWheel
+    TrimYawTrimKnob,
+    TrimPitchTrimWheel
   }
 }
 </script>

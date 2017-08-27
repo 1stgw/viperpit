@@ -5,12 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <twp-tgt-sep />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <twp-sys-test />
+            <twp-handoff />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -20,7 +15,12 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <twp-handoff />
+            <twp-sys-test />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div align="center" style="padding: 0px;">
+            <twp-tgt-sep />
           </div>
         </div>
       </div>
@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import TwpTgtSep from './TwpTgtSep'
-import TwpSysTest from './TwpSysTest'
-import TwpMissileLaunch from './TwpMissileLaunch'
 import TwpHandoff from './TwpHandoff'
+import TwpMissileLaunch from './TwpMissileLaunch'
+import TwpSysTest from './TwpSysTest'
+import TwpTgtSep from './TwpTgtSep'
 
 export default {
   name: 'Twp',
   components: {
-    TwpTgtSep,
-    TwpSysTest,
+    TwpHandoff,
     TwpMissileLaunch,
-    TwpHandoff
+    TwpSysTest,
+    TwpTgtSep
   }
 }
 </script>

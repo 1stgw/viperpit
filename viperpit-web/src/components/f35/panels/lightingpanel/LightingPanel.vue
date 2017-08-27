@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <light-consoles-knob-flood />
+            <light-inst-pnl-knob-primary />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -15,7 +15,7 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <light-inst-pnl-knob-primary />
+            <light-consoles-knob-flood />
           </div>
         </div>
       </div>
@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import LightConsolesKnobFlood from './LightConsolesKnobFlood'
-import LightDedKnobPrimary from './LightDedKnobPrimary'
 import LightInstPnlKnobPrimary from './LightInstPnlKnobPrimary'
+import LightDedKnobPrimary from './LightDedKnobPrimary'
+import LightConsolesKnobFlood from './LightConsolesKnobFlood'
 
 export default {
   name: 'LightingPanel',
   components: {
-    LightConsolesKnobFlood,
+    LightInstPnlKnobPrimary,
     LightDedKnobPrimary,
-    LightInstPnlKnobPrimary
+    LightConsolesKnobFlood
   }
 }
 </script>

@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <main-altimeter-pressure-knob />
+            <main-hsi-hdg-knob />
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -15,7 +15,7 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div align="center" style="padding: 0px;">
-            <main-hsi-hdg-knob />
+            <main-altimeter-pressure-knob />
           </div>
         </div>
       </div>
@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import MainAltimeterPressureKnob from './MainAltimeterPressureKnob'
-import MainHsiCrsKnob from './MainHsiCrsKnob'
 import MainHsiHdgKnob from './MainHsiHdgKnob'
+import MainHsiCrsKnob from './MainHsiCrsKnob'
+import MainAltimeterPressureKnob from './MainAltimeterPressureKnob'
 
 export default {
   name: 'MainInstrument',
   components: {
-    MainAltimeterPressureKnob,
+    MainHsiHdgKnob,
     MainHsiCrsKnob,
-    MainHsiHdgKnob
+    MainAltimeterPressureKnob
   }
 }
 </script>
