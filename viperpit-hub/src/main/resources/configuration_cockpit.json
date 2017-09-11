@@ -26,6 +26,10 @@
     "className" : "Sensors",
     "name" : "Sensors"
   }, {
+    "id" : "nav",
+    "className" : "Nav",
+    "name" : "Nav"
+  }, {
     "id" : "leftconsole",
     "className" : "LeftConsole",
     "name" : "Left Console"
@@ -111,6 +115,18 @@
     "className" : "SnsrPwrPanel",
     "name" : "SNSR PWR PANEL"
   }, {
+    "id" : "maininstrument",
+    "className" : "MainInstrument",
+    "name" : "MAIN INSTRUMENT"
+  }, {
+    "id" : "instrmodepanel",
+    "className" : "InstrModePanel",
+    "name" : "INSTR MODE PANEL"
+  }, {
+    "id" : "apandtfrpanel",
+    "className" : "ApAndTfrPanel",
+    "name" : "AP AND TFR PANEL"
+  }, {
     "id" : "fltcontrolpanel",
     "className" : "FltControlPanel",
     "name" : "FLT CONTROL PANEL"
@@ -170,14 +186,6 @@
     "id" : "lefteyebrow",
     "className" : "LeftEyebrow",
     "name" : "LEFT EYEBROW"
-  }, {
-    "id" : "maininstrument",
-    "className" : "MainInstrument",
-    "name" : "MAIN INSTRUMENT"
-  }, {
-    "id" : "instrmodepanel",
-    "className" : "InstrModePanel",
-    "name" : "INSTR MODE PANEL"
   }, {
     "id" : "hudpanel",
     "className" : "HudPanel",
@@ -602,6 +610,48 @@
     "label" : "RF",
     "type" : "switch"
   }, {
+    "id" : "MAIN: HSI HDG Knob",
+    "className" : "MainHsiHdgKnob",
+    "description" : "MAIN: HSI HDG Knob - Increase (5°)",
+    "label" : "HSI HDG",
+    "type" : "button"
+  }, {
+    "id" : "MAIN: HSI CRS Knob",
+    "className" : "MainHsiCrsKnob",
+    "description" : "MAIN: HSI CRS Knob - Increase (5°)",
+    "label" : "HSI CRS",
+    "type" : "button"
+  }, {
+    "id" : "MAIN: Altimeter Pressure Knob",
+    "className" : "MainAltimeterPressureKnob",
+    "description" : "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+    "label" : "Altimeter Pressure",
+    "type" : "button"
+  }, {
+    "id" : "INSTR: MODE Knob",
+    "className" : "InstrModeKnob",
+    "description" : "INSTR: MODE Knob - ILS/TCN",
+    "label" : "MODE",
+    "type" : "switch"
+  }, {
+    "id" : "MISC: ADV MODE",
+    "className" : "MiscAdvMode",
+    "description" : "MISC: ADV MODE - Toggle TFR On / Off",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "MISC: ROLL Switch",
+    "className" : "MiscRollSwitch",
+    "description" : "MISC: ROLL Switch - HDG SEL",
+    "label" : "ROLL",
+    "type" : "switch"
+  }, {
+    "id" : "MISC: PITCH Switch",
+    "className" : "MiscPitchSwitch",
+    "description" : "MISC: PITCH Switch - ALT HOLD",
+    "label" : "PITCH",
+    "type" : "switch"
+  }, {
     "id" : "FLT: DIGITAL Switch",
     "className" : "FltDigitalSwitch",
     "description" : "FLT: DIGITAL Switch - BACKUP",
@@ -812,24 +862,6 @@
     "label" : "MASTER ARM",
     "type" : "switch"
   }, {
-    "id" : "MISC: ADV MODE",
-    "className" : "MiscAdvMode",
-    "description" : "MISC: ADV MODE - Toggle TFR On / Off",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "MISC: ROLL Switch",
-    "className" : "MiscRollSwitch",
-    "description" : "MISC: ROLL Switch - HDG SEL",
-    "label" : "ROLL",
-    "type" : "switch"
-  }, {
-    "id" : "MISC: PITCH Switch",
-    "className" : "MiscPitchSwitch",
-    "description" : "MISC: PITCH Switch - ALT HOLD",
-    "label" : "PITCH",
-    "type" : "switch"
-  }, {
     "id" : "EYE: MASTER CAUTION Button",
     "className" : "EyeMasterCautionButton",
     "description" : "EYE: MASTER CAUTION Button - Push",
@@ -841,30 +873,6 @@
     "description" : "EYE: F ACK Button - Push",
     "label" : null,
     "type" : "button"
-  }, {
-    "id" : "MAIN: HSI HDG Knob",
-    "className" : "MainHsiHdgKnob",
-    "description" : "MAIN: HSI HDG Knob - Increase (5°)",
-    "label" : "HSI HDG",
-    "type" : "button"
-  }, {
-    "id" : "MAIN: HSI CRS Knob",
-    "className" : "MainHsiCrsKnob",
-    "description" : "MAIN: HSI CRS Knob - Increase (5°)",
-    "label" : "HSI CRS",
-    "type" : "button"
-  }, {
-    "id" : "MAIN: Altimeter Pressure Knob",
-    "className" : "MainAltimeterPressureKnob",
-    "description" : "MAIN: Altimeter Pressure Knob - Incr. (5°)",
-    "label" : "Altimeter Pressure",
-    "type" : "button"
-  }, {
-    "id" : "INSTR: MODE Knob",
-    "className" : "InstrModeKnob",
-    "description" : "INSTR: MODE Knob - ILS/TCN",
-    "label" : "MODE",
-    "type" : "switch"
   }, {
     "id" : "HUD: Scales Switch",
     "className" : "HudScalesSwitch",
@@ -1971,6 +1979,144 @@
     "label" : "SILENT",
     "role" : "none"
   }, {
+    "id" : "mainhsihdgknobincrease5",
+    "className" : "MainHsiHdgKnobIncrease5",
+    "description" : "MAIN: HSI HDG Knob - Increase (5°)",
+    "label" : "Increase (5°)",
+    "role" : "none"
+  }, {
+    "id" : "mainhsihdgknobdecrease5",
+    "className" : "MainHsiHdgKnobDecrease5",
+    "description" : "MAIN: HSI HDG Knob - Decrease (5°)",
+    "label" : "Decrease (5°)",
+    "role" : "none"
+  }, {
+    "id" : "mainhsihdgknobincrease1",
+    "className" : "MainHsiHdgKnobIncrease1",
+    "description" : "MAIN: HSI HDG Knob - Increase (1°)",
+    "label" : "Increase (1°)",
+    "role" : "none"
+  }, {
+    "id" : "mainhsihdgknobdecrease1",
+    "className" : "MainHsiHdgKnobDecrease1",
+    "description" : "MAIN: HSI HDG Knob - Decrease (1°)",
+    "label" : "Decrease (1°)",
+    "role" : "none"
+  }, {
+    "id" : "mainhsicrsknobincrease5",
+    "className" : "MainHsiCrsKnobIncrease5",
+    "description" : "MAIN: HSI CRS Knob - Increase (5°)",
+    "label" : "Increase (5°)",
+    "role" : "none"
+  }, {
+    "id" : "mainhsicrsknobdecrease5",
+    "className" : "MainHsiCrsKnobDecrease5",
+    "description" : "MAIN: HSI CRS Knob - Decrease (5°)",
+    "label" : "Decrease (5°)",
+    "role" : "none"
+  }, {
+    "id" : "mainhsicrsknobincrease1",
+    "className" : "MainHsiCrsKnobIncrease1",
+    "description" : "MAIN: HSI CRS Knob - Increase (1°)",
+    "label" : "Increase (1°)",
+    "role" : "none"
+  }, {
+    "id" : "mainhsicrsknobdecrease1",
+    "className" : "MainHsiCrsKnobDecrease1",
+    "description" : "MAIN: HSI CRS Knob - Decrease (1°)",
+    "label" : "Decrease (1°)",
+    "role" : "none"
+  }, {
+    "id" : "mainaltimeterpressureknobincr5",
+    "className" : "MainAltimeterPressureKnobIncr5",
+    "description" : "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+    "label" : "Incr. (5°)",
+    "role" : "none"
+  }, {
+    "id" : "mainaltimeterpressureknobdecr5",
+    "className" : "MainAltimeterPressureKnobDecr5",
+    "description" : "MAIN: Altimeter Pressure Knob - Decr. (5°)",
+    "label" : "Decr. (5°)",
+    "role" : "none"
+  }, {
+    "id" : "mainaltimeterpressureknobincr1",
+    "className" : "MainAltimeterPressureKnobIncr1",
+    "description" : "MAIN: Altimeter Pressure Knob - Incr. (1°)",
+    "label" : "Incr. (1°)",
+    "role" : "none"
+  }, {
+    "id" : "mainaltimeterpressureknobdecr1",
+    "className" : "MainAltimeterPressureKnobDecr1",
+    "description" : "MAIN: Altimeter Pressure Knob - Decr. (1°)",
+    "label" : "Decr. (1°)",
+    "role" : "none"
+  }, {
+    "id" : "instrmodeknobilstcn",
+    "className" : "InstrModeKnobIlsTcn",
+    "description" : "INSTR: MODE Knob - ILS/TCN",
+    "label" : "ILS/TCN",
+    "role" : "none"
+  }, {
+    "id" : "instrmodeknobtcn",
+    "className" : "InstrModeKnobTcn",
+    "description" : "INSTR: MODE Knob - TCN",
+    "label" : "TCN",
+    "role" : "none"
+  }, {
+    "id" : "instrmodeknobnav",
+    "className" : "InstrModeKnobNav",
+    "description" : "INSTR: MODE Knob - NAV",
+    "label" : "NAV",
+    "role" : "none"
+  }, {
+    "id" : "instrmodeknobilsnav",
+    "className" : "InstrModeKnobIlsNav",
+    "description" : "INSTR: MODE Knob - ILS/NAV",
+    "label" : "ILS/NAV",
+    "role" : "none"
+  }, {
+    "id" : "miscadvmodetoggletfronoff",
+    "className" : "MiscAdvModeToggleTfrOnOff",
+    "description" : "MISC: ADV MODE - Toggle TFR On / Off",
+    "label" : "ADV MODE",
+    "role" : "off"
+  }, {
+    "id" : "miscrollswitchhdgsel",
+    "className" : "MiscRollSwitchHdgSel",
+    "description" : "MISC: ROLL Switch - HDG SEL",
+    "label" : "HDG SEL",
+    "role" : "none"
+  }, {
+    "id" : "miscrollswitchatthold",
+    "className" : "MiscRollSwitchAttHold",
+    "description" : "MISC: ROLL Switch - ATT HOLD",
+    "label" : "ATT HOLD",
+    "role" : "none"
+  }, {
+    "id" : "miscrollswitchstrgsel",
+    "className" : "MiscRollSwitchStrgSel",
+    "description" : "MISC: ROLL Switch -  STRG SEL",
+    "label" : "STRG SEL",
+    "role" : "none"
+  }, {
+    "id" : "miscpitchswitchalthold",
+    "className" : "MiscPitchSwitchAltHold",
+    "description" : "MISC: PITCH Switch - ALT HOLD",
+    "label" : "ALT HOLD",
+    "role" : "none"
+  }, {
+    "id" : "miscpitchswitchapoff",
+    "className" : "MiscPitchSwitchAPOff",
+    "description" : "MISC: PITCH Switch - A/P OFF",
+    "label" : "A/P OFF",
+    "role" : "off"
+  }, {
+    "id" : "miscpitchswitchatthold",
+    "className" : "MiscPitchSwitchAttHold",
+    "description" : "MISC: PITCH Switch - ATT HOLD",
+    "label" : "ATT HOLD",
+    "role" : "none"
+  }, {
     "id" : "fltdigitalswitchbackup",
     "className" : "FltDigitalSwitchBackup",
     "description" : "FLT: DIGITAL Switch - BACKUP",
@@ -2373,48 +2519,6 @@
     "label" : "SIM",
     "role" : "none"
   }, {
-    "id" : "miscadvmodetoggletfronoff",
-    "className" : "MiscAdvModeToggleTfrOnOff",
-    "description" : "MISC: ADV MODE - Toggle TFR On / Off",
-    "label" : "ADV MODE",
-    "role" : "off"
-  }, {
-    "id" : "miscrollswitchhdgsel",
-    "className" : "MiscRollSwitchHdgSel",
-    "description" : "MISC: ROLL Switch - HDG SEL",
-    "label" : "HDG SEL",
-    "role" : "none"
-  }, {
-    "id" : "miscrollswitchatthold",
-    "className" : "MiscRollSwitchAttHold",
-    "description" : "MISC: ROLL Switch - ATT HOLD",
-    "label" : "ATT HOLD",
-    "role" : "none"
-  }, {
-    "id" : "miscrollswitchstrgsel",
-    "className" : "MiscRollSwitchStrgSel",
-    "description" : "MISC: ROLL Switch -  STRG SEL",
-    "label" : "STRG SEL",
-    "role" : "none"
-  }, {
-    "id" : "miscpitchswitchalthold",
-    "className" : "MiscPitchSwitchAltHold",
-    "description" : "MISC: PITCH Switch - ALT HOLD",
-    "label" : "ALT HOLD",
-    "role" : "none"
-  }, {
-    "id" : "miscpitchswitchapoff",
-    "className" : "MiscPitchSwitchAPOff",
-    "description" : "MISC: PITCH Switch - A/P OFF",
-    "label" : "A/P OFF",
-    "role" : "off"
-  }, {
-    "id" : "miscpitchswitchatthold",
-    "className" : "MiscPitchSwitchAttHold",
-    "description" : "MISC: PITCH Switch - ATT HOLD",
-    "label" : "ATT HOLD",
-    "role" : "none"
-  }, {
     "id" : "eyemastercautionbuttonpush",
     "className" : "EyeMasterCautionButtonPush",
     "description" : "EYE: MASTER CAUTION Button - Push",
@@ -2425,102 +2529,6 @@
     "className" : "EyeFAckButtonPush",
     "description" : "EYE: F ACK Button - Push",
     "label" : "F ACK",
-    "role" : "none"
-  }, {
-    "id" : "mainhsihdgknobincrease5",
-    "className" : "MainHsiHdgKnobIncrease5",
-    "description" : "MAIN: HSI HDG Knob - Increase (5°)",
-    "label" : "Increase (5°)",
-    "role" : "none"
-  }, {
-    "id" : "mainhsihdgknobdecrease5",
-    "className" : "MainHsiHdgKnobDecrease5",
-    "description" : "MAIN: HSI HDG Knob - Decrease (5°)",
-    "label" : "Decrease (5°)",
-    "role" : "none"
-  }, {
-    "id" : "mainhsihdgknobincrease1",
-    "className" : "MainHsiHdgKnobIncrease1",
-    "description" : "MAIN: HSI HDG Knob - Increase (1°)",
-    "label" : "Increase (1°)",
-    "role" : "none"
-  }, {
-    "id" : "mainhsihdgknobdecrease1",
-    "className" : "MainHsiHdgKnobDecrease1",
-    "description" : "MAIN: HSI HDG Knob - Decrease (1°)",
-    "label" : "Decrease (1°)",
-    "role" : "none"
-  }, {
-    "id" : "mainhsicrsknobincrease5",
-    "className" : "MainHsiCrsKnobIncrease5",
-    "description" : "MAIN: HSI CRS Knob - Increase (5°)",
-    "label" : "Increase (5°)",
-    "role" : "none"
-  }, {
-    "id" : "mainhsicrsknobdecrease5",
-    "className" : "MainHsiCrsKnobDecrease5",
-    "description" : "MAIN: HSI CRS Knob - Decrease (5°)",
-    "label" : "Decrease (5°)",
-    "role" : "none"
-  }, {
-    "id" : "mainhsicrsknobincrease1",
-    "className" : "MainHsiCrsKnobIncrease1",
-    "description" : "MAIN: HSI CRS Knob - Increase (1°)",
-    "label" : "Increase (1°)",
-    "role" : "none"
-  }, {
-    "id" : "mainhsicrsknobdecrease1",
-    "className" : "MainHsiCrsKnobDecrease1",
-    "description" : "MAIN: HSI CRS Knob - Decrease (1°)",
-    "label" : "Decrease (1°)",
-    "role" : "none"
-  }, {
-    "id" : "mainaltimeterpressureknobincr5",
-    "className" : "MainAltimeterPressureKnobIncr5",
-    "description" : "MAIN: Altimeter Pressure Knob - Incr. (5°)",
-    "label" : "Incr. (5°)",
-    "role" : "none"
-  }, {
-    "id" : "mainaltimeterpressureknobdecr5",
-    "className" : "MainAltimeterPressureKnobDecr5",
-    "description" : "MAIN: Altimeter Pressure Knob - Decr. (5°)",
-    "label" : "Decr. (5°)",
-    "role" : "none"
-  }, {
-    "id" : "mainaltimeterpressureknobincr1",
-    "className" : "MainAltimeterPressureKnobIncr1",
-    "description" : "MAIN: Altimeter Pressure Knob - Incr. (1°)",
-    "label" : "Incr. (1°)",
-    "role" : "none"
-  }, {
-    "id" : "mainaltimeterpressureknobdecr1",
-    "className" : "MainAltimeterPressureKnobDecr1",
-    "description" : "MAIN: Altimeter Pressure Knob - Decr. (1°)",
-    "label" : "Decr. (1°)",
-    "role" : "none"
-  }, {
-    "id" : "instrmodeknobilstcn",
-    "className" : "InstrModeKnobIlsTcn",
-    "description" : "INSTR: MODE Knob - ILS/TCN",
-    "label" : "ILS/TCN",
-    "role" : "none"
-  }, {
-    "id" : "instrmodeknobtcn",
-    "className" : "InstrModeKnobTcn",
-    "description" : "INSTR: MODE Knob - TCN",
-    "label" : "TCN",
-    "role" : "none"
-  }, {
-    "id" : "instrmodeknobnav",
-    "className" : "InstrModeKnobNav",
-    "description" : "INSTR: MODE Knob - NAV",
-    "label" : "NAV",
-    "role" : "none"
-  }, {
-    "id" : "instrmodeknobilsnav",
-    "className" : "InstrModeKnobIlsNav",
-    "description" : "INSTR: MODE Knob - ILS/NAV",
-    "label" : "ILS/NAV",
     "role" : "none"
   }, {
     "id" : "hudscalesswitchvvvah",

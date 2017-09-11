@@ -1815,6 +1815,280 @@
       ]
     },
     {
+      "id": "nav",
+      "class": "Nav",
+      "name": "Nav",
+      "panel": [
+        {
+          "id": "maininstrument",
+          "class": "MainInstrument",
+          "name": "MAIN INSTRUMENT",
+          "group": [
+            {
+              "id": "MAIN: HSI HDG Knob",
+              "class": "MainHsiHdgKnob",
+              "description": "MAIN: HSI HDG Knob - Increase (5°)",
+              "label": "HSI HDG",
+              "type": "button",
+              "control": [
+                {
+                  "id": "mainhsihdgknobincrease5",
+                  "clazz": "MainHsiHdgKnobIncrease5",
+                  "callback": "SimHsiHeadingInc",
+                  "description": "MAIN: HSI HDG Knob - Increase (5°)",
+                  "label": "Increase (5°)",
+                  "role": "none"
+                },
+                {
+                  "id": "mainhsihdgknobdecrease5",
+                  "clazz": "MainHsiHdgKnobDecrease5",
+                  "callback": "SimHsiHeadingDec",
+                  "description": "MAIN: HSI HDG Knob - Decrease (5°)",
+                  "label": "Decrease (5°)",
+                  "role": "none"
+                },
+                {
+                  "id": "mainhsihdgknobincrease1",
+                  "clazz": "MainHsiHdgKnobIncrease1",
+                  "callback": "SimHsiHdgIncBy1",
+                  "description": "MAIN: HSI HDG Knob - Increase (1°)",
+                  "label": "Increase (1°)",
+                  "role": "none"
+                },
+                {
+                  "id": "mainhsihdgknobdecrease1",
+                  "clazz": "MainHsiHdgKnobDecrease1",
+                  "callback": "SimHsiHdgDecBy1",
+                  "description": "MAIN: HSI HDG Knob - Decrease (1°)",
+                  "label": "Decrease (1°)",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "MAIN: HSI CRS Knob",
+              "class": "MainHsiCrsKnob",
+              "description": "MAIN: HSI CRS Knob - Increase (5°)",
+              "label": "HSI CRS",
+              "type": "button",
+              "control": [
+                {
+                  "id": "mainhsicrsknobincrease5",
+                  "clazz": "MainHsiCrsKnobIncrease5",
+                  "callback": "SimHsiCourseInc",
+                  "description": "MAIN: HSI CRS Knob - Increase (5°)",
+                  "label": "Increase (5°)",
+                  "role": "none"
+                },
+                {
+                  "id": "mainhsicrsknobdecrease5",
+                  "clazz": "MainHsiCrsKnobDecrease5",
+                  "callback": "SimHsiCourseDec",
+                  "description": "MAIN: HSI CRS Knob - Decrease (5°)",
+                  "label": "Decrease (5°)",
+                  "role": "none"
+                },
+                {
+                  "id": "mainhsicrsknobincrease1",
+                  "clazz": "MainHsiCrsKnobIncrease1",
+                  "callback": "SimHsiCrsIncBy1",
+                  "description": "MAIN: HSI CRS Knob - Increase (1°)",
+                  "label": "Increase (1°)",
+                  "role": "none"
+                },
+                {
+                  "id": "mainhsicrsknobdecrease1",
+                  "clazz": "MainHsiCrsKnobDecrease1",
+                  "callback": "SimHsiCrsDecBy1",
+                  "description": "MAIN: HSI CRS Knob - Decrease (1°)",
+                  "label": "Decrease (1°)",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "MAIN: Altimeter Pressure Knob",
+              "class": "MainAltimeterPressureKnob",
+              "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+              "label": "Altimeter Pressure",
+              "type": "button",
+              "control": [
+                {
+                  "id": "mainaltimeterpressureknobincr5",
+                  "clazz": "MainAltimeterPressureKnobIncr5",
+                  "callback": "SimAltPressInc",
+                  "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+                  "label": "Incr. (5°)",
+                  "role": "none"
+                },
+                {
+                  "id": "mainaltimeterpressureknobdecr5",
+                  "clazz": "MainAltimeterPressureKnobDecr5",
+                  "callback": "SimAltPressDec",
+                  "description": "MAIN: Altimeter Pressure Knob - Decr. (5°)",
+                  "label": "Decr. (5°)",
+                  "role": "none"
+                },
+                {
+                  "id": "mainaltimeterpressureknobincr1",
+                  "clazz": "MainAltimeterPressureKnobIncr1",
+                  "callback": "SimAltPressIncBy1",
+                  "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
+                  "label": "Incr. (1°)",
+                  "role": "none"
+                },
+                {
+                  "id": "mainaltimeterpressureknobdecr1",
+                  "clazz": "MainAltimeterPressureKnobDecr1",
+                  "callback": "SimAltPressDecBy1",
+                  "description": "MAIN: Altimeter Pressure Knob - Decr. (1°)",
+                  "label": "Decr. (1°)",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "instrmodepanel",
+          "class": "InstrModePanel",
+          "name": "INSTR MODE PANEL",
+          "group": [
+            {
+              "id": "INSTR: MODE Knob",
+              "class": "InstrModeKnob",
+              "description": "INSTR: MODE Knob - ILS/TCN",
+              "label": "MODE",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "instrmodeknobilstcn",
+                  "clazz": "InstrModeKnobIlsTcn",
+                  "callback": "SimHSIIlsTcn",
+                  "description": "INSTR: MODE Knob - ILS/TCN",
+                  "label": "ILS/TCN",
+                  "role": "none"
+                },
+                {
+                  "id": "instrmodeknobtcn",
+                  "clazz": "InstrModeKnobTcn",
+                  "callback": "SimHSITcn",
+                  "description": "INSTR: MODE Knob - TCN",
+                  "label": "TCN",
+                  "role": "none"
+                },
+                {
+                  "id": "instrmodeknobnav",
+                  "clazz": "InstrModeKnobNav",
+                  "callback": "SimHSINav",
+                  "description": "INSTR: MODE Knob - NAV",
+                  "label": "NAV",
+                  "role": "none"
+                },
+                {
+                  "id": "instrmodeknobilsnav",
+                  "clazz": "InstrModeKnobIlsNav",
+                  "callback": "SimHSIIlsNav",
+                  "description": "INSTR: MODE Knob - ILS/NAV",
+                  "label": "ILS/NAV",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apandtfrpanel",
+          "class": "ApAndTfrPanel",
+          "name": "AP AND TFR PANEL",
+          "group": [
+            {
+              "id": "MISC: ADV MODE",
+              "class": "MiscAdvMode",
+              "description": "MISC: ADV MODE - Toggle TFR On / Off",
+              "type": "button",
+              "control": [
+                {
+                  "id": "miscadvmodetoggletfronoff",
+                  "clazz": "MiscAdvModeToggleTfrOnOff",
+                  "callback": "SimToggleTFR",
+                  "description": "MISC: ADV MODE - Toggle TFR On / Off",
+                  "label": "ADV MODE",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "MISC: ROLL Switch",
+              "class": "MiscRollSwitch",
+              "description": "MISC: ROLL Switch - HDG SEL",
+              "label": "ROLL",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "miscrollswitchhdgsel",
+                  "clazz": "MiscRollSwitchHdgSel",
+                  "callback": "SimLeftAPUp",
+                  "description": "MISC: ROLL Switch - HDG SEL",
+                  "label": "HDG SEL",
+                  "role": "none"
+                },
+                {
+                  "id": "miscrollswitchatthold",
+                  "clazz": "MiscRollSwitchAttHold",
+                  "callback": "SimLeftAPMid",
+                  "description": "MISC: ROLL Switch - ATT HOLD",
+                  "label": "ATT HOLD",
+                  "role": "none"
+                },
+                {
+                  "id": "miscrollswitchstrgsel",
+                  "clazz": "MiscRollSwitchStrgSel",
+                  "callback": "SimLeftAPDown",
+                  "description": "MISC: ROLL Switch -  STRG SEL",
+                  "label": "STRG SEL",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "MISC: PITCH Switch",
+              "class": "MiscPitchSwitch",
+              "description": "MISC: PITCH Switch - ALT HOLD",
+              "label": "PITCH",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "miscpitchswitchalthold",
+                  "clazz": "MiscPitchSwitchAltHold",
+                  "callback": "SimRightAPUp",
+                  "description": "MISC: PITCH Switch - ALT HOLD",
+                  "label": "ALT HOLD",
+                  "role": "none"
+                },
+                {
+                  "id": "miscpitchswitchapoff",
+                  "clazz": "MiscPitchSwitchAPOff",
+                  "callback": "SimRightAPMid",
+                  "description": "MISC: PITCH Switch - A/P OFF",
+                  "label": "A/P OFF",
+                  "role": "off"
+                },
+                {
+                  "id": "miscpitchswitchatthold",
+                  "clazz": "MiscPitchSwitchAttHold",
+                  "callback": "SimRightAPDown",
+                  "description": "MISC: PITCH Switch - ATT HOLD",
+                  "label": "ATT HOLD",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "leftconsole",
       "class": "LeftConsole",
       "name": "Left Console",
@@ -2769,88 +3043,6 @@
                   "role": "none"
                 }
               ]
-            },
-            {
-              "id": "MISC: ADV MODE",
-              "class": "MiscAdvMode",
-              "description": "MISC: ADV MODE - Toggle TFR On / Off",
-              "type": "button",
-              "control": [
-                {
-                  "id": "miscadvmodetoggletfronoff",
-                  "clazz": "MiscAdvModeToggleTfrOnOff",
-                  "callback": "SimToggleTFR",
-                  "description": "MISC: ADV MODE - Toggle TFR On / Off",
-                  "label": "ADV MODE",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "MISC: ROLL Switch",
-              "class": "MiscRollSwitch",
-              "description": "MISC: ROLL Switch - HDG SEL",
-              "label": "ROLL",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "miscrollswitchhdgsel",
-                  "clazz": "MiscRollSwitchHdgSel",
-                  "callback": "SimLeftAPUp",
-                  "description": "MISC: ROLL Switch - HDG SEL",
-                  "label": "HDG SEL",
-                  "role": "none"
-                },
-                {
-                  "id": "miscrollswitchatthold",
-                  "clazz": "MiscRollSwitchAttHold",
-                  "callback": "SimLeftAPMid",
-                  "description": "MISC: ROLL Switch - ATT HOLD",
-                  "label": "ATT HOLD",
-                  "role": "none"
-                },
-                {
-                  "id": "miscrollswitchstrgsel",
-                  "clazz": "MiscRollSwitchStrgSel",
-                  "callback": "SimLeftAPDown",
-                  "description": "MISC: ROLL Switch -  STRG SEL",
-                  "label": "STRG SEL",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "MISC: PITCH Switch",
-              "class": "MiscPitchSwitch",
-              "description": "MISC: PITCH Switch - ALT HOLD",
-              "label": "PITCH",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "miscpitchswitchalthold",
-                  "clazz": "MiscPitchSwitchAltHold",
-                  "callback": "SimRightAPUp",
-                  "description": "MISC: PITCH Switch - ALT HOLD",
-                  "label": "ALT HOLD",
-                  "role": "none"
-                },
-                {
-                  "id": "miscpitchswitchapoff",
-                  "clazz": "MiscPitchSwitchAPOff",
-                  "callback": "SimRightAPMid",
-                  "description": "MISC: PITCH Switch - A/P OFF",
-                  "label": "A/P OFF",
-                  "role": "off"
-                },
-                {
-                  "id": "miscpitchswitchatthold",
-                  "clazz": "MiscPitchSwitchAttHold",
-                  "callback": "SimRightAPDown",
-                  "description": "MISC: PITCH Switch - ATT HOLD",
-                  "label": "ATT HOLD",
-                  "role": "none"
-                }
-              ]
             }
           ]
         },
@@ -2887,184 +3079,6 @@
                   "callback": "SimICPFAck",
                   "description": "EYE: F ACK Button - Push",
                   "label": "F ACK",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "maininstrument",
-          "class": "MainInstrument",
-          "name": "MAIN INSTRUMENT",
-          "group": [
-            {
-              "id": "MAIN: HSI HDG Knob",
-              "class": "MainHsiHdgKnob",
-              "description": "MAIN: HSI HDG Knob - Increase (5°)",
-              "label": "HSI HDG",
-              "type": "button",
-              "control": [
-                {
-                  "id": "mainhsihdgknobincrease5",
-                  "clazz": "MainHsiHdgKnobIncrease5",
-                  "callback": "SimHsiHeadingInc",
-                  "description": "MAIN: HSI HDG Knob - Increase (5°)",
-                  "label": "Increase (5°)",
-                  "role": "none"
-                },
-                {
-                  "id": "mainhsihdgknobdecrease5",
-                  "clazz": "MainHsiHdgKnobDecrease5",
-                  "callback": "SimHsiHeadingDec",
-                  "description": "MAIN: HSI HDG Knob - Decrease (5°)",
-                  "label": "Decrease (5°)",
-                  "role": "none"
-                },
-                {
-                  "id": "mainhsihdgknobincrease1",
-                  "clazz": "MainHsiHdgKnobIncrease1",
-                  "callback": "SimHsiHdgIncBy1",
-                  "description": "MAIN: HSI HDG Knob - Increase (1°)",
-                  "label": "Increase (1°)",
-                  "role": "none"
-                },
-                {
-                  "id": "mainhsihdgknobdecrease1",
-                  "clazz": "MainHsiHdgKnobDecrease1",
-                  "callback": "SimHsiHdgDecBy1",
-                  "description": "MAIN: HSI HDG Knob - Decrease (1°)",
-                  "label": "Decrease (1°)",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "MAIN: HSI CRS Knob",
-              "class": "MainHsiCrsKnob",
-              "description": "MAIN: HSI CRS Knob - Increase (5°)",
-              "label": "HSI CRS",
-              "type": "button",
-              "control": [
-                {
-                  "id": "mainhsicrsknobincrease5",
-                  "clazz": "MainHsiCrsKnobIncrease5",
-                  "callback": "SimHsiCourseInc",
-                  "description": "MAIN: HSI CRS Knob - Increase (5°)",
-                  "label": "Increase (5°)",
-                  "role": "none"
-                },
-                {
-                  "id": "mainhsicrsknobdecrease5",
-                  "clazz": "MainHsiCrsKnobDecrease5",
-                  "callback": "SimHsiCourseDec",
-                  "description": "MAIN: HSI CRS Knob - Decrease (5°)",
-                  "label": "Decrease (5°)",
-                  "role": "none"
-                },
-                {
-                  "id": "mainhsicrsknobincrease1",
-                  "clazz": "MainHsiCrsKnobIncrease1",
-                  "callback": "SimHsiCrsIncBy1",
-                  "description": "MAIN: HSI CRS Knob - Increase (1°)",
-                  "label": "Increase (1°)",
-                  "role": "none"
-                },
-                {
-                  "id": "mainhsicrsknobdecrease1",
-                  "clazz": "MainHsiCrsKnobDecrease1",
-                  "callback": "SimHsiCrsDecBy1",
-                  "description": "MAIN: HSI CRS Knob - Decrease (1°)",
-                  "label": "Decrease (1°)",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "MAIN: Altimeter Pressure Knob",
-              "class": "MainAltimeterPressureKnob",
-              "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
-              "label": "Altimeter Pressure",
-              "type": "button",
-              "control": [
-                {
-                  "id": "mainaltimeterpressureknobincr5",
-                  "clazz": "MainAltimeterPressureKnobIncr5",
-                  "callback": "SimAltPressInc",
-                  "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
-                  "label": "Incr. (5°)",
-                  "role": "none"
-                },
-                {
-                  "id": "mainaltimeterpressureknobdecr5",
-                  "clazz": "MainAltimeterPressureKnobDecr5",
-                  "callback": "SimAltPressDec",
-                  "description": "MAIN: Altimeter Pressure Knob - Decr. (5°)",
-                  "label": "Decr. (5°)",
-                  "role": "none"
-                },
-                {
-                  "id": "mainaltimeterpressureknobincr1",
-                  "clazz": "MainAltimeterPressureKnobIncr1",
-                  "callback": "SimAltPressIncBy1",
-                  "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
-                  "label": "Incr. (1°)",
-                  "role": "none"
-                },
-                {
-                  "id": "mainaltimeterpressureknobdecr1",
-                  "clazz": "MainAltimeterPressureKnobDecr1",
-                  "callback": "SimAltPressDecBy1",
-                  "description": "MAIN: Altimeter Pressure Knob - Decr. (1°)",
-                  "label": "Decr. (1°)",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "instrmodepanel",
-          "class": "InstrModePanel",
-          "name": "INSTR MODE PANEL",
-          "group": [
-            {
-              "id": "INSTR: MODE Knob",
-              "class": "InstrModeKnob",
-              "description": "INSTR: MODE Knob - ILS/TCN",
-              "label": "MODE",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "instrmodeknobilstcn",
-                  "clazz": "InstrModeKnobIlsTcn",
-                  "callback": "SimHSIIlsTcn",
-                  "description": "INSTR: MODE Knob - ILS/TCN",
-                  "label": "ILS/TCN",
-                  "role": "none"
-                },
-                {
-                  "id": "instrmodeknobtcn",
-                  "clazz": "InstrModeKnobTcn",
-                  "callback": "SimHSITcn",
-                  "description": "INSTR: MODE Knob - TCN",
-                  "label": "TCN",
-                  "role": "none"
-                },
-                {
-                  "id": "instrmodeknobnav",
-                  "clazz": "InstrModeKnobNav",
-                  "callback": "SimHSINav",
-                  "description": "INSTR: MODE Knob - NAV",
-                  "label": "NAV",
-                  "role": "none"
-                },
-                {
-                  "id": "instrmodeknobilsnav",
-                  "clazz": "InstrModeKnobIlsNav",
-                  "callback": "SimHSIIlsNav",
-                  "description": "INSTR: MODE Knob - ILS/NAV",
-                  "label": "ILS/NAV",
                   "role": "none"
                 }
               ]

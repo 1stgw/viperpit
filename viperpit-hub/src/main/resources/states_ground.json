@@ -1363,6 +1363,198 @@
     "stateful" : true,
     "relatedActions" : [ "miscrfswitchcycle", "miscrfswitchstepup", "miscrfswitchstepdown", "miscrfswitchnorm", "miscrfswitchquiet" ]
   }, {
+    "id" : "mainhsihdgknobincrease5",
+    "callback" : "SimHsiHeadingInc",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainhsihdgknobdecrease5", "mainhsihdgknobincrease1", "mainhsihdgknobdecrease1" ]
+  }, {
+    "id" : "mainhsihdgknobdecrease5",
+    "callback" : "SimHsiHeadingDec",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainhsihdgknobincrease5", "mainhsihdgknobincrease1", "mainhsihdgknobdecrease1" ]
+  }, {
+    "id" : "mainhsihdgknobincrease1",
+    "callback" : "SimHsiHdgIncBy1",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainhsihdgknobincrease5", "mainhsihdgknobdecrease5", "mainhsihdgknobdecrease1" ]
+  }, {
+    "id" : "mainhsihdgknobdecrease1",
+    "callback" : "SimHsiHdgDecBy1",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainhsihdgknobincrease5", "mainhsihdgknobdecrease5", "mainhsihdgknobincrease1" ]
+  }, {
+    "id" : "mainhsicrsknobincrease5",
+    "callback" : "SimHsiCourseInc",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainhsicrsknobdecrease5", "mainhsicrsknobincrease1", "mainhsicrsknobdecrease1" ]
+  }, {
+    "id" : "mainhsicrsknobdecrease5",
+    "callback" : "SimHsiCourseDec",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainhsicrsknobincrease5", "mainhsicrsknobincrease1", "mainhsicrsknobdecrease1" ]
+  }, {
+    "id" : "mainhsicrsknobincrease1",
+    "callback" : "SimHsiCrsIncBy1",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainhsicrsknobincrease5", "mainhsicrsknobdecrease5", "mainhsicrsknobdecrease1" ]
+  }, {
+    "id" : "mainhsicrsknobdecrease1",
+    "callback" : "SimHsiCrsDecBy1",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainhsicrsknobincrease5", "mainhsicrsknobdecrease5", "mainhsicrsknobincrease1" ]
+  }, {
+    "id" : "mainaltimeterpressureknobincr5",
+    "callback" : "SimAltPressInc",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainaltimeterpressureknobdecr5", "mainaltimeterpressureknobincr1", "mainaltimeterpressureknobdecr1" ]
+  }, {
+    "id" : "mainaltimeterpressureknobdecr5",
+    "callback" : "SimAltPressDec",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainaltimeterpressureknobincr5", "mainaltimeterpressureknobincr1", "mainaltimeterpressureknobdecr1" ]
+  }, {
+    "id" : "mainaltimeterpressureknobincr1",
+    "callback" : "SimAltPressIncBy1",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainaltimeterpressureknobincr5", "mainaltimeterpressureknobdecr5", "mainaltimeterpressureknobdecr1" ]
+  }, {
+    "id" : "mainaltimeterpressureknobdecr1",
+    "callback" : "SimAltPressDecBy1",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mainaltimeterpressureknobincr5", "mainaltimeterpressureknobdecr5", "mainaltimeterpressureknobincr1" ]
+  }, {
+    "id" : "instrmodeknobcycle",
+    "callback" : "SimStepHSIMode",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "instrmodeknobstepup", "instrmodeknobstepdown", "instrmodeknobilstcn", "instrmodeknobtcn", "instrmodeknobnav", "instrmodeknobilsnav" ]
+  }, {
+    "id" : "instrmodeknobstepup",
+    "callback" : "SimHSIModeInc",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepdown", "instrmodeknobilstcn", "instrmodeknobtcn", "instrmodeknobnav", "instrmodeknobilsnav" ]
+  }, {
+    "id" : "instrmodeknobstepdown",
+    "callback" : "SimHSIModeDec",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepup", "instrmodeknobilstcn", "instrmodeknobtcn", "instrmodeknobnav", "instrmodeknobilsnav" ]
+  }, {
+    "id" : "instrmodeknobilstcn",
+    "callback" : "SimHSIIlsTcn",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepup", "instrmodeknobstepdown", "instrmodeknobtcn", "instrmodeknobnav", "instrmodeknobilsnav" ]
+  }, {
+    "id" : "instrmodeknobtcn",
+    "callback" : "SimHSITcn",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepup", "instrmodeknobstepdown", "instrmodeknobilstcn", "instrmodeknobnav", "instrmodeknobilsnav" ]
+  }, {
+    "id" : "instrmodeknobnav",
+    "callback" : "SimHSINav",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepup", "instrmodeknobstepdown", "instrmodeknobilstcn", "instrmodeknobtcn", "instrmodeknobilsnav" ]
+  }, {
+    "id" : "instrmodeknobilsnav",
+    "callback" : "SimHSIIlsNav",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepup", "instrmodeknobstepdown", "instrmodeknobilstcn", "instrmodeknobtcn", "instrmodeknobnav" ]
+  }, {
+    "id" : "miscadvmodetoggletfronoff",
+    "callback" : "SimToggleTFR",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : null
+  }, {
+    "id" : "miscrollswitchcycle",
+    "callback" : "SimLeftAPSwitch",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "miscrollswitchstepup", "miscrollswitchstepdown", "miscrollswitchhdgsel", "miscrollswitchatthold", "miscrollswitchstrgsel" ]
+  }, {
+    "id" : "miscrollswitchstepup",
+    "callback" : "SimLeftAPInc",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "miscrollswitchcycle", "miscrollswitchstepdown", "miscrollswitchhdgsel", "miscrollswitchatthold", "miscrollswitchstrgsel" ]
+  }, {
+    "id" : "miscrollswitchstepdown",
+    "callback" : "SimLeftAPDec",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "miscrollswitchcycle", "miscrollswitchstepup", "miscrollswitchhdgsel", "miscrollswitchatthold", "miscrollswitchstrgsel" ]
+  }, {
+    "id" : "miscrollswitchhdgsel",
+    "callback" : "SimLeftAPUp",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "miscrollswitchcycle", "miscrollswitchstepup", "miscrollswitchstepdown", "miscrollswitchatthold", "miscrollswitchstrgsel" ]
+  }, {
+    "id" : "miscrollswitchatthold",
+    "callback" : "SimLeftAPMid",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "miscrollswitchcycle", "miscrollswitchstepup", "miscrollswitchstepdown", "miscrollswitchhdgsel", "miscrollswitchstrgsel" ]
+  }, {
+    "id" : "miscrollswitchstrgsel",
+    "callback" : "SimLeftAPDown",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "miscrollswitchcycle", "miscrollswitchstepup", "miscrollswitchstepdown", "miscrollswitchhdgsel", "miscrollswitchatthold" ]
+  }, {
+    "id" : "miscpitchswitchcyclealsocombatap",
+    "callback" : "SimRightAPSwitch",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "miscpitchswitchstepup", "miscpitchswitchstepdown", "miscpitchswitchalthold", "miscpitchswitchapoff", "miscpitchswitchatthold" ]
+  }, {
+    "id" : "miscpitchswitchstepup",
+    "callback" : "SimRightAPInc",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepdown", "miscpitchswitchalthold", "miscpitchswitchapoff", "miscpitchswitchatthold" ]
+  }, {
+    "id" : "miscpitchswitchstepdown",
+    "callback" : "SimRightAPDec",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepup", "miscpitchswitchalthold", "miscpitchswitchapoff", "miscpitchswitchatthold" ]
+  }, {
+    "id" : "miscpitchswitchalthold",
+    "callback" : "SimRightAPUp",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepup", "miscpitchswitchstepdown", "miscpitchswitchapoff", "miscpitchswitchatthold" ]
+  }, {
+    "id" : "miscpitchswitchapoff",
+    "callback" : "SimRightAPMid",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepup", "miscpitchswitchstepdown", "miscpitchswitchalthold", "miscpitchswitchatthold" ]
+  }, {
+    "id" : "miscpitchswitchatthold",
+    "callback" : "SimRightAPDown",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepup", "miscpitchswitchstepdown", "miscpitchswitchalthold", "miscpitchswitchapoff" ]
+  }, {
     "id" : "fltdigitalswitchtoggle",
     "callback" : "SimDigitalBUP",
     "active" : false,
@@ -2083,84 +2275,6 @@
     "stateful" : true,
     "relatedActions" : [ "miscmasterarmswitchcycle", "miscmasterarmswitchstepup", "miscmasterarmswitchstepdown", "miscmasterarmswitchon", "miscmasterarmswitchoff" ]
   }, {
-    "id" : "miscadvmodetoggletfronoff",
-    "callback" : "SimToggleTFR",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : null
-  }, {
-    "id" : "miscrollswitchcycle",
-    "callback" : "SimLeftAPSwitch",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "miscrollswitchstepup", "miscrollswitchstepdown", "miscrollswitchhdgsel", "miscrollswitchatthold", "miscrollswitchstrgsel" ]
-  }, {
-    "id" : "miscrollswitchstepup",
-    "callback" : "SimLeftAPInc",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "miscrollswitchcycle", "miscrollswitchstepdown", "miscrollswitchhdgsel", "miscrollswitchatthold", "miscrollswitchstrgsel" ]
-  }, {
-    "id" : "miscrollswitchstepdown",
-    "callback" : "SimLeftAPDec",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "miscrollswitchcycle", "miscrollswitchstepup", "miscrollswitchhdgsel", "miscrollswitchatthold", "miscrollswitchstrgsel" ]
-  }, {
-    "id" : "miscrollswitchhdgsel",
-    "callback" : "SimLeftAPUp",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "miscrollswitchcycle", "miscrollswitchstepup", "miscrollswitchstepdown", "miscrollswitchatthold", "miscrollswitchstrgsel" ]
-  }, {
-    "id" : "miscrollswitchatthold",
-    "callback" : "SimLeftAPMid",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "miscrollswitchcycle", "miscrollswitchstepup", "miscrollswitchstepdown", "miscrollswitchhdgsel", "miscrollswitchstrgsel" ]
-  }, {
-    "id" : "miscrollswitchstrgsel",
-    "callback" : "SimLeftAPDown",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "miscrollswitchcycle", "miscrollswitchstepup", "miscrollswitchstepdown", "miscrollswitchhdgsel", "miscrollswitchatthold" ]
-  }, {
-    "id" : "miscpitchswitchcyclealsocombatap",
-    "callback" : "SimRightAPSwitch",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "miscpitchswitchstepup", "miscpitchswitchstepdown", "miscpitchswitchalthold", "miscpitchswitchapoff", "miscpitchswitchatthold" ]
-  }, {
-    "id" : "miscpitchswitchstepup",
-    "callback" : "SimRightAPInc",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepdown", "miscpitchswitchalthold", "miscpitchswitchapoff", "miscpitchswitchatthold" ]
-  }, {
-    "id" : "miscpitchswitchstepdown",
-    "callback" : "SimRightAPDec",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepup", "miscpitchswitchalthold", "miscpitchswitchapoff", "miscpitchswitchatthold" ]
-  }, {
-    "id" : "miscpitchswitchalthold",
-    "callback" : "SimRightAPUp",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepup", "miscpitchswitchstepdown", "miscpitchswitchapoff", "miscpitchswitchatthold" ]
-  }, {
-    "id" : "miscpitchswitchapoff",
-    "callback" : "SimRightAPMid",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepup", "miscpitchswitchstepdown", "miscpitchswitchalthold", "miscpitchswitchatthold" ]
-  }, {
-    "id" : "miscpitchswitchatthold",
-    "callback" : "SimRightAPDown",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepup", "miscpitchswitchstepdown", "miscpitchswitchalthold", "miscpitchswitchapoff" ]
-  }, {
     "id" : "eyemastercautionbuttonpush",
     "callback" : "ExtinguishMasterCaution",
     "active" : false,
@@ -2562,120 +2676,6 @@
     "active" : false,
     "stateful" : false,
     "relatedActions" : [ "icpdeprretwheelstepup" ]
-  }, {
-    "id" : "mainhsihdgknobincrease5",
-    "callback" : "SimHsiHeadingInc",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainhsihdgknobdecrease5", "mainhsihdgknobincrease1", "mainhsihdgknobdecrease1" ]
-  }, {
-    "id" : "mainhsihdgknobdecrease5",
-    "callback" : "SimHsiHeadingDec",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainhsihdgknobincrease5", "mainhsihdgknobincrease1", "mainhsihdgknobdecrease1" ]
-  }, {
-    "id" : "mainhsihdgknobincrease1",
-    "callback" : "SimHsiHdgIncBy1",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainhsihdgknobincrease5", "mainhsihdgknobdecrease5", "mainhsihdgknobdecrease1" ]
-  }, {
-    "id" : "mainhsihdgknobdecrease1",
-    "callback" : "SimHsiHdgDecBy1",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainhsihdgknobincrease5", "mainhsihdgknobdecrease5", "mainhsihdgknobincrease1" ]
-  }, {
-    "id" : "mainhsicrsknobincrease5",
-    "callback" : "SimHsiCourseInc",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainhsicrsknobdecrease5", "mainhsicrsknobincrease1", "mainhsicrsknobdecrease1" ]
-  }, {
-    "id" : "mainhsicrsknobdecrease5",
-    "callback" : "SimHsiCourseDec",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainhsicrsknobincrease5", "mainhsicrsknobincrease1", "mainhsicrsknobdecrease1" ]
-  }, {
-    "id" : "mainhsicrsknobincrease1",
-    "callback" : "SimHsiCrsIncBy1",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainhsicrsknobincrease5", "mainhsicrsknobdecrease5", "mainhsicrsknobdecrease1" ]
-  }, {
-    "id" : "mainhsicrsknobdecrease1",
-    "callback" : "SimHsiCrsDecBy1",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainhsicrsknobincrease5", "mainhsicrsknobdecrease5", "mainhsicrsknobincrease1" ]
-  }, {
-    "id" : "mainaltimeterpressureknobincr5",
-    "callback" : "SimAltPressInc",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainaltimeterpressureknobdecr5", "mainaltimeterpressureknobincr1", "mainaltimeterpressureknobdecr1" ]
-  }, {
-    "id" : "mainaltimeterpressureknobdecr5",
-    "callback" : "SimAltPressDec",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainaltimeterpressureknobincr5", "mainaltimeterpressureknobincr1", "mainaltimeterpressureknobdecr1" ]
-  }, {
-    "id" : "mainaltimeterpressureknobincr1",
-    "callback" : "SimAltPressIncBy1",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainaltimeterpressureknobincr5", "mainaltimeterpressureknobdecr5", "mainaltimeterpressureknobdecr1" ]
-  }, {
-    "id" : "mainaltimeterpressureknobdecr1",
-    "callback" : "SimAltPressDecBy1",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mainaltimeterpressureknobincr5", "mainaltimeterpressureknobdecr5", "mainaltimeterpressureknobincr1" ]
-  }, {
-    "id" : "instrmodeknobcycle",
-    "callback" : "SimStepHSIMode",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "instrmodeknobstepup", "instrmodeknobstepdown", "instrmodeknobilstcn", "instrmodeknobtcn", "instrmodeknobnav", "instrmodeknobilsnav" ]
-  }, {
-    "id" : "instrmodeknobstepup",
-    "callback" : "SimHSIModeInc",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepdown", "instrmodeknobilstcn", "instrmodeknobtcn", "instrmodeknobnav", "instrmodeknobilsnav" ]
-  }, {
-    "id" : "instrmodeknobstepdown",
-    "callback" : "SimHSIModeDec",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepup", "instrmodeknobilstcn", "instrmodeknobtcn", "instrmodeknobnav", "instrmodeknobilsnav" ]
-  }, {
-    "id" : "instrmodeknobilstcn",
-    "callback" : "SimHSIIlsTcn",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepup", "instrmodeknobstepdown", "instrmodeknobtcn", "instrmodeknobnav", "instrmodeknobilsnav" ]
-  }, {
-    "id" : "instrmodeknobtcn",
-    "callback" : "SimHSITcn",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepup", "instrmodeknobstepdown", "instrmodeknobilstcn", "instrmodeknobnav", "instrmodeknobilsnav" ]
-  }, {
-    "id" : "instrmodeknobnav",
-    "callback" : "SimHSINav",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepup", "instrmodeknobstepdown", "instrmodeknobilstcn", "instrmodeknobtcn", "instrmodeknobilsnav" ]
-  }, {
-    "id" : "instrmodeknobilsnav",
-    "callback" : "SimHSIIlsNav",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "instrmodeknobcycle", "instrmodeknobstepup", "instrmodeknobstepdown", "instrmodeknobilstcn", "instrmodeknobtcn", "instrmodeknobnav" ]
   }, {
     "id" : "rmfdosb1buttonpush",
     "callback" : "SimCBEOSB_1R",

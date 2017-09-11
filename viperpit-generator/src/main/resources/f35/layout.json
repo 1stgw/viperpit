@@ -284,6 +284,53 @@
       ]
     },
     {
+      "console": "nav",
+      "consoleRow": [
+        {
+          "panelRowSet": [
+            {
+              "panel": "maininstrument",
+              "panelRow": [
+                {
+                  "group": [
+                    "MAIN: HSI HDG Knob",
+                    "MAIN: HSI CRS Knob",
+                    "MAIN: Altimeter Pressure Knob"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "instrmodepanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "INSTR: MODE Knob"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "apandtfrpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "MISC: ADV MODE",
+                    "MISC: ROLL Switch",
+                    "MISC: PITCH Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "console": "leftconsole",
       "consoleRow": [
         {
@@ -490,14 +537,7 @@
                 {
                   "group": [
                     "MISC: LASER Switch",
-                    "MISC: MASTER ARM Switch",
-                    "MISC: ADV MODE",
-                    "MISC: ROLL Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "MISC: PITCH Switch"
+                    "MISC: MASTER ARM Switch"
                   ]
                 }
               ]
@@ -509,32 +549,6 @@
                   "group": [
                     "EYE: MASTER CAUTION Button",
                     "EYE: F ACK Button"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "maininstrument",
-              "panelRow": [
-                {
-                  "group": [
-                    "MAIN: HSI HDG Knob",
-                    "MAIN: HSI CRS Knob",
-                    "MAIN: Altimeter Pressure Knob"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "instrmodepanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "INSTR: MODE Knob"
                   ]
                 }
               ]

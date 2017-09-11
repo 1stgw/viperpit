@@ -4133,6 +4133,640 @@
       }
     },
     {
+      "id": "mainhsihdgknobincrease5",
+      "clazz": "MainHsiHdgKnobIncrease5",
+      "callback": "SimHsiHeadingInc",
+      "relatedActions": [
+        "mainhsihdgknobdecrease5",
+        "mainhsihdgknobincrease1",
+        "mainhsihdgknobdecrease1"
+      ],
+      "description": "MAIN: HSI HDG Knob - Increase (5°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: HSI HDG Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainhsihdgknobdecrease5",
+      "clazz": "MainHsiHdgKnobDecrease5",
+      "callback": "SimHsiHeadingDec",
+      "relatedActions": [
+        "mainhsihdgknobincrease5",
+        "mainhsihdgknobincrease1",
+        "mainhsihdgknobdecrease1"
+      ],
+      "description": "MAIN: HSI HDG Knob - Decrease (5°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: HSI HDG Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainhsihdgknobincrease1",
+      "clazz": "MainHsiHdgKnobIncrease1",
+      "callback": "SimHsiHdgIncBy1",
+      "relatedActions": [
+        "mainhsihdgknobincrease5",
+        "mainhsihdgknobdecrease5",
+        "mainhsihdgknobdecrease1"
+      ],
+      "description": "MAIN: HSI HDG Knob - Increase (1°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: HSI HDG Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainhsihdgknobdecrease1",
+      "clazz": "MainHsiHdgKnobDecrease1",
+      "callback": "SimHsiHdgDecBy1",
+      "relatedActions": [
+        "mainhsihdgknobincrease5",
+        "mainhsihdgknobdecrease5",
+        "mainhsihdgknobincrease1"
+      ],
+      "description": "MAIN: HSI HDG Knob - Decrease (1°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: HSI HDG Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainhsicrsknobincrease5",
+      "clazz": "MainHsiCrsKnobIncrease5",
+      "callback": "SimHsiCourseInc",
+      "relatedActions": [
+        "mainhsicrsknobdecrease5",
+        "mainhsicrsknobincrease1",
+        "mainhsicrsknobdecrease1"
+      ],
+      "description": "MAIN: HSI CRS Knob - Increase (5°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: HSI CRS Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainhsicrsknobdecrease5",
+      "clazz": "MainHsiCrsKnobDecrease5",
+      "callback": "SimHsiCourseDec",
+      "relatedActions": [
+        "mainhsicrsknobincrease5",
+        "mainhsicrsknobincrease1",
+        "mainhsicrsknobdecrease1"
+      ],
+      "description": "MAIN: HSI CRS Knob - Decrease (5°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: HSI CRS Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainhsicrsknobincrease1",
+      "clazz": "MainHsiCrsKnobIncrease1",
+      "callback": "SimHsiCrsIncBy1",
+      "relatedActions": [
+        "mainhsicrsknobincrease5",
+        "mainhsicrsknobdecrease5",
+        "mainhsicrsknobdecrease1"
+      ],
+      "description": "MAIN: HSI CRS Knob - Increase (1°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: HSI CRS Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainhsicrsknobdecrease1",
+      "clazz": "MainHsiCrsKnobDecrease1",
+      "callback": "SimHsiCrsDecBy1",
+      "relatedActions": [
+        "mainhsicrsknobincrease5",
+        "mainhsicrsknobdecrease5",
+        "mainhsicrsknobincrease1"
+      ],
+      "description": "MAIN: HSI CRS Knob - Decrease (1°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: HSI CRS Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainaltimeterpressureknobincr5",
+      "clazz": "MainAltimeterPressureKnobIncr5",
+      "callback": "SimAltPressInc",
+      "relatedActions": [
+        "mainaltimeterpressureknobdecr5",
+        "mainaltimeterpressureknobincr1",
+        "mainaltimeterpressureknobdecr1"
+      ],
+      "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: Altimeter Pressure Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainaltimeterpressureknobdecr5",
+      "clazz": "MainAltimeterPressureKnobDecr5",
+      "callback": "SimAltPressDec",
+      "relatedActions": [
+        "mainaltimeterpressureknobincr5",
+        "mainaltimeterpressureknobincr1",
+        "mainaltimeterpressureknobdecr1"
+      ],
+      "description": "MAIN: Altimeter Pressure Knob - Decr. (5°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: Altimeter Pressure Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainaltimeterpressureknobincr1",
+      "clazz": "MainAltimeterPressureKnobIncr1",
+      "callback": "SimAltPressIncBy1",
+      "relatedActions": [
+        "mainaltimeterpressureknobincr5",
+        "mainaltimeterpressureknobdecr5",
+        "mainaltimeterpressureknobdecr1"
+      ],
+      "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: Altimeter Pressure Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainaltimeterpressureknobdecr1",
+      "clazz": "MainAltimeterPressureKnobDecr1",
+      "callback": "SimAltPressDecBy1",
+      "relatedActions": [
+        "mainaltimeterpressureknobincr5",
+        "mainaltimeterpressureknobdecr5",
+        "mainaltimeterpressureknobincr1"
+      ],
+      "description": "MAIN: Altimeter Pressure Knob - Decr. (1°)",
+      "category": "NAV",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: Altimeter Pressure Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "instrmodeknobcycle",
+      "clazz": "InstrModeKnobCycle",
+      "callback": "SimStepHSIMode",
+      "relatedActions": [
+        "instrmodeknobstepup",
+        "instrmodeknobstepdown",
+        "instrmodeknobilstcn",
+        "instrmodeknobtcn",
+        "instrmodeknobnav",
+        "instrmodeknobilsnav"
+      ],
+      "description": "INSTR: MODE Knob - Cycle",
+      "category": "NAV",
+      "section": "INSTR MODE PANEL",
+      "group": "INSTR: MODE Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "instrmodeknobstepup",
+      "clazz": "InstrModeKnobStepUp",
+      "callback": "SimHSIModeInc",
+      "relatedActions": [
+        "instrmodeknobcycle",
+        "instrmodeknobstepdown",
+        "instrmodeknobilstcn",
+        "instrmodeknobtcn",
+        "instrmodeknobnav",
+        "instrmodeknobilsnav"
+      ],
+      "description": "INSTR: MODE Knob - Step Up",
+      "category": "NAV",
+      "section": "INSTR MODE PANEL",
+      "group": "INSTR: MODE Knob",
+      "style": "knob",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "instrmodeknobstepdown",
+      "clazz": "InstrModeKnobStepDown",
+      "callback": "SimHSIModeDec",
+      "relatedActions": [
+        "instrmodeknobcycle",
+        "instrmodeknobstepup",
+        "instrmodeknobilstcn",
+        "instrmodeknobtcn",
+        "instrmodeknobnav",
+        "instrmodeknobilsnav"
+      ],
+      "description": "INSTR: MODE Knob - Step Down",
+      "category": "NAV",
+      "section": "INSTR MODE PANEL",
+      "group": "INSTR: MODE Knob",
+      "style": "knob",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "instrmodeknobilstcn",
+      "clazz": "InstrModeKnobIlsTcn",
+      "callback": "SimHSIIlsTcn",
+      "relatedActions": [
+        "instrmodeknobcycle",
+        "instrmodeknobstepup",
+        "instrmodeknobstepdown",
+        "instrmodeknobtcn",
+        "instrmodeknobnav",
+        "instrmodeknobilsnav"
+      ],
+      "description": "INSTR: MODE Knob - ILS/TCN",
+      "category": "NAV",
+      "section": "INSTR MODE PANEL",
+      "group": "INSTR: MODE Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "instrmodeknobtcn",
+      "clazz": "InstrModeKnobTcn",
+      "callback": "SimHSITcn",
+      "relatedActions": [
+        "instrmodeknobcycle",
+        "instrmodeknobstepup",
+        "instrmodeknobstepdown",
+        "instrmodeknobilstcn",
+        "instrmodeknobnav",
+        "instrmodeknobilsnav"
+      ],
+      "description": "INSTR: MODE Knob - TCN",
+      "category": "NAV",
+      "section": "INSTR MODE PANEL",
+      "group": "INSTR: MODE Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "instrmodeknobnav",
+      "clazz": "InstrModeKnobNav",
+      "callback": "SimHSINav",
+      "relatedActions": [
+        "instrmodeknobcycle",
+        "instrmodeknobstepup",
+        "instrmodeknobstepdown",
+        "instrmodeknobilstcn",
+        "instrmodeknobtcn",
+        "instrmodeknobilsnav"
+      ],
+      "description": "INSTR: MODE Knob - NAV",
+      "category": "NAV",
+      "section": "INSTR MODE PANEL",
+      "group": "INSTR: MODE Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "instrmodeknobilsnav",
+      "clazz": "InstrModeKnobIlsNav",
+      "callback": "SimHSIIlsNav",
+      "relatedActions": [
+        "instrmodeknobcycle",
+        "instrmodeknobstepup",
+        "instrmodeknobstepdown",
+        "instrmodeknobilstcn",
+        "instrmodeknobtcn",
+        "instrmodeknobnav"
+      ],
+      "description": "INSTR: MODE Knob - ILS/NAV",
+      "category": "NAV",
+      "section": "INSTR MODE PANEL",
+      "group": "INSTR: MODE Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "miscadvmodetoggletfronoff",
+      "clazz": "MiscAdvModeToggleTfrOnOff",
+      "callback": "SimToggleTFR",
+      "description": "MISC: ADV MODE - Toggle TFR On / Off",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: ADV MODE",
+      "style": "button",
+      "role": "off",
+      "type": "button"
+    },
+    {
+      "id": "miscrollswitchcycle",
+      "clazz": "MiscRollSwitchCycle",
+      "callback": "SimLeftAPSwitch",
+      "relatedActions": [
+        "miscrollswitchstepup",
+        "miscrollswitchstepdown",
+        "miscrollswitchhdgsel",
+        "miscrollswitchatthold",
+        "miscrollswitchstrgsel"
+      ],
+      "description": "MISC: ROLL Switch - Cycle",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: ROLL Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "miscrollswitchstepup",
+      "clazz": "MiscRollSwitchStepUp",
+      "callback": "SimLeftAPInc",
+      "relatedActions": [
+        "miscrollswitchcycle",
+        "miscrollswitchstepdown",
+        "miscrollswitchhdgsel",
+        "miscrollswitchatthold",
+        "miscrollswitchstrgsel"
+      ],
+      "description": "MISC: ROLL Switch - Step Up",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: ROLL Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "miscrollswitchstepdown",
+      "clazz": "MiscRollSwitchStepDown",
+      "callback": "SimLeftAPDec",
+      "relatedActions": [
+        "miscrollswitchcycle",
+        "miscrollswitchstepup",
+        "miscrollswitchhdgsel",
+        "miscrollswitchatthold",
+        "miscrollswitchstrgsel"
+      ],
+      "description": "MISC: ROLL Switch - Step Down",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: ROLL Switch",
+      "style": "button",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "miscrollswitchhdgsel",
+      "clazz": "MiscRollSwitchHdgSel",
+      "callback": "SimLeftAPUp",
+      "relatedActions": [
+        "miscrollswitchcycle",
+        "miscrollswitchstepup",
+        "miscrollswitchstepdown",
+        "miscrollswitchatthold",
+        "miscrollswitchstrgsel"
+      ],
+      "description": "MISC: ROLL Switch - HDG SEL",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: ROLL Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "miscrollswitchatthold",
+      "clazz": "MiscRollSwitchAttHold",
+      "callback": "SimLeftAPMid",
+      "relatedActions": [
+        "miscrollswitchcycle",
+        "miscrollswitchstepup",
+        "miscrollswitchstepdown",
+        "miscrollswitchhdgsel",
+        "miscrollswitchstrgsel"
+      ],
+      "description": "MISC: ROLL Switch - ATT HOLD",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: ROLL Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "miscrollswitchstrgsel",
+      "clazz": "MiscRollSwitchStrgSel",
+      "callback": "SimLeftAPDown",
+      "relatedActions": [
+        "miscrollswitchcycle",
+        "miscrollswitchstepup",
+        "miscrollswitchstepdown",
+        "miscrollswitchhdgsel",
+        "miscrollswitchatthold"
+      ],
+      "description": "MISC: ROLL Switch -  STRG SEL",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: ROLL Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "miscpitchswitchcyclealsocombatap",
+      "clazz": "MiscPitchSwitchCycleAlsoCombatAp",
+      "callback": "SimRightAPSwitch",
+      "relatedActions": [
+        "miscpitchswitchstepup",
+        "miscpitchswitchstepdown",
+        "miscpitchswitchalthold",
+        "miscpitchswitchapoff",
+        "miscpitchswitchatthold"
+      ],
+      "description": "MISC: PITCH Switch - Cycle (also Combat AP)",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: PITCH Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "miscpitchswitchstepup",
+      "clazz": "MiscPitchSwitchStepUp",
+      "callback": "SimRightAPInc",
+      "relatedActions": [
+        "miscpitchswitchcyclealsocombatap",
+        "miscpitchswitchstepdown",
+        "miscpitchswitchalthold",
+        "miscpitchswitchapoff",
+        "miscpitchswitchatthold"
+      ],
+      "description": "MISC: PITCH Switch - Step Up",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: PITCH Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "miscpitchswitchstepdown",
+      "clazz": "MiscPitchSwitchStepDown",
+      "callback": "SimRightAPDec",
+      "relatedActions": [
+        "miscpitchswitchcyclealsocombatap",
+        "miscpitchswitchstepup",
+        "miscpitchswitchalthold",
+        "miscpitchswitchapoff",
+        "miscpitchswitchatthold"
+      ],
+      "description": "MISC: PITCH Switch - Step Down",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: PITCH Switch",
+      "style": "button",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "miscpitchswitchalthold",
+      "clazz": "MiscPitchSwitchAltHold",
+      "callback": "SimRightAPUp",
+      "relatedActions": [
+        "miscpitchswitchcyclealsocombatap",
+        "miscpitchswitchstepup",
+        "miscpitchswitchstepdown",
+        "miscpitchswitchapoff",
+        "miscpitchswitchatthold"
+      ],
+      "description": "MISC: PITCH Switch - ALT HOLD",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: PITCH Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "miscpitchswitchapoff",
+      "clazz": "MiscPitchSwitchAPOff",
+      "callback": "SimRightAPMid",
+      "relatedActions": [
+        "miscpitchswitchcyclealsocombatap",
+        "miscpitchswitchstepup",
+        "miscpitchswitchstepdown",
+        "miscpitchswitchalthold",
+        "miscpitchswitchatthold"
+      ],
+      "description": "MISC: PITCH Switch - A/P OFF",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: PITCH Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "miscpitchswitchatthold",
+      "clazz": "MiscPitchSwitchAttHold",
+      "callback": "SimRightAPDown",
+      "relatedActions": [
+        "miscpitchswitchcyclealsocombatap",
+        "miscpitchswitchstepup",
+        "miscpitchswitchstepdown",
+        "miscpitchswitchalthold",
+        "miscpitchswitchapoff"
+      ],
+      "description": "MISC: PITCH Switch - ATT HOLD",
+      "category": "NAV",
+      "section": "AP AND TFR PANEL",
+      "group": "MISC: PITCH Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
       "id": "fltdigitalswitchtoggle",
       "clazz": "FltDigitalSwitchToggle",
       "callback": "SimDigitalBUP",
@@ -6350,276 +6984,6 @@
       }
     },
     {
-      "id": "miscadvmodetoggletfronoff",
-      "clazz": "MiscAdvModeToggleTfrOnOff",
-      "callback": "SimToggleTFR",
-      "description": "MISC: ADV MODE - Toggle TFR On / Off",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: ADV MODE",
-      "style": "button",
-      "role": "off",
-      "type": "button"
-    },
-    {
-      "id": "miscrollswitchcycle",
-      "clazz": "MiscRollSwitchCycle",
-      "callback": "SimLeftAPSwitch",
-      "relatedActions": [
-        "miscrollswitchstepup",
-        "miscrollswitchstepdown",
-        "miscrollswitchhdgsel",
-        "miscrollswitchatthold",
-        "miscrollswitchstrgsel"
-      ],
-      "description": "MISC: ROLL Switch - Cycle",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: ROLL Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "miscrollswitchstepup",
-      "clazz": "MiscRollSwitchStepUp",
-      "callback": "SimLeftAPInc",
-      "relatedActions": [
-        "miscrollswitchcycle",
-        "miscrollswitchstepdown",
-        "miscrollswitchhdgsel",
-        "miscrollswitchatthold",
-        "miscrollswitchstrgsel"
-      ],
-      "description": "MISC: ROLL Switch - Step Up",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: ROLL Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "miscrollswitchstepdown",
-      "clazz": "MiscRollSwitchStepDown",
-      "callback": "SimLeftAPDec",
-      "relatedActions": [
-        "miscrollswitchcycle",
-        "miscrollswitchstepup",
-        "miscrollswitchhdgsel",
-        "miscrollswitchatthold",
-        "miscrollswitchstrgsel"
-      ],
-      "description": "MISC: ROLL Switch - Step Down",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: ROLL Switch",
-      "style": "button",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "miscrollswitchhdgsel",
-      "clazz": "MiscRollSwitchHdgSel",
-      "callback": "SimLeftAPUp",
-      "relatedActions": [
-        "miscrollswitchcycle",
-        "miscrollswitchstepup",
-        "miscrollswitchstepdown",
-        "miscrollswitchatthold",
-        "miscrollswitchstrgsel"
-      ],
-      "description": "MISC: ROLL Switch - HDG SEL",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: ROLL Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "miscrollswitchatthold",
-      "clazz": "MiscRollSwitchAttHold",
-      "callback": "SimLeftAPMid",
-      "relatedActions": [
-        "miscrollswitchcycle",
-        "miscrollswitchstepup",
-        "miscrollswitchstepdown",
-        "miscrollswitchhdgsel",
-        "miscrollswitchstrgsel"
-      ],
-      "description": "MISC: ROLL Switch - ATT HOLD",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: ROLL Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "miscrollswitchstrgsel",
-      "clazz": "MiscRollSwitchStrgSel",
-      "callback": "SimLeftAPDown",
-      "relatedActions": [
-        "miscrollswitchcycle",
-        "miscrollswitchstepup",
-        "miscrollswitchstepdown",
-        "miscrollswitchhdgsel",
-        "miscrollswitchatthold"
-      ],
-      "description": "MISC: ROLL Switch -  STRG SEL",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: ROLL Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "miscpitchswitchcyclealsocombatap",
-      "clazz": "MiscPitchSwitchCycleAlsoCombatAp",
-      "callback": "SimRightAPSwitch",
-      "relatedActions": [
-        "miscpitchswitchstepup",
-        "miscpitchswitchstepdown",
-        "miscpitchswitchalthold",
-        "miscpitchswitchapoff",
-        "miscpitchswitchatthold"
-      ],
-      "description": "MISC: PITCH Switch - Cycle (also Combat AP)",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: PITCH Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "miscpitchswitchstepup",
-      "clazz": "MiscPitchSwitchStepUp",
-      "callback": "SimRightAPInc",
-      "relatedActions": [
-        "miscpitchswitchcyclealsocombatap",
-        "miscpitchswitchstepdown",
-        "miscpitchswitchalthold",
-        "miscpitchswitchapoff",
-        "miscpitchswitchatthold"
-      ],
-      "description": "MISC: PITCH Switch - Step Up",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: PITCH Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "miscpitchswitchstepdown",
-      "clazz": "MiscPitchSwitchStepDown",
-      "callback": "SimRightAPDec",
-      "relatedActions": [
-        "miscpitchswitchcyclealsocombatap",
-        "miscpitchswitchstepup",
-        "miscpitchswitchalthold",
-        "miscpitchswitchapoff",
-        "miscpitchswitchatthold"
-      ],
-      "description": "MISC: PITCH Switch - Step Down",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: PITCH Switch",
-      "style": "button",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "miscpitchswitchalthold",
-      "clazz": "MiscPitchSwitchAltHold",
-      "callback": "SimRightAPUp",
-      "relatedActions": [
-        "miscpitchswitchcyclealsocombatap",
-        "miscpitchswitchstepup",
-        "miscpitchswitchstepdown",
-        "miscpitchswitchapoff",
-        "miscpitchswitchatthold"
-      ],
-      "description": "MISC: PITCH Switch - ALT HOLD",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: PITCH Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "miscpitchswitchapoff",
-      "clazz": "MiscPitchSwitchAPOff",
-      "callback": "SimRightAPMid",
-      "relatedActions": [
-        "miscpitchswitchcyclealsocombatap",
-        "miscpitchswitchstepup",
-        "miscpitchswitchstepdown",
-        "miscpitchswitchalthold",
-        "miscpitchswitchatthold"
-      ],
-      "description": "MISC: PITCH Switch - A/P OFF",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: PITCH Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "miscpitchswitchatthold",
-      "clazz": "MiscPitchSwitchAttHold",
-      "callback": "SimRightAPDown",
-      "relatedActions": [
-        "miscpitchswitchcyclealsocombatap",
-        "miscpitchswitchstepup",
-        "miscpitchswitchstepdown",
-        "miscpitchswitchalthold",
-        "miscpitchswitchapoff"
-      ],
-      "description": "MISC: PITCH Switch - ATT HOLD",
-      "category": "CENTER CONSOLE",
-      "section": "MISC PANEL",
-      "group": "MISC: PITCH Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
       "id": "eyemastercautionbuttonpush",
       "clazz": "EyeMasterCautionButtonPush",
       "callback": "ExtinguishMasterCaution",
@@ -7515,370 +7879,6 @@
       "style": "wheel",
       "role": "down",
       "type": "button"
-    },
-    {
-      "id": "mainhsihdgknobincrease5",
-      "clazz": "MainHsiHdgKnobIncrease5",
-      "callback": "SimHsiHeadingInc",
-      "relatedActions": [
-        "mainhsihdgknobdecrease5",
-        "mainhsihdgknobincrease1",
-        "mainhsihdgknobdecrease1"
-      ],
-      "description": "MAIN: HSI HDG Knob - Increase (5°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI HDG Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainhsihdgknobdecrease5",
-      "clazz": "MainHsiHdgKnobDecrease5",
-      "callback": "SimHsiHeadingDec",
-      "relatedActions": [
-        "mainhsihdgknobincrease5",
-        "mainhsihdgknobincrease1",
-        "mainhsihdgknobdecrease1"
-      ],
-      "description": "MAIN: HSI HDG Knob - Decrease (5°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI HDG Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainhsihdgknobincrease1",
-      "clazz": "MainHsiHdgKnobIncrease1",
-      "callback": "SimHsiHdgIncBy1",
-      "relatedActions": [
-        "mainhsihdgknobincrease5",
-        "mainhsihdgknobdecrease5",
-        "mainhsihdgknobdecrease1"
-      ],
-      "description": "MAIN: HSI HDG Knob - Increase (1°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI HDG Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainhsihdgknobdecrease1",
-      "clazz": "MainHsiHdgKnobDecrease1",
-      "callback": "SimHsiHdgDecBy1",
-      "relatedActions": [
-        "mainhsihdgknobincrease5",
-        "mainhsihdgknobdecrease5",
-        "mainhsihdgknobincrease1"
-      ],
-      "description": "MAIN: HSI HDG Knob - Decrease (1°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI HDG Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainhsicrsknobincrease5",
-      "clazz": "MainHsiCrsKnobIncrease5",
-      "callback": "SimHsiCourseInc",
-      "relatedActions": [
-        "mainhsicrsknobdecrease5",
-        "mainhsicrsknobincrease1",
-        "mainhsicrsknobdecrease1"
-      ],
-      "description": "MAIN: HSI CRS Knob - Increase (5°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI CRS Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainhsicrsknobdecrease5",
-      "clazz": "MainHsiCrsKnobDecrease5",
-      "callback": "SimHsiCourseDec",
-      "relatedActions": [
-        "mainhsicrsknobincrease5",
-        "mainhsicrsknobincrease1",
-        "mainhsicrsknobdecrease1"
-      ],
-      "description": "MAIN: HSI CRS Knob - Decrease (5°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI CRS Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainhsicrsknobincrease1",
-      "clazz": "MainHsiCrsKnobIncrease1",
-      "callback": "SimHsiCrsIncBy1",
-      "relatedActions": [
-        "mainhsicrsknobincrease5",
-        "mainhsicrsknobdecrease5",
-        "mainhsicrsknobdecrease1"
-      ],
-      "description": "MAIN: HSI CRS Knob - Increase (1°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI CRS Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainhsicrsknobdecrease1",
-      "clazz": "MainHsiCrsKnobDecrease1",
-      "callback": "SimHsiCrsDecBy1",
-      "relatedActions": [
-        "mainhsicrsknobincrease5",
-        "mainhsicrsknobdecrease5",
-        "mainhsicrsknobincrease1"
-      ],
-      "description": "MAIN: HSI CRS Knob - Decrease (1°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI CRS Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainaltimeterpressureknobincr5",
-      "clazz": "MainAltimeterPressureKnobIncr5",
-      "callback": "SimAltPressInc",
-      "relatedActions": [
-        "mainaltimeterpressureknobdecr5",
-        "mainaltimeterpressureknobincr1",
-        "mainaltimeterpressureknobdecr1"
-      ],
-      "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: Altimeter Pressure Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainaltimeterpressureknobdecr5",
-      "clazz": "MainAltimeterPressureKnobDecr5",
-      "callback": "SimAltPressDec",
-      "relatedActions": [
-        "mainaltimeterpressureknobincr5",
-        "mainaltimeterpressureknobincr1",
-        "mainaltimeterpressureknobdecr1"
-      ],
-      "description": "MAIN: Altimeter Pressure Knob - Decr. (5°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: Altimeter Pressure Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainaltimeterpressureknobincr1",
-      "clazz": "MainAltimeterPressureKnobIncr1",
-      "callback": "SimAltPressIncBy1",
-      "relatedActions": [
-        "mainaltimeterpressureknobincr5",
-        "mainaltimeterpressureknobdecr5",
-        "mainaltimeterpressureknobdecr1"
-      ],
-      "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: Altimeter Pressure Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainaltimeterpressureknobdecr1",
-      "clazz": "MainAltimeterPressureKnobDecr1",
-      "callback": "SimAltPressDecBy1",
-      "relatedActions": [
-        "mainaltimeterpressureknobincr5",
-        "mainaltimeterpressureknobdecr5",
-        "mainaltimeterpressureknobincr1"
-      ],
-      "description": "MAIN: Altimeter Pressure Knob - Decr. (1°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: Altimeter Pressure Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "instrmodeknobcycle",
-      "clazz": "InstrModeKnobCycle",
-      "callback": "SimStepHSIMode",
-      "relatedActions": [
-        "instrmodeknobstepup",
-        "instrmodeknobstepdown",
-        "instrmodeknobilstcn",
-        "instrmodeknobtcn",
-        "instrmodeknobnav",
-        "instrmodeknobilsnav"
-      ],
-      "description": "INSTR: MODE Knob - Cycle",
-      "category": "CENTER CONSOLE",
-      "section": "INSTR MODE PANEL",
-      "group": "INSTR: MODE Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "instrmodeknobstepup",
-      "clazz": "InstrModeKnobStepUp",
-      "callback": "SimHSIModeInc",
-      "relatedActions": [
-        "instrmodeknobcycle",
-        "instrmodeknobstepdown",
-        "instrmodeknobilstcn",
-        "instrmodeknobtcn",
-        "instrmodeknobnav",
-        "instrmodeknobilsnav"
-      ],
-      "description": "INSTR: MODE Knob - Step Up",
-      "category": "CENTER CONSOLE",
-      "section": "INSTR MODE PANEL",
-      "group": "INSTR: MODE Knob",
-      "style": "knob",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "instrmodeknobstepdown",
-      "clazz": "InstrModeKnobStepDown",
-      "callback": "SimHSIModeDec",
-      "relatedActions": [
-        "instrmodeknobcycle",
-        "instrmodeknobstepup",
-        "instrmodeknobilstcn",
-        "instrmodeknobtcn",
-        "instrmodeknobnav",
-        "instrmodeknobilsnav"
-      ],
-      "description": "INSTR: MODE Knob - Step Down",
-      "category": "CENTER CONSOLE",
-      "section": "INSTR MODE PANEL",
-      "group": "INSTR: MODE Knob",
-      "style": "knob",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "instrmodeknobilstcn",
-      "clazz": "InstrModeKnobIlsTcn",
-      "callback": "SimHSIIlsTcn",
-      "relatedActions": [
-        "instrmodeknobcycle",
-        "instrmodeknobstepup",
-        "instrmodeknobstepdown",
-        "instrmodeknobtcn",
-        "instrmodeknobnav",
-        "instrmodeknobilsnav"
-      ],
-      "description": "INSTR: MODE Knob - ILS/TCN",
-      "category": "CENTER CONSOLE",
-      "section": "INSTR MODE PANEL",
-      "group": "INSTR: MODE Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "instrmodeknobtcn",
-      "clazz": "InstrModeKnobTcn",
-      "callback": "SimHSITcn",
-      "relatedActions": [
-        "instrmodeknobcycle",
-        "instrmodeknobstepup",
-        "instrmodeknobstepdown",
-        "instrmodeknobilstcn",
-        "instrmodeknobnav",
-        "instrmodeknobilsnav"
-      ],
-      "description": "INSTR: MODE Knob - TCN",
-      "category": "CENTER CONSOLE",
-      "section": "INSTR MODE PANEL",
-      "group": "INSTR: MODE Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "instrmodeknobnav",
-      "clazz": "InstrModeKnobNav",
-      "callback": "SimHSINav",
-      "relatedActions": [
-        "instrmodeknobcycle",
-        "instrmodeknobstepup",
-        "instrmodeknobstepdown",
-        "instrmodeknobilstcn",
-        "instrmodeknobtcn",
-        "instrmodeknobilsnav"
-      ],
-      "description": "INSTR: MODE Knob - NAV",
-      "category": "CENTER CONSOLE",
-      "section": "INSTR MODE PANEL",
-      "group": "INSTR: MODE Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "instrmodeknobilsnav",
-      "clazz": "InstrModeKnobIlsNav",
-      "callback": "SimHSIIlsNav",
-      "relatedActions": [
-        "instrmodeknobcycle",
-        "instrmodeknobstepup",
-        "instrmodeknobstepdown",
-        "instrmodeknobilstcn",
-        "instrmodeknobtcn",
-        "instrmodeknobnav"
-      ],
-      "description": "INSTR: MODE Knob - ILS/NAV",
-      "category": "CENTER CONSOLE",
-      "section": "INSTR MODE PANEL",
-      "group": "INSTR: MODE Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
     },
     {
       "id": "rmfdosb1buttonpush",

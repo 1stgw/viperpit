@@ -8,6 +8,7 @@
       <router-link to="/cockpits/f35/consoles/test">Test</router-link> | 
       <router-link to="/cockpits/f35/consoles/lights">Lights</router-link> | 
       <router-link to="/cockpits/f35/consoles/sensors">Sensors</router-link> | 
+      <router-link to="/cockpits/f35/consoles/nav">Nav</router-link> | 
       <router-link to="/cockpits/f35/consoles/leftconsole">Left Console</router-link> | 
       <router-link to="/cockpits/f35/consoles/leftauxconsole">Left Aux Console</router-link> | 
       <router-link to="/cockpits/f35/consoles/centerconsole">Center Console</router-link> | 
@@ -36,6 +37,7 @@ import Fuel from '../consoles/Fuel'
 import Test from '../consoles/Test'
 import Lights from '../consoles/Lights'
 import Sensors from '../consoles/Sensors'
+import Nav from '../consoles/Nav'
 import LeftConsole from '../consoles/LeftConsole'
 import LeftAuxConsole from '../consoles/LeftAuxConsole'
 import CenterConsole from '../consoles/CenterConsole'
@@ -55,6 +57,7 @@ export default {
     Test,
     Lights,
     Sensors,
+    Nav,
     LeftConsole,
     LeftAuxConsole,
     CenterConsole,

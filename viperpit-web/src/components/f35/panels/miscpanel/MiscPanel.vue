@@ -13,21 +13,6 @@
             <misc-master-arm-switch />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <misc-adv-mode />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <misc-roll-switch />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <div align="center" style="padding: 0px;">
-            <misc-pitch-switch />
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -36,18 +21,12 @@
 <script>
 import MiscLaserSwitch from './MiscLaserSwitch'
 import MiscMasterArmSwitch from './MiscMasterArmSwitch'
-import MiscAdvMode from './MiscAdvMode'
-import MiscRollSwitch from './MiscRollSwitch'
-import MiscPitchSwitch from './MiscPitchSwitch'
 
 export default {
   name: 'MiscPanel',
   components: {
     MiscLaserSwitch,
-    MiscMasterArmSwitch,
-    MiscAdvMode,
-    MiscRollSwitch,
-    MiscPitchSwitch
+    MiscMasterArmSwitch
   }
 }
 </script>
