@@ -1,12 +1,12 @@
 import Cmds from '@/components/f35/consoles/Cmds'
 import Comms from '@/components/f35/consoles/Comms'
+import Flight from '@/components/f35/consoles/Flight'
 import Fuel from '@/components/f35/consoles/Fuel'
 import Test from '@/components/f35/consoles/Test'
 import Lights from '@/components/f35/consoles/Lights'
 import Sensors from '@/components/f35/consoles/Sensors'
 import Nav from '@/components/f35/consoles/Nav'
 import Avionics from '@/components/f35/consoles/Avionics'
-import LeftConsole from '@/components/f35/consoles/LeftConsole'
 import LeftAuxConsole from '@/components/f35/consoles/LeftAuxConsole'
 import CenterConsole from '@/components/f35/consoles/CenterConsole'
 import RightConsole from '@/components/f35/consoles/RightConsole'
@@ -26,6 +26,11 @@ export default class F35Router {
         path: '/cockpits/f35/consoles/comms',
         name: 'CommsForF35',
         component: Comms
+      },
+      {
+        path: '/cockpits/f35/consoles/flight',
+        name: 'FlightForF35',
+        component: Flight
       },
       {
         path: '/cockpits/f35/consoles/fuel',
@@ -56,11 +61,6 @@ export default class F35Router {
         path: '/cockpits/f35/consoles/avionics',
         name: 'AvionicsForF35',
         component: Avionics
-      },
-      {
-        path: '/cockpits/f35/consoles/leftconsole',
-        name: 'LeftConsoleForF35',
-        component: LeftConsole
       },
       {
         path: '/cockpits/f35/consoles/leftauxconsole',

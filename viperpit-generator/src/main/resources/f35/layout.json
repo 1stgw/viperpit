@@ -177,6 +177,137 @@
       ]
     },
     {
+      "console": "flight",
+      "consoleRow": [
+        {
+          "panelRowSet": [
+            {
+              "panel": "fltcontrolpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "FLT: DIGITAL Switch",
+                    "FLT: ALT FLAPS Switch",
+                    "FLT: MANUAL TF FLYUP Switch",
+                    "FLT: LE FLAPS Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "FLT: FLCS Switch",
+                    "FLT: BIT Switch"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "manualtrimpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "TRIM: ROLL TRIM Wheel",
+                    "TRIM: TRIM/AP DISC Switch",
+                    "TRIM: YAW TRIM Knob",
+                    "TRIM: PITCH TRIM Wheel"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "epupanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "EPU: EPU Switch"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "elecpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "ELEC: MAIN PWR Switch",
+                    "ELEC: CAUTION RESET Button"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "avtrpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "AVTR: AVTR Switch"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "engjetstartpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "ENG: JFS Switch",
+                    "ENG: ENG CONT Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "mpopanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "MPO: MANUAL PITCH Switch"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "leftsidewall",
+              "panelRow": [
+                {
+                  "group": [
+                    "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+                    "LEFT WALL: CANOPY"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "seat",
+              "panelRow": [
+                {
+                  "group": [
+                    "SEAT: Safety Lever",
+                    "SEAT: EJECT Handle"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "console": "fuel",
       "consoleRow": [
         {
@@ -385,137 +516,6 @@
                     "HUD: Velocity Switch",
                     "HUD: Altitude Switch",
                     "HUD: Brightness Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "console": "leftconsole",
-      "consoleRow": [
-        {
-          "panelRowSet": [
-            {
-              "panel": "fltcontrolpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "FLT: DIGITAL Switch",
-                    "FLT: ALT FLAPS Switch",
-                    "FLT: MANUAL TF FLYUP Switch",
-                    "FLT: LE FLAPS Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "FLT: FLCS Switch",
-                    "FLT: BIT Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "manualtrimpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "TRIM: ROLL TRIM Wheel",
-                    "TRIM: TRIM/AP DISC Switch",
-                    "TRIM: YAW TRIM Knob",
-                    "TRIM: PITCH TRIM Wheel"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "epupanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "EPU: EPU Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "elecpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "ELEC: MAIN PWR Switch",
-                    "ELEC: CAUTION RESET Button"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "avtrpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "AVTR: AVTR Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "engjetstartpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "ENG: JFS Switch",
-                    "ENG: ENG CONT Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "mpopanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "MPO: MANUAL PITCH Switch"
-                  ]
-                }
-              ]
-            },
-            {
-              "panel": "leftsidewall",
-              "panelRow": [
-                {
-                  "group": [
-                    "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-                    "LEFT WALL: CANOPY"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "seat",
-              "panelRow": [
-                {
-                  "group": [
-                    "SEAT: Safety Lever",
-                    "SEAT: EJECT Handle"
                   ]
                 }
               ]

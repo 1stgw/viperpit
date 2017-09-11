@@ -10,6 +10,10 @@
     "className" : "Comms",
     "name" : "Comms"
   }, {
+    "id" : "flight",
+    "className" : "Flight",
+    "name" : "Flight"
+  }, {
     "id" : "fuel",
     "className" : "Fuel",
     "name" : "Fuel"
@@ -33,10 +37,6 @@
     "id" : "avionics",
     "className" : "Avionics",
     "name" : "Avionics"
-  }, {
-    "id" : "leftconsole",
-    "className" : "LeftConsole",
-    "name" : "Left Console"
   }, {
     "id" : "leftauxconsole",
     "className" : "LeftAuxConsole",
@@ -99,6 +99,42 @@
     "className" : "UhfPanel",
     "name" : "UHF PANEL"
   }, {
+    "id" : "fltcontrolpanel",
+    "className" : "FltControlPanel",
+    "name" : "FLT CONTROL PANEL"
+  }, {
+    "id" : "manualtrimpanel",
+    "className" : "ManualTrimPanel",
+    "name" : "MANUAL TRIM PANEL"
+  }, {
+    "id" : "epupanel",
+    "className" : "EpuPanel",
+    "name" : "EPU PANEL"
+  }, {
+    "id" : "elecpanel",
+    "className" : "ElecPanel",
+    "name" : "ELEC PANEL"
+  }, {
+    "id" : "avtrpanel",
+    "className" : "AvtrPanel",
+    "name" : "AVTR PANEL"
+  }, {
+    "id" : "engjetstartpanel",
+    "className" : "EngJetStartPanel",
+    "name" : "ENG & JET START PANEL"
+  }, {
+    "id" : "mpopanel",
+    "className" : "MpoPanel",
+    "name" : "MPO PANEL"
+  }, {
+    "id" : "leftsidewall",
+    "className" : "LeftSideWall",
+    "name" : "LEFT SIDE WALL"
+  }, {
+    "id" : "seat",
+    "className" : "Seat",
+    "name" : "SEAT"
+  }, {
     "id" : "fuelpanel",
     "className" : "FuelPanel",
     "name" : "FUEL PANEL"
@@ -142,42 +178,6 @@
     "id" : "hudpanel",
     "className" : "HudPanel",
     "name" : "HUD  PANEL"
-  }, {
-    "id" : "fltcontrolpanel",
-    "className" : "FltControlPanel",
-    "name" : "FLT CONTROL PANEL"
-  }, {
-    "id" : "manualtrimpanel",
-    "className" : "ManualTrimPanel",
-    "name" : "MANUAL TRIM PANEL"
-  }, {
-    "id" : "epupanel",
-    "className" : "EpuPanel",
-    "name" : "EPU PANEL"
-  }, {
-    "id" : "elecpanel",
-    "className" : "ElecPanel",
-    "name" : "ELEC PANEL"
-  }, {
-    "id" : "avtrpanel",
-    "className" : "AvtrPanel",
-    "name" : "AVTR PANEL"
-  }, {
-    "id" : "engjetstartpanel",
-    "className" : "EngJetStartPanel",
-    "name" : "ENG & JET START PANEL"
-  }, {
-    "id" : "mpopanel",
-    "className" : "MpoPanel",
-    "name" : "MPO PANEL"
-  }, {
-    "id" : "leftsidewall",
-    "className" : "LeftSideWall",
-    "name" : "LEFT SIDE WALL"
-  }, {
-    "id" : "seat",
-    "className" : "Seat",
-    "name" : "SEAT"
   }, {
     "id" : "altgearcontrol",
     "className" : "AltGearControl",
@@ -482,6 +482,132 @@
     "label" : "MODE",
     "type" : "switch"
   }, {
+    "id" : "FLT: DIGITAL Switch",
+    "className" : "FltDigitalSwitch",
+    "description" : "FLT: DIGITAL Switch - BACKUP",
+    "label" : "DIGITAL",
+    "type" : "switch"
+  }, {
+    "id" : "FLT: ALT FLAPS Switch",
+    "className" : "FltAltFlapsSwitch",
+    "description" : "FLT: ALT FLAPS Switch - EXTEND",
+    "label" : "ALT FLAPS",
+    "type" : "switch"
+  }, {
+    "id" : "FLT: MANUAL TF FLYUP Switch",
+    "className" : "FltManualTfFlyupSwitch",
+    "description" : "FLT: MANUAL TF FLYUP Switch - DISABLE",
+    "label" : "MANUAL TF FLYUP",
+    "type" : "switch"
+  }, {
+    "id" : "FLT: LE FLAPS Switch",
+    "className" : "FltLeFlapsSwitch",
+    "description" : "FLT: LE FLAPS Switch - LOCK",
+    "label" : "LE FLAPS",
+    "type" : "switch"
+  }, {
+    "id" : "FLT: FLCS Switch",
+    "className" : "FltFlcsSwitch",
+    "description" : "FLT: FLCS Switch - Hold",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "FLT: BIT Switch",
+    "className" : "FltBitSwitch",
+    "description" : "FLT: BIT Switch - Push",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "TRIM: ROLL TRIM Wheel",
+    "className" : "TrimRollTrimWheel",
+    "description" : "TRIM: ROLL TRIM Wheel - L WING DN",
+    "label" : "ROLL TRIM",
+    "type" : "button"
+  }, {
+    "id" : "TRIM: TRIM/AP DISC Switch",
+    "className" : "TrimTrimApDiscSwitch",
+    "description" : "TRIM: TRIM/AP DISC Switch - DISC",
+    "label" : "TRIM/AP DISC",
+    "type" : "switch"
+  }, {
+    "id" : "TRIM: YAW TRIM Knob",
+    "className" : "TrimYawTrimKnob",
+    "description" : "TRIM: YAW TRIM Knob - L",
+    "label" : "YAW TRIM",
+    "type" : "button"
+  }, {
+    "id" : "TRIM: PITCH TRIM Wheel",
+    "className" : "TrimPitchTrimWheel",
+    "description" : "TRIM: PITCH TRIM Wheel - NOSE UP",
+    "label" : "PITCH TRIM",
+    "type" : "button"
+  }, {
+    "id" : "EPU: EPU Switch",
+    "className" : "EpuEpuSwitch",
+    "description" : "EPU: EPU Switch - ON",
+    "label" : "EPU",
+    "type" : "switch"
+  }, {
+    "id" : "ELEC: MAIN PWR Switch",
+    "className" : "ElecMainPwrSwitch",
+    "description" : "ELEC: MAIN PWR Switch - MAIN",
+    "label" : "MAIN PWR",
+    "type" : "switch"
+  }, {
+    "id" : "ELEC: CAUTION RESET Button",
+    "className" : "ElecCautionResetButton",
+    "description" : "ELEC: CAUTION RESET Button - Push",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "AVTR: AVTR Switch",
+    "className" : "AvtrAvtrSwitch",
+    "description" : "AVTR: AVTR Switch - Toggle ON / OFF",
+    "label" : "AVTR",
+    "type" : "button"
+  }, {
+    "id" : "ENG: JFS Switch",
+    "className" : "EngJfsSwitch",
+    "description" : "ENG: JFS Switch - OFF",
+    "label" : "JFS",
+    "type" : "switch"
+  }, {
+    "id" : "ENG: ENG CONT Switch",
+    "className" : "EngEngContSwitch",
+    "description" : "ENG: ENG CONT Switch - PRI",
+    "label" : "ENG CONT",
+    "type" : "switch"
+  }, {
+    "id" : "MPO: MANUAL PITCH Switch",
+    "className" : "MpoManualPitchSwitch",
+    "description" : "MPO: MANUAL PITCH Switch - Hold",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+    "className" : "LeftWallSlapSwitchEcmPgrm5",
+    "description" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "LEFT WALL: CANOPY",
+    "className" : "LeftWallCanopy",
+    "description" : "LEFT WALL: CANOPY - Open",
+    "label" : "CANOPY",
+    "type" : "button"
+  }, {
+    "id" : "SEAT: Safety Lever",
+    "className" : "SeatSafetyLever",
+    "description" : "SEAT: Safety Lever - Armed",
+    "label" : "Safety Lever",
+    "type" : "button"
+  }, {
+    "id" : "SEAT: EJECT Handle",
+    "className" : "SeatEjectHandle",
+    "description" : "SEAT: EJECT Handle - Hold For Eject",
+    "label" : null,
+    "type" : "button"
+  }, {
     "id" : "FUEL: MASTER Switch",
     "className" : "FuelMasterSwitch",
     "description" : "FUEL: MASTER Switch - ON",
@@ -745,132 +871,6 @@
     "description" : "HUD: Brightness Switch - DAY",
     "label" : "Brightness",
     "type" : "switch"
-  }, {
-    "id" : "FLT: DIGITAL Switch",
-    "className" : "FltDigitalSwitch",
-    "description" : "FLT: DIGITAL Switch - BACKUP",
-    "label" : "DIGITAL",
-    "type" : "switch"
-  }, {
-    "id" : "FLT: ALT FLAPS Switch",
-    "className" : "FltAltFlapsSwitch",
-    "description" : "FLT: ALT FLAPS Switch - EXTEND",
-    "label" : "ALT FLAPS",
-    "type" : "switch"
-  }, {
-    "id" : "FLT: MANUAL TF FLYUP Switch",
-    "className" : "FltManualTfFlyupSwitch",
-    "description" : "FLT: MANUAL TF FLYUP Switch - DISABLE",
-    "label" : "MANUAL TF FLYUP",
-    "type" : "switch"
-  }, {
-    "id" : "FLT: LE FLAPS Switch",
-    "className" : "FltLeFlapsSwitch",
-    "description" : "FLT: LE FLAPS Switch - LOCK",
-    "label" : "LE FLAPS",
-    "type" : "switch"
-  }, {
-    "id" : "FLT: FLCS Switch",
-    "className" : "FltFlcsSwitch",
-    "description" : "FLT: FLCS Switch - Hold",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "FLT: BIT Switch",
-    "className" : "FltBitSwitch",
-    "description" : "FLT: BIT Switch - Push",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "TRIM: ROLL TRIM Wheel",
-    "className" : "TrimRollTrimWheel",
-    "description" : "TRIM: ROLL TRIM Wheel - L WING DN",
-    "label" : "ROLL TRIM",
-    "type" : "button"
-  }, {
-    "id" : "TRIM: TRIM/AP DISC Switch",
-    "className" : "TrimTrimApDiscSwitch",
-    "description" : "TRIM: TRIM/AP DISC Switch - DISC",
-    "label" : "TRIM/AP DISC",
-    "type" : "switch"
-  }, {
-    "id" : "TRIM: YAW TRIM Knob",
-    "className" : "TrimYawTrimKnob",
-    "description" : "TRIM: YAW TRIM Knob - L",
-    "label" : "YAW TRIM",
-    "type" : "button"
-  }, {
-    "id" : "TRIM: PITCH TRIM Wheel",
-    "className" : "TrimPitchTrimWheel",
-    "description" : "TRIM: PITCH TRIM Wheel - NOSE UP",
-    "label" : "PITCH TRIM",
-    "type" : "button"
-  }, {
-    "id" : "EPU: EPU Switch",
-    "className" : "EpuEpuSwitch",
-    "description" : "EPU: EPU Switch - ON",
-    "label" : "EPU",
-    "type" : "switch"
-  }, {
-    "id" : "ELEC: MAIN PWR Switch",
-    "className" : "ElecMainPwrSwitch",
-    "description" : "ELEC: MAIN PWR Switch - MAIN",
-    "label" : "MAIN PWR",
-    "type" : "switch"
-  }, {
-    "id" : "ELEC: CAUTION RESET Button",
-    "className" : "ElecCautionResetButton",
-    "description" : "ELEC: CAUTION RESET Button - Push",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "AVTR: AVTR Switch",
-    "className" : "AvtrAvtrSwitch",
-    "description" : "AVTR: AVTR Switch - Toggle ON / OFF",
-    "label" : "AVTR",
-    "type" : "button"
-  }, {
-    "id" : "ENG: JFS Switch",
-    "className" : "EngJfsSwitch",
-    "description" : "ENG: JFS Switch - OFF",
-    "label" : "JFS",
-    "type" : "switch"
-  }, {
-    "id" : "ENG: ENG CONT Switch",
-    "className" : "EngEngContSwitch",
-    "description" : "ENG: ENG CONT Switch - PRI",
-    "label" : "ENG CONT",
-    "type" : "switch"
-  }, {
-    "id" : "MPO: MANUAL PITCH Switch",
-    "className" : "MpoManualPitchSwitch",
-    "description" : "MPO: MANUAL PITCH Switch - Hold",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-    "className" : "LeftWallSlapSwitchEcmPgrm5",
-    "description" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "LEFT WALL: CANOPY",
-    "className" : "LeftWallCanopy",
-    "description" : "LEFT WALL: CANOPY - Open",
-    "label" : "CANOPY",
-    "type" : "button"
-  }, {
-    "id" : "SEAT: Safety Lever",
-    "className" : "SeatSafetyLever",
-    "description" : "SEAT: Safety Lever - Armed",
-    "label" : "Safety Lever",
-    "type" : "button"
-  }, {
-    "id" : "SEAT: EJECT Handle",
-    "className" : "SeatEjectHandle",
-    "description" : "SEAT: EJECT Handle - Hold For Eject",
-    "label" : null,
-    "type" : "button"
   }, {
     "id" : "ALT GEAR: Extend Gear Handle",
     "className" : "AltGearExtendGearHandle",
@@ -1695,6 +1695,246 @@
     "label" : "GRD",
     "role" : "none"
   }, {
+    "id" : "fltdigitalswitchbackup",
+    "className" : "FltDigitalSwitchBackup",
+    "description" : "FLT: DIGITAL Switch - BACKUP",
+    "label" : "BACKUP",
+    "role" : "none"
+  }, {
+    "id" : "fltdigitalswitchoff",
+    "className" : "FltDigitalSwitchOff",
+    "description" : "FLT: DIGITAL Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "fltaltflapsswitchextend",
+    "className" : "FltAltFlapsSwitchExtend",
+    "description" : "FLT: ALT FLAPS Switch - EXTEND",
+    "label" : "EXTEND",
+    "role" : "none"
+  }, {
+    "id" : "fltaltflapsswitchnorm",
+    "className" : "FltAltFlapsSwitchNorm",
+    "description" : "FLT: ALT FLAPS Switch - NORM",
+    "label" : "NORM",
+    "role" : "on"
+  }, {
+    "id" : "fltmanualtfflyupswitchdisable",
+    "className" : "FltManualTfFlyupSwitchDisable",
+    "description" : "FLT: MANUAL TF FLYUP Switch - DISABLE",
+    "label" : "DISABLE",
+    "role" : "off"
+  }, {
+    "id" : "fltmanualtfflyupswitchenable",
+    "className" : "FltManualTfFlyupSwitchEnable",
+    "description" : "FLT: MANUAL TF FLYUP Switch - ENABLE",
+    "label" : "ENABLE",
+    "role" : "on"
+  }, {
+    "id" : "fltleflapsswitchlock",
+    "className" : "FltLeFlapsSwitchLock",
+    "description" : "FLT: LE FLAPS Switch - LOCK",
+    "label" : "LOCK",
+    "role" : "none"
+  }, {
+    "id" : "fltleflapsswitchauto",
+    "className" : "FltLeFlapsSwitchAuto",
+    "description" : "FLT: LE FLAPS Switch - AUTO",
+    "label" : "AUTO",
+    "role" : "none"
+  }, {
+    "id" : "fltflcsswitchhold",
+    "className" : "FltFlcsSwitchHold",
+    "description" : "FLT: FLCS Switch - Hold",
+    "label" : "FLCS",
+    "role" : "none"
+  }, {
+    "id" : "fltbitswitchpush",
+    "className" : "FltBitSwitchPush",
+    "description" : "FLT: BIT Switch - Push",
+    "label" : "BIT",
+    "role" : "none"
+  }, {
+    "id" : "trimrolltrimwheellwingdn",
+    "className" : "TrimRollTrimWheelLWingDn",
+    "description" : "TRIM: ROLL TRIM Wheel - L WING DN",
+    "label" : "L WING DN",
+    "role" : "down"
+  }, {
+    "id" : "trimrolltrimwheelrwingdn",
+    "className" : "TrimRollTrimWheelRWingDn",
+    "description" : "TRIM: ROLL TRIM Wheel - R WING DN",
+    "label" : "R WING DN",
+    "role" : "down"
+  }, {
+    "id" : "trimtrimapdiscswitchdisc",
+    "className" : "TrimTrimApDiscSwitchDisc",
+    "description" : "TRIM: TRIM/AP DISC Switch - DISC",
+    "label" : "DISC",
+    "role" : "none"
+  }, {
+    "id" : "trimtrimapdiscswitchnorm",
+    "className" : "TrimTrimApDiscSwitchNorm",
+    "description" : "TRIM: TRIM/AP DISC Switch - NORM",
+    "label" : "NORM",
+    "role" : "on"
+  }, {
+    "id" : "trimyawtrimknobl",
+    "className" : "TrimYawTrimKnobL",
+    "description" : "TRIM: YAW TRIM Knob - L",
+    "label" : "L",
+    "role" : "left"
+  }, {
+    "id" : "trimyawtrimknobr",
+    "className" : "TrimYawTrimKnobR",
+    "description" : "TRIM: YAW TRIM Knob - R",
+    "label" : "R",
+    "role" : "right"
+  }, {
+    "id" : "trimpitchtrimwheelnoseup",
+    "className" : "TrimPitchTrimWheelNoseUp",
+    "description" : "TRIM: PITCH TRIM Wheel - NOSE UP",
+    "label" : "NOSE UP",
+    "role" : "up"
+  }, {
+    "id" : "trimpitchtrimwheelnosedn",
+    "className" : "TrimPitchTrimWheelNoseDn",
+    "description" : "TRIM: PITCH TRIM Wheel - NOSE DN",
+    "label" : "NOSE DN",
+    "role" : "down"
+  }, {
+    "id" : "epuepuswitchon",
+    "className" : "EpuEpuSwitchOn",
+    "description" : "EPU: EPU Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "epuepuswitchnorm",
+    "className" : "EpuEpuSwitchNorm",
+    "description" : "EPU: EPU Switch - NORM",
+    "label" : "NORM",
+    "role" : "on"
+  }, {
+    "id" : "epuepuswitchoff",
+    "className" : "EpuEpuSwitchOff",
+    "description" : "EPU: EPU Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "elecmainpwrswitchmain",
+    "className" : "ElecMainPwrSwitchMain",
+    "description" : "ELEC: MAIN PWR Switch - MAIN",
+    "label" : "MAIN",
+    "role" : "on"
+  }, {
+    "id" : "elecmainpwrswitchbatt",
+    "className" : "ElecMainPwrSwitchBatt",
+    "description" : "ELEC: MAIN PWR Switch - BATT",
+    "label" : "BATT",
+    "role" : "none"
+  }, {
+    "id" : "elecmainpwrswitchoff",
+    "className" : "ElecMainPwrSwitchOff",
+    "description" : "ELEC: MAIN PWR Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "eleccautionresetbuttonpush",
+    "className" : "ElecCautionResetButtonPush",
+    "description" : "ELEC: CAUTION RESET Button - Push",
+    "label" : "CAUTION RESET",
+    "role" : "none"
+  }, {
+    "id" : "avtravtrswitchtoggleonoff",
+    "className" : "AvtrAvtrSwitchToggleOnOff",
+    "description" : "AVTR: AVTR Switch - Toggle ON / OFF",
+    "label" : "Toggle ON / OFF",
+    "role" : "off"
+  }, {
+    "id" : "avtravtrswitchon",
+    "className" : "AvtrAvtrSwitchOn",
+    "description" : "AVTR: AVTR Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "avtravtrswitchauto",
+    "className" : "AvtrAvtrSwitchAuto",
+    "description" : "AVTR: AVTR Switch - AUTO",
+    "label" : "AUTO",
+    "role" : "none"
+  }, {
+    "id" : "avtravtrswitchoff",
+    "className" : "AvtrAvtrSwitchOff",
+    "description" : "AVTR: AVTR Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "engjfsswitchoff",
+    "className" : "EngJfsSwitchOff",
+    "description" : "ENG: JFS Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "engjfsswitchstart2",
+    "className" : "EngJfsSwitchStart2",
+    "description" : "ENG: JFS Switch - START 2",
+    "label" : "START 2",
+    "role" : "none"
+  }, {
+    "id" : "engengcontswitchpri",
+    "className" : "EngEngContSwitchPri",
+    "description" : "ENG: ENG CONT Switch - PRI",
+    "label" : "PRI",
+    "role" : "none"
+  }, {
+    "id" : "engengcontswitchsec",
+    "className" : "EngEngContSwitchSec",
+    "description" : "ENG: ENG CONT Switch - SEC",
+    "label" : "SEC",
+    "role" : "none"
+  }, {
+    "id" : "mpomanualpitchswitchhold",
+    "className" : "MpoManualPitchSwitchHold",
+    "description" : "MPO: MANUAL PITCH Switch - Hold",
+    "label" : "MANUAL PITCH",
+    "role" : "none"
+  }, {
+    "id" : "leftwallslapswitchecmpgrm5",
+    "className" : "LeftWallSlapSwitchEcmPgrm5",
+    "description" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+    "label" : "SLAP Switch (ECM-PGRM # 5)",
+    "role" : "none"
+  }, {
+    "id" : "leftwallcanopyopen",
+    "className" : "LeftWallCanopyOpen",
+    "description" : "LEFT WALL: CANOPY - Open",
+    "label" : "Open",
+    "role" : "none"
+  }, {
+    "id" : "leftwallcanopyclose",
+    "className" : "LeftWallCanopyClose",
+    "description" : "LEFT WALL: CANOPY - Close",
+    "label" : "Close",
+    "role" : "none"
+  }, {
+    "id" : "seatsafetyleverarmed",
+    "className" : "SeatSafetyLeverArmed",
+    "description" : "SEAT: Safety Lever - Armed",
+    "label" : "Armed",
+    "role" : "none"
+  }, {
+    "id" : "seatsafetyleverlocked",
+    "className" : "SeatSafetyLeverLocked",
+    "description" : "SEAT: Safety Lever - Locked",
+    "label" : "Locked",
+    "role" : "none"
+  }, {
+    "id" : "seatejecthandleholdforeject",
+    "className" : "SeatEjectHandleHoldForEject",
+    "description" : "SEAT: EJECT Handle - Hold For Eject",
+    "label" : "EJECT",
+    "role" : "none"
+  }, {
     "id" : "fuelmasterswitchon",
     "className" : "FuelMasterSwitchOn",
     "description" : "FUEL: MASTER Switch - ON",
@@ -2353,246 +2593,6 @@
     "className" : "HudBrightnessSwitchNig",
     "description" : "HUD: Brightness Switch - NIG",
     "label" : "NIG",
-    "role" : "none"
-  }, {
-    "id" : "fltdigitalswitchbackup",
-    "className" : "FltDigitalSwitchBackup",
-    "description" : "FLT: DIGITAL Switch - BACKUP",
-    "label" : "BACKUP",
-    "role" : "none"
-  }, {
-    "id" : "fltdigitalswitchoff",
-    "className" : "FltDigitalSwitchOff",
-    "description" : "FLT: DIGITAL Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "fltaltflapsswitchextend",
-    "className" : "FltAltFlapsSwitchExtend",
-    "description" : "FLT: ALT FLAPS Switch - EXTEND",
-    "label" : "EXTEND",
-    "role" : "none"
-  }, {
-    "id" : "fltaltflapsswitchnorm",
-    "className" : "FltAltFlapsSwitchNorm",
-    "description" : "FLT: ALT FLAPS Switch - NORM",
-    "label" : "NORM",
-    "role" : "on"
-  }, {
-    "id" : "fltmanualtfflyupswitchdisable",
-    "className" : "FltManualTfFlyupSwitchDisable",
-    "description" : "FLT: MANUAL TF FLYUP Switch - DISABLE",
-    "label" : "DISABLE",
-    "role" : "off"
-  }, {
-    "id" : "fltmanualtfflyupswitchenable",
-    "className" : "FltManualTfFlyupSwitchEnable",
-    "description" : "FLT: MANUAL TF FLYUP Switch - ENABLE",
-    "label" : "ENABLE",
-    "role" : "on"
-  }, {
-    "id" : "fltleflapsswitchlock",
-    "className" : "FltLeFlapsSwitchLock",
-    "description" : "FLT: LE FLAPS Switch - LOCK",
-    "label" : "LOCK",
-    "role" : "none"
-  }, {
-    "id" : "fltleflapsswitchauto",
-    "className" : "FltLeFlapsSwitchAuto",
-    "description" : "FLT: LE FLAPS Switch - AUTO",
-    "label" : "AUTO",
-    "role" : "none"
-  }, {
-    "id" : "fltflcsswitchhold",
-    "className" : "FltFlcsSwitchHold",
-    "description" : "FLT: FLCS Switch - Hold",
-    "label" : "FLCS",
-    "role" : "none"
-  }, {
-    "id" : "fltbitswitchpush",
-    "className" : "FltBitSwitchPush",
-    "description" : "FLT: BIT Switch - Push",
-    "label" : "BIT",
-    "role" : "none"
-  }, {
-    "id" : "trimrolltrimwheellwingdn",
-    "className" : "TrimRollTrimWheelLWingDn",
-    "description" : "TRIM: ROLL TRIM Wheel - L WING DN",
-    "label" : "L WING DN",
-    "role" : "down"
-  }, {
-    "id" : "trimrolltrimwheelrwingdn",
-    "className" : "TrimRollTrimWheelRWingDn",
-    "description" : "TRIM: ROLL TRIM Wheel - R WING DN",
-    "label" : "R WING DN",
-    "role" : "down"
-  }, {
-    "id" : "trimtrimapdiscswitchdisc",
-    "className" : "TrimTrimApDiscSwitchDisc",
-    "description" : "TRIM: TRIM/AP DISC Switch - DISC",
-    "label" : "DISC",
-    "role" : "none"
-  }, {
-    "id" : "trimtrimapdiscswitchnorm",
-    "className" : "TrimTrimApDiscSwitchNorm",
-    "description" : "TRIM: TRIM/AP DISC Switch - NORM",
-    "label" : "NORM",
-    "role" : "on"
-  }, {
-    "id" : "trimyawtrimknobl",
-    "className" : "TrimYawTrimKnobL",
-    "description" : "TRIM: YAW TRIM Knob - L",
-    "label" : "L",
-    "role" : "left"
-  }, {
-    "id" : "trimyawtrimknobr",
-    "className" : "TrimYawTrimKnobR",
-    "description" : "TRIM: YAW TRIM Knob - R",
-    "label" : "R",
-    "role" : "right"
-  }, {
-    "id" : "trimpitchtrimwheelnoseup",
-    "className" : "TrimPitchTrimWheelNoseUp",
-    "description" : "TRIM: PITCH TRIM Wheel - NOSE UP",
-    "label" : "NOSE UP",
-    "role" : "up"
-  }, {
-    "id" : "trimpitchtrimwheelnosedn",
-    "className" : "TrimPitchTrimWheelNoseDn",
-    "description" : "TRIM: PITCH TRIM Wheel - NOSE DN",
-    "label" : "NOSE DN",
-    "role" : "down"
-  }, {
-    "id" : "epuepuswitchon",
-    "className" : "EpuEpuSwitchOn",
-    "description" : "EPU: EPU Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "epuepuswitchnorm",
-    "className" : "EpuEpuSwitchNorm",
-    "description" : "EPU: EPU Switch - NORM",
-    "label" : "NORM",
-    "role" : "on"
-  }, {
-    "id" : "epuepuswitchoff",
-    "className" : "EpuEpuSwitchOff",
-    "description" : "EPU: EPU Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "elecmainpwrswitchmain",
-    "className" : "ElecMainPwrSwitchMain",
-    "description" : "ELEC: MAIN PWR Switch - MAIN",
-    "label" : "MAIN",
-    "role" : "on"
-  }, {
-    "id" : "elecmainpwrswitchbatt",
-    "className" : "ElecMainPwrSwitchBatt",
-    "description" : "ELEC: MAIN PWR Switch - BATT",
-    "label" : "BATT",
-    "role" : "none"
-  }, {
-    "id" : "elecmainpwrswitchoff",
-    "className" : "ElecMainPwrSwitchOff",
-    "description" : "ELEC: MAIN PWR Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "eleccautionresetbuttonpush",
-    "className" : "ElecCautionResetButtonPush",
-    "description" : "ELEC: CAUTION RESET Button - Push",
-    "label" : "CAUTION RESET",
-    "role" : "none"
-  }, {
-    "id" : "avtravtrswitchtoggleonoff",
-    "className" : "AvtrAvtrSwitchToggleOnOff",
-    "description" : "AVTR: AVTR Switch - Toggle ON / OFF",
-    "label" : "Toggle ON / OFF",
-    "role" : "off"
-  }, {
-    "id" : "avtravtrswitchon",
-    "className" : "AvtrAvtrSwitchOn",
-    "description" : "AVTR: AVTR Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "avtravtrswitchauto",
-    "className" : "AvtrAvtrSwitchAuto",
-    "description" : "AVTR: AVTR Switch - AUTO",
-    "label" : "AUTO",
-    "role" : "none"
-  }, {
-    "id" : "avtravtrswitchoff",
-    "className" : "AvtrAvtrSwitchOff",
-    "description" : "AVTR: AVTR Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "engjfsswitchoff",
-    "className" : "EngJfsSwitchOff",
-    "description" : "ENG: JFS Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "engjfsswitchstart2",
-    "className" : "EngJfsSwitchStart2",
-    "description" : "ENG: JFS Switch - START 2",
-    "label" : "START 2",
-    "role" : "none"
-  }, {
-    "id" : "engengcontswitchpri",
-    "className" : "EngEngContSwitchPri",
-    "description" : "ENG: ENG CONT Switch - PRI",
-    "label" : "PRI",
-    "role" : "none"
-  }, {
-    "id" : "engengcontswitchsec",
-    "className" : "EngEngContSwitchSec",
-    "description" : "ENG: ENG CONT Switch - SEC",
-    "label" : "SEC",
-    "role" : "none"
-  }, {
-    "id" : "mpomanualpitchswitchhold",
-    "className" : "MpoManualPitchSwitchHold",
-    "description" : "MPO: MANUAL PITCH Switch - Hold",
-    "label" : "MANUAL PITCH",
-    "role" : "none"
-  }, {
-    "id" : "leftwallslapswitchecmpgrm5",
-    "className" : "LeftWallSlapSwitchEcmPgrm5",
-    "description" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-    "label" : "SLAP Switch (ECM-PGRM # 5)",
-    "role" : "none"
-  }, {
-    "id" : "leftwallcanopyopen",
-    "className" : "LeftWallCanopyOpen",
-    "description" : "LEFT WALL: CANOPY - Open",
-    "label" : "Open",
-    "role" : "none"
-  }, {
-    "id" : "leftwallcanopyclose",
-    "className" : "LeftWallCanopyClose",
-    "description" : "LEFT WALL: CANOPY - Close",
-    "label" : "Close",
-    "role" : "none"
-  }, {
-    "id" : "seatsafetyleverarmed",
-    "className" : "SeatSafetyLeverArmed",
-    "description" : "SEAT: Safety Lever - Armed",
-    "label" : "Armed",
-    "role" : "none"
-  }, {
-    "id" : "seatsafetyleverlocked",
-    "className" : "SeatSafetyLeverLocked",
-    "description" : "SEAT: Safety Lever - Locked",
-    "label" : "Locked",
-    "role" : "none"
-  }, {
-    "id" : "seatejecthandleholdforeject",
-    "className" : "SeatEjectHandleHoldForEject",
-    "description" : "SEAT: EJECT Handle - Hold For Eject",
-    "label" : "EJECT",
     "role" : "none"
   }, {
     "id" : "altgearextendgearhandlepush",

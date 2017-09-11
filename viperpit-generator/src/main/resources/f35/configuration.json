@@ -2673,6 +2673,1097 @@
       }
     },
     {
+      "id": "fltdigitalswitchtoggle",
+      "clazz": "FltDigitalSwitchToggle",
+      "callback": "SimDigitalBUP",
+      "relatedActions": [
+        "fltdigitalswitchbackup",
+        "fltdigitalswitchoff"
+      ],
+      "description": "FLT: DIGITAL Switch - Toggle",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: DIGITAL Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "fltdigitalswitchbackup",
+      "clazz": "FltDigitalSwitchBackup",
+      "callback": "SimDigitalBUPBackup",
+      "relatedActions": [
+        "fltdigitalswitchtoggle",
+        "fltdigitalswitchoff"
+      ],
+      "description": "FLT: DIGITAL Switch - BACKUP",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: DIGITAL Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "fltdigitalswitchoff",
+      "clazz": "FltDigitalSwitchOff",
+      "callback": "SimDigitalBUPOff",
+      "relatedActions": [
+        "fltdigitalswitchtoggle",
+        "fltdigitalswitchbackup"
+      ],
+      "description": "FLT: DIGITAL Switch - OFF",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: DIGITAL Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "fltaltflapsswitchtoggle",
+      "clazz": "FltAltFlapsSwitchToggle",
+      "callback": "SimAltFlaps",
+      "relatedActions": [
+        "fltaltflapsswitchextend",
+        "fltaltflapsswitchnorm"
+      ],
+      "description": "FLT: ALT FLAPS Switch - Toggle",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: ALT FLAPS Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "fltaltflapsswitchextend",
+      "clazz": "FltAltFlapsSwitchExtend",
+      "callback": "SimAltFlapsExtend",
+      "relatedActions": [
+        "fltaltflapsswitchtoggle",
+        "fltaltflapsswitchnorm"
+      ],
+      "description": "FLT: ALT FLAPS Switch - EXTEND",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: ALT FLAPS Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "fltaltflapsswitchnorm",
+      "clazz": "FltAltFlapsSwitchNorm",
+      "callback": "SimAltFlapsNorm",
+      "relatedActions": [
+        "fltaltflapsswitchtoggle",
+        "fltaltflapsswitchextend"
+      ],
+      "description": "FLT: ALT FLAPS Switch - NORM",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: ALT FLAPS Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "fltmanualtfflyupswitchtoggle",
+      "clazz": "FltManualTfFlyupSwitchToggle",
+      "callback": "SimManualFlyup",
+      "relatedActions": [
+        "fltmanualtfflyupswitchdisable",
+        "fltmanualtfflyupswitchenable"
+      ],
+      "description": "FLT: MANUAL TF FLYUP Switch - Toggle",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: MANUAL TF FLYUP Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "fltmanualtfflyupswitchdisable",
+      "clazz": "FltManualTfFlyupSwitchDisable",
+      "callback": "SimManualFlyupDisable",
+      "relatedActions": [
+        "fltmanualtfflyupswitchtoggle",
+        "fltmanualtfflyupswitchenable"
+      ],
+      "description": "FLT: MANUAL TF FLYUP Switch - DISABLE",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: MANUAL TF FLYUP Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "fltmanualtfflyupswitchenable",
+      "clazz": "FltManualTfFlyupSwitchEnable",
+      "callback": "SimManualFlyupEnable",
+      "relatedActions": [
+        "fltmanualtfflyupswitchtoggle",
+        "fltmanualtfflyupswitchdisable"
+      ],
+      "description": "FLT: MANUAL TF FLYUP Switch - ENABLE",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: MANUAL TF FLYUP Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "fltleflapsswitchtoggle",
+      "clazz": "FltLeFlapsSwitchToggle",
+      "callback": "SimLEFLockSwitch",
+      "relatedActions": [
+        "fltleflapsswitchlock",
+        "fltleflapsswitchauto"
+      ],
+      "description": "FLT: LE FLAPS Switch - Toggle",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: LE FLAPS Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "fltleflapsswitchlock",
+      "clazz": "FltLeFlapsSwitchLock",
+      "callback": "SimLEFLock",
+      "relatedActions": [
+        "fltleflapsswitchtoggle",
+        "fltleflapsswitchauto"
+      ],
+      "description": "FLT: LE FLAPS Switch - LOCK",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: LE FLAPS Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "fltleflapsswitchauto",
+      "clazz": "FltLeFlapsSwitchAuto",
+      "callback": "SimLEFAuto",
+      "relatedActions": [
+        "fltleflapsswitchtoggle",
+        "fltleflapsswitchlock"
+      ],
+      "description": "FLT: LE FLAPS Switch - AUTO",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: LE FLAPS Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "fltflcsswitchhold",
+      "clazz": "FltFlcsSwitchHold",
+      "callback": "SimFLCSReset",
+      "description": "FLT: FLCS Switch - Hold",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: FLCS Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "fltbitswitchpush",
+      "clazz": "FltBitSwitchPush",
+      "callback": "SimFLTBIT",
+      "description": "FLT: BIT Switch - Push",
+      "category": "FLIGHT",
+      "section": "FLT CONTROL PANEL",
+      "group": "FLT: BIT Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "trimrolltrimwheellwingdn",
+      "clazz": "TrimRollTrimWheelLWingDn",
+      "callback": "SimTrimRollLeft",
+      "relatedActions": [
+        "trimrolltrimwheelrwingdn"
+      ],
+      "description": "TRIM: ROLL TRIM Wheel - L WING DN",
+      "category": "FLIGHT",
+      "section": "MANUAL TRIM PANEL",
+      "group": "TRIM: ROLL TRIM Wheel",
+      "style": "wheel",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "trimrolltrimwheelrwingdn",
+      "clazz": "TrimRollTrimWheelRWingDn",
+      "callback": "SimTrimRollRight",
+      "relatedActions": [
+        "trimrolltrimwheellwingdn"
+      ],
+      "description": "TRIM: ROLL TRIM Wheel - R WING DN",
+      "category": "FLIGHT",
+      "section": "MANUAL TRIM PANEL",
+      "group": "TRIM: ROLL TRIM Wheel",
+      "style": "wheel",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "trimtrimapdiscswitchtoggle",
+      "clazz": "TrimTrimApDiscSwitchToggle",
+      "callback": "SimTrimAPDisc",
+      "relatedActions": [
+        "trimtrimapdiscswitchdisc",
+        "trimtrimapdiscswitchnorm"
+      ],
+      "description": "TRIM: TRIM/AP DISC Switch - Toggle",
+      "category": "FLIGHT",
+      "section": "MANUAL TRIM PANEL",
+      "group": "TRIM: TRIM/AP DISC Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "trimtrimapdiscswitchdisc",
+      "clazz": "TrimTrimApDiscSwitchDisc",
+      "callback": "SimTrimAPDISC",
+      "relatedActions": [
+        "trimtrimapdiscswitchtoggle",
+        "trimtrimapdiscswitchnorm"
+      ],
+      "description": "TRIM: TRIM/AP DISC Switch - DISC",
+      "category": "FLIGHT",
+      "section": "MANUAL TRIM PANEL",
+      "group": "TRIM: TRIM/AP DISC Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "trimtrimapdiscswitchnorm",
+      "clazz": "TrimTrimApDiscSwitchNorm",
+      "callback": "SimTrimAPNORM",
+      "relatedActions": [
+        "trimtrimapdiscswitchtoggle",
+        "trimtrimapdiscswitchdisc"
+      ],
+      "description": "TRIM: TRIM/AP DISC Switch - NORM",
+      "category": "FLIGHT",
+      "section": "MANUAL TRIM PANEL",
+      "group": "TRIM: TRIM/AP DISC Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "trimyawtrimknobl",
+      "clazz": "TrimYawTrimKnobL",
+      "callback": "SimTrimYawLeft",
+      "relatedActions": [
+        "trimyawtrimknobr"
+      ],
+      "description": "TRIM: YAW TRIM Knob - L",
+      "category": "FLIGHT",
+      "section": "MANUAL TRIM PANEL",
+      "group": "TRIM: YAW TRIM Knob",
+      "style": "knob",
+      "role": "left",
+      "type": "button"
+    },
+    {
+      "id": "trimyawtrimknobr",
+      "clazz": "TrimYawTrimKnobR",
+      "callback": "SimTrimYawRight",
+      "relatedActions": [
+        "trimyawtrimknobl"
+      ],
+      "description": "TRIM: YAW TRIM Knob - R",
+      "category": "FLIGHT",
+      "section": "MANUAL TRIM PANEL",
+      "group": "TRIM: YAW TRIM Knob",
+      "style": "knob",
+      "role": "right",
+      "type": "button"
+    },
+    {
+      "id": "trimpitchtrimwheelnoseup",
+      "clazz": "TrimPitchTrimWheelNoseUp",
+      "callback": "SimTrimNoseUp",
+      "relatedActions": [
+        "trimpitchtrimwheelnosedn"
+      ],
+      "description": "TRIM: PITCH TRIM Wheel - NOSE UP",
+      "category": "FLIGHT",
+      "section": "MANUAL TRIM PANEL",
+      "group": "TRIM: PITCH TRIM Wheel",
+      "style": "wheel",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "trimpitchtrimwheelnosedn",
+      "clazz": "TrimPitchTrimWheelNoseDn",
+      "callback": "SimTrimNoseDown",
+      "relatedActions": [
+        "trimpitchtrimwheelnoseup"
+      ],
+      "description": "TRIM: PITCH TRIM Wheel - NOSE DN",
+      "category": "FLIGHT",
+      "section": "MANUAL TRIM PANEL",
+      "group": "TRIM: PITCH TRIM Wheel",
+      "style": "wheel",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "epuepuswitchcycle",
+      "clazz": "EpuEpuSwitchCycle",
+      "callback": "SimEpuToggle",
+      "relatedActions": [
+        "epuepuswitchstepup",
+        "epuepuswitchstepdown",
+        "epuepuswitchon",
+        "epuepuswitchnorm",
+        "epuepuswitchoff"
+      ],
+      "description": "EPU: EPU Switch - Cycle",
+      "category": "FLIGHT",
+      "section": "EPU PANEL",
+      "group": "EPU: EPU Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "epuepuswitchstepup",
+      "clazz": "EpuEpuSwitchStepUp",
+      "callback": "SimEpuUp",
+      "relatedActions": [
+        "epuepuswitchcycle",
+        "epuepuswitchstepdown",
+        "epuepuswitchon",
+        "epuepuswitchnorm",
+        "epuepuswitchoff"
+      ],
+      "description": "EPU: EPU Switch - Step Up",
+      "category": "FLIGHT",
+      "section": "EPU PANEL",
+      "group": "EPU: EPU Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "epuepuswitchstepdown",
+      "clazz": "EpuEpuSwitchStepDown",
+      "callback": "SimEpuDown",
+      "relatedActions": [
+        "epuepuswitchcycle",
+        "epuepuswitchstepup",
+        "epuepuswitchon",
+        "epuepuswitchnorm",
+        "epuepuswitchoff"
+      ],
+      "description": "EPU: EPU Switch - Step Down",
+      "category": "FLIGHT",
+      "section": "EPU PANEL",
+      "group": "EPU: EPU Switch",
+      "style": "button",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "epuepuswitchon",
+      "clazz": "EpuEpuSwitchOn",
+      "callback": "SimEpuOn",
+      "relatedActions": [
+        "epuepuswitchcycle",
+        "epuepuswitchstepup",
+        "epuepuswitchstepdown",
+        "epuepuswitchnorm",
+        "epuepuswitchoff"
+      ],
+      "description": "EPU: EPU Switch - ON",
+      "category": "FLIGHT",
+      "section": "EPU PANEL",
+      "group": "EPU: EPU Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "epuepuswitchnorm",
+      "clazz": "EpuEpuSwitchNorm",
+      "callback": "SimEpuAuto",
+      "relatedActions": [
+        "epuepuswitchcycle",
+        "epuepuswitchstepup",
+        "epuepuswitchstepdown",
+        "epuepuswitchon",
+        "epuepuswitchoff"
+      ],
+      "description": "EPU: EPU Switch - NORM",
+      "category": "FLIGHT",
+      "section": "EPU PANEL",
+      "group": "EPU: EPU Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "epuepuswitchoff",
+      "clazz": "EpuEpuSwitchOff",
+      "callback": "SimEpuOff",
+      "relatedActions": [
+        "epuepuswitchcycle",
+        "epuepuswitchstepup",
+        "epuepuswitchstepdown",
+        "epuepuswitchon",
+        "epuepuswitchnorm"
+      ],
+      "description": "EPU: EPU Switch - OFF",
+      "category": "FLIGHT",
+      "section": "EPU PANEL",
+      "group": "EPU: EPU Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "elecmainpwrswitchstepup",
+      "clazz": "ElecMainPwrSwitchStepUp",
+      "callback": "SimMainPowerInc",
+      "relatedActions": [
+        "elecmainpwrswitchstepdown",
+        "elecmainpwrswitchmain",
+        "elecmainpwrswitchbatt",
+        "elecmainpwrswitchoff"
+      ],
+      "description": "ELEC: MAIN PWR Switch - Step Up",
+      "category": "FLIGHT",
+      "section": "ELEC PANEL",
+      "group": "ELEC: MAIN PWR Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "elecmainpwrswitchstepdown",
+      "clazz": "ElecMainPwrSwitchStepDown",
+      "callback": "SimMainPowerDec",
+      "relatedActions": [
+        "elecmainpwrswitchstepup",
+        "elecmainpwrswitchmain",
+        "elecmainpwrswitchbatt",
+        "elecmainpwrswitchoff"
+      ],
+      "description": "ELEC: MAIN PWR Switch - Step Down",
+      "category": "FLIGHT",
+      "section": "ELEC PANEL",
+      "group": "ELEC: MAIN PWR Switch",
+      "style": "button",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "elecmainpwrswitchmain",
+      "clazz": "ElecMainPwrSwitchMain",
+      "callback": "SimMainPowerMain",
+      "relatedActions": [
+        "elecmainpwrswitchstepup",
+        "elecmainpwrswitchstepdown",
+        "elecmainpwrswitchbatt",
+        "elecmainpwrswitchoff"
+      ],
+      "description": "ELEC: MAIN PWR Switch - MAIN",
+      "category": "FLIGHT",
+      "section": "ELEC PANEL",
+      "group": "ELEC: MAIN PWR Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "elecmainpwrswitchbatt",
+      "clazz": "ElecMainPwrSwitchBatt",
+      "callback": "SimMainPowerBatt",
+      "relatedActions": [
+        "elecmainpwrswitchstepup",
+        "elecmainpwrswitchstepdown",
+        "elecmainpwrswitchmain",
+        "elecmainpwrswitchoff"
+      ],
+      "description": "ELEC: MAIN PWR Switch - BATT",
+      "category": "FLIGHT",
+      "section": "ELEC PANEL",
+      "group": "ELEC: MAIN PWR Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "elecmainpwrswitchoff",
+      "clazz": "ElecMainPwrSwitchOff",
+      "callback": "SimMainPowerOff",
+      "relatedActions": [
+        "elecmainpwrswitchstepup",
+        "elecmainpwrswitchstepdown",
+        "elecmainpwrswitchmain",
+        "elecmainpwrswitchbatt"
+      ],
+      "description": "ELEC: MAIN PWR Switch - OFF",
+      "category": "FLIGHT",
+      "section": "ELEC PANEL",
+      "group": "ELEC: MAIN PWR Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "eleccautionresetbuttonpush",
+      "clazz": "ElecCautionResetButtonPush",
+      "callback": "SimElecReset",
+      "description": "ELEC: CAUTION RESET Button - Push",
+      "category": "FLIGHT",
+      "section": "ELEC PANEL",
+      "group": "ELEC: CAUTION RESET Button",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "avtravtrswitchtoggleonoff",
+      "clazz": "AvtrAvtrSwitchToggleOnOff",
+      "callback": "SimAVTRToggle",
+      "relatedActions": [
+        "avtravtrswitchcycle",
+        "avtravtrswitchstepup",
+        "avtravtrswitchstepdown",
+        "avtravtrswitchon",
+        "avtravtrswitchauto",
+        "avtravtrswitchoff"
+      ],
+      "description": "AVTR: AVTR Switch - Toggle ON / OFF",
+      "category": "FLIGHT",
+      "section": "AVTR PANEL",
+      "group": "AVTR: AVTR Switch",
+      "style": "button",
+      "role": "off",
+      "type": "button"
+    },
+    {
+      "id": "avtravtrswitchcycle",
+      "clazz": "AvtrAvtrSwitchCycle",
+      "callback": "SimAVTRSwitch",
+      "relatedActions": [
+        "avtravtrswitchtoggleonoff",
+        "avtravtrswitchstepup",
+        "avtravtrswitchstepdown",
+        "avtravtrswitchon",
+        "avtravtrswitchauto",
+        "avtravtrswitchoff"
+      ],
+      "description": "AVTR: AVTR Switch - Cycle",
+      "category": "FLIGHT",
+      "section": "AVTR PANEL",
+      "group": "AVTR: AVTR Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "avtravtrswitchstepup",
+      "clazz": "AvtrAvtrSwitchStepUp",
+      "callback": "SimAVTRSwitchUp",
+      "relatedActions": [
+        "avtravtrswitchtoggleonoff",
+        "avtravtrswitchcycle",
+        "avtravtrswitchstepdown",
+        "avtravtrswitchon",
+        "avtravtrswitchauto",
+        "avtravtrswitchoff"
+      ],
+      "description": "AVTR: AVTR Switch - Step Up",
+      "category": "FLIGHT",
+      "section": "AVTR PANEL",
+      "group": "AVTR: AVTR Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "avtravtrswitchstepdown",
+      "clazz": "AvtrAvtrSwitchStepDown",
+      "callback": "SimAVTRSwitchDown",
+      "relatedActions": [
+        "avtravtrswitchtoggleonoff",
+        "avtravtrswitchcycle",
+        "avtravtrswitchstepup",
+        "avtravtrswitchon",
+        "avtravtrswitchauto",
+        "avtravtrswitchoff"
+      ],
+      "description": "AVTR: AVTR Switch - Step Down",
+      "category": "FLIGHT",
+      "section": "AVTR PANEL",
+      "group": "AVTR: AVTR Switch",
+      "style": "button",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "avtravtrswitchon",
+      "clazz": "AvtrAvtrSwitchOn",
+      "callback": "SimAVTRSwitchOn",
+      "relatedActions": [
+        "avtravtrswitchtoggleonoff",
+        "avtravtrswitchcycle",
+        "avtravtrswitchstepup",
+        "avtravtrswitchstepdown",
+        "avtravtrswitchauto",
+        "avtravtrswitchoff"
+      ],
+      "description": "AVTR: AVTR Switch - ON",
+      "category": "FLIGHT",
+      "section": "AVTR PANEL",
+      "group": "AVTR: AVTR Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "avtravtrswitchauto",
+      "clazz": "AvtrAvtrSwitchAuto",
+      "callback": "SimAVTRSwitchAuto",
+      "relatedActions": [
+        "avtravtrswitchtoggleonoff",
+        "avtravtrswitchcycle",
+        "avtravtrswitchstepup",
+        "avtravtrswitchstepdown",
+        "avtravtrswitchon",
+        "avtravtrswitchoff"
+      ],
+      "description": "AVTR: AVTR Switch - AUTO",
+      "category": "FLIGHT",
+      "section": "AVTR PANEL",
+      "group": "AVTR: AVTR Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "avtravtrswitchoff",
+      "clazz": "AvtrAvtrSwitchOff",
+      "callback": "SimAVTRSwitchOff",
+      "relatedActions": [
+        "avtravtrswitchtoggleonoff",
+        "avtravtrswitchcycle",
+        "avtravtrswitchstepup",
+        "avtravtrswitchstepdown",
+        "avtravtrswitchon",
+        "avtravtrswitchauto"
+      ],
+      "description": "AVTR: AVTR Switch - OFF",
+      "category": "FLIGHT",
+      "section": "AVTR PANEL",
+      "group": "AVTR: AVTR Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "engjfsswitchtogglestart2off",
+      "clazz": "EngJfsSwitchToggleStart2Off",
+      "callback": "SimJfsStart",
+      "relatedActions": [
+        "engjfsswitchoff",
+        "engjfsswitchstart2"
+      ],
+      "description": "ENG: JFS Switch - Toggle! START 2 / OFF",
+      "category": "FLIGHT",
+      "section": "ENG & JET START PANEL",
+      "group": "ENG: JFS Switch",
+      "style": "button",
+      "role": "off",
+      "type": "button"
+    },
+    {
+      "id": "engjfsswitchoff",
+      "clazz": "EngJfsSwitchOff",
+      "callback": "SimJfsStart_Off",
+      "relatedActions": [
+        "engjfsswitchtogglestart2off",
+        "engjfsswitchstart2"
+      ],
+      "description": "ENG: JFS Switch - OFF",
+      "category": "FLIGHT",
+      "section": "ENG & JET START PANEL",
+      "group": "ENG: JFS Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "engjfsswitchstart2",
+      "clazz": "EngJfsSwitchStart2",
+      "callback": "SimJfsStart_Start2",
+      "relatedActions": [
+        "engjfsswitchtogglestart2off",
+        "engjfsswitchoff"
+      ],
+      "description": "ENG: JFS Switch - START 2",
+      "category": "FLIGHT",
+      "section": "ENG & JET START PANEL",
+      "group": "ENG: JFS Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "engengcontswitchtoggle",
+      "clazz": "EngEngContSwitchToggle",
+      "callback": "SimEngCont",
+      "relatedActions": [
+        "engengcontswitchpri",
+        "engengcontswitchsec"
+      ],
+      "description": "ENG: ENG CONT Switch - Toggle",
+      "category": "FLIGHT",
+      "section": "ENG & JET START PANEL",
+      "group": "ENG: ENG CONT Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "engengcontswitchpri",
+      "clazz": "EngEngContSwitchPri",
+      "callback": "SimEngContPri",
+      "relatedActions": [
+        "engengcontswitchtoggle",
+        "engengcontswitchsec"
+      ],
+      "description": "ENG: ENG CONT Switch - PRI",
+      "category": "FLIGHT",
+      "section": "ENG & JET START PANEL",
+      "group": "ENG: ENG CONT Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "engengcontswitchsec",
+      "clazz": "EngEngContSwitchSec",
+      "callback": "SimEngContSec",
+      "relatedActions": [
+        "engengcontswitchtoggle",
+        "engengcontswitchpri"
+      ],
+      "description": "ENG: ENG CONT Switch - SEC",
+      "category": "FLIGHT",
+      "section": "ENG & JET START PANEL",
+      "group": "ENG: ENG CONT Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "mpomanualpitchswitchtoggle",
+      "clazz": "MpoManualPitchSwitchToggle",
+      "callback": "SimMPOToggle",
+      "relatedActions": [
+        "mpomanualpitchswitchhold"
+      ],
+      "description": "MPO: MANUAL PITCH Switch - Toggle",
+      "category": "FLIGHT",
+      "section": "MPO PANEL",
+      "group": "MPO: MANUAL PITCH Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mpomanualpitchswitchhold",
+      "clazz": "MpoManualPitchSwitchHold",
+      "callback": "SimMPO",
+      "relatedActions": [
+        "mpomanualpitchswitchtoggle"
+      ],
+      "description": "MPO: MANUAL PITCH Switch - Hold",
+      "category": "FLIGHT",
+      "section": "MPO PANEL",
+      "group": "MPO: MANUAL PITCH Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "leftwallslapswitchecmpgrm5",
+      "clazz": "LeftWallSlapSwitchEcmPgrm5",
+      "callback": "SimSlapSwitch",
+      "description": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+      "category": "FLIGHT",
+      "section": "LEFT SIDE WALL",
+      "group": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "leftwallcanopytoggleopenclose",
+      "clazz": "LeftWallCanopyToggleOpenClose",
+      "callback": "AFCanopyToggle",
+      "relatedActions": [
+        "leftwallcanopyopen",
+        "leftwallcanopyclose"
+      ],
+      "description": "LEFT WALL: CANOPY - Toggle Open/Close",
+      "category": "FLIGHT",
+      "section": "LEFT SIDE WALL",
+      "group": "LEFT WALL: CANOPY",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "leftwallcanopyopen",
+      "clazz": "LeftWallCanopyOpen",
+      "callback": "AFCanopyOpen",
+      "relatedActions": [
+        "leftwallcanopytoggleopenclose",
+        "leftwallcanopyclose"
+      ],
+      "description": "LEFT WALL: CANOPY - Open",
+      "category": "FLIGHT",
+      "section": "LEFT SIDE WALL",
+      "group": "LEFT WALL: CANOPY",
+      "style": "button",
+      "role": "none",
+      "type": "button",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "leftwallcanopyclose",
+      "clazz": "LeftWallCanopyClose",
+      "callback": "AFCanopyClose",
+      "relatedActions": [
+        "leftwallcanopytoggleopenclose",
+        "leftwallcanopyopen"
+      ],
+      "description": "LEFT WALL: CANOPY - Close",
+      "category": "FLIGHT",
+      "section": "LEFT SIDE WALL",
+      "group": "LEFT WALL: CANOPY",
+      "style": "button",
+      "role": "none",
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "seatsafetylevertoggle",
+      "clazz": "SeatSafetyLeverToggle",
+      "callback": "SimSeatArm",
+      "relatedActions": [
+        "seatsafetyleverarmed",
+        "seatsafetyleverlocked"
+      ],
+      "description": "SEAT: Safety Lever - Toggle",
+      "category": "FLIGHT",
+      "section": "SEAT",
+      "group": "SEAT: Safety Lever",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "seatsafetyleverarmed",
+      "clazz": "SeatSafetyLeverArmed",
+      "callback": "SimSeatOn",
+      "relatedActions": [
+        "seatsafetylevertoggle",
+        "seatsafetyleverlocked"
+      ],
+      "description": "SEAT: Safety Lever - Armed",
+      "category": "FLIGHT",
+      "section": "SEAT",
+      "group": "SEAT: Safety Lever",
+      "style": "button",
+      "role": "none",
+      "type": "button",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "seatsafetyleverlocked",
+      "clazz": "SeatSafetyLeverLocked",
+      "callback": "SimSeatOff",
+      "relatedActions": [
+        "seatsafetylevertoggle",
+        "seatsafetyleverarmed"
+      ],
+      "description": "SEAT: Safety Lever - Locked",
+      "category": "FLIGHT",
+      "section": "SEAT",
+      "group": "SEAT: Safety Lever",
+      "style": "button",
+      "role": "none",
+      "type": "button",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "seatejecthandleholdforeject",
+      "clazz": "SeatEjectHandleHoldForEject",
+      "callback": "SimEject",
+      "description": "SEAT: EJECT Handle - Hold For Eject",
+      "category": "FLIGHT",
+      "section": "SEAT",
+      "group": "SEAT: EJECT Handle",
+      "style": "handle",
+      "role": "none",
+      "type": "button"
+    },
+    {
       "id": "fuelmasterswitchtoggle",
       "clazz": "FuelMasterSwitchToggle",
       "callback": "SimToggleMasterFuel",
@@ -6266,1097 +7357,6 @@
         "ground": false,
         "air": false
       }
-    },
-    {
-      "id": "fltdigitalswitchtoggle",
-      "clazz": "FltDigitalSwitchToggle",
-      "callback": "SimDigitalBUP",
-      "relatedActions": [
-        "fltdigitalswitchbackup",
-        "fltdigitalswitchoff"
-      ],
-      "description": "FLT: DIGITAL Switch - Toggle",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: DIGITAL Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "fltdigitalswitchbackup",
-      "clazz": "FltDigitalSwitchBackup",
-      "callback": "SimDigitalBUPBackup",
-      "relatedActions": [
-        "fltdigitalswitchtoggle",
-        "fltdigitalswitchoff"
-      ],
-      "description": "FLT: DIGITAL Switch - BACKUP",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: DIGITAL Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "fltdigitalswitchoff",
-      "clazz": "FltDigitalSwitchOff",
-      "callback": "SimDigitalBUPOff",
-      "relatedActions": [
-        "fltdigitalswitchtoggle",
-        "fltdigitalswitchbackup"
-      ],
-      "description": "FLT: DIGITAL Switch - OFF",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: DIGITAL Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "fltaltflapsswitchtoggle",
-      "clazz": "FltAltFlapsSwitchToggle",
-      "callback": "SimAltFlaps",
-      "relatedActions": [
-        "fltaltflapsswitchextend",
-        "fltaltflapsswitchnorm"
-      ],
-      "description": "FLT: ALT FLAPS Switch - Toggle",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: ALT FLAPS Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "fltaltflapsswitchextend",
-      "clazz": "FltAltFlapsSwitchExtend",
-      "callback": "SimAltFlapsExtend",
-      "relatedActions": [
-        "fltaltflapsswitchtoggle",
-        "fltaltflapsswitchnorm"
-      ],
-      "description": "FLT: ALT FLAPS Switch - EXTEND",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: ALT FLAPS Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "fltaltflapsswitchnorm",
-      "clazz": "FltAltFlapsSwitchNorm",
-      "callback": "SimAltFlapsNorm",
-      "relatedActions": [
-        "fltaltflapsswitchtoggle",
-        "fltaltflapsswitchextend"
-      ],
-      "description": "FLT: ALT FLAPS Switch - NORM",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: ALT FLAPS Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "fltmanualtfflyupswitchtoggle",
-      "clazz": "FltManualTfFlyupSwitchToggle",
-      "callback": "SimManualFlyup",
-      "relatedActions": [
-        "fltmanualtfflyupswitchdisable",
-        "fltmanualtfflyupswitchenable"
-      ],
-      "description": "FLT: MANUAL TF FLYUP Switch - Toggle",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: MANUAL TF FLYUP Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "fltmanualtfflyupswitchdisable",
-      "clazz": "FltManualTfFlyupSwitchDisable",
-      "callback": "SimManualFlyupDisable",
-      "relatedActions": [
-        "fltmanualtfflyupswitchtoggle",
-        "fltmanualtfflyupswitchenable"
-      ],
-      "description": "FLT: MANUAL TF FLYUP Switch - DISABLE",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: MANUAL TF FLYUP Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "fltmanualtfflyupswitchenable",
-      "clazz": "FltManualTfFlyupSwitchEnable",
-      "callback": "SimManualFlyupEnable",
-      "relatedActions": [
-        "fltmanualtfflyupswitchtoggle",
-        "fltmanualtfflyupswitchdisable"
-      ],
-      "description": "FLT: MANUAL TF FLYUP Switch - ENABLE",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: MANUAL TF FLYUP Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "fltleflapsswitchtoggle",
-      "clazz": "FltLeFlapsSwitchToggle",
-      "callback": "SimLEFLockSwitch",
-      "relatedActions": [
-        "fltleflapsswitchlock",
-        "fltleflapsswitchauto"
-      ],
-      "description": "FLT: LE FLAPS Switch - Toggle",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: LE FLAPS Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "fltleflapsswitchlock",
-      "clazz": "FltLeFlapsSwitchLock",
-      "callback": "SimLEFLock",
-      "relatedActions": [
-        "fltleflapsswitchtoggle",
-        "fltleflapsswitchauto"
-      ],
-      "description": "FLT: LE FLAPS Switch - LOCK",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: LE FLAPS Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "fltleflapsswitchauto",
-      "clazz": "FltLeFlapsSwitchAuto",
-      "callback": "SimLEFAuto",
-      "relatedActions": [
-        "fltleflapsswitchtoggle",
-        "fltleflapsswitchlock"
-      ],
-      "description": "FLT: LE FLAPS Switch - AUTO",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: LE FLAPS Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "fltflcsswitchhold",
-      "clazz": "FltFlcsSwitchHold",
-      "callback": "SimFLCSReset",
-      "description": "FLT: FLCS Switch - Hold",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: FLCS Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "fltbitswitchpush",
-      "clazz": "FltBitSwitchPush",
-      "callback": "SimFLTBIT",
-      "description": "FLT: BIT Switch - Push",
-      "category": "LEFT CONSOLE",
-      "section": "FLT CONTROL PANEL",
-      "group": "FLT: BIT Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "trimrolltrimwheellwingdn",
-      "clazz": "TrimRollTrimWheelLWingDn",
-      "callback": "SimTrimRollLeft",
-      "relatedActions": [
-        "trimrolltrimwheelrwingdn"
-      ],
-      "description": "TRIM: ROLL TRIM Wheel - L WING DN",
-      "category": "LEFT CONSOLE",
-      "section": "MANUAL TRIM PANEL",
-      "group": "TRIM: ROLL TRIM Wheel",
-      "style": "wheel",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "trimrolltrimwheelrwingdn",
-      "clazz": "TrimRollTrimWheelRWingDn",
-      "callback": "SimTrimRollRight",
-      "relatedActions": [
-        "trimrolltrimwheellwingdn"
-      ],
-      "description": "TRIM: ROLL TRIM Wheel - R WING DN",
-      "category": "LEFT CONSOLE",
-      "section": "MANUAL TRIM PANEL",
-      "group": "TRIM: ROLL TRIM Wheel",
-      "style": "wheel",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "trimtrimapdiscswitchtoggle",
-      "clazz": "TrimTrimApDiscSwitchToggle",
-      "callback": "SimTrimAPDisc",
-      "relatedActions": [
-        "trimtrimapdiscswitchdisc",
-        "trimtrimapdiscswitchnorm"
-      ],
-      "description": "TRIM: TRIM/AP DISC Switch - Toggle",
-      "category": "LEFT CONSOLE",
-      "section": "MANUAL TRIM PANEL",
-      "group": "TRIM: TRIM/AP DISC Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "trimtrimapdiscswitchdisc",
-      "clazz": "TrimTrimApDiscSwitchDisc",
-      "callback": "SimTrimAPDISC",
-      "relatedActions": [
-        "trimtrimapdiscswitchtoggle",
-        "trimtrimapdiscswitchnorm"
-      ],
-      "description": "TRIM: TRIM/AP DISC Switch - DISC",
-      "category": "LEFT CONSOLE",
-      "section": "MANUAL TRIM PANEL",
-      "group": "TRIM: TRIM/AP DISC Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "trimtrimapdiscswitchnorm",
-      "clazz": "TrimTrimApDiscSwitchNorm",
-      "callback": "SimTrimAPNORM",
-      "relatedActions": [
-        "trimtrimapdiscswitchtoggle",
-        "trimtrimapdiscswitchdisc"
-      ],
-      "description": "TRIM: TRIM/AP DISC Switch - NORM",
-      "category": "LEFT CONSOLE",
-      "section": "MANUAL TRIM PANEL",
-      "group": "TRIM: TRIM/AP DISC Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "trimyawtrimknobl",
-      "clazz": "TrimYawTrimKnobL",
-      "callback": "SimTrimYawLeft",
-      "relatedActions": [
-        "trimyawtrimknobr"
-      ],
-      "description": "TRIM: YAW TRIM Knob - L",
-      "category": "LEFT CONSOLE",
-      "section": "MANUAL TRIM PANEL",
-      "group": "TRIM: YAW TRIM Knob",
-      "style": "knob",
-      "role": "left",
-      "type": "button"
-    },
-    {
-      "id": "trimyawtrimknobr",
-      "clazz": "TrimYawTrimKnobR",
-      "callback": "SimTrimYawRight",
-      "relatedActions": [
-        "trimyawtrimknobl"
-      ],
-      "description": "TRIM: YAW TRIM Knob - R",
-      "category": "LEFT CONSOLE",
-      "section": "MANUAL TRIM PANEL",
-      "group": "TRIM: YAW TRIM Knob",
-      "style": "knob",
-      "role": "right",
-      "type": "button"
-    },
-    {
-      "id": "trimpitchtrimwheelnoseup",
-      "clazz": "TrimPitchTrimWheelNoseUp",
-      "callback": "SimTrimNoseUp",
-      "relatedActions": [
-        "trimpitchtrimwheelnosedn"
-      ],
-      "description": "TRIM: PITCH TRIM Wheel - NOSE UP",
-      "category": "LEFT CONSOLE",
-      "section": "MANUAL TRIM PANEL",
-      "group": "TRIM: PITCH TRIM Wheel",
-      "style": "wheel",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "trimpitchtrimwheelnosedn",
-      "clazz": "TrimPitchTrimWheelNoseDn",
-      "callback": "SimTrimNoseDown",
-      "relatedActions": [
-        "trimpitchtrimwheelnoseup"
-      ],
-      "description": "TRIM: PITCH TRIM Wheel - NOSE DN",
-      "category": "LEFT CONSOLE",
-      "section": "MANUAL TRIM PANEL",
-      "group": "TRIM: PITCH TRIM Wheel",
-      "style": "wheel",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "epuepuswitchcycle",
-      "clazz": "EpuEpuSwitchCycle",
-      "callback": "SimEpuToggle",
-      "relatedActions": [
-        "epuepuswitchstepup",
-        "epuepuswitchstepdown",
-        "epuepuswitchon",
-        "epuepuswitchnorm",
-        "epuepuswitchoff"
-      ],
-      "description": "EPU: EPU Switch - Cycle",
-      "category": "LEFT CONSOLE",
-      "section": "EPU PANEL",
-      "group": "EPU: EPU Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "epuepuswitchstepup",
-      "clazz": "EpuEpuSwitchStepUp",
-      "callback": "SimEpuUp",
-      "relatedActions": [
-        "epuepuswitchcycle",
-        "epuepuswitchstepdown",
-        "epuepuswitchon",
-        "epuepuswitchnorm",
-        "epuepuswitchoff"
-      ],
-      "description": "EPU: EPU Switch - Step Up",
-      "category": "LEFT CONSOLE",
-      "section": "EPU PANEL",
-      "group": "EPU: EPU Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "epuepuswitchstepdown",
-      "clazz": "EpuEpuSwitchStepDown",
-      "callback": "SimEpuDown",
-      "relatedActions": [
-        "epuepuswitchcycle",
-        "epuepuswitchstepup",
-        "epuepuswitchon",
-        "epuepuswitchnorm",
-        "epuepuswitchoff"
-      ],
-      "description": "EPU: EPU Switch - Step Down",
-      "category": "LEFT CONSOLE",
-      "section": "EPU PANEL",
-      "group": "EPU: EPU Switch",
-      "style": "button",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "epuepuswitchon",
-      "clazz": "EpuEpuSwitchOn",
-      "callback": "SimEpuOn",
-      "relatedActions": [
-        "epuepuswitchcycle",
-        "epuepuswitchstepup",
-        "epuepuswitchstepdown",
-        "epuepuswitchnorm",
-        "epuepuswitchoff"
-      ],
-      "description": "EPU: EPU Switch - ON",
-      "category": "LEFT CONSOLE",
-      "section": "EPU PANEL",
-      "group": "EPU: EPU Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "epuepuswitchnorm",
-      "clazz": "EpuEpuSwitchNorm",
-      "callback": "SimEpuAuto",
-      "relatedActions": [
-        "epuepuswitchcycle",
-        "epuepuswitchstepup",
-        "epuepuswitchstepdown",
-        "epuepuswitchon",
-        "epuepuswitchoff"
-      ],
-      "description": "EPU: EPU Switch - NORM",
-      "category": "LEFT CONSOLE",
-      "section": "EPU PANEL",
-      "group": "EPU: EPU Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "epuepuswitchoff",
-      "clazz": "EpuEpuSwitchOff",
-      "callback": "SimEpuOff",
-      "relatedActions": [
-        "epuepuswitchcycle",
-        "epuepuswitchstepup",
-        "epuepuswitchstepdown",
-        "epuepuswitchon",
-        "epuepuswitchnorm"
-      ],
-      "description": "EPU: EPU Switch - OFF",
-      "category": "LEFT CONSOLE",
-      "section": "EPU PANEL",
-      "group": "EPU: EPU Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "elecmainpwrswitchstepup",
-      "clazz": "ElecMainPwrSwitchStepUp",
-      "callback": "SimMainPowerInc",
-      "relatedActions": [
-        "elecmainpwrswitchstepdown",
-        "elecmainpwrswitchmain",
-        "elecmainpwrswitchbatt",
-        "elecmainpwrswitchoff"
-      ],
-      "description": "ELEC: MAIN PWR Switch - Step Up",
-      "category": "LEFT CONSOLE",
-      "section": "ELEC PANEL",
-      "group": "ELEC: MAIN PWR Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "elecmainpwrswitchstepdown",
-      "clazz": "ElecMainPwrSwitchStepDown",
-      "callback": "SimMainPowerDec",
-      "relatedActions": [
-        "elecmainpwrswitchstepup",
-        "elecmainpwrswitchmain",
-        "elecmainpwrswitchbatt",
-        "elecmainpwrswitchoff"
-      ],
-      "description": "ELEC: MAIN PWR Switch - Step Down",
-      "category": "LEFT CONSOLE",
-      "section": "ELEC PANEL",
-      "group": "ELEC: MAIN PWR Switch",
-      "style": "button",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "elecmainpwrswitchmain",
-      "clazz": "ElecMainPwrSwitchMain",
-      "callback": "SimMainPowerMain",
-      "relatedActions": [
-        "elecmainpwrswitchstepup",
-        "elecmainpwrswitchstepdown",
-        "elecmainpwrswitchbatt",
-        "elecmainpwrswitchoff"
-      ],
-      "description": "ELEC: MAIN PWR Switch - MAIN",
-      "category": "LEFT CONSOLE",
-      "section": "ELEC PANEL",
-      "group": "ELEC: MAIN PWR Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "elecmainpwrswitchbatt",
-      "clazz": "ElecMainPwrSwitchBatt",
-      "callback": "SimMainPowerBatt",
-      "relatedActions": [
-        "elecmainpwrswitchstepup",
-        "elecmainpwrswitchstepdown",
-        "elecmainpwrswitchmain",
-        "elecmainpwrswitchoff"
-      ],
-      "description": "ELEC: MAIN PWR Switch - BATT",
-      "category": "LEFT CONSOLE",
-      "section": "ELEC PANEL",
-      "group": "ELEC: MAIN PWR Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "elecmainpwrswitchoff",
-      "clazz": "ElecMainPwrSwitchOff",
-      "callback": "SimMainPowerOff",
-      "relatedActions": [
-        "elecmainpwrswitchstepup",
-        "elecmainpwrswitchstepdown",
-        "elecmainpwrswitchmain",
-        "elecmainpwrswitchbatt"
-      ],
-      "description": "ELEC: MAIN PWR Switch - OFF",
-      "category": "LEFT CONSOLE",
-      "section": "ELEC PANEL",
-      "group": "ELEC: MAIN PWR Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "eleccautionresetbuttonpush",
-      "clazz": "ElecCautionResetButtonPush",
-      "callback": "SimElecReset",
-      "description": "ELEC: CAUTION RESET Button - Push",
-      "category": "LEFT CONSOLE",
-      "section": "ELEC PANEL",
-      "group": "ELEC: CAUTION RESET Button",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "avtravtrswitchtoggleonoff",
-      "clazz": "AvtrAvtrSwitchToggleOnOff",
-      "callback": "SimAVTRToggle",
-      "relatedActions": [
-        "avtravtrswitchcycle",
-        "avtravtrswitchstepup",
-        "avtravtrswitchstepdown",
-        "avtravtrswitchon",
-        "avtravtrswitchauto",
-        "avtravtrswitchoff"
-      ],
-      "description": "AVTR: AVTR Switch - Toggle ON / OFF",
-      "category": "LEFT CONSOLE",
-      "section": "AVTR PANEL",
-      "group": "AVTR: AVTR Switch",
-      "style": "button",
-      "role": "off",
-      "type": "button"
-    },
-    {
-      "id": "avtravtrswitchcycle",
-      "clazz": "AvtrAvtrSwitchCycle",
-      "callback": "SimAVTRSwitch",
-      "relatedActions": [
-        "avtravtrswitchtoggleonoff",
-        "avtravtrswitchstepup",
-        "avtravtrswitchstepdown",
-        "avtravtrswitchon",
-        "avtravtrswitchauto",
-        "avtravtrswitchoff"
-      ],
-      "description": "AVTR: AVTR Switch - Cycle",
-      "category": "LEFT CONSOLE",
-      "section": "AVTR PANEL",
-      "group": "AVTR: AVTR Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "avtravtrswitchstepup",
-      "clazz": "AvtrAvtrSwitchStepUp",
-      "callback": "SimAVTRSwitchUp",
-      "relatedActions": [
-        "avtravtrswitchtoggleonoff",
-        "avtravtrswitchcycle",
-        "avtravtrswitchstepdown",
-        "avtravtrswitchon",
-        "avtravtrswitchauto",
-        "avtravtrswitchoff"
-      ],
-      "description": "AVTR: AVTR Switch - Step Up",
-      "category": "LEFT CONSOLE",
-      "section": "AVTR PANEL",
-      "group": "AVTR: AVTR Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "avtravtrswitchstepdown",
-      "clazz": "AvtrAvtrSwitchStepDown",
-      "callback": "SimAVTRSwitchDown",
-      "relatedActions": [
-        "avtravtrswitchtoggleonoff",
-        "avtravtrswitchcycle",
-        "avtravtrswitchstepup",
-        "avtravtrswitchon",
-        "avtravtrswitchauto",
-        "avtravtrswitchoff"
-      ],
-      "description": "AVTR: AVTR Switch - Step Down",
-      "category": "LEFT CONSOLE",
-      "section": "AVTR PANEL",
-      "group": "AVTR: AVTR Switch",
-      "style": "button",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "avtravtrswitchon",
-      "clazz": "AvtrAvtrSwitchOn",
-      "callback": "SimAVTRSwitchOn",
-      "relatedActions": [
-        "avtravtrswitchtoggleonoff",
-        "avtravtrswitchcycle",
-        "avtravtrswitchstepup",
-        "avtravtrswitchstepdown",
-        "avtravtrswitchauto",
-        "avtravtrswitchoff"
-      ],
-      "description": "AVTR: AVTR Switch - ON",
-      "category": "LEFT CONSOLE",
-      "section": "AVTR PANEL",
-      "group": "AVTR: AVTR Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avtravtrswitchauto",
-      "clazz": "AvtrAvtrSwitchAuto",
-      "callback": "SimAVTRSwitchAuto",
-      "relatedActions": [
-        "avtravtrswitchtoggleonoff",
-        "avtravtrswitchcycle",
-        "avtravtrswitchstepup",
-        "avtravtrswitchstepdown",
-        "avtravtrswitchon",
-        "avtravtrswitchoff"
-      ],
-      "description": "AVTR: AVTR Switch - AUTO",
-      "category": "LEFT CONSOLE",
-      "section": "AVTR PANEL",
-      "group": "AVTR: AVTR Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avtravtrswitchoff",
-      "clazz": "AvtrAvtrSwitchOff",
-      "callback": "SimAVTRSwitchOff",
-      "relatedActions": [
-        "avtravtrswitchtoggleonoff",
-        "avtravtrswitchcycle",
-        "avtravtrswitchstepup",
-        "avtravtrswitchstepdown",
-        "avtravtrswitchon",
-        "avtravtrswitchauto"
-      ],
-      "description": "AVTR: AVTR Switch - OFF",
-      "category": "LEFT CONSOLE",
-      "section": "AVTR PANEL",
-      "group": "AVTR: AVTR Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "engjfsswitchtogglestart2off",
-      "clazz": "EngJfsSwitchToggleStart2Off",
-      "callback": "SimJfsStart",
-      "relatedActions": [
-        "engjfsswitchoff",
-        "engjfsswitchstart2"
-      ],
-      "description": "ENG: JFS Switch - Toggle! START 2 / OFF",
-      "category": "LEFT CONSOLE",
-      "section": "ENG & JET START PANEL",
-      "group": "ENG: JFS Switch",
-      "style": "button",
-      "role": "off",
-      "type": "button"
-    },
-    {
-      "id": "engjfsswitchoff",
-      "clazz": "EngJfsSwitchOff",
-      "callback": "SimJfsStart_Off",
-      "relatedActions": [
-        "engjfsswitchtogglestart2off",
-        "engjfsswitchstart2"
-      ],
-      "description": "ENG: JFS Switch - OFF",
-      "category": "LEFT CONSOLE",
-      "section": "ENG & JET START PANEL",
-      "group": "ENG: JFS Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "engjfsswitchstart2",
-      "clazz": "EngJfsSwitchStart2",
-      "callback": "SimJfsStart_Start2",
-      "relatedActions": [
-        "engjfsswitchtogglestart2off",
-        "engjfsswitchoff"
-      ],
-      "description": "ENG: JFS Switch - START 2",
-      "category": "LEFT CONSOLE",
-      "section": "ENG & JET START PANEL",
-      "group": "ENG: JFS Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "engengcontswitchtoggle",
-      "clazz": "EngEngContSwitchToggle",
-      "callback": "SimEngCont",
-      "relatedActions": [
-        "engengcontswitchpri",
-        "engengcontswitchsec"
-      ],
-      "description": "ENG: ENG CONT Switch - Toggle",
-      "category": "LEFT CONSOLE",
-      "section": "ENG & JET START PANEL",
-      "group": "ENG: ENG CONT Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "engengcontswitchpri",
-      "clazz": "EngEngContSwitchPri",
-      "callback": "SimEngContPri",
-      "relatedActions": [
-        "engengcontswitchtoggle",
-        "engengcontswitchsec"
-      ],
-      "description": "ENG: ENG CONT Switch - PRI",
-      "category": "LEFT CONSOLE",
-      "section": "ENG & JET START PANEL",
-      "group": "ENG: ENG CONT Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "engengcontswitchsec",
-      "clazz": "EngEngContSwitchSec",
-      "callback": "SimEngContSec",
-      "relatedActions": [
-        "engengcontswitchtoggle",
-        "engengcontswitchpri"
-      ],
-      "description": "ENG: ENG CONT Switch - SEC",
-      "category": "LEFT CONSOLE",
-      "section": "ENG & JET START PANEL",
-      "group": "ENG: ENG CONT Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "mpomanualpitchswitchtoggle",
-      "clazz": "MpoManualPitchSwitchToggle",
-      "callback": "SimMPOToggle",
-      "relatedActions": [
-        "mpomanualpitchswitchhold"
-      ],
-      "description": "MPO: MANUAL PITCH Switch - Toggle",
-      "category": "LEFT CONSOLE",
-      "section": "MPO PANEL",
-      "group": "MPO: MANUAL PITCH Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mpomanualpitchswitchhold",
-      "clazz": "MpoManualPitchSwitchHold",
-      "callback": "SimMPO",
-      "relatedActions": [
-        "mpomanualpitchswitchtoggle"
-      ],
-      "description": "MPO: MANUAL PITCH Switch - Hold",
-      "category": "LEFT CONSOLE",
-      "section": "MPO PANEL",
-      "group": "MPO: MANUAL PITCH Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "leftwallslapswitchecmpgrm5",
-      "clazz": "LeftWallSlapSwitchEcmPgrm5",
-      "callback": "SimSlapSwitch",
-      "description": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-      "category": "LEFT CONSOLE",
-      "section": "LEFT SIDE WALL",
-      "group": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "leftwallcanopytoggleopenclose",
-      "clazz": "LeftWallCanopyToggleOpenClose",
-      "callback": "AFCanopyToggle",
-      "relatedActions": [
-        "leftwallcanopyopen",
-        "leftwallcanopyclose"
-      ],
-      "description": "LEFT WALL: CANOPY - Toggle Open/Close",
-      "category": "LEFT CONSOLE",
-      "section": "LEFT SIDE WALL",
-      "group": "LEFT WALL: CANOPY",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "leftwallcanopyopen",
-      "clazz": "LeftWallCanopyOpen",
-      "callback": "AFCanopyOpen",
-      "relatedActions": [
-        "leftwallcanopytoggleopenclose",
-        "leftwallcanopyclose"
-      ],
-      "description": "LEFT WALL: CANOPY - Open",
-      "category": "LEFT CONSOLE",
-      "section": "LEFT SIDE WALL",
-      "group": "LEFT WALL: CANOPY",
-      "style": "button",
-      "role": "none",
-      "type": "button",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "leftwallcanopyclose",
-      "clazz": "LeftWallCanopyClose",
-      "callback": "AFCanopyClose",
-      "relatedActions": [
-        "leftwallcanopytoggleopenclose",
-        "leftwallcanopyopen"
-      ],
-      "description": "LEFT WALL: CANOPY - Close",
-      "category": "LEFT CONSOLE",
-      "section": "LEFT SIDE WALL",
-      "group": "LEFT WALL: CANOPY",
-      "style": "button",
-      "role": "none",
-      "type": "button",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "seatsafetylevertoggle",
-      "clazz": "SeatSafetyLeverToggle",
-      "callback": "SimSeatArm",
-      "relatedActions": [
-        "seatsafetyleverarmed",
-        "seatsafetyleverlocked"
-      ],
-      "description": "SEAT: Safety Lever - Toggle",
-      "category": "LEFT CONSOLE",
-      "section": "SEAT",
-      "group": "SEAT: Safety Lever",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "seatsafetyleverarmed",
-      "clazz": "SeatSafetyLeverArmed",
-      "callback": "SimSeatOn",
-      "relatedActions": [
-        "seatsafetylevertoggle",
-        "seatsafetyleverlocked"
-      ],
-      "description": "SEAT: Safety Lever - Armed",
-      "category": "LEFT CONSOLE",
-      "section": "SEAT",
-      "group": "SEAT: Safety Lever",
-      "style": "button",
-      "role": "none",
-      "type": "button",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "seatsafetyleverlocked",
-      "clazz": "SeatSafetyLeverLocked",
-      "callback": "SimSeatOff",
-      "relatedActions": [
-        "seatsafetylevertoggle",
-        "seatsafetyleverarmed"
-      ],
-      "description": "SEAT: Safety Lever - Locked",
-      "category": "LEFT CONSOLE",
-      "section": "SEAT",
-      "group": "SEAT: Safety Lever",
-      "style": "button",
-      "role": "none",
-      "type": "button",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "seatejecthandleholdforeject",
-      "clazz": "SeatEjectHandleHoldForEject",
-      "callback": "SimEject",
-      "description": "SEAT: EJECT Handle - Hold For Eject",
-      "category": "LEFT CONSOLE",
-      "section": "SEAT",
-      "group": "SEAT: EJECT Handle",
-      "style": "handle",
-      "role": "none",
-      "type": "button"
     },
     {
       "id": "tqscommsswitchupuhf",

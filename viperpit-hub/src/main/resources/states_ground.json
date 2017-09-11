@@ -931,6 +931,354 @@
     "stateful" : true,
     "relatedActions" : [ "uhfmodeknobstepup", "uhfmodeknobstepdown", "uhfmodeknobmnl", "uhfmodeknobpreset" ]
   }, {
+    "id" : "fltdigitalswitchtoggle",
+    "callback" : "SimDigitalBUP",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "fltdigitalswitchbackup", "fltdigitalswitchoff" ]
+  }, {
+    "id" : "fltdigitalswitchbackup",
+    "callback" : "SimDigitalBUPBackup",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "fltdigitalswitchtoggle", "fltdigitalswitchoff" ]
+  }, {
+    "id" : "fltdigitalswitchoff",
+    "callback" : "SimDigitalBUPOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "fltdigitalswitchtoggle", "fltdigitalswitchbackup" ]
+  }, {
+    "id" : "fltaltflapsswitchtoggle",
+    "callback" : "SimAltFlaps",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "fltaltflapsswitchextend", "fltaltflapsswitchnorm" ]
+  }, {
+    "id" : "fltaltflapsswitchextend",
+    "callback" : "SimAltFlapsExtend",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "fltaltflapsswitchtoggle", "fltaltflapsswitchnorm" ]
+  }, {
+    "id" : "fltaltflapsswitchnorm",
+    "callback" : "SimAltFlapsNorm",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "fltaltflapsswitchtoggle", "fltaltflapsswitchextend" ]
+  }, {
+    "id" : "fltmanualtfflyupswitchtoggle",
+    "callback" : "SimManualFlyup",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "fltmanualtfflyupswitchdisable", "fltmanualtfflyupswitchenable" ]
+  }, {
+    "id" : "fltmanualtfflyupswitchdisable",
+    "callback" : "SimManualFlyupDisable",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "fltmanualtfflyupswitchtoggle", "fltmanualtfflyupswitchenable" ]
+  }, {
+    "id" : "fltmanualtfflyupswitchenable",
+    "callback" : "SimManualFlyupEnable",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "fltmanualtfflyupswitchtoggle", "fltmanualtfflyupswitchdisable" ]
+  }, {
+    "id" : "fltleflapsswitchtoggle",
+    "callback" : "SimLEFLockSwitch",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "fltleflapsswitchlock", "fltleflapsswitchauto" ]
+  }, {
+    "id" : "fltleflapsswitchlock",
+    "callback" : "SimLEFLock",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "fltleflapsswitchtoggle", "fltleflapsswitchauto" ]
+  }, {
+    "id" : "fltleflapsswitchauto",
+    "callback" : "SimLEFAuto",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "fltleflapsswitchtoggle", "fltleflapsswitchlock" ]
+  }, {
+    "id" : "fltflcsswitchhold",
+    "callback" : "SimFLCSReset",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : null
+  }, {
+    "id" : "fltbitswitchpush",
+    "callback" : "SimFLTBIT",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : null
+  }, {
+    "id" : "trimrolltrimwheellwingdn",
+    "callback" : "SimTrimRollLeft",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "trimrolltrimwheelrwingdn" ]
+  }, {
+    "id" : "trimrolltrimwheelrwingdn",
+    "callback" : "SimTrimRollRight",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "trimrolltrimwheellwingdn" ]
+  }, {
+    "id" : "trimtrimapdiscswitchtoggle",
+    "callback" : "SimTrimAPDisc",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "trimtrimapdiscswitchdisc", "trimtrimapdiscswitchnorm" ]
+  }, {
+    "id" : "trimtrimapdiscswitchdisc",
+    "callback" : "SimTrimAPDISC",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "trimtrimapdiscswitchtoggle", "trimtrimapdiscswitchnorm" ]
+  }, {
+    "id" : "trimtrimapdiscswitchnorm",
+    "callback" : "SimTrimAPNORM",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "trimtrimapdiscswitchtoggle", "trimtrimapdiscswitchdisc" ]
+  }, {
+    "id" : "trimyawtrimknobl",
+    "callback" : "SimTrimYawLeft",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "trimyawtrimknobr" ]
+  }, {
+    "id" : "trimyawtrimknobr",
+    "callback" : "SimTrimYawRight",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "trimyawtrimknobl" ]
+  }, {
+    "id" : "trimpitchtrimwheelnoseup",
+    "callback" : "SimTrimNoseUp",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "trimpitchtrimwheelnosedn" ]
+  }, {
+    "id" : "trimpitchtrimwheelnosedn",
+    "callback" : "SimTrimNoseDown",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "trimpitchtrimwheelnoseup" ]
+  }, {
+    "id" : "epuepuswitchcycle",
+    "callback" : "SimEpuToggle",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "epuepuswitchstepup", "epuepuswitchstepdown", "epuepuswitchon", "epuepuswitchnorm", "epuepuswitchoff" ]
+  }, {
+    "id" : "epuepuswitchstepup",
+    "callback" : "SimEpuUp",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "epuepuswitchcycle", "epuepuswitchstepdown", "epuepuswitchon", "epuepuswitchnorm", "epuepuswitchoff" ]
+  }, {
+    "id" : "epuepuswitchstepdown",
+    "callback" : "SimEpuDown",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "epuepuswitchcycle", "epuepuswitchstepup", "epuepuswitchon", "epuepuswitchnorm", "epuepuswitchoff" ]
+  }, {
+    "id" : "epuepuswitchon",
+    "callback" : "SimEpuOn",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "epuepuswitchcycle", "epuepuswitchstepup", "epuepuswitchstepdown", "epuepuswitchnorm", "epuepuswitchoff" ]
+  }, {
+    "id" : "epuepuswitchnorm",
+    "callback" : "SimEpuAuto",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "epuepuswitchcycle", "epuepuswitchstepup", "epuepuswitchstepdown", "epuepuswitchon", "epuepuswitchoff" ]
+  }, {
+    "id" : "epuepuswitchoff",
+    "callback" : "SimEpuOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "epuepuswitchcycle", "epuepuswitchstepup", "epuepuswitchstepdown", "epuepuswitchon", "epuepuswitchnorm" ]
+  }, {
+    "id" : "elecmainpwrswitchstepup",
+    "callback" : "SimMainPowerInc",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "elecmainpwrswitchstepdown", "elecmainpwrswitchmain", "elecmainpwrswitchbatt", "elecmainpwrswitchoff" ]
+  }, {
+    "id" : "elecmainpwrswitchstepdown",
+    "callback" : "SimMainPowerDec",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "elecmainpwrswitchstepup", "elecmainpwrswitchmain", "elecmainpwrswitchbatt", "elecmainpwrswitchoff" ]
+  }, {
+    "id" : "elecmainpwrswitchmain",
+    "callback" : "SimMainPowerMain",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "elecmainpwrswitchstepup", "elecmainpwrswitchstepdown", "elecmainpwrswitchbatt", "elecmainpwrswitchoff" ]
+  }, {
+    "id" : "elecmainpwrswitchbatt",
+    "callback" : "SimMainPowerBatt",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "elecmainpwrswitchstepup", "elecmainpwrswitchstepdown", "elecmainpwrswitchmain", "elecmainpwrswitchoff" ]
+  }, {
+    "id" : "elecmainpwrswitchoff",
+    "callback" : "SimMainPowerOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "elecmainpwrswitchstepup", "elecmainpwrswitchstepdown", "elecmainpwrswitchmain", "elecmainpwrswitchbatt" ]
+  }, {
+    "id" : "eleccautionresetbuttonpush",
+    "callback" : "SimElecReset",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : null
+  }, {
+    "id" : "avtravtrswitchtoggleonoff",
+    "callback" : "SimAVTRToggle",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchauto", "avtravtrswitchoff" ]
+  }, {
+    "id" : "avtravtrswitchcycle",
+    "callback" : "SimAVTRSwitch",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchauto", "avtravtrswitchoff" ]
+  }, {
+    "id" : "avtravtrswitchstepup",
+    "callback" : "SimAVTRSwitchUp",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchauto", "avtravtrswitchoff" ]
+  }, {
+    "id" : "avtravtrswitchstepdown",
+    "callback" : "SimAVTRSwitchDown",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchon", "avtravtrswitchauto", "avtravtrswitchoff" ]
+  }, {
+    "id" : "avtravtrswitchon",
+    "callback" : "SimAVTRSwitchOn",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchauto", "avtravtrswitchoff" ]
+  }, {
+    "id" : "avtravtrswitchauto",
+    "callback" : "SimAVTRSwitchAuto",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchoff" ]
+  }, {
+    "id" : "avtravtrswitchoff",
+    "callback" : "SimAVTRSwitchOff",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchauto" ]
+  }, {
+    "id" : "engjfsswitchtogglestart2off",
+    "callback" : "SimJfsStart",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "engjfsswitchoff", "engjfsswitchstart2" ]
+  }, {
+    "id" : "engjfsswitchoff",
+    "callback" : "SimJfsStart_Off",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "engjfsswitchtogglestart2off", "engjfsswitchstart2" ]
+  }, {
+    "id" : "engjfsswitchstart2",
+    "callback" : "SimJfsStart_Start2",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "engjfsswitchtogglestart2off", "engjfsswitchoff" ]
+  }, {
+    "id" : "engengcontswitchtoggle",
+    "callback" : "SimEngCont",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "engengcontswitchpri", "engengcontswitchsec" ]
+  }, {
+    "id" : "engengcontswitchpri",
+    "callback" : "SimEngContPri",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "engengcontswitchtoggle", "engengcontswitchsec" ]
+  }, {
+    "id" : "engengcontswitchsec",
+    "callback" : "SimEngContSec",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "engengcontswitchtoggle", "engengcontswitchpri" ]
+  }, {
+    "id" : "mpomanualpitchswitchtoggle",
+    "callback" : "SimMPOToggle",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mpomanualpitchswitchhold" ]
+  }, {
+    "id" : "mpomanualpitchswitchhold",
+    "callback" : "SimMPO",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "mpomanualpitchswitchtoggle" ]
+  }, {
+    "id" : "leftwallslapswitchecmpgrm5",
+    "callback" : "SimSlapSwitch",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : null
+  }, {
+    "id" : "leftwallcanopytoggleopenclose",
+    "callback" : "AFCanopyToggle",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "leftwallcanopyopen", "leftwallcanopyclose" ]
+  }, {
+    "id" : "leftwallcanopyopen",
+    "callback" : "AFCanopyOpen",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "leftwallcanopytoggleopenclose", "leftwallcanopyclose" ]
+  }, {
+    "id" : "leftwallcanopyclose",
+    "callback" : "AFCanopyClose",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "leftwallcanopytoggleopenclose", "leftwallcanopyopen" ]
+  }, {
+    "id" : "seatsafetylevertoggle",
+    "callback" : "SimSeatArm",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "seatsafetyleverarmed", "seatsafetyleverlocked" ]
+  }, {
+    "id" : "seatsafetyleverarmed",
+    "callback" : "SimSeatOn",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "seatsafetylevertoggle", "seatsafetyleverlocked" ]
+  }, {
+    "id" : "seatsafetyleverlocked",
+    "callback" : "SimSeatOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "seatsafetylevertoggle", "seatsafetyleverarmed" ]
+  }, {
+    "id" : "seatejecthandleholdforeject",
+    "callback" : "SimEject",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : null
+  }, {
     "id" : "fuelmasterswitchtoggle",
     "callback" : "SimToggleMasterFuel",
     "active" : false,
@@ -1986,354 +2334,6 @@
     "active" : false,
     "stateful" : true,
     "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepup", "hudbrightnessswitchstepdn", "hudbrightnessswitchday", "hudbrightnessswitchautobrt" ]
-  }, {
-    "id" : "fltdigitalswitchtoggle",
-    "callback" : "SimDigitalBUP",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "fltdigitalswitchbackup", "fltdigitalswitchoff" ]
-  }, {
-    "id" : "fltdigitalswitchbackup",
-    "callback" : "SimDigitalBUPBackup",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "fltdigitalswitchtoggle", "fltdigitalswitchoff" ]
-  }, {
-    "id" : "fltdigitalswitchoff",
-    "callback" : "SimDigitalBUPOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "fltdigitalswitchtoggle", "fltdigitalswitchbackup" ]
-  }, {
-    "id" : "fltaltflapsswitchtoggle",
-    "callback" : "SimAltFlaps",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "fltaltflapsswitchextend", "fltaltflapsswitchnorm" ]
-  }, {
-    "id" : "fltaltflapsswitchextend",
-    "callback" : "SimAltFlapsExtend",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "fltaltflapsswitchtoggle", "fltaltflapsswitchnorm" ]
-  }, {
-    "id" : "fltaltflapsswitchnorm",
-    "callback" : "SimAltFlapsNorm",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "fltaltflapsswitchtoggle", "fltaltflapsswitchextend" ]
-  }, {
-    "id" : "fltmanualtfflyupswitchtoggle",
-    "callback" : "SimManualFlyup",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "fltmanualtfflyupswitchdisable", "fltmanualtfflyupswitchenable" ]
-  }, {
-    "id" : "fltmanualtfflyupswitchdisable",
-    "callback" : "SimManualFlyupDisable",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "fltmanualtfflyupswitchtoggle", "fltmanualtfflyupswitchenable" ]
-  }, {
-    "id" : "fltmanualtfflyupswitchenable",
-    "callback" : "SimManualFlyupEnable",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "fltmanualtfflyupswitchtoggle", "fltmanualtfflyupswitchdisable" ]
-  }, {
-    "id" : "fltleflapsswitchtoggle",
-    "callback" : "SimLEFLockSwitch",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "fltleflapsswitchlock", "fltleflapsswitchauto" ]
-  }, {
-    "id" : "fltleflapsswitchlock",
-    "callback" : "SimLEFLock",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "fltleflapsswitchtoggle", "fltleflapsswitchauto" ]
-  }, {
-    "id" : "fltleflapsswitchauto",
-    "callback" : "SimLEFAuto",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "fltleflapsswitchtoggle", "fltleflapsswitchlock" ]
-  }, {
-    "id" : "fltflcsswitchhold",
-    "callback" : "SimFLCSReset",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : null
-  }, {
-    "id" : "fltbitswitchpush",
-    "callback" : "SimFLTBIT",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : null
-  }, {
-    "id" : "trimrolltrimwheellwingdn",
-    "callback" : "SimTrimRollLeft",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "trimrolltrimwheelrwingdn" ]
-  }, {
-    "id" : "trimrolltrimwheelrwingdn",
-    "callback" : "SimTrimRollRight",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "trimrolltrimwheellwingdn" ]
-  }, {
-    "id" : "trimtrimapdiscswitchtoggle",
-    "callback" : "SimTrimAPDisc",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "trimtrimapdiscswitchdisc", "trimtrimapdiscswitchnorm" ]
-  }, {
-    "id" : "trimtrimapdiscswitchdisc",
-    "callback" : "SimTrimAPDISC",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "trimtrimapdiscswitchtoggle", "trimtrimapdiscswitchnorm" ]
-  }, {
-    "id" : "trimtrimapdiscswitchnorm",
-    "callback" : "SimTrimAPNORM",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "trimtrimapdiscswitchtoggle", "trimtrimapdiscswitchdisc" ]
-  }, {
-    "id" : "trimyawtrimknobl",
-    "callback" : "SimTrimYawLeft",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "trimyawtrimknobr" ]
-  }, {
-    "id" : "trimyawtrimknobr",
-    "callback" : "SimTrimYawRight",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "trimyawtrimknobl" ]
-  }, {
-    "id" : "trimpitchtrimwheelnoseup",
-    "callback" : "SimTrimNoseUp",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "trimpitchtrimwheelnosedn" ]
-  }, {
-    "id" : "trimpitchtrimwheelnosedn",
-    "callback" : "SimTrimNoseDown",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "trimpitchtrimwheelnoseup" ]
-  }, {
-    "id" : "epuepuswitchcycle",
-    "callback" : "SimEpuToggle",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "epuepuswitchstepup", "epuepuswitchstepdown", "epuepuswitchon", "epuepuswitchnorm", "epuepuswitchoff" ]
-  }, {
-    "id" : "epuepuswitchstepup",
-    "callback" : "SimEpuUp",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "epuepuswitchcycle", "epuepuswitchstepdown", "epuepuswitchon", "epuepuswitchnorm", "epuepuswitchoff" ]
-  }, {
-    "id" : "epuepuswitchstepdown",
-    "callback" : "SimEpuDown",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "epuepuswitchcycle", "epuepuswitchstepup", "epuepuswitchon", "epuepuswitchnorm", "epuepuswitchoff" ]
-  }, {
-    "id" : "epuepuswitchon",
-    "callback" : "SimEpuOn",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "epuepuswitchcycle", "epuepuswitchstepup", "epuepuswitchstepdown", "epuepuswitchnorm", "epuepuswitchoff" ]
-  }, {
-    "id" : "epuepuswitchnorm",
-    "callback" : "SimEpuAuto",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "epuepuswitchcycle", "epuepuswitchstepup", "epuepuswitchstepdown", "epuepuswitchon", "epuepuswitchoff" ]
-  }, {
-    "id" : "epuepuswitchoff",
-    "callback" : "SimEpuOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "epuepuswitchcycle", "epuepuswitchstepup", "epuepuswitchstepdown", "epuepuswitchon", "epuepuswitchnorm" ]
-  }, {
-    "id" : "elecmainpwrswitchstepup",
-    "callback" : "SimMainPowerInc",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "elecmainpwrswitchstepdown", "elecmainpwrswitchmain", "elecmainpwrswitchbatt", "elecmainpwrswitchoff" ]
-  }, {
-    "id" : "elecmainpwrswitchstepdown",
-    "callback" : "SimMainPowerDec",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "elecmainpwrswitchstepup", "elecmainpwrswitchmain", "elecmainpwrswitchbatt", "elecmainpwrswitchoff" ]
-  }, {
-    "id" : "elecmainpwrswitchmain",
-    "callback" : "SimMainPowerMain",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "elecmainpwrswitchstepup", "elecmainpwrswitchstepdown", "elecmainpwrswitchbatt", "elecmainpwrswitchoff" ]
-  }, {
-    "id" : "elecmainpwrswitchbatt",
-    "callback" : "SimMainPowerBatt",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "elecmainpwrswitchstepup", "elecmainpwrswitchstepdown", "elecmainpwrswitchmain", "elecmainpwrswitchoff" ]
-  }, {
-    "id" : "elecmainpwrswitchoff",
-    "callback" : "SimMainPowerOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "elecmainpwrswitchstepup", "elecmainpwrswitchstepdown", "elecmainpwrswitchmain", "elecmainpwrswitchbatt" ]
-  }, {
-    "id" : "eleccautionresetbuttonpush",
-    "callback" : "SimElecReset",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : null
-  }, {
-    "id" : "avtravtrswitchtoggleonoff",
-    "callback" : "SimAVTRToggle",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchauto", "avtravtrswitchoff" ]
-  }, {
-    "id" : "avtravtrswitchcycle",
-    "callback" : "SimAVTRSwitch",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchauto", "avtravtrswitchoff" ]
-  }, {
-    "id" : "avtravtrswitchstepup",
-    "callback" : "SimAVTRSwitchUp",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchauto", "avtravtrswitchoff" ]
-  }, {
-    "id" : "avtravtrswitchstepdown",
-    "callback" : "SimAVTRSwitchDown",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchon", "avtravtrswitchauto", "avtravtrswitchoff" ]
-  }, {
-    "id" : "avtravtrswitchon",
-    "callback" : "SimAVTRSwitchOn",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchauto", "avtravtrswitchoff" ]
-  }, {
-    "id" : "avtravtrswitchauto",
-    "callback" : "SimAVTRSwitchAuto",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchoff" ]
-  }, {
-    "id" : "avtravtrswitchoff",
-    "callback" : "SimAVTRSwitchOff",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchauto" ]
-  }, {
-    "id" : "engjfsswitchtogglestart2off",
-    "callback" : "SimJfsStart",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "engjfsswitchoff", "engjfsswitchstart2" ]
-  }, {
-    "id" : "engjfsswitchoff",
-    "callback" : "SimJfsStart_Off",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "engjfsswitchtogglestart2off", "engjfsswitchstart2" ]
-  }, {
-    "id" : "engjfsswitchstart2",
-    "callback" : "SimJfsStart_Start2",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "engjfsswitchtogglestart2off", "engjfsswitchoff" ]
-  }, {
-    "id" : "engengcontswitchtoggle",
-    "callback" : "SimEngCont",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "engengcontswitchpri", "engengcontswitchsec" ]
-  }, {
-    "id" : "engengcontswitchpri",
-    "callback" : "SimEngContPri",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "engengcontswitchtoggle", "engengcontswitchsec" ]
-  }, {
-    "id" : "engengcontswitchsec",
-    "callback" : "SimEngContSec",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "engengcontswitchtoggle", "engengcontswitchpri" ]
-  }, {
-    "id" : "mpomanualpitchswitchtoggle",
-    "callback" : "SimMPOToggle",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mpomanualpitchswitchhold" ]
-  }, {
-    "id" : "mpomanualpitchswitchhold",
-    "callback" : "SimMPO",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "mpomanualpitchswitchtoggle" ]
-  }, {
-    "id" : "leftwallslapswitchecmpgrm5",
-    "callback" : "SimSlapSwitch",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : null
-  }, {
-    "id" : "leftwallcanopytoggleopenclose",
-    "callback" : "AFCanopyToggle",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "leftwallcanopyopen", "leftwallcanopyclose" ]
-  }, {
-    "id" : "leftwallcanopyopen",
-    "callback" : "AFCanopyOpen",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "leftwallcanopytoggleopenclose", "leftwallcanopyclose" ]
-  }, {
-    "id" : "leftwallcanopyclose",
-    "callback" : "AFCanopyClose",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "leftwallcanopytoggleopenclose", "leftwallcanopyopen" ]
-  }, {
-    "id" : "seatsafetylevertoggle",
-    "callback" : "SimSeatArm",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "seatsafetyleverarmed", "seatsafetyleverlocked" ]
-  }, {
-    "id" : "seatsafetyleverarmed",
-    "callback" : "SimSeatOn",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "seatsafetylevertoggle", "seatsafetyleverlocked" ]
-  }, {
-    "id" : "seatsafetyleverlocked",
-    "callback" : "SimSeatOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "seatsafetylevertoggle", "seatsafetyleverarmed" ]
-  }, {
-    "id" : "seatejecthandleholdforeject",
-    "callback" : "SimEject",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : null
   }, {
     "id" : "tqscommsswitchupuhf",
     "callback" : "SimTransmitCom1",
