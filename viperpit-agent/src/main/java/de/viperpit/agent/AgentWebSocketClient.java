@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.messaging.converter.MappingJackson2MessageConverter;
 import org.springframework.messaging.simp.stomp.StompSession;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.WebSocketHttpHeaders;
 import org.springframework.web.socket.client.WebSocketClient;
@@ -29,9 +30,12 @@ public class AgentWebSocketClient {
 	public void connectTo(String url) {
 		ExecutorService executorService = newSingleThreadExecutor();
 		executorService.submit(() -> {
+			ThreadPoolTaskScheduler taskScheduler = new ThreadPoolTaskScheduler();
+			taskScheduler.initialize();
 			WebSocketHttpHeaders headers = new WebSocketHttpHeaders();
 			WebSocketClient webSocketClient = new StandardWebSocketClient();
 			WebSocketStompClient stompClient = new WebSocketStompClient(webSocketClient);
+			stompClient.setTaskScheduler(taskScheduler);
 			stompClient.setMessageConverter(new MappingJackson2MessageConverter());
 			try {
 				StompSession stompSession = stompClient.connect(url, headers, agentSessionHandler).get();
