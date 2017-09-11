@@ -325,6 +325,24 @@
     "stateful" : false,
     "relatedActions" : [ "rwrbrightnessknobincrease" ]
   }, {
+    "id" : "ecmoprswitchtoggle",
+    "callback" : "SimEcmPower",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "ecmoprswitchopr", "ecmoprswitchoff" ]
+  }, {
+    "id" : "ecmoprswitchopr",
+    "callback" : "SimEcmPowerOn",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "ecmoprswitchtoggle", "ecmoprswitchoff" ]
+  }, {
+    "id" : "ecmoprswitchoff",
+    "callback" : "SimEcmPowerOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "ecmoprswitchtoggle", "ecmoprswitchopr" ]
+  }, {
     "id" : "auxcniknobswitchtoggle",
     "callback" : "SimToggleAuxComMaster",
     "active" : false,
@@ -1555,6 +1573,168 @@
     "stateful" : true,
     "relatedActions" : [ "miscpitchswitchcyclealsocombatap", "miscpitchswitchstepup", "miscpitchswitchstepdown", "miscpitchswitchalthold", "miscpitchswitchapoff" ]
   }, {
+    "id" : "avionicsinsknobstepup",
+    "callback" : "SimINSInc",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avionicsinsknobstepdown", "avionicsinsknoboff", "avionicsinsknobnorm", "avionicsinsknobnav", "avionicsinsknobinfltalign" ]
+  }, {
+    "id" : "avionicsinsknobstepdown",
+    "callback" : "SimINSDec",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknoboff", "avionicsinsknobnorm", "avionicsinsknobnav", "avionicsinsknobinfltalign" ]
+  }, {
+    "id" : "avionicsinsknoboff",
+    "callback" : "SimINSOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknobstepdown", "avionicsinsknobnorm", "avionicsinsknobnav", "avionicsinsknobinfltalign" ]
+  }, {
+    "id" : "avionicsinsknobnorm",
+    "callback" : "SimINSNorm",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknobstepdown", "avionicsinsknoboff", "avionicsinsknobnav", "avionicsinsknobinfltalign" ]
+  }, {
+    "id" : "avionicsinsknobnav",
+    "callback" : "SimINSNav",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknobstepdown", "avionicsinsknoboff", "avionicsinsknobnorm", "avionicsinsknobinfltalign" ]
+  }, {
+    "id" : "avionicsinsknobinfltalign",
+    "callback" : "SimINSInFlt",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknobstepdown", "avionicsinsknoboff", "avionicsinsknobnorm", "avionicsinsknobnav" ]
+  }, {
+    "id" : "avionicsfccswitchtoggle",
+    "callback" : "SimFCCPower",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avionicsfccswitchon", "avionicsfccswitchoff" ]
+  }, {
+    "id" : "avionicsfccswitchon",
+    "callback" : "SimFCCOn",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsfccswitchtoggle", "avionicsfccswitchoff" ]
+  }, {
+    "id" : "avionicsfccswitchoff",
+    "callback" : "SimFCCOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsfccswitchtoggle", "avionicsfccswitchon" ]
+  }, {
+    "id" : "avionicssmsswitchtoggle",
+    "callback" : "SimSMSPower",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avionicssmsswitchon", "avionicssmsswitchoff" ]
+  }, {
+    "id" : "avionicssmsswitchon",
+    "callback" : "SimSMSOn",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "avionicssmsswitchtoggle", "avionicssmsswitchoff" ]
+  }, {
+    "id" : "avionicssmsswitchoff",
+    "callback" : "SimSMSOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avionicssmsswitchtoggle", "avionicssmsswitchon" ]
+  }, {
+    "id" : "avionicsmfdswitchtoggle",
+    "callback" : "SimMFDPower",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avionicsmfdswitchon", "avionicsmfdswitchoff" ]
+  }, {
+    "id" : "avionicsmfdswitchon",
+    "callback" : "SimMFDOn",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsmfdswitchtoggle", "avionicsmfdswitchoff" ]
+  }, {
+    "id" : "avionicsmfdswitchoff",
+    "callback" : "SimMFDOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsmfdswitchtoggle", "avionicsmfdswitchon" ]
+  }, {
+    "id" : "avionicsufcswitchtoggle",
+    "callback" : "SimUFCPower",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avionicsufcswitchon", "avionicsufcswitchoff" ]
+  }, {
+    "id" : "avionicsufcswitchon",
+    "callback" : "SimUFCOn",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsufcswitchtoggle", "avionicsufcswitchoff" ]
+  }, {
+    "id" : "avionicsufcswitchoff",
+    "callback" : "SimUFCOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsufcswitchtoggle", "avionicsufcswitchon" ]
+  }, {
+    "id" : "avionicsgpsswitchtoggle",
+    "callback" : "SimGPSPower",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avionicsgpsswitchon", "avionicsgpsswitchoff" ]
+  }, {
+    "id" : "avionicsgpsswitchon",
+    "callback" : "SimGPSOn",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsgpsswitchtoggle", "avionicsgpsswitchoff" ]
+  }, {
+    "id" : "avionicsgpsswitchoff",
+    "callback" : "SimGPSOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsgpsswitchtoggle", "avionicsgpsswitchon" ]
+  }, {
+    "id" : "avionicsdlswitchtoggle",
+    "callback" : "SimDLPower",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avionicsdlswitchon", "avionicsdlswitchoff" ]
+  }, {
+    "id" : "avionicsdlswitchon",
+    "callback" : "SimDLOn",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsdlswitchtoggle", "avionicsdlswitchoff" ]
+  }, {
+    "id" : "avionicsdlswitchoff",
+    "callback" : "SimDLOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsdlswitchtoggle", "avionicsdlswitchon" ]
+  }, {
+    "id" : "avionicsmapswitchtoggle",
+    "callback" : "SimMAPPower",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "avionicsmapswitchon", "avionicsmapswitchoff" ]
+  }, {
+    "id" : "avionicsmapswitchon",
+    "callback" : "SimMAPOn",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsmapswitchtoggle", "avionicsmapswitchoff" ]
+  }, {
+    "id" : "avionicsmapswitchoff",
+    "callback" : "SimMAPOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "avionicsmapswitchtoggle", "avionicsmapswitchon" ]
+  }, {
     "id" : "fltdigitalswitchtoggle",
     "callback" : "SimDigitalBUP",
     "active" : false,
@@ -1806,24 +1986,6 @@
     "active" : true,
     "stateful" : true,
     "relatedActions" : [ "avtravtrswitchtoggleonoff", "avtravtrswitchcycle", "avtravtrswitchstepup", "avtravtrswitchstepdown", "avtravtrswitchon", "avtravtrswitchauto" ]
-  }, {
-    "id" : "ecmoprswitchtoggle",
-    "callback" : "SimEcmPower",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "ecmoprswitchopr", "ecmoprswitchoff" ]
-  }, {
-    "id" : "ecmoprswitchopr",
-    "callback" : "SimEcmPowerOn",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "ecmoprswitchtoggle", "ecmoprswitchoff" ]
-  }, {
-    "id" : "ecmoprswitchoff",
-    "callback" : "SimEcmPowerOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "ecmoprswitchtoggle", "ecmoprswitchopr" ]
   }, {
     "id" : "engjfsswitchtogglestart2off",
     "callback" : "SimJfsStart",
@@ -3114,168 +3276,6 @@
     "active" : false,
     "stateful" : true,
     "relatedActions" : [ "zerovmsswitchtoggle", "zerovmsswitchon" ]
-  }, {
-    "id" : "avionicsinsknobstepup",
-    "callback" : "SimINSInc",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avionicsinsknobstepdown", "avionicsinsknoboff", "avionicsinsknobnorm", "avionicsinsknobnav", "avionicsinsknobinfltalign" ]
-  }, {
-    "id" : "avionicsinsknobstepdown",
-    "callback" : "SimINSDec",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknoboff", "avionicsinsknobnorm", "avionicsinsknobnav", "avionicsinsknobinfltalign" ]
-  }, {
-    "id" : "avionicsinsknoboff",
-    "callback" : "SimINSOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknobstepdown", "avionicsinsknobnorm", "avionicsinsknobnav", "avionicsinsknobinfltalign" ]
-  }, {
-    "id" : "avionicsinsknobnorm",
-    "callback" : "SimINSNorm",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknobstepdown", "avionicsinsknoboff", "avionicsinsknobnav", "avionicsinsknobinfltalign" ]
-  }, {
-    "id" : "avionicsinsknobnav",
-    "callback" : "SimINSNav",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknobstepdown", "avionicsinsknoboff", "avionicsinsknobnorm", "avionicsinsknobinfltalign" ]
-  }, {
-    "id" : "avionicsinsknobinfltalign",
-    "callback" : "SimINSInFlt",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsinsknobstepup", "avionicsinsknobstepdown", "avionicsinsknoboff", "avionicsinsknobnorm", "avionicsinsknobnav" ]
-  }, {
-    "id" : "avionicsfccswitchtoggle",
-    "callback" : "SimFCCPower",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avionicsfccswitchon", "avionicsfccswitchoff" ]
-  }, {
-    "id" : "avionicsfccswitchon",
-    "callback" : "SimFCCOn",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsfccswitchtoggle", "avionicsfccswitchoff" ]
-  }, {
-    "id" : "avionicsfccswitchoff",
-    "callback" : "SimFCCOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsfccswitchtoggle", "avionicsfccswitchon" ]
-  }, {
-    "id" : "avionicssmsswitchtoggle",
-    "callback" : "SimSMSPower",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avionicssmsswitchon", "avionicssmsswitchoff" ]
-  }, {
-    "id" : "avionicssmsswitchon",
-    "callback" : "SimSMSOn",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "avionicssmsswitchtoggle", "avionicssmsswitchoff" ]
-  }, {
-    "id" : "avionicssmsswitchoff",
-    "callback" : "SimSMSOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avionicssmsswitchtoggle", "avionicssmsswitchon" ]
-  }, {
-    "id" : "avionicsmfdswitchtoggle",
-    "callback" : "SimMFDPower",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avionicsmfdswitchon", "avionicsmfdswitchoff" ]
-  }, {
-    "id" : "avionicsmfdswitchon",
-    "callback" : "SimMFDOn",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsmfdswitchtoggle", "avionicsmfdswitchoff" ]
-  }, {
-    "id" : "avionicsmfdswitchoff",
-    "callback" : "SimMFDOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsmfdswitchtoggle", "avionicsmfdswitchon" ]
-  }, {
-    "id" : "avionicsufcswitchtoggle",
-    "callback" : "SimUFCPower",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avionicsufcswitchon", "avionicsufcswitchoff" ]
-  }, {
-    "id" : "avionicsufcswitchon",
-    "callback" : "SimUFCOn",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsufcswitchtoggle", "avionicsufcswitchoff" ]
-  }, {
-    "id" : "avionicsufcswitchoff",
-    "callback" : "SimUFCOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsufcswitchtoggle", "avionicsufcswitchon" ]
-  }, {
-    "id" : "avionicsgpsswitchtoggle",
-    "callback" : "SimGPSPower",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avionicsgpsswitchon", "avionicsgpsswitchoff" ]
-  }, {
-    "id" : "avionicsgpsswitchon",
-    "callback" : "SimGPSOn",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsgpsswitchtoggle", "avionicsgpsswitchoff" ]
-  }, {
-    "id" : "avionicsgpsswitchoff",
-    "callback" : "SimGPSOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsgpsswitchtoggle", "avionicsgpsswitchon" ]
-  }, {
-    "id" : "avionicsdlswitchtoggle",
-    "callback" : "SimDLPower",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avionicsdlswitchon", "avionicsdlswitchoff" ]
-  }, {
-    "id" : "avionicsdlswitchon",
-    "callback" : "SimDLOn",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsdlswitchtoggle", "avionicsdlswitchoff" ]
-  }, {
-    "id" : "avionicsdlswitchoff",
-    "callback" : "SimDLOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsdlswitchtoggle", "avionicsdlswitchon" ]
-  }, {
-    "id" : "avionicsmapswitchtoggle",
-    "callback" : "SimMAPPower",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "avionicsmapswitchon", "avionicsmapswitchoff" ]
-  }, {
-    "id" : "avionicsmapswitchon",
-    "callback" : "SimMAPOn",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsmapswitchtoggle", "avionicsmapswitchoff" ]
-  }, {
-    "id" : "avionicsmapswitchoff",
-    "callback" : "SimMAPOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "avionicsmapswitchtoggle", "avionicsmapswitchon" ]
   }, {
     "id" : "oxysetting2togglepilotbreathing",
     "callback" : "SimOxySupplyToggle",

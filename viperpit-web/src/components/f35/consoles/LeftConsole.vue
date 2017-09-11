@@ -21,22 +21,19 @@
     <avtr-panel />
   </div>
   <div class="col-sm-6">
-    <ecm-panel />
+    <eng-jet-start-panel />
   </div>
   </div>
   <div class="row">
-  <div class="col-sm-6">
-    <eng-jet-start-panel />
-  </div>
   <div class="col-sm-6">
     <mpo-panel />
   </div>
-  </div>
-  <div class="row">
   <div class="col-sm-6">
     <left-side-wall />
   </div>
-  <div class="col-sm-6">
+  </div>
+  <div class="row">
+  <div class="col-sm-12">
     <seat />
   </div>
   </div>
@@ -49,7 +46,6 @@ import ManualTrimPanel from '../panels/manualtrimpanel/ManualTrimPanel'
 import EpuPanel from '../panels/epupanel/EpuPanel'
 import ElecPanel from '../panels/elecpanel/ElecPanel'
 import AvtrPanel from '../panels/avtrpanel/AvtrPanel'
-import EcmPanel from '../panels/ecmpanel/EcmPanel'
 import EngJetStartPanel from '../panels/engjetstartpanel/EngJetStartPanel'
 import MpoPanel from '../panels/mpopanel/MpoPanel'
 import LeftSideWall from '../panels/leftsidewall/LeftSideWall'
@@ -63,7 +59,6 @@ export default {
     EpuPanel,
     ElecPanel,
     AvtrPanel,
-    EcmPanel,
     EngJetStartPanel,
     MpoPanel,
     LeftSideWall,

@@ -5,6 +5,7 @@ import Test from '@/components/f35/consoles/Test'
 import Lights from '@/components/f35/consoles/Lights'
 import Sensors from '@/components/f35/consoles/Sensors'
 import Nav from '@/components/f35/consoles/Nav'
+import Avionics from '@/components/f35/consoles/Avionics'
 import LeftConsole from '@/components/f35/consoles/LeftConsole'
 import LeftAuxConsole from '@/components/f35/consoles/LeftAuxConsole'
 import CenterConsole from '@/components/f35/consoles/CenterConsole'
@@ -50,6 +51,11 @@ export default class F35Router {
         path: '/cockpits/f35/consoles/nav',
         name: 'NavForF35',
         component: Nav
+      },
+      {
+        path: '/cockpits/f35/consoles/avionics',
+        name: 'AvionicsForF35',
+        component: Avionics
       },
       {
         path: '/cockpits/f35/consoles/leftconsole',

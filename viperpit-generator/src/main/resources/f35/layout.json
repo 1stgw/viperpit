@@ -78,6 +78,20 @@
               ]
             }
           ]
+        },
+        {
+          "panelRowSet": [
+            {
+              "panel": "ecmpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "ECM: OPR Switch"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -331,6 +345,35 @@
       ]
     },
     {
+      "console": "avionics",
+      "consoleRow": [
+        {
+          "panelRowSet": [
+            {
+              "panel": "avionicpowerpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "AVIONICS: INS Knob",
+                    "AVIONICS: FCC Switch",
+                    "AVIONICS: SMS Switch",
+                    "AVIONICS: MFD Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "AVIONICS: UFC Switch",
+                    "AVIONICS: GPS Switch",
+                    "AVIONICS: DL Switch"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "console": "leftconsole",
       "consoleRow": [
         {
@@ -407,20 +450,6 @@
               ]
             },
             {
-              "panel": "ecmpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "ECM: OPR Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
-            {
               "panel": "engjetstartpanel",
               "panelRow": [
                 {
@@ -430,7 +459,11 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
             {
               "panel": "mpopanel",
               "panelRow": [
@@ -440,11 +473,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
+            },
             {
               "panel": "leftsidewall",
               "panelRow": [
@@ -455,7 +484,11 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
             {
               "panel": "seat",
               "panelRow": [
@@ -606,30 +639,6 @@
                 }
               ]
             },
-            {
-              "panel": "avionicpowerpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "AVIONICS: INS Knob",
-                    "AVIONICS: FCC Switch",
-                    "AVIONICS: SMS Switch",
-                    "AVIONICS: MFD Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "AVIONICS: UFC Switch",
-                    "AVIONICS: GPS Switch",
-                    "AVIONICS: DL Switch"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
             {
               "panel": "oxygenpanel",
               "panelRow": [

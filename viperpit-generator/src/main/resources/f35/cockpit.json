@@ -508,6 +508,38 @@
               ]
             }
           ]
+        },
+        {
+          "id": "ecmpanel",
+          "class": "EcmPanel",
+          "name": "ECM PANEL",
+          "group": [
+            {
+              "id": "ECM: OPR Switch",
+              "class": "EcmOprSwitch",
+              "description": "ECM: OPR Switch - OPR",
+              "label": "OPR",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "ecmoprswitchopr",
+                  "clazz": "EcmOprSwitchOpr",
+                  "callback": "SimEcmPowerOn",
+                  "description": "ECM: OPR Switch - OPR",
+                  "label": "OPR",
+                  "role": "on"
+                },
+                {
+                  "id": "ecmoprswitchoff",
+                  "clazz": "EcmOprSwitchOff",
+                  "callback": "SimEcmPowerOff",
+                  "description": "ECM: OPR Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2089,6 +2121,211 @@
       ]
     },
     {
+      "id": "avionics",
+      "class": "Avionics",
+      "name": "Avionics",
+      "panel": [
+        {
+          "id": "avionicpowerpanel",
+          "class": "AvionicPowerPanel",
+          "name": "AVIONIC POWER  PANEL",
+          "group": [
+            {
+              "id": "AVIONICS: INS Knob",
+              "class": "AvionicsInsKnob",
+              "description": "AVIONICS: INS Knob - OFF",
+              "label": "INS",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "avionicsinsknoboff",
+                  "clazz": "AvionicsInsKnobOff",
+                  "callback": "SimINSOff",
+                  "description": "AVIONICS: INS Knob - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                },
+                {
+                  "id": "avionicsinsknobnorm",
+                  "clazz": "AvionicsInsKnobNorm",
+                  "callback": "SimINSNorm",
+                  "description": "AVIONICS: INS Knob - NORM",
+                  "label": "NORM",
+                  "role": "on"
+                },
+                {
+                  "id": "avionicsinsknobnav",
+                  "clazz": "AvionicsInsKnobNav",
+                  "callback": "SimINSNav",
+                  "description": "AVIONICS: INS Knob - NAV",
+                  "label": "NAV",
+                  "role": "none"
+                },
+                {
+                  "id": "avionicsinsknobinfltalign",
+                  "clazz": "AvionicsInsKnobInFltAlign",
+                  "callback": "SimINSInFlt",
+                  "description": "AVIONICS: INS Knob - IN FLT ALIGN",
+                  "label": "IN FLT ALIGN",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "AVIONICS: FCC Switch",
+              "class": "AvionicsFccSwitch",
+              "description": "AVIONICS: FCC Switch - ON",
+              "label": "FCC",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "avionicsfccswitchon",
+                  "clazz": "AvionicsFccSwitchOn",
+                  "callback": "SimFCCOn",
+                  "description": "AVIONICS: FCC Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "avionicsfccswitchoff",
+                  "clazz": "AvionicsFccSwitchOff",
+                  "callback": "SimFCCOff",
+                  "description": "AVIONICS: FCC Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "AVIONICS: SMS Switch",
+              "class": "AvionicsSmsSwitch",
+              "description": "AVIONICS: SMS Switch - ON",
+              "label": "SMS",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "avionicssmsswitchon",
+                  "clazz": "AvionicsSmsSwitchOn",
+                  "callback": "SimSMSOn",
+                  "description": "AVIONICS: SMS Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "avionicssmsswitchoff",
+                  "clazz": "AvionicsSmsSwitchOff",
+                  "callback": "SimSMSOff",
+                  "description": "AVIONICS: SMS Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "AVIONICS: MFD Switch",
+              "class": "AvionicsMfdSwitch",
+              "description": "AVIONICS: MFD Switch - ON",
+              "label": "MFD",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "avionicsmfdswitchon",
+                  "clazz": "AvionicsMfdSwitchOn",
+                  "callback": "SimMFDOn",
+                  "description": "AVIONICS: MFD Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "avionicsmfdswitchoff",
+                  "clazz": "AvionicsMfdSwitchOff",
+                  "callback": "SimMFDOff",
+                  "description": "AVIONICS: MFD Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "AVIONICS: UFC Switch",
+              "class": "AvionicsUfcSwitch",
+              "description": "AVIONICS: UFC Switch - ON",
+              "label": "UFC",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "avionicsufcswitchon",
+                  "clazz": "AvionicsUfcSwitchOn",
+                  "callback": "SimUFCOn",
+                  "description": "AVIONICS: UFC Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "avionicsufcswitchoff",
+                  "clazz": "AvionicsUfcSwitchOff",
+                  "callback": "SimUFCOff",
+                  "description": "AVIONICS: UFC Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "AVIONICS: GPS Switch",
+              "class": "AvionicsGpsSwitch",
+              "description": "AVIONICS: GPS Switch - ON",
+              "label": "GPS",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "avionicsgpsswitchon",
+                  "clazz": "AvionicsGpsSwitchOn",
+                  "callback": "SimGPSOn",
+                  "description": "AVIONICS: GPS Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "avionicsgpsswitchoff",
+                  "clazz": "AvionicsGpsSwitchOff",
+                  "callback": "SimGPSOff",
+                  "description": "AVIONICS: GPS Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "AVIONICS: DL Switch",
+              "class": "AvionicsDlSwitch",
+              "description": "AVIONICS: DL Switch - ON",
+              "label": "DL",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "avionicsdlswitchon",
+                  "clazz": "AvionicsDlSwitchOn",
+                  "callback": "SimDLOn",
+                  "description": "AVIONICS: DL Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "avionicsdlswitchoff",
+                  "clazz": "AvionicsDlSwitchOff",
+                  "callback": "SimDLOff",
+                  "description": "AVIONICS: DL Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "leftconsole",
       "class": "LeftConsole",
       "name": "Left Console",
@@ -2476,38 +2713,6 @@
                   "clazz": "AvtrAvtrSwitchOff",
                   "callback": "SimAVTRSwitchOff",
                   "description": "AVTR: AVTR Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "ecmpanel",
-          "class": "EcmPanel",
-          "name": "ECM PANEL",
-          "group": [
-            {
-              "id": "ECM: OPR Switch",
-              "class": "EcmOprSwitch",
-              "description": "ECM: OPR Switch - OPR",
-              "label": "OPR",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "ecmoprswitchopr",
-                  "clazz": "EcmOprSwitchOpr",
-                  "callback": "SimEcmPowerOn",
-                  "description": "ECM: OPR Switch - OPR",
-                  "label": "OPR",
-                  "role": "on"
-                },
-                {
-                  "id": "ecmoprswitchoff",
-                  "clazz": "EcmOprSwitchOff",
-                  "callback": "SimEcmPowerOff",
-                  "description": "ECM: OPR Switch - OFF",
                   "label": "OFF",
                   "role": "off"
                 }
@@ -3405,204 +3610,6 @@
                   "description": "ZERO: VMS Switch - INHIBIT",
                   "label": "INHIBIT",
                   "role": "none"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "avionicpowerpanel",
-          "class": "AvionicPowerPanel",
-          "name": "AVIONIC POWER  PANEL",
-          "group": [
-            {
-              "id": "AVIONICS: INS Knob",
-              "class": "AvionicsInsKnob",
-              "description": "AVIONICS: INS Knob - OFF",
-              "label": "INS",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "avionicsinsknoboff",
-                  "clazz": "AvionicsInsKnobOff",
-                  "callback": "SimINSOff",
-                  "description": "AVIONICS: INS Knob - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                },
-                {
-                  "id": "avionicsinsknobnorm",
-                  "clazz": "AvionicsInsKnobNorm",
-                  "callback": "SimINSNorm",
-                  "description": "AVIONICS: INS Knob - NORM",
-                  "label": "NORM",
-                  "role": "on"
-                },
-                {
-                  "id": "avionicsinsknobnav",
-                  "clazz": "AvionicsInsKnobNav",
-                  "callback": "SimINSNav",
-                  "description": "AVIONICS: INS Knob - NAV",
-                  "label": "NAV",
-                  "role": "none"
-                },
-                {
-                  "id": "avionicsinsknobinfltalign",
-                  "clazz": "AvionicsInsKnobInFltAlign",
-                  "callback": "SimINSInFlt",
-                  "description": "AVIONICS: INS Knob - IN FLT ALIGN",
-                  "label": "IN FLT ALIGN",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "AVIONICS: FCC Switch",
-              "class": "AvionicsFccSwitch",
-              "description": "AVIONICS: FCC Switch - ON",
-              "label": "FCC",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "avionicsfccswitchon",
-                  "clazz": "AvionicsFccSwitchOn",
-                  "callback": "SimFCCOn",
-                  "description": "AVIONICS: FCC Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "avionicsfccswitchoff",
-                  "clazz": "AvionicsFccSwitchOff",
-                  "callback": "SimFCCOff",
-                  "description": "AVIONICS: FCC Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "AVIONICS: SMS Switch",
-              "class": "AvionicsSmsSwitch",
-              "description": "AVIONICS: SMS Switch - ON",
-              "label": "SMS",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "avionicssmsswitchon",
-                  "clazz": "AvionicsSmsSwitchOn",
-                  "callback": "SimSMSOn",
-                  "description": "AVIONICS: SMS Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "avionicssmsswitchoff",
-                  "clazz": "AvionicsSmsSwitchOff",
-                  "callback": "SimSMSOff",
-                  "description": "AVIONICS: SMS Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "AVIONICS: MFD Switch",
-              "class": "AvionicsMfdSwitch",
-              "description": "AVIONICS: MFD Switch - ON",
-              "label": "MFD",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "avionicsmfdswitchon",
-                  "clazz": "AvionicsMfdSwitchOn",
-                  "callback": "SimMFDOn",
-                  "description": "AVIONICS: MFD Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "avionicsmfdswitchoff",
-                  "clazz": "AvionicsMfdSwitchOff",
-                  "callback": "SimMFDOff",
-                  "description": "AVIONICS: MFD Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "AVIONICS: UFC Switch",
-              "class": "AvionicsUfcSwitch",
-              "description": "AVIONICS: UFC Switch - ON",
-              "label": "UFC",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "avionicsufcswitchon",
-                  "clazz": "AvionicsUfcSwitchOn",
-                  "callback": "SimUFCOn",
-                  "description": "AVIONICS: UFC Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "avionicsufcswitchoff",
-                  "clazz": "AvionicsUfcSwitchOff",
-                  "callback": "SimUFCOff",
-                  "description": "AVIONICS: UFC Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "AVIONICS: GPS Switch",
-              "class": "AvionicsGpsSwitch",
-              "description": "AVIONICS: GPS Switch - ON",
-              "label": "GPS",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "avionicsgpsswitchon",
-                  "clazz": "AvionicsGpsSwitchOn",
-                  "callback": "SimGPSOn",
-                  "description": "AVIONICS: GPS Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "avionicsgpsswitchoff",
-                  "clazz": "AvionicsGpsSwitchOff",
-                  "callback": "SimGPSOff",
-                  "description": "AVIONICS: GPS Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "AVIONICS: DL Switch",
-              "class": "AvionicsDlSwitch",
-              "description": "AVIONICS: DL Switch - ON",
-              "label": "DL",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "avionicsdlswitchon",
-                  "clazz": "AvionicsDlSwitchOn",
-                  "callback": "SimDLOn",
-                  "description": "AVIONICS: DL Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "avionicsdlswitchoff",
-                  "clazz": "AvionicsDlSwitchOff",
-                  "callback": "SimDLOff",
-                  "description": "AVIONICS: DL Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
                 }
               ]
             }

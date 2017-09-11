@@ -16,6 +16,11 @@
     <rwr />
   </div>
   </div>
+  <div class="row">
+  <div class="col-sm-12">
+    <ecm-panel />
+  </div>
+  </div>
 </div>
 </template>
 
@@ -24,6 +29,7 @@ import CmdsPanel from '../panels/cmdspanel/CmdsPanel'
 import TwaPanel from '../panels/twapanel/TwaPanel'
 import Twp from '../panels/twp/Twp'
 import Rwr from '../panels/rwr/Rwr'
+import EcmPanel from '../panels/ecmpanel/EcmPanel'
 
 export default {
   name: 'Cmds',
@@ -31,7 +37,8 @@ export default {
     CmdsPanel,
     TwaPanel,
     Twp,
-    Rwr
+    Rwr,
+    EcmPanel
   }
 }
 </script>

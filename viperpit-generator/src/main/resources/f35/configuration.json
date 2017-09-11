@@ -1029,6 +1029,64 @@
       "type": "button"
     },
     {
+      "id": "ecmoprswitchtoggle",
+      "clazz": "EcmOprSwitchToggle",
+      "callback": "SimEcmPower",
+      "relatedActions": [
+        "ecmoprswitchopr",
+        "ecmoprswitchoff"
+      ],
+      "description": "ECM: OPR Switch - Toggle",
+      "category": "CMDS",
+      "section": "ECM PANEL",
+      "group": "ECM: OPR Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "ecmoprswitchopr",
+      "clazz": "EcmOprSwitchOpr",
+      "callback": "SimEcmPowerOn",
+      "relatedActions": [
+        "ecmoprswitchtoggle",
+        "ecmoprswitchoff"
+      ],
+      "description": "ECM: OPR Switch - OPR",
+      "category": "CMDS",
+      "section": "ECM PANEL",
+      "group": "ECM: OPR Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "ecmoprswitchoff",
+      "clazz": "EcmOprSwitchOff",
+      "callback": "SimEcmPowerOff",
+      "relatedActions": [
+        "ecmoprswitchtoggle",
+        "ecmoprswitchopr"
+      ],
+      "description": "ECM: OPR Switch - OFF",
+      "category": "CMDS",
+      "section": "ECM PANEL",
+      "group": "ECM: OPR Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
       "id": "auxcniknobswitchtoggle",
       "clazz": "AuxCniKnobSwitchToggle",
       "callback": "SimToggleAuxComMaster",
@@ -4767,6 +4825,546 @@
       }
     },
     {
+      "id": "avionicsinsknobstepup",
+      "clazz": "AvionicsInsKnobStepUp",
+      "callback": "SimINSInc",
+      "relatedActions": [
+        "avionicsinsknobstepdown",
+        "avionicsinsknoboff",
+        "avionicsinsknobnorm",
+        "avionicsinsknobnav",
+        "avionicsinsknobinfltalign"
+      ],
+      "description": "AVIONICS: INS Knob - Step Up",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: INS Knob",
+      "style": "knob",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "avionicsinsknobstepdown",
+      "clazz": "AvionicsInsKnobStepDown",
+      "callback": "SimINSDec",
+      "relatedActions": [
+        "avionicsinsknobstepup",
+        "avionicsinsknoboff",
+        "avionicsinsknobnorm",
+        "avionicsinsknobnav",
+        "avionicsinsknobinfltalign"
+      ],
+      "description": "AVIONICS: INS Knob - Step Down",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: INS Knob",
+      "style": "knob",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "avionicsinsknoboff",
+      "clazz": "AvionicsInsKnobOff",
+      "callback": "SimINSOff",
+      "relatedActions": [
+        "avionicsinsknobstepup",
+        "avionicsinsknobstepdown",
+        "avionicsinsknobnorm",
+        "avionicsinsknobnav",
+        "avionicsinsknobinfltalign"
+      ],
+      "description": "AVIONICS: INS Knob - OFF",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: INS Knob",
+      "style": "knob",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "avionicsinsknobnorm",
+      "clazz": "AvionicsInsKnobNorm",
+      "callback": "SimINSNorm",
+      "relatedActions": [
+        "avionicsinsknobstepup",
+        "avionicsinsknobstepdown",
+        "avionicsinsknoboff",
+        "avionicsinsknobnav",
+        "avionicsinsknobinfltalign"
+      ],
+      "description": "AVIONICS: INS Knob - NORM",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: INS Knob",
+      "style": "knob",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "avionicsinsknobnav",
+      "clazz": "AvionicsInsKnobNav",
+      "callback": "SimINSNav",
+      "relatedActions": [
+        "avionicsinsknobstepup",
+        "avionicsinsknobstepdown",
+        "avionicsinsknoboff",
+        "avionicsinsknobnorm",
+        "avionicsinsknobinfltalign"
+      ],
+      "description": "AVIONICS: INS Knob - NAV",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: INS Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "avionicsinsknobinfltalign",
+      "clazz": "AvionicsInsKnobInFltAlign",
+      "callback": "SimINSInFlt",
+      "relatedActions": [
+        "avionicsinsknobstepup",
+        "avionicsinsknobstepdown",
+        "avionicsinsknoboff",
+        "avionicsinsknobnorm",
+        "avionicsinsknobnav"
+      ],
+      "description": "AVIONICS: INS Knob - IN FLT ALIGN",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: INS Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "avionicsfccswitchtoggle",
+      "clazz": "AvionicsFccSwitchToggle",
+      "callback": "SimFCCPower",
+      "relatedActions": [
+        "avionicsfccswitchon",
+        "avionicsfccswitchoff"
+      ],
+      "description": "AVIONICS: FCC Switch - Toggle",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: FCC Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "avionicsfccswitchon",
+      "clazz": "AvionicsFccSwitchOn",
+      "callback": "SimFCCOn",
+      "relatedActions": [
+        "avionicsfccswitchtoggle",
+        "avionicsfccswitchoff"
+      ],
+      "description": "AVIONICS: FCC Switch - ON",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: FCC Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "avionicsfccswitchoff",
+      "clazz": "AvionicsFccSwitchOff",
+      "callback": "SimFCCOff",
+      "relatedActions": [
+        "avionicsfccswitchtoggle",
+        "avionicsfccswitchon"
+      ],
+      "description": "AVIONICS: FCC Switch - OFF",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: FCC Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "avionicssmsswitchtoggle",
+      "clazz": "AvionicsSmsSwitchToggle",
+      "callback": "SimSMSPower",
+      "relatedActions": [
+        "avionicssmsswitchon",
+        "avionicssmsswitchoff"
+      ],
+      "description": "AVIONICS: SMS Switch - Toggle",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: SMS Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "avionicssmsswitchon",
+      "clazz": "AvionicsSmsSwitchOn",
+      "callback": "SimSMSOn",
+      "relatedActions": [
+        "avionicssmsswitchtoggle",
+        "avionicssmsswitchoff"
+      ],
+      "description": "AVIONICS: SMS Switch - ON",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: SMS Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "avionicssmsswitchoff",
+      "clazz": "AvionicsSmsSwitchOff",
+      "callback": "SimSMSOff",
+      "relatedActions": [
+        "avionicssmsswitchtoggle",
+        "avionicssmsswitchon"
+      ],
+      "description": "AVIONICS: SMS Switch - OFF",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: SMS Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "avionicsmfdswitchtoggle",
+      "clazz": "AvionicsMfdSwitchToggle",
+      "callback": "SimMFDPower",
+      "relatedActions": [
+        "avionicsmfdswitchon",
+        "avionicsmfdswitchoff"
+      ],
+      "description": "AVIONICS: MFD Switch - Toggle",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: MFD Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "avionicsmfdswitchon",
+      "clazz": "AvionicsMfdSwitchOn",
+      "callback": "SimMFDOn",
+      "relatedActions": [
+        "avionicsmfdswitchtoggle",
+        "avionicsmfdswitchoff"
+      ],
+      "description": "AVIONICS: MFD Switch - ON",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: MFD Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "avionicsmfdswitchoff",
+      "clazz": "AvionicsMfdSwitchOff",
+      "callback": "SimMFDOff",
+      "relatedActions": [
+        "avionicsmfdswitchtoggle",
+        "avionicsmfdswitchon"
+      ],
+      "description": "AVIONICS: MFD Switch - OFF",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: MFD Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "avionicsufcswitchtoggle",
+      "clazz": "AvionicsUfcSwitchToggle",
+      "callback": "SimUFCPower",
+      "relatedActions": [
+        "avionicsufcswitchon",
+        "avionicsufcswitchoff"
+      ],
+      "description": "AVIONICS: UFC Switch - Toggle",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: UFC Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "avionicsufcswitchon",
+      "clazz": "AvionicsUfcSwitchOn",
+      "callback": "SimUFCOn",
+      "relatedActions": [
+        "avionicsufcswitchtoggle",
+        "avionicsufcswitchoff"
+      ],
+      "description": "AVIONICS: UFC Switch - ON",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: UFC Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "avionicsufcswitchoff",
+      "clazz": "AvionicsUfcSwitchOff",
+      "callback": "SimUFCOff",
+      "relatedActions": [
+        "avionicsufcswitchtoggle",
+        "avionicsufcswitchon"
+      ],
+      "description": "AVIONICS: UFC Switch - OFF",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: UFC Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "avionicsgpsswitchtoggle",
+      "clazz": "AvionicsGpsSwitchToggle",
+      "callback": "SimGPSPower",
+      "relatedActions": [
+        "avionicsgpsswitchon",
+        "avionicsgpsswitchoff"
+      ],
+      "description": "AVIONICS: GPS Switch - Toggle",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: GPS Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "avionicsgpsswitchon",
+      "clazz": "AvionicsGpsSwitchOn",
+      "callback": "SimGPSOn",
+      "relatedActions": [
+        "avionicsgpsswitchtoggle",
+        "avionicsgpsswitchoff"
+      ],
+      "description": "AVIONICS: GPS Switch - ON",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: GPS Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "avionicsgpsswitchoff",
+      "clazz": "AvionicsGpsSwitchOff",
+      "callback": "SimGPSOff",
+      "relatedActions": [
+        "avionicsgpsswitchtoggle",
+        "avionicsgpsswitchon"
+      ],
+      "description": "AVIONICS: GPS Switch - OFF",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: GPS Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "avionicsdlswitchtoggle",
+      "clazz": "AvionicsDlSwitchToggle",
+      "callback": "SimDLPower",
+      "relatedActions": [
+        "avionicsdlswitchon",
+        "avionicsdlswitchoff"
+      ],
+      "description": "AVIONICS: DL Switch - Toggle",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: DL Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "avionicsdlswitchon",
+      "clazz": "AvionicsDlSwitchOn",
+      "callback": "SimDLOn",
+      "relatedActions": [
+        "avionicsdlswitchtoggle",
+        "avionicsdlswitchoff"
+      ],
+      "description": "AVIONICS: DL Switch - ON",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: DL Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "avionicsdlswitchoff",
+      "clazz": "AvionicsDlSwitchOff",
+      "callback": "SimDLOff",
+      "relatedActions": [
+        "avionicsdlswitchtoggle",
+        "avionicsdlswitchon"
+      ],
+      "description": "AVIONICS: DL Switch - OFF",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: DL Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "avionicsmapswitchtoggle",
+      "clazz": "AvionicsMapSwitchToggle",
+      "callback": "SimMAPPower",
+      "relatedActions": [
+        "avionicsmapswitchon",
+        "avionicsmapswitchoff"
+      ],
+      "description": "AVIONICS: MAP Switch - Toggle",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: MAP Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "avionicsmapswitchon",
+      "clazz": "AvionicsMapSwitchOn",
+      "callback": "SimMAPOn",
+      "relatedActions": [
+        "avionicsmapswitchtoggle",
+        "avionicsmapswitchoff"
+      ],
+      "description": "AVIONICS: MAP Switch - ON",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: MAP Switch",
+      "style": "switch",
+      "role": "on",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "avionicsmapswitchoff",
+      "clazz": "AvionicsMapSwitchOff",
+      "callback": "SimMAPOff",
+      "relatedActions": [
+        "avionicsmapswitchtoggle",
+        "avionicsmapswitchon"
+      ],
+      "description": "AVIONICS: MAP Switch - OFF",
+      "category": "AVIONICS",
+      "section": "AVIONIC POWER  PANEL",
+      "group": "AVIONICS: MAP Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
       "id": "fltdigitalswitchtoggle",
       "clazz": "FltDigitalSwitchToggle",
       "callback": "SimDigitalBUP",
@@ -5569,64 +6167,6 @@
         "ramp": true,
         "ground": true,
         "air": true
-      }
-    },
-    {
-      "id": "ecmoprswitchtoggle",
-      "clazz": "EcmOprSwitchToggle",
-      "callback": "SimEcmPower",
-      "relatedActions": [
-        "ecmoprswitchopr",
-        "ecmoprswitchoff"
-      ],
-      "description": "ECM: OPR Switch - Toggle",
-      "category": "LEFT CONSOLE",
-      "section": "ECM PANEL",
-      "group": "ECM: OPR Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "ecmoprswitchopr",
-      "clazz": "EcmOprSwitchOpr",
-      "callback": "SimEcmPowerOn",
-      "relatedActions": [
-        "ecmoprswitchtoggle",
-        "ecmoprswitchoff"
-      ],
-      "description": "ECM: OPR Switch - OPR",
-      "category": "LEFT CONSOLE",
-      "section": "ECM PANEL",
-      "group": "ECM: OPR Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "ecmoprswitchoff",
-      "clazz": "EcmOprSwitchOff",
-      "callback": "SimEcmPowerOff",
-      "relatedActions": [
-        "ecmoprswitchtoggle",
-        "ecmoprswitchopr"
-      ],
-      "description": "ECM: OPR Switch - OFF",
-      "category": "LEFT CONSOLE",
-      "section": "ECM PANEL",
-      "group": "ECM: OPR Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
       }
     },
     {
@@ -9241,546 +9781,6 @@
       "type": "switch",
       "state": {
         "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avionicsinsknobstepup",
-      "clazz": "AvionicsInsKnobStepUp",
-      "callback": "SimINSInc",
-      "relatedActions": [
-        "avionicsinsknobstepdown",
-        "avionicsinsknoboff",
-        "avionicsinsknobnorm",
-        "avionicsinsknobnav",
-        "avionicsinsknobinfltalign"
-      ],
-      "description": "AVIONICS: INS Knob - Step Up",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: INS Knob",
-      "style": "knob",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "avionicsinsknobstepdown",
-      "clazz": "AvionicsInsKnobStepDown",
-      "callback": "SimINSDec",
-      "relatedActions": [
-        "avionicsinsknobstepup",
-        "avionicsinsknoboff",
-        "avionicsinsknobnorm",
-        "avionicsinsknobnav",
-        "avionicsinsknobinfltalign"
-      ],
-      "description": "AVIONICS: INS Knob - Step Down",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: INS Knob",
-      "style": "knob",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "avionicsinsknoboff",
-      "clazz": "AvionicsInsKnobOff",
-      "callback": "SimINSOff",
-      "relatedActions": [
-        "avionicsinsknobstepup",
-        "avionicsinsknobstepdown",
-        "avionicsinsknobnorm",
-        "avionicsinsknobnav",
-        "avionicsinsknobinfltalign"
-      ],
-      "description": "AVIONICS: INS Knob - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: INS Knob",
-      "style": "knob",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avionicsinsknobnorm",
-      "clazz": "AvionicsInsKnobNorm",
-      "callback": "SimINSNorm",
-      "relatedActions": [
-        "avionicsinsknobstepup",
-        "avionicsinsknobstepdown",
-        "avionicsinsknoboff",
-        "avionicsinsknobnav",
-        "avionicsinsknobinfltalign"
-      ],
-      "description": "AVIONICS: INS Knob - NORM",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: INS Knob",
-      "style": "knob",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avionicsinsknobnav",
-      "clazz": "AvionicsInsKnobNav",
-      "callback": "SimINSNav",
-      "relatedActions": [
-        "avionicsinsknobstepup",
-        "avionicsinsknobstepdown",
-        "avionicsinsknoboff",
-        "avionicsinsknobnorm",
-        "avionicsinsknobinfltalign"
-      ],
-      "description": "AVIONICS: INS Knob - NAV",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: INS Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "avionicsinsknobinfltalign",
-      "clazz": "AvionicsInsKnobInFltAlign",
-      "callback": "SimINSInFlt",
-      "relatedActions": [
-        "avionicsinsknobstepup",
-        "avionicsinsknobstepdown",
-        "avionicsinsknoboff",
-        "avionicsinsknobnorm",
-        "avionicsinsknobnav"
-      ],
-      "description": "AVIONICS: INS Knob - IN FLT ALIGN",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: INS Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avionicsfccswitchtoggle",
-      "clazz": "AvionicsFccSwitchToggle",
-      "callback": "SimFCCPower",
-      "relatedActions": [
-        "avionicsfccswitchon",
-        "avionicsfccswitchoff"
-      ],
-      "description": "AVIONICS: FCC Switch - Toggle",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: FCC Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "avionicsfccswitchon",
-      "clazz": "AvionicsFccSwitchOn",
-      "callback": "SimFCCOn",
-      "relatedActions": [
-        "avionicsfccswitchtoggle",
-        "avionicsfccswitchoff"
-      ],
-      "description": "AVIONICS: FCC Switch - ON",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: FCC Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "avionicsfccswitchoff",
-      "clazz": "AvionicsFccSwitchOff",
-      "callback": "SimFCCOff",
-      "relatedActions": [
-        "avionicsfccswitchtoggle",
-        "avionicsfccswitchon"
-      ],
-      "description": "AVIONICS: FCC Switch - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: FCC Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avionicssmsswitchtoggle",
-      "clazz": "AvionicsSmsSwitchToggle",
-      "callback": "SimSMSPower",
-      "relatedActions": [
-        "avionicssmsswitchon",
-        "avionicssmsswitchoff"
-      ],
-      "description": "AVIONICS: SMS Switch - Toggle",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: SMS Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "avionicssmsswitchon",
-      "clazz": "AvionicsSmsSwitchOn",
-      "callback": "SimSMSOn",
-      "relatedActions": [
-        "avionicssmsswitchtoggle",
-        "avionicssmsswitchoff"
-      ],
-      "description": "AVIONICS: SMS Switch - ON",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: SMS Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "avionicssmsswitchoff",
-      "clazz": "AvionicsSmsSwitchOff",
-      "callback": "SimSMSOff",
-      "relatedActions": [
-        "avionicssmsswitchtoggle",
-        "avionicssmsswitchon"
-      ],
-      "description": "AVIONICS: SMS Switch - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: SMS Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avionicsmfdswitchtoggle",
-      "clazz": "AvionicsMfdSwitchToggle",
-      "callback": "SimMFDPower",
-      "relatedActions": [
-        "avionicsmfdswitchon",
-        "avionicsmfdswitchoff"
-      ],
-      "description": "AVIONICS: MFD Switch - Toggle",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: MFD Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "avionicsmfdswitchon",
-      "clazz": "AvionicsMfdSwitchOn",
-      "callback": "SimMFDOn",
-      "relatedActions": [
-        "avionicsmfdswitchtoggle",
-        "avionicsmfdswitchoff"
-      ],
-      "description": "AVIONICS: MFD Switch - ON",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: MFD Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "avionicsmfdswitchoff",
-      "clazz": "AvionicsMfdSwitchOff",
-      "callback": "SimMFDOff",
-      "relatedActions": [
-        "avionicsmfdswitchtoggle",
-        "avionicsmfdswitchon"
-      ],
-      "description": "AVIONICS: MFD Switch - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: MFD Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avionicsufcswitchtoggle",
-      "clazz": "AvionicsUfcSwitchToggle",
-      "callback": "SimUFCPower",
-      "relatedActions": [
-        "avionicsufcswitchon",
-        "avionicsufcswitchoff"
-      ],
-      "description": "AVIONICS: UFC Switch - Toggle",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: UFC Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "avionicsufcswitchon",
-      "clazz": "AvionicsUfcSwitchOn",
-      "callback": "SimUFCOn",
-      "relatedActions": [
-        "avionicsufcswitchtoggle",
-        "avionicsufcswitchoff"
-      ],
-      "description": "AVIONICS: UFC Switch - ON",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: UFC Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "avionicsufcswitchoff",
-      "clazz": "AvionicsUfcSwitchOff",
-      "callback": "SimUFCOff",
-      "relatedActions": [
-        "avionicsufcswitchtoggle",
-        "avionicsufcswitchon"
-      ],
-      "description": "AVIONICS: UFC Switch - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: UFC Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avionicsgpsswitchtoggle",
-      "clazz": "AvionicsGpsSwitchToggle",
-      "callback": "SimGPSPower",
-      "relatedActions": [
-        "avionicsgpsswitchon",
-        "avionicsgpsswitchoff"
-      ],
-      "description": "AVIONICS: GPS Switch - Toggle",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: GPS Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "avionicsgpsswitchon",
-      "clazz": "AvionicsGpsSwitchOn",
-      "callback": "SimGPSOn",
-      "relatedActions": [
-        "avionicsgpsswitchtoggle",
-        "avionicsgpsswitchoff"
-      ],
-      "description": "AVIONICS: GPS Switch - ON",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: GPS Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "avionicsgpsswitchoff",
-      "clazz": "AvionicsGpsSwitchOff",
-      "callback": "SimGPSOff",
-      "relatedActions": [
-        "avionicsgpsswitchtoggle",
-        "avionicsgpsswitchon"
-      ],
-      "description": "AVIONICS: GPS Switch - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: GPS Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avionicsdlswitchtoggle",
-      "clazz": "AvionicsDlSwitchToggle",
-      "callback": "SimDLPower",
-      "relatedActions": [
-        "avionicsdlswitchon",
-        "avionicsdlswitchoff"
-      ],
-      "description": "AVIONICS: DL Switch - Toggle",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: DL Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "avionicsdlswitchon",
-      "clazz": "AvionicsDlSwitchOn",
-      "callback": "SimDLOn",
-      "relatedActions": [
-        "avionicsdlswitchtoggle",
-        "avionicsdlswitchoff"
-      ],
-      "description": "AVIONICS: DL Switch - ON",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: DL Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "avionicsdlswitchoff",
-      "clazz": "AvionicsDlSwitchOff",
-      "callback": "SimDLOff",
-      "relatedActions": [
-        "avionicsdlswitchtoggle",
-        "avionicsdlswitchon"
-      ],
-      "description": "AVIONICS: DL Switch - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: DL Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "avionicsmapswitchtoggle",
-      "clazz": "AvionicsMapSwitchToggle",
-      "callback": "SimMAPPower",
-      "relatedActions": [
-        "avionicsmapswitchon",
-        "avionicsmapswitchoff"
-      ],
-      "description": "AVIONICS: MAP Switch - Toggle",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: MAP Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "avionicsmapswitchon",
-      "clazz": "AvionicsMapSwitchOn",
-      "callback": "SimMAPOn",
-      "relatedActions": [
-        "avionicsmapswitchtoggle",
-        "avionicsmapswitchoff"
-      ],
-      "description": "AVIONICS: MAP Switch - ON",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: MAP Switch",
-      "style": "switch",
-      "role": "on",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "avionicsmapswitchoff",
-      "clazz": "AvionicsMapSwitchOff",
-      "callback": "SimMAPOff",
-      "relatedActions": [
-        "avionicsmapswitchtoggle",
-        "avionicsmapswitchon"
-      ],
-      "description": "AVIONICS: MAP Switch - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "AVIONIC POWER  PANEL",
-      "group": "AVIONICS: MAP Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
         "ground": false,
         "air": false
       }

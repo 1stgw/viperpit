@@ -30,6 +30,10 @@
     "className" : "Nav",
     "name" : "Nav"
   }, {
+    "id" : "avionics",
+    "className" : "Avionics",
+    "name" : "Avionics"
+  }, {
     "id" : "leftconsole",
     "className" : "LeftConsole",
     "name" : "Left Console"
@@ -74,6 +78,10 @@
     "id" : "rwr",
     "className" : "Rwr",
     "name" : "RWR"
+  }, {
+    "id" : "ecmpanel",
+    "className" : "EcmPanel",
+    "name" : "ECM PANEL"
   }, {
     "id" : "auxcommpanel",
     "className" : "AuxCommPanel",
@@ -127,6 +135,10 @@
     "className" : "ApAndTfrPanel",
     "name" : "AP AND TFR PANEL"
   }, {
+    "id" : "avionicpowerpanel",
+    "className" : "AvionicPowerPanel",
+    "name" : "AVIONIC POWER  PANEL"
+  }, {
     "id" : "fltcontrolpanel",
     "className" : "FltControlPanel",
     "name" : "FLT CONTROL PANEL"
@@ -146,10 +158,6 @@
     "id" : "avtrpanel",
     "className" : "AvtrPanel",
     "name" : "AVTR PANEL"
-  }, {
-    "id" : "ecmpanel",
-    "className" : "EcmPanel",
-    "name" : "ECM PANEL"
   }, {
     "id" : "engjetstartpanel",
     "className" : "EngJetStartPanel",
@@ -198,10 +206,6 @@
     "id" : "zeroizepanel",
     "className" : "ZeroizePanel",
     "name" : "ZEROIZE PANEL"
-  }, {
-    "id" : "avionicpowerpanel",
-    "className" : "AvionicPowerPanel",
-    "name" : "AVIONIC POWER  PANEL"
   }, {
     "id" : "oxygenpanel",
     "className" : "OxygenPanel",
@@ -351,6 +355,12 @@
     "description" : "RWR: Brightness Knob - Increase",
     "label" : "Brightness",
     "type" : "button"
+  }, {
+    "id" : "ECM: OPR Switch",
+    "className" : "EcmOprSwitch",
+    "description" : "ECM: OPR Switch - OPR",
+    "label" : "OPR",
+    "type" : "switch"
   }, {
     "id" : "AUX: CNI Knob Switch",
     "className" : "AuxCniKnobSwitch",
@@ -652,6 +662,48 @@
     "label" : "PITCH",
     "type" : "switch"
   }, {
+    "id" : "AVIONICS: INS Knob",
+    "className" : "AvionicsInsKnob",
+    "description" : "AVIONICS: INS Knob - OFF",
+    "label" : "INS",
+    "type" : "switch"
+  }, {
+    "id" : "AVIONICS: FCC Switch",
+    "className" : "AvionicsFccSwitch",
+    "description" : "AVIONICS: FCC Switch - ON",
+    "label" : "FCC",
+    "type" : "switch"
+  }, {
+    "id" : "AVIONICS: SMS Switch",
+    "className" : "AvionicsSmsSwitch",
+    "description" : "AVIONICS: SMS Switch - ON",
+    "label" : "SMS",
+    "type" : "switch"
+  }, {
+    "id" : "AVIONICS: MFD Switch",
+    "className" : "AvionicsMfdSwitch",
+    "description" : "AVIONICS: MFD Switch - ON",
+    "label" : "MFD",
+    "type" : "switch"
+  }, {
+    "id" : "AVIONICS: UFC Switch",
+    "className" : "AvionicsUfcSwitch",
+    "description" : "AVIONICS: UFC Switch - ON",
+    "label" : "UFC",
+    "type" : "switch"
+  }, {
+    "id" : "AVIONICS: GPS Switch",
+    "className" : "AvionicsGpsSwitch",
+    "description" : "AVIONICS: GPS Switch - ON",
+    "label" : "GPS",
+    "type" : "switch"
+  }, {
+    "id" : "AVIONICS: DL Switch",
+    "className" : "AvionicsDlSwitch",
+    "description" : "AVIONICS: DL Switch - ON",
+    "label" : "DL",
+    "type" : "switch"
+  }, {
     "id" : "FLT: DIGITAL Switch",
     "className" : "FltDigitalSwitch",
     "description" : "FLT: DIGITAL Switch - BACKUP",
@@ -735,12 +787,6 @@
     "description" : "AVTR: AVTR Switch - Toggle ON / OFF",
     "label" : "AVTR",
     "type" : "button"
-  }, {
-    "id" : "ECM: OPR Switch",
-    "className" : "EcmOprSwitch",
-    "description" : "ECM: OPR Switch - OPR",
-    "label" : "OPR",
-    "type" : "switch"
   }, {
     "id" : "ENG: JFS Switch",
     "className" : "EngJfsSwitch",
@@ -926,48 +972,6 @@
     "className" : "ZeroVmsSwitch",
     "description" : "ZERO: VMS Switch - ON",
     "label" : "VMS",
-    "type" : "switch"
-  }, {
-    "id" : "AVIONICS: INS Knob",
-    "className" : "AvionicsInsKnob",
-    "description" : "AVIONICS: INS Knob - OFF",
-    "label" : "INS",
-    "type" : "switch"
-  }, {
-    "id" : "AVIONICS: FCC Switch",
-    "className" : "AvionicsFccSwitch",
-    "description" : "AVIONICS: FCC Switch - ON",
-    "label" : "FCC",
-    "type" : "switch"
-  }, {
-    "id" : "AVIONICS: SMS Switch",
-    "className" : "AvionicsSmsSwitch",
-    "description" : "AVIONICS: SMS Switch - ON",
-    "label" : "SMS",
-    "type" : "switch"
-  }, {
-    "id" : "AVIONICS: MFD Switch",
-    "className" : "AvionicsMfdSwitch",
-    "description" : "AVIONICS: MFD Switch - ON",
-    "label" : "MFD",
-    "type" : "switch"
-  }, {
-    "id" : "AVIONICS: UFC Switch",
-    "className" : "AvionicsUfcSwitch",
-    "description" : "AVIONICS: UFC Switch - ON",
-    "label" : "UFC",
-    "type" : "switch"
-  }, {
-    "id" : "AVIONICS: GPS Switch",
-    "className" : "AvionicsGpsSwitch",
-    "description" : "AVIONICS: GPS Switch - ON",
-    "label" : "GPS",
-    "type" : "switch"
-  }, {
-    "id" : "AVIONICS: DL Switch",
-    "className" : "AvionicsDlSwitch",
-    "description" : "AVIONICS: DL Switch - ON",
-    "label" : "DL",
     "type" : "switch"
   }, {
     "id" : "OXY: Setting 2",
@@ -1366,6 +1370,18 @@
     "description" : "RWR: Brightness Knob - Decrease",
     "label" : "Decrease",
     "role" : "down"
+  }, {
+    "id" : "ecmoprswitchopr",
+    "className" : "EcmOprSwitchOpr",
+    "description" : "ECM: OPR Switch - OPR",
+    "label" : "OPR",
+    "role" : "on"
+  }, {
+    "id" : "ecmoprswitchoff",
+    "className" : "EcmOprSwitchOff",
+    "description" : "ECM: OPR Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
   }, {
     "id" : "auxcniknobswitchbackup",
     "className" : "AuxCniKnobSwitchBackup",
@@ -2117,6 +2133,102 @@
     "label" : "ATT HOLD",
     "role" : "none"
   }, {
+    "id" : "avionicsinsknoboff",
+    "className" : "AvionicsInsKnobOff",
+    "description" : "AVIONICS: INS Knob - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "avionicsinsknobnorm",
+    "className" : "AvionicsInsKnobNorm",
+    "description" : "AVIONICS: INS Knob - NORM",
+    "label" : "NORM",
+    "role" : "on"
+  }, {
+    "id" : "avionicsinsknobnav",
+    "className" : "AvionicsInsKnobNav",
+    "description" : "AVIONICS: INS Knob - NAV",
+    "label" : "NAV",
+    "role" : "none"
+  }, {
+    "id" : "avionicsinsknobinfltalign",
+    "className" : "AvionicsInsKnobInFltAlign",
+    "description" : "AVIONICS: INS Knob - IN FLT ALIGN",
+    "label" : "IN FLT ALIGN",
+    "role" : "none"
+  }, {
+    "id" : "avionicsfccswitchon",
+    "className" : "AvionicsFccSwitchOn",
+    "description" : "AVIONICS: FCC Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "avionicsfccswitchoff",
+    "className" : "AvionicsFccSwitchOff",
+    "description" : "AVIONICS: FCC Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "avionicssmsswitchon",
+    "className" : "AvionicsSmsSwitchOn",
+    "description" : "AVIONICS: SMS Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "avionicssmsswitchoff",
+    "className" : "AvionicsSmsSwitchOff",
+    "description" : "AVIONICS: SMS Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "avionicsmfdswitchon",
+    "className" : "AvionicsMfdSwitchOn",
+    "description" : "AVIONICS: MFD Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "avionicsmfdswitchoff",
+    "className" : "AvionicsMfdSwitchOff",
+    "description" : "AVIONICS: MFD Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "avionicsufcswitchon",
+    "className" : "AvionicsUfcSwitchOn",
+    "description" : "AVIONICS: UFC Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "avionicsufcswitchoff",
+    "className" : "AvionicsUfcSwitchOff",
+    "description" : "AVIONICS: UFC Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "avionicsgpsswitchon",
+    "className" : "AvionicsGpsSwitchOn",
+    "description" : "AVIONICS: GPS Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "avionicsgpsswitchoff",
+    "className" : "AvionicsGpsSwitchOff",
+    "description" : "AVIONICS: GPS Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "avionicsdlswitchon",
+    "className" : "AvionicsDlSwitchOn",
+    "description" : "AVIONICS: DL Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "avionicsdlswitchoff",
+    "className" : "AvionicsDlSwitchOff",
+    "description" : "AVIONICS: DL Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
     "id" : "fltdigitalswitchbackup",
     "className" : "FltDigitalSwitchBackup",
     "description" : "FLT: DIGITAL Switch - BACKUP",
@@ -2288,18 +2400,6 @@
     "id" : "avtravtrswitchoff",
     "className" : "AvtrAvtrSwitchOff",
     "description" : "AVTR: AVTR Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "ecmoprswitchopr",
-    "className" : "EcmOprSwitchOpr",
-    "description" : "ECM: OPR Switch - OPR",
-    "label" : "OPR",
-    "role" : "on"
-  }, {
-    "id" : "ecmoprswitchoff",
-    "className" : "EcmOprSwitchOff",
-    "description" : "ECM: OPR Switch - OFF",
     "label" : "OFF",
     "role" : "off"
   }, {
@@ -2692,102 +2792,6 @@
     "description" : "ZERO: VMS Switch - INHIBIT",
     "label" : "INHIBIT",
     "role" : "none"
-  }, {
-    "id" : "avionicsinsknoboff",
-    "className" : "AvionicsInsKnobOff",
-    "description" : "AVIONICS: INS Knob - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "avionicsinsknobnorm",
-    "className" : "AvionicsInsKnobNorm",
-    "description" : "AVIONICS: INS Knob - NORM",
-    "label" : "NORM",
-    "role" : "on"
-  }, {
-    "id" : "avionicsinsknobnav",
-    "className" : "AvionicsInsKnobNav",
-    "description" : "AVIONICS: INS Knob - NAV",
-    "label" : "NAV",
-    "role" : "none"
-  }, {
-    "id" : "avionicsinsknobinfltalign",
-    "className" : "AvionicsInsKnobInFltAlign",
-    "description" : "AVIONICS: INS Knob - IN FLT ALIGN",
-    "label" : "IN FLT ALIGN",
-    "role" : "none"
-  }, {
-    "id" : "avionicsfccswitchon",
-    "className" : "AvionicsFccSwitchOn",
-    "description" : "AVIONICS: FCC Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "avionicsfccswitchoff",
-    "className" : "AvionicsFccSwitchOff",
-    "description" : "AVIONICS: FCC Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "avionicssmsswitchon",
-    "className" : "AvionicsSmsSwitchOn",
-    "description" : "AVIONICS: SMS Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "avionicssmsswitchoff",
-    "className" : "AvionicsSmsSwitchOff",
-    "description" : "AVIONICS: SMS Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "avionicsmfdswitchon",
-    "className" : "AvionicsMfdSwitchOn",
-    "description" : "AVIONICS: MFD Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "avionicsmfdswitchoff",
-    "className" : "AvionicsMfdSwitchOff",
-    "description" : "AVIONICS: MFD Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "avionicsufcswitchon",
-    "className" : "AvionicsUfcSwitchOn",
-    "description" : "AVIONICS: UFC Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "avionicsufcswitchoff",
-    "className" : "AvionicsUfcSwitchOff",
-    "description" : "AVIONICS: UFC Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "avionicsgpsswitchon",
-    "className" : "AvionicsGpsSwitchOn",
-    "description" : "AVIONICS: GPS Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "avionicsgpsswitchoff",
-    "className" : "AvionicsGpsSwitchOff",
-    "description" : "AVIONICS: GPS Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "avionicsdlswitchon",
-    "className" : "AvionicsDlSwitchOn",
-    "description" : "AVIONICS: DL Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "avionicsdlswitchoff",
-    "className" : "AvionicsDlSwitchOff",
-    "description" : "AVIONICS: DL Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
   }, {
     "id" : "oxysetting2onpilotbreathing",
     "className" : "OxySetting2OnPilotBreathing",
