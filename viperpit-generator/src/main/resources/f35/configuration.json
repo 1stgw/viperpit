@@ -5365,6 +5365,909 @@
       }
     },
     {
+      "id": "hudscalesswitchcycle",
+      "clazz": "HudScalesSwitchCycle",
+      "callback": "SimHUDScales",
+      "relatedActions": [
+        "hudscalesswitchstepup",
+        "hudscalesswitchstepdown",
+        "hudscalesswitchvvvah",
+        "hudscalesswitchvah",
+        "hudscalesswitchoff"
+      ],
+      "description": "HUD: Scales Switch - Cycle",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Scales Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "hudscalesswitchstepup",
+      "clazz": "HudScalesSwitchStepUp",
+      "callback": "SimHUDScalesUp",
+      "relatedActions": [
+        "hudscalesswitchcycle",
+        "hudscalesswitchstepdown",
+        "hudscalesswitchvvvah",
+        "hudscalesswitchvah",
+        "hudscalesswitchoff"
+      ],
+      "description": "HUD: Scales Switch - Step Up",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Scales Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "hudscalesswitchstepdown",
+      "clazz": "HudScalesSwitchStepDown",
+      "callback": "SimHUDScalesDown",
+      "relatedActions": [
+        "hudscalesswitchcycle",
+        "hudscalesswitchstepup",
+        "hudscalesswitchvvvah",
+        "hudscalesswitchvah",
+        "hudscalesswitchoff"
+      ],
+      "description": "HUD: Scales Switch - Step Down",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Scales Switch",
+      "style": "button",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "hudscalesswitchvvvah",
+      "clazz": "HudScalesSwitchVvVah",
+      "callback": "SimScalesVVVAH",
+      "relatedActions": [
+        "hudscalesswitchcycle",
+        "hudscalesswitchstepup",
+        "hudscalesswitchstepdown",
+        "hudscalesswitchvah",
+        "hudscalesswitchoff"
+      ],
+      "description": "HUD: Scales Switch - VV/VAH",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Scales Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "hudscalesswitchvah",
+      "clazz": "HudScalesSwitchVah",
+      "callback": "SimScalesVAH",
+      "relatedActions": [
+        "hudscalesswitchcycle",
+        "hudscalesswitchstepup",
+        "hudscalesswitchstepdown",
+        "hudscalesswitchvvvah",
+        "hudscalesswitchoff"
+      ],
+      "description": "HUD: Scales Switch - VAH",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Scales Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "hudscalesswitchoff",
+      "clazz": "HudScalesSwitchOff",
+      "callback": "SimScalesOff",
+      "relatedActions": [
+        "hudscalesswitchcycle",
+        "hudscalesswitchstepup",
+        "hudscalesswitchstepdown",
+        "hudscalesswitchvvvah",
+        "hudscalesswitchvah"
+      ],
+      "description": "HUD: Scales Switch - OFF",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Scales Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "hudfpmswitchcycle",
+      "clazz": "HudFpmSwitchCycle",
+      "callback": "SimHUDFPM",
+      "relatedActions": [
+        "hudfpmswitchstepup",
+        "hudfpmswitchstepdown",
+        "hudfpmswitchattfpm",
+        "hudfpmswitchfpm",
+        "hudfpmswitchoff"
+      ],
+      "description": "HUD: FPM Switch - Cycle",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: FPM Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "hudfpmswitchstepup",
+      "clazz": "HudFpmSwitchStepUp",
+      "callback": "SimPitchLadderUp",
+      "relatedActions": [
+        "hudfpmswitchcycle",
+        "hudfpmswitchstepdown",
+        "hudfpmswitchattfpm",
+        "hudfpmswitchfpm",
+        "hudfpmswitchoff"
+      ],
+      "description": "HUD: FPM Switch - Step Up",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: FPM Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "hudfpmswitchstepdown",
+      "clazz": "HudFpmSwitchStepDown",
+      "callback": "SimPitchLadderDown",
+      "relatedActions": [
+        "hudfpmswitchcycle",
+        "hudfpmswitchstepup",
+        "hudfpmswitchattfpm",
+        "hudfpmswitchfpm",
+        "hudfpmswitchoff"
+      ],
+      "description": "HUD: FPM Switch - Step Down",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: FPM Switch",
+      "style": "button",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "hudfpmswitchattfpm",
+      "clazz": "HudFpmSwitchAttFpm",
+      "callback": "SimPitchLadderATTFPM",
+      "relatedActions": [
+        "hudfpmswitchcycle",
+        "hudfpmswitchstepup",
+        "hudfpmswitchstepdown",
+        "hudfpmswitchfpm",
+        "hudfpmswitchoff"
+      ],
+      "description": "HUD: FPM Switch - ATT/FPM",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: FPM Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "hudfpmswitchfpm",
+      "clazz": "HudFpmSwitchFpm",
+      "callback": "SimPitchLadderFPM",
+      "relatedActions": [
+        "hudfpmswitchcycle",
+        "hudfpmswitchstepup",
+        "hudfpmswitchstepdown",
+        "hudfpmswitchattfpm",
+        "hudfpmswitchoff"
+      ],
+      "description": "HUD: FPM Switch - FPM",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: FPM Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "hudfpmswitchoff",
+      "clazz": "HudFpmSwitchOff",
+      "callback": "SimPitchLadderOff",
+      "relatedActions": [
+        "hudfpmswitchcycle",
+        "hudfpmswitchstepup",
+        "hudfpmswitchstepdown",
+        "hudfpmswitchattfpm",
+        "hudfpmswitchfpm"
+      ],
+      "description": "HUD: FPM Switch - OFF",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: FPM Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "huddeddataswitchcycle",
+      "clazz": "HudDedDataSwitchCycle",
+      "callback": "SimHUDDED",
+      "relatedActions": [
+        "huddeddataswitchstepup",
+        "huddeddataswitchstepdn",
+        "huddeddataswitchded",
+        "huddeddataswitchpfl",
+        "huddeddataswitchoff"
+      ],
+      "description": "HUD: DED Data Switch - Cycle",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DED Data Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "huddeddataswitchstepup",
+      "clazz": "HudDedDataSwitchStepUp",
+      "callback": "SimHUDDEDUp",
+      "relatedActions": [
+        "huddeddataswitchcycle",
+        "huddeddataswitchstepdn",
+        "huddeddataswitchded",
+        "huddeddataswitchpfl",
+        "huddeddataswitchoff"
+      ],
+      "description": "HUD: DED Data Switch - Step Up",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DED Data Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "huddeddataswitchstepdn",
+      "clazz": "HudDedDataSwitchStepDn",
+      "callback": "SimHUDDEDDown",
+      "relatedActions": [
+        "huddeddataswitchcycle",
+        "huddeddataswitchstepup",
+        "huddeddataswitchded",
+        "huddeddataswitchpfl",
+        "huddeddataswitchoff"
+      ],
+      "description": "HUD: DED Data Switch - Step Dn",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DED Data Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "huddeddataswitchded",
+      "clazz": "HudDedDataSwitchDed",
+      "callback": "SimHUDDEDDED",
+      "relatedActions": [
+        "huddeddataswitchcycle",
+        "huddeddataswitchstepup",
+        "huddeddataswitchstepdn",
+        "huddeddataswitchpfl",
+        "huddeddataswitchoff"
+      ],
+      "description": "HUD: DED Data Switch - DED",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DED Data Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "huddeddataswitchpfl",
+      "clazz": "HudDedDataSwitchPfl",
+      "callback": "SimHUDDEDPFL",
+      "relatedActions": [
+        "huddeddataswitchcycle",
+        "huddeddataswitchstepup",
+        "huddeddataswitchstepdn",
+        "huddeddataswitchded",
+        "huddeddataswitchoff"
+      ],
+      "description": "HUD: DED Data Switch - PFL",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DED Data Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "huddeddataswitchoff",
+      "clazz": "HudDedDataSwitchOff",
+      "callback": "SimHUDDEDOff",
+      "relatedActions": [
+        "huddeddataswitchcycle",
+        "huddeddataswitchstepup",
+        "huddeddataswitchstepdn",
+        "huddeddataswitchded",
+        "huddeddataswitchpfl"
+      ],
+      "description": "HUD: DED Data Switch - OFF",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DED Data Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "huddeprretswitchcycle",
+      "clazz": "HudDeprRetSwitchCycle",
+      "callback": "SimReticleSwitch",
+      "relatedActions": [
+        "huddeprretswitchstepup",
+        "huddeprretswitchstepdown",
+        "huddeprretswitchstby",
+        "huddeprretswitchpri",
+        "huddeprretswitchoff"
+      ],
+      "description": "HUD: DEPR RET Switch - Cycle",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DEPR RET Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "huddeprretswitchstepup",
+      "clazz": "HudDeprRetSwitchStepUp",
+      "callback": "SimReticleSwitchUp",
+      "relatedActions": [
+        "huddeprretswitchcycle",
+        "huddeprretswitchstepdown",
+        "huddeprretswitchstby",
+        "huddeprretswitchpri",
+        "huddeprretswitchoff"
+      ],
+      "description": "HUD: DEPR RET Switch - Step Up",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DEPR RET Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "huddeprretswitchstepdown",
+      "clazz": "HudDeprRetSwitchStepDown",
+      "callback": "SimReticleSwitchDown",
+      "relatedActions": [
+        "huddeprretswitchcycle",
+        "huddeprretswitchstepup",
+        "huddeprretswitchstby",
+        "huddeprretswitchpri",
+        "huddeprretswitchoff"
+      ],
+      "description": "HUD: DEPR RET Switch - Step Down",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DEPR RET Switch",
+      "style": "button",
+      "role": "down",
+      "type": "button"
+    },
+    {
+      "id": "huddeprretswitchstby",
+      "clazz": "HudDeprRetSwitchStby",
+      "callback": "SimReticleStby",
+      "relatedActions": [
+        "huddeprretswitchcycle",
+        "huddeprretswitchstepup",
+        "huddeprretswitchstepdown",
+        "huddeprretswitchpri",
+        "huddeprretswitchoff"
+      ],
+      "description": "HUD: DEPR RET Switch - STBY",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DEPR RET Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "huddeprretswitchpri",
+      "clazz": "HudDeprRetSwitchPri",
+      "callback": "SimReticlePri",
+      "relatedActions": [
+        "huddeprretswitchcycle",
+        "huddeprretswitchstepup",
+        "huddeprretswitchstepdown",
+        "huddeprretswitchstby",
+        "huddeprretswitchoff"
+      ],
+      "description": "HUD: DEPR RET Switch - PRI",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DEPR RET Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "huddeprretswitchoff",
+      "clazz": "HudDeprRetSwitchOff",
+      "callback": "SimReticleOff",
+      "relatedActions": [
+        "huddeprretswitchcycle",
+        "huddeprretswitchstepup",
+        "huddeprretswitchstepdown",
+        "huddeprretswitchstby",
+        "huddeprretswitchpri"
+      ],
+      "description": "HUD: DEPR RET Switch - OFF",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: DEPR RET Switch",
+      "style": "switch",
+      "role": "off",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "hudvelocityswitchcycle",
+      "clazz": "HudVelocitySwitchCycle",
+      "callback": "SimHUDVelocity",
+      "relatedActions": [
+        "hudvelocityswitchstepup",
+        "hudvelocityswitchstepdn",
+        "hudvelocityswitchcas",
+        "hudvelocityswitchtas",
+        "hudvelocityswitchgndspd"
+      ],
+      "description": "HUD: Velocity Switch - Cycle",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Velocity Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "hudvelocityswitchstepup",
+      "clazz": "HudVelocitySwitchStepUp",
+      "callback": "SimHUDVelocityUp",
+      "relatedActions": [
+        "hudvelocityswitchcycle",
+        "hudvelocityswitchstepdn",
+        "hudvelocityswitchcas",
+        "hudvelocityswitchtas",
+        "hudvelocityswitchgndspd"
+      ],
+      "description": "HUD: Velocity Switch - Step Up",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Velocity Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "hudvelocityswitchstepdn",
+      "clazz": "HudVelocitySwitchStepDn",
+      "callback": "SimHUDVelocityDown",
+      "relatedActions": [
+        "hudvelocityswitchcycle",
+        "hudvelocityswitchstepup",
+        "hudvelocityswitchcas",
+        "hudvelocityswitchtas",
+        "hudvelocityswitchgndspd"
+      ],
+      "description": "HUD: Velocity Switch - Step Dn",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Velocity Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "hudvelocityswitchcas",
+      "clazz": "HudVelocitySwitchCas",
+      "callback": "SimHUDVelocityCAS",
+      "relatedActions": [
+        "hudvelocityswitchcycle",
+        "hudvelocityswitchstepup",
+        "hudvelocityswitchstepdn",
+        "hudvelocityswitchtas",
+        "hudvelocityswitchgndspd"
+      ],
+      "description": "HUD: Velocity Switch - CAS",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Velocity Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "hudvelocityswitchtas",
+      "clazz": "HudVelocitySwitchTas",
+      "callback": "SimHUDVelocityTAS",
+      "relatedActions": [
+        "hudvelocityswitchcycle",
+        "hudvelocityswitchstepup",
+        "hudvelocityswitchstepdn",
+        "hudvelocityswitchcas",
+        "hudvelocityswitchgndspd"
+      ],
+      "description": "HUD: Velocity Switch - TAS",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Velocity Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "hudvelocityswitchgndspd",
+      "clazz": "HudVelocitySwitchGndSpd",
+      "callback": "SimHUDVelocityGND",
+      "relatedActions": [
+        "hudvelocityswitchcycle",
+        "hudvelocityswitchstepup",
+        "hudvelocityswitchstepdn",
+        "hudvelocityswitchcas",
+        "hudvelocityswitchtas"
+      ],
+      "description": "HUD: Velocity Switch - GND SPD",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Velocity Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "hudaltitudeswitchcycle",
+      "clazz": "HudAltitudeSwitchCycle",
+      "callback": "SimHUDRadar",
+      "relatedActions": [
+        "hudaltitudeswitchstepup",
+        "hudaltitudeswitchstepdn",
+        "hudaltitudeswitchradar",
+        "hudaltitudeswitchbaro",
+        "hudaltitudeswitchauto"
+      ],
+      "description": "HUD: Altitude Switch - Cycle",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Altitude Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "hudaltitudeswitchstepup",
+      "clazz": "HudAltitudeSwitchStepUp",
+      "callback": "SimHUDAltUp",
+      "relatedActions": [
+        "hudaltitudeswitchcycle",
+        "hudaltitudeswitchstepdn",
+        "hudaltitudeswitchradar",
+        "hudaltitudeswitchbaro",
+        "hudaltitudeswitchauto"
+      ],
+      "description": "HUD: Altitude Switch - Step Up",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Altitude Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "hudaltitudeswitchstepdn",
+      "clazz": "HudAltitudeSwitchStepDn",
+      "callback": "SimHUDAltDown",
+      "relatedActions": [
+        "hudaltitudeswitchcycle",
+        "hudaltitudeswitchstepup",
+        "hudaltitudeswitchradar",
+        "hudaltitudeswitchbaro",
+        "hudaltitudeswitchauto"
+      ],
+      "description": "HUD: Altitude Switch - Step Dn",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Altitude Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "hudaltitudeswitchradar",
+      "clazz": "HudAltitudeSwitchRadar",
+      "callback": "SimHUDAltRadar",
+      "relatedActions": [
+        "hudaltitudeswitchcycle",
+        "hudaltitudeswitchstepup",
+        "hudaltitudeswitchstepdn",
+        "hudaltitudeswitchbaro",
+        "hudaltitudeswitchauto"
+      ],
+      "description": "HUD: Altitude Switch - RADAR",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Altitude Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "hudaltitudeswitchbaro",
+      "clazz": "HudAltitudeSwitchBaro",
+      "callback": "SimHUDAltBaro",
+      "relatedActions": [
+        "hudaltitudeswitchcycle",
+        "hudaltitudeswitchstepup",
+        "hudaltitudeswitchstepdn",
+        "hudaltitudeswitchradar",
+        "hudaltitudeswitchauto"
+      ],
+      "description": "HUD: Altitude Switch - BARO",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Altitude Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "hudaltitudeswitchauto",
+      "clazz": "HudAltitudeSwitchAuto",
+      "callback": "SimHUDAltAuto",
+      "relatedActions": [
+        "hudaltitudeswitchcycle",
+        "hudaltitudeswitchstepup",
+        "hudaltitudeswitchstepdn",
+        "hudaltitudeswitchradar",
+        "hudaltitudeswitchbaro"
+      ],
+      "description": "HUD: Altitude Switch - AUTO",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Altitude Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "hudbrightnessswitchcycle",
+      "clazz": "HudBrightnessSwitchCycle",
+      "callback": "SimHUDBrightness",
+      "relatedActions": [
+        "hudbrightnessswitchstepup",
+        "hudbrightnessswitchstepdn",
+        "hudbrightnessswitchday",
+        "hudbrightnessswitchautobrt",
+        "hudbrightnessswitchnig"
+      ],
+      "description": "HUD: Brightness Switch - Cycle",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Brightness Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "hudbrightnessswitchstepup",
+      "clazz": "HudBrightnessSwitchStepUp",
+      "callback": "SimHUDBrightnessUp",
+      "relatedActions": [
+        "hudbrightnessswitchcycle",
+        "hudbrightnessswitchstepdn",
+        "hudbrightnessswitchday",
+        "hudbrightnessswitchautobrt",
+        "hudbrightnessswitchnig"
+      ],
+      "description": "HUD: Brightness Switch - Step Up",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Brightness Switch",
+      "style": "button",
+      "role": "up",
+      "type": "button"
+    },
+    {
+      "id": "hudbrightnessswitchstepdn",
+      "clazz": "HudBrightnessSwitchStepDn",
+      "callback": "SimHUDBrightnessDown",
+      "relatedActions": [
+        "hudbrightnessswitchcycle",
+        "hudbrightnessswitchstepup",
+        "hudbrightnessswitchday",
+        "hudbrightnessswitchautobrt",
+        "hudbrightnessswitchnig"
+      ],
+      "description": "HUD: Brightness Switch - Step Dn",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Brightness Switch",
+      "style": "button",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "hudbrightnessswitchday",
+      "clazz": "HudBrightnessSwitchDay",
+      "callback": "SimHUDBrtDay",
+      "relatedActions": [
+        "hudbrightnessswitchcycle",
+        "hudbrightnessswitchstepup",
+        "hudbrightnessswitchstepdn",
+        "hudbrightnessswitchautobrt",
+        "hudbrightnessswitchnig"
+      ],
+      "description": "HUD: Brightness Switch - DAY",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Brightness Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": true,
+        "ground": true,
+        "air": true
+      }
+    },
+    {
+      "id": "hudbrightnessswitchautobrt",
+      "clazz": "HudBrightnessSwitchAutoBrt",
+      "callback": "SimHUDBrtAuto",
+      "relatedActions": [
+        "hudbrightnessswitchcycle",
+        "hudbrightnessswitchstepup",
+        "hudbrightnessswitchstepdn",
+        "hudbrightnessswitchday",
+        "hudbrightnessswitchnig"
+      ],
+      "description": "HUD: Brightness Switch - AUTO BRT",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Brightness Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
+      "id": "hudbrightnessswitchnig",
+      "clazz": "HudBrightnessSwitchNig",
+      "callback": "SimHUDBrtNight",
+      "relatedActions": [
+        "hudbrightnessswitchcycle",
+        "hudbrightnessswitchstepup",
+        "hudbrightnessswitchstepdn",
+        "hudbrightnessswitchday",
+        "hudbrightnessswitchautobrt"
+      ],
+      "description": "HUD: Brightness Switch - NIG",
+      "category": "AVIONICS",
+      "section": "HUD  PANEL",
+      "group": "HUD: Brightness Switch",
+      "style": "switch",
+      "role": "none",
+      "type": "switch",
+      "state": {
+        "ramp": false,
+        "ground": false,
+        "air": false
+      }
+    },
+    {
       "id": "fltdigitalswitchtoggle",
       "clazz": "FltDigitalSwitchToggle",
       "callback": "SimDigitalBUP",
@@ -8689,909 +9592,6 @@
       "style": "button",
       "role": "none",
       "type": "button"
-    },
-    {
-      "id": "hudscalesswitchcycle",
-      "clazz": "HudScalesSwitchCycle",
-      "callback": "SimHUDScales",
-      "relatedActions": [
-        "hudscalesswitchstepup",
-        "hudscalesswitchstepdown",
-        "hudscalesswitchvvvah",
-        "hudscalesswitchvah",
-        "hudscalesswitchoff"
-      ],
-      "description": "HUD: Scales Switch - Cycle",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Scales Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "hudscalesswitchstepup",
-      "clazz": "HudScalesSwitchStepUp",
-      "callback": "SimHUDScalesUp",
-      "relatedActions": [
-        "hudscalesswitchcycle",
-        "hudscalesswitchstepdown",
-        "hudscalesswitchvvvah",
-        "hudscalesswitchvah",
-        "hudscalesswitchoff"
-      ],
-      "description": "HUD: Scales Switch - Step Up",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Scales Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "hudscalesswitchstepdown",
-      "clazz": "HudScalesSwitchStepDown",
-      "callback": "SimHUDScalesDown",
-      "relatedActions": [
-        "hudscalesswitchcycle",
-        "hudscalesswitchstepup",
-        "hudscalesswitchvvvah",
-        "hudscalesswitchvah",
-        "hudscalesswitchoff"
-      ],
-      "description": "HUD: Scales Switch - Step Down",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Scales Switch",
-      "style": "button",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "hudscalesswitchvvvah",
-      "clazz": "HudScalesSwitchVvVah",
-      "callback": "SimScalesVVVAH",
-      "relatedActions": [
-        "hudscalesswitchcycle",
-        "hudscalesswitchstepup",
-        "hudscalesswitchstepdown",
-        "hudscalesswitchvah",
-        "hudscalesswitchoff"
-      ],
-      "description": "HUD: Scales Switch - VV/VAH",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Scales Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "hudscalesswitchvah",
-      "clazz": "HudScalesSwitchVah",
-      "callback": "SimScalesVAH",
-      "relatedActions": [
-        "hudscalesswitchcycle",
-        "hudscalesswitchstepup",
-        "hudscalesswitchstepdown",
-        "hudscalesswitchvvvah",
-        "hudscalesswitchoff"
-      ],
-      "description": "HUD: Scales Switch - VAH",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Scales Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "hudscalesswitchoff",
-      "clazz": "HudScalesSwitchOff",
-      "callback": "SimScalesOff",
-      "relatedActions": [
-        "hudscalesswitchcycle",
-        "hudscalesswitchstepup",
-        "hudscalesswitchstepdown",
-        "hudscalesswitchvvvah",
-        "hudscalesswitchvah"
-      ],
-      "description": "HUD: Scales Switch - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Scales Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "hudfpmswitchcycle",
-      "clazz": "HudFpmSwitchCycle",
-      "callback": "SimHUDFPM",
-      "relatedActions": [
-        "hudfpmswitchstepup",
-        "hudfpmswitchstepdown",
-        "hudfpmswitchattfpm",
-        "hudfpmswitchfpm",
-        "hudfpmswitchoff"
-      ],
-      "description": "HUD: FPM Switch - Cycle",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: FPM Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "hudfpmswitchstepup",
-      "clazz": "HudFpmSwitchStepUp",
-      "callback": "SimPitchLadderUp",
-      "relatedActions": [
-        "hudfpmswitchcycle",
-        "hudfpmswitchstepdown",
-        "hudfpmswitchattfpm",
-        "hudfpmswitchfpm",
-        "hudfpmswitchoff"
-      ],
-      "description": "HUD: FPM Switch - Step Up",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: FPM Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "hudfpmswitchstepdown",
-      "clazz": "HudFpmSwitchStepDown",
-      "callback": "SimPitchLadderDown",
-      "relatedActions": [
-        "hudfpmswitchcycle",
-        "hudfpmswitchstepup",
-        "hudfpmswitchattfpm",
-        "hudfpmswitchfpm",
-        "hudfpmswitchoff"
-      ],
-      "description": "HUD: FPM Switch - Step Down",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: FPM Switch",
-      "style": "button",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "hudfpmswitchattfpm",
-      "clazz": "HudFpmSwitchAttFpm",
-      "callback": "SimPitchLadderATTFPM",
-      "relatedActions": [
-        "hudfpmswitchcycle",
-        "hudfpmswitchstepup",
-        "hudfpmswitchstepdown",
-        "hudfpmswitchfpm",
-        "hudfpmswitchoff"
-      ],
-      "description": "HUD: FPM Switch - ATT/FPM",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: FPM Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "hudfpmswitchfpm",
-      "clazz": "HudFpmSwitchFpm",
-      "callback": "SimPitchLadderFPM",
-      "relatedActions": [
-        "hudfpmswitchcycle",
-        "hudfpmswitchstepup",
-        "hudfpmswitchstepdown",
-        "hudfpmswitchattfpm",
-        "hudfpmswitchoff"
-      ],
-      "description": "HUD: FPM Switch - FPM",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: FPM Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "hudfpmswitchoff",
-      "clazz": "HudFpmSwitchOff",
-      "callback": "SimPitchLadderOff",
-      "relatedActions": [
-        "hudfpmswitchcycle",
-        "hudfpmswitchstepup",
-        "hudfpmswitchstepdown",
-        "hudfpmswitchattfpm",
-        "hudfpmswitchfpm"
-      ],
-      "description": "HUD: FPM Switch - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: FPM Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "huddeddataswitchcycle",
-      "clazz": "HudDedDataSwitchCycle",
-      "callback": "SimHUDDED",
-      "relatedActions": [
-        "huddeddataswitchstepup",
-        "huddeddataswitchstepdn",
-        "huddeddataswitchded",
-        "huddeddataswitchpfl",
-        "huddeddataswitchoff"
-      ],
-      "description": "HUD: DED Data Switch - Cycle",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DED Data Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "huddeddataswitchstepup",
-      "clazz": "HudDedDataSwitchStepUp",
-      "callback": "SimHUDDEDUp",
-      "relatedActions": [
-        "huddeddataswitchcycle",
-        "huddeddataswitchstepdn",
-        "huddeddataswitchded",
-        "huddeddataswitchpfl",
-        "huddeddataswitchoff"
-      ],
-      "description": "HUD: DED Data Switch - Step Up",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DED Data Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "huddeddataswitchstepdn",
-      "clazz": "HudDedDataSwitchStepDn",
-      "callback": "SimHUDDEDDown",
-      "relatedActions": [
-        "huddeddataswitchcycle",
-        "huddeddataswitchstepup",
-        "huddeddataswitchded",
-        "huddeddataswitchpfl",
-        "huddeddataswitchoff"
-      ],
-      "description": "HUD: DED Data Switch - Step Dn",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DED Data Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "huddeddataswitchded",
-      "clazz": "HudDedDataSwitchDed",
-      "callback": "SimHUDDEDDED",
-      "relatedActions": [
-        "huddeddataswitchcycle",
-        "huddeddataswitchstepup",
-        "huddeddataswitchstepdn",
-        "huddeddataswitchpfl",
-        "huddeddataswitchoff"
-      ],
-      "description": "HUD: DED Data Switch - DED",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DED Data Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "huddeddataswitchpfl",
-      "clazz": "HudDedDataSwitchPfl",
-      "callback": "SimHUDDEDPFL",
-      "relatedActions": [
-        "huddeddataswitchcycle",
-        "huddeddataswitchstepup",
-        "huddeddataswitchstepdn",
-        "huddeddataswitchded",
-        "huddeddataswitchoff"
-      ],
-      "description": "HUD: DED Data Switch - PFL",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DED Data Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "huddeddataswitchoff",
-      "clazz": "HudDedDataSwitchOff",
-      "callback": "SimHUDDEDOff",
-      "relatedActions": [
-        "huddeddataswitchcycle",
-        "huddeddataswitchstepup",
-        "huddeddataswitchstepdn",
-        "huddeddataswitchded",
-        "huddeddataswitchpfl"
-      ],
-      "description": "HUD: DED Data Switch - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DED Data Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "huddeprretswitchcycle",
-      "clazz": "HudDeprRetSwitchCycle",
-      "callback": "SimReticleSwitch",
-      "relatedActions": [
-        "huddeprretswitchstepup",
-        "huddeprretswitchstepdown",
-        "huddeprretswitchstby",
-        "huddeprretswitchpri",
-        "huddeprretswitchoff"
-      ],
-      "description": "HUD: DEPR RET Switch - Cycle",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DEPR RET Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "huddeprretswitchstepup",
-      "clazz": "HudDeprRetSwitchStepUp",
-      "callback": "SimReticleSwitchUp",
-      "relatedActions": [
-        "huddeprretswitchcycle",
-        "huddeprretswitchstepdown",
-        "huddeprretswitchstby",
-        "huddeprretswitchpri",
-        "huddeprretswitchoff"
-      ],
-      "description": "HUD: DEPR RET Switch - Step Up",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DEPR RET Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "huddeprretswitchstepdown",
-      "clazz": "HudDeprRetSwitchStepDown",
-      "callback": "SimReticleSwitchDown",
-      "relatedActions": [
-        "huddeprretswitchcycle",
-        "huddeprretswitchstepup",
-        "huddeprretswitchstby",
-        "huddeprretswitchpri",
-        "huddeprretswitchoff"
-      ],
-      "description": "HUD: DEPR RET Switch - Step Down",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DEPR RET Switch",
-      "style": "button",
-      "role": "down",
-      "type": "button"
-    },
-    {
-      "id": "huddeprretswitchstby",
-      "clazz": "HudDeprRetSwitchStby",
-      "callback": "SimReticleStby",
-      "relatedActions": [
-        "huddeprretswitchcycle",
-        "huddeprretswitchstepup",
-        "huddeprretswitchstepdown",
-        "huddeprretswitchpri",
-        "huddeprretswitchoff"
-      ],
-      "description": "HUD: DEPR RET Switch - STBY",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DEPR RET Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "huddeprretswitchpri",
-      "clazz": "HudDeprRetSwitchPri",
-      "callback": "SimReticlePri",
-      "relatedActions": [
-        "huddeprretswitchcycle",
-        "huddeprretswitchstepup",
-        "huddeprretswitchstepdown",
-        "huddeprretswitchstby",
-        "huddeprretswitchoff"
-      ],
-      "description": "HUD: DEPR RET Switch - PRI",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DEPR RET Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "huddeprretswitchoff",
-      "clazz": "HudDeprRetSwitchOff",
-      "callback": "SimReticleOff",
-      "relatedActions": [
-        "huddeprretswitchcycle",
-        "huddeprretswitchstepup",
-        "huddeprretswitchstepdown",
-        "huddeprretswitchstby",
-        "huddeprretswitchpri"
-      ],
-      "description": "HUD: DEPR RET Switch - OFF",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: DEPR RET Switch",
-      "style": "switch",
-      "role": "off",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "hudvelocityswitchcycle",
-      "clazz": "HudVelocitySwitchCycle",
-      "callback": "SimHUDVelocity",
-      "relatedActions": [
-        "hudvelocityswitchstepup",
-        "hudvelocityswitchstepdn",
-        "hudvelocityswitchcas",
-        "hudvelocityswitchtas",
-        "hudvelocityswitchgndspd"
-      ],
-      "description": "HUD: Velocity Switch - Cycle",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Velocity Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "hudvelocityswitchstepup",
-      "clazz": "HudVelocitySwitchStepUp",
-      "callback": "SimHUDVelocityUp",
-      "relatedActions": [
-        "hudvelocityswitchcycle",
-        "hudvelocityswitchstepdn",
-        "hudvelocityswitchcas",
-        "hudvelocityswitchtas",
-        "hudvelocityswitchgndspd"
-      ],
-      "description": "HUD: Velocity Switch - Step Up",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Velocity Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "hudvelocityswitchstepdn",
-      "clazz": "HudVelocitySwitchStepDn",
-      "callback": "SimHUDVelocityDown",
-      "relatedActions": [
-        "hudvelocityswitchcycle",
-        "hudvelocityswitchstepup",
-        "hudvelocityswitchcas",
-        "hudvelocityswitchtas",
-        "hudvelocityswitchgndspd"
-      ],
-      "description": "HUD: Velocity Switch - Step Dn",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Velocity Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "hudvelocityswitchcas",
-      "clazz": "HudVelocitySwitchCas",
-      "callback": "SimHUDVelocityCAS",
-      "relatedActions": [
-        "hudvelocityswitchcycle",
-        "hudvelocityswitchstepup",
-        "hudvelocityswitchstepdn",
-        "hudvelocityswitchtas",
-        "hudvelocityswitchgndspd"
-      ],
-      "description": "HUD: Velocity Switch - CAS",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Velocity Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "hudvelocityswitchtas",
-      "clazz": "HudVelocitySwitchTas",
-      "callback": "SimHUDVelocityTAS",
-      "relatedActions": [
-        "hudvelocityswitchcycle",
-        "hudvelocityswitchstepup",
-        "hudvelocityswitchstepdn",
-        "hudvelocityswitchcas",
-        "hudvelocityswitchgndspd"
-      ],
-      "description": "HUD: Velocity Switch - TAS",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Velocity Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "hudvelocityswitchgndspd",
-      "clazz": "HudVelocitySwitchGndSpd",
-      "callback": "SimHUDVelocityGND",
-      "relatedActions": [
-        "hudvelocityswitchcycle",
-        "hudvelocityswitchstepup",
-        "hudvelocityswitchstepdn",
-        "hudvelocityswitchcas",
-        "hudvelocityswitchtas"
-      ],
-      "description": "HUD: Velocity Switch - GND SPD",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Velocity Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "hudaltitudeswitchcycle",
-      "clazz": "HudAltitudeSwitchCycle",
-      "callback": "SimHUDRadar",
-      "relatedActions": [
-        "hudaltitudeswitchstepup",
-        "hudaltitudeswitchstepdn",
-        "hudaltitudeswitchradar",
-        "hudaltitudeswitchbaro",
-        "hudaltitudeswitchauto"
-      ],
-      "description": "HUD: Altitude Switch - Cycle",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Altitude Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "hudaltitudeswitchstepup",
-      "clazz": "HudAltitudeSwitchStepUp",
-      "callback": "SimHUDAltUp",
-      "relatedActions": [
-        "hudaltitudeswitchcycle",
-        "hudaltitudeswitchstepdn",
-        "hudaltitudeswitchradar",
-        "hudaltitudeswitchbaro",
-        "hudaltitudeswitchauto"
-      ],
-      "description": "HUD: Altitude Switch - Step Up",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Altitude Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "hudaltitudeswitchstepdn",
-      "clazz": "HudAltitudeSwitchStepDn",
-      "callback": "SimHUDAltDown",
-      "relatedActions": [
-        "hudaltitudeswitchcycle",
-        "hudaltitudeswitchstepup",
-        "hudaltitudeswitchradar",
-        "hudaltitudeswitchbaro",
-        "hudaltitudeswitchauto"
-      ],
-      "description": "HUD: Altitude Switch - Step Dn",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Altitude Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "hudaltitudeswitchradar",
-      "clazz": "HudAltitudeSwitchRadar",
-      "callback": "SimHUDAltRadar",
-      "relatedActions": [
-        "hudaltitudeswitchcycle",
-        "hudaltitudeswitchstepup",
-        "hudaltitudeswitchstepdn",
-        "hudaltitudeswitchbaro",
-        "hudaltitudeswitchauto"
-      ],
-      "description": "HUD: Altitude Switch - RADAR",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Altitude Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "hudaltitudeswitchbaro",
-      "clazz": "HudAltitudeSwitchBaro",
-      "callback": "SimHUDAltBaro",
-      "relatedActions": [
-        "hudaltitudeswitchcycle",
-        "hudaltitudeswitchstepup",
-        "hudaltitudeswitchstepdn",
-        "hudaltitudeswitchradar",
-        "hudaltitudeswitchauto"
-      ],
-      "description": "HUD: Altitude Switch - BARO",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Altitude Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "hudaltitudeswitchauto",
-      "clazz": "HudAltitudeSwitchAuto",
-      "callback": "SimHUDAltAuto",
-      "relatedActions": [
-        "hudaltitudeswitchcycle",
-        "hudaltitudeswitchstepup",
-        "hudaltitudeswitchstepdn",
-        "hudaltitudeswitchradar",
-        "hudaltitudeswitchbaro"
-      ],
-      "description": "HUD: Altitude Switch - AUTO",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Altitude Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "hudbrightnessswitchcycle",
-      "clazz": "HudBrightnessSwitchCycle",
-      "callback": "SimHUDBrightness",
-      "relatedActions": [
-        "hudbrightnessswitchstepup",
-        "hudbrightnessswitchstepdn",
-        "hudbrightnessswitchday",
-        "hudbrightnessswitchautobrt",
-        "hudbrightnessswitchnig"
-      ],
-      "description": "HUD: Brightness Switch - Cycle",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Brightness Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "hudbrightnessswitchstepup",
-      "clazz": "HudBrightnessSwitchStepUp",
-      "callback": "SimHUDBrightnessUp",
-      "relatedActions": [
-        "hudbrightnessswitchcycle",
-        "hudbrightnessswitchstepdn",
-        "hudbrightnessswitchday",
-        "hudbrightnessswitchautobrt",
-        "hudbrightnessswitchnig"
-      ],
-      "description": "HUD: Brightness Switch - Step Up",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Brightness Switch",
-      "style": "button",
-      "role": "up",
-      "type": "button"
-    },
-    {
-      "id": "hudbrightnessswitchstepdn",
-      "clazz": "HudBrightnessSwitchStepDn",
-      "callback": "SimHUDBrightnessDown",
-      "relatedActions": [
-        "hudbrightnessswitchcycle",
-        "hudbrightnessswitchstepup",
-        "hudbrightnessswitchday",
-        "hudbrightnessswitchautobrt",
-        "hudbrightnessswitchnig"
-      ],
-      "description": "HUD: Brightness Switch - Step Dn",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Brightness Switch",
-      "style": "button",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "hudbrightnessswitchday",
-      "clazz": "HudBrightnessSwitchDay",
-      "callback": "SimHUDBrtDay",
-      "relatedActions": [
-        "hudbrightnessswitchcycle",
-        "hudbrightnessswitchstepup",
-        "hudbrightnessswitchstepdn",
-        "hudbrightnessswitchautobrt",
-        "hudbrightnessswitchnig"
-      ],
-      "description": "HUD: Brightness Switch - DAY",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Brightness Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": true,
-        "ground": true,
-        "air": true
-      }
-    },
-    {
-      "id": "hudbrightnessswitchautobrt",
-      "clazz": "HudBrightnessSwitchAutoBrt",
-      "callback": "SimHUDBrtAuto",
-      "relatedActions": [
-        "hudbrightnessswitchcycle",
-        "hudbrightnessswitchstepup",
-        "hudbrightnessswitchstepdn",
-        "hudbrightnessswitchday",
-        "hudbrightnessswitchnig"
-      ],
-      "description": "HUD: Brightness Switch - AUTO BRT",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Brightness Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
-    },
-    {
-      "id": "hudbrightnessswitchnig",
-      "clazz": "HudBrightnessSwitchNig",
-      "callback": "SimHUDBrtNight",
-      "relatedActions": [
-        "hudbrightnessswitchcycle",
-        "hudbrightnessswitchstepup",
-        "hudbrightnessswitchstepdn",
-        "hudbrightnessswitchday",
-        "hudbrightnessswitchautobrt"
-      ],
-      "description": "HUD: Brightness Switch - NIG",
-      "category": "RIGHT CONSOLE",
-      "section": "HUD  PANEL",
-      "group": "HUD: Brightness Switch",
-      "style": "switch",
-      "role": "none",
-      "type": "switch",
-      "state": {
-        "ramp": false,
-        "ground": false,
-        "air": false
-      }
     },
     {
       "id": "airairsourceknobstepup",

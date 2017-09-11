@@ -1735,6 +1735,258 @@
     "stateful" : true,
     "relatedActions" : [ "avionicsmapswitchtoggle", "avionicsmapswitchon" ]
   }, {
+    "id" : "hudscalesswitchcycle",
+    "callback" : "SimHUDScales",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudscalesswitchstepup", "hudscalesswitchstepdown", "hudscalesswitchvvvah", "hudscalesswitchvah", "hudscalesswitchoff" ]
+  }, {
+    "id" : "hudscalesswitchstepup",
+    "callback" : "SimHUDScalesUp",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudscalesswitchcycle", "hudscalesswitchstepdown", "hudscalesswitchvvvah", "hudscalesswitchvah", "hudscalesswitchoff" ]
+  }, {
+    "id" : "hudscalesswitchstepdown",
+    "callback" : "SimHUDScalesDown",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudscalesswitchcycle", "hudscalesswitchstepup", "hudscalesswitchvvvah", "hudscalesswitchvah", "hudscalesswitchoff" ]
+  }, {
+    "id" : "hudscalesswitchvvvah",
+    "callback" : "SimScalesVVVAH",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "hudscalesswitchcycle", "hudscalesswitchstepup", "hudscalesswitchstepdown", "hudscalesswitchvah", "hudscalesswitchoff" ]
+  }, {
+    "id" : "hudscalesswitchvah",
+    "callback" : "SimScalesVAH",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "hudscalesswitchcycle", "hudscalesswitchstepup", "hudscalesswitchstepdown", "hudscalesswitchvvvah", "hudscalesswitchoff" ]
+  }, {
+    "id" : "hudscalesswitchoff",
+    "callback" : "SimScalesOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "hudscalesswitchcycle", "hudscalesswitchstepup", "hudscalesswitchstepdown", "hudscalesswitchvvvah", "hudscalesswitchvah" ]
+  }, {
+    "id" : "hudfpmswitchcycle",
+    "callback" : "SimHUDFPM",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudfpmswitchstepup", "hudfpmswitchstepdown", "hudfpmswitchattfpm", "hudfpmswitchfpm", "hudfpmswitchoff" ]
+  }, {
+    "id" : "hudfpmswitchstepup",
+    "callback" : "SimPitchLadderUp",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudfpmswitchcycle", "hudfpmswitchstepdown", "hudfpmswitchattfpm", "hudfpmswitchfpm", "hudfpmswitchoff" ]
+  }, {
+    "id" : "hudfpmswitchstepdown",
+    "callback" : "SimPitchLadderDown",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudfpmswitchcycle", "hudfpmswitchstepup", "hudfpmswitchattfpm", "hudfpmswitchfpm", "hudfpmswitchoff" ]
+  }, {
+    "id" : "hudfpmswitchattfpm",
+    "callback" : "SimPitchLadderATTFPM",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "hudfpmswitchcycle", "hudfpmswitchstepup", "hudfpmswitchstepdown", "hudfpmswitchfpm", "hudfpmswitchoff" ]
+  }, {
+    "id" : "hudfpmswitchfpm",
+    "callback" : "SimPitchLadderFPM",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "hudfpmswitchcycle", "hudfpmswitchstepup", "hudfpmswitchstepdown", "hudfpmswitchattfpm", "hudfpmswitchoff" ]
+  }, {
+    "id" : "hudfpmswitchoff",
+    "callback" : "SimPitchLadderOff",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "hudfpmswitchcycle", "hudfpmswitchstepup", "hudfpmswitchstepdown", "hudfpmswitchattfpm", "hudfpmswitchfpm" ]
+  }, {
+    "id" : "huddeddataswitchcycle",
+    "callback" : "SimHUDDED",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "huddeddataswitchstepup", "huddeddataswitchstepdn", "huddeddataswitchded", "huddeddataswitchpfl", "huddeddataswitchoff" ]
+  }, {
+    "id" : "huddeddataswitchstepup",
+    "callback" : "SimHUDDEDUp",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "huddeddataswitchcycle", "huddeddataswitchstepdn", "huddeddataswitchded", "huddeddataswitchpfl", "huddeddataswitchoff" ]
+  }, {
+    "id" : "huddeddataswitchstepdn",
+    "callback" : "SimHUDDEDDown",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "huddeddataswitchcycle", "huddeddataswitchstepup", "huddeddataswitchded", "huddeddataswitchpfl", "huddeddataswitchoff" ]
+  }, {
+    "id" : "huddeddataswitchded",
+    "callback" : "SimHUDDEDDED",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "huddeddataswitchcycle", "huddeddataswitchstepup", "huddeddataswitchstepdn", "huddeddataswitchpfl", "huddeddataswitchoff" ]
+  }, {
+    "id" : "huddeddataswitchpfl",
+    "callback" : "SimHUDDEDPFL",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "huddeddataswitchcycle", "huddeddataswitchstepup", "huddeddataswitchstepdn", "huddeddataswitchded", "huddeddataswitchoff" ]
+  }, {
+    "id" : "huddeddataswitchoff",
+    "callback" : "SimHUDDEDOff",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "huddeddataswitchcycle", "huddeddataswitchstepup", "huddeddataswitchstepdn", "huddeddataswitchded", "huddeddataswitchpfl" ]
+  }, {
+    "id" : "huddeprretswitchcycle",
+    "callback" : "SimReticleSwitch",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "huddeprretswitchstepup", "huddeprretswitchstepdown", "huddeprretswitchstby", "huddeprretswitchpri", "huddeprretswitchoff" ]
+  }, {
+    "id" : "huddeprretswitchstepup",
+    "callback" : "SimReticleSwitchUp",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "huddeprretswitchcycle", "huddeprretswitchstepdown", "huddeprretswitchstby", "huddeprretswitchpri", "huddeprretswitchoff" ]
+  }, {
+    "id" : "huddeprretswitchstepdown",
+    "callback" : "SimReticleSwitchDown",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "huddeprretswitchcycle", "huddeprretswitchstepup", "huddeprretswitchstby", "huddeprretswitchpri", "huddeprretswitchoff" ]
+  }, {
+    "id" : "huddeprretswitchstby",
+    "callback" : "SimReticleStby",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "huddeprretswitchcycle", "huddeprretswitchstepup", "huddeprretswitchstepdown", "huddeprretswitchpri", "huddeprretswitchoff" ]
+  }, {
+    "id" : "huddeprretswitchpri",
+    "callback" : "SimReticlePri",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "huddeprretswitchcycle", "huddeprretswitchstepup", "huddeprretswitchstepdown", "huddeprretswitchstby", "huddeprretswitchoff" ]
+  }, {
+    "id" : "huddeprretswitchoff",
+    "callback" : "SimReticleOff",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "huddeprretswitchcycle", "huddeprretswitchstepup", "huddeprretswitchstepdown", "huddeprretswitchstby", "huddeprretswitchpri" ]
+  }, {
+    "id" : "hudvelocityswitchcycle",
+    "callback" : "SimHUDVelocity",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudvelocityswitchstepup", "hudvelocityswitchstepdn", "hudvelocityswitchcas", "hudvelocityswitchtas", "hudvelocityswitchgndspd" ]
+  }, {
+    "id" : "hudvelocityswitchstepup",
+    "callback" : "SimHUDVelocityUp",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudvelocityswitchcycle", "hudvelocityswitchstepdn", "hudvelocityswitchcas", "hudvelocityswitchtas", "hudvelocityswitchgndspd" ]
+  }, {
+    "id" : "hudvelocityswitchstepdn",
+    "callback" : "SimHUDVelocityDown",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudvelocityswitchcycle", "hudvelocityswitchstepup", "hudvelocityswitchcas", "hudvelocityswitchtas", "hudvelocityswitchgndspd" ]
+  }, {
+    "id" : "hudvelocityswitchcas",
+    "callback" : "SimHUDVelocityCAS",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "hudvelocityswitchcycle", "hudvelocityswitchstepup", "hudvelocityswitchstepdn", "hudvelocityswitchtas", "hudvelocityswitchgndspd" ]
+  }, {
+    "id" : "hudvelocityswitchtas",
+    "callback" : "SimHUDVelocityTAS",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "hudvelocityswitchcycle", "hudvelocityswitchstepup", "hudvelocityswitchstepdn", "hudvelocityswitchcas", "hudvelocityswitchgndspd" ]
+  }, {
+    "id" : "hudvelocityswitchgndspd",
+    "callback" : "SimHUDVelocityGND",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "hudvelocityswitchcycle", "hudvelocityswitchstepup", "hudvelocityswitchstepdn", "hudvelocityswitchcas", "hudvelocityswitchtas" ]
+  }, {
+    "id" : "hudaltitudeswitchcycle",
+    "callback" : "SimHUDRadar",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudaltitudeswitchstepup", "hudaltitudeswitchstepdn", "hudaltitudeswitchradar", "hudaltitudeswitchbaro", "hudaltitudeswitchauto" ]
+  }, {
+    "id" : "hudaltitudeswitchstepup",
+    "callback" : "SimHUDAltUp",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudaltitudeswitchcycle", "hudaltitudeswitchstepdn", "hudaltitudeswitchradar", "hudaltitudeswitchbaro", "hudaltitudeswitchauto" ]
+  }, {
+    "id" : "hudaltitudeswitchstepdn",
+    "callback" : "SimHUDAltDown",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudaltitudeswitchcycle", "hudaltitudeswitchstepup", "hudaltitudeswitchradar", "hudaltitudeswitchbaro", "hudaltitudeswitchauto" ]
+  }, {
+    "id" : "hudaltitudeswitchradar",
+    "callback" : "SimHUDAltRadar",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "hudaltitudeswitchcycle", "hudaltitudeswitchstepup", "hudaltitudeswitchstepdn", "hudaltitudeswitchbaro", "hudaltitudeswitchauto" ]
+  }, {
+    "id" : "hudaltitudeswitchbaro",
+    "callback" : "SimHUDAltBaro",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "hudaltitudeswitchcycle", "hudaltitudeswitchstepup", "hudaltitudeswitchstepdn", "hudaltitudeswitchradar", "hudaltitudeswitchauto" ]
+  }, {
+    "id" : "hudaltitudeswitchauto",
+    "callback" : "SimHUDAltAuto",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "hudaltitudeswitchcycle", "hudaltitudeswitchstepup", "hudaltitudeswitchstepdn", "hudaltitudeswitchradar", "hudaltitudeswitchbaro" ]
+  }, {
+    "id" : "hudbrightnessswitchcycle",
+    "callback" : "SimHUDBrightness",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudbrightnessswitchstepup", "hudbrightnessswitchstepdn", "hudbrightnessswitchday", "hudbrightnessswitchautobrt", "hudbrightnessswitchnig" ]
+  }, {
+    "id" : "hudbrightnessswitchstepup",
+    "callback" : "SimHUDBrightnessUp",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepdn", "hudbrightnessswitchday", "hudbrightnessswitchautobrt", "hudbrightnessswitchnig" ]
+  }, {
+    "id" : "hudbrightnessswitchstepdn",
+    "callback" : "SimHUDBrightnessDown",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepup", "hudbrightnessswitchday", "hudbrightnessswitchautobrt", "hudbrightnessswitchnig" ]
+  }, {
+    "id" : "hudbrightnessswitchday",
+    "callback" : "SimHUDBrtDay",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepup", "hudbrightnessswitchstepdn", "hudbrightnessswitchautobrt", "hudbrightnessswitchnig" ]
+  }, {
+    "id" : "hudbrightnessswitchautobrt",
+    "callback" : "SimHUDBrtAuto",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepup", "hudbrightnessswitchstepdn", "hudbrightnessswitchday", "hudbrightnessswitchnig" ]
+  }, {
+    "id" : "hudbrightnessswitchnig",
+    "callback" : "SimHUDBrtNight",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepup", "hudbrightnessswitchstepdn", "hudbrightnessswitchday", "hudbrightnessswitchautobrt" ]
+  }, {
     "id" : "fltdigitalswitchtoggle",
     "callback" : "SimDigitalBUP",
     "active" : false,
@@ -2970,258 +3222,6 @@
     "active" : false,
     "stateful" : false,
     "relatedActions" : [ "rmfdbrtbuttonincreasebrightness" ]
-  }, {
-    "id" : "hudscalesswitchcycle",
-    "callback" : "SimHUDScales",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudscalesswitchstepup", "hudscalesswitchstepdown", "hudscalesswitchvvvah", "hudscalesswitchvah", "hudscalesswitchoff" ]
-  }, {
-    "id" : "hudscalesswitchstepup",
-    "callback" : "SimHUDScalesUp",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudscalesswitchcycle", "hudscalesswitchstepdown", "hudscalesswitchvvvah", "hudscalesswitchvah", "hudscalesswitchoff" ]
-  }, {
-    "id" : "hudscalesswitchstepdown",
-    "callback" : "SimHUDScalesDown",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudscalesswitchcycle", "hudscalesswitchstepup", "hudscalesswitchvvvah", "hudscalesswitchvah", "hudscalesswitchoff" ]
-  }, {
-    "id" : "hudscalesswitchvvvah",
-    "callback" : "SimScalesVVVAH",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "hudscalesswitchcycle", "hudscalesswitchstepup", "hudscalesswitchstepdown", "hudscalesswitchvah", "hudscalesswitchoff" ]
-  }, {
-    "id" : "hudscalesswitchvah",
-    "callback" : "SimScalesVAH",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "hudscalesswitchcycle", "hudscalesswitchstepup", "hudscalesswitchstepdown", "hudscalesswitchvvvah", "hudscalesswitchoff" ]
-  }, {
-    "id" : "hudscalesswitchoff",
-    "callback" : "SimScalesOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "hudscalesswitchcycle", "hudscalesswitchstepup", "hudscalesswitchstepdown", "hudscalesswitchvvvah", "hudscalesswitchvah" ]
-  }, {
-    "id" : "hudfpmswitchcycle",
-    "callback" : "SimHUDFPM",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudfpmswitchstepup", "hudfpmswitchstepdown", "hudfpmswitchattfpm", "hudfpmswitchfpm", "hudfpmswitchoff" ]
-  }, {
-    "id" : "hudfpmswitchstepup",
-    "callback" : "SimPitchLadderUp",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudfpmswitchcycle", "hudfpmswitchstepdown", "hudfpmswitchattfpm", "hudfpmswitchfpm", "hudfpmswitchoff" ]
-  }, {
-    "id" : "hudfpmswitchstepdown",
-    "callback" : "SimPitchLadderDown",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudfpmswitchcycle", "hudfpmswitchstepup", "hudfpmswitchattfpm", "hudfpmswitchfpm", "hudfpmswitchoff" ]
-  }, {
-    "id" : "hudfpmswitchattfpm",
-    "callback" : "SimPitchLadderATTFPM",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "hudfpmswitchcycle", "hudfpmswitchstepup", "hudfpmswitchstepdown", "hudfpmswitchfpm", "hudfpmswitchoff" ]
-  }, {
-    "id" : "hudfpmswitchfpm",
-    "callback" : "SimPitchLadderFPM",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "hudfpmswitchcycle", "hudfpmswitchstepup", "hudfpmswitchstepdown", "hudfpmswitchattfpm", "hudfpmswitchoff" ]
-  }, {
-    "id" : "hudfpmswitchoff",
-    "callback" : "SimPitchLadderOff",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "hudfpmswitchcycle", "hudfpmswitchstepup", "hudfpmswitchstepdown", "hudfpmswitchattfpm", "hudfpmswitchfpm" ]
-  }, {
-    "id" : "huddeddataswitchcycle",
-    "callback" : "SimHUDDED",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "huddeddataswitchstepup", "huddeddataswitchstepdn", "huddeddataswitchded", "huddeddataswitchpfl", "huddeddataswitchoff" ]
-  }, {
-    "id" : "huddeddataswitchstepup",
-    "callback" : "SimHUDDEDUp",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "huddeddataswitchcycle", "huddeddataswitchstepdn", "huddeddataswitchded", "huddeddataswitchpfl", "huddeddataswitchoff" ]
-  }, {
-    "id" : "huddeddataswitchstepdn",
-    "callback" : "SimHUDDEDDown",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "huddeddataswitchcycle", "huddeddataswitchstepup", "huddeddataswitchded", "huddeddataswitchpfl", "huddeddataswitchoff" ]
-  }, {
-    "id" : "huddeddataswitchded",
-    "callback" : "SimHUDDEDDED",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "huddeddataswitchcycle", "huddeddataswitchstepup", "huddeddataswitchstepdn", "huddeddataswitchpfl", "huddeddataswitchoff" ]
-  }, {
-    "id" : "huddeddataswitchpfl",
-    "callback" : "SimHUDDEDPFL",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "huddeddataswitchcycle", "huddeddataswitchstepup", "huddeddataswitchstepdn", "huddeddataswitchded", "huddeddataswitchoff" ]
-  }, {
-    "id" : "huddeddataswitchoff",
-    "callback" : "SimHUDDEDOff",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "huddeddataswitchcycle", "huddeddataswitchstepup", "huddeddataswitchstepdn", "huddeddataswitchded", "huddeddataswitchpfl" ]
-  }, {
-    "id" : "huddeprretswitchcycle",
-    "callback" : "SimReticleSwitch",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "huddeprretswitchstepup", "huddeprretswitchstepdown", "huddeprretswitchstby", "huddeprretswitchpri", "huddeprretswitchoff" ]
-  }, {
-    "id" : "huddeprretswitchstepup",
-    "callback" : "SimReticleSwitchUp",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "huddeprretswitchcycle", "huddeprretswitchstepdown", "huddeprretswitchstby", "huddeprretswitchpri", "huddeprretswitchoff" ]
-  }, {
-    "id" : "huddeprretswitchstepdown",
-    "callback" : "SimReticleSwitchDown",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "huddeprretswitchcycle", "huddeprretswitchstepup", "huddeprretswitchstby", "huddeprretswitchpri", "huddeprretswitchoff" ]
-  }, {
-    "id" : "huddeprretswitchstby",
-    "callback" : "SimReticleStby",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "huddeprretswitchcycle", "huddeprretswitchstepup", "huddeprretswitchstepdown", "huddeprretswitchpri", "huddeprretswitchoff" ]
-  }, {
-    "id" : "huddeprretswitchpri",
-    "callback" : "SimReticlePri",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "huddeprretswitchcycle", "huddeprretswitchstepup", "huddeprretswitchstepdown", "huddeprretswitchstby", "huddeprretswitchoff" ]
-  }, {
-    "id" : "huddeprretswitchoff",
-    "callback" : "SimReticleOff",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "huddeprretswitchcycle", "huddeprretswitchstepup", "huddeprretswitchstepdown", "huddeprretswitchstby", "huddeprretswitchpri" ]
-  }, {
-    "id" : "hudvelocityswitchcycle",
-    "callback" : "SimHUDVelocity",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudvelocityswitchstepup", "hudvelocityswitchstepdn", "hudvelocityswitchcas", "hudvelocityswitchtas", "hudvelocityswitchgndspd" ]
-  }, {
-    "id" : "hudvelocityswitchstepup",
-    "callback" : "SimHUDVelocityUp",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudvelocityswitchcycle", "hudvelocityswitchstepdn", "hudvelocityswitchcas", "hudvelocityswitchtas", "hudvelocityswitchgndspd" ]
-  }, {
-    "id" : "hudvelocityswitchstepdn",
-    "callback" : "SimHUDVelocityDown",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudvelocityswitchcycle", "hudvelocityswitchstepup", "hudvelocityswitchcas", "hudvelocityswitchtas", "hudvelocityswitchgndspd" ]
-  }, {
-    "id" : "hudvelocityswitchcas",
-    "callback" : "SimHUDVelocityCAS",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "hudvelocityswitchcycle", "hudvelocityswitchstepup", "hudvelocityswitchstepdn", "hudvelocityswitchtas", "hudvelocityswitchgndspd" ]
-  }, {
-    "id" : "hudvelocityswitchtas",
-    "callback" : "SimHUDVelocityTAS",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "hudvelocityswitchcycle", "hudvelocityswitchstepup", "hudvelocityswitchstepdn", "hudvelocityswitchcas", "hudvelocityswitchgndspd" ]
-  }, {
-    "id" : "hudvelocityswitchgndspd",
-    "callback" : "SimHUDVelocityGND",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "hudvelocityswitchcycle", "hudvelocityswitchstepup", "hudvelocityswitchstepdn", "hudvelocityswitchcas", "hudvelocityswitchtas" ]
-  }, {
-    "id" : "hudaltitudeswitchcycle",
-    "callback" : "SimHUDRadar",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudaltitudeswitchstepup", "hudaltitudeswitchstepdn", "hudaltitudeswitchradar", "hudaltitudeswitchbaro", "hudaltitudeswitchauto" ]
-  }, {
-    "id" : "hudaltitudeswitchstepup",
-    "callback" : "SimHUDAltUp",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudaltitudeswitchcycle", "hudaltitudeswitchstepdn", "hudaltitudeswitchradar", "hudaltitudeswitchbaro", "hudaltitudeswitchauto" ]
-  }, {
-    "id" : "hudaltitudeswitchstepdn",
-    "callback" : "SimHUDAltDown",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudaltitudeswitchcycle", "hudaltitudeswitchstepup", "hudaltitudeswitchradar", "hudaltitudeswitchbaro", "hudaltitudeswitchauto" ]
-  }, {
-    "id" : "hudaltitudeswitchradar",
-    "callback" : "SimHUDAltRadar",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "hudaltitudeswitchcycle", "hudaltitudeswitchstepup", "hudaltitudeswitchstepdn", "hudaltitudeswitchbaro", "hudaltitudeswitchauto" ]
-  }, {
-    "id" : "hudaltitudeswitchbaro",
-    "callback" : "SimHUDAltBaro",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "hudaltitudeswitchcycle", "hudaltitudeswitchstepup", "hudaltitudeswitchstepdn", "hudaltitudeswitchradar", "hudaltitudeswitchauto" ]
-  }, {
-    "id" : "hudaltitudeswitchauto",
-    "callback" : "SimHUDAltAuto",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "hudaltitudeswitchcycle", "hudaltitudeswitchstepup", "hudaltitudeswitchstepdn", "hudaltitudeswitchradar", "hudaltitudeswitchbaro" ]
-  }, {
-    "id" : "hudbrightnessswitchcycle",
-    "callback" : "SimHUDBrightness",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudbrightnessswitchstepup", "hudbrightnessswitchstepdn", "hudbrightnessswitchday", "hudbrightnessswitchautobrt", "hudbrightnessswitchnig" ]
-  }, {
-    "id" : "hudbrightnessswitchstepup",
-    "callback" : "SimHUDBrightnessUp",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepdn", "hudbrightnessswitchday", "hudbrightnessswitchautobrt", "hudbrightnessswitchnig" ]
-  }, {
-    "id" : "hudbrightnessswitchstepdn",
-    "callback" : "SimHUDBrightnessDown",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepup", "hudbrightnessswitchday", "hudbrightnessswitchautobrt", "hudbrightnessswitchnig" ]
-  }, {
-    "id" : "hudbrightnessswitchday",
-    "callback" : "SimHUDBrtDay",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepup", "hudbrightnessswitchstepdn", "hudbrightnessswitchautobrt", "hudbrightnessswitchnig" ]
-  }, {
-    "id" : "hudbrightnessswitchautobrt",
-    "callback" : "SimHUDBrtAuto",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepup", "hudbrightnessswitchstepdn", "hudbrightnessswitchday", "hudbrightnessswitchnig" ]
-  }, {
-    "id" : "hudbrightnessswitchnig",
-    "callback" : "SimHUDBrtNight",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "hudbrightnessswitchcycle", "hudbrightnessswitchstepup", "hudbrightnessswitchstepdn", "hudbrightnessswitchday", "hudbrightnessswitchautobrt" ]
   }, {
     "id" : "airairsourceknobstepup",
     "callback" : "SimIncAirSource",

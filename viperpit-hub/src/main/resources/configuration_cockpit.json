@@ -139,6 +139,10 @@
     "className" : "AvionicPowerPanel",
     "name" : "AVIONIC POWER  PANEL"
   }, {
+    "id" : "hudpanel",
+    "className" : "HudPanel",
+    "name" : "HUD  PANEL"
+  }, {
     "id" : "fltcontrolpanel",
     "className" : "FltControlPanel",
     "name" : "FLT CONTROL PANEL"
@@ -194,10 +198,6 @@
     "id" : "lefteyebrow",
     "className" : "LeftEyebrow",
     "name" : "LEFT EYEBROW"
-  }, {
-    "id" : "hudpanel",
-    "className" : "HudPanel",
-    "name" : "HUD  PANEL"
   }, {
     "id" : "aircondpanel",
     "className" : "AirCondPanel",
@@ -704,6 +704,48 @@
     "label" : "DL",
     "type" : "switch"
   }, {
+    "id" : "HUD: Scales Switch",
+    "className" : "HudScalesSwitch",
+    "description" : "HUD: Scales Switch - VV/VAH",
+    "label" : "Scales",
+    "type" : "switch"
+  }, {
+    "id" : "HUD: FPM Switch",
+    "className" : "HudFpmSwitch",
+    "description" : "HUD: FPM Switch - ATT/FPM",
+    "label" : "FPM",
+    "type" : "switch"
+  }, {
+    "id" : "HUD: DED Data Switch",
+    "className" : "HudDedDataSwitch",
+    "description" : "HUD: DED Data Switch - DED",
+    "label" : "DED Data",
+    "type" : "switch"
+  }, {
+    "id" : "HUD: DEPR RET Switch",
+    "className" : "HudDeprRetSwitch",
+    "description" : "HUD: DEPR RET Switch - STBY",
+    "label" : "DEPR RET",
+    "type" : "switch"
+  }, {
+    "id" : "HUD: Velocity Switch",
+    "className" : "HudVelocitySwitch",
+    "description" : "HUD: Velocity Switch - CAS",
+    "label" : "Velocity",
+    "type" : "switch"
+  }, {
+    "id" : "HUD: Altitude Switch",
+    "className" : "HudAltitudeSwitch",
+    "description" : "HUD: Altitude Switch - RADAR",
+    "label" : "Altitude",
+    "type" : "switch"
+  }, {
+    "id" : "HUD: Brightness Switch",
+    "className" : "HudBrightnessSwitch",
+    "description" : "HUD: Brightness Switch - DAY",
+    "label" : "Brightness",
+    "type" : "switch"
+  }, {
     "id" : "FLT: DIGITAL Switch",
     "className" : "FltDigitalSwitch",
     "description" : "FLT: DIGITAL Switch - BACKUP",
@@ -919,48 +961,6 @@
     "description" : "EYE: F ACK Button - Push",
     "label" : null,
     "type" : "button"
-  }, {
-    "id" : "HUD: Scales Switch",
-    "className" : "HudScalesSwitch",
-    "description" : "HUD: Scales Switch - VV/VAH",
-    "label" : "Scales",
-    "type" : "switch"
-  }, {
-    "id" : "HUD: FPM Switch",
-    "className" : "HudFpmSwitch",
-    "description" : "HUD: FPM Switch - ATT/FPM",
-    "label" : "FPM",
-    "type" : "switch"
-  }, {
-    "id" : "HUD: DED Data Switch",
-    "className" : "HudDedDataSwitch",
-    "description" : "HUD: DED Data Switch - DED",
-    "label" : "DED Data",
-    "type" : "switch"
-  }, {
-    "id" : "HUD: DEPR RET Switch",
-    "className" : "HudDeprRetSwitch",
-    "description" : "HUD: DEPR RET Switch - STBY",
-    "label" : "DEPR RET",
-    "type" : "switch"
-  }, {
-    "id" : "HUD: Velocity Switch",
-    "className" : "HudVelocitySwitch",
-    "description" : "HUD: Velocity Switch - CAS",
-    "label" : "Velocity",
-    "type" : "switch"
-  }, {
-    "id" : "HUD: Altitude Switch",
-    "className" : "HudAltitudeSwitch",
-    "description" : "HUD: Altitude Switch - RADAR",
-    "label" : "Altitude",
-    "type" : "switch"
-  }, {
-    "id" : "HUD: Brightness Switch",
-    "className" : "HudBrightnessSwitch",
-    "description" : "HUD: Brightness Switch - DAY",
-    "label" : "Brightness",
-    "type" : "switch"
   }, {
     "id" : "AIR: AIR SOURCE Knob",
     "className" : "AirAirSourceKnob",
@@ -2229,6 +2229,132 @@
     "label" : "OFF",
     "role" : "off"
   }, {
+    "id" : "hudscalesswitchvvvah",
+    "className" : "HudScalesSwitchVvVah",
+    "description" : "HUD: Scales Switch - VV/VAH",
+    "label" : "VV/VAH",
+    "role" : "none"
+  }, {
+    "id" : "hudscalesswitchvah",
+    "className" : "HudScalesSwitchVah",
+    "description" : "HUD: Scales Switch - VAH",
+    "label" : "VAH",
+    "role" : "none"
+  }, {
+    "id" : "hudscalesswitchoff",
+    "className" : "HudScalesSwitchOff",
+    "description" : "HUD: Scales Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "hudfpmswitchattfpm",
+    "className" : "HudFpmSwitchAttFpm",
+    "description" : "HUD: FPM Switch - ATT/FPM",
+    "label" : "ATT/FPM",
+    "role" : "none"
+  }, {
+    "id" : "hudfpmswitchfpm",
+    "className" : "HudFpmSwitchFpm",
+    "description" : "HUD: FPM Switch - FPM",
+    "label" : "FPM",
+    "role" : "none"
+  }, {
+    "id" : "hudfpmswitchoff",
+    "className" : "HudFpmSwitchOff",
+    "description" : "HUD: FPM Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "huddeddataswitchded",
+    "className" : "HudDedDataSwitchDed",
+    "description" : "HUD: DED Data Switch - DED",
+    "label" : "DED",
+    "role" : "none"
+  }, {
+    "id" : "huddeddataswitchpfl",
+    "className" : "HudDedDataSwitchPfl",
+    "description" : "HUD: DED Data Switch - PFL",
+    "label" : "PFL",
+    "role" : "none"
+  }, {
+    "id" : "huddeddataswitchoff",
+    "className" : "HudDedDataSwitchOff",
+    "description" : "HUD: DED Data Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "huddeprretswitchstby",
+    "className" : "HudDeprRetSwitchStby",
+    "description" : "HUD: DEPR RET Switch - STBY",
+    "label" : "STBY",
+    "role" : "none"
+  }, {
+    "id" : "huddeprretswitchpri",
+    "className" : "HudDeprRetSwitchPri",
+    "description" : "HUD: DEPR RET Switch - PRI",
+    "label" : "PRI",
+    "role" : "none"
+  }, {
+    "id" : "huddeprretswitchoff",
+    "className" : "HudDeprRetSwitchOff",
+    "description" : "HUD: DEPR RET Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "hudvelocityswitchcas",
+    "className" : "HudVelocitySwitchCas",
+    "description" : "HUD: Velocity Switch - CAS",
+    "label" : "CAS",
+    "role" : "none"
+  }, {
+    "id" : "hudvelocityswitchtas",
+    "className" : "HudVelocitySwitchTas",
+    "description" : "HUD: Velocity Switch - TAS",
+    "label" : "TAS",
+    "role" : "none"
+  }, {
+    "id" : "hudvelocityswitchgndspd",
+    "className" : "HudVelocitySwitchGndSpd",
+    "description" : "HUD: Velocity Switch - GND SPD",
+    "label" : "GND SPD",
+    "role" : "none"
+  }, {
+    "id" : "hudaltitudeswitchradar",
+    "className" : "HudAltitudeSwitchRadar",
+    "description" : "HUD: Altitude Switch - RADAR",
+    "label" : "RADAR",
+    "role" : "none"
+  }, {
+    "id" : "hudaltitudeswitchbaro",
+    "className" : "HudAltitudeSwitchBaro",
+    "description" : "HUD: Altitude Switch - BARO",
+    "label" : "BARO",
+    "role" : "none"
+  }, {
+    "id" : "hudaltitudeswitchauto",
+    "className" : "HudAltitudeSwitchAuto",
+    "description" : "HUD: Altitude Switch - AUTO",
+    "label" : "AUTO",
+    "role" : "none"
+  }, {
+    "id" : "hudbrightnessswitchday",
+    "className" : "HudBrightnessSwitchDay",
+    "description" : "HUD: Brightness Switch - DAY",
+    "label" : "DAY",
+    "role" : "none"
+  }, {
+    "id" : "hudbrightnessswitchautobrt",
+    "className" : "HudBrightnessSwitchAutoBrt",
+    "description" : "HUD: Brightness Switch - AUTO BRT",
+    "label" : "AUTO BRT",
+    "role" : "none"
+  }, {
+    "id" : "hudbrightnessswitchnig",
+    "className" : "HudBrightnessSwitchNig",
+    "description" : "HUD: Brightness Switch - NIG",
+    "label" : "NIG",
+    "role" : "none"
+  }, {
     "id" : "fltdigitalswitchbackup",
     "className" : "FltDigitalSwitchBackup",
     "description" : "FLT: DIGITAL Switch - BACKUP",
@@ -2629,132 +2755,6 @@
     "className" : "EyeFAckButtonPush",
     "description" : "EYE: F ACK Button - Push",
     "label" : "F ACK",
-    "role" : "none"
-  }, {
-    "id" : "hudscalesswitchvvvah",
-    "className" : "HudScalesSwitchVvVah",
-    "description" : "HUD: Scales Switch - VV/VAH",
-    "label" : "VV/VAH",
-    "role" : "none"
-  }, {
-    "id" : "hudscalesswitchvah",
-    "className" : "HudScalesSwitchVah",
-    "description" : "HUD: Scales Switch - VAH",
-    "label" : "VAH",
-    "role" : "none"
-  }, {
-    "id" : "hudscalesswitchoff",
-    "className" : "HudScalesSwitchOff",
-    "description" : "HUD: Scales Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "hudfpmswitchattfpm",
-    "className" : "HudFpmSwitchAttFpm",
-    "description" : "HUD: FPM Switch - ATT/FPM",
-    "label" : "ATT/FPM",
-    "role" : "none"
-  }, {
-    "id" : "hudfpmswitchfpm",
-    "className" : "HudFpmSwitchFpm",
-    "description" : "HUD: FPM Switch - FPM",
-    "label" : "FPM",
-    "role" : "none"
-  }, {
-    "id" : "hudfpmswitchoff",
-    "className" : "HudFpmSwitchOff",
-    "description" : "HUD: FPM Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "huddeddataswitchded",
-    "className" : "HudDedDataSwitchDed",
-    "description" : "HUD: DED Data Switch - DED",
-    "label" : "DED",
-    "role" : "none"
-  }, {
-    "id" : "huddeddataswitchpfl",
-    "className" : "HudDedDataSwitchPfl",
-    "description" : "HUD: DED Data Switch - PFL",
-    "label" : "PFL",
-    "role" : "none"
-  }, {
-    "id" : "huddeddataswitchoff",
-    "className" : "HudDedDataSwitchOff",
-    "description" : "HUD: DED Data Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "huddeprretswitchstby",
-    "className" : "HudDeprRetSwitchStby",
-    "description" : "HUD: DEPR RET Switch - STBY",
-    "label" : "STBY",
-    "role" : "none"
-  }, {
-    "id" : "huddeprretswitchpri",
-    "className" : "HudDeprRetSwitchPri",
-    "description" : "HUD: DEPR RET Switch - PRI",
-    "label" : "PRI",
-    "role" : "none"
-  }, {
-    "id" : "huddeprretswitchoff",
-    "className" : "HudDeprRetSwitchOff",
-    "description" : "HUD: DEPR RET Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "hudvelocityswitchcas",
-    "className" : "HudVelocitySwitchCas",
-    "description" : "HUD: Velocity Switch - CAS",
-    "label" : "CAS",
-    "role" : "none"
-  }, {
-    "id" : "hudvelocityswitchtas",
-    "className" : "HudVelocitySwitchTas",
-    "description" : "HUD: Velocity Switch - TAS",
-    "label" : "TAS",
-    "role" : "none"
-  }, {
-    "id" : "hudvelocityswitchgndspd",
-    "className" : "HudVelocitySwitchGndSpd",
-    "description" : "HUD: Velocity Switch - GND SPD",
-    "label" : "GND SPD",
-    "role" : "none"
-  }, {
-    "id" : "hudaltitudeswitchradar",
-    "className" : "HudAltitudeSwitchRadar",
-    "description" : "HUD: Altitude Switch - RADAR",
-    "label" : "RADAR",
-    "role" : "none"
-  }, {
-    "id" : "hudaltitudeswitchbaro",
-    "className" : "HudAltitudeSwitchBaro",
-    "description" : "HUD: Altitude Switch - BARO",
-    "label" : "BARO",
-    "role" : "none"
-  }, {
-    "id" : "hudaltitudeswitchauto",
-    "className" : "HudAltitudeSwitchAuto",
-    "description" : "HUD: Altitude Switch - AUTO",
-    "label" : "AUTO",
-    "role" : "none"
-  }, {
-    "id" : "hudbrightnessswitchday",
-    "className" : "HudBrightnessSwitchDay",
-    "description" : "HUD: Brightness Switch - DAY",
-    "label" : "DAY",
-    "role" : "none"
-  }, {
-    "id" : "hudbrightnessswitchautobrt",
-    "className" : "HudBrightnessSwitchAutoBrt",
-    "description" : "HUD: Brightness Switch - AUTO BRT",
-    "label" : "AUTO BRT",
-    "role" : "none"
-  }, {
-    "id" : "hudbrightnessswitchnig",
-    "className" : "HudBrightnessSwitchNig",
-    "description" : "HUD: Brightness Switch - NIG",
-    "label" : "NIG",
     "role" : "none"
   }, {
     "id" : "airairsourceknoboff",

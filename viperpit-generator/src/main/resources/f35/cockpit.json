@@ -2322,6 +2322,244 @@
               ]
             }
           ]
+        },
+        {
+          "id": "hudpanel",
+          "class": "HudPanel",
+          "name": "HUD  PANEL",
+          "group": [
+            {
+              "id": "HUD: Scales Switch",
+              "class": "HudScalesSwitch",
+              "description": "HUD: Scales Switch - VV/VAH",
+              "label": "Scales",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "hudscalesswitchvvvah",
+                  "clazz": "HudScalesSwitchVvVah",
+                  "callback": "SimScalesVVVAH",
+                  "description": "HUD: Scales Switch - VV/VAH",
+                  "label": "VV/VAH",
+                  "role": "none"
+                },
+                {
+                  "id": "hudscalesswitchvah",
+                  "clazz": "HudScalesSwitchVah",
+                  "callback": "SimScalesVAH",
+                  "description": "HUD: Scales Switch - VAH",
+                  "label": "VAH",
+                  "role": "none"
+                },
+                {
+                  "id": "hudscalesswitchoff",
+                  "clazz": "HudScalesSwitchOff",
+                  "callback": "SimScalesOff",
+                  "description": "HUD: Scales Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "HUD: FPM Switch",
+              "class": "HudFpmSwitch",
+              "description": "HUD: FPM Switch - ATT/FPM",
+              "label": "FPM",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "hudfpmswitchattfpm",
+                  "clazz": "HudFpmSwitchAttFpm",
+                  "callback": "SimPitchLadderATTFPM",
+                  "description": "HUD: FPM Switch - ATT/FPM",
+                  "label": "ATT/FPM",
+                  "role": "none"
+                },
+                {
+                  "id": "hudfpmswitchfpm",
+                  "clazz": "HudFpmSwitchFpm",
+                  "callback": "SimPitchLadderFPM",
+                  "description": "HUD: FPM Switch - FPM",
+                  "label": "FPM",
+                  "role": "none"
+                },
+                {
+                  "id": "hudfpmswitchoff",
+                  "clazz": "HudFpmSwitchOff",
+                  "callback": "SimPitchLadderOff",
+                  "description": "HUD: FPM Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "HUD: DED Data Switch",
+              "class": "HudDedDataSwitch",
+              "description": "HUD: DED Data Switch - DED",
+              "label": "DED Data",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "huddeddataswitchded",
+                  "clazz": "HudDedDataSwitchDed",
+                  "callback": "SimHUDDEDDED",
+                  "description": "HUD: DED Data Switch - DED",
+                  "label": "DED",
+                  "role": "none"
+                },
+                {
+                  "id": "huddeddataswitchpfl",
+                  "clazz": "HudDedDataSwitchPfl",
+                  "callback": "SimHUDDEDPFL",
+                  "description": "HUD: DED Data Switch - PFL",
+                  "label": "PFL",
+                  "role": "none"
+                },
+                {
+                  "id": "huddeddataswitchoff",
+                  "clazz": "HudDedDataSwitchOff",
+                  "callback": "SimHUDDEDOff",
+                  "description": "HUD: DED Data Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "HUD: DEPR RET Switch",
+              "class": "HudDeprRetSwitch",
+              "description": "HUD: DEPR RET Switch - STBY",
+              "label": "DEPR RET",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "huddeprretswitchstby",
+                  "clazz": "HudDeprRetSwitchStby",
+                  "callback": "SimReticleStby",
+                  "description": "HUD: DEPR RET Switch - STBY",
+                  "label": "STBY",
+                  "role": "none"
+                },
+                {
+                  "id": "huddeprretswitchpri",
+                  "clazz": "HudDeprRetSwitchPri",
+                  "callback": "SimReticlePri",
+                  "description": "HUD: DEPR RET Switch - PRI",
+                  "label": "PRI",
+                  "role": "none"
+                },
+                {
+                  "id": "huddeprretswitchoff",
+                  "clazz": "HudDeprRetSwitchOff",
+                  "callback": "SimReticleOff",
+                  "description": "HUD: DEPR RET Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "HUD: Velocity Switch",
+              "class": "HudVelocitySwitch",
+              "description": "HUD: Velocity Switch - CAS",
+              "label": "Velocity",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "hudvelocityswitchcas",
+                  "clazz": "HudVelocitySwitchCas",
+                  "callback": "SimHUDVelocityCAS",
+                  "description": "HUD: Velocity Switch - CAS",
+                  "label": "CAS",
+                  "role": "none"
+                },
+                {
+                  "id": "hudvelocityswitchtas",
+                  "clazz": "HudVelocitySwitchTas",
+                  "callback": "SimHUDVelocityTAS",
+                  "description": "HUD: Velocity Switch - TAS",
+                  "label": "TAS",
+                  "role": "none"
+                },
+                {
+                  "id": "hudvelocityswitchgndspd",
+                  "clazz": "HudVelocitySwitchGndSpd",
+                  "callback": "SimHUDVelocityGND",
+                  "description": "HUD: Velocity Switch - GND SPD",
+                  "label": "GND SPD",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "HUD: Altitude Switch",
+              "class": "HudAltitudeSwitch",
+              "description": "HUD: Altitude Switch - RADAR",
+              "label": "Altitude",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "hudaltitudeswitchradar",
+                  "clazz": "HudAltitudeSwitchRadar",
+                  "callback": "SimHUDAltRadar",
+                  "description": "HUD: Altitude Switch - RADAR",
+                  "label": "RADAR",
+                  "role": "none"
+                },
+                {
+                  "id": "hudaltitudeswitchbaro",
+                  "clazz": "HudAltitudeSwitchBaro",
+                  "callback": "SimHUDAltBaro",
+                  "description": "HUD: Altitude Switch - BARO",
+                  "label": "BARO",
+                  "role": "none"
+                },
+                {
+                  "id": "hudaltitudeswitchauto",
+                  "clazz": "HudAltitudeSwitchAuto",
+                  "callback": "SimHUDAltAuto",
+                  "description": "HUD: Altitude Switch - AUTO",
+                  "label": "AUTO",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "HUD: Brightness Switch",
+              "class": "HudBrightnessSwitch",
+              "description": "HUD: Brightness Switch - DAY",
+              "label": "Brightness",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "hudbrightnessswitchday",
+                  "clazz": "HudBrightnessSwitchDay",
+                  "callback": "SimHUDBrtDay",
+                  "description": "HUD: Brightness Switch - DAY",
+                  "label": "DAY",
+                  "role": "none"
+                },
+                {
+                  "id": "hudbrightnessswitchautobrt",
+                  "clazz": "HudBrightnessSwitchAutoBrt",
+                  "callback": "SimHUDBrtAuto",
+                  "description": "HUD: Brightness Switch - AUTO BRT",
+                  "label": "AUTO BRT",
+                  "role": "none"
+                },
+                {
+                  "id": "hudbrightnessswitchnig",
+                  "clazz": "HudBrightnessSwitchNig",
+                  "callback": "SimHUDBrtNight",
+                  "description": "HUD: Brightness Switch - NIG",
+                  "label": "NIG",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -3297,244 +3535,6 @@
       "class": "RightConsole",
       "name": "Right Console",
       "panel": [
-        {
-          "id": "hudpanel",
-          "class": "HudPanel",
-          "name": "HUD  PANEL",
-          "group": [
-            {
-              "id": "HUD: Scales Switch",
-              "class": "HudScalesSwitch",
-              "description": "HUD: Scales Switch - VV/VAH",
-              "label": "Scales",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "hudscalesswitchvvvah",
-                  "clazz": "HudScalesSwitchVvVah",
-                  "callback": "SimScalesVVVAH",
-                  "description": "HUD: Scales Switch - VV/VAH",
-                  "label": "VV/VAH",
-                  "role": "none"
-                },
-                {
-                  "id": "hudscalesswitchvah",
-                  "clazz": "HudScalesSwitchVah",
-                  "callback": "SimScalesVAH",
-                  "description": "HUD: Scales Switch - VAH",
-                  "label": "VAH",
-                  "role": "none"
-                },
-                {
-                  "id": "hudscalesswitchoff",
-                  "clazz": "HudScalesSwitchOff",
-                  "callback": "SimScalesOff",
-                  "description": "HUD: Scales Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "HUD: FPM Switch",
-              "class": "HudFpmSwitch",
-              "description": "HUD: FPM Switch - ATT/FPM",
-              "label": "FPM",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "hudfpmswitchattfpm",
-                  "clazz": "HudFpmSwitchAttFpm",
-                  "callback": "SimPitchLadderATTFPM",
-                  "description": "HUD: FPM Switch - ATT/FPM",
-                  "label": "ATT/FPM",
-                  "role": "none"
-                },
-                {
-                  "id": "hudfpmswitchfpm",
-                  "clazz": "HudFpmSwitchFpm",
-                  "callback": "SimPitchLadderFPM",
-                  "description": "HUD: FPM Switch - FPM",
-                  "label": "FPM",
-                  "role": "none"
-                },
-                {
-                  "id": "hudfpmswitchoff",
-                  "clazz": "HudFpmSwitchOff",
-                  "callback": "SimPitchLadderOff",
-                  "description": "HUD: FPM Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "HUD: DED Data Switch",
-              "class": "HudDedDataSwitch",
-              "description": "HUD: DED Data Switch - DED",
-              "label": "DED Data",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "huddeddataswitchded",
-                  "clazz": "HudDedDataSwitchDed",
-                  "callback": "SimHUDDEDDED",
-                  "description": "HUD: DED Data Switch - DED",
-                  "label": "DED",
-                  "role": "none"
-                },
-                {
-                  "id": "huddeddataswitchpfl",
-                  "clazz": "HudDedDataSwitchPfl",
-                  "callback": "SimHUDDEDPFL",
-                  "description": "HUD: DED Data Switch - PFL",
-                  "label": "PFL",
-                  "role": "none"
-                },
-                {
-                  "id": "huddeddataswitchoff",
-                  "clazz": "HudDedDataSwitchOff",
-                  "callback": "SimHUDDEDOff",
-                  "description": "HUD: DED Data Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "HUD: DEPR RET Switch",
-              "class": "HudDeprRetSwitch",
-              "description": "HUD: DEPR RET Switch - STBY",
-              "label": "DEPR RET",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "huddeprretswitchstby",
-                  "clazz": "HudDeprRetSwitchStby",
-                  "callback": "SimReticleStby",
-                  "description": "HUD: DEPR RET Switch - STBY",
-                  "label": "STBY",
-                  "role": "none"
-                },
-                {
-                  "id": "huddeprretswitchpri",
-                  "clazz": "HudDeprRetSwitchPri",
-                  "callback": "SimReticlePri",
-                  "description": "HUD: DEPR RET Switch - PRI",
-                  "label": "PRI",
-                  "role": "none"
-                },
-                {
-                  "id": "huddeprretswitchoff",
-                  "clazz": "HudDeprRetSwitchOff",
-                  "callback": "SimReticleOff",
-                  "description": "HUD: DEPR RET Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "HUD: Velocity Switch",
-              "class": "HudVelocitySwitch",
-              "description": "HUD: Velocity Switch - CAS",
-              "label": "Velocity",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "hudvelocityswitchcas",
-                  "clazz": "HudVelocitySwitchCas",
-                  "callback": "SimHUDVelocityCAS",
-                  "description": "HUD: Velocity Switch - CAS",
-                  "label": "CAS",
-                  "role": "none"
-                },
-                {
-                  "id": "hudvelocityswitchtas",
-                  "clazz": "HudVelocitySwitchTas",
-                  "callback": "SimHUDVelocityTAS",
-                  "description": "HUD: Velocity Switch - TAS",
-                  "label": "TAS",
-                  "role": "none"
-                },
-                {
-                  "id": "hudvelocityswitchgndspd",
-                  "clazz": "HudVelocitySwitchGndSpd",
-                  "callback": "SimHUDVelocityGND",
-                  "description": "HUD: Velocity Switch - GND SPD",
-                  "label": "GND SPD",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "HUD: Altitude Switch",
-              "class": "HudAltitudeSwitch",
-              "description": "HUD: Altitude Switch - RADAR",
-              "label": "Altitude",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "hudaltitudeswitchradar",
-                  "clazz": "HudAltitudeSwitchRadar",
-                  "callback": "SimHUDAltRadar",
-                  "description": "HUD: Altitude Switch - RADAR",
-                  "label": "RADAR",
-                  "role": "none"
-                },
-                {
-                  "id": "hudaltitudeswitchbaro",
-                  "clazz": "HudAltitudeSwitchBaro",
-                  "callback": "SimHUDAltBaro",
-                  "description": "HUD: Altitude Switch - BARO",
-                  "label": "BARO",
-                  "role": "none"
-                },
-                {
-                  "id": "hudaltitudeswitchauto",
-                  "clazz": "HudAltitudeSwitchAuto",
-                  "callback": "SimHUDAltAuto",
-                  "description": "HUD: Altitude Switch - AUTO",
-                  "label": "AUTO",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "HUD: Brightness Switch",
-              "class": "HudBrightnessSwitch",
-              "description": "HUD: Brightness Switch - DAY",
-              "label": "Brightness",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "hudbrightnessswitchday",
-                  "clazz": "HudBrightnessSwitchDay",
-                  "callback": "SimHUDBrtDay",
-                  "description": "HUD: Brightness Switch - DAY",
-                  "label": "DAY",
-                  "role": "none"
-                },
-                {
-                  "id": "hudbrightnessswitchautobrt",
-                  "clazz": "HudBrightnessSwitchAutoBrt",
-                  "callback": "SimHUDBrtAuto",
-                  "description": "HUD: Brightness Switch - AUTO BRT",
-                  "label": "AUTO BRT",
-                  "role": "none"
-                },
-                {
-                  "id": "hudbrightnessswitchnig",
-                  "clazz": "HudBrightnessSwitchNig",
-                  "callback": "SimHUDBrtNight",
-                  "description": "HUD: Brightness Switch - NIG",
-                  "label": "NIG",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
-        },
         {
           "id": "aircondpanel",
           "class": "AirCondPanel",

@@ -2,17 +2,14 @@
 <div class="container-fluid">
   <div class="row">
   <div class="col-sm-6">
-    <hud-panel />
-  </div>
-  <div class="col-sm-6">
     <air-cond-panel />
   </div>
-  </div>
-  <div class="row">
   <div class="col-sm-6">
     <zeroize-panel />
   </div>
-  <div class="col-sm-6">
+  </div>
+  <div class="row">
+  <div class="col-sm-12">
     <oxygen-panel />
   </div>
   </div>
@@ -20,7 +17,6 @@
 </template>
 
 <script>
-import HudPanel from '../panels/hudpanel/HudPanel'
 import AirCondPanel from '../panels/aircondpanel/AirCondPanel'
 import ZeroizePanel from '../panels/zeroizepanel/ZeroizePanel'
 import OxygenPanel from '../panels/oxygenpanel/OxygenPanel'
@@ -28,7 +24,6 @@ import OxygenPanel from '../panels/oxygenpanel/OxygenPanel'
 export default {
   name: 'RightConsole',
   components: {
-    HudPanel,
     AirCondPanel,
     ZeroizePanel,
     OxygenPanel

@@ -368,6 +368,26 @@
                   ]
                 }
               ]
+            },
+            {
+              "panel": "hudpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "HUD: Scales Switch",
+                    "HUD: FPM Switch",
+                    "HUD: DED Data Switch",
+                    "HUD: DEPR RET Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "HUD: Velocity Switch",
+                    "HUD: Altitude Switch",
+                    "HUD: Brightness Switch"
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -596,26 +616,6 @@
         {
           "panelRowSet": [
             {
-              "panel": "hudpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "HUD: Scales Switch",
-                    "HUD: FPM Switch",
-                    "HUD: DED Data Switch",
-                    "HUD: DEPR RET Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "HUD: Velocity Switch",
-                    "HUD: Altitude Switch",
-                    "HUD: Brightness Switch"
-                  ]
-                }
-              ]
-            },
-            {
               "panel": "aircondpanel",
               "panelRow": [
                 {
@@ -624,11 +624,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
+            },
             {
               "panel": "zeroizepanel",
               "panelRow": [
@@ -638,7 +634,11 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
             {
               "panel": "oxygenpanel",
               "panelRow": [
