@@ -1025,19 +1025,19 @@
                   "role": "down"
                 },
                 {
-                  "id": "audio1comm1knobpoweron",
-                  "clazz": "Audio1Comm1KnobPowerOn",
+                  "id": "audio1comm1knobon",
+                  "clazz": "Audio1Comm1KnobOn",
                   "callback": "SimComm1PowerOn",
-                  "description": "AUDIO1: COMM 1 Knob - Power On",
-                  "label": "Power On",
+                  "description": "AUDIO1: COMM 1 Knob - On",
+                  "label": "On",
                   "role": "on"
                 },
                 {
-                  "id": "audio1comm1knobpoweroff",
-                  "clazz": "Audio1Comm1KnobPowerOff",
+                  "id": "audio1comm1knoboff",
+                  "clazz": "Audio1Comm1KnobOff",
                   "callback": "SimComm1PowerOff",
-                  "description": "AUDIO1: COMM 1 Knob - Power Off",
-                  "label": "Power Off",
+                  "description": "AUDIO1: COMM 1 Knob - Off",
+                  "label": "Off",
                   "role": "off"
                 }
               ]
@@ -1066,19 +1066,19 @@
                   "role": "down"
                 },
                 {
-                  "id": "audio1comm2knobpoweron",
-                  "clazz": "Audio1Comm2KnobPowerOn",
+                  "id": "audio1comm2knobon",
+                  "clazz": "Audio1Comm2KnobOn",
                   "callback": "SimComm2PowerOn",
-                  "description": "AUDIO1: COMM 2 Knob - Power On",
-                  "label": "Power On",
+                  "description": "AUDIO1: COMM 2 Knob - On",
+                  "label": "On",
                   "role": "on"
                 },
                 {
-                  "id": "audio1comm2knobpoweroff",
-                  "clazz": "Audio1Comm2KnobPowerOff",
+                  "id": "audio1comm2knoboff",
+                  "clazz": "Audio1Comm2KnobOff",
                   "callback": "SimComm2PowerOff",
-                  "description": "AUDIO1: COMM 2 Knob - Power Off",
-                  "label": "Power Off",
+                  "description": "AUDIO1: COMM 2 Knob - Off",
+                  "label": "Off",
                   "role": "off"
                 }
               ]
@@ -1686,24 +1686,24 @@
             {
               "id": "CMDS: RWR Switch",
               "class": "CmdsRwrSwitch",
-              "description": "CMDS: RWR Switch - Power ON",
+              "description": "CMDS: RWR Switch - ON",
               "label": "RWR",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdsrwrswitchpoweron",
-                  "clazz": "CmdsRwrSwitchPowerOn",
+                  "id": "cmdsrwrswitchon",
+                  "clazz": "CmdsRwrSwitchOn",
                   "callback": "SimEWSRWROn",
-                  "description": "CMDS: RWR Switch - Power ON",
-                  "label": "Power ON",
+                  "description": "CMDS: RWR Switch - ON",
+                  "label": "ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdsrwrswitchpoweroff",
-                  "clazz": "CmdsRwrSwitchPowerOff",
+                  "id": "cmdsrwrswitchoff",
+                  "clazz": "CmdsRwrSwitchOff",
                   "callback": "SimEWSRWROff",
-                  "description": "CMDS: RWR Switch - Power OFF",
-                  "label": "Power OFF",
+                  "description": "CMDS: RWR Switch - OFF",
+                  "label": "OFF",
                   "role": "off"
                 }
               ]
@@ -1711,24 +1711,24 @@
             {
               "id": "CMDS: JMR Switch",
               "class": "CmdsJmrSwitch",
-              "description": "CMDS: JMR Switch - Power ON",
+              "description": "CMDS: JMR Switch - ON",
               "label": "JMR",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdsjmrswitchpoweron",
-                  "clazz": "CmdsJmrSwitchPowerOn",
+                  "id": "cmdsjmrswitchon",
+                  "clazz": "CmdsJmrSwitchOn",
                   "callback": "SimEWSJammerOn",
-                  "description": "CMDS: JMR Switch - Power ON",
-                  "label": "Power ON",
+                  "description": "CMDS: JMR Switch - ON",
+                  "label": "ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdsjmrswitchpoweroff",
-                  "clazz": "CmdsJmrSwitchPowerOff",
+                  "id": "cmdsjmrswitchoff",
+                  "clazz": "CmdsJmrSwitchOff",
                   "callback": "SimEWSJammerOff",
-                  "description": "CMDS: JMR Switch - Power OFF",
-                  "label": "Power OFF",
+                  "description": "CMDS: JMR Switch - OFF",
+                  "label": "OFF",
                   "role": "off"
                 }
               ]
@@ -1736,24 +1736,24 @@
             {
               "id": "CMDS: MWS Switch",
               "class": "CmdsMwsSwitch",
-              "description": "CMDS: MWS Switch - Power ON",
+              "description": "CMDS: MWS Switch - ON",
               "label": "MWS",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdsmwsswitchpoweron",
-                  "clazz": "CmdsMwsSwitchPowerOn",
+                  "id": "cmdsmwsswitchon",
+                  "clazz": "CmdsMwsSwitchOn",
                   "callback": "SimEWSMwsOn",
-                  "description": "CMDS: MWS Switch - Power ON",
-                  "label": "Power ON",
+                  "description": "CMDS: MWS Switch - ON",
+                  "label": "ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdsmwsswitchpoweroff",
-                  "clazz": "CmdsMwsSwitchPowerOff",
+                  "id": "cmdsmwsswitchoff",
+                  "clazz": "CmdsMwsSwitchOff",
                   "callback": "SimEWSMwsOff",
-                  "description": "CMDS: MWS Switch - Power OFF",
-                  "label": "Power OFF",
+                  "description": "CMDS: MWS Switch - OFF",
+                  "label": "OFF",
                   "role": "off"
                 }
               ]
@@ -1761,24 +1761,24 @@
             {
               "id": "CMDS: O1 Switch",
               "class": "CmdsO1Switch",
-              "description": "CMDS: O1 Switch - Power ON",
+              "description": "CMDS: O1 Switch - ON",
               "label": "O1",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdso1switchpoweron",
-                  "clazz": "CmdsO1SwitchPowerOn",
+                  "id": "cmdso1switchon",
+                  "clazz": "CmdsO1SwitchOn",
                   "callback": "SimEWSO1On",
-                  "description": "CMDS: O1 Switch - Power ON",
-                  "label": "Power ON",
+                  "description": "CMDS: O1 Switch - ON",
+                  "label": "ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdso1switchpoweroff",
-                  "clazz": "CmdsO1SwitchPowerOff",
+                  "id": "cmdso1switchoff",
+                  "clazz": "CmdsO1SwitchOff",
                   "callback": "SimEWSO1Off",
-                  "description": "CMDS: O1 Switch - Power OFF",
-                  "label": "Power OFF",
+                  "description": "CMDS: O1 Switch - OFF",
+                  "label": "OFF",
                   "role": "off"
                 }
               ]
@@ -1786,24 +1786,24 @@
             {
               "id": "CMDS: O2 Switch",
               "class": "CmdsO2Switch",
-              "description": "CMDS: O2 Switch - Power ON",
+              "description": "CMDS: O2 Switch - ON",
               "label": "O2",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdso2switchpoweron",
-                  "clazz": "CmdsO2SwitchPowerOn",
+                  "id": "cmdso2switchon",
+                  "clazz": "CmdsO2SwitchOn",
                   "callback": "SimEWSO2On",
-                  "description": "CMDS: O2 Switch - Power ON",
-                  "label": "Power ON",
+                  "description": "CMDS: O2 Switch - ON",
+                  "label": "ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdso2switchpoweroff",
-                  "clazz": "CmdsO2SwitchPowerOff",
+                  "id": "cmdso2switchoff",
+                  "clazz": "CmdsO2SwitchOff",
                   "callback": "SimEWSO2Off",
-                  "description": "CMDS: O2 Switch - Power OFF",
-                  "label": "Power OFF",
+                  "description": "CMDS: O2 Switch - OFF",
+                  "label": "OFF",
                   "role": "off"
                 }
               ]
@@ -1811,24 +1811,24 @@
             {
               "id": "CMDS: CH Switch",
               "class": "CmdsChSwitch",
-              "description": "CMDS: CH Switch - Power ON",
+              "description": "CMDS: CH Switch - ON",
               "label": "CH",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdschswitchpoweron",
-                  "clazz": "CmdsChSwitchPowerOn",
+                  "id": "cmdschswitchon",
+                  "clazz": "CmdsChSwitchOn",
                   "callback": "SimEWSChaffOn",
-                  "description": "CMDS: CH Switch - Power ON",
-                  "label": "Power ON",
+                  "description": "CMDS: CH Switch - ON",
+                  "label": "ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdschswitchpoweroff",
-                  "clazz": "CmdsChSwitchPowerOff",
+                  "id": "cmdschswitchoff",
+                  "clazz": "CmdsChSwitchOff",
                   "callback": "SimEWSChaffOff",
-                  "description": "CMDS: CH Switch - Power OFF",
-                  "label": "Power OFF",
+                  "description": "CMDS: CH Switch - OFF",
+                  "label": "OFF",
                   "role": "off"
                 }
               ]
@@ -1836,24 +1836,24 @@
             {
               "id": "CMDS: FL Switch",
               "class": "CmdsFlSwitch",
-              "description": "CMDS: FL Switch - Power ON",
+              "description": "CMDS: FL Switch - ON",
               "label": "FL",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdsflswitchpoweron",
-                  "clazz": "CmdsFlSwitchPowerOn",
+                  "id": "cmdsflswitchon",
+                  "clazz": "CmdsFlSwitchOn",
                   "callback": "SimEWSFlareOn",
-                  "description": "CMDS: FL Switch - Power ON",
-                  "label": "Power ON",
+                  "description": "CMDS: FL Switch - ON",
+                  "label": "ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdsflswitchpoweroff",
-                  "clazz": "CmdsFlSwitchPowerOff",
+                  "id": "cmdsflswitchoff",
+                  "clazz": "CmdsFlSwitchOff",
                   "callback": "SimEWSFlareOff",
-                  "description": "CMDS: FL Switch - Power OFF",
-                  "label": "Power OFF",
+                  "description": "CMDS: FL Switch - OFF",
+                  "label": "OFF",
                   "role": "off"
                 }
               ]

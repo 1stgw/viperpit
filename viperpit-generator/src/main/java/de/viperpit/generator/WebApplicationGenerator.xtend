@@ -39,6 +39,8 @@ class WebApplicationGenerator {
 			@import "~bootswatch/cyborg/bootswatch.less";
 			@import "~bootswatch/cyborg/bootswatch.less";
 			
+			@font-size-base: 18px;
+			
 			«FOR role : cockpit.roles»
 				«FOR type : cockpit.types»
 					.«type»-«role» {

@@ -2052,8 +2052,8 @@
       "callback": "SimStepComm1VolumeUp",
       "relatedActions": [
         "audio1comm1knobvolumedecr",
-        "audio1comm1knobpoweron",
-        "audio1comm1knobpoweroff"
+        "audio1comm1knobon",
+        "audio1comm1knoboff"
       ],
       "description": "AUDIO1: COMM 1 Knob - Volume Incr.",
       "category": "LEFT CONSOLE",
@@ -2069,8 +2069,8 @@
       "callback": "SimStepComm1VolumeDown",
       "relatedActions": [
         "audio1comm1knobvolumeincr",
-        "audio1comm1knobpoweron",
-        "audio1comm1knobpoweroff"
+        "audio1comm1knobon",
+        "audio1comm1knoboff"
       ],
       "description": "AUDIO1: COMM 1 Knob - Volume Decr.",
       "category": "LEFT CONSOLE",
@@ -2081,15 +2081,15 @@
       "type": "button"
     },
     {
-      "id": "audio1comm1knobpoweron",
-      "clazz": "Audio1Comm1KnobPowerOn",
+      "id": "audio1comm1knobon",
+      "clazz": "Audio1Comm1KnobOn",
       "callback": "SimComm1PowerOn",
       "relatedActions": [
         "audio1comm1knobvolumeincr",
         "audio1comm1knobvolumedecr",
-        "audio1comm1knobpoweroff"
+        "audio1comm1knoboff"
       ],
-      "description": "AUDIO1: COMM 1 Knob - Power On",
+      "description": "AUDIO1: COMM 1 Knob - On",
       "category": "LEFT CONSOLE",
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: COMM 1 Knob",
@@ -2103,15 +2103,15 @@
       }
     },
     {
-      "id": "audio1comm1knobpoweroff",
-      "clazz": "Audio1Comm1KnobPowerOff",
+      "id": "audio1comm1knoboff",
+      "clazz": "Audio1Comm1KnobOff",
       "callback": "SimComm1PowerOff",
       "relatedActions": [
         "audio1comm1knobvolumeincr",
         "audio1comm1knobvolumedecr",
-        "audio1comm1knobpoweron"
+        "audio1comm1knobon"
       ],
-      "description": "AUDIO1: COMM 1 Knob - Power Off",
+      "description": "AUDIO1: COMM 1 Knob - Off",
       "category": "LEFT CONSOLE",
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: COMM 1 Knob",
@@ -2130,8 +2130,8 @@
       "callback": "SimStepComm2VolumeUp",
       "relatedActions": [
         "audio1comm2knobvolumedecr",
-        "audio1comm2knobpoweron",
-        "audio1comm2knobpoweroff"
+        "audio1comm2knobon",
+        "audio1comm2knoboff"
       ],
       "description": "AUDIO1: COMM 2 Knob - Volume Incr.",
       "category": "LEFT CONSOLE",
@@ -2147,8 +2147,8 @@
       "callback": "SimStepComm2VolumeDown",
       "relatedActions": [
         "audio1comm2knobvolumeincr",
-        "audio1comm2knobpoweron",
-        "audio1comm2knobpoweroff"
+        "audio1comm2knobon",
+        "audio1comm2knoboff"
       ],
       "description": "AUDIO1: COMM 2 Knob - Volume Decr.",
       "category": "LEFT CONSOLE",
@@ -2159,15 +2159,15 @@
       "type": "button"
     },
     {
-      "id": "audio1comm2knobpoweron",
-      "clazz": "Audio1Comm2KnobPowerOn",
+      "id": "audio1comm2knobon",
+      "clazz": "Audio1Comm2KnobOn",
       "callback": "SimComm2PowerOn",
       "relatedActions": [
         "audio1comm2knobvolumeincr",
         "audio1comm2knobvolumedecr",
-        "audio1comm2knobpoweroff"
+        "audio1comm2knoboff"
       ],
-      "description": "AUDIO1: COMM 2 Knob - Power On",
+      "description": "AUDIO1: COMM 2 Knob - On",
       "category": "LEFT CONSOLE",
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: COMM 2 Knob",
@@ -2181,15 +2181,15 @@
       }
     },
     {
-      "id": "audio1comm2knobpoweroff",
-      "clazz": "Audio1Comm2KnobPowerOff",
+      "id": "audio1comm2knoboff",
+      "clazz": "Audio1Comm2KnobOff",
       "callback": "SimComm2PowerOff",
       "relatedActions": [
         "audio1comm2knobvolumeincr",
         "audio1comm2knobvolumedecr",
-        "audio1comm2knobpoweron"
+        "audio1comm2knobon"
       ],
-      "description": "AUDIO1: COMM 2 Knob - Power Off",
+      "description": "AUDIO1: COMM 2 Knob - Off",
       "category": "LEFT CONSOLE",
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: COMM 2 Knob",
@@ -3996,8 +3996,8 @@
       "clazz": "CmdsRwrSwitchTogglePower",
       "callback": "SimEWSRWRPower",
       "relatedActions": [
-        "cmdsrwrswitchpoweron",
-        "cmdsrwrswitchpoweroff"
+        "cmdsrwrswitchon",
+        "cmdsrwrswitchoff"
       ],
       "description": "CMDS: RWR Switch - Toggle Power",
       "category": "LEFT AUX CONSOLE",
@@ -4008,14 +4008,14 @@
       "type": "button"
     },
     {
-      "id": "cmdsrwrswitchpoweron",
-      "clazz": "CmdsRwrSwitchPowerOn",
+      "id": "cmdsrwrswitchon",
+      "clazz": "CmdsRwrSwitchOn",
       "callback": "SimEWSRWROn",
       "relatedActions": [
         "cmdsrwrswitchtogglepower",
-        "cmdsrwrswitchpoweroff"
+        "cmdsrwrswitchoff"
       ],
-      "description": "CMDS: RWR Switch - Power ON",
+      "description": "CMDS: RWR Switch - ON",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: RWR Switch",
@@ -4029,14 +4029,14 @@
       }
     },
     {
-      "id": "cmdsrwrswitchpoweroff",
-      "clazz": "CmdsRwrSwitchPowerOff",
+      "id": "cmdsrwrswitchoff",
+      "clazz": "CmdsRwrSwitchOff",
       "callback": "SimEWSRWROff",
       "relatedActions": [
         "cmdsrwrswitchtogglepower",
-        "cmdsrwrswitchpoweron"
+        "cmdsrwrswitchon"
       ],
-      "description": "CMDS: RWR Switch - Power OFF",
+      "description": "CMDS: RWR Switch - OFF",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: RWR Switch",
@@ -4054,8 +4054,8 @@
       "clazz": "CmdsJmrSwitchTogglePower",
       "callback": "SimEWSJammerPower",
       "relatedActions": [
-        "cmdsjmrswitchpoweron",
-        "cmdsjmrswitchpoweroff"
+        "cmdsjmrswitchon",
+        "cmdsjmrswitchoff"
       ],
       "description": "CMDS: JMR Switch - Toggle Power",
       "category": "LEFT AUX CONSOLE",
@@ -4066,14 +4066,14 @@
       "type": "button"
     },
     {
-      "id": "cmdsjmrswitchpoweron",
-      "clazz": "CmdsJmrSwitchPowerOn",
+      "id": "cmdsjmrswitchon",
+      "clazz": "CmdsJmrSwitchOn",
       "callback": "SimEWSJammerOn",
       "relatedActions": [
         "cmdsjmrswitchtogglepower",
-        "cmdsjmrswitchpoweroff"
+        "cmdsjmrswitchoff"
       ],
-      "description": "CMDS: JMR Switch - Power ON",
+      "description": "CMDS: JMR Switch - ON",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: JMR Switch",
@@ -4087,14 +4087,14 @@
       }
     },
     {
-      "id": "cmdsjmrswitchpoweroff",
-      "clazz": "CmdsJmrSwitchPowerOff",
+      "id": "cmdsjmrswitchoff",
+      "clazz": "CmdsJmrSwitchOff",
       "callback": "SimEWSJammerOff",
       "relatedActions": [
         "cmdsjmrswitchtogglepower",
-        "cmdsjmrswitchpoweron"
+        "cmdsjmrswitchon"
       ],
-      "description": "CMDS: JMR Switch - Power OFF",
+      "description": "CMDS: JMR Switch - OFF",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: JMR Switch",
@@ -4112,8 +4112,8 @@
       "clazz": "CmdsMwsSwitchTogglePower",
       "callback": "SimEWSMwsPower",
       "relatedActions": [
-        "cmdsmwsswitchpoweron",
-        "cmdsmwsswitchpoweroff"
+        "cmdsmwsswitchon",
+        "cmdsmwsswitchoff"
       ],
       "description": "CMDS: MWS Switch - Toggle Power",
       "category": "LEFT AUX CONSOLE",
@@ -4124,14 +4124,14 @@
       "type": "button"
     },
     {
-      "id": "cmdsmwsswitchpoweron",
-      "clazz": "CmdsMwsSwitchPowerOn",
+      "id": "cmdsmwsswitchon",
+      "clazz": "CmdsMwsSwitchOn",
       "callback": "SimEWSMwsOn",
       "relatedActions": [
         "cmdsmwsswitchtogglepower",
-        "cmdsmwsswitchpoweroff"
+        "cmdsmwsswitchoff"
       ],
-      "description": "CMDS: MWS Switch - Power ON",
+      "description": "CMDS: MWS Switch - ON",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: MWS Switch",
@@ -4145,14 +4145,14 @@
       }
     },
     {
-      "id": "cmdsmwsswitchpoweroff",
-      "clazz": "CmdsMwsSwitchPowerOff",
+      "id": "cmdsmwsswitchoff",
+      "clazz": "CmdsMwsSwitchOff",
       "callback": "SimEWSMwsOff",
       "relatedActions": [
         "cmdsmwsswitchtogglepower",
-        "cmdsmwsswitchpoweron"
+        "cmdsmwsswitchon"
       ],
-      "description": "CMDS: MWS Switch - Power OFF",
+      "description": "CMDS: MWS Switch - OFF",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: MWS Switch",
@@ -4170,8 +4170,8 @@
       "clazz": "CmdsO1SwitchTogglePower",
       "callback": "SimEWSO1Power",
       "relatedActions": [
-        "cmdso1switchpoweron",
-        "cmdso1switchpoweroff"
+        "cmdso1switchon",
+        "cmdso1switchoff"
       ],
       "description": "CMDS: O1 Switch - Toggle Power",
       "category": "LEFT AUX CONSOLE",
@@ -4182,14 +4182,14 @@
       "type": "button"
     },
     {
-      "id": "cmdso1switchpoweron",
-      "clazz": "CmdsO1SwitchPowerOn",
+      "id": "cmdso1switchon",
+      "clazz": "CmdsO1SwitchOn",
       "callback": "SimEWSO1On",
       "relatedActions": [
         "cmdso1switchtogglepower",
-        "cmdso1switchpoweroff"
+        "cmdso1switchoff"
       ],
-      "description": "CMDS: O1 Switch - Power ON",
+      "description": "CMDS: O1 Switch - ON",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: O1 Switch",
@@ -4203,14 +4203,14 @@
       }
     },
     {
-      "id": "cmdso1switchpoweroff",
-      "clazz": "CmdsO1SwitchPowerOff",
+      "id": "cmdso1switchoff",
+      "clazz": "CmdsO1SwitchOff",
       "callback": "SimEWSO1Off",
       "relatedActions": [
         "cmdso1switchtogglepower",
-        "cmdso1switchpoweron"
+        "cmdso1switchon"
       ],
-      "description": "CMDS: O1 Switch - Power OFF",
+      "description": "CMDS: O1 Switch - OFF",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: O1 Switch",
@@ -4228,8 +4228,8 @@
       "clazz": "CmdsO2SwitchTogglePower",
       "callback": "SimEWSO2Power",
       "relatedActions": [
-        "cmdso2switchpoweron",
-        "cmdso2switchpoweroff"
+        "cmdso2switchon",
+        "cmdso2switchoff"
       ],
       "description": "CMDS: O2 Switch - Toggle Power",
       "category": "LEFT AUX CONSOLE",
@@ -4240,14 +4240,14 @@
       "type": "button"
     },
     {
-      "id": "cmdso2switchpoweron",
-      "clazz": "CmdsO2SwitchPowerOn",
+      "id": "cmdso2switchon",
+      "clazz": "CmdsO2SwitchOn",
       "callback": "SimEWSO2On",
       "relatedActions": [
         "cmdso2switchtogglepower",
-        "cmdso2switchpoweroff"
+        "cmdso2switchoff"
       ],
-      "description": "CMDS: O2 Switch - Power ON",
+      "description": "CMDS: O2 Switch - ON",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: O2 Switch",
@@ -4261,14 +4261,14 @@
       }
     },
     {
-      "id": "cmdso2switchpoweroff",
-      "clazz": "CmdsO2SwitchPowerOff",
+      "id": "cmdso2switchoff",
+      "clazz": "CmdsO2SwitchOff",
       "callback": "SimEWSO2Off",
       "relatedActions": [
         "cmdso2switchtogglepower",
-        "cmdso2switchpoweron"
+        "cmdso2switchon"
       ],
-      "description": "CMDS: O2 Switch - Power OFF",
+      "description": "CMDS: O2 Switch - OFF",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: O2 Switch",
@@ -4286,8 +4286,8 @@
       "clazz": "CmdsChSwitchTogglePower",
       "callback": "SimEWSChaffPower",
       "relatedActions": [
-        "cmdschswitchpoweron",
-        "cmdschswitchpoweroff"
+        "cmdschswitchon",
+        "cmdschswitchoff"
       ],
       "description": "CMDS: CH Switch - Toggle Power",
       "category": "LEFT AUX CONSOLE",
@@ -4298,14 +4298,14 @@
       "type": "button"
     },
     {
-      "id": "cmdschswitchpoweron",
-      "clazz": "CmdsChSwitchPowerOn",
+      "id": "cmdschswitchon",
+      "clazz": "CmdsChSwitchOn",
       "callback": "SimEWSChaffOn",
       "relatedActions": [
         "cmdschswitchtogglepower",
-        "cmdschswitchpoweroff"
+        "cmdschswitchoff"
       ],
-      "description": "CMDS: CH Switch - Power ON",
+      "description": "CMDS: CH Switch - ON",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: CH Switch",
@@ -4319,14 +4319,14 @@
       }
     },
     {
-      "id": "cmdschswitchpoweroff",
-      "clazz": "CmdsChSwitchPowerOff",
+      "id": "cmdschswitchoff",
+      "clazz": "CmdsChSwitchOff",
       "callback": "SimEWSChaffOff",
       "relatedActions": [
         "cmdschswitchtogglepower",
-        "cmdschswitchpoweron"
+        "cmdschswitchon"
       ],
-      "description": "CMDS: CH Switch - Power OFF",
+      "description": "CMDS: CH Switch - OFF",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: CH Switch",
@@ -4344,8 +4344,8 @@
       "clazz": "CmdsFlSwitchTogglePower",
       "callback": "SimEWSFlarePower",
       "relatedActions": [
-        "cmdsflswitchpoweron",
-        "cmdsflswitchpoweroff"
+        "cmdsflswitchon",
+        "cmdsflswitchoff"
       ],
       "description": "CMDS: FL Switch - Toggle Power",
       "category": "LEFT AUX CONSOLE",
@@ -4356,14 +4356,14 @@
       "type": "button"
     },
     {
-      "id": "cmdsflswitchpoweron",
-      "clazz": "CmdsFlSwitchPowerOn",
+      "id": "cmdsflswitchon",
+      "clazz": "CmdsFlSwitchOn",
       "callback": "SimEWSFlareOn",
       "relatedActions": [
         "cmdsflswitchtogglepower",
-        "cmdsflswitchpoweroff"
+        "cmdsflswitchoff"
       ],
-      "description": "CMDS: FL Switch - Power ON",
+      "description": "CMDS: FL Switch - ON",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: FL Switch",
@@ -4377,14 +4377,14 @@
       }
     },
     {
-      "id": "cmdsflswitchpoweroff",
-      "clazz": "CmdsFlSwitchPowerOff",
+      "id": "cmdsflswitchoff",
+      "clazz": "CmdsFlSwitchOff",
       "callback": "SimEWSFlareOff",
       "relatedActions": [
         "cmdsflswitchtogglepower",
-        "cmdsflswitchpoweron"
+        "cmdsflswitchon"
       ],
-      "description": "CMDS: FL Switch - Power OFF",
+      "description": "CMDS: FL Switch - OFF",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: FL Switch",
@@ -4402,8 +4402,8 @@
       "clazz": "CmdsDispSwitchToggleMluEwPanel",
       "callback": "SimEWSDispPower",
       "relatedActions": [
-        "cmdsdispswitchpoweronmluewpanel",
-        "cmdsdispswitchpoweroffmluewpanel"
+        "cmdsdispswitchonmluewpanel",
+        "cmdsdispswitchoffmluewpanel"
       ],
       "description": "CMDS: DISP Switch - Toggle (MLU EW Panel)",
       "category": "LEFT AUX CONSOLE",
@@ -4414,14 +4414,14 @@
       "type": "button"
     },
     {
-      "id": "cmdsdispswitchpoweronmluewpanel",
-      "clazz": "CmdsDispSwitchPowerOnMluEwPanel",
+      "id": "cmdsdispswitchonmluewpanel",
+      "clazz": "CmdsDispSwitchOnMluEwPanel",
       "callback": "SimEWSDispOn",
       "relatedActions": [
         "cmdsdispswitchtogglemluewpanel",
-        "cmdsdispswitchpoweroffmluewpanel"
+        "cmdsdispswitchoffmluewpanel"
       ],
-      "description": "CMDS: DISP Switch - Power On (MLU EW Panel)",
+      "description": "CMDS: DISP Switch - On (MLU EW Panel)",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: DISP Switch",
@@ -4435,14 +4435,14 @@
       }
     },
     {
-      "id": "cmdsdispswitchpoweroffmluewpanel",
-      "clazz": "CmdsDispSwitchPowerOffMluEwPanel",
+      "id": "cmdsdispswitchoffmluewpanel",
+      "clazz": "CmdsDispSwitchOffMluEwPanel",
       "callback": "SimEWSDispOff",
       "relatedActions": [
         "cmdsdispswitchtogglemluewpanel",
-        "cmdsdispswitchpoweronmluewpanel"
+        "cmdsdispswitchonmluewpanel"
       ],
-      "description": "CMDS: DISP Switch - Power Off (MLU EW Panel)",
+      "description": "CMDS: DISP Switch - Off (MLU EW Panel)",
       "category": "LEFT AUX CONSOLE",
       "section": "CMDS PANEL",
       "group": "CMDS: DISP Switch",

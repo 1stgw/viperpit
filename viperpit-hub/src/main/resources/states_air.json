@@ -5,145 +5,145 @@
     "callback" : "SimEWSRWRPower",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "cmdsrwrswitchpoweron", "cmdsrwrswitchpoweroff" ]
+    "relatedActions" : [ "cmdsrwrswitchon", "cmdsrwrswitchoff" ]
   }, {
-    "id" : "cmdsrwrswitchpoweron",
+    "id" : "cmdsrwrswitchon",
     "callback" : "SimEWSRWROn",
     "active" : true,
     "stateful" : true,
-    "relatedActions" : [ "cmdsrwrswitchtogglepower", "cmdsrwrswitchpoweroff" ]
+    "relatedActions" : [ "cmdsrwrswitchtogglepower", "cmdsrwrswitchoff" ]
   }, {
-    "id" : "cmdsrwrswitchpoweroff",
+    "id" : "cmdsrwrswitchoff",
     "callback" : "SimEWSRWROff",
     "active" : false,
     "stateful" : true,
-    "relatedActions" : [ "cmdsrwrswitchtogglepower", "cmdsrwrswitchpoweron" ]
+    "relatedActions" : [ "cmdsrwrswitchtogglepower", "cmdsrwrswitchon" ]
   }, {
     "id" : "cmdsjmrswitchtogglepower",
     "callback" : "SimEWSJammerPower",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "cmdsjmrswitchpoweron", "cmdsjmrswitchpoweroff" ]
+    "relatedActions" : [ "cmdsjmrswitchon", "cmdsjmrswitchoff" ]
   }, {
-    "id" : "cmdsjmrswitchpoweron",
+    "id" : "cmdsjmrswitchon",
     "callback" : "SimEWSJammerOn",
     "active" : true,
     "stateful" : true,
-    "relatedActions" : [ "cmdsjmrswitchtogglepower", "cmdsjmrswitchpoweroff" ]
+    "relatedActions" : [ "cmdsjmrswitchtogglepower", "cmdsjmrswitchoff" ]
   }, {
-    "id" : "cmdsjmrswitchpoweroff",
+    "id" : "cmdsjmrswitchoff",
     "callback" : "SimEWSJammerOff",
     "active" : false,
     "stateful" : true,
-    "relatedActions" : [ "cmdsjmrswitchtogglepower", "cmdsjmrswitchpoweron" ]
+    "relatedActions" : [ "cmdsjmrswitchtogglepower", "cmdsjmrswitchon" ]
   }, {
     "id" : "cmdsmwsswitchtogglepower",
     "callback" : "SimEWSMwsPower",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "cmdsmwsswitchpoweron", "cmdsmwsswitchpoweroff" ]
+    "relatedActions" : [ "cmdsmwsswitchon", "cmdsmwsswitchoff" ]
   }, {
-    "id" : "cmdsmwsswitchpoweron",
+    "id" : "cmdsmwsswitchon",
     "callback" : "SimEWSMwsOn",
     "active" : true,
     "stateful" : true,
-    "relatedActions" : [ "cmdsmwsswitchtogglepower", "cmdsmwsswitchpoweroff" ]
+    "relatedActions" : [ "cmdsmwsswitchtogglepower", "cmdsmwsswitchoff" ]
   }, {
-    "id" : "cmdsmwsswitchpoweroff",
+    "id" : "cmdsmwsswitchoff",
     "callback" : "SimEWSMwsOff",
     "active" : false,
     "stateful" : true,
-    "relatedActions" : [ "cmdsmwsswitchtogglepower", "cmdsmwsswitchpoweron" ]
+    "relatedActions" : [ "cmdsmwsswitchtogglepower", "cmdsmwsswitchon" ]
   }, {
     "id" : "cmdso1switchtogglepower",
     "callback" : "SimEWSO1Power",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "cmdso1switchpoweron", "cmdso1switchpoweroff" ]
+    "relatedActions" : [ "cmdso1switchon", "cmdso1switchoff" ]
   }, {
-    "id" : "cmdso1switchpoweron",
+    "id" : "cmdso1switchon",
     "callback" : "SimEWSO1On",
     "active" : true,
     "stateful" : true,
-    "relatedActions" : [ "cmdso1switchtogglepower", "cmdso1switchpoweroff" ]
+    "relatedActions" : [ "cmdso1switchtogglepower", "cmdso1switchoff" ]
   }, {
-    "id" : "cmdso1switchpoweroff",
+    "id" : "cmdso1switchoff",
     "callback" : "SimEWSO1Off",
     "active" : false,
     "stateful" : true,
-    "relatedActions" : [ "cmdso1switchtogglepower", "cmdso1switchpoweron" ]
+    "relatedActions" : [ "cmdso1switchtogglepower", "cmdso1switchon" ]
   }, {
     "id" : "cmdso2switchtogglepower",
     "callback" : "SimEWSO2Power",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "cmdso2switchpoweron", "cmdso2switchpoweroff" ]
+    "relatedActions" : [ "cmdso2switchon", "cmdso2switchoff" ]
   }, {
-    "id" : "cmdso2switchpoweron",
+    "id" : "cmdso2switchon",
     "callback" : "SimEWSO2On",
     "active" : true,
     "stateful" : true,
-    "relatedActions" : [ "cmdso2switchtogglepower", "cmdso2switchpoweroff" ]
+    "relatedActions" : [ "cmdso2switchtogglepower", "cmdso2switchoff" ]
   }, {
-    "id" : "cmdso2switchpoweroff",
+    "id" : "cmdso2switchoff",
     "callback" : "SimEWSO2Off",
     "active" : false,
     "stateful" : true,
-    "relatedActions" : [ "cmdso2switchtogglepower", "cmdso2switchpoweron" ]
+    "relatedActions" : [ "cmdso2switchtogglepower", "cmdso2switchon" ]
   }, {
     "id" : "cmdschswitchtogglepower",
     "callback" : "SimEWSChaffPower",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "cmdschswitchpoweron", "cmdschswitchpoweroff" ]
+    "relatedActions" : [ "cmdschswitchon", "cmdschswitchoff" ]
   }, {
-    "id" : "cmdschswitchpoweron",
+    "id" : "cmdschswitchon",
     "callback" : "SimEWSChaffOn",
     "active" : true,
     "stateful" : true,
-    "relatedActions" : [ "cmdschswitchtogglepower", "cmdschswitchpoweroff" ]
+    "relatedActions" : [ "cmdschswitchtogglepower", "cmdschswitchoff" ]
   }, {
-    "id" : "cmdschswitchpoweroff",
+    "id" : "cmdschswitchoff",
     "callback" : "SimEWSChaffOff",
     "active" : false,
     "stateful" : true,
-    "relatedActions" : [ "cmdschswitchtogglepower", "cmdschswitchpoweron" ]
+    "relatedActions" : [ "cmdschswitchtogglepower", "cmdschswitchon" ]
   }, {
     "id" : "cmdsflswitchtogglepower",
     "callback" : "SimEWSFlarePower",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "cmdsflswitchpoweron", "cmdsflswitchpoweroff" ]
+    "relatedActions" : [ "cmdsflswitchon", "cmdsflswitchoff" ]
   }, {
-    "id" : "cmdsflswitchpoweron",
+    "id" : "cmdsflswitchon",
     "callback" : "SimEWSFlareOn",
     "active" : true,
     "stateful" : true,
-    "relatedActions" : [ "cmdsflswitchtogglepower", "cmdsflswitchpoweroff" ]
+    "relatedActions" : [ "cmdsflswitchtogglepower", "cmdsflswitchoff" ]
   }, {
-    "id" : "cmdsflswitchpoweroff",
+    "id" : "cmdsflswitchoff",
     "callback" : "SimEWSFlareOff",
     "active" : false,
     "stateful" : true,
-    "relatedActions" : [ "cmdsflswitchtogglepower", "cmdsflswitchpoweron" ]
+    "relatedActions" : [ "cmdsflswitchtogglepower", "cmdsflswitchon" ]
   }, {
     "id" : "cmdsdispswitchtogglemluewpanel",
     "callback" : "SimEWSDispPower",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "cmdsdispswitchpoweronmluewpanel", "cmdsdispswitchpoweroffmluewpanel" ]
+    "relatedActions" : [ "cmdsdispswitchonmluewpanel", "cmdsdispswitchoffmluewpanel" ]
   }, {
-    "id" : "cmdsdispswitchpoweronmluewpanel",
+    "id" : "cmdsdispswitchonmluewpanel",
     "callback" : "SimEWSDispOn",
     "active" : false,
     "stateful" : true,
-    "relatedActions" : [ "cmdsdispswitchtogglemluewpanel", "cmdsdispswitchpoweroffmluewpanel" ]
+    "relatedActions" : [ "cmdsdispswitchtogglemluewpanel", "cmdsdispswitchoffmluewpanel" ]
   }, {
-    "id" : "cmdsdispswitchpoweroffmluewpanel",
+    "id" : "cmdsdispswitchoffmluewpanel",
     "callback" : "SimEWSDispOff",
     "active" : false,
     "stateful" : true,
-    "relatedActions" : [ "cmdsdispswitchtogglemluewpanel", "cmdsdispswitchpoweronmluewpanel" ]
+    "relatedActions" : [ "cmdsdispswitchtogglemluewpanel", "cmdsdispswitchonmluewpanel" ]
   }, {
     "id" : "cmdsjettswitchtoggle",
     "callback" : "SimEwsJett",
@@ -467,49 +467,49 @@
     "callback" : "SimStepComm1VolumeUp",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "audio1comm1knobvolumedecr", "audio1comm1knobpoweron", "audio1comm1knobpoweroff" ]
+    "relatedActions" : [ "audio1comm1knobvolumedecr", "audio1comm1knobon", "audio1comm1knoboff" ]
   }, {
     "id" : "audio1comm1knobvolumedecr",
     "callback" : "SimStepComm1VolumeDown",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "audio1comm1knobvolumeincr", "audio1comm1knobpoweron", "audio1comm1knobpoweroff" ]
+    "relatedActions" : [ "audio1comm1knobvolumeincr", "audio1comm1knobon", "audio1comm1knoboff" ]
   }, {
-    "id" : "audio1comm1knobpoweron",
+    "id" : "audio1comm1knobon",
     "callback" : "SimComm1PowerOn",
     "active" : true,
     "stateful" : true,
-    "relatedActions" : [ "audio1comm1knobvolumeincr", "audio1comm1knobvolumedecr", "audio1comm1knobpoweroff" ]
+    "relatedActions" : [ "audio1comm1knobvolumeincr", "audio1comm1knobvolumedecr", "audio1comm1knoboff" ]
   }, {
-    "id" : "audio1comm1knobpoweroff",
+    "id" : "audio1comm1knoboff",
     "callback" : "SimComm1PowerOff",
     "active" : false,
     "stateful" : true,
-    "relatedActions" : [ "audio1comm1knobvolumeincr", "audio1comm1knobvolumedecr", "audio1comm1knobpoweron" ]
+    "relatedActions" : [ "audio1comm1knobvolumeincr", "audio1comm1knobvolumedecr", "audio1comm1knobon" ]
   }, {
     "id" : "audio1comm2knobvolumeincr",
     "callback" : "SimStepComm2VolumeUp",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "audio1comm2knobvolumedecr", "audio1comm2knobpoweron", "audio1comm2knobpoweroff" ]
+    "relatedActions" : [ "audio1comm2knobvolumedecr", "audio1comm2knobon", "audio1comm2knoboff" ]
   }, {
     "id" : "audio1comm2knobvolumedecr",
     "callback" : "SimStepComm2VolumeDown",
     "active" : false,
     "stateful" : false,
-    "relatedActions" : [ "audio1comm2knobvolumeincr", "audio1comm2knobpoweron", "audio1comm2knobpoweroff" ]
+    "relatedActions" : [ "audio1comm2knobvolumeincr", "audio1comm2knobon", "audio1comm2knoboff" ]
   }, {
-    "id" : "audio1comm2knobpoweron",
+    "id" : "audio1comm2knobon",
     "callback" : "SimComm2PowerOn",
     "active" : true,
     "stateful" : true,
-    "relatedActions" : [ "audio1comm2knobvolumeincr", "audio1comm2knobvolumedecr", "audio1comm2knobpoweroff" ]
+    "relatedActions" : [ "audio1comm2knobvolumeincr", "audio1comm2knobvolumedecr", "audio1comm2knoboff" ]
   }, {
-    "id" : "audio1comm2knobpoweroff",
+    "id" : "audio1comm2knoboff",
     "callback" : "SimComm2PowerOff",
     "active" : false,
     "stateful" : true,
-    "relatedActions" : [ "audio1comm2knobvolumeincr", "audio1comm2knobvolumedecr", "audio1comm2knobpoweron" ]
+    "relatedActions" : [ "audio1comm2knobvolumeincr", "audio1comm2knobvolumedecr", "audio1comm2knobon" ]
   }, {
     "id" : "audio1mslknobvolumeincr",
     "callback" : "SimStepMissileVolumeUp",

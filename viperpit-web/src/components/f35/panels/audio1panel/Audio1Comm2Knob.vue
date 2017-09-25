@@ -17,15 +17,15 @@
       type="button"
       role="down"/>
     <control
-      id="audio1comm2knobpoweron"
-      description="AUDIO1: COMM 2 Knob - Power On"
-      label="Power On"
+      id="audio1comm2knobon"
+      description="AUDIO1: COMM 2 Knob - On"
+      label="On"
       type="button"
       role="on"/>
     <control
-      id="audio1comm2knobpoweroff"
-      description="AUDIO1: COMM 2 Knob - Power Off"
-      label="Power Off"
+      id="audio1comm2knoboff"
+      description="AUDIO1: COMM 2 Knob - Off"
+      label="Off"
       type="button"
       role="off"/>
   </button-group>
