@@ -13,9 +13,6 @@
     <div v-else-if="role === 'right'">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     </div>
-    <div v-else-if="type === 'C'">
-        
-    </div>
     <div v-else>
         {{label}}
     </div>
