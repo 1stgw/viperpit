@@ -22,7 +22,7 @@ sourceSets {
 
 node {
 	version = "8.4.0"
-	npmVersion = "5.3.0"
+	npmVersion = "5.4.2"
 	download = true
 }
 
