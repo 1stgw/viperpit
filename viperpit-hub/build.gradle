@@ -19,14 +19,14 @@ dependencies {
 	compile project(":viperpit-commons")
 	compile project(":viperpit-web")
 	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.12.0")
-	compile("org.springframework.boot:spring-boot-starter-cache:1.5.6.RELEASE")
-	compile("org.springframework.boot:spring-boot-starter-web:1.5.6.RELEASE") {
+	compile("org.springframework.boot:spring-boot-starter-cache:1.5.7.RELEASE")
+	compile("org.springframework.boot:spring-boot-starter-web:1.5.7.RELEASE") {
 		exclude module: "spring-boot-starter-tomcat"
 	}
-	compile("org.springframework.boot:spring-boot-starter-jetty:1.5.6.RELEASE")
-	compile("org.springframework.boot:spring-boot-starter-websocket:1.5.6.RELEASE") {
+	compile("org.springframework.boot:spring-boot-starter-jetty:1.5.7.RELEASE")
+	compile("org.springframework.boot:spring-boot-starter-websocket:1.5.7.RELEASE") {
 		exclude module: "spring-boot-starter-tomcat"
 	}
-	compile("org.springframework.boot:spring-boot-starter-actuator:1.5.6.RELEASE")
-	testCompile("org.springframework.boot:spring-boot-starter-test:1.5.6.RELEASE")
+	compile("org.springframework.boot:spring-boot-starter-actuator:1.5.7.RELEASE")
+	testCompile("org.springframework.boot:spring-boot-starter-test:1.5.7.RELEASE")
 }
