@@ -73,23 +73,22 @@ public class CockpitService {
 		if (preset == null) {
 			return null;
 		}
-		State state = states.get(agent);
-		if (state == null) {
-			String location = "classpath:/states_" + JAVA_LETTER_OR_DIGIT.retainFrom(preset) + ".json";
-			Resource resource = resourceLoader.getResource(location);
-			if (resource.exists()) {
-				try {
-					Collection<Action> actions = objectMapper.readValue(resource.getInputStream(), State.class).getActions();
-					state = new State(agent, actions);
-					states.put(agent, state);
-				} catch (IOException exception) {
-					logger.error("Error while loading: " + location, exception);
-				}
-			} else {
-				logger.error("State file in " + location + " could not be loaded");
+		String location = "classpath:/states_" + JAVA_LETTER_OR_DIGIT.retainFrom(preset) + ".json";
+		Resource resource = resourceLoader.getResource(location);
+		if (resource.exists()) {
+			try {
+				Collection<Action> actions = objectMapper.readValue(resource.getInputStream(), State.class)
+						.getActions();
+				State state = new State(agent, actions);
+				states.put(agent, state);
+				return state;
+			} catch (IOException exception) {
+				logger.error("Error while loading: " + location, exception);
 			}
+		} else {
+			logger.error("State file in " + location + " could not be loaded");
 		}
-		return state;
+		return null;
 	}
 
 	public State toggle(Agent agent, String callback) {

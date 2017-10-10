@@ -5291,7 +5291,7 @@
         "mainhsihdgknobdecrease1"
       ],
       "description": "MAIN: HSI HDG Knob - Increase (5°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: HSI HDG Knob",
       "style": "knob",
@@ -5308,7 +5308,7 @@
         "mainhsihdgknobdecrease1"
       ],
       "description": "MAIN: HSI HDG Knob - Decrease (5°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: HSI HDG Knob",
       "style": "knob",
@@ -5325,7 +5325,7 @@
         "mainhsihdgknobdecrease1"
       ],
       "description": "MAIN: HSI HDG Knob - Increase (1°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: HSI HDG Knob",
       "style": "knob",
@@ -5342,7 +5342,7 @@
         "mainhsihdgknobincrease1"
       ],
       "description": "MAIN: HSI HDG Knob - Decrease (1°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: HSI HDG Knob",
       "style": "knob",
@@ -5359,7 +5359,7 @@
         "mainhsicrsknobdecrease1"
       ],
       "description": "MAIN: HSI CRS Knob - Increase (5°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: HSI CRS Knob",
       "style": "knob",
@@ -5376,7 +5376,7 @@
         "mainhsicrsknobdecrease1"
       ],
       "description": "MAIN: HSI CRS Knob - Decrease (5°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: HSI CRS Knob",
       "style": "knob",
@@ -5393,7 +5393,7 @@
         "mainhsicrsknobdecrease1"
       ],
       "description": "MAIN: HSI CRS Knob - Increase (1°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: HSI CRS Knob",
       "style": "knob",
@@ -5410,7 +5410,7 @@
         "mainhsicrsknobincrease1"
       ],
       "description": "MAIN: HSI CRS Knob - Decrease (1°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: HSI CRS Knob",
       "style": "knob",
@@ -5427,7 +5427,7 @@
         "mainaltimeterpressureknobdecr1"
       ],
       "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: Altimeter Pressure Knob",
       "style": "knob",
@@ -5444,7 +5444,7 @@
         "mainaltimeterpressureknobdecr1"
       ],
       "description": "MAIN: Altimeter Pressure Knob - Decr. (5°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: Altimeter Pressure Knob",
       "style": "knob",
@@ -5461,7 +5461,7 @@
         "mainaltimeterpressureknobdecr1"
       ],
       "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: Altimeter Pressure Knob",
       "style": "knob",
@@ -5478,7 +5478,7 @@
         "mainaltimeterpressureknobincr1"
       ],
       "description": "MAIN: Altimeter Pressure Knob - Decr. (1°)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: Altimeter Pressure Knob",
       "style": "knob",
@@ -5498,7 +5498,7 @@
         "instrmodeknobilsnav"
       ],
       "description": "INSTR: MODE Knob - Cycle",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "INSTR MODE PANEL",
       "group": "INSTR: MODE Knob",
       "style": "knob",
@@ -5518,7 +5518,7 @@
         "instrmodeknobilsnav"
       ],
       "description": "INSTR: MODE Knob - Step Up",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "INSTR MODE PANEL",
       "group": "INSTR: MODE Knob",
       "style": "knob",
@@ -5538,7 +5538,7 @@
         "instrmodeknobilsnav"
       ],
       "description": "INSTR: MODE Knob - Step Down",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "INSTR MODE PANEL",
       "group": "INSTR: MODE Knob",
       "style": "knob",
@@ -5558,7 +5558,7 @@
         "instrmodeknobilsnav"
       ],
       "description": "INSTR: MODE Knob - ILS/TCN",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "INSTR MODE PANEL",
       "group": "INSTR: MODE Knob",
       "style": "knob",
@@ -5583,7 +5583,7 @@
         "instrmodeknobilsnav"
       ],
       "description": "INSTR: MODE Knob - TCN",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "INSTR MODE PANEL",
       "group": "INSTR: MODE Knob",
       "style": "knob",
@@ -5608,7 +5608,7 @@
         "instrmodeknobilsnav"
       ],
       "description": "INSTR: MODE Knob - NAV",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "INSTR MODE PANEL",
       "group": "INSTR: MODE Knob",
       "style": "knob",
@@ -5633,7 +5633,7 @@
         "instrmodeknobnav"
       ],
       "description": "INSTR: MODE Knob - ILS/NAV",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "INSTR MODE PANEL",
       "group": "INSTR: MODE Knob",
       "style": "knob",
@@ -5650,7 +5650,7 @@
       "clazz": "MiscAdvModeToggleTfrOnOff",
       "callback": "SimToggleTFR",
       "description": "MISC: ADV MODE - Toggle TFR On / Off",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: ADV MODE",
       "style": "button",
@@ -5669,7 +5669,7 @@
         "miscrollswitchstrgsel"
       ],
       "description": "MISC: ROLL Switch - Cycle",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: ROLL Switch",
       "style": "button",
@@ -5688,7 +5688,7 @@
         "miscrollswitchstrgsel"
       ],
       "description": "MISC: ROLL Switch - Step Up",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: ROLL Switch",
       "style": "button",
@@ -5707,7 +5707,7 @@
         "miscrollswitchstrgsel"
       ],
       "description": "MISC: ROLL Switch - Step Down",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: ROLL Switch",
       "style": "button",
@@ -5726,7 +5726,7 @@
         "miscrollswitchstrgsel"
       ],
       "description": "MISC: ROLL Switch - HDG SEL",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: ROLL Switch",
       "style": "switch",
@@ -5750,7 +5750,7 @@
         "miscrollswitchstrgsel"
       ],
       "description": "MISC: ROLL Switch - ATT HOLD",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: ROLL Switch",
       "style": "switch",
@@ -5774,7 +5774,7 @@
         "miscrollswitchatthold"
       ],
       "description": "MISC: ROLL Switch -  STRG SEL",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: ROLL Switch",
       "style": "switch",
@@ -5798,7 +5798,7 @@
         "miscpitchswitchatthold"
       ],
       "description": "MISC: PITCH Switch - Cycle (also Combat AP)",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: PITCH Switch",
       "style": "button",
@@ -5817,7 +5817,7 @@
         "miscpitchswitchatthold"
       ],
       "description": "MISC: PITCH Switch - Step Up",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: PITCH Switch",
       "style": "button",
@@ -5836,7 +5836,7 @@
         "miscpitchswitchatthold"
       ],
       "description": "MISC: PITCH Switch - Step Down",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: PITCH Switch",
       "style": "button",
@@ -5855,7 +5855,7 @@
         "miscpitchswitchatthold"
       ],
       "description": "MISC: PITCH Switch - ALT HOLD",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: PITCH Switch",
       "style": "switch",
@@ -5879,7 +5879,7 @@
         "miscpitchswitchatthold"
       ],
       "description": "MISC: PITCH Switch - A/P OFF",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: PITCH Switch",
       "style": "switch",
@@ -5903,7 +5903,7 @@
         "miscpitchswitchapoff"
       ],
       "description": "MISC: PITCH Switch - ATT HOLD",
-      "category": "NAV",
+      "category": "NAVI",
       "section": "AP AND TFR PANEL",
       "group": "MISC: PITCH Switch",
       "style": "switch",

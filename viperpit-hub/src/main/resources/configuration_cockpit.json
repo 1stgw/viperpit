@@ -30,9 +30,9 @@
     "className" : "Sensors",
     "name" : "Sensors"
   }, {
-    "id" : "nav",
-    "className" : "Nav",
-    "name" : "Nav"
+    "id" : "navi",
+    "className" : "Navi",
+    "name" : "Navi"
   }, {
     "id" : "avionics",
     "className" : "Avionics",

@@ -22,7 +22,7 @@ import InstrModePanel from '../panels/instrmodepanel/InstrModePanel'
 import ApAndTfrPanel from '../panels/apandtfrpanel/ApAndTfrPanel'
 
 export default {
-  name: 'Nav',
+  name: 'Navi',
   components: {
     MainInstrument,
     InstrModePanel,

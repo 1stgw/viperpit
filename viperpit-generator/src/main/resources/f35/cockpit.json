@@ -2420,9 +2420,9 @@
       ]
     },
     {
-      "id": "nav",
-      "class": "Nav",
-      "name": "Nav",
+      "id": "navi",
+      "class": "Navi",
+      "name": "Navi",
       "panel": [
         {
           "id": "maininstrument",

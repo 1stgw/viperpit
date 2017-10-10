@@ -25,7 +25,7 @@ const actions = {
   connectAgent ({ commit, dispatch }, agentId) {
     dispatch('loadAgents').then(() => {
       commit(types.AGENTS_CONNECT, agentId)
-      dispatch('loadState', agentId).then(() => {
+      dispatch('loadState', 'ramp').then(() => {
       })
     })
   },
@@ -43,9 +43,9 @@ const actions = {
       console.log(response)
     })
   },
-  loadState ({ commit }, agentId) {
+  loadState ({ commit }, preset) {
     if (state.agentId) {
-      return Vue.http.get('/services/cockpit/states/load/' + state.agentId + '/ramp').then(response => {
+      return Vue.http.get('/services/cockpit/states/load/' + state.agentId + '/' + preset).then(response => {
         const actions = response.body.actions
         if (!actions) {
           return
