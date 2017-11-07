@@ -21,9 +21,13 @@ sourceSets {
 }
 
 node {
-	version = "8.4.0"
-	npmVersion = "5.4.2"
+	version = "8.9.0"
+	npmVersion = "5.5.1"
 	download = true
+}
+
+task npmUpdate(type: NpmTask, dependsOn: "npmInstall") {
+	args = ["update", "--save"]
 }
 
 task npmRunBuild(type: NpmTask, dependsOn: "npmInstall") {

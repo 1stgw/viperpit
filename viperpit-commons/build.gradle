@@ -8,5 +8,5 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.12.0")
+	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.13.0")
 }
