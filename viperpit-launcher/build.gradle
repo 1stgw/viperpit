@@ -1,0 +1,24 @@
+apply plugin: "java"
+apply plugin: "org.springframework.boot"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+configurations { 
+	providedCompile
+}
+
+bootRepackage  {
+	classifier = "boot"
+}
+
+springBoot {
+	executable = true
+}
+
+dependencies {
+	compile project(":viperpit-agent")
+	compile project(":viperpit-hub")
+	compile("org.slf4j:slf4j-api:1.7.24")
+	compile("ch.qos.logback:logback-classic:1.1.11")
+}

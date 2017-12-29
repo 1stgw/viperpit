@@ -2,18 +2,9 @@ plugins {
 	id "org.xtext.xtend" version "1.0.15"
 }
 apply plugin: "java"
-apply plugin: "org.springframework.boot"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-
-bootRepackage  {
-	classifier = "boot"
-}
-
-springBoot {
-	executable = true
-}
 
 dependencies {
 	compile project(":viperpit-commons")
