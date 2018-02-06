@@ -5,6 +5,7 @@ import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Maps.newHashMap;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -28,6 +29,8 @@ public class CockpitService {
 	private Map<String, String> agentIdsBySessionId = newHashMap();
 
 	private Map<String, Agent> agents = newHashMap();
+
+	private String currentPreset = null;
 
 	private Logger logger = LoggerFactory.getLogger(CockpitService.class);
 
@@ -67,28 +70,34 @@ public class CockpitService {
 	}
 
 	public State load(Agent agent, String preset) {
+		State state = null;
 		if (agent == null) {
 			return null;
 		}
 		if (preset == null) {
 			return null;
 		}
-		String location = "classpath:/states_" + JAVA_LETTER_OR_DIGIT.retainFrom(preset) + ".json";
-		Resource resource = resourceLoader.getResource(location);
-		if (resource.exists()) {
-			try {
-				Collection<Action> actions = objectMapper.readValue(resource.getInputStream(), State.class)
-						.getActions();
-				State state = new State(agent, actions);
-				states.put(agent, state);
-				return state;
-			} catch (IOException exception) {
-				logger.error("Error while loading: " + location, exception);
-			}
-		} else {
-			logger.error("State file in " + location + " could not be loaded");
+		if (preset.equals(currentPreset)) {
+			state = states.get(agent);
 		}
-		return null;
+		if (state == null) {
+			String location = "classpath:/states_" + JAVA_LETTER_OR_DIGIT.retainFrom(preset) + ".json";
+			Resource resource = resourceLoader.getResource(location);
+			if (resource.exists()) {
+				try {
+					InputStream inputStream = resource.getInputStream();
+					Collection<Action> actions = objectMapper.readValue(inputStream, State.class).getActions();
+					state = new State(agent, actions);
+					currentPreset = preset;
+					states.put(agent, state);
+				} catch (IOException exception) {
+					logger.error("Error while loading: " + location, exception);
+				}
+			} else {
+				logger.error("State file in " + location + " could not be loaded");
+			}
+		}
+		return state;
 	}
 
 	public State toggle(Agent agent, String callback) {

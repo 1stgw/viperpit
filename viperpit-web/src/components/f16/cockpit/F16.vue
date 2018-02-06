@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 import LeftConsole from '../consoles/LeftConsole'
 import LeftAuxConsole from '../consoles/LeftAuxConsole'
 import CenterConsole from '../consoles/CenterConsole'
@@ -45,18 +45,10 @@ export default {
     Views,
     RadioComms
   },
-  methods: {
-    ...mapActions([
-      'initialize'
-    ])
-  },
   computed: {
     ...mapGetters([
       'isConnected'
     ])
-  },
-  created () {
-    this.initialize()
   }
 }
 </script>

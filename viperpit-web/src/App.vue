@@ -18,6 +18,7 @@ export default {
   name: 'app',
   methods: {
     ...mapActions([
+      'initialize',
       'loadState'
     ])
   },
@@ -26,6 +27,9 @@ export default {
       'getAgent',
       'isConnected'
     ])
+  },
+  created () {
+    this.initialize()
   }
 }
 </script>

@@ -111,7 +111,7 @@ class WebApplicationGenerator {
 			</template>
 			
 			<script>
-			import { mapActions, mapGetters } from 'vuex'
+			import { mapGetters } from 'vuex'
 			«FOR console : cockpit.consoles»
 				import «console.clazz» from '../consoles/«console.clazz»'
 			«ENDFOR»
@@ -125,18 +125,10 @@ class WebApplicationGenerator {
 						«console.clazz»
 					«ENDFOR»
 				},
-				methods: {
-					...mapActions([
-						'initialize'
-					])
-				},
 				computed: {
 					...mapGetters([
 						'isConnected'
 					])
-				},
-				created () {
-					this.initialize()
 				}
 			}
 			</script>

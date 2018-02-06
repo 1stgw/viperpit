@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 import Cmds from '../consoles/Cmds'
 import Comms from '../consoles/Comms'
 import Flight from '../consoles/Flight'
@@ -69,18 +69,10 @@ export default {
     Views,
     RadioComms
   },
-  methods: {
-    ...mapActions([
-      'initialize'
-    ])
-  },
   computed: {
     ...mapGetters([
       'isConnected'
     ])
-  },
-  created () {
-    this.initialize()
   }
 }
 </script>
