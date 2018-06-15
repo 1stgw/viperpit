@@ -9,5 +9,5 @@ targetCompatibility = 1.8
 
 dependencies {
 	compile "com.google.code.gson:gson:2.2.4"
-	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.13.0")
+	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.14.0")
 }
