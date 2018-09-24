@@ -38,21 +38,17 @@
     "className" : "Avionics",
     "name" : "Avionics"
   }, {
-    "id" : "leftauxconsole",
-    "className" : "LeftAuxConsole",
-    "name" : "Left Aux Console"
+    "id" : "wpn",
+    "className" : "Wpn",
+    "name" : "Wpn"
   }, {
-    "id" : "centerconsole",
-    "className" : "CenterConsole",
-    "name" : "Center Console"
+    "id" : "emer",
+    "className" : "Emer",
+    "name" : "Emer"
   }, {
-    "id" : "rightconsole",
-    "className" : "RightConsole",
-    "name" : "Right Console"
-  }, {
-    "id" : "miscellaneous",
-    "className" : "Miscellaneous",
-    "name" : "Miscellaneous"
+    "id" : "misc",
+    "className" : "Misc",
+    "name" : "Misc"
   }, {
     "id" : "views",
     "className" : "Views",
@@ -99,6 +95,14 @@
     "className" : "UhfPanel",
     "name" : "UHF PANEL"
   }, {
+    "id" : "gearpanel",
+    "className" : "GearPanel",
+    "name" : "GEAR PANEL"
+  }, {
+    "id" : "altgearcontrol",
+    "className" : "AltGearControl",
+    "name" : "ALT GEAR CONTROL"
+  }, {
     "id" : "fltcontrolpanel",
     "className" : "FltControlPanel",
     "name" : "FLT CONTROL PANEL"
@@ -131,9 +135,13 @@
     "className" : "LeftSideWall",
     "name" : "LEFT SIDE WALL"
   }, {
-    "id" : "seat",
-    "className" : "Seat",
-    "name" : "SEAT"
+    "id" : "aircondpanel",
+    "className" : "AirCondPanel",
+    "name" : "AIR COND PANEL"
+  }, {
+    "id" : "oxygenpanel",
+    "className" : "OxygenPanel",
+    "name" : "OXYGEN PANEL"
   }, {
     "id" : "fuelpanel",
     "className" : "FuelPanel",
@@ -179,17 +187,9 @@
     "className" : "HudPanel",
     "name" : "HUD  PANEL"
   }, {
-    "id" : "altgearcontrol",
-    "className" : "AltGearControl",
-    "name" : "ALT GEAR CONTROL"
-  }, {
     "id" : "hmcspanel",
     "className" : "HmcsPanel",
     "name" : "HMCS PANEL"
-  }, {
-    "id" : "gearpanel",
-    "className" : "GearPanel",
-    "name" : "GEAR PANEL"
   }, {
     "id" : "miscpanel",
     "className" : "MiscPanel",
@@ -199,17 +199,13 @@
     "className" : "LeftEyebrow",
     "name" : "LEFT EYEBROW"
   }, {
-    "id" : "aircondpanel",
-    "className" : "AirCondPanel",
-    "name" : "AIR COND PANEL"
+    "id" : "seat",
+    "className" : "Seat",
+    "name" : "SEAT"
   }, {
     "id" : "zeroizepanel",
     "className" : "ZeroizePanel",
     "name" : "ZEROIZE PANEL"
-  }, {
-    "id" : "oxygenpanel",
-    "className" : "OxygenPanel",
-    "name" : "OXYGEN PANEL"
   }, {
     "id" : "othercockpitcallbacks",
     "className" : "OtherCockpitCallbacks",
@@ -482,6 +478,66 @@
     "label" : "MODE",
     "type" : "switch"
   }, {
+    "id" : "GEAR: EMER STORES JETTISON Button",
+    "className" : "GearEmerStoresJettisonButton",
+    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "GEAR: HOOK Switch",
+    "className" : "GearHookSwitch",
+    "description" : "GEAR: HOOK Switch - UP",
+    "label" : "HOOK",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: GND JETT Switch",
+    "className" : "GearGndJettSwitch",
+    "description" : "GEAR: GND JETT Switch - ENABLE",
+    "label" : "GND JETT",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: PARKING BREAK Switch",
+    "className" : "GearParkingBreakSwitch",
+    "description" : "GEAR: PARKING BREAK Switch - ON",
+    "label" : "PARKING BREAK",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: LG Handle",
+    "className" : "GearLgHandle",
+    "description" : "GEAR: LG Handle - UP",
+    "label" : "LG",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: STORES CONFIG Switch",
+    "className" : "GearStoresConfigSwitch",
+    "description" : "GEAR: STORES CONFIG Switch - CAT I",
+    "label" : "STORES CONFIG",
+    "type" : "switch"
+  }, {
+    "id" : "GEAR: HORN SILENCER Button",
+    "className" : "GearHornSilencerButton",
+    "description" : "GEAR: HORN SILENCER Button - Push",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "GEAR: LIGHTS Switch",
+    "className" : "GearLightsSwitch",
+    "description" : "GEAR: LIGHTS Switch - LANDING",
+    "label" : "LIGHTS",
+    "type" : "switch"
+  }, {
+    "id" : "ALT GEAR: Extend Gear Handle",
+    "className" : "AltGearExtendGearHandle",
+    "description" : "ALT GEAR: Extend Gear Handle - Push",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "ALT GEAR: Reset Button",
+    "className" : "AltGearResetButton",
+    "description" : "ALT GEAR: Reset Button - Push",
+    "label" : null,
+    "type" : "button"
+  }, {
     "id" : "FLT: DIGITAL Switch",
     "className" : "FltDigitalSwitch",
     "description" : "FLT: DIGITAL Switch - BACKUP",
@@ -596,16 +652,16 @@
     "label" : "CANOPY",
     "type" : "button"
   }, {
-    "id" : "SEAT: Safety Lever",
-    "className" : "SeatSafetyLever",
-    "description" : "SEAT: Safety Lever - Armed",
-    "label" : "Safety Lever",
-    "type" : "button"
+    "id" : "AIR: AIR SOURCE Knob",
+    "className" : "AirAirSourceKnob",
+    "description" : "AIR: AIR SOURCE Knob - OFF",
+    "label" : "AIR SOURCE",
+    "type" : "switch"
   }, {
-    "id" : "SEAT: EJECT Handle",
-    "className" : "SeatEjectHandle",
-    "description" : "SEAT: EJECT Handle - Hold For Eject",
-    "label" : null,
+    "id" : "OXY: Setting 2",
+    "className" : "OxySetting2",
+    "description" : "OXY: Setting 2 - ON (Pilot breathing)",
+    "label" : "Setting 2",
     "type" : "button"
   }, {
     "id" : "FUEL: MASTER Switch",
@@ -748,19 +804,19 @@
   }, {
     "id" : "MAIN: HSI HDG Knob",
     "className" : "MainHsiHdgKnob",
-    "description" : "MAIN: HSI HDG Knob - Increase (5°)",
+    "description" : "MAIN: HSI HDG Knob - Increase (1°)",
     "label" : "HSI HDG",
     "type" : "button"
   }, {
     "id" : "MAIN: HSI CRS Knob",
     "className" : "MainHsiCrsKnob",
-    "description" : "MAIN: HSI CRS Knob - Increase (5°)",
+    "description" : "MAIN: HSI CRS Knob - Increase (1°)",
     "label" : "HSI CRS",
     "type" : "button"
   }, {
     "id" : "MAIN: Altimeter Pressure Knob",
     "className" : "MainAltimeterPressureKnob",
-    "description" : "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+    "description" : "MAIN: Altimeter Pressure Knob - Incr. (1°)",
     "label" : "Altimeter Pressure",
     "type" : "button"
   }, {
@@ -872,71 +928,11 @@
     "label" : "Brightness",
     "type" : "switch"
   }, {
-    "id" : "ALT GEAR: Extend Gear Handle",
-    "className" : "AltGearExtendGearHandle",
-    "description" : "ALT GEAR: Extend Gear Handle - Push",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "ALT GEAR: Reset Button",
-    "className" : "AltGearResetButton",
-    "description" : "ALT GEAR: Reset Button - Push",
-    "label" : null,
-    "type" : "button"
-  }, {
     "id" : "HMCS: HMSC Knob",
     "className" : "HmcsHmscKnob",
     "description" : "HMCS: HMSC Knob - Brightness Incr.",
     "label" : "HMSC",
     "type" : "button"
-  }, {
-    "id" : "GEAR: EMER STORES JETTISON Button",
-    "className" : "GearEmerStoresJettisonButton",
-    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "GEAR: HOOK Switch",
-    "className" : "GearHookSwitch",
-    "description" : "GEAR: HOOK Switch - UP",
-    "label" : "HOOK",
-    "type" : "switch"
-  }, {
-    "id" : "GEAR: GND JETT Switch",
-    "className" : "GearGndJettSwitch",
-    "description" : "GEAR: GND JETT Switch - ENABLE",
-    "label" : "GND JETT",
-    "type" : "switch"
-  }, {
-    "id" : "GEAR: PARKING BREAK Switch",
-    "className" : "GearParkingBreakSwitch",
-    "description" : "GEAR: PARKING BREAK Switch - ON",
-    "label" : "PARKING BREAK",
-    "type" : "switch"
-  }, {
-    "id" : "GEAR: LG Handle",
-    "className" : "GearLgHandle",
-    "description" : "GEAR: LG Handle - UP",
-    "label" : "LG",
-    "type" : "switch"
-  }, {
-    "id" : "GEAR: STORES CONFIG Switch",
-    "className" : "GearStoresConfigSwitch",
-    "description" : "GEAR: STORES CONFIG Switch - CAT I",
-    "label" : "STORES CONFIG",
-    "type" : "switch"
-  }, {
-    "id" : "GEAR: HORN SILENCER Button",
-    "className" : "GearHornSilencerButton",
-    "description" : "GEAR: HORN SILENCER Button - Push",
-    "label" : null,
-    "type" : "button"
-  }, {
-    "id" : "GEAR: LIGHTS Switch",
-    "className" : "GearLightsSwitch",
-    "description" : "GEAR: LIGHTS Switch - LANDING",
-    "label" : "LIGHTS",
-    "type" : "switch"
   }, {
     "id" : "MISC: LASER Switch",
     "className" : "MiscLaserSwitch",
@@ -962,23 +958,23 @@
     "label" : null,
     "type" : "button"
   }, {
-    "id" : "AIR: AIR SOURCE Knob",
-    "className" : "AirAirSourceKnob",
-    "description" : "AIR: AIR SOURCE Knob - OFF",
-    "label" : "AIR SOURCE",
-    "type" : "switch"
+    "id" : "SEAT: Safety Lever",
+    "className" : "SeatSafetyLever",
+    "description" : "SEAT: Safety Lever - Armed",
+    "label" : "Safety Lever",
+    "type" : "button"
+  }, {
+    "id" : "SEAT: EJECT Handle",
+    "className" : "SeatEjectHandle",
+    "description" : "SEAT: EJECT Handle - Hold For Eject",
+    "label" : null,
+    "type" : "button"
   }, {
     "id" : "ZERO: VMS Switch",
     "className" : "ZeroVmsSwitch",
     "description" : "ZERO: VMS Switch - ON",
     "label" : "VMS",
     "type" : "switch"
-  }, {
-    "id" : "OXY: Setting 2",
-    "className" : "OxySetting2",
-    "description" : "OXY: Setting 2 - ON (Pilot breathing)",
-    "label" : "Setting 2",
-    "type" : "button"
   }, {
     "id" : "CKPIT: Wheel Brakes",
     "className" : "CkpitWheelBrakes",
@@ -1669,13 +1665,13 @@
     "className" : "UhfVolKnobAiVsIvcVolumeIncr",
     "description" : "UHF: VOL Knob - AI vs IVC Volume Incr",
     "label" : "AI vs IVC Volume Incr",
-    "role" : "none"
+    "role" : "up"
   }, {
     "id" : "uhfvolknobaivsivcvolumedecr",
     "className" : "UhfVolKnobAiVsIvcVolumeDecr",
     "description" : "UHF: VOL Knob - AI vs IVC Volume Decr",
     "label" : "AI vs IVC Volume Decr",
-    "role" : "none"
+    "role" : "down"
   }, {
     "id" : "uhfmodeknobmnl",
     "className" : "UhfModeKnobMnl",
@@ -1693,6 +1689,102 @@
     "className" : "UhfModeKnobGrd",
     "description" : "UHF: MODE Knob - GRD",
     "label" : "GRD",
+    "role" : "none"
+  }, {
+    "id" : "gearemerstoresjettisonbuttonhold",
+    "className" : "GearEmerStoresJettisonButtonHold",
+    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
+    "label" : "EMER STORES JETTISON",
+    "role" : "none"
+  }, {
+    "id" : "gearhookswitchup",
+    "className" : "GearHookSwitchUp",
+    "description" : "GEAR: HOOK Switch - UP",
+    "label" : "UP",
+    "role" : "up"
+  }, {
+    "id" : "gearhookswitchdn",
+    "className" : "GearHookSwitchDn",
+    "description" : "GEAR: HOOK Switch - DN",
+    "label" : "DN",
+    "role" : "down"
+  }, {
+    "id" : "geargndjettswitchenable",
+    "className" : "GearGndJettSwitchEnable",
+    "description" : "GEAR: GND JETT Switch - ENABLE",
+    "label" : "ENABLE",
+    "role" : "on"
+  }, {
+    "id" : "geargndjettswitchoff",
+    "className" : "GearGndJettSwitchOff",
+    "description" : "GEAR: GND JETT Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "gearparkingbreakswitchon",
+    "className" : "GearParkingBreakSwitchOn",
+    "description" : "GEAR: PARKING BREAK Switch - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "gearparkingbreakswitchoff",
+    "className" : "GearParkingBreakSwitchOff",
+    "description" : "GEAR: PARKING BREAK Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "gearlghandleup",
+    "className" : "GearLgHandleUp",
+    "description" : "GEAR: LG Handle - UP",
+    "label" : "UP",
+    "role" : "up"
+  }, {
+    "id" : "gearlghandledn",
+    "className" : "GearLgHandleDn",
+    "description" : "GEAR: LG Handle - DN",
+    "label" : "DN",
+    "role" : "down"
+  }, {
+    "id" : "gearstoresconfigswitchcati",
+    "className" : "GearStoresConfigSwitchCatI",
+    "description" : "GEAR: STORES CONFIG Switch - CAT I",
+    "label" : "CAT I",
+    "role" : "none"
+  }, {
+    "id" : "gearstoresconfigswitchcatiii",
+    "className" : "GearStoresConfigSwitchCatIii",
+    "description" : "GEAR: STORES CONFIG Switch - CAT III",
+    "label" : "CAT III",
+    "role" : "none"
+  }, {
+    "id" : "gearhornsilencerbuttonpush",
+    "className" : "GearHornSilencerButtonPush",
+    "description" : "GEAR: HORN SILENCER Button - Push",
+    "label" : "HORN SILENCER",
+    "role" : "none"
+  }, {
+    "id" : "gearlightsswitchlanding",
+    "className" : "GearLightsSwitchLanding",
+    "description" : "GEAR: LIGHTS Switch - LANDING",
+    "label" : "LANDING",
+    "role" : "none"
+  }, {
+    "id" : "gearlightsswitchoff",
+    "className" : "GearLightsSwitchOff",
+    "description" : "GEAR: LIGHTS Switch - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "altgearextendgearhandlepush",
+    "className" : "AltGearExtendGearHandlePush",
+    "description" : "ALT GEAR: Extend Gear Handle - Push",
+    "label" : "Extend Gear",
+    "role" : "none"
+  }, {
+    "id" : "altgearresetbuttonpush",
+    "className" : "AltGearResetButtonPush",
+    "description" : "ALT GEAR: Reset Button - Push",
+    "label" : "Reset",
     "role" : "none"
   }, {
     "id" : "fltdigitalswitchbackup",
@@ -1917,22 +2009,40 @@
     "label" : "Close",
     "role" : "none"
   }, {
-    "id" : "seatsafetyleverarmed",
-    "className" : "SeatSafetyLeverArmed",
-    "description" : "SEAT: Safety Lever - Armed",
-    "label" : "Armed",
+    "id" : "airairsourceknoboff",
+    "className" : "AirAirSourceKnobOff",
+    "description" : "AIR: AIR SOURCE Knob - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "airairsourceknobnorm",
+    "className" : "AirAirSourceKnobNorm",
+    "description" : "AIR: AIR SOURCE Knob - NORM",
+    "label" : "NORM",
+    "role" : "on"
+  }, {
+    "id" : "airairsourceknobdump",
+    "className" : "AirAirSourceKnobDump",
+    "description" : "AIR: AIR SOURCE Knob - DUMP",
+    "label" : "DUMP",
     "role" : "none"
   }, {
-    "id" : "seatsafetyleverlocked",
-    "className" : "SeatSafetyLeverLocked",
-    "description" : "SEAT: Safety Lever - Locked",
-    "label" : "Locked",
+    "id" : "airairsourceknobram",
+    "className" : "AirAirSourceKnobRam",
+    "description" : "AIR: AIR SOURCE Knob - RAM",
+    "label" : "RAM",
     "role" : "none"
   }, {
-    "id" : "seatejecthandleholdforeject",
-    "className" : "SeatEjectHandleHoldForEject",
-    "description" : "SEAT: EJECT Handle - Hold For Eject",
-    "label" : "EJECT",
+    "id" : "oxysetting2onpilotbreathing",
+    "className" : "OxySetting2OnPilotBreathing",
+    "description" : "OXY: Setting 2 - ON (Pilot breathing)",
+    "label" : "ON (Pilot breathing)",
+    "role" : "none"
+  }, {
+    "id" : "oxysetting2offpilotbreathing",
+    "className" : "OxySetting2OffPilotBreathing",
+    "description" : "OXY: Setting 2 - OFF (Pilot breathing)",
+    "label" : "OFF (Pilot breathing)",
     "role" : "none"
   }, {
     "id" : "fuelmasterswitchon",
@@ -2235,6 +2345,12 @@
     "label" : "SILENT",
     "role" : "none"
   }, {
+    "id" : "mainhsihdgknobincrease1",
+    "className" : "MainHsiHdgKnobIncrease1",
+    "description" : "MAIN: HSI HDG Knob - Increase (1°)",
+    "label" : "Increase (1°)",
+    "role" : "none"
+  }, {
     "id" : "mainhsihdgknobincrease5",
     "className" : "MainHsiHdgKnobIncrease5",
     "description" : "MAIN: HSI HDG Knob - Increase (5°)",
@@ -2247,16 +2363,16 @@
     "label" : "Decrease (5°)",
     "role" : "none"
   }, {
-    "id" : "mainhsihdgknobincrease1",
-    "className" : "MainHsiHdgKnobIncrease1",
-    "description" : "MAIN: HSI HDG Knob - Increase (1°)",
-    "label" : "Increase (1°)",
-    "role" : "none"
-  }, {
     "id" : "mainhsihdgknobdecrease1",
     "className" : "MainHsiHdgKnobDecrease1",
     "description" : "MAIN: HSI HDG Knob - Decrease (1°)",
     "label" : "Decrease (1°)",
+    "role" : "none"
+  }, {
+    "id" : "mainhsicrsknobincrease1",
+    "className" : "MainHsiCrsKnobIncrease1",
+    "description" : "MAIN: HSI CRS Knob - Increase (1°)",
+    "label" : "Increase (1°)",
     "role" : "none"
   }, {
     "id" : "mainhsicrsknobincrease5",
@@ -2271,16 +2387,16 @@
     "label" : "Decrease (5°)",
     "role" : "none"
   }, {
-    "id" : "mainhsicrsknobincrease1",
-    "className" : "MainHsiCrsKnobIncrease1",
-    "description" : "MAIN: HSI CRS Knob - Increase (1°)",
-    "label" : "Increase (1°)",
-    "role" : "none"
-  }, {
     "id" : "mainhsicrsknobdecrease1",
     "className" : "MainHsiCrsKnobDecrease1",
     "description" : "MAIN: HSI CRS Knob - Decrease (1°)",
     "label" : "Decrease (1°)",
+    "role" : "none"
+  }, {
+    "id" : "mainaltimeterpressureknobincr1",
+    "className" : "MainAltimeterPressureKnobIncr1",
+    "description" : "MAIN: Altimeter Pressure Knob - Incr. (1°)",
+    "label" : "Incr. (1°)",
     "role" : "none"
   }, {
     "id" : "mainaltimeterpressureknobincr5",
@@ -2293,12 +2409,6 @@
     "className" : "MainAltimeterPressureKnobDecr5",
     "description" : "MAIN: Altimeter Pressure Knob - Decr. (5°)",
     "label" : "Decr. (5°)",
-    "role" : "none"
-  }, {
-    "id" : "mainaltimeterpressureknobincr1",
-    "className" : "MainAltimeterPressureKnobIncr1",
-    "description" : "MAIN: Altimeter Pressure Knob - Incr. (1°)",
-    "label" : "Incr. (1°)",
     "role" : "none"
   }, {
     "id" : "mainaltimeterpressureknobdecr1",
@@ -2595,18 +2705,6 @@
     "label" : "NIG",
     "role" : "none"
   }, {
-    "id" : "altgearextendgearhandlepush",
-    "className" : "AltGearExtendGearHandlePush",
-    "description" : "ALT GEAR: Extend Gear Handle - Push",
-    "label" : "Extend Gear",
-    "role" : "none"
-  }, {
-    "id" : "altgearresetbuttonpush",
-    "className" : "AltGearResetButtonPush",
-    "description" : "ALT GEAR: Reset Button - Push",
-    "label" : "Reset",
-    "role" : "none"
-  }, {
     "id" : "hmcshmscknobbrightnessincr",
     "className" : "HmcsHmscKnobBrightnessIncr",
     "description" : "HMCS: HMSC Knob - Brightness Incr.",
@@ -2628,90 +2726,6 @@
     "id" : "hmcshmscknoboff",
     "className" : "HmcsHmscKnobOff",
     "description" : "HMCS: HMSC Knob - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "gearemerstoresjettisonbuttonhold",
-    "className" : "GearEmerStoresJettisonButtonHold",
-    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
-    "label" : "EMER STORES JETTISON",
-    "role" : "none"
-  }, {
-    "id" : "gearhookswitchup",
-    "className" : "GearHookSwitchUp",
-    "description" : "GEAR: HOOK Switch - UP",
-    "label" : "UP",
-    "role" : "up"
-  }, {
-    "id" : "gearhookswitchdn",
-    "className" : "GearHookSwitchDn",
-    "description" : "GEAR: HOOK Switch - DN",
-    "label" : "DN",
-    "role" : "down"
-  }, {
-    "id" : "geargndjettswitchenable",
-    "className" : "GearGndJettSwitchEnable",
-    "description" : "GEAR: GND JETT Switch - ENABLE",
-    "label" : "ENABLE",
-    "role" : "on"
-  }, {
-    "id" : "geargndjettswitchoff",
-    "className" : "GearGndJettSwitchOff",
-    "description" : "GEAR: GND JETT Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "gearparkingbreakswitchon",
-    "className" : "GearParkingBreakSwitchOn",
-    "description" : "GEAR: PARKING BREAK Switch - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "gearparkingbreakswitchoff",
-    "className" : "GearParkingBreakSwitchOff",
-    "description" : "GEAR: PARKING BREAK Switch - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "gearlghandleup",
-    "className" : "GearLgHandleUp",
-    "description" : "GEAR: LG Handle - UP",
-    "label" : "UP",
-    "role" : "up"
-  }, {
-    "id" : "gearlghandledn",
-    "className" : "GearLgHandleDn",
-    "description" : "GEAR: LG Handle - DN",
-    "label" : "DN",
-    "role" : "down"
-  }, {
-    "id" : "gearstoresconfigswitchcati",
-    "className" : "GearStoresConfigSwitchCatI",
-    "description" : "GEAR: STORES CONFIG Switch - CAT I",
-    "label" : "CAT I",
-    "role" : "none"
-  }, {
-    "id" : "gearstoresconfigswitchcatiii",
-    "className" : "GearStoresConfigSwitchCatIii",
-    "description" : "GEAR: STORES CONFIG Switch - CAT III",
-    "label" : "CAT III",
-    "role" : "none"
-  }, {
-    "id" : "gearhornsilencerbuttonpush",
-    "className" : "GearHornSilencerButtonPush",
-    "description" : "GEAR: HORN SILENCER Button - Push",
-    "label" : "HORN SILENCER",
-    "role" : "none"
-  }, {
-    "id" : "gearlightsswitchlanding",
-    "className" : "GearLightsSwitchLanding",
-    "description" : "GEAR: LIGHTS Switch - LANDING",
-    "label" : "LANDING",
-    "role" : "none"
-  }, {
-    "id" : "gearlightsswitchoff",
-    "className" : "GearLightsSwitchOff",
-    "description" : "GEAR: LIGHTS Switch - OFF",
     "label" : "OFF",
     "role" : "off"
   }, {
@@ -2757,28 +2771,22 @@
     "label" : "F ACK",
     "role" : "none"
   }, {
-    "id" : "airairsourceknoboff",
-    "className" : "AirAirSourceKnobOff",
-    "description" : "AIR: AIR SOURCE Knob - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
-    "id" : "airairsourceknobnorm",
-    "className" : "AirAirSourceKnobNorm",
-    "description" : "AIR: AIR SOURCE Knob - NORM",
-    "label" : "NORM",
-    "role" : "on"
-  }, {
-    "id" : "airairsourceknobdump",
-    "className" : "AirAirSourceKnobDump",
-    "description" : "AIR: AIR SOURCE Knob - DUMP",
-    "label" : "DUMP",
+    "id" : "seatsafetyleverarmed",
+    "className" : "SeatSafetyLeverArmed",
+    "description" : "SEAT: Safety Lever - Armed",
+    "label" : "Armed",
     "role" : "none"
   }, {
-    "id" : "airairsourceknobram",
-    "className" : "AirAirSourceKnobRam",
-    "description" : "AIR: AIR SOURCE Knob - RAM",
-    "label" : "RAM",
+    "id" : "seatsafetyleverlocked",
+    "className" : "SeatSafetyLeverLocked",
+    "description" : "SEAT: Safety Lever - Locked",
+    "label" : "Locked",
+    "role" : "none"
+  }, {
+    "id" : "seatejecthandleholdforeject",
+    "className" : "SeatEjectHandleHoldForEject",
+    "description" : "SEAT: EJECT Handle - Hold For Eject",
+    "label" : "EJECT",
     "role" : "none"
   }, {
     "id" : "zerovmsswitchon",
@@ -2791,18 +2799,6 @@
     "className" : "ZeroVmsSwitchInhibit",
     "description" : "ZERO: VMS Switch - INHIBIT",
     "label" : "INHIBIT",
-    "role" : "none"
-  }, {
-    "id" : "oxysetting2onpilotbreathing",
-    "className" : "OxySetting2OnPilotBreathing",
-    "description" : "OXY: Setting 2 - ON (Pilot breathing)",
-    "label" : "ON (Pilot breathing)",
-    "role" : "none"
-  }, {
-    "id" : "oxysetting2offpilotbreathing",
-    "className" : "OxySetting2OffPilotBreathing",
-    "description" : "OXY: Setting 2 - OFF (Pilot breathing)",
-    "label" : "OFF (Pilot breathing)",
     "role" : "none"
   }, {
     "id" : "ckpitwheelbrakeshold",

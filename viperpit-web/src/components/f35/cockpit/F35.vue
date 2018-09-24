@@ -11,10 +11,9 @@
       <router-link to="/cockpits/f35/consoles/sensors">Sensors</router-link> | 
       <router-link to="/cockpits/f35/consoles/navi">Navi</router-link> | 
       <router-link to="/cockpits/f35/consoles/avionics">Avionics</router-link> | 
-      <router-link to="/cockpits/f35/consoles/leftauxconsole">Left Aux Console</router-link> | 
-      <router-link to="/cockpits/f35/consoles/centerconsole">Center Console</router-link> | 
-      <router-link to="/cockpits/f35/consoles/rightconsole">Right Console</router-link> | 
-      <router-link to="/cockpits/f35/consoles/miscellaneous">Miscellaneous</router-link> | 
+      <router-link to="/cockpits/f35/consoles/wpn">Wpn</router-link> | 
+      <router-link to="/cockpits/f35/consoles/emer">Emer</router-link> | 
+      <router-link to="/cockpits/f35/consoles/misc">Misc</router-link> | 
       <router-link to="/cockpits/f35/consoles/views">Views</router-link> | 
       <router-link to="/cockpits/f35/consoles/radiocomms">Radio Comms</router-link>
     </div>
@@ -41,10 +40,9 @@ import Lights from '../consoles/Lights'
 import Sensors from '../consoles/Sensors'
 import Navi from '../consoles/Navi'
 import Avionics from '../consoles/Avionics'
-import LeftAuxConsole from '../consoles/LeftAuxConsole'
-import CenterConsole from '../consoles/CenterConsole'
-import RightConsole from '../consoles/RightConsole'
-import Miscellaneous from '../consoles/Miscellaneous'
+import Wpn from '../consoles/Wpn'
+import Emer from '../consoles/Emer'
+import Misc from '../consoles/Misc'
 import Views from '../consoles/Views'
 import RadioComms from '../consoles/RadioComms'
 
@@ -62,10 +60,9 @@ export default {
     Sensors,
     Navi,
     Avionics,
-    LeftAuxConsole,
-    CenterConsole,
-    RightConsole,
-    Miscellaneous,
+    Wpn,
+    Emer,
+    Misc,
     Views,
     RadioComms
   },

@@ -182,6 +182,42 @@
         {
           "panelRowSet": [
             {
+              "panel": "gearpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "GEAR: EMER STORES JETTISON Button",
+                    "GEAR: HOOK Switch",
+                    "GEAR: GND JETT Switch",
+                    "GEAR: PARKING BREAK Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "GEAR: LG Handle",
+                    "GEAR: STORES CONFIG Switch",
+                    "GEAR: HORN SILENCER Button",
+                    "GEAR: LIGHTS Switch"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "altgearcontrol",
+              "panelRow": [
+                {
+                  "group": [
+                    "ALT GEAR: Extend Gear Handle",
+                    "ALT GEAR: Reset Button"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
+            {
               "panel": "fltcontrolpanel",
               "panelRow": [
                 {
@@ -293,12 +329,21 @@
         {
           "panelRowSet": [
             {
-              "panel": "seat",
+              "panel": "aircondpanel",
               "panelRow": [
                 {
                   "group": [
-                    "SEAT: Safety Lever",
-                    "SEAT: EJECT Handle"
+                    "AIR: AIR SOURCE Knob"
+                  ]
+                }
+              ]
+            },
+            {
+              "panel": "oxygenpanel",
+              "panelRow": [
+                {
+                  "group": [
+                    "OXY: Setting 2"
                   ]
                 }
               ]
@@ -521,25 +566,9 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "console": "leftauxconsole",
-      "consoleRow": [
+        },
         {
           "panelRowSet": [
-            {
-              "panel": "altgearcontrol",
-              "panelRow": [
-                {
-                  "group": [
-                    "ALT GEAR: Extend Gear Handle",
-                    "ALT GEAR: Reset Button"
-                  ]
-                }
-              ]
-            },
             {
               "panel": "hmcspanel",
               "panelRow": [
@@ -551,36 +580,11 @@
               ]
             }
           ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "gearpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "GEAR: EMER STORES JETTISON Button",
-                    "GEAR: HOOK Switch",
-                    "GEAR: GND JETT Switch",
-                    "GEAR: PARKING BREAK Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "GEAR: LG Handle",
-                    "GEAR: STORES CONFIG Switch",
-                    "GEAR: HORN SILENCER Button",
-                    "GEAR: LIGHTS Switch"
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ]
     },
     {
-      "console": "centerconsole",
+      "console": "wpn",
       "consoleRow": [
         {
           "panelRowSet": [
@@ -594,7 +598,16 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "console": "emer",
+      "consoleRow": [
+        {
+          "panelRowSet": [
             {
               "panel": "lefteyebrow",
               "panelRow": [
@@ -605,26 +618,22 @@
                   ]
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "console": "rightconsole",
-      "consoleRow": [
-        {
-          "panelRowSet": [
+            },
             {
-              "panel": "aircondpanel",
+              "panel": "seat",
               "panelRow": [
                 {
                   "group": [
-                    "AIR: AIR SOURCE Knob"
+                    "SEAT: Safety Lever",
+                    "SEAT: EJECT Handle"
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
             {
               "panel": "zeroizepanel",
               "panelRow": [
@@ -636,25 +645,11 @@
               ]
             }
           ]
-        },
-        {
-          "panelRowSet": [
-            {
-              "panel": "oxygenpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "OXY: Setting 2"
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ]
     },
     {
-      "console": "miscellaneous",
+      "console": "misc",
       "consoleRow": [
         {
           "panelRowSet": [

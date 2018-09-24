@@ -3137,7 +3137,7 @@
       "section": "UHF PANEL",
       "group": "UHF: VOL Knob",
       "style": "knob",
-      "role": "none",
+      "role": "up",
       "type": "button"
     },
     {
@@ -3152,7 +3152,7 @@
       "section": "UHF PANEL",
       "group": "UHF: VOL Knob",
       "style": "knob",
-      "role": "none",
+      "role": "down",
       "type": "button"
     },
     {
@@ -6793,40 +6793,6 @@
       "type": "button"
     },
     {
-      "id": "mainhsihdgknobincrease5",
-      "clazz": "MainHsiHdgKnobIncrease5",
-      "callback": "SimHsiHeadingInc",
-      "relatedActions": [
-        "mainhsihdgknobdecrease5",
-        "mainhsihdgknobincrease1",
-        "mainhsihdgknobdecrease1"
-      ],
-      "description": "MAIN: HSI HDG Knob - Increase (5°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI HDG Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
-      "id": "mainhsihdgknobdecrease5",
-      "clazz": "MainHsiHdgKnobDecrease5",
-      "callback": "SimHsiHeadingDec",
-      "relatedActions": [
-        "mainhsihdgknobincrease5",
-        "mainhsihdgknobincrease1",
-        "mainhsihdgknobdecrease1"
-      ],
-      "description": "MAIN: HSI HDG Knob - Decrease (5°)",
-      "category": "CENTER CONSOLE",
-      "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI HDG Knob",
-      "style": "knob",
-      "role": "none",
-      "type": "button"
-    },
-    {
       "id": "mainhsihdgknobincrease1",
       "clazz": "MainHsiHdgKnobIncrease1",
       "callback": "SimHsiHdgIncBy1",
@@ -6844,15 +6810,15 @@
       "type": "button"
     },
     {
-      "id": "mainhsihdgknobdecrease1",
-      "clazz": "MainHsiHdgKnobDecrease1",
-      "callback": "SimHsiHdgDecBy1",
+      "id": "mainhsihdgknobincrease5",
+      "clazz": "MainHsiHdgKnobIncrease5",
+      "callback": "SimHsiHeadingInc",
       "relatedActions": [
-        "mainhsihdgknobincrease5",
+        "mainhsihdgknobincrease1",
         "mainhsihdgknobdecrease5",
-        "mainhsihdgknobincrease1"
+        "mainhsihdgknobdecrease1"
       ],
-      "description": "MAIN: HSI HDG Knob - Decrease (1°)",
+      "description": "MAIN: HSI HDG Knob - Increase (5°)",
       "category": "CENTER CONSOLE",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: HSI HDG Knob",
@@ -6861,35 +6827,35 @@
       "type": "button"
     },
     {
-      "id": "mainhsicrsknobincrease5",
-      "clazz": "MainHsiCrsKnobIncrease5",
-      "callback": "SimHsiCourseInc",
+      "id": "mainhsihdgknobdecrease5",
+      "clazz": "MainHsiHdgKnobDecrease5",
+      "callback": "SimHsiHeadingDec",
       "relatedActions": [
-        "mainhsicrsknobdecrease5",
-        "mainhsicrsknobincrease1",
-        "mainhsicrsknobdecrease1"
+        "mainhsihdgknobincrease1",
+        "mainhsihdgknobincrease5",
+        "mainhsihdgknobdecrease1"
       ],
-      "description": "MAIN: HSI CRS Knob - Increase (5°)",
+      "description": "MAIN: HSI HDG Knob - Decrease (5°)",
       "category": "CENTER CONSOLE",
       "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI CRS Knob",
+      "group": "MAIN: HSI HDG Knob",
       "style": "knob",
       "role": "none",
       "type": "button"
     },
     {
-      "id": "mainhsicrsknobdecrease5",
-      "clazz": "MainHsiCrsKnobDecrease5",
-      "callback": "SimHsiCourseDec",
+      "id": "mainhsihdgknobdecrease1",
+      "clazz": "MainHsiHdgKnobDecrease1",
+      "callback": "SimHsiHdgDecBy1",
       "relatedActions": [
-        "mainhsicrsknobincrease5",
-        "mainhsicrsknobincrease1",
-        "mainhsicrsknobdecrease1"
+        "mainhsihdgknobincrease1",
+        "mainhsihdgknobincrease5",
+        "mainhsihdgknobdecrease5"
       ],
-      "description": "MAIN: HSI CRS Knob - Decrease (5°)",
+      "description": "MAIN: HSI HDG Knob - Decrease (1°)",
       "category": "CENTER CONSOLE",
       "section": "MAIN INSTRUMENT",
-      "group": "MAIN: HSI CRS Knob",
+      "group": "MAIN: HSI HDG Knob",
       "style": "knob",
       "role": "none",
       "type": "button"
@@ -6912,15 +6878,15 @@
       "type": "button"
     },
     {
-      "id": "mainhsicrsknobdecrease1",
-      "clazz": "MainHsiCrsKnobDecrease1",
-      "callback": "SimHsiCrsDecBy1",
+      "id": "mainhsicrsknobincrease5",
+      "clazz": "MainHsiCrsKnobIncrease5",
+      "callback": "SimHsiCourseInc",
       "relatedActions": [
-        "mainhsicrsknobincrease5",
+        "mainhsicrsknobincrease1",
         "mainhsicrsknobdecrease5",
-        "mainhsicrsknobincrease1"
+        "mainhsicrsknobdecrease1"
       ],
-      "description": "MAIN: HSI CRS Knob - Decrease (1°)",
+      "description": "MAIN: HSI CRS Knob - Increase (5°)",
       "category": "CENTER CONSOLE",
       "section": "MAIN INSTRUMENT",
       "group": "MAIN: HSI CRS Knob",
@@ -6929,35 +6895,35 @@
       "type": "button"
     },
     {
-      "id": "mainaltimeterpressureknobincr5",
-      "clazz": "MainAltimeterPressureKnobIncr5",
-      "callback": "SimAltPressInc",
+      "id": "mainhsicrsknobdecrease5",
+      "clazz": "MainHsiCrsKnobDecrease5",
+      "callback": "SimHsiCourseDec",
       "relatedActions": [
-        "mainaltimeterpressureknobdecr5",
-        "mainaltimeterpressureknobincr1",
-        "mainaltimeterpressureknobdecr1"
+        "mainhsicrsknobincrease1",
+        "mainhsicrsknobincrease5",
+        "mainhsicrsknobdecrease1"
       ],
-      "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+      "description": "MAIN: HSI CRS Knob - Decrease (5°)",
       "category": "CENTER CONSOLE",
       "section": "MAIN INSTRUMENT",
-      "group": "MAIN: Altimeter Pressure Knob",
+      "group": "MAIN: HSI CRS Knob",
       "style": "knob",
       "role": "none",
       "type": "button"
     },
     {
-      "id": "mainaltimeterpressureknobdecr5",
-      "clazz": "MainAltimeterPressureKnobDecr5",
-      "callback": "SimAltPressDec",
+      "id": "mainhsicrsknobdecrease1",
+      "clazz": "MainHsiCrsKnobDecrease1",
+      "callback": "SimHsiCrsDecBy1",
       "relatedActions": [
-        "mainaltimeterpressureknobincr5",
-        "mainaltimeterpressureknobincr1",
-        "mainaltimeterpressureknobdecr1"
+        "mainhsicrsknobincrease1",
+        "mainhsicrsknobincrease5",
+        "mainhsicrsknobdecrease5"
       ],
-      "description": "MAIN: Altimeter Pressure Knob - Decr. (5°)",
+      "description": "MAIN: HSI CRS Knob - Decrease (1°)",
       "category": "CENTER CONSOLE",
       "section": "MAIN INSTRUMENT",
-      "group": "MAIN: Altimeter Pressure Knob",
+      "group": "MAIN: HSI CRS Knob",
       "style": "knob",
       "role": "none",
       "type": "button"
@@ -6980,13 +6946,47 @@
       "type": "button"
     },
     {
+      "id": "mainaltimeterpressureknobincr5",
+      "clazz": "MainAltimeterPressureKnobIncr5",
+      "callback": "SimAltPressInc",
+      "relatedActions": [
+        "mainaltimeterpressureknobincr1",
+        "mainaltimeterpressureknobdecr5",
+        "mainaltimeterpressureknobdecr1"
+      ],
+      "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+      "category": "CENTER CONSOLE",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: Altimeter Pressure Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
+      "id": "mainaltimeterpressureknobdecr5",
+      "clazz": "MainAltimeterPressureKnobDecr5",
+      "callback": "SimAltPressDec",
+      "relatedActions": [
+        "mainaltimeterpressureknobincr1",
+        "mainaltimeterpressureknobincr5",
+        "mainaltimeterpressureknobdecr1"
+      ],
+      "description": "MAIN: Altimeter Pressure Knob - Decr. (5°)",
+      "category": "CENTER CONSOLE",
+      "section": "MAIN INSTRUMENT",
+      "group": "MAIN: Altimeter Pressure Knob",
+      "style": "knob",
+      "role": "none",
+      "type": "button"
+    },
+    {
       "id": "mainaltimeterpressureknobdecr1",
       "clazz": "MainAltimeterPressureKnobDecr1",
       "callback": "SimAltPressDecBy1",
       "relatedActions": [
+        "mainaltimeterpressureknobincr1",
         "mainaltimeterpressureknobincr5",
-        "mainaltimeterpressureknobdecr5",
-        "mainaltimeterpressureknobincr1"
+        "mainaltimeterpressureknobdecr5"
       ],
       "description": "MAIN: Altimeter Pressure Knob - Decr. (1°)",
       "category": "CENTER CONSOLE",

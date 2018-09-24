@@ -16,7 +16,7 @@ import OtherCockpitCallbacks from '../panels/othercockpitcallbacks/OtherCockpitC
 import SimulationHardware from '../panels/simulationhardware/SimulationHardware'
 
 export default {
-  name: 'Miscellaneous',
+  name: 'Misc',
   components: {
     OtherCockpitCallbacks,
     SimulationHardware

@@ -2,31 +2,31 @@
 <div class="container-fluid">
   <div class="row">
   <div class="col-sm-6">
-    <air-cond-panel />
+    <left-eyebrow />
   </div>
   <div class="col-sm-6">
-    <zeroize-panel />
+    <seat />
   </div>
   </div>
   <div class="row">
   <div class="col-sm-12">
-    <oxygen-panel />
+    <zeroize-panel />
   </div>
   </div>
 </div>
 </template>
 
 <script>
-import AirCondPanel from '../panels/aircondpanel/AirCondPanel'
+import LeftEyebrow from '../panels/lefteyebrow/LeftEyebrow'
+import Seat from '../panels/seat/Seat'
 import ZeroizePanel from '../panels/zeroizepanel/ZeroizePanel'
-import OxygenPanel from '../panels/oxygenpanel/OxygenPanel'
 
 export default {
-  name: 'RightConsole',
+  name: 'Emer',
   components: {
-    AirCondPanel,
-    ZeroizePanel,
-    OxygenPanel
+    LeftEyebrow,
+    Seat,
+    ZeroizePanel
   }
 }
 </script>

@@ -1,11 +1,8 @@
 <template>
 <div class="container-fluid">
   <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-12">
     <misc-panel />
-  </div>
-  <div class="col-sm-6">
-    <left-eyebrow />
   </div>
   </div>
 </div>
@@ -13,13 +10,11 @@
 
 <script>
 import MiscPanel from '../panels/miscpanel/MiscPanel'
-import LeftEyebrow from '../panels/lefteyebrow/LeftEyebrow'
 
 export default {
-  name: 'CenterConsole',
+  name: 'Wpn',
   components: {
-    MiscPanel,
-    LeftEyebrow
+    MiscPanel
   }
 }
 </script>

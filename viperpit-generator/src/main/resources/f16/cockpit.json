@@ -1409,7 +1409,7 @@
                   "callback": "OTWBalanceIVCvsAIUp",
                   "description": "UHF: VOL Knob - AI vs IVC Volume Incr",
                   "label": "AI vs IVC Volume Incr",
-                  "role": "none"
+                  "role": "up"
                 },
                 {
                   "id": "uhfvolknobaivsivcvolumedecr",
@@ -1417,7 +1417,7 @@
                   "callback": "OTWBalanceIVCvsAIDown",
                   "description": "UHF: VOL Knob - AI vs IVC Volume Decr",
                   "label": "AI vs IVC Volume Decr",
-                  "role": "none"
+                  "role": "down"
                 }
               ]
             },
@@ -2509,10 +2509,18 @@
             {
               "id": "MAIN: HSI HDG Knob",
               "class": "MainHsiHdgKnob",
-              "description": "MAIN: HSI HDG Knob - Increase (5°)",
+              "description": "MAIN: HSI HDG Knob - Increase (1°)",
               "label": "HSI HDG",
               "type": "button",
               "control": [
+                {
+                  "id": "mainhsihdgknobincrease1",
+                  "clazz": "MainHsiHdgKnobIncrease1",
+                  "callback": "SimHsiHdgIncBy1",
+                  "description": "MAIN: HSI HDG Knob - Increase (1°)",
+                  "label": "Increase (1°)",
+                  "role": "none"
+                },
                 {
                   "id": "mainhsihdgknobincrease5",
                   "clazz": "MainHsiHdgKnobIncrease5",
@@ -2530,14 +2538,6 @@
                   "role": "none"
                 },
                 {
-                  "id": "mainhsihdgknobincrease1",
-                  "clazz": "MainHsiHdgKnobIncrease1",
-                  "callback": "SimHsiHdgIncBy1",
-                  "description": "MAIN: HSI HDG Knob - Increase (1°)",
-                  "label": "Increase (1°)",
-                  "role": "none"
-                },
-                {
                   "id": "mainhsihdgknobdecrease1",
                   "clazz": "MainHsiHdgKnobDecrease1",
                   "callback": "SimHsiHdgDecBy1",
@@ -2550,10 +2550,18 @@
             {
               "id": "MAIN: HSI CRS Knob",
               "class": "MainHsiCrsKnob",
-              "description": "MAIN: HSI CRS Knob - Increase (5°)",
+              "description": "MAIN: HSI CRS Knob - Increase (1°)",
               "label": "HSI CRS",
               "type": "button",
               "control": [
+                {
+                  "id": "mainhsicrsknobincrease1",
+                  "clazz": "MainHsiCrsKnobIncrease1",
+                  "callback": "SimHsiCrsIncBy1",
+                  "description": "MAIN: HSI CRS Knob - Increase (1°)",
+                  "label": "Increase (1°)",
+                  "role": "none"
+                },
                 {
                   "id": "mainhsicrsknobincrease5",
                   "clazz": "MainHsiCrsKnobIncrease5",
@@ -2571,14 +2579,6 @@
                   "role": "none"
                 },
                 {
-                  "id": "mainhsicrsknobincrease1",
-                  "clazz": "MainHsiCrsKnobIncrease1",
-                  "callback": "SimHsiCrsIncBy1",
-                  "description": "MAIN: HSI CRS Knob - Increase (1°)",
-                  "label": "Increase (1°)",
-                  "role": "none"
-                },
-                {
                   "id": "mainhsicrsknobdecrease1",
                   "clazz": "MainHsiCrsKnobDecrease1",
                   "callback": "SimHsiCrsDecBy1",
@@ -2591,10 +2591,18 @@
             {
               "id": "MAIN: Altimeter Pressure Knob",
               "class": "MainAltimeterPressureKnob",
-              "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+              "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
               "label": "Altimeter Pressure",
               "type": "button",
               "control": [
+                {
+                  "id": "mainaltimeterpressureknobincr1",
+                  "clazz": "MainAltimeterPressureKnobIncr1",
+                  "callback": "SimAltPressIncBy1",
+                  "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
+                  "label": "Incr. (1°)",
+                  "role": "none"
+                },
                 {
                   "id": "mainaltimeterpressureknobincr5",
                   "clazz": "MainAltimeterPressureKnobIncr5",
@@ -2609,14 +2617,6 @@
                   "callback": "SimAltPressDec",
                   "description": "MAIN: Altimeter Pressure Knob - Decr. (5°)",
                   "label": "Decr. (5°)",
-                  "role": "none"
-                },
-                {
-                  "id": "mainaltimeterpressureknobincr1",
-                  "clazz": "MainAltimeterPressureKnobIncr1",
-                  "callback": "SimAltPressIncBy1",
-                  "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
-                  "label": "Incr. (1°)",
                   "role": "none"
                 },
                 {

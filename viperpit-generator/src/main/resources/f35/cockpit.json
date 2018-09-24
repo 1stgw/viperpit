@@ -1125,7 +1125,7 @@
                   "callback": "OTWBalanceIVCvsAIUp",
                   "description": "UHF: VOL Knob - AI vs IVC Volume Incr",
                   "label": "AI vs IVC Volume Incr",
-                  "role": "none"
+                  "role": "up"
                 },
                 {
                   "id": "uhfvolknobaivsivcvolumedecr",
@@ -1133,7 +1133,7 @@
                   "callback": "OTWBalanceIVCvsAIDown",
                   "description": "UHF: VOL Knob - AI vs IVC Volume Decr",
                   "label": "AI vs IVC Volume Decr",
-                  "role": "none"
+                  "role": "down"
                 }
               ]
             },
@@ -1179,6 +1179,234 @@
       "class": "Flight",
       "name": "Flight",
       "panel": [
+        {
+          "id": "gearpanel",
+          "class": "GearPanel",
+          "name": "GEAR PANEL",
+          "group": [
+            {
+              "id": "GEAR: EMER STORES JETTISON Button",
+              "class": "GearEmerStoresJettisonButton",
+              "description": "GEAR: EMER STORES JETTISON Button - Hold",
+              "type": "button",
+              "control": [
+                {
+                  "id": "gearemerstoresjettisonbuttonhold",
+                  "clazz": "GearEmerStoresJettisonButtonHold",
+                  "callback": "SimEmergencyJettison",
+                  "description": "GEAR: EMER STORES JETTISON Button - Hold",
+                  "label": "EMER STORES JETTISON",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: HOOK Switch",
+              "class": "GearHookSwitch",
+              "description": "GEAR: HOOK Switch - UP",
+              "label": "HOOK",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "gearhookswitchup",
+                  "clazz": "GearHookSwitchUp",
+                  "callback": "SimHookUp",
+                  "description": "GEAR: HOOK Switch - UP",
+                  "label": "UP",
+                  "role": "up"
+                },
+                {
+                  "id": "gearhookswitchdn",
+                  "clazz": "GearHookSwitchDn",
+                  "callback": "SimHookDown",
+                  "description": "GEAR: HOOK Switch - DN",
+                  "label": "DN",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: GND JETT Switch",
+              "class": "GearGndJettSwitch",
+              "description": "GEAR: GND JETT Switch - ENABLE",
+              "label": "GND JETT",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "geargndjettswitchenable",
+                  "clazz": "GearGndJettSwitchEnable",
+                  "callback": "SimGndJettOn",
+                  "description": "GEAR: GND JETT Switch - ENABLE",
+                  "label": "ENABLE",
+                  "role": "on"
+                },
+                {
+                  "id": "geargndjettswitchoff",
+                  "clazz": "GearGndJettSwitchOff",
+                  "callback": "SimGndJettOff",
+                  "description": "GEAR: GND JETT Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: PARKING BREAK Switch",
+              "class": "GearParkingBreakSwitch",
+              "description": "GEAR: PARKING BREAK Switch - ON",
+              "label": "PARKING BREAK",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "gearparkingbreakswitchon",
+                  "clazz": "GearParkingBreakSwitchOn",
+                  "callback": "SimParkingBrakeOn",
+                  "description": "GEAR: PARKING BREAK Switch - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "gearparkingbreakswitchoff",
+                  "clazz": "GearParkingBreakSwitchOff",
+                  "callback": "SimParkingBrakeOff",
+                  "description": "GEAR: PARKING BREAK Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: LG Handle",
+              "class": "GearLgHandle",
+              "description": "GEAR: LG Handle - UP",
+              "label": "LG",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "gearlghandleup",
+                  "clazz": "GearLgHandleUp",
+                  "callback": "AFGearUp",
+                  "description": "GEAR: LG Handle - UP",
+                  "label": "UP",
+                  "role": "up"
+                },
+                {
+                  "id": "gearlghandledn",
+                  "clazz": "GearLgHandleDn",
+                  "callback": "AFGearDown",
+                  "description": "GEAR: LG Handle - DN",
+                  "label": "DN",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: STORES CONFIG Switch",
+              "class": "GearStoresConfigSwitch",
+              "description": "GEAR: STORES CONFIG Switch - CAT I",
+              "label": "STORES CONFIG",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "gearstoresconfigswitchcati",
+                  "clazz": "GearStoresConfigSwitchCatI",
+                  "callback": "SimCATI",
+                  "description": "GEAR: STORES CONFIG Switch - CAT I",
+                  "label": "CAT I",
+                  "role": "none"
+                },
+                {
+                  "id": "gearstoresconfigswitchcatiii",
+                  "clazz": "GearStoresConfigSwitchCatIii",
+                  "callback": "SimCATIII",
+                  "description": "GEAR: STORES CONFIG Switch - CAT III",
+                  "label": "CAT III",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: HORN SILENCER Button",
+              "class": "GearHornSilencerButton",
+              "description": "GEAR: HORN SILENCER Button - Push",
+              "type": "button",
+              "control": [
+                {
+                  "id": "gearhornsilencerbuttonpush",
+                  "clazz": "GearHornSilencerButtonPush",
+                  "callback": "SimSilenceHorn",
+                  "description": "GEAR: HORN SILENCER Button - Push",
+                  "label": "HORN SILENCER",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "GEAR: LIGHTS Switch",
+              "class": "GearLightsSwitch",
+              "description": "GEAR: LIGHTS Switch - LANDING",
+              "label": "LIGHTS",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "gearlightsswitchlanding",
+                  "clazz": "GearLightsSwitchLanding",
+                  "callback": "SimLandingLightOn",
+                  "description": "GEAR: LIGHTS Switch - LANDING",
+                  "label": "LANDING",
+                  "role": "none"
+                },
+                {
+                  "id": "gearlightsswitchoff",
+                  "clazz": "GearLightsSwitchOff",
+                  "callback": "SimLandingLightOff",
+                  "description": "GEAR: LIGHTS Switch - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "altgearcontrol",
+          "class": "AltGearControl",
+          "name": "ALT GEAR CONTROL",
+          "group": [
+            {
+              "id": "ALT GEAR: Extend Gear Handle",
+              "class": "AltGearExtendGearHandle",
+              "description": "ALT GEAR: Extend Gear Handle - Push",
+              "type": "button",
+              "control": [
+                {
+                  "id": "altgearextendgearhandlepush",
+                  "clazz": "AltGearExtendGearHandlePush",
+                  "callback": "AFAlternateGear",
+                  "description": "ALT GEAR: Extend Gear Handle - Push",
+                  "label": "Extend Gear",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "ALT GEAR: Reset Button",
+              "class": "AltGearResetButton",
+              "description": "ALT GEAR: Reset Button - Push",
+              "type": "button",
+              "control": [
+                {
+                  "id": "altgearresetbuttonpush",
+                  "clazz": "AltGearResetButtonPush",
+                  "callback": "AFAlternateGearReset",
+                  "description": "ALT GEAR: Reset Button - Push",
+                  "label": "Reset",
+                  "role": "none"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "fltcontrolpanel",
           "class": "FltControlPanel",
@@ -1698,47 +1926,79 @@
           ]
         },
         {
-          "id": "seat",
-          "class": "Seat",
-          "name": "SEAT",
+          "id": "aircondpanel",
+          "class": "AirCondPanel",
+          "name": "AIR COND PANEL",
           "group": [
             {
-              "id": "SEAT: Safety Lever",
-              "class": "SeatSafetyLever",
-              "description": "SEAT: Safety Lever - Armed",
-              "label": "Safety Lever",
-              "type": "button",
+              "id": "AIR: AIR SOURCE Knob",
+              "class": "AirAirSourceKnob",
+              "description": "AIR: AIR SOURCE Knob - OFF",
+              "label": "AIR SOURCE",
+              "type": "switch",
               "control": [
                 {
-                  "id": "seatsafetyleverarmed",
-                  "clazz": "SeatSafetyLeverArmed",
-                  "callback": "SimSeatOn",
-                  "description": "SEAT: Safety Lever - Armed",
-                  "label": "Armed",
+                  "id": "airairsourceknoboff",
+                  "clazz": "AirAirSourceKnobOff",
+                  "callback": "SimAirSourceOff",
+                  "description": "AIR: AIR SOURCE Knob - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                },
+                {
+                  "id": "airairsourceknobnorm",
+                  "clazz": "AirAirSourceKnobNorm",
+                  "callback": "SimAirSourceNorm",
+                  "description": "AIR: AIR SOURCE Knob - NORM",
+                  "label": "NORM",
+                  "role": "on"
+                },
+                {
+                  "id": "airairsourceknobdump",
+                  "clazz": "AirAirSourceKnobDump",
+                  "callback": "SimAirSourceDump",
+                  "description": "AIR: AIR SOURCE Knob - DUMP",
+                  "label": "DUMP",
                   "role": "none"
                 },
                 {
-                  "id": "seatsafetyleverlocked",
-                  "clazz": "SeatSafetyLeverLocked",
-                  "callback": "SimSeatOff",
-                  "description": "SEAT: Safety Lever - Locked",
-                  "label": "Locked",
+                  "id": "airairsourceknobram",
+                  "clazz": "AirAirSourceKnobRam",
+                  "callback": "SimAirSourceRam",
+                  "description": "AIR: AIR SOURCE Knob - RAM",
+                  "label": "RAM",
                   "role": "none"
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "id": "oxygenpanel",
+          "class": "OxygenPanel",
+          "name": "OXYGEN PANEL",
+          "group": [
             {
-              "id": "SEAT: EJECT Handle",
-              "class": "SeatEjectHandle",
-              "description": "SEAT: EJECT Handle - Hold For Eject",
+              "id": "OXY: Setting 2",
+              "class": "OxySetting2",
+              "description": "OXY: Setting 2 - ON (Pilot breathing)",
+              "label": "Setting 2",
               "type": "button",
               "control": [
                 {
-                  "id": "seatejecthandleholdforeject",
-                  "clazz": "SeatEjectHandleHoldForEject",
-                  "callback": "SimEject",
-                  "description": "SEAT: EJECT Handle - Hold For Eject",
-                  "label": "EJECT",
+                  "id": "oxysetting2onpilotbreathing",
+                  "clazz": "OxySetting2OnPilotBreathing",
+                  "callback": "SimOxySupplyOn",
+                  "description": "OXY: Setting 2 - ON (Pilot breathing)",
+                  "label": "ON (Pilot breathing)",
+                  "role": "none"
+                },
+                {
+                  "id": "oxysetting2offpilotbreathing",
+                  "clazz": "OxySetting2OffPilotBreathing",
+                  "callback": "SimOxySupplyOff",
+                  "description": "OXY: Setting 2 - OFF (Pilot breathing)",
+                  "label": "OFF (Pilot breathing)",
                   "role": "none"
                 }
               ]
@@ -2432,10 +2692,18 @@
             {
               "id": "MAIN: HSI HDG Knob",
               "class": "MainHsiHdgKnob",
-              "description": "MAIN: HSI HDG Knob - Increase (5°)",
+              "description": "MAIN: HSI HDG Knob - Increase (1°)",
               "label": "HSI HDG",
               "type": "button",
               "control": [
+                {
+                  "id": "mainhsihdgknobincrease1",
+                  "clazz": "MainHsiHdgKnobIncrease1",
+                  "callback": "SimHsiHdgIncBy1",
+                  "description": "MAIN: HSI HDG Knob - Increase (1°)",
+                  "label": "Increase (1°)",
+                  "role": "none"
+                },
                 {
                   "id": "mainhsihdgknobincrease5",
                   "clazz": "MainHsiHdgKnobIncrease5",
@@ -2453,14 +2721,6 @@
                   "role": "none"
                 },
                 {
-                  "id": "mainhsihdgknobincrease1",
-                  "clazz": "MainHsiHdgKnobIncrease1",
-                  "callback": "SimHsiHdgIncBy1",
-                  "description": "MAIN: HSI HDG Knob - Increase (1°)",
-                  "label": "Increase (1°)",
-                  "role": "none"
-                },
-                {
                   "id": "mainhsihdgknobdecrease1",
                   "clazz": "MainHsiHdgKnobDecrease1",
                   "callback": "SimHsiHdgDecBy1",
@@ -2473,10 +2733,18 @@
             {
               "id": "MAIN: HSI CRS Knob",
               "class": "MainHsiCrsKnob",
-              "description": "MAIN: HSI CRS Knob - Increase (5°)",
+              "description": "MAIN: HSI CRS Knob - Increase (1°)",
               "label": "HSI CRS",
               "type": "button",
               "control": [
+                {
+                  "id": "mainhsicrsknobincrease1",
+                  "clazz": "MainHsiCrsKnobIncrease1",
+                  "callback": "SimHsiCrsIncBy1",
+                  "description": "MAIN: HSI CRS Knob - Increase (1°)",
+                  "label": "Increase (1°)",
+                  "role": "none"
+                },
                 {
                   "id": "mainhsicrsknobincrease5",
                   "clazz": "MainHsiCrsKnobIncrease5",
@@ -2494,14 +2762,6 @@
                   "role": "none"
                 },
                 {
-                  "id": "mainhsicrsknobincrease1",
-                  "clazz": "MainHsiCrsKnobIncrease1",
-                  "callback": "SimHsiCrsIncBy1",
-                  "description": "MAIN: HSI CRS Knob - Increase (1°)",
-                  "label": "Increase (1°)",
-                  "role": "none"
-                },
-                {
                   "id": "mainhsicrsknobdecrease1",
                   "clazz": "MainHsiCrsKnobDecrease1",
                   "callback": "SimHsiCrsDecBy1",
@@ -2514,10 +2774,18 @@
             {
               "id": "MAIN: Altimeter Pressure Knob",
               "class": "MainAltimeterPressureKnob",
-              "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+              "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
               "label": "Altimeter Pressure",
               "type": "button",
               "control": [
+                {
+                  "id": "mainaltimeterpressureknobincr1",
+                  "clazz": "MainAltimeterPressureKnobIncr1",
+                  "callback": "SimAltPressIncBy1",
+                  "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
+                  "label": "Incr. (1°)",
+                  "role": "none"
+                },
                 {
                   "id": "mainaltimeterpressureknobincr5",
                   "clazz": "MainAltimeterPressureKnobIncr5",
@@ -2532,14 +2800,6 @@
                   "callback": "SimAltPressDec",
                   "description": "MAIN: Altimeter Pressure Knob - Decr. (5°)",
                   "label": "Decr. (5°)",
-                  "role": "none"
-                },
-                {
-                  "id": "mainaltimeterpressureknobincr1",
-                  "clazz": "MainAltimeterPressureKnobIncr1",
-                  "callback": "SimAltPressIncBy1",
-                  "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
-                  "label": "Incr. (1°)",
                   "role": "none"
                 },
                 {
@@ -3133,52 +3393,6 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "leftauxconsole",
-      "class": "LeftAuxConsole",
-      "name": "Left Aux Console",
-      "panel": [
-        {
-          "id": "altgearcontrol",
-          "class": "AltGearControl",
-          "name": "ALT GEAR CONTROL",
-          "group": [
-            {
-              "id": "ALT GEAR: Extend Gear Handle",
-              "class": "AltGearExtendGearHandle",
-              "description": "ALT GEAR: Extend Gear Handle - Push",
-              "type": "button",
-              "control": [
-                {
-                  "id": "altgearextendgearhandlepush",
-                  "clazz": "AltGearExtendGearHandlePush",
-                  "callback": "AFAlternateGear",
-                  "description": "ALT GEAR: Extend Gear Handle - Push",
-                  "label": "Extend Gear",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "ALT GEAR: Reset Button",
-              "class": "AltGearResetButton",
-              "description": "ALT GEAR: Reset Button - Push",
-              "type": "button",
-              "control": [
-                {
-                  "id": "altgearresetbuttonpush",
-                  "clazz": "AltGearResetButtonPush",
-                  "callback": "AFAlternateGearReset",
-                  "description": "ALT GEAR: Reset Button - Push",
-                  "label": "Reset",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
         },
         {
           "id": "hmcspanel",
@@ -3227,202 +3441,13 @@
               ]
             }
           ]
-        },
-        {
-          "id": "gearpanel",
-          "class": "GearPanel",
-          "name": "GEAR PANEL",
-          "group": [
-            {
-              "id": "GEAR: EMER STORES JETTISON Button",
-              "class": "GearEmerStoresJettisonButton",
-              "description": "GEAR: EMER STORES JETTISON Button - Hold",
-              "type": "button",
-              "control": [
-                {
-                  "id": "gearemerstoresjettisonbuttonhold",
-                  "clazz": "GearEmerStoresJettisonButtonHold",
-                  "callback": "SimEmergencyJettison",
-                  "description": "GEAR: EMER STORES JETTISON Button - Hold",
-                  "label": "EMER STORES JETTISON",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: HOOK Switch",
-              "class": "GearHookSwitch",
-              "description": "GEAR: HOOK Switch - UP",
-              "label": "HOOK",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "gearhookswitchup",
-                  "clazz": "GearHookSwitchUp",
-                  "callback": "SimHookUp",
-                  "description": "GEAR: HOOK Switch - UP",
-                  "label": "UP",
-                  "role": "up"
-                },
-                {
-                  "id": "gearhookswitchdn",
-                  "clazz": "GearHookSwitchDn",
-                  "callback": "SimHookDown",
-                  "description": "GEAR: HOOK Switch - DN",
-                  "label": "DN",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: GND JETT Switch",
-              "class": "GearGndJettSwitch",
-              "description": "GEAR: GND JETT Switch - ENABLE",
-              "label": "GND JETT",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "geargndjettswitchenable",
-                  "clazz": "GearGndJettSwitchEnable",
-                  "callback": "SimGndJettOn",
-                  "description": "GEAR: GND JETT Switch - ENABLE",
-                  "label": "ENABLE",
-                  "role": "on"
-                },
-                {
-                  "id": "geargndjettswitchoff",
-                  "clazz": "GearGndJettSwitchOff",
-                  "callback": "SimGndJettOff",
-                  "description": "GEAR: GND JETT Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: PARKING BREAK Switch",
-              "class": "GearParkingBreakSwitch",
-              "description": "GEAR: PARKING BREAK Switch - ON",
-              "label": "PARKING BREAK",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "gearparkingbreakswitchon",
-                  "clazz": "GearParkingBreakSwitchOn",
-                  "callback": "SimParkingBrakeOn",
-                  "description": "GEAR: PARKING BREAK Switch - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "gearparkingbreakswitchoff",
-                  "clazz": "GearParkingBreakSwitchOff",
-                  "callback": "SimParkingBrakeOff",
-                  "description": "GEAR: PARKING BREAK Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: LG Handle",
-              "class": "GearLgHandle",
-              "description": "GEAR: LG Handle - UP",
-              "label": "LG",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "gearlghandleup",
-                  "clazz": "GearLgHandleUp",
-                  "callback": "AFGearUp",
-                  "description": "GEAR: LG Handle - UP",
-                  "label": "UP",
-                  "role": "up"
-                },
-                {
-                  "id": "gearlghandledn",
-                  "clazz": "GearLgHandleDn",
-                  "callback": "AFGearDown",
-                  "description": "GEAR: LG Handle - DN",
-                  "label": "DN",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: STORES CONFIG Switch",
-              "class": "GearStoresConfigSwitch",
-              "description": "GEAR: STORES CONFIG Switch - CAT I",
-              "label": "STORES CONFIG",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "gearstoresconfigswitchcati",
-                  "clazz": "GearStoresConfigSwitchCatI",
-                  "callback": "SimCATI",
-                  "description": "GEAR: STORES CONFIG Switch - CAT I",
-                  "label": "CAT I",
-                  "role": "none"
-                },
-                {
-                  "id": "gearstoresconfigswitchcatiii",
-                  "clazz": "GearStoresConfigSwitchCatIii",
-                  "callback": "SimCATIII",
-                  "description": "GEAR: STORES CONFIG Switch - CAT III",
-                  "label": "CAT III",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: HORN SILENCER Button",
-              "class": "GearHornSilencerButton",
-              "description": "GEAR: HORN SILENCER Button - Push",
-              "type": "button",
-              "control": [
-                {
-                  "id": "gearhornsilencerbuttonpush",
-                  "clazz": "GearHornSilencerButtonPush",
-                  "callback": "SimSilenceHorn",
-                  "description": "GEAR: HORN SILENCER Button - Push",
-                  "label": "HORN SILENCER",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "GEAR: LIGHTS Switch",
-              "class": "GearLightsSwitch",
-              "description": "GEAR: LIGHTS Switch - LANDING",
-              "label": "LIGHTS",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "gearlightsswitchlanding",
-                  "clazz": "GearLightsSwitchLanding",
-                  "callback": "SimLandingLightOn",
-                  "description": "GEAR: LIGHTS Switch - LANDING",
-                  "label": "LANDING",
-                  "role": "none"
-                },
-                {
-                  "id": "gearlightsswitchoff",
-                  "clazz": "GearLightsSwitchOff",
-                  "callback": "SimLandingLightOff",
-                  "description": "GEAR: LIGHTS Switch - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
         }
       ]
     },
     {
-      "id": "centerconsole",
-      "class": "CenterConsole",
-      "name": "Center Console",
+      "id": "wpn",
+      "class": "Wpn",
+      "name": "Wpn",
       "panel": [
         {
           "id": "miscpanel",
@@ -3488,7 +3513,14 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "emer",
+      "class": "Emer",
+      "name": "Emer",
+      "panel": [
         {
           "id": "lefteyebrow",
           "class": "LeftEyebrow",
@@ -3527,56 +3559,49 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "rightconsole",
-      "class": "RightConsole",
-      "name": "Right Console",
-      "panel": [
+        },
         {
-          "id": "aircondpanel",
-          "class": "AirCondPanel",
-          "name": "AIR COND PANEL",
+          "id": "seat",
+          "class": "Seat",
+          "name": "SEAT",
           "group": [
             {
-              "id": "AIR: AIR SOURCE Knob",
-              "class": "AirAirSourceKnob",
-              "description": "AIR: AIR SOURCE Knob - OFF",
-              "label": "AIR SOURCE",
-              "type": "switch",
+              "id": "SEAT: Safety Lever",
+              "class": "SeatSafetyLever",
+              "description": "SEAT: Safety Lever - Armed",
+              "label": "Safety Lever",
+              "type": "button",
               "control": [
                 {
-                  "id": "airairsourceknoboff",
-                  "clazz": "AirAirSourceKnobOff",
-                  "callback": "SimAirSourceOff",
-                  "description": "AIR: AIR SOURCE Knob - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                },
-                {
-                  "id": "airairsourceknobnorm",
-                  "clazz": "AirAirSourceKnobNorm",
-                  "callback": "SimAirSourceNorm",
-                  "description": "AIR: AIR SOURCE Knob - NORM",
-                  "label": "NORM",
-                  "role": "on"
-                },
-                {
-                  "id": "airairsourceknobdump",
-                  "clazz": "AirAirSourceKnobDump",
-                  "callback": "SimAirSourceDump",
-                  "description": "AIR: AIR SOURCE Knob - DUMP",
-                  "label": "DUMP",
+                  "id": "seatsafetyleverarmed",
+                  "clazz": "SeatSafetyLeverArmed",
+                  "callback": "SimSeatOn",
+                  "description": "SEAT: Safety Lever - Armed",
+                  "label": "Armed",
                   "role": "none"
                 },
                 {
-                  "id": "airairsourceknobram",
-                  "clazz": "AirAirSourceKnobRam",
-                  "callback": "SimAirSourceRam",
-                  "description": "AIR: AIR SOURCE Knob - RAM",
-                  "label": "RAM",
+                  "id": "seatsafetyleverlocked",
+                  "clazz": "SeatSafetyLeverLocked",
+                  "callback": "SimSeatOff",
+                  "description": "SEAT: Safety Lever - Locked",
+                  "label": "Locked",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "SEAT: EJECT Handle",
+              "class": "SeatEjectHandle",
+              "description": "SEAT: EJECT Handle - Hold For Eject",
+              "type": "button",
+              "control": [
+                {
+                  "id": "seatejecthandleholdforeject",
+                  "clazz": "SeatEjectHandleHoldForEject",
+                  "callback": "SimEject",
+                  "description": "SEAT: EJECT Handle - Hold For Eject",
+                  "label": "EJECT",
                   "role": "none"
                 }
               ]
@@ -3614,45 +3639,13 @@
               ]
             }
           ]
-        },
-        {
-          "id": "oxygenpanel",
-          "class": "OxygenPanel",
-          "name": "OXYGEN PANEL",
-          "group": [
-            {
-              "id": "OXY: Setting 2",
-              "class": "OxySetting2",
-              "description": "OXY: Setting 2 - ON (Pilot breathing)",
-              "label": "Setting 2",
-              "type": "button",
-              "control": [
-                {
-                  "id": "oxysetting2onpilotbreathing",
-                  "clazz": "OxySetting2OnPilotBreathing",
-                  "callback": "SimOxySupplyOn",
-                  "description": "OXY: Setting 2 - ON (Pilot breathing)",
-                  "label": "ON (Pilot breathing)",
-                  "role": "none"
-                },
-                {
-                  "id": "oxysetting2offpilotbreathing",
-                  "clazz": "OxySetting2OffPilotBreathing",
-                  "callback": "SimOxySupplyOff",
-                  "description": "OXY: Setting 2 - OFF (Pilot breathing)",
-                  "label": "OFF (Pilot breathing)",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
         }
       ]
     },
     {
-      "id": "miscellaneous",
-      "class": "Miscellaneous",
-      "name": "Miscellaneous",
+      "id": "misc",
+      "class": "Misc",
+      "name": "Misc",
       "panel": [
         {
           "id": "othercockpitcallbacks",

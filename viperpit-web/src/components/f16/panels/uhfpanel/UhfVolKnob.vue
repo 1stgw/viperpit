@@ -9,13 +9,13 @@
       description="UHF: VOL Knob - AI vs IVC Volume Incr"
       label="AI vs IVC Volume Incr"
       type="button"
-      role="none"/>
+      role="up"/>
     <control
       id="uhfvolknobaivsivcvolumedecr"
       description="UHF: VOL Knob - AI vs IVC Volume Decr"
       label="AI vs IVC Volume Decr"
       type="button"
-      role="none"/>
+      role="down"/>
   </button-group>
 </template>
 
