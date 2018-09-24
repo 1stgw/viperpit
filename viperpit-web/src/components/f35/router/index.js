@@ -11,7 +11,6 @@ import Wpn from '@/components/f35/consoles/Wpn'
 import Emer from '@/components/f35/consoles/Emer'
 import Misc from '@/components/f35/consoles/Misc'
 import Views from '@/components/f35/consoles/Views'
-import RadioComms from '@/components/f35/consoles/RadioComms'
 
 export default class F35Router {
   static getRoutes () {
@@ -80,11 +79,6 @@ export default class F35Router {
         path: '/cockpits/f35/consoles/views',
         name: 'ViewsForF35',
         component: Views
-      },
-      {
-        path: '/cockpits/f35/consoles/radiocomms',
-        name: 'RadioCommsForF35',
-        component: RadioComms
       }
     ]
   }

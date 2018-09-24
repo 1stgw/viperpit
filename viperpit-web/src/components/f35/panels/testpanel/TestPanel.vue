@@ -3,32 +3,32 @@
     <div class="panel-heading">TEST PANEL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <test-fire-oheat-detect-button />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <test-oxy-qty-switch />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <test-mal-ind-lts-button />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <test-probe-heat-switch />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <test-epu-gen-switch />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <test-flcs-pwr-test-switch />
           </div>

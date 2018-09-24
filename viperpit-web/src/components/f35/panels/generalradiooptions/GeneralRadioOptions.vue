@@ -3,47 +3,47 @@
     <div class="panel-heading">GENERAL RADIO OPTIONS</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <radio-awacs-menu />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <radio-wingman-menu />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <radio-element-menu />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <radio-flight-menu />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <radio-atc-menu />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <radio-tanker-menu />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <radio-send-message-tanker />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <radio-next-menu-tanker />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <radio-previous-menu-tanker />
           </div>

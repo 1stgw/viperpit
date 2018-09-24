@@ -179,7 +179,7 @@ class WebApplicationGenerator {
 						<div class="panel-body">
 							<div class="row">
 								«FOR group : panel.groups»
-									<div class="col-xs-6 col-sm-4">
+									<div class="col-xs-6 col-sm-6">
 										<div align="center" style="padding: 0px;">
 											<«group.clazz.kebapCaseName» />
 										</div>

@@ -33,7 +33,7 @@ class LayoutGenerator {
 				consoleRow.panelRowSets = panels.map [
 					val panelRowSet = new PanelRowSet
 					panelRowSet.panel = id
-					panelRowSet.panelRows = Lists.partition(groups, 4).map [ groups |
+					panelRowSet.panelRows = Lists.partition(groups, 2).map [ groups |
 						val panelRow = new PanelRow
 						panelRow.groups = groups.map[id].toList
 						panelRow

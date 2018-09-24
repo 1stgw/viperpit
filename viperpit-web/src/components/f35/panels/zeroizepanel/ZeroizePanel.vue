@@ -3,7 +3,7 @@
     <div class="panel-heading">ZEROIZE PANEL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <zero-vms-switch />
           </div>

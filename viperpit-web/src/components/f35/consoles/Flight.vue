@@ -5,46 +5,43 @@
     <gear-panel />
   </div>
   <div class="col-sm-6">
-    <alt-gear-control />
+    <flt-control-panel />
   </div>
   </div>
   <div class="row">
-  <div class="col-sm-6">
-    <flt-control-panel />
-  </div>
   <div class="col-sm-6">
     <manual-trim-panel />
   </div>
-  </div>
-  <div class="row">
   <div class="col-sm-6">
     <epu-panel />
   </div>
+  </div>
+  <div class="row">
   <div class="col-sm-6">
     <elec-panel />
   </div>
-  </div>
-  <div class="row">
   <div class="col-sm-6">
     <avtr-panel />
   </div>
+  </div>
+  <div class="row">
   <div class="col-sm-6">
     <eng-jet-start-panel />
   </div>
-  </div>
-  <div class="row">
   <div class="col-sm-6">
     <mpo-panel />
   </div>
-  <div class="col-sm-6">
-    <left-side-wall />
-  </div>
   </div>
   <div class="row">
   <div class="col-sm-6">
-    <air-cond-panel />
+    <left-side-wall />
   </div>
   <div class="col-sm-6">
+    <air-cond-panel />
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-sm-12">
     <oxygen-panel />
   </div>
   </div>
@@ -53,7 +50,6 @@
 
 <script>
 import GearPanel from '../panels/gearpanel/GearPanel'
-import AltGearControl from '../panels/altgearcontrol/AltGearControl'
 import FltControlPanel from '../panels/fltcontrolpanel/FltControlPanel'
 import ManualTrimPanel from '../panels/manualtrimpanel/ManualTrimPanel'
 import EpuPanel from '../panels/epupanel/EpuPanel'
@@ -69,7 +65,6 @@ export default {
   name: 'Flight',
   components: {
     GearPanel,
-    AltGearControl,
     FltControlPanel,
     ManualTrimPanel,
     EpuPanel,

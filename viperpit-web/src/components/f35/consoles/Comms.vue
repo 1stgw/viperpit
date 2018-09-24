@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <div class="row">
   <div class="col-sm-6">
-    <aux-comm-panel />
+    <audio1-panel />
   </div>
   <div class="col-sm-6">
     <audio2-panel />
@@ -10,7 +10,7 @@
   </div>
   <div class="row">
   <div class="col-sm-6">
-    <audio1-panel />
+    <aux-comm-panel />
   </div>
   <div class="col-sm-6">
     <uhf-panel />
@@ -20,17 +20,17 @@
 </template>
 
 <script>
-import AuxCommPanel from '../panels/auxcommpanel/AuxCommPanel'
-import Audio2Panel from '../panels/audio2panel/Audio2Panel'
 import Audio1Panel from '../panels/audio1panel/Audio1Panel'
+import Audio2Panel from '../panels/audio2panel/Audio2Panel'
+import AuxCommPanel from '../panels/auxcommpanel/AuxCommPanel'
 import UhfPanel from '../panels/uhfpanel/UhfPanel'
 
 export default {
   name: 'Comms',
   components: {
-    AuxCommPanel,
-    Audio2Panel,
     Audio1Panel,
+    Audio2Panel,
+    AuxCommPanel,
     UhfPanel
   }
 }

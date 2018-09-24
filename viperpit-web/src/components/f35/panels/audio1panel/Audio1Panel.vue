@@ -3,32 +3,32 @@
     <div class="panel-heading">AUDIO 1 PANEL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <audio1-comm1-knob />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <audio1-comm2-knob />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <audio1-msl-knob />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <audio1-comm1-mode-knob />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <audio1-comm2-mode-knob />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <audio1-threat-knob />
           </div>

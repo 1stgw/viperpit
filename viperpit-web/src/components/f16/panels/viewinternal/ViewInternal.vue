@@ -3,32 +3,32 @@
     <div class="panel-heading">VIEW INTERNAL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <viewint-padlock />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <viewint-hud-only />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <viewint-snap3d-cockpit />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <viewint-pan3d-cockpit />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <viewint-glance-forward />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <viewint-glance-backward />
           </div>

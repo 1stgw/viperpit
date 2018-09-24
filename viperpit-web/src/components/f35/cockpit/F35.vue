@@ -14,8 +14,7 @@
       <router-link to="/cockpits/f35/consoles/wpn">Wpn</router-link> | 
       <router-link to="/cockpits/f35/consoles/emer">Emer</router-link> | 
       <router-link to="/cockpits/f35/consoles/misc">Misc</router-link> | 
-      <router-link to="/cockpits/f35/consoles/views">Views</router-link> | 
-      <router-link to="/cockpits/f35/consoles/radiocomms">Radio Comms</router-link>
+      <router-link to="/cockpits/f35/consoles/views">Views</router-link>
     </div>
     <router-view></router-view>
   </div>
@@ -44,7 +43,6 @@ import Wpn from '../consoles/Wpn'
 import Emer from '../consoles/Emer'
 import Misc from '../consoles/Misc'
 import Views from '../consoles/Views'
-import RadioComms from '../consoles/RadioComms'
 
 require('../../../assets/f35.less')
 
@@ -63,8 +61,7 @@ export default {
     Wpn,
     Emer,
     Misc,
-    Views,
-    RadioComms
+    Views
   },
   computed: {
     ...mapGetters([

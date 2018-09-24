@@ -1,12 +1,12 @@
 <template>
   <button-group
-    id="ALT GEAR: Extend Gear Handle"
-    description="ALT GEAR: Extend Gear Handle - Push"
+    id="GEAR: EMER STORES JETTISON Button"
+    description="GEAR: EMER STORES JETTISON Button - Hold"
     type="button">
     <control
-      id="altgearextendgearhandlepush"
-      description="ALT GEAR: Extend Gear Handle - Push"
-      label="Extend Gear"
+      id="gearemerstoresjettisonbuttonhold"
+      description="GEAR: EMER STORES JETTISON Button - Hold"
+      label="EMER STORES JETTISON"
       type="button"
       role="none"/>
   </button-group>
@@ -17,7 +17,7 @@ import Control from '../../controls/Control'
 import ButtonGroup from '../../controls/ButtonGroup'
 
 export default {
-  name: 'AltGearExtendGearHandle',
+  name: 'GearEmerStoresJettisonButton',
   components: {
     Control,
     ButtonGroup

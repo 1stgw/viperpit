@@ -3,7 +3,7 @@
     <div class="panel-heading">TWA PANEL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <twa-power-button />
           </div>

@@ -3,12 +3,12 @@
     <div class="panel-heading">FUEL QTY PANEL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <qty-fuel-qty-sel-knob />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <qty-ext-fuel-trans-switch />
           </div>

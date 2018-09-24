@@ -3,12 +3,17 @@
     <div class="panel-heading">LEFT EYEBROW</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <eye-master-caution-button />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
+          <div align="center" style="padding: 0px;">
+            <gear-emer-stores-jettison-button />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <eye-f-ack-button />
           </div>
@@ -20,12 +25,14 @@
 
 <script>
 import EyeMasterCautionButton from './EyeMasterCautionButton'
+import GearEmerStoresJettisonButton from './GearEmerStoresJettisonButton'
 import EyeFAckButton from './EyeFAckButton'
 
 export default {
   name: 'LeftEyebrow',
   components: {
     EyeMasterCautionButton,
+    GearEmerStoresJettisonButton,
     EyeFAckButton
   }
 }

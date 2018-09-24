@@ -549,193 +549,6 @@
       "name": "Comms",
       "panel": [
         {
-          "id": "auxcommpanel",
-          "class": "AuxCommPanel",
-          "name": "AUX COMM PANEL",
-          "group": [
-            {
-              "id": "AUX: CNI Knob Switch",
-              "class": "AuxCniKnobSwitch",
-              "description": "AUX: CNI Knob Switch - BACKUP",
-              "label": "CNI Knob",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "auxcniknobswitchbackup",
-                  "clazz": "AuxCniKnobSwitchBackup",
-                  "callback": "SimAuxComBackup",
-                  "description": "AUX: CNI Knob Switch - BACKUP",
-                  "label": "BACKUP",
-                  "role": "none"
-                },
-                {
-                  "id": "auxcniknobswitchufc",
-                  "clazz": "AuxCniKnobSwitchUfc",
-                  "callback": "SimAuxComUFC",
-                  "description": "AUX: CNI Knob Switch - UFC",
-                  "label": "UFC",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "AUX: CHANNEL",
-              "class": "AuxChannel",
-              "description": "AUX: CHANNEL - Cycle Up Left Digit",
-              "label": "CHANNEL",
-              "type": "button",
-              "control": [
-                {
-                  "id": "auxchannelcycleupleftdigit",
-                  "clazz": "AuxChannelCycleUpLeftDigit",
-                  "callback": "SimCycleLeftAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Up Left Digit",
-                  "label": "Cycle Up Left Digit",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchannelcycledownleftdigit",
-                  "clazz": "AuxChannelCycleDownLeftDigit",
-                  "callback": "SimDecLeftAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Down Left Digit",
-                  "label": "Cycle Down Left Digit",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchannelcycleupcenterdigit",
-                  "clazz": "AuxChannelCycleUpCenterDigit",
-                  "callback": "SimCycleCenterAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Up Center Digit",
-                  "label": "Cycle Up Center Digit",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchannelcycledowncenterdig",
-                  "clazz": "AuxChannelCycleDownCenterDig",
-                  "callback": "SimDecCenterAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Down Center Dig.",
-                  "label": "Cycle Down Center Dig.",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchannelcycleuprightdigit",
-                  "clazz": "AuxChannelCycleUpRightDigit",
-                  "callback": "SimCycleRightAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Up Right Digit",
-                  "label": "Cycle Up Right Digit",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchannelcycledownrightdigit",
-                  "clazz": "AuxChannelCycleDownRightDigit",
-                  "callback": "SimDecRightAuxComDigit",
-                  "description": "AUX: CHANNEL - Cycle Down Right Digit",
-                  "label": "Cycle Down Right Digit",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchanneltogglebandx",
-                  "clazz": "AuxChannelToggleBandX",
-                  "callback": "SimXBandAuxComDigit",
-                  "description": "AUX: CHANNEL - Toggle Band X",
-                  "label": "Toggle Band X",
-                  "role": "none"
-                },
-                {
-                  "id": "auxchanneltogglebandy",
-                  "clazz": "AuxChannelToggleBandY",
-                  "callback": "SimYBandAuxComDigit",
-                  "description": "AUX: CHANNEL - Toggle Band Y",
-                  "label": "Toggle Band Y",
-                  "role": "none"
-                }
-              ]
-            },
-            {
-              "id": "AUX: STATION SELECTOR Switch",
-              "class": "AuxStationSelectorSwitch",
-              "description": "AUX: STATION SELECTOR Switch - T/R",
-              "label": "STATION SELECTOR",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "auxstationselectorswitchtr",
-                  "clazz": "AuxStationSelectorSwitchTR",
-                  "callback": "SimTACANTR",
-                  "description": "AUX: STATION SELECTOR Switch - T/R",
-                  "label": "T/R",
-                  "role": "none"
-                },
-                {
-                  "id": "auxstationselectorswitchaatr",
-                  "clazz": "AuxStationSelectorSwitchAATr",
-                  "callback": "SimTACANAATR",
-                  "description": "AUX: STATION SELECTOR Switch - A/A TR",
-                  "label": "A/A TR",
-                  "role": "none"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "audio2panel",
-          "class": "Audio2Panel",
-          "name": "AUDIO 2 PANEL",
-          "group": [
-            {
-              "id": "AUDIO2: INTERCOM Knob",
-              "class": "Audio2IntercomKnob",
-              "description": "AUDIO2: INTERCOM Knob - Volume Incr.",
-              "label": "INTERCOM",
-              "type": "button",
-              "control": [
-                {
-                  "id": "audio2intercomknobvolumeincr",
-                  "clazz": "Audio2IntercomKnobVolumeIncr",
-                  "callback": "SimStepIntercomVolumeUp",
-                  "description": "AUDIO2: INTERCOM Knob - Volume Incr.",
-                  "label": "Volume Incr.",
-                  "role": "up"
-                },
-                {
-                  "id": "audio2intercomknobvolumedecr",
-                  "clazz": "Audio2IntercomKnobVolumeDecr",
-                  "callback": "SimStepIntercomVolumeDown",
-                  "description": "AUDIO2: INTERCOM Knob - Volume Decr.",
-                  "label": "Volume Decr.",
-                  "role": "down"
-                }
-              ]
-            },
-            {
-              "id": "AUDIO2: ILS Knob",
-              "class": "Audio2IlsKnob",
-              "description": "AUDIO2: ILS Knob - ON",
-              "label": "ILS",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "audio2ilsknobon",
-                  "clazz": "Audio2IlsKnobOn",
-                  "callback": "SimILSOn",
-                  "description": "AUDIO2: ILS Knob - ON",
-                  "label": "ON",
-                  "role": "on"
-                },
-                {
-                  "id": "audio2ilsknoboff",
-                  "clazz": "Audio2IlsKnobOff",
-                  "callback": "SimILSOff",
-                  "description": "AUDIO2: ILS Knob - OFF",
-                  "label": "OFF",
-                  "role": "off"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "id": "audio1panel",
           "class": "Audio1Panel",
           "name": "AUDIO 1 PANEL",
@@ -919,6 +732,120 @@
                   "description": "AUDIO1: THREAT Knob - Volume Decr.",
                   "label": "Volume Decr.",
                   "role": "down"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "audio2panel",
+          "class": "Audio2Panel",
+          "name": "AUDIO 2 PANEL",
+          "group": [
+            {
+              "id": "AUDIO2: INTERCOM Knob",
+              "class": "Audio2IntercomKnob",
+              "description": "AUDIO2: INTERCOM Knob - Volume Incr.",
+              "label": "INTERCOM",
+              "type": "button",
+              "control": [
+                {
+                  "id": "audio2intercomknobvolumeincr",
+                  "clazz": "Audio2IntercomKnobVolumeIncr",
+                  "callback": "SimStepIntercomVolumeUp",
+                  "description": "AUDIO2: INTERCOM Knob - Volume Incr.",
+                  "label": "Volume Incr.",
+                  "role": "up"
+                },
+                {
+                  "id": "audio2intercomknobvolumedecr",
+                  "clazz": "Audio2IntercomKnobVolumeDecr",
+                  "callback": "SimStepIntercomVolumeDown",
+                  "description": "AUDIO2: INTERCOM Knob - Volume Decr.",
+                  "label": "Volume Decr.",
+                  "role": "down"
+                }
+              ]
+            },
+            {
+              "id": "AUDIO2: ILS Knob",
+              "class": "Audio2IlsKnob",
+              "description": "AUDIO2: ILS Knob - ON",
+              "label": "ILS",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "audio2ilsknobon",
+                  "clazz": "Audio2IlsKnobOn",
+                  "callback": "SimILSOn",
+                  "description": "AUDIO2: ILS Knob - ON",
+                  "label": "ON",
+                  "role": "on"
+                },
+                {
+                  "id": "audio2ilsknoboff",
+                  "clazz": "Audio2IlsKnobOff",
+                  "callback": "SimILSOff",
+                  "description": "AUDIO2: ILS Knob - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "auxcommpanel",
+          "class": "AuxCommPanel",
+          "name": "AUX COMM PANEL",
+          "group": [
+            {
+              "id": "AUX: CNI Knob Switch",
+              "class": "AuxCniKnobSwitch",
+              "description": "AUX: CNI Knob Switch - BACKUP",
+              "label": "CNI Knob",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "auxcniknobswitchbackup",
+                  "clazz": "AuxCniKnobSwitchBackup",
+                  "callback": "SimAuxComBackup",
+                  "description": "AUX: CNI Knob Switch - BACKUP",
+                  "label": "BACKUP",
+                  "role": "none"
+                },
+                {
+                  "id": "auxcniknobswitchufc",
+                  "clazz": "AuxCniKnobSwitchUfc",
+                  "callback": "SimAuxComUFC",
+                  "description": "AUX: CNI Knob Switch - UFC",
+                  "label": "UFC",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "AUX: STATION SELECTOR Switch",
+              "class": "AuxStationSelectorSwitch",
+              "description": "AUX: STATION SELECTOR Switch - T/R",
+              "label": "STATION SELECTOR",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "auxstationselectorswitchtr",
+                  "clazz": "AuxStationSelectorSwitchTR",
+                  "callback": "SimTACANTR",
+                  "description": "AUX: STATION SELECTOR Switch - T/R",
+                  "label": "T/R",
+                  "role": "none"
+                },
+                {
+                  "id": "auxstationselectorswitchaatr",
+                  "clazz": "AuxStationSelectorSwitchAATr",
+                  "callback": "SimTACANAATR",
+                  "description": "AUX: STATION SELECTOR Switch - A/A TR",
+                  "label": "A/A TR",
+                  "role": "none"
                 }
               ]
             }
@@ -1185,22 +1112,6 @@
           "name": "GEAR PANEL",
           "group": [
             {
-              "id": "GEAR: EMER STORES JETTISON Button",
-              "class": "GearEmerStoresJettisonButton",
-              "description": "GEAR: EMER STORES JETTISON Button - Hold",
-              "type": "button",
-              "control": [
-                {
-                  "id": "gearemerstoresjettisonbuttonhold",
-                  "clazz": "GearEmerStoresJettisonButtonHold",
-                  "callback": "SimEmergencyJettison",
-                  "description": "GEAR: EMER STORES JETTISON Button - Hold",
-                  "label": "EMER STORES JETTISON",
-                  "role": "none"
-                }
-              ]
-            },
-            {
               "id": "GEAR: HOOK Switch",
               "class": "GearHookSwitch",
               "description": "GEAR: HOOK Switch - UP",
@@ -1301,31 +1212,6 @@
               ]
             },
             {
-              "id": "GEAR: STORES CONFIG Switch",
-              "class": "GearStoresConfigSwitch",
-              "description": "GEAR: STORES CONFIG Switch - CAT I",
-              "label": "STORES CONFIG",
-              "type": "switch",
-              "control": [
-                {
-                  "id": "gearstoresconfigswitchcati",
-                  "clazz": "GearStoresConfigSwitchCatI",
-                  "callback": "SimCATI",
-                  "description": "GEAR: STORES CONFIG Switch - CAT I",
-                  "label": "CAT I",
-                  "role": "none"
-                },
-                {
-                  "id": "gearstoresconfigswitchcatiii",
-                  "clazz": "GearStoresConfigSwitchCatIii",
-                  "callback": "SimCATIII",
-                  "description": "GEAR: STORES CONFIG Switch - CAT III",
-                  "label": "CAT III",
-                  "role": "none"
-                }
-              ]
-            },
-            {
               "id": "GEAR: HORN SILENCER Button",
               "class": "GearHornSilencerButton",
               "description": "GEAR: HORN SILENCER Button - Push",
@@ -1365,42 +1251,35 @@
                   "role": "off"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "id": "altgearcontrol",
-          "class": "AltGearControl",
-          "name": "ALT GEAR CONTROL",
-          "group": [
+            },
             {
-              "id": "ALT GEAR: Extend Gear Handle",
-              "class": "AltGearExtendGearHandle",
-              "description": "ALT GEAR: Extend Gear Handle - Push",
+              "id": "ALT GEAR: Extend Alt Gear",
+              "class": "AltGearExtendAltGear",
+              "description": "ALT GEAR: Extend Alt Gear - Push",
               "type": "button",
               "control": [
                 {
-                  "id": "altgearextendgearhandlepush",
-                  "clazz": "AltGearExtendGearHandlePush",
+                  "id": "altgearextendaltgearpush",
+                  "clazz": "AltGearExtendAltGearPush",
                   "callback": "AFAlternateGear",
-                  "description": "ALT GEAR: Extend Gear Handle - Push",
-                  "label": "Extend Gear",
+                  "description": "ALT GEAR: Extend Alt Gear - Push",
+                  "label": "Extend Alt Gear",
                   "role": "none"
                 }
               ]
             },
             {
-              "id": "ALT GEAR: Reset Button",
-              "class": "AltGearResetButton",
-              "description": "ALT GEAR: Reset Button - Push",
+              "id": "ALT GEAR: Reset Alt Gear",
+              "class": "AltGearResetAltGear",
+              "description": "ALT GEAR: Reset Alt Gear - Push",
               "type": "button",
               "control": [
                 {
-                  "id": "altgearresetbuttonpush",
-                  "clazz": "AltGearResetButtonPush",
+                  "id": "altgearresetaltgearpush",
+                  "clazz": "AltGearResetAltGearPush",
                   "callback": "AFAlternateGearReset",
-                  "description": "ALT GEAR: Reset Button - Push",
-                  "label": "Reset",
+                  "description": "ALT GEAR: Reset Alt Gear - Push",
+                  "label": "Reset Alt Gear",
                   "role": "none"
                 }
               ]
@@ -1412,6 +1291,31 @@
           "class": "FltControlPanel",
           "name": "FLT CONTROL PANEL",
           "group": [
+            {
+              "id": "GEAR: STORES CONFIG Switch",
+              "class": "GearStoresConfigSwitch",
+              "description": "GEAR: STORES CONFIG Switch - CAT I",
+              "label": "STORES CONFIG",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "gearstoresconfigswitchcati",
+                  "clazz": "GearStoresConfigSwitchCatI",
+                  "callback": "SimCATI",
+                  "description": "GEAR: STORES CONFIG Switch - CAT I",
+                  "label": "CAT I",
+                  "role": "none"
+                },
+                {
+                  "id": "gearstoresconfigswitchcatiii",
+                  "clazz": "GearStoresConfigSwitchCatIii",
+                  "callback": "SimCATIII",
+                  "description": "GEAR: STORES CONFIG Switch - CAT III",
+                  "label": "CAT III",
+                  "role": "none"
+                }
+              ]
+            },
             {
               "id": "FLT: DIGITAL Switch",
               "class": "FltDigitalSwitch",
@@ -3543,6 +3447,22 @@
               ]
             },
             {
+              "id": "GEAR: EMER STORES JETTISON Button",
+              "class": "GearEmerStoresJettisonButton",
+              "description": "GEAR: EMER STORES JETTISON Button - Hold",
+              "type": "button",
+              "control": [
+                {
+                  "id": "gearemerstoresjettisonbuttonhold",
+                  "clazz": "GearEmerStoresJettisonButtonHold",
+                  "callback": "SimEmergencyJettison",
+                  "description": "GEAR: EMER STORES JETTISON Button - Hold",
+                  "label": "EMER STORES JETTISON",
+                  "role": "none"
+                }
+              ]
+            },
+            {
               "id": "EYE: F ACK Button",
               "class": "EyeFAckButton",
               "description": "EYE: F ACK Button - Push",
@@ -4001,14 +3921,7 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "radiocomms",
-      "class": "RadioComms",
-      "name": "Radio Comms",
-      "panel": [
+        },
         {
           "id": "generalradiooptions",
           "class": "GeneralRadioOptions",

@@ -343,126 +343,6 @@
     "stateful" : true,
     "relatedActions" : [ "ecmoprswitchtoggle", "ecmoprswitchopr" ]
   }, {
-    "id" : "auxcniknobswitchtoggle",
-    "callback" : "SimToggleAuxComMaster",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "auxcniknobswitchbackup", "auxcniknobswitchufc" ]
-  }, {
-    "id" : "auxcniknobswitchbackup",
-    "callback" : "SimAuxComBackup",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "auxcniknobswitchtoggle", "auxcniknobswitchufc" ]
-  }, {
-    "id" : "auxcniknobswitchufc",
-    "callback" : "SimAuxComUFC",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "auxcniknobswitchtoggle", "auxcniknobswitchbackup" ]
-  }, {
-    "id" : "auxchannelcycleupleftdigit",
-    "callback" : "SimCycleLeftAuxComDigit",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
-  }, {
-    "id" : "auxchannelcycledownleftdigit",
-    "callback" : "SimDecLeftAuxComDigit",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
-  }, {
-    "id" : "auxchannelcycleupcenterdigit",
-    "callback" : "SimCycleCenterAuxComDigit",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
-  }, {
-    "id" : "auxchannelcycledowncenterdig",
-    "callback" : "SimDecCenterAuxComDigit",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
-  }, {
-    "id" : "auxchannelcycleuprightdigit",
-    "callback" : "SimCycleRightAuxComDigit",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
-  }, {
-    "id" : "auxchannelcycledownrightdigit",
-    "callback" : "SimDecRightAuxComDigit",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
-  }, {
-    "id" : "auxchanneltogglebandxy",
-    "callback" : "SimCycleBandAuxComDigit",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
-  }, {
-    "id" : "auxchanneltogglebandx",
-    "callback" : "SimXBandAuxComDigit",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandy" ]
-  }, {
-    "id" : "auxchanneltogglebandy",
-    "callback" : "SimYBandAuxComDigit",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx" ]
-  }, {
-    "id" : "auxstationselectorswitchtoggle",
-    "callback" : "SimToggleAuxComAATR",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "auxstationselectorswitchtr", "auxstationselectorswitchaatr" ]
-  }, {
-    "id" : "auxstationselectorswitchtr",
-    "callback" : "SimTACANTR",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "auxstationselectorswitchtoggle", "auxstationselectorswitchaatr" ]
-  }, {
-    "id" : "auxstationselectorswitchaatr",
-    "callback" : "SimTACANAATR",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "auxstationselectorswitchtoggle", "auxstationselectorswitchtr" ]
-  }, {
-    "id" : "audio2intercomknobvolumeincr",
-    "callback" : "SimStepIntercomVolumeUp",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "audio2intercomknobvolumedecr" ]
-  }, {
-    "id" : "audio2intercomknobvolumedecr",
-    "callback" : "SimStepIntercomVolumeDown",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "audio2intercomknobvolumeincr" ]
-  }, {
-    "id" : "audio2ilsknobtoggle",
-    "callback" : "SimILS",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "audio2ilsknobon", "audio2ilsknoboff" ]
-  }, {
-    "id" : "audio2ilsknobon",
-    "callback" : "SimILSOn",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "audio2ilsknobtoggle", "audio2ilsknoboff" ]
-  }, {
-    "id" : "audio2ilsknoboff",
-    "callback" : "SimILSOff",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "audio2ilsknobtoggle", "audio2ilsknobon" ]
-  }, {
     "id" : "audio1comm1knobvolumeincr",
     "callback" : "SimStepComm1VolumeUp",
     "active" : false,
@@ -570,6 +450,126 @@
     "active" : false,
     "stateful" : false,
     "relatedActions" : [ "audio1threatknobvolumeincr" ]
+  }, {
+    "id" : "audio2intercomknobvolumeincr",
+    "callback" : "SimStepIntercomVolumeUp",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "audio2intercomknobvolumedecr" ]
+  }, {
+    "id" : "audio2intercomknobvolumedecr",
+    "callback" : "SimStepIntercomVolumeDown",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "audio2intercomknobvolumeincr" ]
+  }, {
+    "id" : "audio2ilsknobtoggle",
+    "callback" : "SimILS",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "audio2ilsknobon", "audio2ilsknoboff" ]
+  }, {
+    "id" : "audio2ilsknobon",
+    "callback" : "SimILSOn",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "audio2ilsknobtoggle", "audio2ilsknoboff" ]
+  }, {
+    "id" : "audio2ilsknoboff",
+    "callback" : "SimILSOff",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "audio2ilsknobtoggle", "audio2ilsknobon" ]
+  }, {
+    "id" : "auxcniknobswitchtoggle",
+    "callback" : "SimToggleAuxComMaster",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "auxcniknobswitchbackup", "auxcniknobswitchufc" ]
+  }, {
+    "id" : "auxcniknobswitchbackup",
+    "callback" : "SimAuxComBackup",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "auxcniknobswitchtoggle", "auxcniknobswitchufc" ]
+  }, {
+    "id" : "auxcniknobswitchufc",
+    "callback" : "SimAuxComUFC",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "auxcniknobswitchtoggle", "auxcniknobswitchbackup" ]
+  }, {
+    "id" : "auxchannelcycleupleftdigit",
+    "callback" : "SimCycleLeftAuxComDigit",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
+  }, {
+    "id" : "auxchannelcycledownleftdigit",
+    "callback" : "SimDecLeftAuxComDigit",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
+  }, {
+    "id" : "auxchannelcycleupcenterdigit",
+    "callback" : "SimCycleCenterAuxComDigit",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
+  }, {
+    "id" : "auxchannelcycledowncenterdig",
+    "callback" : "SimDecCenterAuxComDigit",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
+  }, {
+    "id" : "auxchannelcycleuprightdigit",
+    "callback" : "SimCycleRightAuxComDigit",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
+  }, {
+    "id" : "auxchannelcycledownrightdigit",
+    "callback" : "SimDecRightAuxComDigit",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
+  }, {
+    "id" : "auxchanneltogglebandxy",
+    "callback" : "SimCycleBandAuxComDigit",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandx", "auxchanneltogglebandy" ]
+  }, {
+    "id" : "auxchanneltogglebandx",
+    "callback" : "SimXBandAuxComDigit",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandy" ]
+  }, {
+    "id" : "auxchanneltogglebandy",
+    "callback" : "SimYBandAuxComDigit",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "auxchannelcycleupleftdigit", "auxchannelcycledownleftdigit", "auxchannelcycleupcenterdigit", "auxchannelcycledowncenterdig", "auxchannelcycleuprightdigit", "auxchannelcycledownrightdigit", "auxchanneltogglebandxy", "auxchanneltogglebandx" ]
+  }, {
+    "id" : "auxstationselectorswitchtoggle",
+    "callback" : "SimToggleAuxComAATR",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "auxstationselectorswitchtr", "auxstationselectorswitchaatr" ]
+  }, {
+    "id" : "auxstationselectorswitchtr",
+    "callback" : "SimTACANTR",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "auxstationselectorswitchtoggle", "auxstationselectorswitchaatr" ]
+  }, {
+    "id" : "auxstationselectorswitchaatr",
+    "callback" : "SimTACANAATR",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "auxstationselectorswitchtoggle", "auxstationselectorswitchtr" ]
   }, {
     "id" : "uhfpresetchannelknobcycleup",
     "callback" : "SimCycleRadioChannel",
@@ -931,12 +931,6 @@
     "stateful" : true,
     "relatedActions" : [ "uhfmodeknobstepup", "uhfmodeknobstepdown", "uhfmodeknobmnl", "uhfmodeknobpreset" ]
   }, {
-    "id" : "gearemerstoresjettisonbuttonhold",
-    "callback" : "SimEmergencyJettison",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : null
-  }, {
     "id" : "gearhookswitchtoggle",
     "callback" : "SimHookToggle",
     "active" : false,
@@ -1009,24 +1003,6 @@
     "stateful" : false,
     "relatedActions" : [ "gearlghandletoggle", "gearlghandleup" ]
   }, {
-    "id" : "gearstoresconfigswitchtoggle",
-    "callback" : "SimCATSwitch",
-    "active" : false,
-    "stateful" : false,
-    "relatedActions" : [ "gearstoresconfigswitchcati", "gearstoresconfigswitchcatiii" ]
-  }, {
-    "id" : "gearstoresconfigswitchcati",
-    "callback" : "SimCATI",
-    "active" : false,
-    "stateful" : true,
-    "relatedActions" : [ "gearstoresconfigswitchtoggle", "gearstoresconfigswitchcatiii" ]
-  }, {
-    "id" : "gearstoresconfigswitchcatiii",
-    "callback" : "SimCATIII",
-    "active" : true,
-    "stateful" : true,
-    "relatedActions" : [ "gearstoresconfigswitchtoggle", "gearstoresconfigswitchcati" ]
-  }, {
     "id" : "gearhornsilencerbuttonpush",
     "callback" : "SimSilenceHorn",
     "active" : false,
@@ -1051,17 +1027,35 @@
     "stateful" : true,
     "relatedActions" : [ "gearlightsswitchtoggle", "gearlightsswitchlanding" ]
   }, {
-    "id" : "altgearextendgearhandlepush",
+    "id" : "altgearextendaltgearpush",
     "callback" : "AFAlternateGear",
     "active" : false,
     "stateful" : false,
     "relatedActions" : null
   }, {
-    "id" : "altgearresetbuttonpush",
+    "id" : "altgearresetaltgearpush",
     "callback" : "AFAlternateGearReset",
     "active" : false,
     "stateful" : false,
     "relatedActions" : null
+  }, {
+    "id" : "gearstoresconfigswitchtoggle",
+    "callback" : "SimCATSwitch",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : [ "gearstoresconfigswitchcati", "gearstoresconfigswitchcatiii" ]
+  }, {
+    "id" : "gearstoresconfigswitchcati",
+    "callback" : "SimCATI",
+    "active" : false,
+    "stateful" : true,
+    "relatedActions" : [ "gearstoresconfigswitchtoggle", "gearstoresconfigswitchcatiii" ]
+  }, {
+    "id" : "gearstoresconfigswitchcatiii",
+    "callback" : "SimCATIII",
+    "active" : true,
+    "stateful" : true,
+    "relatedActions" : [ "gearstoresconfigswitchtoggle", "gearstoresconfigswitchcati" ]
   }, {
     "id" : "fltdigitalswitchtoggle",
     "callback" : "SimDigitalBUP",
@@ -2721,6 +2715,12 @@
   }, {
     "id" : "eyemastercautionbuttonpush",
     "callback" : "ExtinguishMasterCaution",
+    "active" : false,
+    "stateful" : false,
+    "relatedActions" : null
+  }, {
+    "id" : "gearemerstoresjettisonbuttonhold",
+    "callback" : "SimEmergencyJettison",
     "active" : false,
     "stateful" : false,
     "relatedActions" : null

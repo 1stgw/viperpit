@@ -1,12 +1,12 @@
 <template>
   <button-group
-    id="ALT GEAR: Reset Button"
-    description="ALT GEAR: Reset Button - Push"
+    id="ALT GEAR: Reset Alt Gear"
+    description="ALT GEAR: Reset Alt Gear - Push"
     type="button">
     <control
-      id="altgearresetbuttonpush"
-      description="ALT GEAR: Reset Button - Push"
-      label="Reset"
+      id="altgearresetaltgearpush"
+      description="ALT GEAR: Reset Alt Gear - Push"
+      label="Reset Alt Gear"
       type="button"
       role="none"/>
   </button-group>
@@ -17,7 +17,7 @@ import Control from '../../controls/Control'
 import ButtonGroup from '../../controls/ButtonGroup'
 
 export default {
-  name: 'AltGearResetButton',
+  name: 'AltGearResetAltGear',
   components: {
     Control,
     ButtonGroup

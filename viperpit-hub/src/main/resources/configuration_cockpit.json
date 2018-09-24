@@ -53,10 +53,6 @@
     "id" : "views",
     "className" : "Views",
     "name" : "Views"
-  }, {
-    "id" : "radiocomms",
-    "className" : "RadioComms",
-    "name" : "Radio Comms"
   } ],
   "panels" : [ {
     "id" : "cmdspanel",
@@ -79,17 +75,17 @@
     "className" : "EcmPanel",
     "name" : "ECM PANEL"
   }, {
-    "id" : "auxcommpanel",
-    "className" : "AuxCommPanel",
-    "name" : "AUX COMM PANEL"
+    "id" : "audio1panel",
+    "className" : "Audio1Panel",
+    "name" : "AUDIO 1 PANEL"
   }, {
     "id" : "audio2panel",
     "className" : "Audio2Panel",
     "name" : "AUDIO 2 PANEL"
   }, {
-    "id" : "audio1panel",
-    "className" : "Audio1Panel",
-    "name" : "AUDIO 1 PANEL"
+    "id" : "auxcommpanel",
+    "className" : "AuxCommPanel",
+    "name" : "AUX COMM PANEL"
   }, {
     "id" : "uhfpanel",
     "className" : "UhfPanel",
@@ -98,10 +94,6 @@
     "id" : "gearpanel",
     "className" : "GearPanel",
     "name" : "GEAR PANEL"
-  }, {
-    "id" : "altgearcontrol",
-    "className" : "AltGearControl",
-    "name" : "ALT GEAR CONTROL"
   }, {
     "id" : "fltcontrolpanel",
     "className" : "FltControlPanel",
@@ -358,36 +350,6 @@
     "label" : "OPR",
     "type" : "switch"
   }, {
-    "id" : "AUX: CNI Knob Switch",
-    "className" : "AuxCniKnobSwitch",
-    "description" : "AUX: CNI Knob Switch - BACKUP",
-    "label" : "CNI Knob",
-    "type" : "switch"
-  }, {
-    "id" : "AUX: CHANNEL",
-    "className" : "AuxChannel",
-    "description" : "AUX: CHANNEL - Cycle Up Left Digit",
-    "label" : "CHANNEL",
-    "type" : "button"
-  }, {
-    "id" : "AUX: STATION SELECTOR Switch",
-    "className" : "AuxStationSelectorSwitch",
-    "description" : "AUX: STATION SELECTOR Switch - T/R",
-    "label" : "STATION SELECTOR",
-    "type" : "switch"
-  }, {
-    "id" : "AUDIO2: INTERCOM Knob",
-    "className" : "Audio2IntercomKnob",
-    "description" : "AUDIO2: INTERCOM Knob - Volume Incr.",
-    "label" : "INTERCOM",
-    "type" : "button"
-  }, {
-    "id" : "AUDIO2: ILS Knob",
-    "className" : "Audio2IlsKnob",
-    "description" : "AUDIO2: ILS Knob - ON",
-    "label" : "ILS",
-    "type" : "switch"
-  }, {
     "id" : "AUDIO1: COMM 1 Knob",
     "className" : "Audio1Comm1Knob",
     "description" : "AUDIO1: COMM 1 Knob - Volume Incr.",
@@ -423,6 +385,30 @@
     "description" : "AUDIO1: THREAT Knob - Volume Incr.",
     "label" : "THREAT",
     "type" : "button"
+  }, {
+    "id" : "AUDIO2: INTERCOM Knob",
+    "className" : "Audio2IntercomKnob",
+    "description" : "AUDIO2: INTERCOM Knob - Volume Incr.",
+    "label" : "INTERCOM",
+    "type" : "button"
+  }, {
+    "id" : "AUDIO2: ILS Knob",
+    "className" : "Audio2IlsKnob",
+    "description" : "AUDIO2: ILS Knob - ON",
+    "label" : "ILS",
+    "type" : "switch"
+  }, {
+    "id" : "AUX: CNI Knob Switch",
+    "className" : "AuxCniKnobSwitch",
+    "description" : "AUX: CNI Knob Switch - BACKUP",
+    "label" : "CNI Knob",
+    "type" : "switch"
+  }, {
+    "id" : "AUX: STATION SELECTOR Switch",
+    "className" : "AuxStationSelectorSwitch",
+    "description" : "AUX: STATION SELECTOR Switch - T/R",
+    "label" : "STATION SELECTOR",
+    "type" : "switch"
   }, {
     "id" : "UHF: PRESET CHANNEL Knob",
     "className" : "UhfPresetChannelKnob",
@@ -478,12 +464,6 @@
     "label" : "MODE",
     "type" : "switch"
   }, {
-    "id" : "GEAR: EMER STORES JETTISON Button",
-    "className" : "GearEmerStoresJettisonButton",
-    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
-    "label" : null,
-    "type" : "button"
-  }, {
     "id" : "GEAR: HOOK Switch",
     "className" : "GearHookSwitch",
     "description" : "GEAR: HOOK Switch - UP",
@@ -508,12 +488,6 @@
     "label" : "LG",
     "type" : "switch"
   }, {
-    "id" : "GEAR: STORES CONFIG Switch",
-    "className" : "GearStoresConfigSwitch",
-    "description" : "GEAR: STORES CONFIG Switch - CAT I",
-    "label" : "STORES CONFIG",
-    "type" : "switch"
-  }, {
     "id" : "GEAR: HORN SILENCER Button",
     "className" : "GearHornSilencerButton",
     "description" : "GEAR: HORN SILENCER Button - Push",
@@ -526,17 +500,23 @@
     "label" : "LIGHTS",
     "type" : "switch"
   }, {
-    "id" : "ALT GEAR: Extend Gear Handle",
-    "className" : "AltGearExtendGearHandle",
-    "description" : "ALT GEAR: Extend Gear Handle - Push",
+    "id" : "ALT GEAR: Extend Alt Gear",
+    "className" : "AltGearExtendAltGear",
+    "description" : "ALT GEAR: Extend Alt Gear - Push",
     "label" : null,
     "type" : "button"
   }, {
-    "id" : "ALT GEAR: Reset Button",
-    "className" : "AltGearResetButton",
-    "description" : "ALT GEAR: Reset Button - Push",
+    "id" : "ALT GEAR: Reset Alt Gear",
+    "className" : "AltGearResetAltGear",
+    "description" : "ALT GEAR: Reset Alt Gear - Push",
     "label" : null,
     "type" : "button"
+  }, {
+    "id" : "GEAR: STORES CONFIG Switch",
+    "className" : "GearStoresConfigSwitch",
+    "description" : "GEAR: STORES CONFIG Switch - CAT I",
+    "label" : "STORES CONFIG",
+    "type" : "switch"
   }, {
     "id" : "FLT: DIGITAL Switch",
     "className" : "FltDigitalSwitch",
@@ -949,6 +929,12 @@
     "id" : "EYE: MASTER CAUTION Button",
     "className" : "EyeMasterCautionButton",
     "description" : "EYE: MASTER CAUTION Button - Push",
+    "label" : null,
+    "type" : "button"
+  }, {
+    "id" : "GEAR: EMER STORES JETTISON Button",
+    "className" : "GearEmerStoresJettisonButton",
+    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
     "label" : null,
     "type" : "button"
   }, {
@@ -1379,102 +1365,6 @@
     "label" : "OFF",
     "role" : "off"
   }, {
-    "id" : "auxcniknobswitchbackup",
-    "className" : "AuxCniKnobSwitchBackup",
-    "description" : "AUX: CNI Knob Switch - BACKUP",
-    "label" : "BACKUP",
-    "role" : "none"
-  }, {
-    "id" : "auxcniknobswitchufc",
-    "className" : "AuxCniKnobSwitchUfc",
-    "description" : "AUX: CNI Knob Switch - UFC",
-    "label" : "UFC",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycleupleftdigit",
-    "className" : "AuxChannelCycleUpLeftDigit",
-    "description" : "AUX: CHANNEL - Cycle Up Left Digit",
-    "label" : "Cycle Up Left Digit",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycledownleftdigit",
-    "className" : "AuxChannelCycleDownLeftDigit",
-    "description" : "AUX: CHANNEL - Cycle Down Left Digit",
-    "label" : "Cycle Down Left Digit",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycleupcenterdigit",
-    "className" : "AuxChannelCycleUpCenterDigit",
-    "description" : "AUX: CHANNEL - Cycle Up Center Digit",
-    "label" : "Cycle Up Center Digit",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycledowncenterdig",
-    "className" : "AuxChannelCycleDownCenterDig",
-    "description" : "AUX: CHANNEL - Cycle Down Center Dig.",
-    "label" : "Cycle Down Center Dig.",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycleuprightdigit",
-    "className" : "AuxChannelCycleUpRightDigit",
-    "description" : "AUX: CHANNEL - Cycle Up Right Digit",
-    "label" : "Cycle Up Right Digit",
-    "role" : "none"
-  }, {
-    "id" : "auxchannelcycledownrightdigit",
-    "className" : "AuxChannelCycleDownRightDigit",
-    "description" : "AUX: CHANNEL - Cycle Down Right Digit",
-    "label" : "Cycle Down Right Digit",
-    "role" : "none"
-  }, {
-    "id" : "auxchanneltogglebandx",
-    "className" : "AuxChannelToggleBandX",
-    "description" : "AUX: CHANNEL - Toggle Band X",
-    "label" : "Toggle Band X",
-    "role" : "none"
-  }, {
-    "id" : "auxchanneltogglebandy",
-    "className" : "AuxChannelToggleBandY",
-    "description" : "AUX: CHANNEL - Toggle Band Y",
-    "label" : "Toggle Band Y",
-    "role" : "none"
-  }, {
-    "id" : "auxstationselectorswitchtr",
-    "className" : "AuxStationSelectorSwitchTR",
-    "description" : "AUX: STATION SELECTOR Switch - T/R",
-    "label" : "T/R",
-    "role" : "none"
-  }, {
-    "id" : "auxstationselectorswitchaatr",
-    "className" : "AuxStationSelectorSwitchAATr",
-    "description" : "AUX: STATION SELECTOR Switch - A/A TR",
-    "label" : "A/A TR",
-    "role" : "none"
-  }, {
-    "id" : "audio2intercomknobvolumeincr",
-    "className" : "Audio2IntercomKnobVolumeIncr",
-    "description" : "AUDIO2: INTERCOM Knob - Volume Incr.",
-    "label" : "Volume Incr.",
-    "role" : "up"
-  }, {
-    "id" : "audio2intercomknobvolumedecr",
-    "className" : "Audio2IntercomKnobVolumeDecr",
-    "description" : "AUDIO2: INTERCOM Knob - Volume Decr.",
-    "label" : "Volume Decr.",
-    "role" : "down"
-  }, {
-    "id" : "audio2ilsknobon",
-    "className" : "Audio2IlsKnobOn",
-    "description" : "AUDIO2: ILS Knob - ON",
-    "label" : "ON",
-    "role" : "on"
-  }, {
-    "id" : "audio2ilsknoboff",
-    "className" : "Audio2IlsKnobOff",
-    "description" : "AUDIO2: ILS Knob - OFF",
-    "label" : "OFF",
-    "role" : "off"
-  }, {
     "id" : "audio1comm1knobvolumeincr",
     "className" : "Audio1Comm1KnobVolumeIncr",
     "description" : "AUDIO1: COMM 1 Knob - Volume Incr.",
@@ -1570,6 +1460,54 @@
     "description" : "AUDIO1: THREAT Knob - Volume Decr.",
     "label" : "Volume Decr.",
     "role" : "down"
+  }, {
+    "id" : "audio2intercomknobvolumeincr",
+    "className" : "Audio2IntercomKnobVolumeIncr",
+    "description" : "AUDIO2: INTERCOM Knob - Volume Incr.",
+    "label" : "Volume Incr.",
+    "role" : "up"
+  }, {
+    "id" : "audio2intercomknobvolumedecr",
+    "className" : "Audio2IntercomKnobVolumeDecr",
+    "description" : "AUDIO2: INTERCOM Knob - Volume Decr.",
+    "label" : "Volume Decr.",
+    "role" : "down"
+  }, {
+    "id" : "audio2ilsknobon",
+    "className" : "Audio2IlsKnobOn",
+    "description" : "AUDIO2: ILS Knob - ON",
+    "label" : "ON",
+    "role" : "on"
+  }, {
+    "id" : "audio2ilsknoboff",
+    "className" : "Audio2IlsKnobOff",
+    "description" : "AUDIO2: ILS Knob - OFF",
+    "label" : "OFF",
+    "role" : "off"
+  }, {
+    "id" : "auxcniknobswitchbackup",
+    "className" : "AuxCniKnobSwitchBackup",
+    "description" : "AUX: CNI Knob Switch - BACKUP",
+    "label" : "BACKUP",
+    "role" : "none"
+  }, {
+    "id" : "auxcniknobswitchufc",
+    "className" : "AuxCniKnobSwitchUfc",
+    "description" : "AUX: CNI Knob Switch - UFC",
+    "label" : "UFC",
+    "role" : "none"
+  }, {
+    "id" : "auxstationselectorswitchtr",
+    "className" : "AuxStationSelectorSwitchTR",
+    "description" : "AUX: STATION SELECTOR Switch - T/R",
+    "label" : "T/R",
+    "role" : "none"
+  }, {
+    "id" : "auxstationselectorswitchaatr",
+    "className" : "AuxStationSelectorSwitchAATr",
+    "description" : "AUX: STATION SELECTOR Switch - A/A TR",
+    "label" : "A/A TR",
+    "role" : "none"
   }, {
     "id" : "uhfpresetchannelknobcycleup",
     "className" : "UhfPresetChannelKnobCycleUp",
@@ -1691,12 +1629,6 @@
     "label" : "GRD",
     "role" : "none"
   }, {
-    "id" : "gearemerstoresjettisonbuttonhold",
-    "className" : "GearEmerStoresJettisonButtonHold",
-    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
-    "label" : "EMER STORES JETTISON",
-    "role" : "none"
-  }, {
     "id" : "gearhookswitchup",
     "className" : "GearHookSwitchUp",
     "description" : "GEAR: HOOK Switch - UP",
@@ -1745,18 +1677,6 @@
     "label" : "DN",
     "role" : "down"
   }, {
-    "id" : "gearstoresconfigswitchcati",
-    "className" : "GearStoresConfigSwitchCatI",
-    "description" : "GEAR: STORES CONFIG Switch - CAT I",
-    "label" : "CAT I",
-    "role" : "none"
-  }, {
-    "id" : "gearstoresconfigswitchcatiii",
-    "className" : "GearStoresConfigSwitchCatIii",
-    "description" : "GEAR: STORES CONFIG Switch - CAT III",
-    "label" : "CAT III",
-    "role" : "none"
-  }, {
     "id" : "gearhornsilencerbuttonpush",
     "className" : "GearHornSilencerButtonPush",
     "description" : "GEAR: HORN SILENCER Button - Push",
@@ -1775,16 +1695,28 @@
     "label" : "OFF",
     "role" : "off"
   }, {
-    "id" : "altgearextendgearhandlepush",
-    "className" : "AltGearExtendGearHandlePush",
-    "description" : "ALT GEAR: Extend Gear Handle - Push",
-    "label" : "Extend Gear",
+    "id" : "altgearextendaltgearpush",
+    "className" : "AltGearExtendAltGearPush",
+    "description" : "ALT GEAR: Extend Alt Gear - Push",
+    "label" : "Extend Alt Gear",
     "role" : "none"
   }, {
-    "id" : "altgearresetbuttonpush",
-    "className" : "AltGearResetButtonPush",
-    "description" : "ALT GEAR: Reset Button - Push",
-    "label" : "Reset",
+    "id" : "altgearresetaltgearpush",
+    "className" : "AltGearResetAltGearPush",
+    "description" : "ALT GEAR: Reset Alt Gear - Push",
+    "label" : "Reset Alt Gear",
+    "role" : "none"
+  }, {
+    "id" : "gearstoresconfigswitchcati",
+    "className" : "GearStoresConfigSwitchCatI",
+    "description" : "GEAR: STORES CONFIG Switch - CAT I",
+    "label" : "CAT I",
+    "role" : "none"
+  }, {
+    "id" : "gearstoresconfigswitchcatiii",
+    "className" : "GearStoresConfigSwitchCatIii",
+    "description" : "GEAR: STORES CONFIG Switch - CAT III",
+    "label" : "CAT III",
     "role" : "none"
   }, {
     "id" : "fltdigitalswitchbackup",
@@ -2763,6 +2695,12 @@
     "className" : "EyeMasterCautionButtonPush",
     "description" : "EYE: MASTER CAUTION Button - Push",
     "label" : "MASTER CAUTION",
+    "role" : "none"
+  }, {
+    "id" : "gearemerstoresjettisonbuttonhold",
+    "className" : "GearEmerStoresJettisonButtonHold",
+    "description" : "GEAR: EMER STORES JETTISON Button - Hold",
+    "label" : "EMER STORES JETTISON",
     "role" : "none"
   }, {
     "id" : "eyefackbuttonpush",

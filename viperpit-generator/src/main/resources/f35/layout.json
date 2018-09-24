@@ -11,7 +11,11 @@
                 {
                   "group": [
                     "CMDS: RWR Switch",
-                    "CMDS: JMR Switch",
+                    "CMDS: JMR Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "CMDS: MWS Switch",
                     "CMDS: O1 Switch"
                   ]
@@ -19,7 +23,11 @@
                 {
                   "group": [
                     "CMDS: O2 Switch",
-                    "CMDS: CH Switch",
+                    "CMDS: CH Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "CMDS: FL Switch",
                     "CMDS: JETT Switch"
                   ]
@@ -38,7 +46,11 @@
                 {
                   "group": [
                     "TWA: LOW Button",
-                    "TWA: SEARCH Button",
+                    "TWA: SEARCH Button"
+                  ]
+                },
+                {
+                  "group": [
                     "TWA: POWER Button"
                   ]
                 }
@@ -54,7 +66,11 @@
                 {
                   "group": [
                     "TWP: HANDOFF",
-                    "TWP: MISSILE LAUNCH",
+                    "TWP: MISSILE LAUNCH"
+                  ]
+                },
+                {
+                  "group": [
                     "TWP: PRIORITY MODE",
                     "TWP: UNKNOWN"
                   ]
@@ -101,13 +117,24 @@
         {
           "panelRowSet": [
             {
-              "panel": "auxcommpanel",
+              "panel": "audio1panel",
               "panelRow": [
                 {
                   "group": [
-                    "AUX: CNI Knob Switch",
-                    "AUX: CHANNEL",
-                    "AUX: STATION SELECTOR Switch"
+                    "AUDIO1: COMM 1 Knob",
+                    "AUDIO1: COMM 2 Knob"
+                  ]
+                },
+                {
+                  "group": [
+                    "AUDIO1: MSL Knob",
+                    "AUDIO1: COMM 1 Mode Knob"
+                  ]
+                },
+                {
+                  "group": [
+                    "AUDIO1: COMM 2 Mode Knob",
+                    "AUDIO1: THREAT Knob"
                   ]
                 }
               ]
@@ -128,20 +155,12 @@
         {
           "panelRowSet": [
             {
-              "panel": "audio1panel",
+              "panel": "auxcommpanel",
               "panelRow": [
                 {
                   "group": [
-                    "AUDIO1: COMM 1 Knob",
-                    "AUDIO1: COMM 2 Knob",
-                    "AUDIO1: MSL Knob",
-                    "AUDIO1: COMM 1 Mode Knob"
-                  ]
-                },
-                {
-                  "group": [
-                    "AUDIO1: COMM 2 Mode Knob",
-                    "AUDIO1: THREAT Knob"
+                    "AUX: CNI Knob Switch",
+                    "AUX: STATION SELECTOR Switch"
                   ]
                 }
               ]
@@ -152,7 +171,11 @@
                 {
                   "group": [
                     "UHF: PRESET CHANNEL Knob",
-                    "UHF: A-3-2-T Rotary X__.___",
+                    "UHF: A-3-2-T Rotary X__.___"
+                  ]
+                },
+                {
+                  "group": [
                     "UHF: Manual Frequency _X_.___",
                     "UHF: Manual Frequency __X.___"
                   ]
@@ -160,7 +183,11 @@
                 {
                   "group": [
                     "UHF: Manual Frequency ___.X__",
-                    "UHF: Manual Frequency ___._XX",
+                    "UHF: Manual Frequency ___._XX"
+                  ]
+                },
+                {
+                  "group": [
                     "UHF: FUNCTION Knob",
                     "UHF: VOL Knob"
                   ]
@@ -186,29 +213,54 @@
               "panelRow": [
                 {
                   "group": [
-                    "GEAR: EMER STORES JETTISON Button",
                     "GEAR: HOOK Switch",
-                    "GEAR: GND JETT Switch",
-                    "GEAR: PARKING BREAK Switch"
+                    "GEAR: GND JETT Switch"
                   ]
                 },
                 {
                   "group": [
-                    "GEAR: LG Handle",
-                    "GEAR: STORES CONFIG Switch",
+                    "GEAR: PARKING BREAK Switch",
+                    "GEAR: LG Handle"
+                  ]
+                },
+                {
+                  "group": [
                     "GEAR: HORN SILENCER Button",
                     "GEAR: LIGHTS Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "ALT GEAR: Extend Alt Gear",
+                    "ALT GEAR: Reset Alt Gear"
                   ]
                 }
               ]
             },
             {
-              "panel": "altgearcontrol",
+              "panel": "fltcontrolpanel",
               "panelRow": [
                 {
                   "group": [
-                    "ALT GEAR: Extend Gear Handle",
-                    "ALT GEAR: Reset Button"
+                    "GEAR: STORES CONFIG Switch",
+                    "FLT: DIGITAL Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "FLT: ALT FLAPS Switch",
+                    "FLT: MANUAL TF FLYUP Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "FLT: LE FLAPS Switch",
+                    "FLT: FLCS Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "FLT: BIT Switch"
                   ]
                 }
               ]
@@ -217,42 +269,23 @@
         },
         {
           "panelRowSet": [
-            {
-              "panel": "fltcontrolpanel",
-              "panelRow": [
-                {
-                  "group": [
-                    "FLT: DIGITAL Switch",
-                    "FLT: ALT FLAPS Switch",
-                    "FLT: MANUAL TF FLYUP Switch",
-                    "FLT: LE FLAPS Switch"
-                  ]
-                },
-                {
-                  "group": [
-                    "FLT: FLCS Switch",
-                    "FLT: BIT Switch"
-                  ]
-                }
-              ]
-            },
             {
               "panel": "manualtrimpanel",
               "panelRow": [
                 {
                   "group": [
                     "TRIM: ROLL TRIM Wheel",
-                    "TRIM: TRIM/AP DISC Switch",
+                    "TRIM: TRIM/AP DISC Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "TRIM: YAW TRIM Knob",
                     "TRIM: PITCH TRIM Wheel"
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
+            },
             {
               "panel": "epupanel",
               "panelRow": [
@@ -262,7 +295,11 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
             {
               "panel": "elecpanel",
               "panelRow": [
@@ -273,11 +310,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
+            },
             {
               "panel": "avtrpanel",
               "panelRow": [
@@ -287,7 +320,11 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
             {
               "panel": "engjetstartpanel",
               "panelRow": [
@@ -298,11 +335,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
+            },
             {
               "panel": "mpopanel",
               "panelRow": [
@@ -312,7 +345,11 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
             {
               "panel": "leftsidewall",
               "panelRow": [
@@ -323,11 +360,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "panelRowSet": [
+            },
             {
               "panel": "aircondpanel",
               "panelRow": [
@@ -337,7 +370,11 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "panelRowSet": [
             {
               "panel": "oxygenpanel",
               "panelRow": [
@@ -363,7 +400,11 @@
                 {
                   "group": [
                     "FUEL: MASTER Switch",
-                    "FUEL: ENG FEED Knob",
+                    "FUEL: ENG FEED Knob"
+                  ]
+                },
+                {
+                  "group": [
                     "FUEL: AIR REFUEL Switch"
                   ]
                 }
@@ -395,7 +436,11 @@
                 {
                   "group": [
                     "TEST: FIRE & OHEAT DETECT Button",
-                    "TEST: OXY QTY Switch",
+                    "TEST: OXY QTY Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "TEST: MAL & IND LTS Button",
                     "TEST: PROBE HEAT Switch"
                   ]
@@ -423,7 +468,11 @@
                 {
                   "group": [
                     "EXT: ANTI COLLISION Switch",
-                    "EXT: POSITION Switch",
+                    "EXT: POSITION Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "EXT: WING/TAIL Switch",
                     "EXT: MASTER Switch"
                   ]
@@ -436,7 +485,11 @@
                 {
                   "group": [
                     "LIGHT: INST PNL Knob (Primary)",
-                    "LIGHT: DED Knob (Primary)",
+                    "LIGHT: DED Knob (Primary)"
+                  ]
+                },
+                {
+                  "group": [
                     "LIGHT: CONSOLES Knob (Flood)"
                   ]
                 }
@@ -457,7 +510,11 @@
                 {
                   "group": [
                     "SNSR: LEFT HDPT Switch",
-                    "SNSR: RIGHT HDPT Switch",
+                    "SNSR: RIGHT HDPT Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "SNSR: FCR Switch",
                     "SNSR: RDR ALT Switch"
                   ]
@@ -484,7 +541,11 @@
                 {
                   "group": [
                     "MAIN: HSI HDG Knob",
-                    "MAIN: HSI CRS Knob",
+                    "MAIN: HSI CRS Knob"
+                  ]
+                },
+                {
+                  "group": [
                     "MAIN: Altimeter Pressure Knob"
                   ]
                 }
@@ -510,7 +571,11 @@
                 {
                   "group": [
                     "MISC: ADV MODE",
-                    "MISC: ROLL Switch",
+                    "MISC: ROLL Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "MISC: PITCH Switch"
                   ]
                 }
@@ -531,7 +596,11 @@
                 {
                   "group": [
                     "AVIONICS: INS Knob",
-                    "AVIONICS: FCC Switch",
+                    "AVIONICS: FCC Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "AVIONICS: SMS Switch",
                     "AVIONICS: MFD Switch"
                   ]
@@ -539,7 +608,11 @@
                 {
                   "group": [
                     "AVIONICS: UFC Switch",
-                    "AVIONICS: GPS Switch",
+                    "AVIONICS: GPS Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "AVIONICS: DL Switch"
                   ]
                 }
@@ -551,7 +624,11 @@
                 {
                   "group": [
                     "HUD: Scales Switch",
-                    "HUD: FPM Switch",
+                    "HUD: FPM Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "HUD: DED Data Switch",
                     "HUD: DEPR RET Switch"
                   ]
@@ -559,7 +636,11 @@
                 {
                   "group": [
                     "HUD: Velocity Switch",
-                    "HUD: Altitude Switch",
+                    "HUD: Altitude Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "HUD: Brightness Switch"
                   ]
                 }
@@ -614,6 +695,11 @@
                 {
                   "group": [
                     "EYE: MASTER CAUTION Button",
+                    "GEAR: EMER STORES JETTISON Button"
+                  ]
+                },
+                {
+                  "group": [
                     "EYE: F ACK Button"
                   ]
                 }
@@ -669,7 +755,11 @@
                 {
                   "group": [
                     "SIM: Time Acceleration",
-                    "SIM: Chat",
+                    "SIM: Chat"
+                  ]
+                },
+                {
+                  "group": [
                     "SIM: Toggle Exit Sim Menu"
                   ]
                 }
@@ -690,7 +780,11 @@
                 {
                   "group": [
                     "VIEWGEN: Rotate View Up",
-                    "VIEWGEN: Rotate View Down",
+                    "VIEWGEN: Rotate View Down"
+                  ]
+                },
+                {
+                  "group": [
                     "VIEWGEN: Rotate View Left",
                     "VIEWGEN: Rotate View Right"
                   ]
@@ -703,7 +797,11 @@
                 {
                   "group": [
                     "VIEWINT: Padlock",
-                    "VIEWINT: HUD Only",
+                    "VIEWINT: HUD Only"
+                  ]
+                },
+                {
+                  "group": [
                     "VIEWINT: Snap (3D) Cockpit",
                     "VIEWINT: Pan (3D) Cockpit"
                   ]
@@ -726,29 +824,28 @@
                 {
                   "group": [
                     "VIEWEXT: Orbit Camera",
-                    "VIEWEXT: Satellite Camera",
+                    "VIEWEXT: Satellite Camera"
+                  ]
+                },
+                {
+                  "group": [
                     "VIEWEXT: Flyby Camera",
                     "VIEWEXT: Chase Camera"
                   ]
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "console": "radiocomms",
-      "consoleRow": [
-        {
-          "panelRowSet": [
+            },
             {
               "panel": "generalradiooptions",
               "panelRow": [
                 {
                   "group": [
                     "RADIO: AWACS Menu",
-                    "RADIO: Wingman Menu",
+                    "RADIO: Wingman Menu"
+                  ]
+                },
+                {
+                  "group": [
                     "RADIO: Element Menu",
                     "RADIO: Flight Menu"
                   ]
@@ -756,7 +853,11 @@
                 {
                   "group": [
                     "RADIO: ATC Menu",
-                    "RADIO: Tanker Menu",
+                    "RADIO: Tanker Menu"
+                  ]
+                },
+                {
+                  "group": [
                     "Radio-Send Message Tanker",
                     "Radio-Next Menu Tanker"
                   ]

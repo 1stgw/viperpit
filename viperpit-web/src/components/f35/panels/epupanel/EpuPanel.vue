@@ -3,7 +3,7 @@
     <div class="panel-heading">EPU PANEL</div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
             <epu-epu-switch />
           </div>
