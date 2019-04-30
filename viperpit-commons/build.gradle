@@ -1,5 +1,5 @@
 plugins {
-	id "org.xtext.xtend" version "1.0.21"
+	id "org.xtext.xtend" version "2.0.4"
 }
 
 apply plugin: "java"
@@ -8,5 +8,5 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.14.0")
+	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.17.1")
 }
