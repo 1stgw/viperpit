@@ -10,11 +10,11 @@ import java.util.function.Predicate
 import org.eclipse.xtend.lib.annotations.Data
 import org.slf4j.LoggerFactory
 
-import static com.google.common.base.CharMatcher.JAVA_LETTER_OR_DIGIT
-import static com.google.common.base.CharMatcher.WHITESPACE
+import static com.google.common.base.CharMatcher.javaLetterOrDigit
+import static com.google.common.base.CharMatcher.whitespace
 import static com.google.common.base.Charsets.UTF_8
 import static com.google.common.base.Splitter.on
-import static com.google.common.io.Files.write
+import static de.viperpit.generator.GeneratorUtils.write
 
 class CockpitGenerator {
 
@@ -111,7 +111,7 @@ class CockpitGenerator {
 
 	private def toGroups(Configuration configuration, Predicate<String> filter) {
 		val key = [ String it |
-			JAVA_LETTER_OR_DIGIT.or(CharMatcher.anyOf("_.")).retainFrom(on(WHITESPACE).trimResults.split(it).map [
+			javaLetterOrDigit.or(CharMatcher.anyOf("_.")).retainFrom(on(whitespace).trimResults.split(it).map [
 				toLowerCase.toFirstUpper
 			].join('')).toFirstLower
 		]
@@ -126,7 +126,7 @@ class CockpitGenerator {
 			val firstIndex = group.indexOf(firstIndexToken)
 
 			val lastIndexToken = suffixes.findFirst[group.endsWith(it)]
-			val lastIndex = if(lastIndexToken === null) group.length else group.lastIndexOf(lastIndexToken)
+			val lastIndex = if (lastIndexToken === null) group.length else group.lastIndexOf(lastIndexToken)
 
 			val label = group.substring(firstIndex + 1, lastIndex).trim
 			val group = new GroupDef(name, description, label, category, section, type, actions)
@@ -139,18 +139,18 @@ class CockpitGenerator {
 		var name = it
 		name = CharMatcher.is('.').removeFrom(name)
 		name = CharMatcher.is('_').replaceFrom(name, 'z')
-		val tokens = new ArrayList(on(JAVA_LETTER_OR_DIGIT.negate).trimResults.splitToList(name))
+		val tokens = new ArrayList(on(javaLetterOrDigit.negate).trimResults.splitToList(name))
 		'''«tokens.map[toLowerCase.toFirstUpper].join»'''.toString
 	}
 
 	private def toName(String category) {
-		val tokens = new ArrayList(on(WHITESPACE).trimResults.splitToList(category))
+		val tokens = new ArrayList(on(whitespace).trimResults.splitToList(category))
 		tokens.map[toLowerCase.toFirstUpper].join(' ')
 	}
 
 	private def toPathName(String category) {
-		val tokens = new ArrayList(on(WHITESPACE).trimResults.splitToList(category))
-		JAVA_LETTER_OR_DIGIT.retainFrom('''«tokens.map[toLowerCase].join»'''.toString)
+		val tokens = new ArrayList(on(whitespace).trimResults.splitToList(category))
+		javaLetterOrDigit.retainFrom('''«tokens.map[toLowerCase].join»'''.toString)
 	}
 
 }

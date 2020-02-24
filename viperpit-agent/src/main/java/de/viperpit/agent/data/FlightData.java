@@ -9,7 +9,7 @@ public class FlightData {
 	
 	static{
 		try{
-			System.loadLibrary("bms433");
+			System.loadLibrary("bms434");
 		}catch(UnsatisfiedLinkError e){
 			e.printStackTrace();
 		}catch(SecurityException e){

@@ -7,9 +7,9 @@ import org.eclipse.xtend.lib.annotations.EqualsHashCode
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor
 import org.eclipse.xtend.lib.annotations.ToString
 
-import static com.google.common.base.CharMatcher.JAVA_DIGIT
-import static com.google.common.base.CharMatcher.WHITESPACE
 import static com.google.common.base.CharMatcher.is
+import static com.google.common.base.CharMatcher.javaDigit
+import static com.google.common.base.CharMatcher.whitespace
 import static com.google.common.base.Preconditions.checkArgument
 import static com.google.common.base.Preconditions.checkNotNull
 import static com.google.common.base.Splitter.on
@@ -20,7 +20,7 @@ import static java.nio.file.Files.readAllLines
 import static extension java.lang.Integer.parseInt
 import static extension java.lang.Integer.valueOf
 
-public class KeyFile {
+class KeyFile {
 
 	@FinalFieldsConstructor @EqualsHashCode @ToString static class KeyCodeLine {
 		@Accessors(PUBLIC_GETTER) val String category
@@ -107,7 +107,7 @@ public class KeyFile {
 			return null
 		}
 		val description = get(8)
-		if (JAVA_DIGIT.indexIn(description) != 1) {
+		if (javaDigit.indexIn(description) != 1) {
 			return null
 		}
 		return description.substring(4, is('"').indexIn(description, 4)).trim
@@ -138,7 +138,7 @@ public class KeyFile {
 	}
 
 	private def parse(String line) {
-		on(WHITESPACE).limit(9).trimResults.splitToList(line)
+		on(whitespace).limit(9).trimResults.splitToList(line)
 	}
 
 	private def toKeyCodeLine(String line, String category, String section) {
@@ -151,7 +151,7 @@ public class KeyFile {
 		}
 		val callback = get(0)
 		val sound = get(1).valueOf.intValue
-		val key = if(get(3) != "0XFFFFFFFF") get(3).toUpperCase.replaceFirst("0X", "").parseInt(16).intValue else -1
+		val key = if (get(3) != "0XFFFFFFFF") get(3).toUpperCase.replaceFirst("0X", "").parseInt(16).intValue else -1
 		val modifiers = get(4).valueOf.intValue
 		val comboKey = if (get(5) != "0XFFFFFFFF")
 				get(5).toUpperCase.replaceFirst("0X", "").parseInt(16).intValue
@@ -161,8 +161,7 @@ public class KeyFile {
 		val visibility = get(7).valueOf.intValue
 		val description = is('"').trimFrom(get(8))
 		if (visibility != -1) {
-			return new KeyCodeLine(category, section, callback, sound, key, modifiers, comboKey, comboModifiers,
-				description)
+			return new KeyCodeLine(category, section, callback, sound, key, modifiers, comboKey, comboModifiers, description)
 		}
 	}
 

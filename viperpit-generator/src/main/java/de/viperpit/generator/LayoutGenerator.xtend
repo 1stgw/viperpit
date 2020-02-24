@@ -5,7 +5,7 @@ import java.io.File
 import org.slf4j.LoggerFactory
 
 import static com.google.common.base.Charsets.UTF_8
-import static com.google.common.io.Files.write
+import static de.viperpit.generator.GeneratorUtils.write
 
 class LayoutGenerator {
 
@@ -16,7 +16,7 @@ class LayoutGenerator {
 		val cockpit = new Cockpit('''«metadataPath.absolutePath»/cockpit.json''')
 		if (cockpit !== null) {
 			LOGGER.info("Found Cockpit file and loading configuration entries.")
-			generateLayout(metadataPath,  cockpit)
+			generateLayout(metadataPath, cockpit)
 			LOGGER.info("Generator has finished successfully.")
 		} else {
 			LOGGER.error("Key file could not be loaded")

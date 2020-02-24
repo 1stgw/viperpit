@@ -6,7 +6,7 @@ import java.util.HashSet
 import org.slf4j.LoggerFactory
 
 import static com.google.common.base.Charsets.UTF_8
-import static com.google.common.io.Files.write
+import static de.viperpit.generator.GeneratorUtils.write
 
 class FilterGenerator {
 
@@ -15,8 +15,7 @@ class FilterGenerator {
 	def run(File metadataPath) throws Exception {
 		val fileWithAllCallbacks = new File('''«metadataPath.absolutePath»/full.key''')
 		val fileWithCockpitCallbacks = new File('''«metadataPath.absolutePath»/pitbuilder.key''')
-		if (fileWithAllCallbacks !== null && fileWithAllCallbacks.exists && fileWithCockpitCallbacks !== null &&
-			fileWithCockpitCallbacks.exists) {
+		if (fileWithAllCallbacks !== null && fileWithAllCallbacks.exists && fileWithCockpitCallbacks !== null && fileWithCockpitCallbacks.exists) {
 			LOGGER.info("Found key files and loading key file entries.")
 			val keyFileWithAllCallbacks = new KeyFile(fileWithAllCallbacks)
 			val keyFileWithCockpitCallbacks = new KeyFile(fileWithCockpitCallbacks)

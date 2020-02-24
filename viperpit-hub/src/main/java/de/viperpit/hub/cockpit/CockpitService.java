@@ -1,6 +1,6 @@
 package de.viperpit.hub.cockpit;
 
-import static com.google.common.base.CharMatcher.JAVA_LETTER_OR_DIGIT;
+import static com.google.common.base.CharMatcher.javaLetterOrDigit;
 import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Maps.newHashMap;
 
@@ -81,7 +81,7 @@ public class CockpitService {
 			state = states.get(agent);
 		}
 		if (state == null) {
-			String location = "classpath:/states_" + JAVA_LETTER_OR_DIGIT.retainFrom(preset) + ".json";
+			String location = "classpath:/states_" + javaLetterOrDigit().retainFrom(preset) + ".json";
 			Resource resource = resourceLoader.getResource(location);
 			if (resource.exists()) {
 				try {

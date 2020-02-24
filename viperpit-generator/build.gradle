@@ -1,16 +1,17 @@
 plugins {
-	id "org.xtext.xtend" version "2.0.4"
+	id 'java'
+	id 'org.xtext.xtend' version '2.0.7'
+	id 'io.spring.dependency-management'
 }
-apply plugin: "java"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-	compile project(":viperpit-annotations")
-	compile project(":viperpit-commons")
-	compile project(":viperpit-agent")
-	compile("org.slf4j:slf4j-api:1.7.24")
-	compile("ch.qos.logback:logback-classic:1.1.11")
-	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.17.1")
+	compile project(':viperpit-annotations')
+	compile project(':viperpit-commons')
+	compile project(':viperpit-agent')
+	implementation 'org.slf4j:slf4j-api'
+	implementation 'ch.qos.logback:logback-classic'
+	implementation 'org.eclipse.xtend:org.eclipse.xtend.lib:2.19.0'
 }

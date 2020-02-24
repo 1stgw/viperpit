@@ -1,13 +1,13 @@
 plugins {
-	id "org.xtext.xtend" version "2.0.4"
+	id 'java'
+	id 'org.xtext.xtend' version '2.0.7'
+	id 'io.spring.dependency-management'
 }
-
-apply plugin: "java"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-	compile "com.google.code.gson:gson:2.2.4"
-	compile("org.eclipse.xtend:org.eclipse.xtend.lib:2.17.1")
+	implementation 'com.google.code.gson:gson:2.2.4'
+	implementation 'org.eclipse.xtend:org.eclipse.xtend.lib:2.19.0'
 }

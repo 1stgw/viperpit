@@ -10,13 +10,13 @@ import java.util.Map
 import java.util.Properties
 import org.slf4j.LoggerFactory
 
-import static com.google.common.base.CharMatcher.JAVA_LETTER_OR_DIGIT
-import static com.google.common.base.CharMatcher.JAVA_LOWER_CASE
-import static com.google.common.base.CharMatcher.WHITESPACE
+import static com.google.common.base.CharMatcher.javaLetterOrDigit
+import static com.google.common.base.CharMatcher.javaLowerCase
+import static com.google.common.base.CharMatcher.whitespace
 import static com.google.common.base.Charsets.UTF_8
 import static com.google.common.base.Splitter.on
 import static com.google.common.base.Strings.commonPrefix
-import static com.google.common.io.Files.write
+import static de.viperpit.generator.GeneratorUtils.write
 
 class ConfigurationGenerator {
 
@@ -58,8 +58,7 @@ class ConfigurationGenerator {
 		}
 	}
 
-	private def generateConfiguration(File path, Map<String, String> roles, Map<Pair<String, String>, Boolean> states,
-		Iterable<KeyCodeLine> keyCodeLines) {
+	private def generateConfiguration(File path, Map<String, String> roles, Map<Pair<String, String>, Boolean> states, Iterable<KeyCodeLine> keyCodeLines) {
 		val actions = keyCodeLines.map [
 			val groupAndLabel = getGroupAndLabel(keyCodeLines)
 			val group = groupAndLabel.key
@@ -88,7 +87,7 @@ class ConfigurationGenerator {
 			val type = switch (style) {
 				case switchStyles.contains(style) && relatedCallbacks.empty:
 					"button"
-				case style == "knob" && JAVA_LOWER_CASE.matchesNoneOf(label) && role != "left" && role != "right":
+				case style == "knob" && javaLowerCase.matchesNoneOf(label) && role != "left" && role != "right":
 					"switch"
 				case style == "knob":
 					"button"
@@ -145,13 +144,13 @@ class ConfigurationGenerator {
 		var name = it
 		name = CharMatcher.is('.').removeFrom(name)
 		name = CharMatcher.is('_').replaceFrom(name, 'z')
-		val tokens = new ArrayList(on(JAVA_LETTER_OR_DIGIT.negate).trimResults.splitToList(name))
+		val tokens = new ArrayList(on(javaLetterOrDigit.negate).trimResults.splitToList(name))
 		'''«tokens.map[toLowerCase.toFirstUpper].join»'''.toString
 	}
 
 	private def toPathName(String category) {
-		val tokens = new ArrayList(on(WHITESPACE).trimResults.splitToList(category))
-		JAVA_LETTER_OR_DIGIT.retainFrom('''«tokens.map[toLowerCase].join»'''.toString)
+		val tokens = new ArrayList(on(whitespace).trimResults.splitToList(category))
+		javaLetterOrDigit.retainFrom('''«tokens.map[toLowerCase].join»'''.toString)
 	}
 
 	private def toRelated(KeyCodeLine it, Pair<String, String> groupAndLabel, Iterable<KeyCodeLine> keyCodeLines) {
@@ -159,8 +158,7 @@ class ConfigurationGenerator {
 			return emptyList
 		}
 		return keyCodeLines.filter [ other |
-			callback != other.callback &&
-				commonPrefix(description, other.description).length >= groupAndLabel.key.length
+			callback != other.callback && commonPrefix(description, other.description).length >= groupAndLabel.key.length
 		]
 	}
 

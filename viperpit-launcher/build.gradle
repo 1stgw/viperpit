@@ -1,5 +1,9 @@
-apply plugin: "java"
-apply plugin: "org.springframework.boot"
+plugins {
+	id 'java'
+	id 'application'
+	id 'org.springframework.boot'
+	id 'io.spring.dependency-management'
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -8,17 +12,16 @@ configurations {
 	providedCompile
 }
 
-bootRepackage  {
-	classifier = "boot"
-}
-
-springBoot {
-	executable = true
+bootJar {
+	classifier = 'boot'
+	mainClassName = 'de.viperpit.launcher.LauncherApplication'
 }
 
 dependencies {
-	compile project(":viperpit-agent")
-	compile project(":viperpit-hub")
-	compile("org.slf4j:slf4j-api:1.7.24")
-	compile("ch.qos.logback:logback-classic:1.1.11")
+	implementation project(':viperpit-agent')
+	implementation project(':viperpit-hub')
+	implementation 'org.slf4j:slf4j-api'
+	implementation 'ch.qos.logback:logback-classic'
+	implementation 'org.springframework.boot:spring-boot'
+	implementation 'org.springframework.boot:spring-boot-autoconfigure'
 }

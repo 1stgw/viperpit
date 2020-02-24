@@ -1,31 +1,38 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.9.RELEASE' apply false
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+}
+
 allprojects {
 	tasks.withType(JavaCompile) {
-		options.encoding = "UTF-8"
+		options.encoding = 'UTF-8'
 	}
 	buildscript {
 		repositories {
 			maven {
-				url "http://repo.springsource.org/release/"
-				url "https://plugins.gradle.org/m2/"
+				url 'http://repo.springsource.org/release/'
+				url 'https://plugins.gradle.org/m2/'
 			}
 			mavenCentral()
 			jcenter()
 		}
-		dependencies {
-			classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE")
-		}
 	}
-
-	apply plugin: "eclipse"
-
-	group = "de.viperpit"
-	version = "0.1.1"
-
 	repositories {
 		maven {
-			url "http://repo.springsource.org/release/"
+			url 'http://repo.springsource.org/release/'
 		}
 		jcenter()
 		mavenCentral()
+	}
+	group = 'de.viperpit'
+	version = '0.1.2'
+}
+
+subprojects {
+	apply plugin: 'io.spring.dependency-management'
+	dependencyManagement {
+		imports {
+			mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+		}
 	}
 }

@@ -5,10 +5,10 @@ import org.slf4j.LoggerFactory
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 
 import static com.fasterxml.jackson.databind.SerializationFeature.INDENT_OUTPUT
-import static com.google.common.base.CharMatcher.JAVA_LETTER_OR_DIGIT
-import static com.google.common.base.CharMatcher.JAVA_UPPER_CASE
+import static com.google.common.base.CharMatcher.javaLetterOrDigit
+import static com.google.common.base.CharMatcher.javaUpperCase
 import static com.google.common.base.Charsets.UTF_8
-import static com.google.common.io.Files.write
+import static de.viperpit.generator.GeneratorUtils.write
 
 class WebApplicationGenerator {
 
@@ -280,8 +280,7 @@ class WebApplicationGenerator {
 				]
 			].toList
 		]
-		write(cockpitConfiguration.writeValueAsString,
-			new File(pathForMetadata, '''configuration_cockpit.json'''.toString), UTF_8)
+		write(cockpitConfiguration.writeValueAsString, new File(pathForMetadata, '''configuration_cockpit.json'''.toString), UTF_8)
 		val actionsForRamp = configuration.actions.map [ action |
 			new de.viperpit.commons.cockpit.Action() => [
 				id = action.id
@@ -297,8 +296,7 @@ class WebApplicationGenerator {
 			]
 		].toList
 		val stateConfigurationForRamp = new de.viperpit.commons.cockpit.State(null, actionsForRamp) => []
-		write(stateConfigurationForRamp.writeValueAsString, new File(pathForMetadata, '''states_ramp.json'''.toString),
-			UTF_8)
+		write(stateConfigurationForRamp.writeValueAsString, new File(pathForMetadata, '''states_ramp.json'''.toString), UTF_8)
 		val actionsForGround = configuration.actions.map [ action |
 			new de.viperpit.commons.cockpit.Action() => [
 				id = action.id
@@ -314,8 +312,7 @@ class WebApplicationGenerator {
 			]
 		].toList
 		val stateConfigurationForGround = new de.viperpit.commons.cockpit.State(null, actionsForGround) => []
-		write(stateConfigurationForGround.writeValueAsString,
-			new File(pathForMetadata, '''states_ground.json'''.toString), UTF_8)
+		write(stateConfigurationForGround.writeValueAsString, new File(pathForMetadata, '''states_ground.json'''.toString), UTF_8)
 		val actionsForAir = configuration.actions.map [ action |
 			new de.viperpit.commons.cockpit.Action() => [
 				id = action.id
@@ -331,8 +328,7 @@ class WebApplicationGenerator {
 			]
 		].toList
 		val stateConfigurationForAir = new de.viperpit.commons.cockpit.State(null, actionsForAir) => []
-		write(stateConfigurationForAir.writeValueAsString, new File(pathForMetadata, '''states_air.json'''.toString),
-			UTF_8)
+		write(stateConfigurationForAir.writeValueAsString, new File(pathForMetadata, '''states_air.json'''.toString), UTF_8)
 	}
 
 	private def getKebapCaseName(String it) {
@@ -342,11 +338,11 @@ class WebApplicationGenerator {
 		val tokens = newArrayList
 		var current = 0
 		while (current < length) {
-			var next = JAVA_UPPER_CASE.indexIn(it, current + 1)
+			var next = javaUpperCase.indexIn(it, current + 1)
 			if (next === -1) {
 				next = length
 			}
-			val token = JAVA_LETTER_OR_DIGIT.retainFrom(substring(current, next)).toLowerCase
+			val token = javaLetterOrDigit.retainFrom(substring(current, next)).toLowerCase
 			tokens += token
 			current = next
 		}

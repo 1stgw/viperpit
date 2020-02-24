@@ -6,12 +6,12 @@ import java.io.File
 import java.util.ArrayList
 import org.slf4j.LoggerFactory
 
-import static com.google.common.base.CharMatcher.JAVA_LETTER_OR_DIGIT
-import static com.google.common.base.CharMatcher.WHITESPACE
+import static com.google.common.base.CharMatcher.javaLetterOrDigit
+import static com.google.common.base.CharMatcher.whitespace
 import static com.google.common.base.Charsets.UTF_8
 import static com.google.common.base.Splitter.on
 import static com.google.common.base.Strings.commonPrefix
-import static com.google.common.io.Files.write
+import static de.viperpit.generator.GeneratorUtils.write
 
 class StateGenerator {
 
@@ -97,14 +97,13 @@ class StateGenerator {
 			return emptyList
 		}
 		return keyCodeLines.filter [ other |
-			callback != other.callback &&
-				commonPrefix(description, other.description).length >= groupAndLabel.key.length
+			callback != other.callback && commonPrefix(description, other.description).length >= groupAndLabel.key.length
 		]
 	}
 
 	private def toPathName(String category) {
-		val tokens = new ArrayList(on(WHITESPACE).trimResults.splitToList(category))
-		JAVA_LETTER_OR_DIGIT.retainFrom('''«tokens.map[toLowerCase].join»'''.toString)
+		val tokens = new ArrayList(on(whitespace).trimResults.splitToList(category))
+		javaLetterOrDigit.retainFrom('''«tokens.map[toLowerCase].join»'''.toString)
 	}
 
 	private def toStyle(KeyCodeLine it, Iterable<KeyCodeLine> keyCodeLines) {
@@ -123,7 +122,7 @@ class StateGenerator {
 			case group.contains("Switch") && label !== null && label.startsWith("Step"): "button"
 			case group.contains("Switch") && relatedCallbacks.empty: "button"
 			case group.contains("Switch"): "switch"
-			case group.contains("Knob") && #{"up", "down", "left", "right"}.contains(role) : "button"
+			case group.contains("Knob") && #{"up", "down", "left", "right"}.contains(role): "button"
 			case group.contains("Knob"): "knob"
 			case group.contains("Handle") && label !== null && label.startsWith("Toggle"): "button"
 			case group.endsWith("Handle"): "handle"
