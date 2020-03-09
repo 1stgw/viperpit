@@ -1,20 +1,20 @@
 <template>
-<div class="container-fluid">
-  <div class="row">
-  <div class="col-sm-12">
-    <misc-panel />
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <misc-panel />
+      </div>
+    </div>
   </div>
-  </div>
-</div>
 </template>
 
 <script>
-import MiscPanel from '../panels/miscpanel/MiscPanel'
+import MiscPanel from "../panels/miscpanel/MiscPanel";
 
 export default {
-  name: 'Wpn',
+  name: "Wpn",
   components: {
     MiscPanel
   }
-}
+};
 </script>

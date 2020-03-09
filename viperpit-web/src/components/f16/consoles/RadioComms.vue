@@ -1,20 +1,20 @@
 <template>
-<div class="container-fluid">
-  <div class="row">
-  <div class="col-sm-12">
-    <general-radio-options />
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <general-radio-options />
+      </div>
+    </div>
   </div>
-  </div>
-</div>
 </template>
 
 <script>
-import GeneralRadioOptions from '../panels/generalradiooptions/GeneralRadioOptions'
+import GeneralRadioOptions from "../panels/generalradiooptions/GeneralRadioOptions";
 
 export default {
-  name: 'RadioComms',
+  name: "RadioComms",
   components: {
     GeneralRadioOptions
   }
-}
+};
 </script>

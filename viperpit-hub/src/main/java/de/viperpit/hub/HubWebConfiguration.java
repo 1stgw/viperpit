@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.fasterxml.jackson.core.SerializableString;
 import com.fasterxml.jackson.core.io.CharacterEscapes;
@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration
 @EnableWebMvc
-public class HubWebConfiguration extends WebMvcConfigurerAdapter {
+public class HubWebConfiguration implements WebMvcConfigurer {
 
 	@SuppressWarnings("serial")
 	public static class SafeCharacterEscapes extends CharacterEscapes {
@@ -45,7 +45,6 @@ public class HubWebConfiguration extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
-		super.addCorsMappings(registry);
 		registry.addMapping("/hub/**").allowedOrigins("http://office:8080", "http://localhost:8080");
 	}
 

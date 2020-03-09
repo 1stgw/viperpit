@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import AuxCniKnobSwitch from './AuxCniKnobSwitch'
-import AuxStationSelectorSwitch from './AuxStationSelectorSwitch'
+import AuxCniKnobSwitch from "./AuxCniKnobSwitch";
+import AuxStationSelectorSwitch from "./AuxStationSelectorSwitch";
 
 export default {
-  name: 'AuxCommPanel',
+  name: "AuxCommPanel",
   components: {
     AuxCniKnobSwitch,
     AuxStationSelectorSwitch
   }
-}
+};
 </script>

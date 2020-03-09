@@ -2,38 +2,42 @@
   <switch-group
     id="MISC: RF Switch"
     description="MISC: RF Switch - NORM"
-    label="RF" 
-    type="switch">
+    label="RF"
+    type="switch"
+  >
     <control
       id="miscrfswitchnorm"
       description="MISC: RF Switch - NORM"
       label="NORM"
       type="switch"
-      role="on"/>
+      role="on"
+    />
     <control
       id="miscrfswitchquiet"
       description="MISC: RF Switch - QUIET"
       label="QUIET"
       type="switch"
-      role="none"/>
+      role="none"
+    />
     <control
       id="miscrfswitchsilent"
       description="MISC: RF Switch - SILENT"
       label="SILENT"
       type="switch"
-      role="none"/>
+      role="none"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'MiscRfSwitch',
+  name: "MiscRfSwitch",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

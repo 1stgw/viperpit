@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import AltGearExtendGearHandle from './AltGearExtendGearHandle'
-import AltGearResetButton from './AltGearResetButton'
+import AltGearExtendGearHandle from "./AltGearExtendGearHandle";
+import AltGearResetButton from "./AltGearResetButton";
 
 export default {
-  name: 'AltGearControl',
+  name: "AltGearControl",
   components: {
     AltGearExtendGearHandle,
     AltGearResetButton
   }
-}
+};
 </script>

@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import CkpitWheelBrakes from './CkpitWheelBrakes'
+import CkpitWheelBrakes from "./CkpitWheelBrakes";
 
 export default {
-  name: 'OtherCockpitCallbacks',
+  name: "OtherCockpitCallbacks",
   components: {
     CkpitWheelBrakes
   }
-}
+};
 </script>

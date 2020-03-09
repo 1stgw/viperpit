@@ -59,19 +59,19 @@
 </template>
 
 <script>
-import CmdsRwrSwitch from './CmdsRwrSwitch'
-import CmdsJmrSwitch from './CmdsJmrSwitch'
-import CmdsMwsSwitch from './CmdsMwsSwitch'
-import CmdsO1Switch from './CmdsO1Switch'
-import CmdsO2Switch from './CmdsO2Switch'
-import CmdsChSwitch from './CmdsChSwitch'
-import CmdsFlSwitch from './CmdsFlSwitch'
-import CmdsJettSwitch from './CmdsJettSwitch'
-import CmdsPrgmKnob from './CmdsPrgmKnob'
-import CmdsModeKnob from './CmdsModeKnob'
+import CmdsRwrSwitch from "./CmdsRwrSwitch";
+import CmdsJmrSwitch from "./CmdsJmrSwitch";
+import CmdsMwsSwitch from "./CmdsMwsSwitch";
+import CmdsO1Switch from "./CmdsO1Switch";
+import CmdsO2Switch from "./CmdsO2Switch";
+import CmdsChSwitch from "./CmdsChSwitch";
+import CmdsFlSwitch from "./CmdsFlSwitch";
+import CmdsJettSwitch from "./CmdsJettSwitch";
+import CmdsPrgmKnob from "./CmdsPrgmKnob";
+import CmdsModeKnob from "./CmdsModeKnob";
 
 export default {
-  name: 'CmdsPanel',
+  name: "CmdsPanel",
   components: {
     CmdsRwrSwitch,
     CmdsJmrSwitch,
@@ -84,5 +84,5 @@ export default {
     CmdsPrgmKnob,
     CmdsModeKnob
   }
-}
+};
 </script>

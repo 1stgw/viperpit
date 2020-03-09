@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import SnsrLeftHdptSwitch from './SnsrLeftHdptSwitch'
-import SnsrRightHdptSwitch from './SnsrRightHdptSwitch'
-import SnsrFcrSwitch from './SnsrFcrSwitch'
-import SnsrRdrAltSwitch from './SnsrRdrAltSwitch'
+import SnsrLeftHdptSwitch from "./SnsrLeftHdptSwitch";
+import SnsrRightHdptSwitch from "./SnsrRightHdptSwitch";
+import SnsrFcrSwitch from "./SnsrFcrSwitch";
+import SnsrRdrAltSwitch from "./SnsrRdrAltSwitch";
 
 export default {
-  name: 'SnsrPwrPanel',
+  name: "SnsrPwrPanel",
   components: {
     SnsrLeftHdptSwitch,
     SnsrRightHdptSwitch,
     SnsrFcrSwitch,
     SnsrRdrAltSwitch
   }
-}
+};
 </script>

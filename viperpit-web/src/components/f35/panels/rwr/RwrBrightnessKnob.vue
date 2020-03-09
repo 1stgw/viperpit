@@ -2,32 +2,35 @@
   <button-group
     id="RWR: Brightness Knob"
     description="RWR: Brightness Knob - Increase"
-    label="Brightness" 
-    type="button">
+    label="Brightness"
+    type="button"
+  >
     <control
       id="rwrbrightnessknobincrease"
       description="RWR: Brightness Knob - Increase"
       label="Increase"
       type="button"
-      role="up"/>
+      role="up"
+    />
     <control
       id="rwrbrightnessknobdecrease"
       description="RWR: Brightness Knob - Decrease"
       label="Decrease"
       type="button"
-      role="down"/>
+      role="down"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'RwrBrightnessKnob',
+  name: "RwrBrightnessKnob",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

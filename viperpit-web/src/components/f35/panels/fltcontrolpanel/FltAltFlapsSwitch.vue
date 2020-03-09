@@ -2,32 +2,35 @@
   <switch-group
     id="FLT: ALT FLAPS Switch"
     description="FLT: ALT FLAPS Switch - EXTEND"
-    label="ALT FLAPS" 
-    type="switch">
+    label="ALT FLAPS"
+    type="switch"
+  >
     <control
       id="fltaltflapsswitchextend"
       description="FLT: ALT FLAPS Switch - EXTEND"
       label="EXTEND"
       type="switch"
-      role="none"/>
+      role="none"
+    />
     <control
       id="fltaltflapsswitchnorm"
       description="FLT: ALT FLAPS Switch - NORM"
       label="NORM"
       type="switch"
-      role="on"/>
+      role="on"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'FltAltFlapsSwitch',
+  name: "FltAltFlapsSwitch",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import EcmOprSwitch from './EcmOprSwitch'
+import EcmOprSwitch from "./EcmOprSwitch";
 
 export default {
-  name: 'EcmPanel',
+  name: "EcmPanel",
   components: {
     EcmOprSwitch
   }
-}
+};
 </script>

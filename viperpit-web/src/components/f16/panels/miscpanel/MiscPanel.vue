@@ -39,15 +39,15 @@
 </template>
 
 <script>
-import MiscRfSwitch from './MiscRfSwitch'
-import MiscLaserSwitch from './MiscLaserSwitch'
-import MiscMasterArmSwitch from './MiscMasterArmSwitch'
-import MiscAdvMode from './MiscAdvMode'
-import MiscRollSwitch from './MiscRollSwitch'
-import MiscPitchSwitch from './MiscPitchSwitch'
+import MiscRfSwitch from "./MiscRfSwitch";
+import MiscLaserSwitch from "./MiscLaserSwitch";
+import MiscMasterArmSwitch from "./MiscMasterArmSwitch";
+import MiscAdvMode from "./MiscAdvMode";
+import MiscRollSwitch from "./MiscRollSwitch";
+import MiscPitchSwitch from "./MiscPitchSwitch";
 
 export default {
-  name: 'MiscPanel',
+  name: "MiscPanel",
   components: {
     MiscRfSwitch,
     MiscLaserSwitch,
@@ -56,5 +56,5 @@ export default {
     MiscRollSwitch,
     MiscPitchSwitch
   }
-}
+};
 </script>

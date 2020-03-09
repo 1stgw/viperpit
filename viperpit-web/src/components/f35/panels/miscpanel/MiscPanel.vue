@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import MiscLaserSwitch from './MiscLaserSwitch'
-import MiscMasterArmSwitch from './MiscMasterArmSwitch'
+import MiscLaserSwitch from "./MiscLaserSwitch";
+import MiscMasterArmSwitch from "./MiscMasterArmSwitch";
 
 export default {
-  name: 'MiscPanel',
+  name: "MiscPanel",
   components: {
     MiscLaserSwitch,
     MiscMasterArmSwitch
   }
-}
+};
 </script>

@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import EngJfsSwitch from './EngJfsSwitch'
-import EngEngContSwitch from './EngEngContSwitch'
+import EngJfsSwitch from "./EngJfsSwitch";
+import EngEngContSwitch from "./EngEngContSwitch";
 
 export default {
-  name: 'EngJetStartPanel',
+  name: "EngJetStartPanel",
   components: {
     EngJfsSwitch,
     EngEngContSwitch
   }
-}
+};
 </script>

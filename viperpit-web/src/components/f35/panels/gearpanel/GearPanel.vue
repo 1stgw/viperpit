@@ -49,17 +49,17 @@
 </template>
 
 <script>
-import GearHookSwitch from './GearHookSwitch'
-import GearGndJettSwitch from './GearGndJettSwitch'
-import GearParkingBreakSwitch from './GearParkingBreakSwitch'
-import GearLgHandle from './GearLgHandle'
-import GearHornSilencerButton from './GearHornSilencerButton'
-import GearLightsSwitch from './GearLightsSwitch'
-import AltGearExtendAltGear from './AltGearExtendAltGear'
-import AltGearResetAltGear from './AltGearResetAltGear'
+import GearHookSwitch from "./GearHookSwitch";
+import GearGndJettSwitch from "./GearGndJettSwitch";
+import GearParkingBreakSwitch from "./GearParkingBreakSwitch";
+import GearLgHandle from "./GearLgHandle";
+import GearHornSilencerButton from "./GearHornSilencerButton";
+import GearLightsSwitch from "./GearLightsSwitch";
+import AltGearExtendAltGear from "./AltGearExtendAltGear";
+import AltGearResetAltGear from "./AltGearResetAltGear";
 
 export default {
-  name: 'GearPanel',
+  name: "GearPanel",
   components: {
     GearHookSwitch,
     GearGndJettSwitch,
@@ -70,5 +70,5 @@ export default {
     AltGearExtendAltGear,
     AltGearResetAltGear
   }
-}
+};
 </script>

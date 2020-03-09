@@ -2,25 +2,27 @@
   <button-group
     id="RADIO: AWACS Menu"
     description="RADIO: AWACS Menu"
-    type="button">
+    type="button"
+  >
     <control
       id="radioawacsmenu"
       description="RADIO: AWACS Menu"
       label="AWACS Menu"
       type="button"
-      role="none"/>
+      role="none"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'RadioAwacsMenu',
+  name: "RadioAwacsMenu",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

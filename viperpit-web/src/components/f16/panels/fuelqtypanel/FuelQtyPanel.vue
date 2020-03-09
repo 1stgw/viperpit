@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import QtyFuelQtySelKnob from './QtyFuelQtySelKnob'
-import QtyExtFuelTransSwitch from './QtyExtFuelTransSwitch'
+import QtyFuelQtySelKnob from "./QtyFuelQtySelKnob";
+import QtyExtFuelTransSwitch from "./QtyExtFuelTransSwitch";
 
 export default {
-  name: 'FuelQtyPanel',
+  name: "FuelQtyPanel",
   components: {
     QtyFuelQtySelKnob,
     QtyExtFuelTransSwitch
   }
-}
+};
 </script>

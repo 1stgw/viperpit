@@ -2,25 +2,27 @@
   <button-group
     id="VIEWEXT: Orbit Camera"
     description="VIEWEXT: Orbit Camera"
-    type="button">
+    type="button"
+  >
     <control
       id="viewextorbitcamera"
       description="VIEWEXT: Orbit Camera"
       label="Orbit Camera"
       type="button"
-      role="none"/>
+      role="none"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'ViewextOrbitCamera',
+  name: "ViewextOrbitCamera",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

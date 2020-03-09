@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import SeatSafetyLever from './SeatSafetyLever'
-import SeatEjectHandle from './SeatEjectHandle'
+import SeatSafetyLever from "./SeatSafetyLever";
+import SeatEjectHandle from "./SeatEjectHandle";
 
 export default {
-  name: 'Seat',
+  name: "Seat",
   components: {
     SeatSafetyLever,
     SeatEjectHandle
   }
-}
+};
 </script>

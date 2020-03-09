@@ -2,32 +2,35 @@
   <switch-group
     id="CMDS: MWS Switch"
     description="CMDS: MWS Switch - ON"
-    label="MWS" 
-    type="switch">
+    label="MWS"
+    type="switch"
+  >
     <control
       id="cmdsmwsswitchon"
       description="CMDS: MWS Switch - ON"
       label="ON"
       type="switch"
-      role="on"/>
+      role="on"
+    />
     <control
       id="cmdsmwsswitchoff"
       description="CMDS: MWS Switch - OFF"
       label="OFF"
       type="switch"
-      role="off"/>
+      role="off"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'CmdsMwsSwitch',
+  name: "CmdsMwsSwitch",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

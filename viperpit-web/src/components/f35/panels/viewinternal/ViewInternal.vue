@@ -39,15 +39,15 @@
 </template>
 
 <script>
-import ViewintPadlock from './ViewintPadlock'
-import ViewintHudOnly from './ViewintHudOnly'
-import ViewintSnap3dCockpit from './ViewintSnap3dCockpit'
-import ViewintPan3dCockpit from './ViewintPan3dCockpit'
-import ViewintGlanceForward from './ViewintGlanceForward'
-import ViewintGlanceBackward from './ViewintGlanceBackward'
+import ViewintPadlock from "./ViewintPadlock";
+import ViewintHudOnly from "./ViewintHudOnly";
+import ViewintSnap3dCockpit from "./ViewintSnap3dCockpit";
+import ViewintPan3dCockpit from "./ViewintPan3dCockpit";
+import ViewintGlanceForward from "./ViewintGlanceForward";
+import ViewintGlanceBackward from "./ViewintGlanceBackward";
 
 export default {
-  name: 'ViewInternal',
+  name: "ViewInternal",
   components: {
     ViewintPadlock,
     ViewintHudOnly,
@@ -56,5 +56,5 @@ export default {
     ViewintGlanceForward,
     ViewintGlanceBackward
   }
-}
+};
 </script>

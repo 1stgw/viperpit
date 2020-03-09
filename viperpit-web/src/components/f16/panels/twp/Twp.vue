@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import TwpHandoff from './TwpHandoff'
-import TwpMissileLaunch from './TwpMissileLaunch'
-import TwpSysTest from './TwpSysTest'
-import TwpTgtSep from './TwpTgtSep'
+import TwpHandoff from "./TwpHandoff";
+import TwpMissileLaunch from "./TwpMissileLaunch";
+import TwpSysTest from "./TwpSysTest";
+import TwpTgtSep from "./TwpTgtSep";
 
 export default {
-  name: 'Twp',
+  name: "Twp",
   components: {
     TwpHandoff,
     TwpMissileLaunch,
     TwpSysTest,
     TwpTgtSep
   }
-}
+};
 </script>

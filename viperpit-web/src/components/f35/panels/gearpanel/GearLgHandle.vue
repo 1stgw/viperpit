@@ -2,32 +2,35 @@
   <switch-group
     id="GEAR: LG Handle"
     description="GEAR: LG Handle - UP"
-    label="LG" 
-    type="switch">
+    label="LG"
+    type="switch"
+  >
     <control
       id="gearlghandleup"
       description="GEAR: LG Handle - UP"
       label="UP"
       type="switch"
-      role="up"/>
+      role="up"
+    />
     <control
       id="gearlghandledn"
       description="GEAR: LG Handle - DN"
       label="DN"
       type="switch"
-      role="down"/>
+      role="down"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'GearLgHandle',
+  name: "GearLgHandle",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

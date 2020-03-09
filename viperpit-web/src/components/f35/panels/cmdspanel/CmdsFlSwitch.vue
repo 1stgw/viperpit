@@ -2,32 +2,35 @@
   <switch-group
     id="CMDS: FL Switch"
     description="CMDS: FL Switch - ON"
-    label="FL" 
-    type="switch">
+    label="FL"
+    type="switch"
+  >
     <control
       id="cmdsflswitchon"
       description="CMDS: FL Switch - ON"
       label="ON"
       type="switch"
-      role="on"/>
+      role="on"
+    />
     <control
       id="cmdsflswitchoff"
       description="CMDS: FL Switch - OFF"
       label="OFF"
       type="switch"
-      role="off"/>
+      role="off"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'CmdsFlSwitch',
+  name: "CmdsFlSwitch",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

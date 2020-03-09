@@ -2,25 +2,27 @@
   <button-group
     id="RADIO: Wingman Menu"
     description="RADIO: Wingman Menu"
-    type="button">
+    type="button"
+  >
     <control
       id="radiowingmanmenu"
       description="RADIO: Wingman Menu"
       label="Wingman Menu"
       type="button"
-      role="none"/>
+      role="none"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'RadioWingmanMenu',
+  name: "RadioWingmanMenu",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

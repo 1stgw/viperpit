@@ -2,44 +2,49 @@
   <button-group
     id="AUDIO1: COMM 1 Knob"
     description="AUDIO1: COMM 1 Knob - Volume Incr."
-    label="COMM 1" 
-    type="button">
+    label="COMM 1"
+    type="button"
+  >
     <control
       id="audio1comm1knobvolumeincr"
       description="AUDIO1: COMM 1 Knob - Volume Incr."
       label="Volume Incr."
       type="button"
-      role="up"/>
+      role="up"
+    />
     <control
       id="audio1comm1knobvolumedecr"
       description="AUDIO1: COMM 1 Knob - Volume Decr."
       label="Volume Decr."
       type="button"
-      role="down"/>
+      role="down"
+    />
     <control
       id="audio1comm1knobon"
       description="AUDIO1: COMM 1 Knob - On"
       label="On"
       type="button"
-      role="on"/>
+      role="on"
+    />
     <control
       id="audio1comm1knoboff"
       description="AUDIO1: COMM 1 Knob - Off"
       label="Off"
       type="button"
-      role="off"/>
+      role="off"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'Audio1Comm1Knob',
+  name: "Audio1Comm1Knob",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

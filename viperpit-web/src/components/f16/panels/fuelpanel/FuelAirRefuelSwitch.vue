@@ -2,32 +2,35 @@
   <switch-group
     id="FUEL: AIR REFUEL Switch"
     description="FUEL: AIR REFUEL Switch - OPEN"
-    label="AIR REFUEL" 
-    type="switch">
+    label="AIR REFUEL"
+    type="switch"
+  >
     <control
       id="fuelairrefuelswitchopen"
       description="FUEL: AIR REFUEL Switch - OPEN"
       label="OPEN"
       type="switch"
-      role="on"/>
+      role="on"
+    />
     <control
       id="fuelairrefuelswitchclose"
       description="FUEL: AIR REFUEL Switch - CLOSE"
       label="CLOSE"
       type="switch"
-      role="off"/>
+      role="off"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'FuelAirRefuelSwitch',
+  name: "FuelAirRefuelSwitch",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

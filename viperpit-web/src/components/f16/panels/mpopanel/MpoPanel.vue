@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import MpoManualPitchSwitch from './MpoManualPitchSwitch'
+import MpoManualPitchSwitch from "./MpoManualPitchSwitch";
 
 export default {
-  name: 'MpoPanel',
+  name: "MpoPanel",
   components: {
     MpoManualPitchSwitch
   }
-}
+};
 </script>

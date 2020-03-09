@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import EyeMasterCautionButton from './EyeMasterCautionButton'
-import EyeFAckButton from './EyeFAckButton'
+import EyeMasterCautionButton from "./EyeMasterCautionButton";
+import EyeFAckButton from "./EyeFAckButton";
 
 export default {
-  name: 'LeftEyebrow',
+  name: "LeftEyebrow",
   components: {
     EyeMasterCautionButton,
     EyeFAckButton
   }
-}
+};
 </script>

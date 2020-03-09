@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import InstrModeKnob from './InstrModeKnob'
+import InstrModeKnob from "./InstrModeKnob";
 
 export default {
-  name: 'InstrModePanel',
+  name: "InstrModePanel",
   components: {
     InstrModeKnob
   }
-}
+};
 </script>

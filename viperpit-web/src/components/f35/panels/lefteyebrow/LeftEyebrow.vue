@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import EyeMasterCautionButton from './EyeMasterCautionButton'
-import GearEmerStoresJettisonButton from './GearEmerStoresJettisonButton'
-import EyeFAckButton from './EyeFAckButton'
+import EyeMasterCautionButton from "./EyeMasterCautionButton";
+import GearEmerStoresJettisonButton from "./GearEmerStoresJettisonButton";
+import EyeFAckButton from "./EyeFAckButton";
 
 export default {
-  name: 'LeftEyebrow',
+  name: "LeftEyebrow",
   components: {
     EyeMasterCautionButton,
     GearEmerStoresJettisonButton,
     EyeFAckButton
   }
-}
+};
 </script>

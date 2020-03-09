@@ -81,6 +81,7 @@ public class CockpitService {
 			state = states.get(agent);
 		}
 		if (state == null) {
+			@SuppressWarnings("deprecation")
 			String location = "classpath:/states_" + javaLetterOrDigit().retainFrom(preset) + ".json";
 			Resource resource = resourceLoader.getResource(location);
 			if (resource.exists()) {

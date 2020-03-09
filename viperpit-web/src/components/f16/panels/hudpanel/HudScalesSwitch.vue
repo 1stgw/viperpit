@@ -2,38 +2,42 @@
   <switch-group
     id="HUD: Scales Switch"
     description="HUD: Scales Switch - VV/VAH"
-    label="Scales" 
-    type="switch">
+    label="Scales"
+    type="switch"
+  >
     <control
       id="hudscalesswitchvvvah"
       description="HUD: Scales Switch - VV/VAH"
       label="VV/VAH"
       type="switch"
-      role="none"/>
+      role="none"
+    />
     <control
       id="hudscalesswitchvah"
       description="HUD: Scales Switch - VAH"
       label="VAH"
       type="switch"
-      role="none"/>
+      role="none"
+    />
     <control
       id="hudscalesswitchoff"
       description="HUD: Scales Switch - OFF"
       label="OFF"
       type="switch"
-      role="off"/>
+      role="off"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'HudScalesSwitch',
+  name: "HudScalesSwitch",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

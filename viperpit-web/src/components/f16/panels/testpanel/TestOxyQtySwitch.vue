@@ -2,25 +2,27 @@
   <button-group
     id="TEST: OXY QTY Switch"
     description="TEST: OXY QTY Switch - Hold"
-    type="button">
+    type="button"
+  >
     <control
       id="testoxyqtyswitchhold"
       description="TEST: OXY QTY Switch - Hold"
       label="OXY QTY"
       type="button"
-      role="none"/>
+      role="none"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'TestOxyQtySwitch',
+  name: "TestOxyQtySwitch",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

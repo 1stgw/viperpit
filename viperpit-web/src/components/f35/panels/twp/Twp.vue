@@ -39,15 +39,15 @@
 </template>
 
 <script>
-import TwpHandoff from './TwpHandoff'
-import TwpMissileLaunch from './TwpMissileLaunch'
-import TwpPriorityMode from './TwpPriorityMode'
-import TwpUnknown from './TwpUnknown'
-import TwpSysTest from './TwpSysTest'
-import TwpTgtSep from './TwpTgtSep'
+import TwpHandoff from "./TwpHandoff";
+import TwpMissileLaunch from "./TwpMissileLaunch";
+import TwpPriorityMode from "./TwpPriorityMode";
+import TwpUnknown from "./TwpUnknown";
+import TwpSysTest from "./TwpSysTest";
+import TwpTgtSep from "./TwpTgtSep";
 
 export default {
-  name: 'Twp',
+  name: "Twp",
   components: {
     TwpHandoff,
     TwpMissileLaunch,
@@ -56,5 +56,5 @@ export default {
     TwpSysTest,
     TwpTgtSep
   }
-}
+};
 </script>

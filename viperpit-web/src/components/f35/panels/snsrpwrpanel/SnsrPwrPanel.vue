@@ -34,14 +34,14 @@
 </template>
 
 <script>
-import SnsrLeftHdptSwitch from './SnsrLeftHdptSwitch'
-import SnsrRightHdptSwitch from './SnsrRightHdptSwitch'
-import SnsrFcrSwitch from './SnsrFcrSwitch'
-import SnsrRdrAltSwitch from './SnsrRdrAltSwitch'
-import MiscRfSwitch from './MiscRfSwitch'
+import SnsrLeftHdptSwitch from "./SnsrLeftHdptSwitch";
+import SnsrRightHdptSwitch from "./SnsrRightHdptSwitch";
+import SnsrFcrSwitch from "./SnsrFcrSwitch";
+import SnsrRdrAltSwitch from "./SnsrRdrAltSwitch";
+import MiscRfSwitch from "./MiscRfSwitch";
 
 export default {
-  name: 'SnsrPwrPanel',
+  name: "SnsrPwrPanel",
   components: {
     SnsrLeftHdptSwitch,
     SnsrRightHdptSwitch,
@@ -49,5 +49,5 @@ export default {
     SnsrRdrAltSwitch,
     MiscRfSwitch
   }
-}
+};
 </script>

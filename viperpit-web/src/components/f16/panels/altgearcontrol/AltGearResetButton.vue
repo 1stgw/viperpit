@@ -2,25 +2,27 @@
   <button-group
     id="ALT GEAR: Reset Button"
     description="ALT GEAR: Reset Button - Push"
-    type="button">
+    type="button"
+  >
     <control
       id="altgearresetbuttonpush"
       description="ALT GEAR: Reset Button - Push"
       label="Reset"
       type="button"
-      role="none"/>
+      role="none"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'AltGearResetButton',
+  name: "AltGearResetButton",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

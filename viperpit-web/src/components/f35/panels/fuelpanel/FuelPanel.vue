@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import FuelMasterSwitch from './FuelMasterSwitch'
-import FuelEngFeedKnob from './FuelEngFeedKnob'
-import FuelAirRefuelSwitch from './FuelAirRefuelSwitch'
+import FuelMasterSwitch from "./FuelMasterSwitch";
+import FuelEngFeedKnob from "./FuelEngFeedKnob";
+import FuelAirRefuelSwitch from "./FuelAirRefuelSwitch";
 
 export default {
-  name: 'FuelPanel',
+  name: "FuelPanel",
   components: {
     FuelMasterSwitch,
     FuelEngFeedKnob,
     FuelAirRefuelSwitch
   }
-}
+};
 </script>

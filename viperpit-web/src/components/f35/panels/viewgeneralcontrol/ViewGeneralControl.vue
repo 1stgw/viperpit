@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import ViewgenRotateViewUp from './ViewgenRotateViewUp'
-import ViewgenRotateViewDown from './ViewgenRotateViewDown'
-import ViewgenRotateViewLeft from './ViewgenRotateViewLeft'
-import ViewgenRotateViewRight from './ViewgenRotateViewRight'
+import ViewgenRotateViewUp from "./ViewgenRotateViewUp";
+import ViewgenRotateViewDown from "./ViewgenRotateViewDown";
+import ViewgenRotateViewLeft from "./ViewgenRotateViewLeft";
+import ViewgenRotateViewRight from "./ViewgenRotateViewRight";
 
 export default {
-  name: 'ViewGeneralControl',
+  name: "ViewGeneralControl",
   components: {
     ViewgenRotateViewUp,
     ViewgenRotateViewDown,
     ViewgenRotateViewLeft,
     ViewgenRotateViewRight
   }
-}
+};
 </script>

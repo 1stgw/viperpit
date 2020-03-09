@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import SimTimeAcceleration from './SimTimeAcceleration'
-import SimChat from './SimChat'
-import SimToggleExitSimMenu from './SimToggleExitSimMenu'
+import SimTimeAcceleration from "./SimTimeAcceleration";
+import SimChat from "./SimChat";
+import SimToggleExitSimMenu from "./SimToggleExitSimMenu";
 
 export default {
-  name: 'SimulationHardware',
+  name: "SimulationHardware",
   components: {
     SimTimeAcceleration,
     SimChat,
     SimToggleExitSimMenu
   }
-}
+};
 </script>

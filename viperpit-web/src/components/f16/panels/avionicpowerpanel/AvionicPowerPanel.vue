@@ -1,6 +1,6 @@
 <template>
   <div class="panel panel-default">
-    <div class="panel-heading">AVIONIC POWER  PANEL</div>
+    <div class="panel-heading">AVIONIC POWER PANEL</div>
     <div class="panel-body">
       <div class="row">
         <div class="col-xs-6 col-sm-6">
@@ -44,16 +44,16 @@
 </template>
 
 <script>
-import AvionicsInsKnob from './AvionicsInsKnob'
-import AvionicsFccSwitch from './AvionicsFccSwitch'
-import AvionicsSmsSwitch from './AvionicsSmsSwitch'
-import AvionicsMfdSwitch from './AvionicsMfdSwitch'
-import AvionicsUfcSwitch from './AvionicsUfcSwitch'
-import AvionicsGpsSwitch from './AvionicsGpsSwitch'
-import AvionicsDlSwitch from './AvionicsDlSwitch'
+import AvionicsInsKnob from "./AvionicsInsKnob";
+import AvionicsFccSwitch from "./AvionicsFccSwitch";
+import AvionicsSmsSwitch from "./AvionicsSmsSwitch";
+import AvionicsMfdSwitch from "./AvionicsMfdSwitch";
+import AvionicsUfcSwitch from "./AvionicsUfcSwitch";
+import AvionicsGpsSwitch from "./AvionicsGpsSwitch";
+import AvionicsDlSwitch from "./AvionicsDlSwitch";
 
 export default {
-  name: 'AvionicPowerPanel',
+  name: "AvionicPowerPanel",
   components: {
     AvionicsInsKnob,
     AvionicsFccSwitch,
@@ -63,5 +63,5 @@ export default {
     AvionicsGpsSwitch,
     AvionicsDlSwitch
   }
-}
+};
 </script>

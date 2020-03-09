@@ -2,25 +2,27 @@
   <button-group
     id="VIEWEXT: Satellite Camera"
     description="VIEWEXT: Satellite Camera"
-    type="button">
+    type="button"
+  >
     <control
       id="viewextsatellitecamera"
       description="VIEWEXT: Satellite Camera"
       label="Satellite Camera"
       type="button"
-      role="none"/>
+      role="none"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'ViewextSatelliteCamera',
+  name: "ViewextSatelliteCamera",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

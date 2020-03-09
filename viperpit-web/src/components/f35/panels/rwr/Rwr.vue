@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import RwrBrightnessKnob from './RwrBrightnessKnob'
+import RwrBrightnessKnob from "./RwrBrightnessKnob";
 
 export default {
-  name: 'Rwr',
+  name: "Rwr",
   components: {
     RwrBrightnessKnob
   }
-}
+};
 </script>

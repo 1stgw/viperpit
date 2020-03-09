@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import TrimRollTrimWheel from './TrimRollTrimWheel'
-import TrimTrimApDiscSwitch from './TrimTrimApDiscSwitch'
-import TrimYawTrimKnob from './TrimYawTrimKnob'
-import TrimPitchTrimWheel from './TrimPitchTrimWheel'
+import TrimRollTrimWheel from "./TrimRollTrimWheel";
+import TrimTrimApDiscSwitch from "./TrimTrimApDiscSwitch";
+import TrimYawTrimKnob from "./TrimYawTrimKnob";
+import TrimPitchTrimWheel from "./TrimPitchTrimWheel";
 
 export default {
-  name: 'ManualTrimPanel',
+  name: "ManualTrimPanel",
   components: {
     TrimRollTrimWheel,
     TrimTrimApDiscSwitch,
     TrimYawTrimKnob,
     TrimPitchTrimWheel
   }
-}
+};
 </script>

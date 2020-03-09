@@ -2,32 +2,35 @@
   <switch-group
     id="GEAR: LIGHTS Switch"
     description="GEAR: LIGHTS Switch - LANDING"
-    label="LIGHTS" 
-    type="switch">
+    label="LIGHTS"
+    type="switch"
+  >
     <control
       id="gearlightsswitchlanding"
       description="GEAR: LIGHTS Switch - LANDING"
       label="LANDING"
       type="switch"
-      role="none"/>
+      role="none"
+    />
     <control
       id="gearlightsswitchoff"
       description="GEAR: LIGHTS Switch - OFF"
       label="OFF"
       type="switch"
-      role="off"/>
+      role="off"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'GearLightsSwitch',
+  name: "GearLightsSwitch",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

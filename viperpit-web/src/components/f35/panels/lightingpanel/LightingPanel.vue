@@ -1,6 +1,6 @@
 <template>
   <div class="panel panel-default">
-    <div class="panel-heading">LIGHTING  PANEL</div>
+    <div class="panel-heading">LIGHTING PANEL</div>
     <div class="panel-body">
       <div class="row">
         <div class="col-xs-6 col-sm-6">
@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import LightInstPnlKnobPrimary from './LightInstPnlKnobPrimary'
-import LightDedKnobPrimary from './LightDedKnobPrimary'
-import LightConsolesKnobFlood from './LightConsolesKnobFlood'
+import LightInstPnlKnobPrimary from "./LightInstPnlKnobPrimary";
+import LightDedKnobPrimary from "./LightDedKnobPrimary";
+import LightConsolesKnobFlood from "./LightConsolesKnobFlood";
 
 export default {
-  name: 'LightingPanel',
+  name: "LightingPanel",
   components: {
     LightInstPnlKnobPrimary,
     LightDedKnobPrimary,
     LightConsolesKnobFlood
   }
-}
+};
 </script>

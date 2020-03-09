@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import Audio2IntercomKnob from './Audio2IntercomKnob'
-import Audio2IlsKnob from './Audio2IlsKnob'
+import Audio2IntercomKnob from "./Audio2IntercomKnob";
+import Audio2IlsKnob from "./Audio2IlsKnob";
 
 export default {
-  name: 'Audio2Panel',
+  name: "Audio2Panel",
   components: {
     Audio2IntercomKnob,
     Audio2IlsKnob
   }
-}
+};
 </script>

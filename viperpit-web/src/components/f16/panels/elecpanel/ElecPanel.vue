@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import ElecMainPwrSwitch from './ElecMainPwrSwitch'
-import ElecCautionResetButton from './ElecCautionResetButton'
+import ElecMainPwrSwitch from "./ElecMainPwrSwitch";
+import ElecCautionResetButton from "./ElecCautionResetButton";
 
 export default {
-  name: 'ElecPanel',
+  name: "ElecPanel",
   components: {
     ElecMainPwrSwitch,
     ElecCautionResetButton
   }
-}
+};
 </script>

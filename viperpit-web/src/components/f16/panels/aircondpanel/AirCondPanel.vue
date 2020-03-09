@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import AirAirSourceKnob from './AirAirSourceKnob'
+import AirAirSourceKnob from "./AirAirSourceKnob";
 
 export default {
-  name: 'AirCondPanel',
+  name: "AirCondPanel",
   components: {
     AirAirSourceKnob
   }
-}
+};
 </script>

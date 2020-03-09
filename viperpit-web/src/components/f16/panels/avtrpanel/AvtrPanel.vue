@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import AvtrAvtrSwitch from './AvtrAvtrSwitch'
+import AvtrAvtrSwitch from "./AvtrAvtrSwitch";
 
 export default {
-  name: 'AvtrPanel',
+  name: "AvtrPanel",
   components: {
     AvtrAvtrSwitch
   }
-}
+};
 </script>

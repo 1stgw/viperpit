@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import TwaLowButton from './TwaLowButton'
-import TwaSearchButton from './TwaSearchButton'
-import TwaPowerButton from './TwaPowerButton'
+import TwaLowButton from "./TwaLowButton";
+import TwaSearchButton from "./TwaSearchButton";
+import TwaPowerButton from "./TwaPowerButton";
 
 export default {
-  name: 'TwaPanel',
+  name: "TwaPanel",
   components: {
     TwaLowButton,
     TwaSearchButton,
     TwaPowerButton
   }
-}
+};
 </script>

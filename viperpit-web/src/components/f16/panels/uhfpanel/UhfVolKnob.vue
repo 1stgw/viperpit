@@ -2,32 +2,35 @@
   <button-group
     id="UHF: VOL Knob"
     description="UHF: VOL Knob - AI vs IVC Volume Incr"
-    label="VOL" 
-    type="button">
+    label="VOL"
+    type="button"
+  >
     <control
       id="uhfvolknobaivsivcvolumeincr"
       description="UHF: VOL Knob - AI vs IVC Volume Incr"
       label="AI vs IVC Volume Incr"
       type="button"
-      role="up"/>
+      role="up"
+    />
     <control
       id="uhfvolknobaivsivcvolumedecr"
       description="UHF: VOL Knob - AI vs IVC Volume Decr"
       label="AI vs IVC Volume Decr"
       type="button"
-      role="down"/>
+      role="down"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'UhfVolKnob',
+  name: "UhfVolKnob",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

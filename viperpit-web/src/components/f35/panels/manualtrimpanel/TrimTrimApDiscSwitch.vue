@@ -2,32 +2,35 @@
   <switch-group
     id="TRIM: TRIM/AP DISC Switch"
     description="TRIM: TRIM/AP DISC Switch - DISC"
-    label="TRIM/AP DISC" 
-    type="switch">
+    label="TRIM/AP DISC"
+    type="switch"
+  >
     <control
       id="trimtrimapdiscswitchdisc"
       description="TRIM: TRIM/AP DISC Switch - DISC"
       label="DISC"
       type="switch"
-      role="none"/>
+      role="none"
+    />
     <control
       id="trimtrimapdiscswitchnorm"
       description="TRIM: TRIM/AP DISC Switch - NORM"
       label="NORM"
       type="switch"
-      role="on"/>
+      role="on"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'TrimTrimApDiscSwitch',
+  name: "TrimTrimApDiscSwitch",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

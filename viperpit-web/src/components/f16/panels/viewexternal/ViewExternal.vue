@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import ViewextOrbitCamera from './ViewextOrbitCamera'
-import ViewextSatelliteCamera from './ViewextSatelliteCamera'
-import ViewextFlybyCamera from './ViewextFlybyCamera'
-import ViewextChaseCamera from './ViewextChaseCamera'
+import ViewextOrbitCamera from "./ViewextOrbitCamera";
+import ViewextSatelliteCamera from "./ViewextSatelliteCamera";
+import ViewextFlybyCamera from "./ViewextFlybyCamera";
+import ViewextChaseCamera from "./ViewextChaseCamera";
 
 export default {
-  name: 'ViewExternal',
+  name: "ViewExternal",
   components: {
     ViewextOrbitCamera,
     ViewextSatelliteCamera,
     ViewextFlybyCamera,
     ViewextChaseCamera
   }
-}
+};
 </script>

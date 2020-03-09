@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import MiscAdvMode from './MiscAdvMode'
-import MiscRollSwitch from './MiscRollSwitch'
-import MiscPitchSwitch from './MiscPitchSwitch'
+import MiscAdvMode from "./MiscAdvMode";
+import MiscRollSwitch from "./MiscRollSwitch";
+import MiscPitchSwitch from "./MiscPitchSwitch";
 
 export default {
-  name: 'ApAndTfrPanel',
+  name: "ApAndTfrPanel",
   components: {
     MiscAdvMode,
     MiscRollSwitch,
     MiscPitchSwitch
   }
-}
+};
 </script>

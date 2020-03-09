@@ -2,44 +2,49 @@
   <switch-group
     id="FUEL: ENG FEED Knob"
     description="FUEL: ENG FEED Knob - OFF"
-    label="ENG FEED" 
-    type="switch">
+    label="ENG FEED"
+    type="switch"
+  >
     <control
       id="fuelengfeedknoboff"
       description="FUEL: ENG FEED Knob - OFF"
       label="OFF"
       type="switch"
-      role="off"/>
+      role="off"
+    />
     <control
       id="fuelengfeedknobnorm"
       description="FUEL: ENG FEED Knob - NORM"
       label="NORM"
       type="switch"
-      role="on"/>
+      role="on"
+    />
     <control
       id="fuelengfeedknobaft"
       description="FUEL: ENG FEED Knob - AFT"
       label="AFT"
       type="switch"
-      role="none"/>
+      role="none"
+    />
     <control
       id="fuelengfeedknobfwd"
       description="FUEL: ENG FEED Knob - FWD"
       label="FWD"
       type="switch"
-      role="none"/>
+      role="none"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'FuelEngFeedKnob',
+  name: "FuelEngFeedKnob",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

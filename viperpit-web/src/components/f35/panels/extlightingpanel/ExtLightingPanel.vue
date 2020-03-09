@@ -29,18 +29,18 @@
 </template>
 
 <script>
-import ExtAntiCollisionSwitch from './ExtAntiCollisionSwitch'
-import ExtPositionSwitch from './ExtPositionSwitch'
-import ExtWingTailSwitch from './ExtWingTailSwitch'
-import ExtMasterSwitch from './ExtMasterSwitch'
+import ExtAntiCollisionSwitch from "./ExtAntiCollisionSwitch";
+import ExtPositionSwitch from "./ExtPositionSwitch";
+import ExtWingTailSwitch from "./ExtWingTailSwitch";
+import ExtMasterSwitch from "./ExtMasterSwitch";
 
 export default {
-  name: 'ExtLightingPanel',
+  name: "ExtLightingPanel",
   components: {
     ExtAntiCollisionSwitch,
     ExtPositionSwitch,
     ExtWingTailSwitch,
     ExtMasterSwitch
   }
-}
+};
 </script>

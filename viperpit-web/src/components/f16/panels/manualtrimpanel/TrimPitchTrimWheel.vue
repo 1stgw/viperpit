@@ -2,32 +2,35 @@
   <button-group
     id="TRIM: PITCH TRIM Wheel"
     description="TRIM: PITCH TRIM Wheel - NOSE UP"
-    label="PITCH TRIM" 
-    type="button">
+    label="PITCH TRIM"
+    type="button"
+  >
     <control
       id="trimpitchtrimwheelnoseup"
       description="TRIM: PITCH TRIM Wheel - NOSE UP"
       label="NOSE UP"
       type="button"
-      role="up"/>
+      role="up"
+    />
     <control
       id="trimpitchtrimwheelnosedn"
       description="TRIM: PITCH TRIM Wheel - NOSE DN"
       label="NOSE DN"
       type="button"
-      role="down"/>
+      role="down"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'TrimPitchTrimWheel',
+  name: "TrimPitchTrimWheel",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

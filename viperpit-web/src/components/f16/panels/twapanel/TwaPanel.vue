@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import TwaPowerButton from './TwaPowerButton'
+import TwaPowerButton from "./TwaPowerButton";
 
 export default {
-  name: 'TwaPanel',
+  name: "TwaPanel",
   components: {
     TwaPowerButton
   }
-}
+};
 </script>

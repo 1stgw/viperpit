@@ -2,32 +2,35 @@
   <switch-group
     id="ZERO: VMS Switch"
     description="ZERO: VMS Switch - ON"
-    label="VMS" 
-    type="switch">
+    label="VMS"
+    type="switch"
+  >
     <control
       id="zerovmsswitchon"
       description="ZERO: VMS Switch - ON"
       label="ON"
       type="switch"
-      role="on"/>
+      role="on"
+    />
     <control
       id="zerovmsswitchinhibit"
       description="ZERO: VMS Switch - INHIBIT"
       label="INHIBIT"
       type="switch"
-      role="none"/>
+      role="none"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'ZeroVmsSwitch',
+  name: "ZeroVmsSwitch",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

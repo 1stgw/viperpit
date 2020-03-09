@@ -2,32 +2,35 @@
   <button-group
     id="OXY: Setting 2"
     description="OXY: Setting 2 - ON (Pilot breathing)"
-    label="Setting 2" 
-    type="button">
+    label="Setting 2"
+    type="button"
+  >
     <control
       id="oxysetting2onpilotbreathing"
       description="OXY: Setting 2 - ON (Pilot breathing)"
       label="ON (Pilot breathing)"
       type="button"
-      role="none"/>
+      role="none"
+    />
     <control
       id="oxysetting2offpilotbreathing"
       description="OXY: Setting 2 - OFF (Pilot breathing)"
       label="OFF (Pilot breathing)"
       type="button"
-      role="none"/>
+      role="none"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'OxySetting2',
+  name: "OxySetting2",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

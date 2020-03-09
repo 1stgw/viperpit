@@ -54,18 +54,18 @@
 </template>
 
 <script>
-import RadioAwacsMenu from './RadioAwacsMenu'
-import RadioWingmanMenu from './RadioWingmanMenu'
-import RadioElementMenu from './RadioElementMenu'
-import RadioFlightMenu from './RadioFlightMenu'
-import RadioAtcMenu from './RadioAtcMenu'
-import RadioTankerMenu from './RadioTankerMenu'
-import RadioSendMessageTanker from './RadioSendMessageTanker'
-import RadioNextMenuTanker from './RadioNextMenuTanker'
-import RadioPreviousMenuTanker from './RadioPreviousMenuTanker'
+import RadioAwacsMenu from "./RadioAwacsMenu";
+import RadioWingmanMenu from "./RadioWingmanMenu";
+import RadioElementMenu from "./RadioElementMenu";
+import RadioFlightMenu from "./RadioFlightMenu";
+import RadioAtcMenu from "./RadioAtcMenu";
+import RadioTankerMenu from "./RadioTankerMenu";
+import RadioSendMessageTanker from "./RadioSendMessageTanker";
+import RadioNextMenuTanker from "./RadioNextMenuTanker";
+import RadioPreviousMenuTanker from "./RadioPreviousMenuTanker";
 
 export default {
-  name: 'GeneralRadioOptions',
+  name: "GeneralRadioOptions",
   components: {
     RadioAwacsMenu,
     RadioWingmanMenu,
@@ -77,5 +77,5 @@ export default {
     RadioNextMenuTanker,
     RadioPreviousMenuTanker
   }
-}
+};
 </script>

@@ -44,16 +44,16 @@
 </template>
 
 <script>
-import GearStoresConfigSwitch from './GearStoresConfigSwitch'
-import FltDigitalSwitch from './FltDigitalSwitch'
-import FltAltFlapsSwitch from './FltAltFlapsSwitch'
-import FltManualTfFlyupSwitch from './FltManualTfFlyupSwitch'
-import FltLeFlapsSwitch from './FltLeFlapsSwitch'
-import FltFlcsSwitch from './FltFlcsSwitch'
-import FltBitSwitch from './FltBitSwitch'
+import GearStoresConfigSwitch from "./GearStoresConfigSwitch";
+import FltDigitalSwitch from "./FltDigitalSwitch";
+import FltAltFlapsSwitch from "./FltAltFlapsSwitch";
+import FltManualTfFlyupSwitch from "./FltManualTfFlyupSwitch";
+import FltLeFlapsSwitch from "./FltLeFlapsSwitch";
+import FltFlcsSwitch from "./FltFlcsSwitch";
+import FltBitSwitch from "./FltBitSwitch";
 
 export default {
-  name: 'FltControlPanel',
+  name: "FltControlPanel",
   components: {
     GearStoresConfigSwitch,
     FltDigitalSwitch,
@@ -63,5 +63,5 @@ export default {
     FltFlcsSwitch,
     FltBitSwitch
   }
-}
+};
 </script>

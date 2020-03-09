@@ -2,25 +2,27 @@
   <button-group
     id="TWP: SYS TEST"
     description="TWP: SYS TEST - Push"
-    type="button">
+    type="button"
+  >
     <control
       id="twpsystestpush"
       description="TWP: SYS TEST - Push"
       label="SYS TEST"
       type="button"
-      role="none"/>
+      role="none"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'TwpSysTest',
+  name: "TwpSysTest",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

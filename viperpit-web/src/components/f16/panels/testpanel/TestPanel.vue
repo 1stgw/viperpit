@@ -39,15 +39,15 @@
 </template>
 
 <script>
-import TestFireOheatDetectButton from './TestFireOheatDetectButton'
-import TestOxyQtySwitch from './TestOxyQtySwitch'
-import TestMalIndLtsButton from './TestMalIndLtsButton'
-import TestProbeHeatSwitch from './TestProbeHeatSwitch'
-import TestEpuGenSwitch from './TestEpuGenSwitch'
-import TestFlcsPwrTestSwitch from './TestFlcsPwrTestSwitch'
+import TestFireOheatDetectButton from "./TestFireOheatDetectButton";
+import TestOxyQtySwitch from "./TestOxyQtySwitch";
+import TestMalIndLtsButton from "./TestMalIndLtsButton";
+import TestProbeHeatSwitch from "./TestProbeHeatSwitch";
+import TestEpuGenSwitch from "./TestEpuGenSwitch";
+import TestFlcsPwrTestSwitch from "./TestFlcsPwrTestSwitch";
 
 export default {
-  name: 'TestPanel',
+  name: "TestPanel",
   components: {
     TestFireOheatDetectButton,
     TestOxyQtySwitch,
@@ -56,5 +56,5 @@ export default {
     TestEpuGenSwitch,
     TestFlcsPwrTestSwitch
   }
-}
+};
 </script>

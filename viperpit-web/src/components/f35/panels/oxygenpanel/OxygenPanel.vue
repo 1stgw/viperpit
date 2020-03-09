@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import OxySetting2 from './OxySetting2'
+import OxySetting2 from "./OxySetting2";
 
 export default {
-  name: 'OxygenPanel',
+  name: "OxygenPanel",
   components: {
     OxySetting2
   }
-}
+};
 </script>

@@ -1,15 +1,14 @@
 <template>
-<div id="switch-group">
+  <div id="switch-group">
     <div align="center" style="padding: 0px;">
-        <strong>{{label}}</strong>
+      <strong>{{ label }}</strong>
     </div>
     <div align="center" style="padding: 0px;">
-        <div class="btn-group-vertical" role="group"
-            :aria-label="description">
-            <slot></slot>
-        </div>
+      <div class="btn-group-vertical" role="group" :aria-label="description">
+        <slot></slot>
+      </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
@@ -32,5 +31,5 @@ export default {
       required: true
     }
   }
-}
+};
 </script>

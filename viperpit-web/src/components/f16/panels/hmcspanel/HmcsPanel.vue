@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import HmcsHmscKnob from './HmcsHmscKnob'
+import HmcsHmscKnob from "./HmcsHmscKnob";
 
 export default {
-  name: 'HmcsPanel',
+  name: "HmcsPanel",
   components: {
     HmcsHmscKnob
   }
-}
+};
 </script>

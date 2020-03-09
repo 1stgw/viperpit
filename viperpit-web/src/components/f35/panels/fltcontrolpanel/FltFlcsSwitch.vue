@@ -2,25 +2,27 @@
   <button-group
     id="FLT: FLCS Switch"
     description="FLT: FLCS Switch - Hold"
-    type="button">
+    type="button"
+  >
     <control
       id="fltflcsswitchhold"
       description="FLT: FLCS Switch - Hold"
       label="FLCS"
       type="button"
-      role="none"/>
+      role="none"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'FltFlcsSwitch',
+  name: "FltFlcsSwitch",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

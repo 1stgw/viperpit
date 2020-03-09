@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import EpuEpuSwitch from './EpuEpuSwitch'
+import EpuEpuSwitch from "./EpuEpuSwitch";
 
 export default {
-  name: 'EpuPanel',
+  name: "EpuPanel",
   components: {
     EpuEpuSwitch
   }
-}
+};
 </script>

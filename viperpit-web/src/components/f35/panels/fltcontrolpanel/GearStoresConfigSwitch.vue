@@ -2,32 +2,35 @@
   <switch-group
     id="GEAR: STORES CONFIG Switch"
     description="GEAR: STORES CONFIG Switch - CAT I"
-    label="STORES CONFIG" 
-    type="switch">
+    label="STORES CONFIG"
+    type="switch"
+  >
     <control
       id="gearstoresconfigswitchcati"
       description="GEAR: STORES CONFIG Switch - CAT I"
       label="CAT I"
       type="switch"
-      role="none"/>
+      role="none"
+    />
     <control
       id="gearstoresconfigswitchcatiii"
       description="GEAR: STORES CONFIG Switch - CAT III"
       label="CAT III"
       type="switch"
-      role="none"/>
+      role="none"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'GearStoresConfigSwitch',
+  name: "GearStoresConfigSwitch",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

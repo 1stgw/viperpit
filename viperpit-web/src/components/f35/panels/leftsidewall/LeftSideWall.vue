@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import LeftWallSlapSwitchEcmPgrm5 from './LeftWallSlapSwitchEcmPgrm5'
-import LeftWallCanopy from './LeftWallCanopy'
+import LeftWallSlapSwitchEcmPgrm5 from "./LeftWallSlapSwitchEcmPgrm5";
+import LeftWallCanopy from "./LeftWallCanopy";
 
 export default {
-  name: 'LeftSideWall',
+  name: "LeftSideWall",
   components: {
     LeftWallSlapSwitchEcmPgrm5,
     LeftWallCanopy
   }
-}
+};
 </script>

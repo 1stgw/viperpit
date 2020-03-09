@@ -49,17 +49,17 @@
 </template>
 
 <script>
-import GearEmerStoresJettisonButton from './GearEmerStoresJettisonButton'
-import GearHookSwitch from './GearHookSwitch'
-import GearGndJettSwitch from './GearGndJettSwitch'
-import GearParkingBreakSwitch from './GearParkingBreakSwitch'
-import GearLgHandle from './GearLgHandle'
-import GearStoresConfigSwitch from './GearStoresConfigSwitch'
-import GearHornSilencerButton from './GearHornSilencerButton'
-import GearLightsSwitch from './GearLightsSwitch'
+import GearEmerStoresJettisonButton from "./GearEmerStoresJettisonButton";
+import GearHookSwitch from "./GearHookSwitch";
+import GearGndJettSwitch from "./GearGndJettSwitch";
+import GearParkingBreakSwitch from "./GearParkingBreakSwitch";
+import GearLgHandle from "./GearLgHandle";
+import GearStoresConfigSwitch from "./GearStoresConfigSwitch";
+import GearHornSilencerButton from "./GearHornSilencerButton";
+import GearLightsSwitch from "./GearLightsSwitch";
 
 export default {
-  name: 'GearPanel',
+  name: "GearPanel",
   components: {
     GearEmerStoresJettisonButton,
     GearHookSwitch,
@@ -70,5 +70,5 @@ export default {
     GearHornSilencerButton,
     GearLightsSwitch
   }
-}
+};
 </script>

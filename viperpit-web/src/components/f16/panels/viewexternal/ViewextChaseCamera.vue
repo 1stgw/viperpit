@@ -2,25 +2,27 @@
   <button-group
     id="VIEWEXT: Chase Camera"
     description="VIEWEXT: Chase Camera"
-    type="button">
+    type="button"
+  >
     <control
       id="viewextchasecamera"
       description="VIEWEXT: Chase Camera"
       label="Chase Camera"
       type="button"
-      role="none"/>
+      role="none"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'ViewextChaseCamera',
+  name: "ViewextChaseCamera",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>

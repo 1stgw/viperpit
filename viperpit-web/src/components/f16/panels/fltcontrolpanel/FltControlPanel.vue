@@ -39,15 +39,15 @@
 </template>
 
 <script>
-import FltDigitalSwitch from './FltDigitalSwitch'
-import FltAltFlapsSwitch from './FltAltFlapsSwitch'
-import FltManualTfFlyupSwitch from './FltManualTfFlyupSwitch'
-import FltLeFlapsSwitch from './FltLeFlapsSwitch'
-import FltFlcsSwitch from './FltFlcsSwitch'
-import FltBitSwitch from './FltBitSwitch'
+import FltDigitalSwitch from "./FltDigitalSwitch";
+import FltAltFlapsSwitch from "./FltAltFlapsSwitch";
+import FltManualTfFlyupSwitch from "./FltManualTfFlyupSwitch";
+import FltLeFlapsSwitch from "./FltLeFlapsSwitch";
+import FltFlcsSwitch from "./FltFlcsSwitch";
+import FltBitSwitch from "./FltBitSwitch";
 
 export default {
-  name: 'FltControlPanel',
+  name: "FltControlPanel",
   components: {
     FltDigitalSwitch,
     FltAltFlapsSwitch,
@@ -56,5 +56,5 @@ export default {
     FltFlcsSwitch,
     FltBitSwitch
   }
-}
+};
 </script>

@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import ZeroVmsSwitch from './ZeroVmsSwitch'
+import ZeroVmsSwitch from "./ZeroVmsSwitch";
 
 export default {
-  name: 'ZeroizePanel',
+  name: "ZeroizePanel",
   components: {
     ZeroVmsSwitch
   }
-}
+};
 </script>

@@ -24,16 +24,16 @@
 </template>
 
 <script>
-import MainHsiHdgKnob from './MainHsiHdgKnob'
-import MainHsiCrsKnob from './MainHsiCrsKnob'
-import MainAltimeterPressureKnob from './MainAltimeterPressureKnob'
+import MainHsiHdgKnob from "./MainHsiHdgKnob";
+import MainHsiCrsKnob from "./MainHsiCrsKnob";
+import MainAltimeterPressureKnob from "./MainAltimeterPressureKnob";
 
 export default {
-  name: 'MainInstrument',
+  name: "MainInstrument",
   components: {
     MainHsiHdgKnob,
     MainHsiCrsKnob,
     MainAltimeterPressureKnob
   }
-}
+};
 </script>

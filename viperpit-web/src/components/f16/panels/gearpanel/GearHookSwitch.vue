@@ -2,32 +2,35 @@
   <switch-group
     id="GEAR: HOOK Switch"
     description="GEAR: HOOK Switch - UP"
-    label="HOOK" 
-    type="switch">
+    label="HOOK"
+    type="switch"
+  >
     <control
       id="gearhookswitchup"
       description="GEAR: HOOK Switch - UP"
       label="UP"
       type="switch"
-      role="up"/>
+      role="up"
+    />
     <control
       id="gearhookswitchdn"
       description="GEAR: HOOK Switch - DN"
       label="DN"
       type="switch"
-      role="down"/>
+      role="down"
+    />
   </switch-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import SwitchGroup from '../../controls/SwitchGroup'
+import Control from "../../controls/Control";
+import SwitchGroup from "../../controls/SwitchGroup";
 
 export default {
-  name: 'GearHookSwitch',
+  name: "GearHookSwitch",
   components: {
     Control,
     SwitchGroup
   }
-}
+};
 </script>

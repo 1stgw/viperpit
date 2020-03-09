@@ -54,18 +54,18 @@
 </template>
 
 <script>
-import UhfPresetChannelKnob from './UhfPresetChannelKnob'
-import UhfA32TRotaryXzzzzz from './UhfA32TRotaryXzzzzz'
-import UhfManualFrequencyZxzzzz from './UhfManualFrequencyZxzzzz'
-import UhfManualFrequencyZzxzzz from './UhfManualFrequencyZzxzzz'
-import UhfManualFrequencyZzzxzz from './UhfManualFrequencyZzzxzz'
-import UhfManualFrequencyZzzzxx from './UhfManualFrequencyZzzzxx'
-import UhfFunctionKnob from './UhfFunctionKnob'
-import UhfVolKnob from './UhfVolKnob'
-import UhfModeKnob from './UhfModeKnob'
+import UhfPresetChannelKnob from "./UhfPresetChannelKnob";
+import UhfA32TRotaryXzzzzz from "./UhfA32TRotaryXzzzzz";
+import UhfManualFrequencyZxzzzz from "./UhfManualFrequencyZxzzzz";
+import UhfManualFrequencyZzxzzz from "./UhfManualFrequencyZzxzzz";
+import UhfManualFrequencyZzzxzz from "./UhfManualFrequencyZzzxzz";
+import UhfManualFrequencyZzzzxx from "./UhfManualFrequencyZzzzxx";
+import UhfFunctionKnob from "./UhfFunctionKnob";
+import UhfVolKnob from "./UhfVolKnob";
+import UhfModeKnob from "./UhfModeKnob";
 
 export default {
-  name: 'UhfPanel',
+  name: "UhfPanel",
   components: {
     UhfPresetChannelKnob,
     UhfA32TRotaryXzzzzz,
@@ -77,5 +77,5 @@ export default {
     UhfVolKnob,
     UhfModeKnob
   }
-}
+};
 </script>

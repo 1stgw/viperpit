@@ -2,25 +2,27 @@
   <button-group
     id="SIM: Toggle Exit Sim Menu"
     description="SIM: Toggle Exit Sim Menu"
-    type="button">
+    type="button"
+  >
     <control
       id="simtoggleexitsimmenu"
       description="SIM: Toggle Exit Sim Menu"
       label="Toggle Exit Sim Menu"
       type="button"
-      role="none"/>
+      role="none"
+    />
   </button-group>
 </template>
 
 <script>
-import Control from '../../controls/Control'
-import ButtonGroup from '../../controls/ButtonGroup'
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
 
 export default {
-  name: 'SimToggleExitSimMenu',
+  name: "SimToggleExitSimMenu",
   components: {
     Control,
     ButtonGroup
   }
-}
+};
 </script>
