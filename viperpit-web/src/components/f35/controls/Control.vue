@@ -1,11 +1,12 @@
 <template>
   <a
-    type="button"
+    role="button"
     :class="[
       { active: isActive(id) },
       'btn ' + type + '-' + role + ' btn-block'
     ]"
-    v-on:click="fireAction(id)"
+    href="#"
+    @click="fireAction(id)"
   >
     <div v-if="role === 'up'">
       <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
@@ -51,11 +52,11 @@ export default {
       required: true
     }
   },
-  methods: {
-    ...mapActions(["fireAction"])
-  },
   computed: {
     ...mapGetters(["isActive"])
+  },
+  methods: {
+    ...mapActions(["fireAction"])
   }
 };
 </script>

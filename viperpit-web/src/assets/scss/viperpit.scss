@@ -1,224 +1,54 @@
 $font-family-sans-serif: "Oxanium", -apple-system, BlinkMacSystemFont,
   "Segoe UI", Oxanium, "Helvetica Neue", Arial, sans-serif !default;
 
-$font-size-base: 1rem !default;
-
-$h1-font-size: 4rem !default;
-$h2-font-size: 3rem !default;
-$h3-font-size: 2.5rem !default;
-$h4-font-size: 2rem !default;
-$h5-font-size: 1.5rem !default;
+$font-size-base: 1rem;
 
 @import "~bootswatch/dist/cyborg/variables";
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/cyborg/bootswatch";
 
 $cockpit-control-border-width: 2px;
-$cockpit-control-color: lighten($success, 10%);
-$cockpit-control-active-color: darken($primary, 10%);
-$cockpit-control-bg: $primary;
+$cockpit-control-color: black;
+$cockpit-control-active-color: darken($success, 10%);
+$cockpit-control-bg: $success;
 $cockpit-control-active-bg: $success;
-$cockpit-control-border: darken($primary, 5%);
-$cockpit-control-active-border: darken($primary, 5%);
+$cockpit-control-border: darken($success, 5%);
+$cockpit-control-active-border: darken($success, 5%);
 $cockpit-control-font-weight: normal;
 
-$switch-off-color: lighten($warning, 10%);
-$switch-off-active-bg: $warning;
+$types: "down", "up", "left", "right", "on", "off", "none";
 
-.button-down {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
+@each $type in $types {
+  .button-#{$type} {
+    @extend .btn-success;
+    color: $cockpit-control-color;
+    background-color: $cockpit-control-bg;
+    font-weight: $cockpit-control-font-weight;
+    border-color: $cockpit-control-border;
+    border-width: $cockpit-control-border-width;
+  }
+  .button-#{$type}.active {
+    @extend .btn-success;
+    color: $cockpit-control-active-color;
+    background-color: $cockpit-control-active-bg;
+    font-weight: $cockpit-control-font-weight;
+    border-color: $cockpit-control-active-border;
+    border-width: $cockpit-control-border-width;
+  }
+  .switch-#{$type} {
+    @extend .btn-success;
+    color: $cockpit-control-color;
+    background-color: $cockpit-control-bg;
+    font-weight: $cockpit-control-font-weight;
+    border-color: $cockpit-control-border;
+    border-width: $cockpit-control-border-width;
+  }
+  .switch-#{$type}.active {
+    @extend .btn-success;
+    color: $cockpit-control-active-color;
+    background-color: $cockpit-control-active-bg;
+    font-weight: $cockpit-control-font-weight;
+    border-color: $cockpit-control-active-border;
+    border-width: $cockpit-control-border-width;
+  }
 }
-.button-down.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-down {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-down.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-left {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-left.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-left {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-left.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-none {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-none.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-none {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-none.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-off {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-off.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-off {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-off.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-on {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-on.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-on {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-on.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-right {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-right.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-right {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-right.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-up {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.button-up.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-up {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-.switch-up.active {
-  font-weight: $cockpit-control-font-weight;
-  border-width: $cockpit-control-border-width;
-}
-
-$button-down-color: $cockpit-control-color;
-$button-down-active-color: $cockpit-control-active-color;
-$button-down-bg: $cockpit-control-bg;
-$button-down-active-bg: $cockpit-control-active-bg;
-$button-down-border: $cockpit-control-border;
-$button-down-active-border: $cockpit-control-active-border;
-$switch-down-color: $cockpit-control-color;
-$switch-down-active-color: $cockpit-control-active-color;
-$switch-down-bg: $cockpit-control-bg;
-$switch-down-active-bg: $cockpit-control-active-bg;
-$switch-down-border: $cockpit-control-border;
-$switch-down-active-border: $cockpit-control-active-border;
-$button-left-color: $cockpit-control-color;
-$button-left-active-color: $cockpit-control-active-color;
-$button-left-bg: $cockpit-control-bg;
-$button-left-active-bg: $cockpit-control-active-bg;
-$button-left-border: $cockpit-control-border;
-$button-left-active-border: $cockpit-control-active-border;
-$switch-left-color: $cockpit-control-color;
-$switch-left-active-color: $cockpit-control-active-color;
-$switch-left-bg: $cockpit-control-bg;
-$switch-left-active-bg: $cockpit-control-active-bg;
-$switch-left-border: $cockpit-control-border;
-$switch-left-active-border: $cockpit-control-active-border;
-$button-none-color: $cockpit-control-color;
-$button-none-active-color: $cockpit-control-active-color;
-$button-none-bg: $cockpit-control-bg;
-$button-none-active-bg: $cockpit-control-active-bg;
-$button-none-border: $cockpit-control-border;
-$button-none-active-border: $cockpit-control-active-border;
-$switch-none-color: $cockpit-control-color;
-$switch-none-active-color: $cockpit-control-active-color;
-$switch-none-bg: $cockpit-control-bg;
-$switch-none-active-bg: $cockpit-control-active-bg;
-$switch-none-border: $cockpit-control-border;
-$switch-none-active-border: $cockpit-control-active-border;
-$button-off-color: $cockpit-control-color;
-$button-off-active-color: $cockpit-control-active-color;
-$button-off-bg: $cockpit-control-bg;
-$button-off-active-bg: $cockpit-control-active-bg;
-$button-off-border: $cockpit-control-border;
-$button-off-active-border: $cockpit-control-active-border;
-$switch-off-color: $cockpit-control-color;
-$switch-off-active-color: $cockpit-control-active-color;
-$switch-off-bg: $cockpit-control-bg;
-$switch-off-active-bg: $cockpit-control-active-bg;
-$switch-off-border: $cockpit-control-border;
-$switch-off-active-border: $cockpit-control-active-border;
-$button-on-color: $cockpit-control-color;
-$button-on-active-color: $cockpit-control-active-color;
-$button-on-bg: $cockpit-control-bg;
-$button-on-active-bg: $cockpit-control-active-bg;
-$button-on-border: $cockpit-control-border;
-$button-on-active-border: $cockpit-control-active-border;
-$switch-on-color: $cockpit-control-color;
-$switch-on-active-color: $cockpit-control-active-color;
-$switch-on-bg: $cockpit-control-bg;
-$switch-on-active-bg: $cockpit-control-active-bg;
-$switch-on-border: $cockpit-control-border;
-$switch-on-active-border: $cockpit-control-active-border;
-$button-right-color: $cockpit-control-color;
-$button-right-active-color: $cockpit-control-active-color;
-$button-right-bg: $cockpit-control-bg;
-$button-right-active-bg: $cockpit-control-active-bg;
-$button-right-border: $cockpit-control-border;
-$button-right-active-border: $cockpit-control-active-border;
-$switch-right-color: $cockpit-control-color;
-$switch-right-active-color: $cockpit-control-active-color;
-$switch-right-bg: $cockpit-control-bg;
-$switch-right-active-bg: $cockpit-control-active-bg;
-$switch-right-border: $cockpit-control-border;
-$switch-right-active-border: $cockpit-control-active-border;
-$button-up-color: $cockpit-control-color;
-$button-up-active-color: $cockpit-control-active-color;
-$button-up-bg: $cockpit-control-bg;
-$button-up-active-bg: $cockpit-control-active-bg;
-$button-up-border: $cockpit-control-border;
-$button-up-active-border: $cockpit-control-active-border;
-$switch-up-color: $cockpit-control-color;
-$switch-up-active-color: $cockpit-control-active-color;
-$switch-up-bg: $cockpit-control-bg;
-$switch-up-active-bg: $cockpit-control-active-bg;
-$switch-up-border: $cockpit-control-border;
-$switch-up-active-border: $cockpit-control-active-border;
