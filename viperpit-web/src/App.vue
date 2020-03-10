@@ -1,14 +1,23 @@
 <template>
   <div id="app">
-    <div>
-      <router-link to="/maps">Maps</router-link> | Cockpits:
-      <router-link to="/cockpits/f16">F-16</router-link> |
-      <router-link to="/cockpits/f35">F-35</router-link>
+    <div class="row justify-content-end">
+      <div>
+        <small v-if="isConnected">(Connected to {{ getAgent }})</small>
+      </div>
+      <div>
+        <nav class="nav">
+          <router-link class="nav-link" active-class="active" to="/maps"
+            >Maps</router-link
+          >
+          <router-link class="nav-link" active-class="active" to="/cockpits/f16"
+            >F-16</router-link
+          >
+          <router-link class="nav-link" active-class="active" to="/cockpits/f35"
+            >F-35</router-link
+          >
+        </nav>
+      </div>
     </div>
-    <div>
-      <small v-if="isConnected">(Connected to {{ getAgent }})</small>
-    </div>
-    <hr />
     <router-view></router-view>
   </div>
 </template>

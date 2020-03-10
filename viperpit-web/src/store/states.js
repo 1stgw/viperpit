@@ -72,7 +72,7 @@ const actions = {
         );
     }
   },
-  fireAction(id) {
+  fireAction(state, id) {
     const action = state.actions[id];
     if (!action) {
       return;

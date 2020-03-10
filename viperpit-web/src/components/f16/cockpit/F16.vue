@@ -1,31 +1,50 @@
 <template>
   <div class="container-fluid">
     <div v-if="isConnected">
-      <div class="row">
-        <router-link to="/cockpits/f16/consoles/leftconsole"
+      <nav class="nav justify-content-center">
+        <router-link
+          class="nav-link"
+          active-class="active"
+          to="/cockpits/f16/consoles/leftconsole"
           >Left Console</router-link
         >
-        |
-        <router-link to="/cockpits/f16/consoles/leftauxconsole"
+        <router-link
+          class="nav-link"
+          active-class="active"
+          to="/cockpits/f16/consoles/leftauxconsole"
           >Left Aux Console</router-link
         >
-        |
-        <router-link to="/cockpits/f16/consoles/centerconsole"
+        <router-link
+          class="nav-link"
+          active-class="active"
+          to="/cockpits/f16/consoles/centerconsole"
           >Center Console</router-link
         >
-        |
-        <router-link to="/cockpits/f16/consoles/rightconsole"
+        <router-link
+          class="nav-link"
+          active-class="active"
+          to="/cockpits/f16/consoles/rightconsole"
           >Right Console</router-link
         >
-        |
-        <router-link to="/cockpits/f16/consoles/miscellaneous"
+        <router-link
+          class="nav-link"
+          active-class="active"
+          to="/cockpits/f16/consoles/miscellaneous"
           >Miscellaneous</router-link
         >
-        | <router-link to="/cockpits/f16/consoles/views">Views</router-link> |
-        <router-link to="/cockpits/f16/consoles/radiocomms"
+        <router-link
+          class="nav-link"
+          active-class="active"
+          to="/cockpits/f16/consoles/views"
+          >Views</router-link
+        >
+        <router-link
+          class="nav-link"
+          active-class="active"
+          to="/cockpits/f16/consoles/radiocomms"
           >Radio Comms</router-link
         >
-      </div>
+      </nav>
       <router-view></router-view>
     </div>
     <div v-else>

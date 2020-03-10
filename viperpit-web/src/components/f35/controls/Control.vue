@@ -1,11 +1,10 @@
 <template>
   <a
-    role="button"
+    type="button"
     :class="[
       { active: isActive(id) },
       'btn ' + type + '-' + role + ' btn-block'
     ]"
-    href="#"
     @click="fireAction(id)"
   >
     <div v-if="role === 'up'">

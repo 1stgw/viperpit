@@ -3,17 +3,37 @@ $font-family-sans-serif: "Oxanium", -apple-system, BlinkMacSystemFont,
 
 $font-size-base: 1rem;
 
+$body-bg: #000;
+$card-bg: #000;
+
 @import "~bootswatch/dist/cyborg/variables";
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/cyborg/bootswatch";
 
-$cockpit-control-border-width: 2px;
-$cockpit-control-color: black;
-$cockpit-control-active-color: darken($success, 10%);
-$cockpit-control-bg: $success;
-$cockpit-control-active-bg: $success;
-$cockpit-control-border: darken($success, 5%);
-$cockpit-control-active-border: darken($success, 5%);
+body {
+  text-transform: uppercase;
+}
+
+.card {
+  margin: 10px;
+  border-color: $green;
+}
+
+a:not([href]) {
+  color: $green;
+}
+
+a:not([href]):hover {
+  color: $white;
+}
+
+$cockpit-control-border-width: 1px;
+$cockpit-control-color: $green;
+$cockpit-control-active-color: $white;
+$cockpit-control-bg: $black;
+$cockpit-control-active-bg: $green;
+$cockpit-control-border: $green;
+$cockpit-control-active-border: $green;
 $cockpit-control-font-weight: normal;
 
 $types: "down", "up", "left", "right", "on", "off", "none";
