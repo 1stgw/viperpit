@@ -51,11 +51,11 @@ export default {
       required: true
     }
   },
-  methods: {
-    ...mapActions(["fireAction"])
-  },
   computed: {
     ...mapGetters(["isActive"])
+  },
+  methods: {
+    ...mapActions(["fireAction"])
   }
 };
 </script>

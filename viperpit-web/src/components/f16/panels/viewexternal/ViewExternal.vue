@@ -1,7 +1,7 @@
 <template>
-  <div class="panel panel-default">
-    <div class="panel-heading">VIEW EXTERNAL</div>
-    <div class="panel-body">
+  <div class="card card-default">
+    <div class="card-heading">VIEW EXTERNAL</div>
+    <div class="card-body">
       <div class="row">
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">

@@ -11,7 +11,7 @@
         <router-link to="/cockpits/f35/consoles/sensors">Sensors</router-link> |
         <router-link to="/cockpits/f35/consoles/navi">Navi</router-link> |
         <router-link to="/cockpits/f35/consoles/avionics">Avionics</router-link>
-        | <router-link to="/cockpits/f35/consoles/wpn">Wpn</router-link> |
+        <router-link to="/cockpits/f35/consoles/wpn">Wpn</router-link> |
         <router-link to="/cockpits/f35/consoles/emer">Emer</router-link> |
         <router-link to="/cockpits/f35/consoles/misc">Misc</router-link> |
         <router-link to="/cockpits/f35/consoles/views">Views</router-link>
