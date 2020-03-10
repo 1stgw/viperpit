@@ -36,37 +36,9 @@
 
 <script>
 import { mapGetters } from "vuex";
-import Cmds from "../consoles/Cmds";
-import Comms from "../consoles/Comms";
-import Flight from "../consoles/Flight";
-import Fuel from "../consoles/Fuel";
-import Test from "../consoles/Test";
-import Lights from "../consoles/Lights";
-import Sensors from "../consoles/Sensors";
-import Navi from "../consoles/Navi";
-import Avionics from "../consoles/Avionics";
-import Wpn from "../consoles/Wpn";
-import Emer from "../consoles/Emer";
-import Misc from "../consoles/Misc";
-import Views from "../consoles/Views";
 
 export default {
   name: "F35",
-  components: {
-    Cmds,
-    Comms,
-    Flight,
-    Fuel,
-    Test,
-    Lights,
-    Sensors,
-    Navi,
-    Avionics,
-    Wpn,
-    Emer,
-    Misc,
-    Views
-  },
   computed: {
     ...mapGetters(["isConnected"])
   }

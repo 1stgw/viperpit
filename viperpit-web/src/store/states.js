@@ -10,7 +10,7 @@ const state = {
 
 const actions = {
   initialize({ dispatch, commit }) {
-    const client = services.connectToWebSocket(response => {
+    const client = services.connectToWebSocket(() => {
       services.installAgentsConnectListener(client, commit, dispatch);
       services.installAgentsDisconnectListener(client, commit, dispatch);
       services.installStatesUpdateListener(client, commit);
@@ -72,7 +72,7 @@ const actions = {
         );
     }
   },
-  fireAction({ commit }, id) {
+  fireAction(id) {
     const action = state.actions[id];
     if (!action) {
       return;
@@ -80,12 +80,9 @@ const actions = {
     const callback = action.callback;
     Vue.http
       .post("/services/cockpit/states/fire/" + state.agentId + "/" + callback)
-      .then(
-        response => {},
-        response => {
-          console.log(response);
-        }
-      );
+      .then({}, response => {
+        console.log(response);
+      });
   }
 };
 

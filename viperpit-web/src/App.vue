@@ -17,15 +17,15 @@
 import { mapActions, mapGetters } from "vuex";
 
 export default {
-  name: "app",
-  methods: {
-    ...mapActions(["initialize", "loadState"])
-  },
+  name: "App",
   computed: {
     ...mapGetters(["getAgent", "isConnected"])
   },
   created() {
     this.initialize();
+  },
+  methods: {
+    ...mapActions(["initialize", "loadState"])
   }
 };
 </script>

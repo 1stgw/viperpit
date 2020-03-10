@@ -46,25 +46,9 @@
 
 <script>
 import { mapGetters } from "vuex";
-import LeftConsole from "../consoles/LeftConsole";
-import LeftAuxConsole from "../consoles/LeftAuxConsole";
-import CenterConsole from "../consoles/CenterConsole";
-import RightConsole from "../consoles/RightConsole";
-import Miscellaneous from "../consoles/Miscellaneous";
-import Views from "../consoles/Views";
-import RadioComms from "../consoles/RadioComms";
 
 export default {
   name: "F16",
-  components: {
-    LeftConsole,
-    LeftAuxConsole,
-    CenterConsole,
-    RightConsole,
-    Miscellaneous,
-    Views,
-    RadioComms
-  },
   computed: {
     ...mapGetters(["isConnected"])
   }

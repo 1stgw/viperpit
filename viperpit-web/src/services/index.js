@@ -9,10 +9,10 @@ export function connectToWebSocket(connectCallback, errorCallback) {
     }
   );
   if (!connectCallback) {
-    connectCallback = function(response) {};
+    connectCallback = function() {};
   }
   if (!errorCallback) {
-    errorCallback = function(response) {};
+    errorCallback = function() {};
   }
   const headers = {};
   client.connect(headers, connectCallback, errorCallback);

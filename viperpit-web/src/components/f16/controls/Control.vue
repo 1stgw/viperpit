@@ -5,7 +5,7 @@
       { active: isActive(id) },
       'btn ' + type + '-' + role + ' btn-block'
     ]"
-    v-on:click="fireAction(id)"
+    @click="fireAction(id)"
   >
     <div v-if="role === 'up'">
       <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
