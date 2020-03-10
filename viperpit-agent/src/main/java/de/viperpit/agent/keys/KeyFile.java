@@ -1,26 +1,23 @@
 package de.viperpit.agent.keys;
 
 import static com.google.common.base.CharMatcher.javaDigit;
-import static com.google.common.base.Objects.equal;
 import static com.google.common.collect.Iterables.any;
+import static com.google.common.collect.Iterables.filter;
 import static com.google.common.collect.Iterables.skip;
-import static com.google.common.collect.Lists.newArrayList;
+import static com.google.common.collect.Maps.newHashMap;
+import static com.google.common.collect.Maps.newHashMapWithExpectedSize;
+import static java.lang.Integer.parseInt;
 import static java.nio.charset.StandardCharsets.ISO_8859_1;
 import static java.nio.file.Files.readAllLines;
-import static java.util.stream.Collectors.toMap;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Consumer;
+import java.util.Objects;
 
 import com.google.common.base.CharMatcher;
-import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
-import com.google.common.base.Predicate;
 import com.google.common.base.Splitter;
-import com.google.common.collect.Iterables;
 
 public class KeyFile {
 
@@ -71,12 +68,11 @@ public class KeyFile {
 				return false;
 			}
 			KeyCodeLine other = (KeyCodeLine) obj;
-			return java.util.Objects.equals(callback, other.callback)
-					&& java.util.Objects.equals(category, other.category)
-					&& java.util.Objects.equals(description, other.description) && key == other.key
+			return Objects.equals(callback, other.callback) && Objects.equals(category, other.category)
+					&& Objects.equals(description, other.description) && key == other.key
 					&& keyCombinationKey == other.keyCombinationKey
 					&& keyCombinationModifiers == other.keyCombinationModifiers && modifiers == other.modifiers
-					&& java.util.Objects.equals(section, other.section) && sound == other.sound;
+					&& Objects.equals(section, other.section) && sound == other.sound;
 		}
 
 		public String getCallback() {
@@ -117,8 +113,8 @@ public class KeyFile {
 
 		@Override
 		public int hashCode() {
-			return java.util.Objects.hash(callback, category, description, key, keyCombinationKey,
-					keyCombinationModifiers, modifiers, section, sound);
+			return Objects.hash(callback, category, description, key, keyCombinationKey, keyCombinationModifiers,
+					modifiers, section, sound);
 		}
 
 		public boolean hasKey() {
@@ -166,7 +162,7 @@ public class KeyFile {
 
 	private File file;
 
-	private Map<String, KeyFile.KeyCodeLine> keyCodeLines;
+	private Map<String, KeyCodeLine> keyCodeLines;
 
 	public KeyFile(final File file) {
 		Preconditions.<Boolean>checkNotNull(Boolean.valueOf(file.exists()));
@@ -174,41 +170,35 @@ public class KeyFile {
 		this.file = file;
 	}
 
-	public Map<String, KeyFile.KeyCodeLine> getKeyCodeLines() {
+	public Map<String, KeyCodeLine> getKeyCodeLines() {
 		try {
-			if ((this.keyCodeLines == null)) {
-				final ArrayList<KeyFile.KeyCodeLine> keyCodeLines = newArrayList();
-				final StringBuilder currentCategory = new StringBuilder();
-				final StringBuilder currentSection = new StringBuilder();
-				skip(Iterables.filter(readAllLines(this.file.toPath(), ISO_8859_1), new Predicate<String>() {
-					public boolean apply(final String it) {
-						return !it.startsWith("#");
+			if (this.keyCodeLines == null) {
+				List<String> lines = readAllLines(file.toPath(), ISO_8859_1);
+				Map<String, KeyCodeLine> map = newHashMapWithExpectedSize(lines.size());
+				StringBuilder currentCategory = new StringBuilder();
+				StringBuilder currentSection = new StringBuilder();
+				skip(filter(lines, line -> !line.startsWith("#")), 1).forEach(line -> {
+					String category = toCategory(line);
+					if (category != null) {
+						currentCategory.delete(0, currentCategory.length());
+						currentCategory.append(category);
 					}
-				}), 1).forEach(new Consumer<String>() {
-					public void accept(final String line) {
-						final String category = KeyFile.this.toCategory(line);
-						if ((category != null)) {
-							currentCategory.delete(0, currentCategory.length());
-							currentCategory.append(category);
-						}
-						final String section = KeyFile.this.toSection(line);
-						if ((section != null)) {
-							currentSection.delete(0, currentSection.length());
-							currentSection.append(section);
-						}
-						final KeyFile.KeyCodeLine keyCodeLine = KeyFile.this.toKeyCodeLine(line,
-								currentCategory.toString(), currentSection.toString());
-						if ((keyCodeLine != null)) {
-							keyCodeLines.add(keyCodeLine);
-						}
+					String section = toSection(line);
+					if (section != null) {
+						currentSection.delete(0, currentSection.length());
+						currentSection.append(section);
+					}
+					KeyCodeLine keyCodeLine = toKeyCodeLine(line, currentCategory.toString(),
+							currentSection.toString());
+					if (keyCodeLine != null) {
+						map.put(keyCodeLine.getCallback(), keyCodeLine);
 					}
 				});
-				this.keyCodeLines = keyCodeLines.stream()
-						.collect(toMap(KeyCodeLine::getCallback, keyCodeLine -> keyCodeLine));
+				this.keyCodeLines = newHashMap(map);
 			}
 			return this.keyCodeLines;
-		} catch (Throwable _e) {
-			throw new RuntimeException(_e);
+		} catch (Throwable exception) {
+			throw new RuntimeException(exception);
 		}
 	}
 
@@ -222,10 +212,10 @@ public class KeyFile {
 		if ((tokens.size() != 9)) {
 			return null;
 		}
-		if ((!equal(tokens.get(0), "SimDoNothing"))) {
+		if ((!Objects.equals(tokens.get(0), "SimDoNothing"))) {
 			return null;
 		}
-		if ((!equal(tokens.get(3), "0XFFFFFFFF"))) {
+		if ((!Objects.equals(tokens.get(3), "0XFFFFFFFF"))) {
 			return null;
 		}
 		if (any(tokens.subList(4, 6), (String string) -> Integer.valueOf(string).intValue() != 0)) {
@@ -241,49 +231,38 @@ public class KeyFile {
 		return description.substring(4, CharMatcher.is('\"').indexIn(description, 4)).trim();
 	}
 
-	private KeyFile.KeyCodeLine toKeyCodeLine(final String line, final String category, final String section) {
-		final List<String> it = this.parse(line);
-		int _size = it.size();
-		boolean _tripleNotEquals = (_size != 9);
-		if (_tripleNotEquals) {
+	private KeyCodeLine toKeyCodeLine(final String line, final String category, final String section) {
+		List<String> tokens = parse(line);
+		if (tokens.size() != 9) {
 			return null;
 		}
-		String _get = it.get(0);
-		boolean _equals = Objects.equal(_get, "SimDoNothing");
-		if (_equals) {
+		String _get = tokens.get(0);
+		if (Objects.equals(_get, "SimDoNothing")) {
 			return null;
 		}
-		final String callback = it.get(0);
-		final int sound = Integer.valueOf(it.get(1)).intValue();
-		int _xifexpression = (int) 0;
-		String _get_1 = it.get(3);
-		boolean _notEquals = (!Objects.equal(_get_1, "0XFFFFFFFF"));
-		if (_notEquals) {
-			_xifexpression = Integer.valueOf(Integer.parseInt(it.get(3).toUpperCase().replaceFirst("0X", ""), 16))
-					.intValue();
+		String callback = tokens.get(0);
+		int sound = Integer.valueOf(tokens.get(1)).intValue();
+		int key = 0;
+		if ((!Objects.equals(tokens.get(3), "0XFFFFFFFF"))) {
+			key = Integer.valueOf(parseInt(tokens.get(3).toUpperCase().replaceFirst("0X", ""), 16)).intValue();
 		} else {
-			_xifexpression = (-1);
+			key = -1;
 		}
-		final int key = _xifexpression;
-		final int modifiers = Integer.valueOf(it.get(4)).intValue();
-		int _xifexpression_1 = (int) 0;
-		String _get_2 = it.get(5);
-		boolean _notEquals_1 = (!Objects.equal(_get_2, "0XFFFFFFFF"));
-		if (_notEquals_1) {
-			_xifexpression_1 = Integer.valueOf(Integer.parseInt(it.get(5).toUpperCase().replaceFirst("0X", ""), 16))
-					.intValue();
+		int modifiers = Integer.valueOf(tokens.get(4)).intValue();
+		int comboKey = (int) 0;
+		if (!Objects.equals(tokens.get(5), "0XFFFFFFFF")) {
+			comboKey = Integer.valueOf(parseInt(tokens.get(5).toUpperCase().replaceFirst("0X", ""), 16)).intValue();
 		} else {
-			_xifexpression_1 = (-1);
+			comboKey = (-1);
 		}
-		final int comboKey = _xifexpression_1;
-		final int comboModifiers = Integer.valueOf(it.get(6)).intValue();
-		final int visibility = Integer.valueOf(it.get(7)).intValue();
-		final String description = CharMatcher.is('\"').trimFrom(it.get(8));
-		if ((visibility != (-1))) {
-			return new KeyFile.KeyCodeLine(category, section, callback, sound, key, modifiers, comboKey, comboModifiers,
-					description);
+		final int comboModifiers = Integer.valueOf(tokens.get(6)).intValue();
+		final int visibility = Integer.valueOf(tokens.get(7)).intValue();
+		final String description = CharMatcher.is('\"').trimFrom(tokens.get(8));
+		if (visibility == -1) {
+			return null;
 		}
-		return null;
+		return new KeyCodeLine(category, section, callback, sound, key, modifiers, comboKey, comboModifiers,
+				description);
 	}
 
 	private String toSection(final String line) {
@@ -294,12 +273,12 @@ public class KeyFile {
 			return null;
 		}
 		String _get = it.get(0);
-		boolean _notEquals = (!Objects.equal(_get, "SimDoNothing"));
+		boolean _notEquals = (!Objects.equals(_get, "SimDoNothing"));
 		if (_notEquals) {
 			return null;
 		}
 		String _get_1 = it.get(3);
-		boolean _notEquals_1 = (!Objects.equal(_get_1, "0XFFFFFFFF"));
+		boolean _notEquals_1 = (!Objects.equals(_get_1, "0XFFFFFFFF"));
 		if (_notEquals_1) {
 			return null;
 		}

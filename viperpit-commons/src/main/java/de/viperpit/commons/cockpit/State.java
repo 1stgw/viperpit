@@ -35,7 +35,7 @@ public class State {
 	}
 
 	public Action getById(final String id) {
-		if ((this.byId == null)) {
+		if (this.byId == null) {
 			this.byId = this.actions.stream().collect(toMap(Action::getId, action -> action));
 		}
 		return this.byId.get(id);
