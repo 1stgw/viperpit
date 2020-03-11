@@ -8,16 +8,16 @@
     @click="fireAction(id)"
   >
     <div v-if="role === 'up'">
-      <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+      <font-awesome-icon icon="caret-up" />
     </div>
     <div v-else-if="role === 'down'">
-      <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+      <font-awesome-icon icon="caret-down" />
     </div>
     <div v-else-if="role === 'left'">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <font-awesome-icon icon="caret-left" />
     </div>
     <div v-else-if="role === 'right'">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <font-awesome-icon icon="caret-right" />
     </div>
     <div v-else>
       {{ label }}

@@ -1,9 +1,9 @@
 <template>
-  <div id="button-group">
-    <div align="center" style="padding: 0px;">
-      <strong>{{ label }}</strong>
+  <div class="button-group">
+    <div align="center">
+      {{ label }}
     </div>
-    <div align="center" style="padding: 0px;">
+    <div align="center">
       <div class="btn-group-vertical" role="group" :aria-label="description">
         <slot></slot>
       </div>
