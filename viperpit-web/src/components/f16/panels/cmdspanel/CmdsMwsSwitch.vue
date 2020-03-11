@@ -1,21 +1,21 @@
 <template>
   <switch-group
     id="CMDS: MWS Switch"
-    description="CMDS: MWS Switch - ON"
+    description="CMDS: MWS Switch - Power ON"
     label="MWS"
     type="switch"
   >
     <control
-      id="cmdsmwsswitchon"
-      description="CMDS: MWS Switch - ON"
-      label="ON"
+      id="cmdsmwsswitchpoweron"
+      description="CMDS: MWS Switch - Power ON"
+      label="Power ON"
       type="switch"
       role="on"
     />
     <control
-      id="cmdsmwsswitchoff"
-      description="CMDS: MWS Switch - OFF"
-      label="OFF"
+      id="cmdsmwsswitchpoweroff"
+      description="CMDS: MWS Switch - Power OFF"
+      label="Power OFF"
       type="switch"
       role="off"
     />

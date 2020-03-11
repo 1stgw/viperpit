@@ -5,11 +5,6 @@
       <div class="row">
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <gear-stores-config-switch />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
             <flt-digital-switch />
           </div>
         </div>
@@ -44,7 +39,6 @@
 </template>
 
 <script>
-import GearStoresConfigSwitch from "./GearStoresConfigSwitch";
 import FltDigitalSwitch from "./FltDigitalSwitch";
 import FltAltFlapsSwitch from "./FltAltFlapsSwitch";
 import FltManualTfFlyupSwitch from "./FltManualTfFlyupSwitch";
@@ -55,7 +49,6 @@ import FltBitSwitch from "./FltBitSwitch";
 export default {
   name: "FltControlPanel",
   components: {
-    GearStoresConfigSwitch,
     FltDigitalSwitch,
     FltAltFlapsSwitch,
     FltManualTfFlyupSwitch,

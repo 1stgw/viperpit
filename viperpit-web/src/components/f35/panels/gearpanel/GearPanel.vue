@@ -5,6 +5,11 @@
       <div class="row">
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
+            <gear-emer-stores-jettison-button />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6">
+          <div align="center" style="padding: 0px;">
             <gear-hook-switch />
           </div>
         </div>
@@ -25,6 +30,11 @@
         </div>
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
+            <gear-stores-config-switch />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6">
+          <div align="center" style="padding: 0px;">
             <gear-horn-silencer-button />
           </div>
         </div>
@@ -33,42 +43,32 @@
             <gear-lights-switch />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <alt-gear-extend-alt-gear />
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <alt-gear-reset-alt-gear />
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import GearEmerStoresJettisonButton from "./GearEmerStoresJettisonButton";
 import GearHookSwitch from "./GearHookSwitch";
 import GearGndJettSwitch from "./GearGndJettSwitch";
 import GearParkingBreakSwitch from "./GearParkingBreakSwitch";
 import GearLgHandle from "./GearLgHandle";
+import GearStoresConfigSwitch from "./GearStoresConfigSwitch";
 import GearHornSilencerButton from "./GearHornSilencerButton";
 import GearLightsSwitch from "./GearLightsSwitch";
-import AltGearExtendAltGear from "./AltGearExtendAltGear";
-import AltGearResetAltGear from "./AltGearResetAltGear";
 
 export default {
   name: "GearPanel",
   components: {
+    GearEmerStoresJettisonButton,
     GearHookSwitch,
     GearGndJettSwitch,
     GearParkingBreakSwitch,
     GearLgHandle,
+    GearStoresConfigSwitch,
     GearHornSilencerButton,
-    GearLightsSwitch,
-    AltGearExtendAltGear,
-    AltGearResetAltGear
+    GearLightsSwitch
   }
 };
 </script>

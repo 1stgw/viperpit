@@ -23,11 +23,6 @@
             <snsr-rdr-alt-switch />
           </div>
         </div>
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <misc-rf-switch />
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -38,7 +33,6 @@ import SnsrLeftHdptSwitch from "./SnsrLeftHdptSwitch";
 import SnsrRightHdptSwitch from "./SnsrRightHdptSwitch";
 import SnsrFcrSwitch from "./SnsrFcrSwitch";
 import SnsrRdrAltSwitch from "./SnsrRdrAltSwitch";
-import MiscRfSwitch from "./MiscRfSwitch";
 
 export default {
   name: "SnsrPwrPanel",
@@ -46,8 +40,7 @@ export default {
     SnsrLeftHdptSwitch,
     SnsrRightHdptSwitch,
     SnsrFcrSwitch,
-    SnsrRdrAltSwitch,
-    MiscRfSwitch
+    SnsrRdrAltSwitch
   }
 };
 </script>

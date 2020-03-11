@@ -17,8 +17,8 @@ class FilterGenerator {
 		val fileWithCockpitCallbacks = new File('''«metadataPath.absolutePath»/pitbuilder.key''')
 		if (fileWithAllCallbacks !== null && fileWithAllCallbacks.exists && fileWithCockpitCallbacks !== null && fileWithCockpitCallbacks.exists) {
 			LOGGER.info("Found key files and loading key file entries.")
-			val keyFileWithAllCallbacks = new KeyFile(fileWithAllCallbacks)
-			val keyFileWithCockpitCallbacks = new KeyFile(fileWithCockpitCallbacks)
+			val keyFileWithAllCallbacks = new KeyFile(fileWithAllCallbacks, UTF_8)
+			val keyFileWithCockpitCallbacks = new KeyFile(fileWithCockpitCallbacks, UTF_8)
 			LOGGER.info("Running the Generator.")
 			generateFilter(metadataPath, keyFileWithAllCallbacks, keyFileWithCockpitCallbacks)
 			LOGGER.info("Generator has finished successfully.")

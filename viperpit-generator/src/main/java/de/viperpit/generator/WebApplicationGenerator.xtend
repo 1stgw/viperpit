@@ -31,59 +31,25 @@ class WebApplicationGenerator {
 
 	private def generate(File path, String profile, Configuration configuration, Cockpit cockpit, Layout layout) {
 		val pathForModule = new File('''«path.absolutePath»/viperpit-web/src/components/«profile»''')
-		val pathForAssets = new File('''«pathForModule»/../../assets''')
 		pathForModule.mkdirs
-		write('''
-			@import "~bootstrap/less/bootstrap.less";
-			@import "~bootswatch/cyborg/variables.less";
-			@import "~bootswatch/cyborg/bootswatch.less";
-			@import "~bootswatch/cyborg/bootswatch.less";
-			
-			@font-size-base: 18px;
-			
-			«FOR role : cockpit.roles»
-				«FOR type : cockpit.types»
-					.«type»-«role» {
-						.button-variant(@«type»-«role»-color; @«type»-«role»-bg; @«type»-«role»-border);
-						font-weight: @cockpit-control-font-weight;
-						border-width: @cockpit-control-border-width;
-					}
-					.«type»-«role».active {
-						.button-variant(@«type»-«role»-active-color; @«type»-«role»-active-bg; @«type»-«role»-active-border);
-						font-weight: @cockpit-control-font-weight;
-						border-width: @cockpit-control-border-width;
-					}
-				«ENDFOR»
-			«ENDFOR»
-			«FOR role : cockpit.roles»
-				«FOR type : cockpit.types»
-					@«type»-«role»-color:             @cockpit-control-color;
-					@«type»-«role»-active-color:      @cockpit-control-active-color;
-					@«type»-«role»-bg:                @cockpit-control-bg;
-					@«type»-«role»-active-bg:         @cockpit-control-active-bg;
-					@«type»-«role»-border:            @cockpit-control-border;
-					@«type»-«role»-active-border:     @cockpit-control-active-border;
-				«ENDFOR»
-			«ENDFOR»
-		'''.process, new File(pathForAssets, '''viperpit.less'''.toString), UTF_8)
 		val pathForRouter = new File('''«pathForModule»/router''')
 		pathForRouter.mkdirs
 		write('''
 			«FOR console : cockpit.consoles»
-				import «console.clazz» from '@/components/«profile»/consoles/«console.clazz»'
+				import «console.clazz» from "@/components/«profile»/consoles/«console.clazz»";
 			«ENDFOR»
 			
 			export default class «profile.toUpperCase»Router {
-				static getRoutes () {
+				static getRoutes() {
 					return [
 						«FOR console : cockpit.consoles SEPARATOR ','»
 							{
-								path: '/cockpits/«profile»/consoles/«console.id»',
-								name: '«console.clazz»For«profile.toFirstUpper»',
+								path: "/cockpits/«profile»/consoles/«console.id»",
+								name: "«console.clazz»For«profile.toFirstUpper»",
 								component: «console.clazz»
 							}
 						«ENDFOR»
-					]
+					];
 				}
 			}
 		'''.process, new File(pathForRouter, '''index.js'''.toString), UTF_8)
@@ -91,46 +57,45 @@ class WebApplicationGenerator {
 		pathForCockpit.mkdirs
 		write('''
 			<template>
-			<div class="container-fluid">
-				<div v-if="isConnected">
-					<div class="row">
-						«FOR console : cockpit.consoles SEPARATOR " | "»
-							<router-link to="/cockpits/«profile»/consoles/«console.id»">«console.name»</router-link>
-						«ENDFOR»
+				<div class="container-fluid">
+					<div v-if="isConnected">
+						<nav class="nav justify-content-center">
+							«FOR console : cockpit.consoles»
+								<router-link
+									class="nav-link"
+									active-class="active"
+									to="/cockpits/«profile»/consoles/«console.id»"
+									>«console.name»</router-link
+								>
+							«ENDFOR»
+						</nav>
+						<router-view></router-view>
 					</div>
-					<router-view></router-view>
-				</div>
-				<div v-else>
-					<div class="alert alert-warning" role="alert">
-						<p><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> No Joy...</p>
-						<p>Currently there is nothing Airborne.</p>
-						<p>Please connect an Agent to the server...</p>
+					<div v-else>
+						<div class="alert alert-warning" role="alert">
+							<p>
+								<span
+									class="glyphicon glyphicon-warning-sign"
+									aria-hidden="true"
+								></span>
+								No Joy...
+							</p>
+							<p>Currently there is nothing Airborne.</p>
+							<p>Please connect an Agent to the server...</p>
+						</div>
 					</div>
 				</div>
-			</div>
 			</template>
 			
 			<script>
-			import { mapGetters } from 'vuex'
-			«FOR console : cockpit.consoles»
-				import «console.clazz» from '../consoles/«console.clazz»'
-			«ENDFOR»
-			
-			require('../../../assets/«profile».less')
+			import { mapGetters } from "vuex";
 			
 			export default {
-				name: '«profile.toFirstUpper»',
-				components: {
-					«FOR console : cockpit.consoles SEPARATOR ','»
-						«console.clazz»
-					«ENDFOR»
-				},
+				name: "«profile.toFirstUpper»",
 				computed: {
-					...mapGetters([
-						'isConnected'
-					])
+					...mapGetters(["isConnected"])
 				}
-			}
+			};
 			</script>
 		'''.process, new File(pathForCockpit, '''«profile.toFirstUpper».vue'''.toString), UTF_8)
 		layout.consoleRowSets.forEach [
@@ -139,33 +104,33 @@ class WebApplicationGenerator {
 			pathForConsoles.mkdirs
 			write('''
 				<template>
-				<div class="container-fluid">
-					«FOR consoleRow : consoleRows»
-						<div class="row">
-						«FOR panelRowSet : consoleRow.panelRowSets»
-							«val panel = cockpit.getPanel(panelRowSet.panel)»
-							<div class="col-sm-«12 / consoleRow.panelRowSets.size»">
-								<«panel.clazz.kebapCaseName» />
+					<div class="container-fluid">
+						«FOR consoleRow : consoleRows»
+							<div class="row">
+							«FOR panelRowSet : consoleRow.panelRowSets»
+								«val panel = cockpit.getPanel(panelRowSet.panel)»
+									<div class="col-sm-«12 / consoleRow.panelRowSets.size»">
+										<«panel.clazz.kebapCaseName» />
+									</div>
+							«ENDFOR»
 							</div>
 						«ENDFOR»
-						</div>
-					«ENDFOR»
-				</div>
+					</div>
 				</template>
 				
 				<script>
 				«FOR panel : console.panels»
-					import «panel.clazz» from '../panels/«panel.id»/«panel.clazz»'
+					import «panel.clazz» from "../panels/«panel.id»/«panel.clazz»";
 				«ENDFOR»
 				
 				export default {
-					name: '«console.clazz»',
+					name: "«console.clazz»",
 					components: {
 						«FOR panel : console.panels SEPARATOR ','»
 							«panel.clazz»
 						«ENDFOR»
 					}
-				}
+				};
 				</script>
 			'''.process, new File(pathForConsoles, '''«console.clazz».vue'''.toString), UTF_8)
 		]
@@ -174,9 +139,9 @@ class WebApplicationGenerator {
 			pathForPanels.mkdirs
 			write('''
 				<template>
-					<div class="panel panel-default">
-						<div class="panel-heading">«panel.name»</div>
-						<div class="panel-body">
+					<div class="card card-default">
+						<div class="card-heading">«panel.name»</div>
+						<div class="card-body">
 							<div class="row">
 								«FOR group : panel.groups»
 									<div class="col-xs-6 col-sm-6">
@@ -192,17 +157,17 @@ class WebApplicationGenerator {
 				
 				<script>
 				«FOR group : panel.groups»
-					import «group.clazz» from './«group.clazz»'
+					import «group.clazz» from "./«group.clazz»";
 				«ENDFOR»
 				
 				export default {
-					name: '«panel.clazz»',
+					name: "«panel.clazz»",
 					components: {
 						«FOR group : panel.groups SEPARATOR ','»
 							«group.clazz»
 						«ENDFOR»
 					}
-				}
+				};
 				</script>
 			'''.process, new File(pathForPanels, '''«panel.clazz».vue'''.toString), UTF_8)
 			panel.groups.forEach [ group |
@@ -212,30 +177,32 @@ class WebApplicationGenerator {
 						<«controlName.kebapCaseName»
 							id="«group.id»"
 							description="«group.description»"
-							«IF !group.label.nullOrEmpty»label="«group.label»" «ENDIF»
-							type="«group.type»">
+							«IF !group.label.nullOrEmpty»label="«group.label»"«ENDIF»
+							type="«group.type»"
+						>
 							«FOR control : group.controls»
 								<control
 									id="«control.id»"
 									description="«control.description»"
 									label="«control.label»"
 									type="«group.type»"
-									role="«control.role»"/>
+									role="«control.role»"
+								/>
 							«ENDFOR»
 						</«controlName.kebapCaseName»>
 					</template>
 					
 					<script>
-					import Control from '../../controls/Control'
-					import «controlName» from '../../controls/«controlName»'
+					import Control from "../../controls/Control";
+					import «controlName» from "../../controls/«controlName»";
 					
 					export default {
-						name: '«group.clazz»',
+						name: "«group.clazz»",
 						components: {
 							Control,
 							«controlName»
 						}
-					}
+					};
 					</script>
 				'''.process, new File(pathForPanels, '''«group.clazz».vue'''.toString), UTF_8)
 			]

@@ -1,21 +1,21 @@
 <template>
   <switch-group
     id="CMDS: O1 Switch"
-    description="CMDS: O1 Switch - ON"
+    description="CMDS: O1 Switch - Power ON"
     label="O1"
     type="switch"
   >
     <control
-      id="cmdso1switchon"
-      description="CMDS: O1 Switch - ON"
-      label="ON"
+      id="cmdso1switchpoweron"
+      description="CMDS: O1 Switch - Power ON"
+      label="Power ON"
       type="switch"
       role="on"
     />
     <control
-      id="cmdso1switchoff"
-      description="CMDS: O1 Switch - OFF"
-      label="OFF"
+      id="cmdso1switchpoweroff"
+      description="CMDS: O1 Switch - Power OFF"
+      label="Power OFF"
       type="switch"
       role="off"
     />

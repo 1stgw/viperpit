@@ -1,0 +1,36 @@
+<template>
+  <button-group
+    id="CKPIT: Smoke"
+    description="CKPIT: Smoke - On"
+    label="Smoke"
+    type="button"
+  >
+    <control
+      id="ckpitsmokeon"
+      description="CKPIT: Smoke - On"
+      label="On"
+      type="button"
+      role="on"
+    />
+    <control
+      id="ckpitsmokeoff"
+      description="CKPIT: Smoke - Off"
+      label="Off"
+      type="button"
+      role="off"
+    />
+  </button-group>
+</template>
+
+<script>
+import Control from "../../controls/Control";
+import ButtonGroup from "../../controls/ButtonGroup";
+
+export default {
+  name: "CkpitSmoke",
+  components: {
+    Control,
+    ButtonGroup
+  }
+};
+</script>

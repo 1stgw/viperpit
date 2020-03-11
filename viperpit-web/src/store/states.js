@@ -72,7 +72,8 @@ const actions = {
         );
     }
   },
-  fireAction(state, id) {
+  // eslint-disable-next-line
+  fireAction(response, id) {
     const action = state.actions[id];
     if (!action) {
       return;

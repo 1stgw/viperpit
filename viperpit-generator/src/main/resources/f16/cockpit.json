@@ -475,6 +475,80 @@
           "name": "AUX COMM PANEL",
           "group": [
             {
+              "id": "AUX: MASTER Knob",
+              "class": "AuxMasterKnob",
+              "description": "AUX: MASTER Knob - OFF",
+              "label": "MASTER",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "auxmasterknoboff",
+                  "clazz": "AuxMasterKnobOff",
+                  "callback": "SimIFFMasterOff",
+                  "description": "AUX: MASTER Knob - OFF",
+                  "label": "OFF",
+                  "role": "off"
+                },
+                {
+                  "id": "auxmasterknobstby",
+                  "clazz": "AuxMasterKnobStby",
+                  "callback": "SimIFFMasterStby",
+                  "description": "AUX: MASTER Knob - STBY",
+                  "label": "STBY",
+                  "role": "none"
+                },
+                {
+                  "id": "auxmasterknoblow",
+                  "clazz": "AuxMasterKnobLow",
+                  "callback": "SimIFFMasterLow",
+                  "description": "AUX: MASTER Knob - LOW",
+                  "label": "LOW",
+                  "role": "none"
+                },
+                {
+                  "id": "auxmasterknobnorm",
+                  "clazz": "AuxMasterKnobNorm",
+                  "callback": "SimIFFMasterNorm",
+                  "description": "AUX: MASTER Knob - NORM",
+                  "label": "NORM",
+                  "role": "on"
+                },
+                {
+                  "id": "auxmasterknobemer",
+                  "clazz": "AuxMasterKnobEmer",
+                  "callback": "SimIFFMasterEmerg",
+                  "description": "AUX: MASTER Knob - EMER",
+                  "label": "EMER",
+                  "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "AUX: M-4 CODE Switch",
+              "class": "AuxM4CodeSwitch",
+              "description": "AUX: M-4 CODE Switch - ZERO",
+              "label": "M-4 CODE",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "auxm4codeswitchzero",
+                  "clazz": "AuxM4CodeSwitchZero",
+                  "callback": "SimIFFCodeSwitchZero",
+                  "description": "AUX: M-4 CODE Switch - ZERO",
+                  "label": "ZERO",
+                  "role": "none"
+                },
+                {
+                  "id": "auxm4codeswitchhold",
+                  "clazz": "AuxM4CodeSwitchHold",
+                  "callback": "SimIFFCodeSwitchHold",
+                  "description": "AUX: M-4 CODE Switch - HOLD",
+                  "label": "HOLD",
+                  "role": "none"
+                }
+              ]
+            },
+            {
               "id": "AUX: CNI Knob Switch",
               "class": "AuxCniKnobSwitch",
               "description": "AUX: CNI Knob Switch - BACKUP",
@@ -496,6 +570,64 @@
                   "description": "AUX: CNI Knob Switch - UFC",
                   "label": "UFC",
                   "role": "none"
+                }
+              ]
+            },
+            {
+              "id": "AUX: REPLY Switch",
+              "class": "AuxReplySwitch",
+              "description": "AUX: REPLY Switch - B",
+              "label": "REPLY",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "auxreplyswitchb",
+                  "clazz": "AuxReplySwitchB",
+                  "callback": "SimIFFMode4ReplyBravo",
+                  "description": "AUX: REPLY Switch - B",
+                  "label": "B",
+                  "role": "none"
+                },
+                {
+                  "id": "auxreplyswitcha",
+                  "clazz": "AuxReplySwitchA",
+                  "callback": "SimIFFMode4ReplyAlpha",
+                  "description": "AUX: REPLY Switch - A",
+                  "label": "A",
+                  "role": "none"
+                },
+                {
+                  "id": "auxreplyswitchout",
+                  "clazz": "AuxReplySwitchOut",
+                  "callback": "SimIFFMode4ReplyOff",
+                  "description": "AUX: REPLY Switch - OUT",
+                  "label": "OUT",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "AUX: MONITOR Switch",
+              "class": "AuxMonitorSwitch",
+              "description": "AUX: MONITOR Switch - AUDIO",
+              "label": "MONITOR",
+              "type": "switch",
+              "control": [
+                {
+                  "id": "auxmonitorswitchaudio",
+                  "clazz": "AuxMonitorSwitchAudio",
+                  "callback": "SimIFFMode4MonitorAud",
+                  "description": "AUX: MONITOR Switch - AUDIO",
+                  "label": "AUDIO",
+                  "role": "none"
+                },
+                {
+                  "id": "auxmonitorswitchout",
+                  "clazz": "AuxMonitorSwitchOut",
+                  "callback": "SimIFFMode4MonitorOff",
+                  "description": "AUX: MONITOR Switch - OUT",
+                  "label": "OUT",
+                  "role": "off"
                 }
               ]
             },
@@ -1025,19 +1157,19 @@
                   "role": "down"
                 },
                 {
-                  "id": "audio1comm1knobon",
-                  "clazz": "Audio1Comm1KnobOn",
+                  "id": "audio1comm1knobpoweron",
+                  "clazz": "Audio1Comm1KnobPowerOn",
                   "callback": "SimComm1PowerOn",
-                  "description": "AUDIO1: COMM 1 Knob - On",
-                  "label": "On",
+                  "description": "AUDIO1: COMM 1 Knob - Power On",
+                  "label": "Power On",
                   "role": "on"
                 },
                 {
-                  "id": "audio1comm1knoboff",
-                  "clazz": "Audio1Comm1KnobOff",
+                  "id": "audio1comm1knobpoweroff",
+                  "clazz": "Audio1Comm1KnobPowerOff",
                   "callback": "SimComm1PowerOff",
-                  "description": "AUDIO1: COMM 1 Knob - Off",
-                  "label": "Off",
+                  "description": "AUDIO1: COMM 1 Knob - Power Off",
+                  "label": "Power Off",
                   "role": "off"
                 }
               ]
@@ -1066,19 +1198,19 @@
                   "role": "down"
                 },
                 {
-                  "id": "audio1comm2knobon",
-                  "clazz": "Audio1Comm2KnobOn",
+                  "id": "audio1comm2knobpoweron",
+                  "clazz": "Audio1Comm2KnobPowerOn",
                   "callback": "SimComm2PowerOn",
-                  "description": "AUDIO1: COMM 2 Knob - On",
-                  "label": "On",
+                  "description": "AUDIO1: COMM 2 Knob - Power On",
+                  "label": "Power On",
                   "role": "on"
                 },
                 {
-                  "id": "audio1comm2knoboff",
-                  "clazz": "Audio1Comm2KnobOff",
+                  "id": "audio1comm2knobpoweroff",
+                  "clazz": "Audio1Comm2KnobPowerOff",
                   "callback": "SimComm2PowerOff",
-                  "description": "AUDIO1: COMM 2 Knob - Off",
-                  "label": "Off",
+                  "description": "AUDIO1: COMM 2 Knob - Power Off",
+                  "label": "Power Off",
                   "role": "off"
                 }
               ]
@@ -1686,24 +1818,24 @@
             {
               "id": "CMDS: RWR Switch",
               "class": "CmdsRwrSwitch",
-              "description": "CMDS: RWR Switch - ON",
+              "description": "CMDS: RWR Switch - Power ON",
               "label": "RWR",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdsrwrswitchon",
-                  "clazz": "CmdsRwrSwitchOn",
+                  "id": "cmdsrwrswitchpoweron",
+                  "clazz": "CmdsRwrSwitchPowerOn",
                   "callback": "SimEWSRWROn",
-                  "description": "CMDS: RWR Switch - ON",
-                  "label": "ON",
+                  "description": "CMDS: RWR Switch - Power ON",
+                  "label": "Power ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdsrwrswitchoff",
-                  "clazz": "CmdsRwrSwitchOff",
+                  "id": "cmdsrwrswitchpoweroff",
+                  "clazz": "CmdsRwrSwitchPowerOff",
                   "callback": "SimEWSRWROff",
-                  "description": "CMDS: RWR Switch - OFF",
-                  "label": "OFF",
+                  "description": "CMDS: RWR Switch - Power OFF",
+                  "label": "Power OFF",
                   "role": "off"
                 }
               ]
@@ -1711,24 +1843,24 @@
             {
               "id": "CMDS: JMR Switch",
               "class": "CmdsJmrSwitch",
-              "description": "CMDS: JMR Switch - ON",
+              "description": "CMDS: JMR Switch - Power ON",
               "label": "JMR",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdsjmrswitchon",
-                  "clazz": "CmdsJmrSwitchOn",
+                  "id": "cmdsjmrswitchpoweron",
+                  "clazz": "CmdsJmrSwitchPowerOn",
                   "callback": "SimEWSJammerOn",
-                  "description": "CMDS: JMR Switch - ON",
-                  "label": "ON",
+                  "description": "CMDS: JMR Switch - Power ON",
+                  "label": "Power ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdsjmrswitchoff",
-                  "clazz": "CmdsJmrSwitchOff",
+                  "id": "cmdsjmrswitchpoweroff",
+                  "clazz": "CmdsJmrSwitchPowerOff",
                   "callback": "SimEWSJammerOff",
-                  "description": "CMDS: JMR Switch - OFF",
-                  "label": "OFF",
+                  "description": "CMDS: JMR Switch - Power OFF",
+                  "label": "Power OFF",
                   "role": "off"
                 }
               ]
@@ -1736,24 +1868,24 @@
             {
               "id": "CMDS: MWS Switch",
               "class": "CmdsMwsSwitch",
-              "description": "CMDS: MWS Switch - ON",
+              "description": "CMDS: MWS Switch - Power ON",
               "label": "MWS",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdsmwsswitchon",
-                  "clazz": "CmdsMwsSwitchOn",
+                  "id": "cmdsmwsswitchpoweron",
+                  "clazz": "CmdsMwsSwitchPowerOn",
                   "callback": "SimEWSMwsOn",
-                  "description": "CMDS: MWS Switch - ON",
-                  "label": "ON",
+                  "description": "CMDS: MWS Switch - Power ON",
+                  "label": "Power ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdsmwsswitchoff",
-                  "clazz": "CmdsMwsSwitchOff",
+                  "id": "cmdsmwsswitchpoweroff",
+                  "clazz": "CmdsMwsSwitchPowerOff",
                   "callback": "SimEWSMwsOff",
-                  "description": "CMDS: MWS Switch - OFF",
-                  "label": "OFF",
+                  "description": "CMDS: MWS Switch - Power OFF",
+                  "label": "Power OFF",
                   "role": "off"
                 }
               ]
@@ -1761,24 +1893,24 @@
             {
               "id": "CMDS: O1 Switch",
               "class": "CmdsO1Switch",
-              "description": "CMDS: O1 Switch - ON",
+              "description": "CMDS: O1 Switch - Power ON",
               "label": "O1",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdso1switchon",
-                  "clazz": "CmdsO1SwitchOn",
+                  "id": "cmdso1switchpoweron",
+                  "clazz": "CmdsO1SwitchPowerOn",
                   "callback": "SimEWSO1On",
-                  "description": "CMDS: O1 Switch - ON",
-                  "label": "ON",
+                  "description": "CMDS: O1 Switch - Power ON",
+                  "label": "Power ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdso1switchoff",
-                  "clazz": "CmdsO1SwitchOff",
+                  "id": "cmdso1switchpoweroff",
+                  "clazz": "CmdsO1SwitchPowerOff",
                   "callback": "SimEWSO1Off",
-                  "description": "CMDS: O1 Switch - OFF",
-                  "label": "OFF",
+                  "description": "CMDS: O1 Switch - Power OFF",
+                  "label": "Power OFF",
                   "role": "off"
                 }
               ]
@@ -1786,24 +1918,24 @@
             {
               "id": "CMDS: O2 Switch",
               "class": "CmdsO2Switch",
-              "description": "CMDS: O2 Switch - ON",
+              "description": "CMDS: O2 Switch - Power ON",
               "label": "O2",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdso2switchon",
-                  "clazz": "CmdsO2SwitchOn",
+                  "id": "cmdso2switchpoweron",
+                  "clazz": "CmdsO2SwitchPowerOn",
                   "callback": "SimEWSO2On",
-                  "description": "CMDS: O2 Switch - ON",
-                  "label": "ON",
+                  "description": "CMDS: O2 Switch - Power ON",
+                  "label": "Power ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdso2switchoff",
-                  "clazz": "CmdsO2SwitchOff",
+                  "id": "cmdso2switchpoweroff",
+                  "clazz": "CmdsO2SwitchPowerOff",
                   "callback": "SimEWSO2Off",
-                  "description": "CMDS: O2 Switch - OFF",
-                  "label": "OFF",
+                  "description": "CMDS: O2 Switch - Power OFF",
+                  "label": "Power OFF",
                   "role": "off"
                 }
               ]
@@ -1811,24 +1943,24 @@
             {
               "id": "CMDS: CH Switch",
               "class": "CmdsChSwitch",
-              "description": "CMDS: CH Switch - ON",
+              "description": "CMDS: CH Switch - Power ON",
               "label": "CH",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdschswitchon",
-                  "clazz": "CmdsChSwitchOn",
+                  "id": "cmdschswitchpoweron",
+                  "clazz": "CmdsChSwitchPowerOn",
                   "callback": "SimEWSChaffOn",
-                  "description": "CMDS: CH Switch - ON",
-                  "label": "ON",
+                  "description": "CMDS: CH Switch - Power ON",
+                  "label": "Power ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdschswitchoff",
-                  "clazz": "CmdsChSwitchOff",
+                  "id": "cmdschswitchpoweroff",
+                  "clazz": "CmdsChSwitchPowerOff",
                   "callback": "SimEWSChaffOff",
-                  "description": "CMDS: CH Switch - OFF",
-                  "label": "OFF",
+                  "description": "CMDS: CH Switch - Power OFF",
+                  "label": "Power OFF",
                   "role": "off"
                 }
               ]
@@ -1836,24 +1968,24 @@
             {
               "id": "CMDS: FL Switch",
               "class": "CmdsFlSwitch",
-              "description": "CMDS: FL Switch - ON",
+              "description": "CMDS: FL Switch - Power ON",
               "label": "FL",
               "type": "switch",
               "control": [
                 {
-                  "id": "cmdsflswitchon",
-                  "clazz": "CmdsFlSwitchOn",
+                  "id": "cmdsflswitchpoweron",
+                  "clazz": "CmdsFlSwitchPowerOn",
                   "callback": "SimEWSFlareOn",
-                  "description": "CMDS: FL Switch - ON",
-                  "label": "ON",
+                  "description": "CMDS: FL Switch - Power ON",
+                  "label": "Power ON",
                   "role": "on"
                 },
                 {
-                  "id": "cmdsflswitchoff",
-                  "clazz": "CmdsFlSwitchOff",
+                  "id": "cmdsflswitchpoweroff",
+                  "clazz": "CmdsFlSwitchPowerOff",
                   "callback": "SimEWSFlareOff",
-                  "description": "CMDS: FL Switch - OFF",
-                  "label": "OFF",
+                  "description": "CMDS: FL Switch - Power OFF",
+                  "label": "Power OFF",
                   "role": "off"
                 }
               ]
@@ -2509,18 +2641,10 @@
             {
               "id": "MAIN: HSI HDG Knob",
               "class": "MainHsiHdgKnob",
-              "description": "MAIN: HSI HDG Knob - Increase (1°)",
+              "description": "MAIN: HSI HDG Knob - Increase (5°)",
               "label": "HSI HDG",
               "type": "button",
               "control": [
-                {
-                  "id": "mainhsihdgknobincrease1",
-                  "clazz": "MainHsiHdgKnobIncrease1",
-                  "callback": "SimHsiHdgIncBy1",
-                  "description": "MAIN: HSI HDG Knob - Increase (1°)",
-                  "label": "Increase (1°)",
-                  "role": "none"
-                },
                 {
                   "id": "mainhsihdgknobincrease5",
                   "clazz": "MainHsiHdgKnobIncrease5",
@@ -2538,6 +2662,14 @@
                   "role": "none"
                 },
                 {
+                  "id": "mainhsihdgknobincrease1",
+                  "clazz": "MainHsiHdgKnobIncrease1",
+                  "callback": "SimHsiHdgIncBy1",
+                  "description": "MAIN: HSI HDG Knob - Increase (1°)",
+                  "label": "Increase (1°)",
+                  "role": "none"
+                },
+                {
                   "id": "mainhsihdgknobdecrease1",
                   "clazz": "MainHsiHdgKnobDecrease1",
                   "callback": "SimHsiHdgDecBy1",
@@ -2550,18 +2682,10 @@
             {
               "id": "MAIN: HSI CRS Knob",
               "class": "MainHsiCrsKnob",
-              "description": "MAIN: HSI CRS Knob - Increase (1°)",
+              "description": "MAIN: HSI CRS Knob - Increase (5°)",
               "label": "HSI CRS",
               "type": "button",
               "control": [
-                {
-                  "id": "mainhsicrsknobincrease1",
-                  "clazz": "MainHsiCrsKnobIncrease1",
-                  "callback": "SimHsiCrsIncBy1",
-                  "description": "MAIN: HSI CRS Knob - Increase (1°)",
-                  "label": "Increase (1°)",
-                  "role": "none"
-                },
                 {
                   "id": "mainhsicrsknobincrease5",
                   "clazz": "MainHsiCrsKnobIncrease5",
@@ -2579,6 +2703,14 @@
                   "role": "none"
                 },
                 {
+                  "id": "mainhsicrsknobincrease1",
+                  "clazz": "MainHsiCrsKnobIncrease1",
+                  "callback": "SimHsiCrsIncBy1",
+                  "description": "MAIN: HSI CRS Knob - Increase (1°)",
+                  "label": "Increase (1°)",
+                  "role": "none"
+                },
+                {
                   "id": "mainhsicrsknobdecrease1",
                   "clazz": "MainHsiCrsKnobDecrease1",
                   "callback": "SimHsiCrsDecBy1",
@@ -2591,18 +2723,10 @@
             {
               "id": "MAIN: Altimeter Pressure Knob",
               "class": "MainAltimeterPressureKnob",
-              "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
+              "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
               "label": "Altimeter Pressure",
               "type": "button",
               "control": [
-                {
-                  "id": "mainaltimeterpressureknobincr1",
-                  "clazz": "MainAltimeterPressureKnobIncr1",
-                  "callback": "SimAltPressIncBy1",
-                  "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
-                  "label": "Incr. (1°)",
-                  "role": "none"
-                },
                 {
                   "id": "mainaltimeterpressureknobincr5",
                   "clazz": "MainAltimeterPressureKnobIncr5",
@@ -2617,6 +2741,14 @@
                   "callback": "SimAltPressDec",
                   "description": "MAIN: Altimeter Pressure Knob - Decr. (5°)",
                   "label": "Decr. (5°)",
+                  "role": "none"
+                },
+                {
+                  "id": "mainaltimeterpressureknobincr1",
+                  "clazz": "MainAltimeterPressureKnobIncr1",
+                  "callback": "SimAltPressIncBy1",
+                  "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
+                  "label": "Incr. (1°)",
                   "role": "none"
                 },
                 {
@@ -3532,6 +3664,56 @@
           "class": "OtherCockpitCallbacks",
           "name": "OTHER COCKPIT CALLBACKS",
           "group": [
+            {
+              "id": "CKPIT: Nightvision",
+              "class": "CkpitNightvision",
+              "description": "CKPIT: Nightvision - On",
+              "label": "Nightvision",
+              "type": "button",
+              "control": [
+                {
+                  "id": "ckpitnightvisionon",
+                  "clazz": "CkpitNightvisionOn",
+                  "callback": "SimNVGModeOn",
+                  "description": "CKPIT: Nightvision - On",
+                  "label": "On",
+                  "role": "on"
+                },
+                {
+                  "id": "ckpitnightvisionoff",
+                  "clazz": "CkpitNightvisionOff",
+                  "callback": "SimNVGModeOff",
+                  "description": "CKPIT: Nightvision - Off",
+                  "label": "Off",
+                  "role": "off"
+                }
+              ]
+            },
+            {
+              "id": "CKPIT: Smoke",
+              "class": "CkpitSmoke",
+              "description": "CKPIT: Smoke - On",
+              "label": "Smoke",
+              "type": "button",
+              "control": [
+                {
+                  "id": "ckpitsmokeon",
+                  "clazz": "CkpitSmokeOn",
+                  "callback": "SimSmokeOn",
+                  "description": "CKPIT: Smoke - On",
+                  "label": "On",
+                  "role": "on"
+                },
+                {
+                  "id": "ckpitsmokeoff",
+                  "clazz": "CkpitSmokeOff",
+                  "callback": "SimSmokeOff",
+                  "description": "CKPIT: Smoke - Off",
+                  "label": "Off",
+                  "role": "off"
+                }
+              ]
+            },
             {
               "id": "CKPIT: Wheel Brakes",
               "class": "CkpitWheelBrakes",

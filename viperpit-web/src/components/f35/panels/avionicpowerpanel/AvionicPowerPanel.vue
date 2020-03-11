@@ -1,6 +1,6 @@
 <template>
   <div class="card card-default">
-    <div class="card-heading">AVIONIC POWER PANEL</div>
+    <div class="card-heading">AVIONIC POWER  PANEL</div>
     <div class="card-body">
       <div class="row">
         <div class="col-xs-6 col-sm-6">

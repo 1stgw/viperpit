@@ -1,22 +1,23 @@
 package de.viperpit.agent.keys;
 
 import static com.google.common.base.CharMatcher.javaDigit;
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.collect.Iterables.any;
 import static com.google.common.collect.Iterables.filter;
 import static com.google.common.collect.Iterables.skip;
-import static com.google.common.collect.Maps.newHashMap;
-import static com.google.common.collect.Maps.newHashMapWithExpectedSize;
+import static com.google.common.collect.Maps.newLinkedHashMap;
+import static com.google.common.collect.Maps.newLinkedHashMapWithExpectedSize;
 import static java.lang.Integer.parseInt;
-import static java.nio.charset.StandardCharsets.ISO_8859_1;
 import static java.nio.file.Files.readAllLines;
 
 import java.io.File;
+import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
 import com.google.common.base.CharMatcher;
-import com.google.common.base.Preconditions;
 import com.google.common.base.Splitter;
 
 public class KeyFile {
@@ -160,21 +161,25 @@ public class KeyFile {
 
 	}
 
+	private Charset charset;
+
 	private File file;
 
 	private Map<String, KeyCodeLine> keyCodeLines;
 
-	public KeyFile(final File file) {
-		Preconditions.<Boolean>checkNotNull(Boolean.valueOf(file.exists()));
-		Preconditions.checkArgument(file.exists());
+	public KeyFile(File file, Charset charset) {
+		checkNotNull(Boolean.valueOf(file.exists()));
+		checkArgument(file.exists());
+		checkNotNull(charset);
 		this.file = file;
+		this.charset = charset;
 	}
 
 	public Map<String, KeyCodeLine> getKeyCodeLines() {
 		try {
 			if (this.keyCodeLines == null) {
-				List<String> lines = readAllLines(file.toPath(), ISO_8859_1);
-				Map<String, KeyCodeLine> map = newHashMapWithExpectedSize(lines.size());
+				List<String> lines = readAllLines(file.toPath(), charset);
+				Map<String, KeyCodeLine> map = newLinkedHashMapWithExpectedSize(lines.size());
 				StringBuilder currentCategory = new StringBuilder();
 				StringBuilder currentSection = new StringBuilder();
 				skip(filter(lines, line -> !line.startsWith("#")), 1).forEach(line -> {
@@ -194,7 +199,7 @@ public class KeyFile {
 						map.put(keyCodeLine.getCallback(), keyCodeLine);
 					}
 				});
-				this.keyCodeLines = newHashMap(map);
+				this.keyCodeLines = newLinkedHashMap(map);
 			}
 			return this.keyCodeLines;
 		} catch (Throwable exception) {

@@ -5,80 +5,44 @@
         <router-link
           class="nav-link"
           active-class="active"
-          to="/cockpits/f35/consoles/cmds"
-          >Cmds</router-link
+          to="/cockpits/f35/consoles/leftconsole"
+          >Left Console</router-link
         >
         <router-link
           class="nav-link"
           active-class="active"
-          to="/cockpits/f35/consoles/comms"
-          >Comms</router-link
+          to="/cockpits/f35/consoles/leftauxconsole"
+          >Left Aux Console</router-link
         >
         <router-link
           class="nav-link"
           active-class="active"
-          to="/cockpits/f35/consoles/flight"
-          >Flight</router-link
+          to="/cockpits/f35/consoles/centerconsole"
+          >Center Console</router-link
         >
         <router-link
           class="nav-link"
           active-class="active"
-          to="/cockpits/f35/consoles/fuel"
-          >Fuel</router-link
+          to="/cockpits/f35/consoles/rightconsole"
+          >Right Console</router-link
         >
         <router-link
           class="nav-link"
           active-class="active"
-          to="/cockpits/f35/consoles/test"
-          >Test</router-link
-        >
-        <router-link
-          class="nav-link"
-          active-class="active"
-          to="/cockpits/f35/consoles/lights"
-          >Lights</router-link
-        >
-        <router-link
-          class="nav-link"
-          active-class="active"
-          to="/cockpits/f35/consoles/sensors"
-          >Sensors</router-link
-        >
-        <router-link
-          class="nav-link"
-          active-class="active"
-          to="/cockpits/f35/consoles/navi"
-          >Navi</router-link
-        >
-        <router-link
-          class="nav-link"
-          active-class="active"
-          to="/cockpits/f35/consoles/avionics"
-          >Avionics</router-link
-        >
-        <router-link
-          class="nav-link"
-          active-class="active"
-          to="/cockpits/f35/consoles/wpn"
-          >Wpn</router-link
-        >
-        <router-link
-          class="nav-link"
-          active-class="active"
-          to="/cockpits/f35/consoles/emer"
-          >Emer</router-link
-        >
-        <router-link
-          class="nav-link"
-          active-class="active"
-          to="/cockpits/f35/consoles/misc"
-          >Misc</router-link
+          to="/cockpits/f35/consoles/miscellaneous"
+          >Miscellaneous</router-link
         >
         <router-link
           class="nav-link"
           active-class="active"
           to="/cockpits/f35/consoles/views"
           >Views</router-link
+        >
+        <router-link
+          class="nav-link"
+          active-class="active"
+          to="/cockpits/f35/consoles/radiocomms"
+          >Radio Comms</router-link
         >
       </nav>
       <router-view></router-view>

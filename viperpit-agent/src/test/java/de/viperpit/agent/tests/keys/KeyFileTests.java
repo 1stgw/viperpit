@@ -1,5 +1,6 @@
 package de.viperpit.agent.tests.keys;
 
+import static com.google.common.base.Charsets.ISO_8859_1;
 import static com.google.common.collect.Iterables.toArray;
 import static com.google.common.collect.Lists.newArrayList;
 import static org.junit.Assert.assertArrayEquals;
@@ -42,7 +43,7 @@ public class KeyFileTests {
 	public void loadKeyFile() throws URISyntaxException {
 		File file = new File(KeyFileTests.class.getResource("/demo.key").toURI());
 		assertTrue(file.exists());
-		keyFile = new KeyFile(file);
+		keyFile = new KeyFile(file, ISO_8859_1);
 	}
 
 	@After

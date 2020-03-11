@@ -16,6 +16,7 @@ import static com.google.common.base.CharMatcher.whitespace
 import static com.google.common.base.Charsets.UTF_8
 import static com.google.common.base.Splitter.on
 import static com.google.common.base.Strings.commonPrefix
+import static de.viperpit.generator.GeneratorUtils.createFilter
 import static de.viperpit.generator.GeneratorUtils.write
 
 class ConfigurationGenerator {
@@ -49,17 +50,20 @@ class ConfigurationGenerator {
 				]
 			}
 			LOGGER.info("Found key file and loading key file entries.")
-			val keyCodeLines = new KeyFile(keyFile).keyCodeLines
+			val keyCodeLines = new KeyFile(keyFile, UTF_8).keyCodeLines
 			LOGGER.info("Running the Generator.")
-			generateConfiguration(metadataPath, roles, states, keyCodeLines.values)
+			generateConfiguration(metadataPath, createFilter(metadataPath), roles, states, keyCodeLines.values)
 			LOGGER.info("Generator has finished successfully.")
 		} else {
 			LOGGER.error("Key file could not be loaded")
 		}
 	}
 
-	private def generateConfiguration(File path, Map<String, String> roles, Map<Pair<String, String>, Boolean> states, Iterable<KeyCodeLine> keyCodeLines) {
-		val actions = keyCodeLines.map [
+	private def generateConfiguration(File path, (String)=>boolean filter, Map<String, String> roles, Map<Pair<String, String>, Boolean> states,
+		Iterable<KeyCodeLine> keyCodeLines) {
+		val actions = keyCodeLines.filter [
+			filter.apply(callback)
+		].map [
 			val groupAndLabel = getGroupAndLabel(keyCodeLines)
 			val group = groupAndLabel.key
 			val label = groupAndLabel.value

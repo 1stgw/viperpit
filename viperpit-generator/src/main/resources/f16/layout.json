@@ -97,7 +97,19 @@
               "panelRow": [
                 {
                   "group": [
+                    "AUX: MASTER Knob",
+                    "AUX: M-4 CODE Switch"
+                  ]
+                },
+                {
+                  "group": [
                     "AUX: CNI Knob Switch",
+                    "AUX: REPLY Switch"
+                  ]
+                },
+                {
+                  "group": [
+                    "AUX: MONITOR Switch",
                     "AUX: CHANNEL"
                   ]
                 },
@@ -684,6 +696,12 @@
             {
               "panel": "othercockpitcallbacks",
               "panelRow": [
+                {
+                  "group": [
+                    "CKPIT: Nightvision",
+                    "CKPIT: Smoke"
+                  ]
+                },
                 {
                   "group": [
                     "CKPIT: Wheel Brakes"

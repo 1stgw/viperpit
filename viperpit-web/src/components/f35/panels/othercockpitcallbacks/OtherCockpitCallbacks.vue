@@ -5,6 +5,16 @@
       <div class="row">
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
+            <ckpit-nightvision />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6">
+          <div align="center" style="padding: 0px;">
+            <ckpit-smoke />
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6">
+          <div align="center" style="padding: 0px;">
             <ckpit-wheel-brakes />
           </div>
         </div>
@@ -14,11 +24,15 @@
 </template>
 
 <script>
+import CkpitNightvision from "./CkpitNightvision";
+import CkpitSmoke from "./CkpitSmoke";
 import CkpitWheelBrakes from "./CkpitWheelBrakes";
 
 export default {
   name: "OtherCockpitCallbacks",
   components: {
+    CkpitNightvision,
+    CkpitSmoke,
     CkpitWheelBrakes
   }
 };

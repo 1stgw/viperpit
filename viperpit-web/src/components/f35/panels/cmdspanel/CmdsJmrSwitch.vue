@@ -1,21 +1,21 @@
 <template>
   <switch-group
     id="CMDS: JMR Switch"
-    description="CMDS: JMR Switch - ON"
+    description="CMDS: JMR Switch - Power ON"
     label="JMR"
     type="switch"
   >
     <control
-      id="cmdsjmrswitchon"
-      description="CMDS: JMR Switch - ON"
-      label="ON"
+      id="cmdsjmrswitchpoweron"
+      description="CMDS: JMR Switch - Power ON"
+      label="Power ON"
       type="switch"
       role="on"
     />
     <control
-      id="cmdsjmrswitchoff"
-      description="CMDS: JMR Switch - OFF"
-      label="OFF"
+      id="cmdsjmrswitchpoweroff"
+      description="CMDS: JMR Switch - Power OFF"
+      label="Power OFF"
       type="switch"
       role="off"
     />

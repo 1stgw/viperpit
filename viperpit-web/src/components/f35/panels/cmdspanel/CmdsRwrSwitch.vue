@@ -1,21 +1,21 @@
 <template>
   <switch-group
     id="CMDS: RWR Switch"
-    description="CMDS: RWR Switch - ON"
+    description="CMDS: RWR Switch - Power ON"
     label="RWR"
     type="switch"
   >
     <control
-      id="cmdsrwrswitchon"
-      description="CMDS: RWR Switch - ON"
-      label="ON"
+      id="cmdsrwrswitchpoweron"
+      description="CMDS: RWR Switch - Power ON"
+      label="Power ON"
       type="switch"
       role="on"
     />
     <control
-      id="cmdsrwrswitchoff"
-      description="CMDS: RWR Switch - OFF"
-      label="OFF"
+      id="cmdsrwrswitchpoweroff"
+      description="CMDS: RWR Switch - Power OFF"
+      label="Power OFF"
       type="switch"
       role="off"
     />

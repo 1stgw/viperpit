@@ -2,10 +2,8 @@ package de.viperpit.generator
 
 import com.google.common.base.CharMatcher
 import java.io.File
-import java.io.FileReader
 import java.util.ArrayList
 import java.util.LinkedHashSet
-import java.util.Properties
 import java.util.function.Predicate
 import org.eclipse.xtend.lib.annotations.Data
 import org.slf4j.LoggerFactory
@@ -14,6 +12,7 @@ import static com.google.common.base.CharMatcher.javaLetterOrDigit
 import static com.google.common.base.CharMatcher.whitespace
 import static com.google.common.base.Charsets.UTF_8
 import static com.google.common.base.Splitter.on
+import static de.viperpit.generator.GeneratorUtils.createFilter
 import static de.viperpit.generator.GeneratorUtils.write
 
 class CockpitGenerator {
@@ -35,22 +34,14 @@ class CockpitGenerator {
 		val configuration = new Configuration('''«metadataPath.absolutePath»/configuration.json''')
 		if (configuration !== null) {
 			LOGGER.info("Found configuration file and loading configuration entries.")
-			var filter = [String it|true]
-			val filterFile = new File('''«metadataPath.absolutePath»/filter.properties''')
-			if (filterFile.exists) {
-				LOGGER.info("Loading filter file.")
-				val properties = new Properties
-				properties.load(new FileReader(filterFile))
-				filter = [String it|!properties.containsKey(it)]
-			}
-			generateCockpit(metadataPath, filter, configuration)
+			generateCockpit(metadataPath, createFilter(metadataPath), configuration)
 			LOGGER.info("Generator has finished successfully.")
 		} else {
 			LOGGER.error("Key file could not be loaded")
 		}
 	}
 
-	private def generateCockpit(File path, Predicate<String> filter, Configuration it) {
+	private def generateCockpit(File path, (String)=>boolean filter, Configuration it) {
 		val groups = toGroups(filter)
 		val categories = new LinkedHashSet(groups.map[category].toList)
 		val groupedBySection = groups.groupBy[section]
@@ -116,7 +107,9 @@ class CockpitGenerator {
 			].join('')).toFirstLower
 		]
 		val groups = newLinkedHashMap
-		configuration.actions.filter[filter.test(callback)].groupBy[group].forEach [ name, actions |
+		configuration.actions.filter [
+			filter.test(callback)
+		].groupBy[group].forEach [ name, actions |
 			val suffixes = #{"Button", "Switch", "Knob", "Handle", "Wheel", "Rotary", "Rocker"}
 			val extension action = actions.head
 			var firstIndexToken = ': '
@@ -124,10 +117,8 @@ class CockpitGenerator {
 				firstIndexToken = '-'
 			}
 			val firstIndex = group.indexOf(firstIndexToken)
-
 			val lastIndexToken = suffixes.findFirst[group.endsWith(it)]
 			val lastIndex = if (lastIndexToken === null) group.length else group.lastIndexOf(lastIndexToken)
-
 			val label = group.substring(firstIndex + 1, lastIndex).trim
 			val group = new GroupDef(name, description, label, category, section, type, actions)
 			groups.put(key.apply(name), group)
