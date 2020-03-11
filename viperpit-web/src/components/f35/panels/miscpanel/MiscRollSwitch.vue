@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import Control from "../../controls/Control";
-import SwitchGroup from "../../controls/SwitchGroup";
+import Control from "@/components/controls/Control";
+import SwitchGroup from "@/components/controls/SwitchGroup";
 
 export default {
   name: "MiscRollSwitch",

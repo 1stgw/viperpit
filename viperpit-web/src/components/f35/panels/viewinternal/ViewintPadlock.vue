@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import Control from "../../controls/Control";
-import ButtonGroup from "../../controls/ButtonGroup";
+import Control from "@/components/controls/Control";
+import ButtonGroup from "@/components/controls/ButtonGroup";
 
 export default {
   name: "ViewintPadlock",

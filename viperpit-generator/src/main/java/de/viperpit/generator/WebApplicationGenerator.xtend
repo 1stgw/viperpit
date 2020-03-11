@@ -193,8 +193,8 @@ class WebApplicationGenerator {
 					</template>
 					
 					<script>
-					import Control from "../../controls/Control";
-					import «controlName» from "../../controls/«controlName»";
+					import Control from "@/components/controls/Control";
+					import «controlName» from "@/components/controls/«controlName»";
 					
 					export default {
 						name: "«group.clazz»",
