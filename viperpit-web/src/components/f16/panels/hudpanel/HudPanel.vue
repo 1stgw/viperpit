@@ -1,6 +1,6 @@
 <template>
   <div class="card card-default">
-    <div class="card-heading">HUD  PANEL</div>
+    <div class="card-heading">HUD PANEL</div>
     <div class="card-body">
       <div class="row">
         <div class="col-xs-6 col-sm-6">

@@ -53,12 +53,12 @@ class CockpitGenerator {
 			val console = new Console
 			console.id = toPathName
 			console.clazz = toClassName
-			console.name = toName
+			console.name = toCapitalizedName
 			console.panels = sections.apply(it).map [
 				val panel = new Panel
 				panel.id = toPathName
 				panel.clazz = toClassName
-				panel.name = it
+				panel.name = toName
 				panel.groups = groupedBySection.get(it).map [
 					val groupDefinition = it
 					val group = new Group
@@ -134,9 +134,14 @@ class CockpitGenerator {
 		'''«tokens.map[toLowerCase.toFirstUpper].join»'''.toString
 	}
 
-	private def toName(String category) {
+	private def toCapitalizedName(String category) {
 		val tokens = new ArrayList(on(whitespace).trimResults.splitToList(category))
 		tokens.map[toLowerCase.toFirstUpper].join(' ')
+	}
+
+	private def toName(String category) {
+		val tokens = new ArrayList(on(whitespace).trimResults.splitToList(category))
+		tokens.join(' ')
 	}
 
 	private def toPathName(String category) {
