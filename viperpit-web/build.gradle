@@ -25,22 +25,22 @@ task npmUpdate(type: NpmTask, dependsOn: 'npmInstall') {
 }
 
 task vueCliBuild(type: NodeTask, dependsOn: 'npmInstall') {
-    def osName = System.getProperty('os.name').toLowerCase();
-    if (osName.contains('windows')) {
-        script = project.file('node_modules/@vue/cli-service/bin/vue-cli-service.js')
-    } else {
-        script = project.file('node_modules/.bin/vue-cli-service')
-    }
+	def osName = System.getProperty('os.name').toLowerCase();
+	if (osName.contains('windows')) {
+		script = project.file('node_modules/@vue/cli-service/bin/vue-cli-service.js')
+	} else {
+		script = project.file('node_modules/.bin/vue-cli-service')
+	}
 	args = ['build']
 }
 
 task vueCliServe(type: NodeTask, dependsOn: 'npmInstall') {
-    def osName = System.getProperty('os.name').toLowerCase();
-    if (osName.contains('windows')) {
-        script = project.file('node_modules/@vue/cli-service/bin/vue-cli-service.js')
-    } else {
-        script = project.file('node_modules/.bin/vue-cli-service')
-    }
+	def osName = System.getProperty('os.name').toLowerCase();
+	if (osName.contains('windows')) {
+		script = project.file('node_modules/@vue/cli-service/bin/vue-cli-service.js')
+	} else {
+		script = project.file('node_modules/.bin/vue-cli-service')
+	}
 	args = ['serve']
 }
 

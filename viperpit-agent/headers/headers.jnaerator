@@ -1,0 +1,1 @@
+-skipLibraryInstance -limitComments -rootPackage de.viperpit.agent.data.jna -structsInLibrary -library FlightData $(DIR)/FlightData.h -library IVibeData $(DIR)/IVibeData.h

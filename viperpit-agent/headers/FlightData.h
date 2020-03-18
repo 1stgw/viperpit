@@ -1,6 +1,11 @@
 #ifndef _FLIGHT_DATA_H
 #define _FLIGHT_DATA_H
 
+//#include <vector>
+//#include <memory>
+//#include <string>
+//#include "stl_vector.h"
+//#include "stringfwd.h"
 
 #define FLIGHTDATA_VERSION 117
 // changelog:
@@ -14,7 +19,7 @@
 // 117: added ATF_Not_Engaged to LightBits3
 
 // *** "FalconSharedMemoryArea" ***
-class FlightData 
+struct FlightData
 {
 public:
 	// GENERAL NOTE FOR ALL LIGHTBITS:
@@ -32,7 +37,7 @@ public:
 	// b) The BlinkBit says "if the lamp is active (see LightBit 1), is it steady (BlinkBit 0)
 	//    or is it blinking (BlinkBit 1)"
 	// c) If a lamp has no BlinkBit, it is always assumed to be steady if active (LightBit 1).
-	
+
 	enum LightBits
     {
         MasterCaution = 0x1,  // Left eyebrow
@@ -168,7 +173,7 @@ public:
 
 		// Caution panel
 		cadc	= 0x400000,
-		
+
 		// Left Aux console
 		SpeedBrake = 0x800000,  // True if speed brake is in anything other than stowed position
 
@@ -185,8 +190,8 @@ public:
 		NLGWOW = 0x8000000,
 
 		ATF_Not_Engaged = 0x10000000,
-		
-		// Free bits in LightBits3		
+
+		// Free bits in LightBits3
 		//0x20000000,
 		//0x40000000,
 		//0x80000000,
@@ -245,7 +250,7 @@ public:
     float gs;           // Ownship Normal Gs
     float windOffset;   // Wind delta to FPM (Radians)
     float nozzlePos;    // Ownship engine nozzle percent open (0-100)
-	//float nozzlePos2;   // MOVED TO FlightData2! Ownship engine nozzle2 percent open (0-100) 
+	//float nozzlePos2;   // MOVED TO FlightData2! Ownship engine nozzle2 percent open (0-100)
     float internalFuel; // Ownship internal fuel (Lbs)
     float externalFuel; // Ownship external fuel (Lbs)
     float fuelFlow;     // Ownship fuel flow (Lbs/Hour)
@@ -334,21 +339,21 @@ public:
     //fuel values
     float fwd, aft, total;
 
-    void SetLightBit (unsigned int newBit) {lightBits |= newBit;};
-	void ClearLightBit(unsigned int newBit) { lightBits &= ~newBit; };
-	bool IsSet(unsigned int newBit) { return ((lightBits & newBit) ? true : false); };
+	void SetLightBit(LightBits newBit) { lightBits |= newBit; };
+	void ClearLightBit(LightBits newBit) { lightBits &= ~newBit; };
+	bool IsSet(LightBits newBit) { return ((lightBits & newBit) ? true : false); };
 
-	void SetLightBit2(unsigned int newBit) { lightBits2 |= newBit; };
-	void ClearLightBit2(unsigned int newBit) { lightBits2 &= ~newBit; };
-	bool IsSet2(unsigned int newBit) { return ((lightBits2 & newBit) ? true : false); };
+	void SetLightBit2(LightBits2 newBit) { lightBits2 |= newBit; };
+	void ClearLightBit2(LightBits2 newBit) { lightBits2 &= ~newBit; };
+	bool IsSet2(LightBits2 newBit) { return ((lightBits2 & newBit) ? true : false); };
 
-	void SetLightBit3(unsigned int newBit) { lightBits3 |= newBit; };
-	void ClearLightBit3(unsigned int newBit) { lightBits3 &= ~newBit; };
-	bool IsSet3(unsigned int newBit) { return ((lightBits3 & newBit) ? true : false); };
+	void SetLightBit3(LightBits3 newBit) { lightBits3 |= newBit; };
+	void ClearLightBit3(LightBits3 newBit) { lightBits3 &= ~newBit; };
+	bool IsSet3(LightBits3 newBit) { return ((lightBits3 & newBit) ? true : false); };
 
-	void SetHsiBit(unsigned int newBit) { hsiBits |= newBit; };
-	void ClearHsiBit(unsigned int newBit) { hsiBits &= ~newBit; };
-	bool IsSetHsi(unsigned int newBit) { return ((hsiBits & newBit) ? true : false); };
+	void SetHsiBit(HsiBits newBit) { hsiBits |= newBit; };
+	void ClearHsiBit(HsiBits newBit) { hsiBits &= ~newBit; };
+	bool IsSetHsi(HsiBits newBit) { return ((hsiBits & newBit) ? true : false); };
 
     int VersionNum;    // Version of FlightData mem area
 
@@ -366,15 +371,15 @@ public:
 
 #define OSB_STRING_LENGTH 8  // currently strings appear to be max 7 printing chars
 
-typedef struct {
+struct OsbLabel {
 	char line1[OSB_STRING_LENGTH];
 	char line2[OSB_STRING_LENGTH];
 	bool inverted;
-} OsbLabel;
+};
 
 
 // *** "FalconSharedOsbMemoryArea" ***
-class OSBData
+struct OSBData
 {
 public:
 	OsbLabel leftMFD[20];
@@ -382,7 +387,7 @@ public:
 };
 
 
-#define FLIGHTDATA2_VERSION 9
+#define FLIGHTDATA2_VERSION 16
 // changelog:
 // 1: initial BMS 4.33 version
 // 2: added AltCalReading, altBits, BupUhfPreset, powerBits, blinkBits, cmdsMode
@@ -393,6 +398,13 @@ public:
 // 7: bit fields are now unsigned instead of signed
 // 8: increased RwrInfo size to 512
 // 9: added human pilot names and their status in a session
+// 10: added bump intensity while taxiing/rolling
+// 11: added latitude/longitude
+// 12: added RTT info
+// 13: added IFF panel backup digits
+// 14: added instrument backlight brightness
+// 15: added MiscBits, BettyBits, radar altitude, bingo fuel, cara alow, bullseye, BMS version information, string area size/time
+// 16: added turn rate
 
 // do NOT change these w/o crosschecking the BMS code
 #define RWRINFO_SIZE 512
@@ -400,7 +412,7 @@ public:
 #define MAX_CALLSIGNS 32
 
 // *** "FalconSharedMemoryArea2" ***
-class FlightData2
+struct FlightData2
 {
 public:
 
@@ -468,10 +480,10 @@ public:
 	};
 
 	// HSI/eHSI mode state
-	enum NavModes 
+	enum NavModes
 	{
 		ILS_TACAN   = 0,
-		TACAN       = 1, 
+		TACAN       = 1,
 		NAV         = 2,
 		ILS_NAV     = 3,
 	};
@@ -487,12 +499,62 @@ public:
 		UNKNOWN = 5, // ???
 	};
 
+	// RTT area indices
+	enum RTT_areas
+	{
+		RTT_HUD       = 0,
+		RTT_PFL       = 1,
+		RTT_DED       = 2,
+		RTT_RWR       = 3,
+		RTT_MFDLEFT   = 4,
+		RTT_MFDRIGHT  = 5,
+		RTT_HMS       = 6,
+		RTT_noOfAreas = 7,
+	};
+
+	// instrument backlight brightness
+	enum InstrLight
+	{
+		INSTR_LIGHT_OFF = 0,
+		INSTR_LIGHT_DIM = 1,
+		INSTR_LIGHT_BRT = 2,
+	};
+
+	// Bitching Betty VMS sounds playing
+	enum BettyBits
+	{
+		Betty_Allwords       = 0x00001,
+		Betty_Pullup         = 0x00002,
+		Betty_Altitude       = 0x00004,
+		Betty_Warning        = 0x00008,
+		Betty_Jammer         = 0x00010,
+		Betty_Counter        = 0x00020,
+		Betty_ChaffFlare     = 0x00040,
+		Betty_ChaffFlare_Low = 0x00080,
+		Betty_ChaffFlare_Out = 0x00100,
+		Betty_Lock           = 0x00200,
+		Betty_Caution        = 0x00400,
+		Betty_Bingo          = 0x00800,
+		Betty_Data           = 0x01000,
+		Betty_IFF            = 0x02000,
+		Betty_Lowspeed       = 0x04000,
+		Betty_Beeps          = 0x08000,
+		Betty_AOA            = 0x10000,
+		Betty_MaxG           = 0x20000,
+	};
+
+	// various flags - chances are that by now, we'll add new flags rarely and sparsely, so having a single "bulk pool" seems reasonable, size-wise
+	enum MiscBits
+	{
+		RALT_Valid = 0x1    // indicates weather the RALT reading is valid/reliable
+	};
+
 	// VERSION 1
 	float nozzlePos2;       // Ownship engine nozzle2 percent open (0-100)
 	float rpm2;             // Ownship engine rpm2 (Percent 0-103)
 	float ftit2;            // Ownship Forward Turbine Inlet Temp2 (Degrees C)
 	float oilPressure2;     // Ownship Oil Pressure2 (Percent 0-100)
-	unsigned char navMode;  // current mode selected for HSI/eHSI, see NavModes enum for details
+	NavModes navMode;       // (unsigned char) current mode selected for HSI/eHSI, see NavModes enum for details
 	float AAUZ;             // Ownship barometric altitude given by AAU (depends on calibration)
 	char tacanInfo[NUMBER_OF_SOURCES]; // Tacan band/mode settings for UFC and AUX COMM
 
@@ -504,7 +566,7 @@ public:
 						// NOTE: these bits indicate only *if* a lamp is blinking, in addition to the
 						// existing on/off bits. It's up to the external program to implement the
 						// *actual* blinking.
-	int cmdsMode;		// Ownship CMDS mode state, see CmdsModes enum for details
+	CmdsModes cmdsMode;	// (int) Ownship CMDS mode state, see CmdsModes enum for details
 	int BupUhfPreset;	// BUP UHF channel preset
 
 	// VERSION 3
@@ -532,6 +594,45 @@ public:
 	char pilotsCallsign[MAX_CALLSIGNS][CALLSIGN_LEN]; // List of pilots callsign connected to an MP session
 	char pilotsStatus[MAX_CALLSIGNS];                 // Status of the MP pilots, see enum FlyStates
 
+	// VERSION 10
+	float bumpIntensity; // Intensity of a "bump" while taxiing/rolling, 0..1
+
+	// VERSION 11
+	float latitude;      // Ownship latitude in degrees (as known by avionics)
+	float longitude;     // Ownship longitude in degrees (as known by avionics)
+
+	// VERSION 12
+	unsigned short RTT_size[2];                 // RTT overall width and height
+	unsigned short RTT_area[RTT_noOfAreas][4];  // For each area: left/top/right/bottom
+
+	// VERSION 13
+	char iffBackupMode1Digit1;                     // IFF panel backup Mode1 digit 1
+	char iffBackupMode1Digit2;                     // IFF panel backup Mode1 digit 2
+	char iffBackupMode3ADigit1;                    // IFF panel backup Mode3A digit 1
+	char iffBackupMode3ADigit2;                    // IFF panel backup Mode3A digit 2
+
+	// VERSION 14
+	InstrLight instrLight;  // (unsigned char) current instrument backlight brightness setting, see InstrLight enum for details
+
+	// VERSION 15
+	unsigned int bettyBits;      // see BettyBits enum for details
+	unsigned int miscBits;       // see MiscBits enum for details
+	float RALT;                  // radar altitude (only valid/ reliable if MiscBit "RALT_Valid" is set)
+	float bingoFuel;             // bingo fuel level
+	float caraAlow;              // cara alow setting
+	float bullseyeX;             // bullseye X in sim coordinates (same as ownship, i.e. North (Ft))
+	float bullseyeY;             // bullseye Y in sim coordinates (same as ownship, i.e. East (Ft))
+	int BMSVersionMajor;         // E.g.  4.
+	int BMSVersionMinor;         //         34.
+	int BMSVersionMicro;         //            1
+	int BMSBuildNumber;          //              build 20050
+	unsigned int StringAreaSize; // the overall size of the StringData/FalconSharedMemoryAreaString area
+	unsigned int StringAreaTime; // last time the StringData/FalconSharedMemoryAreaString area has been changed - you only need to re-read the string shared mem if this changes
+	unsigned int DrawingAreaSize;// (unused in 4.34)
+
+	// VERSION 16
+	float turnRate;              // actual turn rate (no delay or dampening) in degrees/second
+
 	// TACAN
 	// setters for internal use only
 	void SetUfcTacanToAA(bool t) { if (t) { tacanInfo[UFC] |= mode; } else { tacanInfo[UFC] &= ~mode; } }
@@ -540,38 +641,185 @@ public:
 	void SetAuxTacanToX(bool t)  { if (t) { tacanInfo[AUX] |= band; } else { tacanInfo[AUX] &= ~band; } }
 
 	// getters for external reader programs
-	bool UfcTacanIsAA(void) {return ((tacanInfo[UFC] & mode) ? true : false); }
-	bool AuxTacanIsAA(void) {return ((tacanInfo[AUX] & mode) ? true : false); }
-	bool UfcTacanIsX(void)  {return ((tacanInfo[UFC] & band) ? true : false); }
-	bool AuxTacanIsX(void)  {return ((tacanInfo[AUX] & band) ? true : false); }
+	bool UfcTacanIsAA(void) { return ((tacanInfo[UFC] & mode) ? true : false); }
+	bool AuxTacanIsAA(void) { return ((tacanInfo[AUX] & mode) ? true : false); }
+	bool UfcTacanIsX(void)  { return ((tacanInfo[UFC] & band) ? true : false); }
+	bool AuxTacanIsX(void)  { return ((tacanInfo[AUX] & band) ? true : false); }
 
 	// ALTIMETER
-	void SetAltBit(unsigned int newBit) { altBits |= newBit; };
-	void ClearAltBit(unsigned int newBit) { altBits &= ~newBit; };
-	bool IsSetAlt(unsigned int newBit) { return ((altBits & newBit) ? true : false); };
+	void SetAltBit(AltBits newBit) { altBits |= newBit; };
+	void ClearAltBit(AltBits newBit) { altBits &= ~newBit; };
+	bool IsSetAlt(AltBits newBit) { return ((altBits & newBit) ? true : false); };
 
 	// POWER
-	void SetPowerBit(unsigned int newBit) { powerBits |= newBit; };
-	void ClearPowerBit(unsigned int newBit) { powerBits &= ~newBit; };
-	bool IsSetPower(unsigned int newBit) { return ((powerBits & newBit) ? true : false); };
+	void SetPowerBit(PowerBits newBit) { powerBits |= newBit; };
+	void ClearPowerBit(PowerBits newBit) { powerBits &= ~newBit; };
+	bool IsSetPower(PowerBits newBit) { return ((powerBits & newBit) ? true : false); };
 
     // BLINKING LIGHTS
-	void SetBlinkBit(unsigned int newBit) { blinkBits |= newBit; };
-	void ClearBlinkBit(unsigned int newBit) { blinkBits &= ~newBit; };
-	bool IsSetBlink(unsigned int newBit) { return ((blinkBits & newBit) ? true : false); };
+	void SetBlinkBit(BlinkBits newBit) { blinkBits |= newBit; };
+	void ClearBlinkBit(BlinkBits newBit) { blinkBits &= ~newBit; };
+	bool IsSetBlink(BlinkBits newBit) { return ((blinkBits & newBit) ? true : false); };
 
 	// CMDS mode state
-	void SetCmdsMode(int newMode) {cmdsMode = newMode;};
-	int  GetCmdsMode(void) {return cmdsMode;};
+	void SetCmdsMode(CmdsModes newMode) { cmdsMode = newMode; };
+	CmdsModes GetCmdsMode(void) { return cmdsMode; };
 
 	// HSI/eHSI mode state
-	void SetNavMode(int newMode) {navMode = newMode;};
-	int  GetNavMode(void) {return navMode;};
+	void SetNavMode(NavModes newMode) { navMode = newMode; };
+	NavModes GetNavMode(void) { return navMode; };
+
+	// BETTY BITS
+	void SetBettyBit(BettyBits newBit) { bettyBits |= newBit; };
+	void ClearBettyBit(BettyBits newBit) { bettyBits &= ~newBit; };
+	bool IsSetBetty(BettyBits newBit) { return ((bettyBits & newBit) ? true : false); };
+
+	// MISC BITS
+	void SetMiscBit(MiscBits newBit) { miscBits |= newBit; };
+	void ClearMiscBit(MiscBits newBit) { miscBits &= ~newBit; };
+	bool IsSetMisc(MiscBits newBit) { return ((miscBits & newBit) ? true : false); };
+};
+
+
+#define STRINGDATA_VERSION 3
+#define STRINGDATA_AREA_SIZE_MAX (1024 * 1024)
+// - NOTE: Check StringAreaSize in FalconSharedMemoryArea2 for the actual size of this area!
+// - NOTE: Treat this shared memory area as a pure "char*", not as "StringData*", since the size is not fixed!
+// - NOTE: Once you have the shared mem mapped for reading, pass the stream to GetStringData to have it reconstruct the *actual* "StringData" object for you!
+// - NOTE: This area is not updated every frame, but only when data changes. Check StringAreaTime in FalconSharedMemoryArea2 for the last update timestamp!
+
+// changelog:
+// 1: initial BMS 4.34 version
+// 2: added 3dbuttons.dat/3dckpit.dat file paths
+// 3: added NavPoints
+
+// *** "FalconSharedMemoryAreaString" ***
+struct StringData
+{
+public:
+	enum StringIdentifier
+	{
+		// VERSION 1
+		BmsExe = 0,             // BMS exe name, full path
+		KeyFile,                // Key file name in use, full path
+
+		BmsBasedir,             // BmsBasedir to BmsPictureDirectory:
+		BmsBinDirectory,        // - BMS directories in use
+		BmsDataDirectory,
+		BmsUIArtDirectory,
+		BmsUserDirectory,
+		BmsAcmiDirectory,
+		BmsBriefingsDirectory,
+		BmsConfigDirectory,
+		BmsLogsDirectory,
+		BmsPatchDirectory,
+		BmsPictureDirectory,
+
+		ThrName,                 // Current theater name
+		ThrCampaigndir,          // ThrCampaigndir to ThrTacrefpicsdir:
+		ThrTerraindir,           // - Current theater directories in use
+		ThrArtdir,
+		ThrMoviedir,
+		ThrUisounddir,
+		ThrObjectdir,
+		Thr3ddatadir,
+		ThrMisctexdir,
+		ThrSounddir,
+		ThrTacrefdir,
+		ThrSplashdir,
+		ThrCockpitdir,
+		ThrSimdatadir,
+		ThrSubtitlesdir,
+		ThrTacrefpicsdir,
+
+		AcName,                  // Current AC name
+		AcNCTR,                  // Current AC NCTR
+
+		// VERSION 2
+		ButtonsFile,             // Current 3dbuttons.dat file full path
+		CockpitFile,             // Current 3dckpit.dat file full path
+
+		// VERSION 3
+		NavPoint,                // Multiple entries, one for each NavPoint. Format for each entry is (NP, O1, O2, PT can be concatenated):
+		                         // (NavPoint, mandatory) NP:<index>,<type>,<x>,<y>,<z>,<grnd_elev>;
+		                         //     <index>        int            NavPoint number, 1-99
+		                         //     <type>         two chars      GM (GMPOINT), PO (POSPOINT), WP (WAYPOINT), MK (MARKPOINT), DL (DATALINK)
+		                         //                                   CB (CAMPBULLSEYE), L1 (LINE1), L2 (LINE2), L3 (LINE3), L4 (LINE4), PT (PREPLANNEDTHREAD)
+		                         //     <x>,<y>        float          position in sim coordinates
+		                         //     <z>            float          altitude in 10s of feet
+		                         //     <grnd_elev>    float          ground elevation in 10s of feet
+		                         // (OA1/OA2, optional) O1:<bearing>,<range>,<alt>; (and/or) O2:<bearing>,<range>,<alt>;
+		                         //     <bearing>      float
+		                         //     <range>        unsigned int
+		                         //     <alt>          unsigned int
+		                         // (PPT, optional) PT:<str_id>,<range>,<declutter>;
+		                         //     <str_id>       "string"
+		                         //     <range>        float
+		                         //     <declutter>    int            0 = false, 1 = true
+
+		// FIXED LAST ENTRY
+		StringIdentifier_DIM     // (number of identifiers; add new IDs only *above* this one)
+	};
+
+	struct StringStruct
+	{
+		unsigned int strId;         // See StringIdentifier (not type-safe on purpose, so that older readers can still read "unknown" newer IDs)
+		unsigned int strLength;     // The length of the string in "strData", *without* termination! Note that strData *does* have termination.
+		char* strData;              // Data storage blob for the string
+		                            // If you parse the data yourself, it should be handled as char[strLength+1] by external apps, string is only used in BMS internally for storage purposes
+	};
+
+	unsigned int VersionNum;        // Version of the StringData shared memory area - only indicates changes to the StringIdentifier enum
+	unsigned int NoOfStrings;       // How many strings do we have in the area?
+	unsigned int dataSize;          // The overall size of the "data" blob that follows
+	struct StringStruct data[];     // Data storage blob for all the strings
+	                                // If you parse the data yourself, it should be handled as char[dataSize] by external apps, vector is only used in BMS internally for storage purposes
+	                                // Note that this can NOT be treated as StringStruct[NoOfStrings] by external apps, due to the flexible size of StringStruct!
+
+
+	// Helper for external(!) apps to reconstruct the actual source StringData from a shared memory char* view, in case you don't want to parse everything yourself
+	static StringData GetStringData(const char* inputbuffer)
+	{
+		StringData result;
+
+		if (inputbuffer)
+		{
+			size_t offset = 0;
+
+			memcpy((char*)&result.VersionNum, (char*)inputbuffer + offset, sizeof(result.VersionNum));
+			offset += sizeof(result.VersionNum);
+
+			memcpy((char*)&result.NoOfStrings, (char*)inputbuffer + offset, sizeof(result.NoOfStrings));
+			offset += sizeof(result.NoOfStrings);
+
+			memcpy((char*)&result.dataSize, (char*)inputbuffer + offset, sizeof(result.dataSize));
+			offset += sizeof(result.dataSize);
+
+			result.data.resize(result.NoOfStrings);
+
+			for (auto &s : result.data)
+			{
+				memcpy((char*)&s.strId, (char*)inputbuffer + offset, sizeof(s.strId));
+				offset += sizeof(s.strId);
+
+				memcpy((char*)&s.strLength, (char*)inputbuffer + offset, sizeof(s.strLength));
+				offset += sizeof(s.strLength);
+
+				s.strData.resize(s.strLength);
+
+				memcpy((char*)s.strData.c_str(), (char*)inputbuffer + offset, s.strLength + 1);
+				offset += s.strLength + 1;
+			}
+		}
+
+		return result;
+	}
 };
 
 
 extern OSBData cockpitOSBData;         // "FalconSharedOsbMemoryArea"
 extern FlightData cockpitFlightData;   // "FalconSharedMemoryArea"
 extern FlightData2 cockpitFlightData2; // "FalconSharedMemoryArea2"
+extern StringData cockpitStringData;   // "FalconSharedMemoryAreaString"
 
-#endif
+#endif // _FLIGHT_DATA_H

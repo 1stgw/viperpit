@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/viperpit-launcher/src/main/java/de/viperpit/launcher/LauncherApplication.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="de.viperpit.launcher.LauncherApplication"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="viperpit-launcher"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Durl=ws://office:8090/agents -DkeyFile=${file_uri:${resource_loc:/viperpit-agent/src/test/resources/demo.key}}"/>
+</launchConfiguration>

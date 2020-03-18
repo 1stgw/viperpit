@@ -1,6 +1,6 @@
 package de.viperpit.agent.keys;
 
-import static com.sun.jna.Native.loadLibrary;
+import static com.sun.jna.Native.load;
 import static com.sun.jna.win32.W32APIOptions.DEFAULT_OPTIONS;
 import static java.awt.event.KeyEvent.VK_ALT;
 import static java.awt.event.KeyEvent.VK_CONTROL;
@@ -34,10 +34,10 @@ public class KeyCodeLineConverter {
 
 	private static interface KeyCodeLineConverter32 extends User32 {
 
-		public static final KeyCodeLineConverter32 INSTANCE = (KeyCodeLineConverter32) loadLibrary("user32",
+		public static final KeyCodeLineConverter32 INSTANCE = (KeyCodeLineConverter32) load("user32",
 				KeyCodeLineConverter32.class, DEFAULT_OPTIONS);
 
-		IntByReference GetKeyboardLayout(int code);
+		HKL GetKeyboardLayout(int code);
 
 		int GetKeyState(int vkNumLock);
 
