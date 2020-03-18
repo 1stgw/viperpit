@@ -85,8 +85,7 @@ public class CockpitService {
 			String location = "classpath:/states_" + javaLetterOrDigit().retainFrom(preset) + ".json";
 			Resource resource = resourceLoader.getResource(location);
 			if (resource.exists()) {
-				try {
-					InputStream inputStream = resource.getInputStream();
+				try (InputStream inputStream = resource.getInputStream()) {
 					Collection<Action> actions = objectMapper.readValue(inputStream, State.class).getActions();
 					state = new State(agent, actions);
 					currentPreset = preset;
