@@ -1,27 +1,27 @@
 package de.viperpit.agent.data;
 
 import static com.sun.jna.Native.register;
+import static com.sun.jna.Native.setProtected;
 import static com.sun.jna.platform.win32.WinBase.INVALID_HANDLE_VALUE;
 import static com.sun.jna.platform.win32.WinNT.PAGE_READWRITE;
 import static com.sun.jna.platform.win32.WinNT.SECTION_MAP_READ;
 import static com.sun.jna.platform.win32.WinNT.SECTION_MAP_WRITE;
+import static java.lang.System.loadLibrary;
 import static java.util.Optional.empty;
 import static java.util.Optional.ofNullable;
 
+import java.io.Closeable;
 import java.nio.ByteBuffer;
 import java.util.Optional;
 
-import com.sun.jna.Native;
 import com.sun.jna.Pointer;
-import com.sun.jna.Structure;
 import com.sun.jna.platform.win32.BaseTSD.SIZE_T;
 import com.sun.jna.platform.win32.Kernel32;
 import com.sun.jna.platform.win32.WinDef.DWORD;
 import com.sun.jna.platform.win32.WinNT.HANDLE;
+import com.sun.jna.platform.win32.WinNT.MEMORY_BASIC_INFORMATION;
 
-import de.viperpit.agent.data.jna.FlightDataLibrary.FlightData;
-
-public class SharedMemory {
+public class SharedMemory implements Closeable {
 
 	private static final int PAGE_ACCESS = PAGE_READWRITE;
 
@@ -29,18 +29,8 @@ public class SharedMemory {
 
 	static {
 		register("Kernel32");
-	}
-
-	public static void main(String[] args) {
-		Native.setProtected(true);
-		System.loadLibrary("Kernel32");
-		SharedMemory sharedMemory = new SharedMemory("FalconSharedMemoryArea", 2048, true);
-		Pointer pointer = sharedMemory.getView().get();
-		FlightData structure = (FlightData) Structure.newInstance(FlightData.class, pointer);
-		for (String fieldName : structure.getFieldOrder()) {
-			System.out.println(fieldName + ": " + structure.readField(fieldName));
-		}
-		sharedMemory.close();
+		setProtected(true);
+		loadLibrary("Kernel32");
 	}
 
 	private final Optional<HANDLE> handle;
@@ -61,7 +51,8 @@ public class SharedMemory {
 		}
 	}
 
-	private void close() {
+	@Override
+	public void close() {
 		valid = false;
 		view.map(p -> Kernel32.INSTANCE.UnmapViewOfFile(p));
 		handle.map(h -> Kernel32.INSTANCE.CloseHandle(h));
@@ -77,7 +68,7 @@ public class SharedMemory {
 		if (pointer != null) {
 			MEMORY_BASIC_INFORMATION info = new MEMORY_BASIC_INFORMATION();
 			VirtualQuery(pointer, info, new SIZE_T(info.size()));
-			return info.RegionSize.intValue();
+			return info.regionSize.intValue();
 		} else {
 			return 0;
 		}
@@ -93,7 +84,7 @@ public class SharedMemory {
 		return getView().map(p -> p.getByteBuffer(0, size));
 	}
 
-	private Optional<Pointer> getView() {
+	public Optional<Pointer> getView() {
 		return view;
 	}
 
