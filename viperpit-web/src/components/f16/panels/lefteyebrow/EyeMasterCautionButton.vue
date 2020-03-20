@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="eyemastercautionbuttonpush"
+      id="eyeMasterCautionButtonPush"
       description="EYE: MASTER CAUTION Button - Push"
       label="MASTER CAUTION"
       type="button"

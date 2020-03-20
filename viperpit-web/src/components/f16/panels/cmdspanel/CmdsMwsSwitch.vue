@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="cmdsmwsswitchpoweron"
+      id="cmdsMwsSwitchPowerOn"
       description="CMDS: MWS Switch - Power ON"
       label="Power ON"
       type="switch"
       role="on"
     />
     <control
-      id="cmdsmwsswitchpoweroff"
+      id="cmdsMwsSwitchPowerOff"
       description="CMDS: MWS Switch - Power OFF"
       label="Power OFF"
       type="switch"

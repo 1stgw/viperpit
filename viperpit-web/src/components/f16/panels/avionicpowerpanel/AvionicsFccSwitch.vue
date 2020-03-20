@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="avionicsfccswitchon"
+      id="avionicsFccSwitchOn"
       description="AVIONICS: FCC Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="avionicsfccswitchoff"
+      id="avionicsFccSwitchOff"
       description="AVIONICS: FCC Switch - OFF"
       label="OFF"
       type="switch"

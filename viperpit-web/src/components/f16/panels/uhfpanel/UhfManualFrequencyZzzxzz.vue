@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="uhfmanualfrequencyxcycleup"
+      id="uhfManualFrequencyZzzxzzCycleUp"
       description="UHF: Manual Frequency ___.X__ - Cycle Up"
       label="Cycle Up"
       type="button"
       role="up"
     />
     <control
-      id="uhfmanualfrequencyxcycledown"
+      id="uhfManualFrequencyZzzxzzCycleDown"
       description="UHF: Manual Frequency ___.X__ - Cycle Down"
       label="Cycle Down"
       type="button"

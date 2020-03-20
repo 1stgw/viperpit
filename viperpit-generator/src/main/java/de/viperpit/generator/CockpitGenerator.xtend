@@ -72,7 +72,6 @@ class CockpitGenerator {
 					group.controls = actions.map [
 						val control = new Control
 						control.id = id
-						control.clazz = clazz
 						control.callback = callback
 						control.description = description
 						if (groupDefinition.actions.size > 1) {

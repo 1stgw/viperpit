@@ -6,42 +6,42 @@
     type="switch"
   >
     <control
-      id="cmdsmodeknoboff"
+      id="cmdsModeKnobOff"
       description="CMDS: MODE Knob - OFF"
       label="OFF"
       type="switch"
       role="off"
     />
     <control
-      id="cmdsmodeknobstby"
+      id="cmdsModeKnobStby"
       description="CMDS: MODE Knob - STBY"
       label="STBY"
       type="switch"
       role="none"
     />
     <control
-      id="cmdsmodeknobman"
+      id="cmdsModeKnobMan"
       description="CMDS: MODE Knob - MAN"
       label="MAN"
       type="switch"
       role="none"
     />
     <control
-      id="cmdsmodeknobsemi"
+      id="cmdsModeKnobSemi"
       description="CMDS: MODE Knob - SEMI"
       label="SEMI"
       type="switch"
       role="none"
     />
     <control
-      id="cmdsmodeknobauto"
+      id="cmdsModeKnobAuto"
       description="CMDS: MODE Knob - AUTO"
       label="AUTO"
       type="switch"
       role="none"
     />
     <control
-      id="cmdsmodeknobbyp"
+      id="cmdsModeKnobByp"
       description="CMDS: MODE Knob - BYP"
       label="BYP"
       type="switch"

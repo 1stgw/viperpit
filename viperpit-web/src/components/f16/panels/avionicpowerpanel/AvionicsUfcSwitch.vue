@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="avionicsufcswitchon"
+      id="avionicsUfcSwitchOn"
       description="AVIONICS: UFC Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="avionicsufcswitchoff"
+      id="avionicsUfcSwitchOff"
       description="AVIONICS: UFC Switch - OFF"
       label="OFF"
       type="switch"

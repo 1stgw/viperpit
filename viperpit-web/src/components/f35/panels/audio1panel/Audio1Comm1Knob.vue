@@ -6,28 +6,28 @@
     type="button"
   >
     <control
-      id="audio1comm1knobvolumeincr"
+      id="audio1Comm1KnobVolumeIncr"
       description="AUDIO1: COMM 1 Knob - Volume Incr."
       label="Volume Incr."
       type="button"
       role="up"
     />
     <control
-      id="audio1comm1knobvolumedecr"
+      id="audio1Comm1KnobVolumeDecr"
       description="AUDIO1: COMM 1 Knob - Volume Decr."
       label="Volume Decr."
       type="button"
       role="down"
     />
     <control
-      id="audio1comm1knobpoweron"
+      id="audio1Comm1KnobPowerOn"
       description="AUDIO1: COMM 1 Knob - Power On"
       label="Power On"
       type="button"
       role="on"
     />
     <control
-      id="audio1comm1knobpoweroff"
+      id="audio1Comm1KnobPowerOff"
       description="AUDIO1: COMM 1 Knob - Power Off"
       label="Power Off"
       type="button"

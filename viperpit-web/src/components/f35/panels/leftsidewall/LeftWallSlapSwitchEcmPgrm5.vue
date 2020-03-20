@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="leftwallslapswitchecmpgrm5"
+      id="leftWallSlapSwitchEcmPgrm5"
       description="LEFT WALL: SLAP Switch (ECM-PGRM # 5)"
       label="SLAP Switch (ECM-PGRM # 5)"
       type="button"

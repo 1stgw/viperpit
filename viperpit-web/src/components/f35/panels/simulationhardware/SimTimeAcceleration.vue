@@ -6,28 +6,28 @@
     type="button"
   >
     <control
-      id="simtimeaccelerationtoggle2x"
+      id="simTimeAccelerationToggle2x"
       description="SIM: Time Acceleration - Toggle 2x"
       label="Toggle 2x"
       type="button"
       role="none"
     />
     <control
-      id="simtimeaccelerationtoggle4x"
+      id="simTimeAccelerationToggle4x"
       description="SIM: Time Acceleration - Toggle 4x"
       label="Toggle 4x"
       type="button"
       role="none"
     />
     <control
-      id="simtimeaccelerationstepup"
+      id="simTimeAccelerationStepUp"
       description="SIM: Time Acceleration - Step Up"
       label="Step Up"
       type="button"
       role="up"
     />
     <control
-      id="simtimeaccelerationstepdown"
+      id="simTimeAccelerationStepDown"
       description="SIM: Time Acceleration - Step Down"
       label="Step Down"
       type="button"

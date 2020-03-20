@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="cmdsrwrswitchpoweron"
+      id="cmdsRwrSwitchPowerOn"
       description="CMDS: RWR Switch - Power ON"
       label="Power ON"
       type="switch"
       role="on"
     />
     <control
-      id="cmdsrwrswitchpoweroff"
+      id="cmdsRwrSwitchPowerOff"
       description="CMDS: RWR Switch - Power OFF"
       label="Power OFF"
       type="switch"

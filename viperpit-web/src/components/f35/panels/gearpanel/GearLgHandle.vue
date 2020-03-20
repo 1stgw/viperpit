@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="gearlghandleup"
+      id="gearLgHandleUp"
       description="GEAR: LG Handle - UP"
       label="UP"
       type="switch"
       role="up"
     />
     <control
-      id="gearlghandledn"
+      id="gearLgHandleDn"
       description="GEAR: LG Handle - DN"
       label="DN"
       type="switch"

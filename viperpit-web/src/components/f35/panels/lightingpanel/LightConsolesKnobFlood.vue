@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="lightconsolesknobfloodstepup"
+      id="lightConsolesKnobFloodStepUp"
       description="LIGHT: CONSOLES Knob (Flood) - Step Up"
       label="Step Up"
       type="button"
       role="up"
     />
     <control
-      id="lightconsolesknobfloodstepdown"
+      id="lightConsolesKnobFloodStepDown"
       description="LIGHT: CONSOLES Knob (Flood) - Step Down"
       label="Step Down"
       type="button"

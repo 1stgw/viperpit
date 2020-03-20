@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="seatejecthandleholdforeject"
+      id="seatEjectHandleHoldForEject"
       description="SEAT: EJECT Handle - Hold For Eject"
       label="EJECT"
       type="button"

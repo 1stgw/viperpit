@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="trimpitchtrimwheelnoseup"
+      id="trimPitchTrimWheelNoseUp"
       description="TRIM: PITCH TRIM Wheel - NOSE UP"
       label="NOSE UP"
       type="button"
       role="up"
     />
     <control
-      id="trimpitchtrimwheelnosedn"
+      id="trimPitchTrimWheelNoseDn"
       description="TRIM: PITCH TRIM Wheel - NOSE DN"
       label="NOSE DN"
       type="button"

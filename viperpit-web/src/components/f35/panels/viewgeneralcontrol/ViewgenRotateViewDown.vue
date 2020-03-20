@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="viewgenrotateviewdown"
+      id="viewgenRotateViewDown"
       description="VIEWGEN: Rotate View Down"
       label="Rotate View Down"
       type="button"

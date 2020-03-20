@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="fuelairrefuelswitchopen"
+      id="fuelAirRefuelSwitchOpen"
       description="FUEL: AIR REFUEL Switch - OPEN"
       label="OPEN"
       type="switch"
       role="on"
     />
     <control
-      id="fuelairrefuelswitchclose"
+      id="fuelAirRefuelSwitchClose"
       description="FUEL: AIR REFUEL Switch - CLOSE"
       label="CLOSE"
       type="switch"

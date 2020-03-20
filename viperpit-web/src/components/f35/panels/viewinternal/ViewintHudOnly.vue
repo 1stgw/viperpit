@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="viewinthudonly"
+      id="viewintHudOnly"
       description="VIEWINT: HUD Only"
       label="HUD Only"
       type="button"

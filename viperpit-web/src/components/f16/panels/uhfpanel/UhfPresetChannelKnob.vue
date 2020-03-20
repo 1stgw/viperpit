@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="uhfpresetchannelknobcycleup"
+      id="uhfPresetChannelKnobCycleUp"
       description="UHF: PRESET CHANNEL Knob - Cycle Up"
       label="Cycle Up"
       type="button"
       role="up"
     />
     <control
-      id="uhfpresetchannelknobcycledown"
+      id="uhfPresetChannelKnobCycleDown"
       description="UHF: PRESET CHANNEL Knob - Cycle Down"
       label="Cycle Down"
       type="button"

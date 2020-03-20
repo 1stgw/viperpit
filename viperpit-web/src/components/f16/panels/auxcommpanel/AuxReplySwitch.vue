@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="auxreplyswitchb"
+      id="auxReplySwitchB"
       description="AUX: REPLY Switch - B"
       label="B"
       type="switch"
       role="none"
     />
     <control
-      id="auxreplyswitcha"
+      id="auxReplySwitchA"
       description="AUX: REPLY Switch - A"
       label="A"
       type="switch"
       role="none"
     />
     <control
-      id="auxreplyswitchout"
+      id="auxReplySwitchOut"
       description="AUX: REPLY Switch - OUT"
       label="OUT"
       type="switch"

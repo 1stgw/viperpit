@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="extwingtailswitchbrt"
+      id="extWingTailSwitchBrt"
       description="EXT: WING/TAIL Switch - BRT"
       label="BRT"
       type="switch"
       role="none"
     />
     <control
-      id="extwingtailswitchoff"
+      id="extWingTailSwitchOff"
       description="EXT: WING/TAIL Switch - OFF"
       label="OFF"
       type="switch"

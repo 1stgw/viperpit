@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="miscrollswitchhdgsel"
+      id="miscRollSwitchHdgSel"
       description="MISC: ROLL Switch - HDG SEL"
       label="HDG SEL"
       type="switch"
       role="none"
     />
     <control
-      id="miscrollswitchatthold"
+      id="miscRollSwitchAttHold"
       description="MISC: ROLL Switch - ATT HOLD"
       label="ATT HOLD"
       type="switch"
       role="none"
     />
     <control
-      id="miscrollswitchstrgsel"
+      id="miscRollSwitchStrgSel"
       description="MISC: ROLL Switch -  STRG SEL"
       label="STRG SEL"
       type="switch"

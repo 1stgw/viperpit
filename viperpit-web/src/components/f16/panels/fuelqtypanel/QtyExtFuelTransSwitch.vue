@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="qtyextfueltransswitchnorm"
+      id="qtyExtFuelTransSwitchNorm"
       description="QTY: EXT FUEL TRANS Switch - NORM"
       label="NORM"
       type="switch"
       role="on"
     />
     <control
-      id="qtyextfueltransswitchwingfirst"
+      id="qtyExtFuelTransSwitchWingFirst"
       description="QTY: EXT FUEL TRANS Switch - WING FIRST"
       label="WING FIRST"
       type="switch"

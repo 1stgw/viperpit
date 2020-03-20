@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="altgearextendgearhandlepush"
+      id="altGearExtendGearHandlePush"
       description="ALT GEAR: Extend Gear Handle - Push"
       label="Extend Gear"
       type="button"

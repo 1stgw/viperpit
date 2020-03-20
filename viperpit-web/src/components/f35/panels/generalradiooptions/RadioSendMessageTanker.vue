@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="radiosendmessagetanker"
+      id="radioSendMessageTanker"
       description="Radio-Send Message Tanker"
       label="Send Message Tanker"
       type="button"

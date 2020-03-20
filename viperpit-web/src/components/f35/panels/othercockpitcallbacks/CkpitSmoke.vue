@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="ckpitsmokeon"
+      id="ckpitSmokeOn"
       description="CKPIT: Smoke - On"
       label="On"
       type="button"
       role="on"
     />
     <control
-      id="ckpitsmokeoff"
+      id="ckpitSmokeOff"
       description="CKPIT: Smoke - Off"
       label="Off"
       type="button"

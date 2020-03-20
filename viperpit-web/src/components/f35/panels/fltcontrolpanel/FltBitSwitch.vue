@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="fltbitswitchpush"
+      id="fltBitSwitchPush"
       description="FLT: BIT Switch - Push"
       label="BIT"
       type="button"

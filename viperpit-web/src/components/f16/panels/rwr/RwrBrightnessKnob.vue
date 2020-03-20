@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="rwrbrightnessknobincrease"
+      id="rwrBrightnessKnobIncrease"
       description="RWR: Brightness Knob - Increase"
       label="Increase"
       type="button"
       role="up"
     />
     <control
-      id="rwrbrightnessknobdecrease"
+      id="rwrBrightnessKnobDecrease"
       description="RWR: Brightness Knob - Decrease"
       label="Decrease"
       type="button"

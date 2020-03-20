@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="twpmissilelaunchpush"
+      id="twpMissileLaunchPush"
       description="TWP: MISSILE LAUNCH - Push"
       label="MISSILE LAUNCH"
       type="button"

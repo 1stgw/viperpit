@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="altgearresetbuttonpush"
+      id="altGearResetButtonPush"
       description="ALT GEAR: Reset Button - Push"
       label="Reset"
       type="button"

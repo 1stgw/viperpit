@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="hudvelocityswitchcas"
+      id="hudVelocitySwitchCas"
       description="HUD: Velocity Switch - CAS"
       label="CAS"
       type="switch"
       role="none"
     />
     <control
-      id="hudvelocityswitchtas"
+      id="hudVelocitySwitchTas"
       description="HUD: Velocity Switch - TAS"
       label="TAS"
       type="switch"
       role="none"
     />
     <control
-      id="hudvelocityswitchgndspd"
+      id="hudVelocitySwitchGndSpd"
       description="HUD: Velocity Switch - GND SPD"
       label="GND SPD"
       type="switch"

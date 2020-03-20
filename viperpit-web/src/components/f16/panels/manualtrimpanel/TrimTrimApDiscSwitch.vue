@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="trimtrimapdiscswitchdisc"
+      id="trimTrimApDiscSwitchDisc"
       description="TRIM: TRIM/AP DISC Switch - DISC"
       label="DISC"
       type="switch"
       role="none"
     />
     <control
-      id="trimtrimapdiscswitchnorm"
+      id="trimTrimApDiscSwitchNorm"
       description="TRIM: TRIM/AP DISC Switch - NORM"
       label="NORM"
       type="switch"

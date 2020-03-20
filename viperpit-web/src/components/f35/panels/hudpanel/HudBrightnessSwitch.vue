@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="hudbrightnessswitchday"
+      id="hudBrightnessSwitchDay"
       description="HUD: Brightness Switch - DAY"
       label="DAY"
       type="switch"
       role="none"
     />
     <control
-      id="hudbrightnessswitchautobrt"
+      id="hudBrightnessSwitchAutoBrt"
       description="HUD: Brightness Switch - AUTO BRT"
       label="AUTO BRT"
       type="switch"
       role="none"
     />
     <control
-      id="hudbrightnessswitchnig"
+      id="hudBrightnessSwitchNig"
       description="HUD: Brightness Switch - NIG"
       label="NIG"
       type="switch"

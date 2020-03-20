@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="gearhornsilencerbuttonpush"
+      id="gearHornSilencerButtonPush"
       description="GEAR: HORN SILENCER Button - Push"
       label="HORN SILENCER"
       type="button"

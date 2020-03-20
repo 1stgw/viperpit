@@ -6,28 +6,28 @@
     type="switch"
   >
     <control
-      id="cmdsprgmknob1"
+      id="cmdsPrgmKnob1"
       description="CMDS: PRGM Knob - 1"
       label="1"
       type="switch"
       role="none"
     />
     <control
-      id="cmdsprgmknob2"
+      id="cmdsPrgmKnob2"
       description="CMDS: PRGM Knob - 2"
       label="2"
       type="switch"
       role="none"
     />
     <control
-      id="cmdsprgmknob3"
+      id="cmdsPrgmKnob3"
       description="CMDS: PRGM Knob - 3"
       label="3"
       type="switch"
       role="none"
     />
     <control
-      id="cmdsprgmknob4"
+      id="cmdsPrgmKnob4"
       description="CMDS: PRGM Knob - 4"
       label="4"
       type="switch"

@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="audio2intercomknobvolumeincr"
+      id="audio2IntercomKnobVolumeIncr"
       description="AUDIO2: INTERCOM Knob - Volume Incr."
       label="Volume Incr."
       type="button"
       role="up"
     />
     <control
-      id="audio2intercomknobvolumedecr"
+      id="audio2IntercomKnobVolumeDecr"
       description="AUDIO2: INTERCOM Knob - Volume Decr."
       label="Volume Decr."
       type="button"

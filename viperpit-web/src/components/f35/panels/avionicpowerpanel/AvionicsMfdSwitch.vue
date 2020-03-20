@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="avionicsmfdswitchon"
+      id="avionicsMfdSwitchOn"
       description="AVIONICS: MFD Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="avionicsmfdswitchoff"
+      id="avionicsMfdSwitchOff"
       description="AVIONICS: MFD Switch - OFF"
       label="OFF"
       type="switch"

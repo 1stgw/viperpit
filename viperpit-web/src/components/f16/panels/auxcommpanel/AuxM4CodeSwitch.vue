@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="auxm4codeswitchzero"
+      id="auxM4CodeSwitchZero"
       description="AUX: M-4 CODE Switch - ZERO"
       label="ZERO"
       type="switch"
       role="none"
     />
     <control
-      id="auxm4codeswitchhold"
+      id="auxM4CodeSwitchHold"
       description="AUX: M-4 CODE Switch - HOLD"
       label="HOLD"
       type="switch"

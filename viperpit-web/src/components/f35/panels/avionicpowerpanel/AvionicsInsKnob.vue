@@ -6,28 +6,28 @@
     type="switch"
   >
     <control
-      id="avionicsinsknoboff"
+      id="avionicsInsKnobOff"
       description="AVIONICS: INS Knob - OFF"
       label="OFF"
       type="switch"
       role="off"
     />
     <control
-      id="avionicsinsknobnorm"
+      id="avionicsInsKnobNorm"
       description="AVIONICS: INS Knob - NORM"
       label="NORM"
       type="switch"
       role="on"
     />
     <control
-      id="avionicsinsknobnav"
+      id="avionicsInsKnobNav"
       description="AVIONICS: INS Knob - NAV"
       label="NAV"
       type="switch"
       role="none"
     />
     <control
-      id="avionicsinsknobinfltalign"
+      id="avionicsInsKnobInFltAlign"
       description="AVIONICS: INS Knob - IN FLT ALIGN"
       label="IN FLT ALIGN"
       type="switch"

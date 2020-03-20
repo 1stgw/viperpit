@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="radionextmenutanker"
+      id="radioNextMenuTanker"
       description="Radio-Next Menu Tanker"
       label="Next Menu Tanker"
       type="button"

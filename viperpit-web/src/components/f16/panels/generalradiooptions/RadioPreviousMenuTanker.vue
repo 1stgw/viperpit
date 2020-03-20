@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="radiopreviousmenutanker"
+      id="radioPreviousMenuTanker"
       description="Radio-Previous Menu Tanker"
       label="Previous Menu Tanker"
       type="button"

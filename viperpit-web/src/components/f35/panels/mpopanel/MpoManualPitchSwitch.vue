@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="mpomanualpitchswitchhold"
+      id="mpoManualPitchSwitchHold"
       description="MPO: MANUAL PITCH Switch - Hold"
       label="MANUAL PITCH"
       type="button"

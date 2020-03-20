@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="hudscalesswitchvvvah"
+      id="hudScalesSwitchVvVah"
       description="HUD: Scales Switch - VV/VAH"
       label="VV/VAH"
       type="switch"
       role="none"
     />
     <control
-      id="hudscalesswitchvah"
+      id="hudScalesSwitchVah"
       description="HUD: Scales Switch - VAH"
       label="VAH"
       type="switch"
       role="none"
     />
     <control
-      id="hudscalesswitchoff"
+      id="hudScalesSwitchOff"
       description="HUD: Scales Switch - OFF"
       label="OFF"
       type="switch"

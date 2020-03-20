@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="viewextchasecamera"
+      id="viewextChaseCamera"
       description="VIEWEXT: Chase Camera"
       label="Chase Camera"
       type="button"

@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="extpositionswitchflash"
+      id="extPositionSwitchFlash"
       description="EXT: POSITION Switch - FLASH"
       label="FLASH"
       type="switch"
       role="none"
     />
     <control
-      id="extpositionswitchsteady"
+      id="extPositionSwitchSteady"
       description="EXT: POSITION Switch - STEADY"
       label="STEADY"
       type="switch"

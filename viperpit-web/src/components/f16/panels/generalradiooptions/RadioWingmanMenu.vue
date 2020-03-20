@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="radiowingmanmenu"
+      id="radioWingmanMenu"
       description="RADIO: Wingman Menu"
       label="Wingman Menu"
       type="button"

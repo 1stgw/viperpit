@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="fltaltflapsswitchextend"
+      id="fltAltFlapsSwitchExtend"
       description="FLT: ALT FLAPS Switch - EXTEND"
       label="EXTEND"
       type="switch"
       role="none"
     />
     <control
-      id="fltaltflapsswitchnorm"
+      id="fltAltFlapsSwitchNorm"
       description="FLT: ALT FLAPS Switch - NORM"
       label="NORM"
       type="switch"

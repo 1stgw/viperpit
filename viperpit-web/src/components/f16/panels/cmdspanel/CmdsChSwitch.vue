@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="cmdschswitchpoweron"
+      id="cmdsChSwitchPowerOn"
       description="CMDS: CH Switch - Power ON"
       label="Power ON"
       type="switch"
       role="on"
     />
     <control
-      id="cmdschswitchpoweroff"
+      id="cmdsChSwitchPowerOff"
       description="CMDS: CH Switch - Power OFF"
       label="Power OFF"
       type="switch"

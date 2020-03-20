@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="uhffunctionknoboff"
+      id="uhfFunctionKnobOff"
       description="UHF: FUNCTION Knob - OFF"
       label="OFF"
       type="switch"
       role="off"
     />
     <control
-      id="uhffunctionknobmain"
+      id="uhfFunctionKnobMain"
       description="UHF: FUNCTION Knob - MAIN"
       label="MAIN"
       type="switch"
       role="on"
     />
     <control
-      id="uhffunctionknobboth"
+      id="uhfFunctionKnobBoth"
       description="UHF: FUNCTION Knob - BOTH"
       label="BOTH"
       type="switch"

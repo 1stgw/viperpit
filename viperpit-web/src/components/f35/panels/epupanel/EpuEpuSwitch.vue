@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="epuepuswitchon"
+      id="epuEpuSwitchOn"
       description="EPU: EPU Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="epuepuswitchnorm"
+      id="epuEpuSwitchNorm"
       description="EPU: EPU Switch - NORM"
       label="NORM"
       type="switch"
       role="on"
     />
     <control
-      id="epuepuswitchoff"
+      id="epuEpuSwitchOff"
       description="EPU: EPU Switch - OFF"
       label="OFF"
       type="switch"

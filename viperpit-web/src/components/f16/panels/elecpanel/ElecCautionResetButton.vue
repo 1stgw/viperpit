@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="eleccautionresetbuttonpush"
+      id="elecCautionResetButtonPush"
       description="ELEC: CAUTION RESET Button - Push"
       label="CAUTION RESET"
       type="button"

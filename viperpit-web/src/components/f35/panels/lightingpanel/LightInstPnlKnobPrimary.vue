@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="lightinstpnlknobprimarystepup"
+      id="lightInstPnlKnobPrimaryStepUp"
       description="LIGHT: INST PNL Knob (Primary) - Step Up"
       label="Step Up"
       type="button"
       role="up"
     />
     <control
-      id="lightinstpnlknobprimarystepdown"
+      id="lightInstPnlKnobPrimaryStepDown"
       description="LIGHT: INST PNL Knob (Primary) - Step Down"
       label="Step Down"
       type="button"

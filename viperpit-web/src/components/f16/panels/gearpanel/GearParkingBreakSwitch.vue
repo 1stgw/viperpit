@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="gearparkingbreakswitchon"
+      id="gearParkingBreakSwitchOn"
       description="GEAR: PARKING BREAK Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="gearparkingbreakswitchoff"
+      id="gearParkingBreakSwitchOff"
       description="GEAR: PARKING BREAK Switch - OFF"
       label="OFF"
       type="switch"

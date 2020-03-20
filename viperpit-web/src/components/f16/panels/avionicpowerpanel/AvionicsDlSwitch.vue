@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="avionicsdlswitchon"
+      id="avionicsDlSwitchOn"
       description="AVIONICS: DL Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="avionicsdlswitchoff"
+      id="avionicsDlSwitchOff"
       description="AVIONICS: DL Switch - OFF"
       label="OFF"
       type="switch"

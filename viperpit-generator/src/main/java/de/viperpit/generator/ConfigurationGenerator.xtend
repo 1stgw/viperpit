@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory
 
 import static com.google.common.base.CharMatcher.javaLetterOrDigit
 import static com.google.common.base.CharMatcher.javaLowerCase
-import static com.google.common.base.CharMatcher.whitespace
 import static com.google.common.base.Charsets.UTF_8
 import static com.google.common.base.Splitter.on
 import static com.google.common.base.Strings.commonPrefix
@@ -67,7 +66,9 @@ class ConfigurationGenerator {
 			val groupAndLabel = getGroupAndLabel(keyCodeLines)
 			val group = groupAndLabel.key
 			val label = groupAndLabel.value
-			val relatedCallbacks = toRelated(groupAndLabel, keyCodeLines).map[description.toPathName].toList
+			val relatedCallbacks = toRelated(groupAndLabel, keyCodeLines).map [
+				description.toId
+			].toList
 			val style = switch (group) {
 				case label !== null && label.equals("Push"): "button"
 				case label !== null && label.equals("Hold"): "button"
@@ -101,8 +102,7 @@ class ConfigurationGenerator {
 					"button"
 			}
 			val action = new Action
-			action.id = description.toPathName
-			action.clazz = description.toClassName
+			action.id = description.toId
 			action.callback = callback
 			if (!relatedCallbacks.empty) {
 				action.relatedActions = relatedCallbacks
@@ -144,17 +144,18 @@ class ConfigurationGenerator {
 		return description -> null
 	}
 
+	private def toId(String it) {
+		toClassName.toFirstLower
+	}
+
 	private def toClassName(String it) {
 		var name = it
 		name = CharMatcher.is('.').removeFrom(name)
 		name = CharMatcher.is('_').replaceFrom(name, 'z')
 		val tokens = new ArrayList(on(javaLetterOrDigit.negate).trimResults.splitToList(name))
-		'''«tokens.map[toLowerCase.toFirstUpper].join»'''.toString
-	}
-
-	private def toPathName(String category) {
-		val tokens = new ArrayList(on(whitespace).trimResults.splitToList(category))
-		javaLetterOrDigit.retainFrom('''«tokens.map[toLowerCase].join»'''.toString)
+		'''«tokens.map[
+			toLowerCase.toFirstUpper
+		].join»'''.toString
 	}
 
 	private def toRelated(KeyCodeLine it, Pair<String, String> groupAndLabel, Iterable<KeyCodeLine> keyCodeLines) {

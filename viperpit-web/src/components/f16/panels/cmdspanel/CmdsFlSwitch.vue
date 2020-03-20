@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="cmdsflswitchpoweron"
+      id="cmdsFlSwitchPowerOn"
       description="CMDS: FL Switch - Power ON"
       label="Power ON"
       type="switch"
       role="on"
     />
     <control
-      id="cmdsflswitchpoweroff"
+      id="cmdsFlSwitchPowerOff"
       description="CMDS: FL Switch - Power OFF"
       label="Power OFF"
       type="switch"

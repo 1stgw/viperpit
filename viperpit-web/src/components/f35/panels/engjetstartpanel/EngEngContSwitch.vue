@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="engengcontswitchpri"
+      id="engEngContSwitchPri"
       description="ENG: ENG CONT Switch - PRI"
       label="PRI"
       type="switch"
       role="none"
     />
     <control
-      id="engengcontswitchsec"
+      id="engEngContSwitchSec"
       description="ENG: ENG CONT Switch - SEC"
       label="SEC"
       type="switch"

@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="cmdsjettswitchon"
+      id="cmdsJettSwitchOn"
       description="CMDS: JETT Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="cmdsjettswitchoff"
+      id="cmdsJettSwitchOff"
       description="CMDS: JETT Switch - OFF"
       label="OFF"
       type="switch"

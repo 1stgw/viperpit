@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="audio2ilsknobon"
+      id="audio2IlsKnobOn"
       description="AUDIO2: ILS Knob - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="audio2ilsknoboff"
+      id="audio2IlsKnobOff"
       description="AUDIO2: ILS Knob - OFF"
       label="OFF"
       type="switch"

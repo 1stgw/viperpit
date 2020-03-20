@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="gearstoresconfigswitchcati"
+      id="gearStoresConfigSwitchCatI"
       description="GEAR: STORES CONFIG Switch - CAT I"
       label="CAT I"
       type="switch"
       role="none"
     />
     <control
-      id="gearstoresconfigswitchcatiii"
+      id="gearStoresConfigSwitchCatIii"
       description="GEAR: STORES CONFIG Switch - CAT III"
       label="CAT III"
       type="switch"

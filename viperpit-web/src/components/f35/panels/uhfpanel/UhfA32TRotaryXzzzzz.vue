@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="uhfa32trotaryxstepup"
+      id="uhfA32TRotaryXzzzzzStepUp"
       description="UHF: A-3-2-T Rotary X__.___ - Step Up"
       label="Step Up"
       type="button"
       role="up"
     />
     <control
-      id="uhfa32trotaryxstepdown"
+      id="uhfA32TRotaryXzzzzzStepDown"
       description="UHF: A-3-2-T Rotary X__.___ - Step Down"
       label="Step Down"
       type="button"

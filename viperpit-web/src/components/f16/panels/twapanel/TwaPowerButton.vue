@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="twapowerbuttonon"
+      id="twaPowerButtonOn"
       description="TWA: POWER Button - On"
       label="On"
       type="button"
       role="on"
     />
     <control
-      id="twapowerbuttonoff"
+      id="twaPowerButtonOff"
       description="TWA: POWER Button - Off"
       label="Off"
       type="button"

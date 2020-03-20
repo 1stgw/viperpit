@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="avionicsgpsswitchon"
+      id="avionicsGpsSwitchOn"
       description="AVIONICS: GPS Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="avionicsgpsswitchoff"
+      id="avionicsGpsSwitchOff"
       description="AVIONICS: GPS Switch - OFF"
       label="OFF"
       type="switch"

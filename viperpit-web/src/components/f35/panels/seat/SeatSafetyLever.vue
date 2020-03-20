@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="seatsafetyleverarmed"
+      id="seatSafetyLeverArmed"
       description="SEAT: Safety Lever - Armed"
       label="Armed"
       type="button"
       role="none"
     />
     <control
-      id="seatsafetyleverlocked"
+      id="seatSafetyLeverLocked"
       description="SEAT: Safety Lever - Locked"
       label="Locked"
       type="button"

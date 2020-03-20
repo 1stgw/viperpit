@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="extanticollisionswitchon"
+      id="extAntiCollisionSwitchOn"
       description="EXT: ANTI COLLISION Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="extanticollisionswitchoff"
+      id="extAntiCollisionSwitchOff"
       description="EXT: ANTI COLLISION Switch - OFF"
       label="OFF"
       type="switch"

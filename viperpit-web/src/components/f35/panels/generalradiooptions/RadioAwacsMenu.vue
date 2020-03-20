@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="radioawacsmenu"
+      id="radioAwacsMenu"
       description="RADIO: AWACS Menu"
       label="AWACS Menu"
       type="button"

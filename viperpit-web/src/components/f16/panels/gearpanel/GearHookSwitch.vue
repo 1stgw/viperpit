@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="gearhookswitchup"
+      id="gearHookSwitchUp"
       description="GEAR: HOOK Switch - UP"
       label="UP"
       type="switch"
       role="up"
     />
     <control
-      id="gearhookswitchdn"
+      id="gearHookSwitchDn"
       description="GEAR: HOOK Switch - DN"
       label="DN"
       type="switch"

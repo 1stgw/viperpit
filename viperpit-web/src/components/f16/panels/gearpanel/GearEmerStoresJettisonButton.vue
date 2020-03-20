@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="gearemerstoresjettisonbuttonhold"
+      id="gearEmerStoresJettisonButtonHold"
       description="GEAR: EMER STORES JETTISON Button - Hold"
       label="EMER STORES JETTISON"
       type="button"

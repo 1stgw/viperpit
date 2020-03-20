@@ -6,28 +6,28 @@
     type="button"
   >
     <control
-      id="hmcshmscknobbrightnessincr"
+      id="hmcsHmscKnobBrightnessIncr"
       description="HMCS: HMSC Knob - Brightness Incr."
       label="Brightness Incr."
       type="button"
       role="up"
     />
     <control
-      id="hmcshmscknobbrightnessdecr"
+      id="hmcsHmscKnobBrightnessDecr"
       description="HMCS: HMSC Knob - Brightness Decr."
       label="Brightness Decr."
       type="button"
       role="down"
     />
     <control
-      id="hmcshmscknobon"
+      id="hmcsHmscKnobOn"
       description="HMCS: HMSC Knob - ON"
       label="ON"
       type="button"
       role="on"
     />
     <control
-      id="hmcshmscknoboff"
+      id="hmcsHmscKnobOff"
       description="HMCS: HMSC Knob - OFF"
       label="OFF"
       type="button"

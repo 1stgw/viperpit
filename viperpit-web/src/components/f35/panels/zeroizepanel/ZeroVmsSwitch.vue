@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="zerovmsswitchon"
+      id="zeroVmsSwitchOn"
       description="ZERO: VMS Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="zerovmsswitchinhibit"
+      id="zeroVmsSwitchInhibit"
       description="ZERO: VMS Switch - INHIBIT"
       label="INHIBIT"
       type="switch"

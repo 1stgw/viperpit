@@ -6,28 +6,28 @@
     type="switch"
   >
     <control
-      id="airairsourceknoboff"
+      id="airAirSourceKnobOff"
       description="AIR: AIR SOURCE Knob - OFF"
       label="OFF"
       type="switch"
       role="off"
     />
     <control
-      id="airairsourceknobnorm"
+      id="airAirSourceKnobNorm"
       description="AIR: AIR SOURCE Knob - NORM"
       label="NORM"
       type="switch"
       role="on"
     />
     <control
-      id="airairsourceknobdump"
+      id="airAirSourceKnobDump"
       description="AIR: AIR SOURCE Knob - DUMP"
       label="DUMP"
       type="switch"
       role="none"
     />
     <control
-      id="airairsourceknobram"
+      id="airAirSourceKnobRam"
       description="AIR: AIR SOURCE Knob - RAM"
       label="RAM"
       type="switch"

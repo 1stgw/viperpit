@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="fltflcsswitchhold"
+      id="fltFlcsSwitchHold"
       description="FLT: FLCS Switch - Hold"
       label="FLCS"
       type="button"

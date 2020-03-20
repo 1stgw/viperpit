@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="audio1threatknobvolumeincr"
+      id="audio1ThreatKnobVolumeIncr"
       description="AUDIO1: THREAT Knob - Volume Incr."
       label="Volume Incr."
       type="button"
       role="up"
     />
     <control
-      id="audio1threatknobvolumedecr"
+      id="audio1ThreatKnobVolumeDecr"
       description="AUDIO1: THREAT Knob - Volume Decr."
       label="Volume Decr."
       type="button"

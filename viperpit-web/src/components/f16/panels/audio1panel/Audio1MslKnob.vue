@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="audio1mslknobvolumeincr"
+      id="audio1MslKnobVolumeIncr"
       description="AUDIO1: MSL Knob - Volume Incr."
       label="Volume Incr."
       type="button"
       role="up"
     />
     <control
-      id="audio1mslknobvolumedecr"
+      id="audio1MslKnobVolumeDecr"
       description="AUDIO1: MSL Knob - Volume Decr."
       label="Volume Decr."
       type="button"

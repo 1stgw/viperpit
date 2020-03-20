@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="engjfsswitchoff"
+      id="engJfsSwitchOff"
       description="ENG: JFS Switch - OFF"
       label="OFF"
       type="switch"
       role="off"
     />
     <control
-      id="engjfsswitchstart2"
+      id="engJfsSwitchStart2"
       description="ENG: JFS Switch - START 2"
       label="START 2"
       type="switch"

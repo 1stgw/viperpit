@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="cmdsjmrswitchpoweron"
+      id="cmdsJmrSwitchPowerOn"
       description="CMDS: JMR Switch - Power ON"
       label="Power ON"
       type="switch"
       role="on"
     />
     <control
-      id="cmdsjmrswitchpoweroff"
+      id="cmdsJmrSwitchPowerOff"
       description="CMDS: JMR Switch - Power OFF"
       label="Power OFF"
       type="switch"

@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="viewextorbitcamera"
+      id="viewextOrbitCamera"
       description="VIEWEXT: Orbit Camera"
       label="Orbit Camera"
       type="button"

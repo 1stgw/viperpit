@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="eyefackbuttonpush"
+      id="eyeFAckButtonPush"
       description="EYE: F ACK Button - Push"
       label="F ACK"
       type="button"

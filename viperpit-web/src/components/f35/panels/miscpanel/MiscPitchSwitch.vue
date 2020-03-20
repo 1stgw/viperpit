@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="miscpitchswitchalthold"
+      id="miscPitchSwitchAltHold"
       description="MISC: PITCH Switch - ALT HOLD"
       label="ALT HOLD"
       type="switch"
       role="none"
     />
     <control
-      id="miscpitchswitchapoff"
+      id="miscPitchSwitchAPOff"
       description="MISC: PITCH Switch - A/P OFF"
       label="A/P OFF"
       type="switch"
       role="off"
     />
     <control
-      id="miscpitchswitchatthold"
+      id="miscPitchSwitchAttHold"
       description="MISC: PITCH Switch - ATT HOLD"
       label="ATT HOLD"
       type="switch"

@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="testfireoheatdetectbuttonhold"
+      id="testFireOheatDetectButtonHold"
       description="TEST: FIRE & OHEAT DETECT Button - Hold"
       label="FIRE & OHEAT DETECT"
       type="button"

@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="fltmanualtfflyupswitchdisable"
+      id="fltManualTfFlyupSwitchDisable"
       description="FLT: MANUAL TF FLYUP Switch - DISABLE"
       label="DISABLE"
       type="switch"
       role="off"
     />
     <control
-      id="fltmanualtfflyupswitchenable"
+      id="fltManualTfFlyupSwitchEnable"
       description="FLT: MANUAL TF FLYUP Switch - ENABLE"
       label="ENABLE"
       type="switch"

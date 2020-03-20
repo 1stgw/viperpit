@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="testmalindltsbuttonhold"
+      id="testMalIndLtsButtonHold"
       description="TEST: MAL & IND LTS Button - Hold"
       label="MAL & IND LTS"
       type="button"

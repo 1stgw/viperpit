@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="radiotankermenu"
+      id="radioTankerMenu"
       description="RADIO: Tanker Menu"
       label="Tanker Menu"
       type="button"

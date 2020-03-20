@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="twpsystestpush"
+      id="twpSysTestPush"
       description="TWP: SYS TEST - Push"
       label="SYS TEST"
       type="button"

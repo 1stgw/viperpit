@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="huddeprretswitchstby"
+      id="hudDeprRetSwitchStby"
       description="HUD: DEPR RET Switch - STBY"
       label="STBY"
       type="switch"
       role="none"
     />
     <control
-      id="huddeprretswitchpri"
+      id="hudDeprRetSwitchPri"
       description="HUD: DEPR RET Switch - PRI"
       label="PRI"
       type="switch"
       role="none"
     />
     <control
-      id="huddeprretswitchoff"
+      id="hudDeprRetSwitchOff"
       description="HUD: DEPR RET Switch - OFF"
       label="OFF"
       type="switch"

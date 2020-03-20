@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="fuelmasterswitchon"
+      id="fuelMasterSwitchOn"
       description="FUEL: MASTER Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="fuelmasterswitchoff"
+      id="fuelMasterSwitchOff"
       description="FUEL: MASTER Switch - OFF"
       label="OFF"
       type="switch"

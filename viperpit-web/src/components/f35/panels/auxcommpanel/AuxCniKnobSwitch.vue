@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="auxcniknobswitchbackup"
+      id="auxCniKnobSwitchBackup"
       description="AUX: CNI Knob Switch - BACKUP"
       label="BACKUP"
       type="switch"
       role="none"
     />
     <control
-      id="auxcniknobswitchufc"
+      id="auxCniKnobSwitchUfc"
       description="AUX: CNI Knob Switch - UFC"
       label="UFC"
       type="switch"

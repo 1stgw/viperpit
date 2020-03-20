@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="lightdedknobprimarystepup"
+      id="lightDedKnobPrimaryStepUp"
       description="LIGHT: DED Knob (Primary) - Step Up"
       label="Step Up"
       type="button"
       role="up"
     />
     <control
-      id="lightdedknobprimarystepdown"
+      id="lightDedKnobPrimaryStepDown"
       description="LIGHT: DED Knob (Primary) - Step Down"
       label="Step Down"
       type="button"

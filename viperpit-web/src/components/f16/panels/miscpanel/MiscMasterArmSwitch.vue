@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="miscmasterarmswitchon"
+      id="miscMasterArmSwitchOn"
       description="MISC: MASTER ARM Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="miscmasterarmswitchoff"
+      id="miscMasterArmSwitchOff"
       description="MISC: MASTER ARM Switch - OFF"
       label="OFF"
       type="switch"
       role="off"
     />
     <control
-      id="miscmasterarmswitchsim"
+      id="miscMasterArmSwitchSim"
       description="MISC: MASTER ARM Switch - SIM"
       label="SIM"
       type="switch"

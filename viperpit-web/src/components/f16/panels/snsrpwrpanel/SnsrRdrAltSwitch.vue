@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="snsrrdraltswitchon"
+      id="snsrRdrAltSwitchOn"
       description="SNSR: RDR ALT Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="snsrrdraltswitchstdby"
+      id="snsrRdrAltSwitchStdby"
       description="SNSR: RDR ALT Switch - STDBY"
       label="STDBY"
       type="switch"
       role="none"
     />
     <control
-      id="snsrrdraltswitchoff"
+      id="snsrRdrAltSwitchOff"
       description="SNSR: RDR ALT Switch - OFF"
       label="OFF"
       type="switch"

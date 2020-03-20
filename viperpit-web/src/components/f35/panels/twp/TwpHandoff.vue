@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="twphandoffpush"
+      id="twpHandoffPush"
       description="TWP: HANDOFF - Push"
       label="HANDOFF"
       type="button"

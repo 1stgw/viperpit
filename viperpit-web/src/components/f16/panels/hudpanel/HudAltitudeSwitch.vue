@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="hudaltitudeswitchradar"
+      id="hudAltitudeSwitchRadar"
       description="HUD: Altitude Switch - RADAR"
       label="RADAR"
       type="switch"
       role="none"
     />
     <control
-      id="hudaltitudeswitchbaro"
+      id="hudAltitudeSwitchBaro"
       description="HUD: Altitude Switch - BARO"
       label="BARO"
       type="switch"
       role="none"
     />
     <control
-      id="hudaltitudeswitchauto"
+      id="hudAltitudeSwitchAuto"
       description="HUD: Altitude Switch - AUTO"
       label="AUTO"
       type="switch"

@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="leftwallcanopyopen"
+      id="leftWallCanopyOpen"
       description="LEFT WALL: CANOPY - Open"
       label="Open"
       type="button"
       role="none"
     />
     <control
-      id="leftwallcanopyclose"
+      id="leftWallCanopyClose"
       description="LEFT WALL: CANOPY - Close"
       label="Close"
       type="button"

@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="trimrolltrimwheellwingdn"
+      id="trimRollTrimWheelLWingDn"
       description="TRIM: ROLL TRIM Wheel - L WING DN"
       label="L WING DN"
       type="button"
       role="down"
     />
     <control
-      id="trimrolltrimwheelrwingdn"
+      id="trimRollTrimWheelRWingDn"
       description="TRIM: ROLL TRIM Wheel - R WING DN"
       label="R WING DN"
       type="button"

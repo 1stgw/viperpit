@@ -6,28 +6,28 @@
     type="switch"
   >
     <control
-      id="fuelengfeedknoboff"
+      id="fuelEngFeedKnobOff"
       description="FUEL: ENG FEED Knob - OFF"
       label="OFF"
       type="switch"
       role="off"
     />
     <control
-      id="fuelengfeedknobnorm"
+      id="fuelEngFeedKnobNorm"
       description="FUEL: ENG FEED Knob - NORM"
       label="NORM"
       type="switch"
       role="on"
     />
     <control
-      id="fuelengfeedknobaft"
+      id="fuelEngFeedKnobAft"
       description="FUEL: ENG FEED Knob - AFT"
       label="AFT"
       type="switch"
       role="none"
     />
     <control
-      id="fuelengfeedknobfwd"
+      id="fuelEngFeedKnobFwd"
       description="FUEL: ENG FEED Knob - FWD"
       label="FWD"
       type="switch"

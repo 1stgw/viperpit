@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="radioelementmenu"
+      id="radioElementMenu"
       description="RADIO: Element Menu"
       label="Element Menu"
       type="button"

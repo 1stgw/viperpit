@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="geargndjettswitchenable"
+      id="gearGndJettSwitchEnable"
       description="GEAR: GND JETT Switch - ENABLE"
       label="ENABLE"
       type="switch"
       role="on"
     />
     <control
-      id="geargndjettswitchoff"
+      id="gearGndJettSwitchOff"
       description="GEAR: GND JETT Switch - OFF"
       label="OFF"
       type="switch"

@@ -6,28 +6,28 @@
     type="switch"
   >
     <control
-      id="instrmodeknobilstcn"
+      id="instrModeKnobIlsTcn"
       description="INSTR: MODE Knob - ILS/TCN"
       label="ILS/TCN"
       type="switch"
       role="none"
     />
     <control
-      id="instrmodeknobtcn"
+      id="instrModeKnobTcn"
       description="INSTR: MODE Knob - TCN"
       label="TCN"
       type="switch"
       role="none"
     />
     <control
-      id="instrmodeknobnav"
+      id="instrModeKnobNav"
       description="INSTR: MODE Knob - NAV"
       label="NAV"
       type="switch"
       role="none"
     />
     <control
-      id="instrmodeknobilsnav"
+      id="instrModeKnobIlsNav"
       description="INSTR: MODE Knob - ILS/NAV"
       label="ILS/NAV"
       type="switch"

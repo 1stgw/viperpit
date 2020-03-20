@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="simtoggleexitsimmenu"
+      id="simToggleExitSimMenu"
       description="SIM: Toggle Exit Sim Menu"
       label="Toggle Exit Sim Menu"
       type="button"

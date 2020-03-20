@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="viewintpadlock"
+      id="viewintPadlock"
       description="VIEWINT: Padlock"
       label="Padlock"
       type="button"

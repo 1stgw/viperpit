@@ -6,28 +6,28 @@
     type="button"
   >
     <control
-      id="mainhsicrsknobincrease5"
+      id="mainHsiCrsKnobIncrease5"
       description="MAIN: HSI CRS Knob - Increase (5°)"
       label="Increase (5°)"
       type="button"
       role="none"
     />
     <control
-      id="mainhsicrsknobdecrease5"
+      id="mainHsiCrsKnobDecrease5"
       description="MAIN: HSI CRS Knob - Decrease (5°)"
       label="Decrease (5°)"
       type="button"
       role="none"
     />
     <control
-      id="mainhsicrsknobincrease1"
+      id="mainHsiCrsKnobIncrease1"
       description="MAIN: HSI CRS Knob - Increase (1°)"
       label="Increase (1°)"
       type="button"
       role="none"
     />
     <control
-      id="mainhsicrsknobdecrease1"
+      id="mainHsiCrsKnobDecrease1"
       description="MAIN: HSI CRS Knob - Decrease (1°)"
       label="Decrease (1°)"
       type="button"

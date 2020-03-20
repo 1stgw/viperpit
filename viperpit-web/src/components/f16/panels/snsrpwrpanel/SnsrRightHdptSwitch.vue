@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="snsrrighthdptswitchon"
+      id="snsrRightHdptSwitchOn"
       description="SNSR: RIGHT HDPT Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="snsrrighthdptswitchoff"
+      id="snsrRightHdptSwitchOff"
       description="SNSR: RIGHT HDPT Switch - OFF"
       label="OFF"
       type="switch"

@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="ckpitwheelbrakeshold"
+      id="ckpitWheelBrakesHold"
       description="CKPIT: Wheel Brakes - Hold"
       label="Wheel Brakes"
       type="button"

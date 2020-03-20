@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="viewextsatellitecamera"
+      id="viewextSatelliteCamera"
       description="VIEWEXT: Satellite Camera"
       label="Satellite Camera"
       type="button"

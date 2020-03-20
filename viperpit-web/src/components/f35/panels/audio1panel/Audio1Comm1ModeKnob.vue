@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="audio1comm1modeknobsql"
+      id="audio1Comm1ModeKnobSql"
       description="AUDIO1: COMM 1 Mode Knob - SQL"
       label="SQL"
       type="switch"
       role="none"
     />
     <control
-      id="audio1comm1modeknobgd"
+      id="audio1Comm1ModeKnobGd"
       description="AUDIO1: COMM 1 Mode Knob - GD"
       label="GD"
       type="switch"

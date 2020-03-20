@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="testepugenswitchhold"
+      id="testEpuGenSwitchHold"
       description="TEST: EPU/GEN Switch - Hold"
       label="EPU/GEN"
       type="button"

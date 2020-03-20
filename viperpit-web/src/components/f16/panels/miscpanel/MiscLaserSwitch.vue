@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="misclaserswitcharm"
+      id="miscLaserSwitchArm"
       description="MISC: LASER Switch - ARM"
       label="ARM"
       type="switch"
       role="none"
     />
     <control
-      id="misclaserswitchoff"
+      id="miscLaserSwitchOff"
       description="MISC: LASER Switch - OFF"
       label="OFF"
       type="switch"

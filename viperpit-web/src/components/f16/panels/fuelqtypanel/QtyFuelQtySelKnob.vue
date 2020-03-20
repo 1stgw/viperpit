@@ -6,42 +6,42 @@
     type="switch"
   >
     <control
-      id="qtyfuelqtyselknobtest"
+      id="qtyFuelQtySelKnobTest"
       description="QTY: FUEL QTY SEL Knob - TEST"
       label="TEST"
       type="switch"
       role="none"
     />
     <control
-      id="qtyfuelqtyselknobnorm"
+      id="qtyFuelQtySelKnobNorm"
       description="QTY: FUEL QTY SEL Knob - NORM"
       label="NORM"
       type="switch"
       role="on"
     />
     <control
-      id="qtyfuelqtyselknobrsvr"
+      id="qtyFuelQtySelKnobRsvr"
       description="QTY: FUEL QTY SEL Knob - RSVR"
       label="RSVR"
       type="switch"
       role="none"
     />
     <control
-      id="qtyfuelqtyselknobintwing"
+      id="qtyFuelQtySelKnobIntWing"
       description="QTY: FUEL QTY SEL Knob - INT WING"
       label="INT WING"
       type="switch"
       role="none"
     />
     <control
-      id="qtyfuelqtyselknobextwing"
+      id="qtyFuelQtySelKnobExtWing"
       description="QTY: FUEL QTY SEL Knob - EXT WING"
       label="EXT WING"
       type="switch"
       role="none"
     />
     <control
-      id="qtyfuelqtyselknobextctr"
+      id="qtyFuelQtySelKnobExtCtr"
       description="QTY: FUEL QTY SEL Knob - EXT CTR"
       label="EXT CTR"
       type="switch"

@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="gearlightsswitchlanding"
+      id="gearLightsSwitchLanding"
       description="GEAR: LIGHTS Switch - LANDING"
       label="LANDING"
       type="switch"
       role="none"
     />
     <control
-      id="gearlightsswitchoff"
+      id="gearLightsSwitchOff"
       description="GEAR: LIGHTS Switch - OFF"
       label="OFF"
       type="switch"

@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="trimyawtrimknobl"
+      id="trimYawTrimKnobL"
       description="TRIM: YAW TRIM Knob - L"
       label="L"
       type="button"
       role="left"
     />
     <control
-      id="trimyawtrimknobr"
+      id="trimYawTrimKnobR"
       description="TRIM: YAW TRIM Knob - R"
       label="R"
       type="button"

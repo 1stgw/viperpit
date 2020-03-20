@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="uhfmodeknobmnl"
+      id="uhfModeKnobMnl"
       description="UHF: MODE Knob - MNL"
       label="MNL"
       type="switch"
       role="none"
     />
     <control
-      id="uhfmodeknobpreset"
+      id="uhfModeKnobPreset"
       description="UHF: MODE Knob - PRESET"
       label="PRESET"
       type="switch"
       role="none"
     />
     <control
-      id="uhfmodeknobgrd"
+      id="uhfModeKnobGrd"
       description="UHF: MODE Knob - GRD"
       label="GRD"
       type="switch"

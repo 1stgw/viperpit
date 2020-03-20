@@ -6,28 +6,28 @@
     type="button"
   >
     <control
-      id="avtravtrswitchtoggleonoff"
+      id="avtrAvtrSwitchToggleOnOff"
       description="AVTR: AVTR Switch - Toggle ON / OFF"
       label="Toggle ON / OFF"
       type="button"
       role="off"
     />
     <control
-      id="avtravtrswitchon"
+      id="avtrAvtrSwitchOn"
       description="AVTR: AVTR Switch - ON"
       label="ON"
       type="button"
       role="on"
     />
     <control
-      id="avtravtrswitchauto"
+      id="avtrAvtrSwitchAuto"
       description="AVTR: AVTR Switch - AUTO"
       label="AUTO"
       type="button"
       role="none"
     />
     <control
-      id="avtravtrswitchoff"
+      id="avtrAvtrSwitchOff"
       description="AVTR: AVTR Switch - OFF"
       label="OFF"
       type="button"

@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="miscadvmodetoggletfronoff"
+      id="miscAdvModeToggleTfrOnOff"
       description="MISC: ADV MODE - Toggle TFR On / Off"
       label="ADV MODE"
       type="button"

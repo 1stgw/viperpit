@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="fltdigitalswitchbackup"
+      id="fltDigitalSwitchBackup"
       description="FLT: DIGITAL Switch - BACKUP"
       label="BACKUP"
       type="switch"
       role="none"
     />
     <control
-      id="fltdigitalswitchoff"
+      id="fltDigitalSwitchOff"
       description="FLT: DIGITAL Switch - OFF"
       label="OFF"
       type="switch"

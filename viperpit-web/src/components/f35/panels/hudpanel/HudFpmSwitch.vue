@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="hudfpmswitchattfpm"
+      id="hudFpmSwitchAttFpm"
       description="HUD: FPM Switch - ATT/FPM"
       label="ATT/FPM"
       type="switch"
       role="none"
     />
     <control
-      id="hudfpmswitchfpm"
+      id="hudFpmSwitchFpm"
       description="HUD: FPM Switch - FPM"
       label="FPM"
       type="switch"
       role="none"
     />
     <control
-      id="hudfpmswitchoff"
+      id="hudFpmSwitchOff"
       description="HUD: FPM Switch - OFF"
       label="OFF"
       type="switch"

@@ -6,56 +6,56 @@
     type="button"
   >
     <control
-      id="auxchannelcycleupleftdigit"
+      id="auxChannelCycleUpLeftDigit"
       description="AUX: CHANNEL - Cycle Up Left Digit"
       label="Cycle Up Left Digit"
       type="button"
       role="none"
     />
     <control
-      id="auxchannelcycledownleftdigit"
+      id="auxChannelCycleDownLeftDigit"
       description="AUX: CHANNEL - Cycle Down Left Digit"
       label="Cycle Down Left Digit"
       type="button"
       role="none"
     />
     <control
-      id="auxchannelcycleupcenterdigit"
+      id="auxChannelCycleUpCenterDigit"
       description="AUX: CHANNEL - Cycle Up Center Digit"
       label="Cycle Up Center Digit"
       type="button"
       role="none"
     />
     <control
-      id="auxchannelcycledowncenterdig"
+      id="auxChannelCycleDownCenterDig"
       description="AUX: CHANNEL - Cycle Down Center Dig."
       label="Cycle Down Center Dig."
       type="button"
       role="none"
     />
     <control
-      id="auxchannelcycleuprightdigit"
+      id="auxChannelCycleUpRightDigit"
       description="AUX: CHANNEL - Cycle Up Right Digit"
       label="Cycle Up Right Digit"
       type="button"
       role="none"
     />
     <control
-      id="auxchannelcycledownrightdigit"
+      id="auxChannelCycleDownRightDigit"
       description="AUX: CHANNEL - Cycle Down Right Digit"
       label="Cycle Down Right Digit"
       type="button"
       role="none"
     />
     <control
-      id="auxchanneltogglebandx"
+      id="auxChannelToggleBandX"
       description="AUX: CHANNEL - Toggle Band X"
       label="Toggle Band X"
       type="button"
       role="none"
     />
     <control
-      id="auxchanneltogglebandy"
+      id="auxChannelToggleBandY"
       description="AUX: CHANNEL - Toggle Band Y"
       label="Toggle Band Y"
       type="button"

@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="auxstationselectorswitchtr"
+      id="auxStationSelectorSwitchTR"
       description="AUX: STATION SELECTOR Switch - T/R"
       label="T/R"
       type="switch"
       role="none"
     />
     <control
-      id="auxstationselectorswitchaatr"
+      id="auxStationSelectorSwitchAATr"
       description="AUX: STATION SELECTOR Switch - A/A TR"
       label="A/A TR"
       type="switch"

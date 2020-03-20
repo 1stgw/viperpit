@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="viewintsnap3dcockpit"
+      id="viewintSnap3dCockpit"
       description="VIEWINT: Snap (3D) Cockpit"
       label="Snap (3D) Cockpit"
       type="button"

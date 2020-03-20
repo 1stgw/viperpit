@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="snsrfcrswitchon"
+      id="snsrFcrSwitchOn"
       description="SNSR: FCR Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="snsrfcrswitchoff"
+      id="snsrFcrSwitchOff"
       description="SNSR: FCR Switch - OFF"
       label="OFF"
       type="switch"

@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="viewextflybycamera"
+      id="viewextFlybyCamera"
       description="VIEWEXT: Flyby Camera"
       label="Flyby Camera"
       type="button"

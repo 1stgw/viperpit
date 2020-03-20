@@ -6,28 +6,28 @@
     type="button"
   >
     <control
-      id="mainaltimeterpressureknobincr5"
+      id="mainAltimeterPressureKnobIncr5"
       description="MAIN: Altimeter Pressure Knob - Incr. (5°)"
       label="Incr. (5°)"
       type="button"
       role="none"
     />
     <control
-      id="mainaltimeterpressureknobdecr5"
+      id="mainAltimeterPressureKnobDecr5"
       description="MAIN: Altimeter Pressure Knob - Decr. (5°)"
       label="Decr. (5°)"
       type="button"
       role="none"
     />
     <control
-      id="mainaltimeterpressureknobincr1"
+      id="mainAltimeterPressureKnobIncr1"
       description="MAIN: Altimeter Pressure Knob - Incr. (1°)"
       label="Incr. (1°)"
       type="button"
       role="none"
     />
     <control
-      id="mainaltimeterpressureknobdecr1"
+      id="mainAltimeterPressureKnobDecr1"
       description="MAIN: Altimeter Pressure Knob - Decr. (1°)"
       label="Decr. (1°)"
       type="button"

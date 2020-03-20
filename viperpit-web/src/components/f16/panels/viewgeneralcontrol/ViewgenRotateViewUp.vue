@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="viewgenrotateviewup"
+      id="viewgenRotateViewUp"
       description="VIEWGEN: Rotate View Up"
       label="Rotate View Up"
       type="button"

@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="avionicssmsswitchon"
+      id="avionicsSmsSwitchOn"
       description="AVIONICS: SMS Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="avionicssmsswitchoff"
+      id="avionicsSmsSwitchOff"
       description="AVIONICS: SMS Switch - OFF"
       label="OFF"
       type="switch"

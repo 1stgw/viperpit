@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="extmasterswitchnorm"
+      id="extMasterSwitchNorm"
       description="EXT: MASTER Switch - NORM"
       label="NORM"
       type="switch"
       role="on"
     />
     <control
-      id="extmasterswitchoff"
+      id="extMasterSwitchOff"
       description="EXT: MASTER Switch - OFF"
       label="OFF"
       type="switch"

@@ -1,8 +1,7 @@
 {
   "action": [
     {
-      "id": "testfireoheatdetectbuttonhold",
-      "clazz": "TestFireOheatDetectButtonHold",
+      "id": "testFireOheatDetectButtonHold",
       "callback": "SimOverHeat",
       "description": "TEST: FIRE & OHEAT DETECT Button - Hold",
       "category": "LEFT CONSOLE",
@@ -13,8 +12,7 @@
       "type": "button"
     },
     {
-      "id": "testoxyqtyswitchhold",
-      "clazz": "TestOxyQtySwitchHold",
+      "id": "testOxyQtySwitchHold",
       "callback": "SimOBOGSBit",
       "description": "TEST: OXY QTY Switch - Hold",
       "category": "LEFT CONSOLE",
@@ -25,11 +23,10 @@
       "type": "button"
     },
     {
-      "id": "testmalindltsbuttonhold",
-      "clazz": "TestMalIndLtsButtonHold",
+      "id": "testMalIndLtsButtonHold",
       "callback": "SimMalIndLights",
       "relatedActions": [
-        "testmalindltsbuttonrelease"
+        "testMalIndLtsButtonRelease"
       ],
       "description": "TEST: MAL & IND LTS Button - Hold",
       "category": "LEFT CONSOLE",
@@ -40,14 +37,13 @@
       "type": "button"
     },
     {
-      "id": "testprobeheatswitchon",
-      "clazz": "TestProbeHeatSwitchOn",
+      "id": "testProbeHeatSwitchOn",
       "callback": "SimProbeHeatOn",
       "relatedActions": [
-        "testprobeheatswitchstepup",
-        "testprobeheatswitchstepdown",
-        "testprobeheatswitchoff",
-        "testprobeheatswitchtest"
+        "testProbeHeatSwitchStepUp",
+        "testProbeHeatSwitchStepDown",
+        "testProbeHeatSwitchOff",
+        "testProbeHeatSwitchTest"
       ],
       "description": "TEST: PROBE HEAT Switch - ON",
       "category": "LEFT CONSOLE",
@@ -63,14 +59,13 @@
       }
     },
     {
-      "id": "testprobeheatswitchoff",
-      "clazz": "TestProbeHeatSwitchOff",
+      "id": "testProbeHeatSwitchOff",
       "callback": "SimProbeHeatOff",
       "relatedActions": [
-        "testprobeheatswitchstepup",
-        "testprobeheatswitchstepdown",
-        "testprobeheatswitchon",
-        "testprobeheatswitchtest"
+        "testProbeHeatSwitchStepUp",
+        "testProbeHeatSwitchStepDown",
+        "testProbeHeatSwitchOn",
+        "testProbeHeatSwitchTest"
       ],
       "description": "TEST: PROBE HEAT Switch - OFF",
       "category": "LEFT CONSOLE",
@@ -86,14 +81,13 @@
       }
     },
     {
-      "id": "testprobeheatswitchtest",
-      "clazz": "TestProbeHeatSwitchTest",
+      "id": "testProbeHeatSwitchTest",
       "callback": "SimProbeHeatTest",
       "relatedActions": [
-        "testprobeheatswitchstepup",
-        "testprobeheatswitchstepdown",
-        "testprobeheatswitchon",
-        "testprobeheatswitchoff"
+        "testProbeHeatSwitchStepUp",
+        "testProbeHeatSwitchStepDown",
+        "testProbeHeatSwitchOn",
+        "testProbeHeatSwitchOff"
       ],
       "description": "TEST: PROBE HEAT Switch - TEST",
       "category": "LEFT CONSOLE",
@@ -109,8 +103,7 @@
       }
     },
     {
-      "id": "testepugenswitchhold",
-      "clazz": "TestEpuGenSwitchHold",
+      "id": "testEpuGenSwitchHold",
       "callback": "SimEpuGenTest",
       "description": "TEST: EPU/GEN Switch - Hold",
       "category": "LEFT CONSOLE",
@@ -121,8 +114,7 @@
       "type": "button"
     },
     {
-      "id": "testflcspwrtestswitchhold",
-      "clazz": "TestFlcsPwrTestSwitchHold",
+      "id": "testFlcsPwrTestSwitchHold",
       "callback": "SimFlcsPowerTest",
       "description": "TEST: FLCS PWR TEST Switch - Hold",
       "category": "LEFT CONSOLE",
@@ -133,12 +125,11 @@
       "type": "button"
     },
     {
-      "id": "fltdigitalswitchbackup",
-      "clazz": "FltDigitalSwitchBackup",
+      "id": "fltDigitalSwitchBackup",
       "callback": "SimDigitalBUPBackup",
       "relatedActions": [
-        "fltdigitalswitchtoggle",
-        "fltdigitalswitchoff"
+        "fltDigitalSwitchToggle",
+        "fltDigitalSwitchOff"
       ],
       "description": "FLT: DIGITAL Switch - BACKUP",
       "category": "LEFT CONSOLE",
@@ -154,12 +145,11 @@
       }
     },
     {
-      "id": "fltdigitalswitchoff",
-      "clazz": "FltDigitalSwitchOff",
+      "id": "fltDigitalSwitchOff",
       "callback": "SimDigitalBUPOff",
       "relatedActions": [
-        "fltdigitalswitchtoggle",
-        "fltdigitalswitchbackup"
+        "fltDigitalSwitchToggle",
+        "fltDigitalSwitchBackup"
       ],
       "description": "FLT: DIGITAL Switch - OFF",
       "category": "LEFT CONSOLE",
@@ -175,12 +165,11 @@
       }
     },
     {
-      "id": "fltaltflapsswitchextend",
-      "clazz": "FltAltFlapsSwitchExtend",
+      "id": "fltAltFlapsSwitchExtend",
       "callback": "SimAltFlapsExtend",
       "relatedActions": [
-        "fltaltflapsswitchtoggle",
-        "fltaltflapsswitchnorm"
+        "fltAltFlapsSwitchToggle",
+        "fltAltFlapsSwitchNorm"
       ],
       "description": "FLT: ALT FLAPS Switch - EXTEND",
       "category": "LEFT CONSOLE",
@@ -196,12 +185,11 @@
       }
     },
     {
-      "id": "fltaltflapsswitchnorm",
-      "clazz": "FltAltFlapsSwitchNorm",
+      "id": "fltAltFlapsSwitchNorm",
       "callback": "SimAltFlapsNorm",
       "relatedActions": [
-        "fltaltflapsswitchtoggle",
-        "fltaltflapsswitchextend"
+        "fltAltFlapsSwitchToggle",
+        "fltAltFlapsSwitchExtend"
       ],
       "description": "FLT: ALT FLAPS Switch - NORM",
       "category": "LEFT CONSOLE",
@@ -217,12 +205,11 @@
       }
     },
     {
-      "id": "fltmanualtfflyupswitchdisable",
-      "clazz": "FltManualTfFlyupSwitchDisable",
+      "id": "fltManualTfFlyupSwitchDisable",
       "callback": "SimManualFlyupDisable",
       "relatedActions": [
-        "fltmanualtfflyupswitchtoggle",
-        "fltmanualtfflyupswitchenable"
+        "fltManualTfFlyupSwitchToggle",
+        "fltManualTfFlyupSwitchEnable"
       ],
       "description": "FLT: MANUAL TF FLYUP Switch - DISABLE",
       "category": "LEFT CONSOLE",
@@ -238,12 +225,11 @@
       }
     },
     {
-      "id": "fltmanualtfflyupswitchenable",
-      "clazz": "FltManualTfFlyupSwitchEnable",
+      "id": "fltManualTfFlyupSwitchEnable",
       "callback": "SimManualFlyupEnable",
       "relatedActions": [
-        "fltmanualtfflyupswitchtoggle",
-        "fltmanualtfflyupswitchdisable"
+        "fltManualTfFlyupSwitchToggle",
+        "fltManualTfFlyupSwitchDisable"
       ],
       "description": "FLT: MANUAL TF FLYUP Switch - ENABLE",
       "category": "LEFT CONSOLE",
@@ -259,12 +245,11 @@
       }
     },
     {
-      "id": "fltleflapsswitchlock",
-      "clazz": "FltLeFlapsSwitchLock",
+      "id": "fltLeFlapsSwitchLock",
       "callback": "SimLEFLock",
       "relatedActions": [
-        "fltleflapsswitchtoggle",
-        "fltleflapsswitchauto"
+        "fltLeFlapsSwitchToggle",
+        "fltLeFlapsSwitchAuto"
       ],
       "description": "FLT: LE FLAPS Switch - LOCK",
       "category": "LEFT CONSOLE",
@@ -280,12 +265,11 @@
       }
     },
     {
-      "id": "fltleflapsswitchauto",
-      "clazz": "FltLeFlapsSwitchAuto",
+      "id": "fltLeFlapsSwitchAuto",
       "callback": "SimLEFAuto",
       "relatedActions": [
-        "fltleflapsswitchtoggle",
-        "fltleflapsswitchlock"
+        "fltLeFlapsSwitchToggle",
+        "fltLeFlapsSwitchLock"
       ],
       "description": "FLT: LE FLAPS Switch - AUTO",
       "category": "LEFT CONSOLE",
@@ -301,8 +285,7 @@
       }
     },
     {
-      "id": "fltflcsswitchhold",
-      "clazz": "FltFlcsSwitchHold",
+      "id": "fltFlcsSwitchHold",
       "callback": "SimFLCSReset",
       "description": "FLT: FLCS Switch - Hold",
       "category": "LEFT CONSOLE",
@@ -313,8 +296,7 @@
       "type": "button"
     },
     {
-      "id": "fltbitswitchpush",
-      "clazz": "FltBitSwitchPush",
+      "id": "fltBitSwitchPush",
       "callback": "SimFLTBIT",
       "description": "FLT: BIT Switch - Push",
       "category": "LEFT CONSOLE",
@@ -325,11 +307,10 @@
       "type": "button"
     },
     {
-      "id": "trimrolltrimwheellwingdn",
-      "clazz": "TrimRollTrimWheelLWingDn",
+      "id": "trimRollTrimWheelLWingDn",
       "callback": "SimTrimRollLeft",
       "relatedActions": [
-        "trimrolltrimwheelrwingdn"
+        "trimRollTrimWheelRWingDn"
       ],
       "description": "TRIM: ROLL TRIM Wheel - L WING DN",
       "category": "LEFT CONSOLE",
@@ -340,11 +321,10 @@
       "type": "button"
     },
     {
-      "id": "trimrolltrimwheelrwingdn",
-      "clazz": "TrimRollTrimWheelRWingDn",
+      "id": "trimRollTrimWheelRWingDn",
       "callback": "SimTrimRollRight",
       "relatedActions": [
-        "trimrolltrimwheellwingdn"
+        "trimRollTrimWheelLWingDn"
       ],
       "description": "TRIM: ROLL TRIM Wheel - R WING DN",
       "category": "LEFT CONSOLE",
@@ -355,12 +335,11 @@
       "type": "button"
     },
     {
-      "id": "trimtrimapdiscswitchdisc",
-      "clazz": "TrimTrimApDiscSwitchDisc",
+      "id": "trimTrimApDiscSwitchDisc",
       "callback": "SimTrimAPDISC",
       "relatedActions": [
-        "trimtrimapdiscswitchtoggle",
-        "trimtrimapdiscswitchnorm"
+        "trimTrimApDiscSwitchToggle",
+        "trimTrimApDiscSwitchNorm"
       ],
       "description": "TRIM: TRIM/AP DISC Switch - DISC",
       "category": "LEFT CONSOLE",
@@ -376,12 +355,11 @@
       }
     },
     {
-      "id": "trimtrimapdiscswitchnorm",
-      "clazz": "TrimTrimApDiscSwitchNorm",
+      "id": "trimTrimApDiscSwitchNorm",
       "callback": "SimTrimAPNORM",
       "relatedActions": [
-        "trimtrimapdiscswitchtoggle",
-        "trimtrimapdiscswitchdisc"
+        "trimTrimApDiscSwitchToggle",
+        "trimTrimApDiscSwitchDisc"
       ],
       "description": "TRIM: TRIM/AP DISC Switch - NORM",
       "category": "LEFT CONSOLE",
@@ -397,11 +375,10 @@
       }
     },
     {
-      "id": "trimyawtrimknobl",
-      "clazz": "TrimYawTrimKnobL",
+      "id": "trimYawTrimKnobL",
       "callback": "SimTrimYawLeft",
       "relatedActions": [
-        "trimyawtrimknobr"
+        "trimYawTrimKnobR"
       ],
       "description": "TRIM: YAW TRIM Knob - L",
       "category": "LEFT CONSOLE",
@@ -412,11 +389,10 @@
       "type": "button"
     },
     {
-      "id": "trimyawtrimknobr",
-      "clazz": "TrimYawTrimKnobR",
+      "id": "trimYawTrimKnobR",
       "callback": "SimTrimYawRight",
       "relatedActions": [
-        "trimyawtrimknobl"
+        "trimYawTrimKnobL"
       ],
       "description": "TRIM: YAW TRIM Knob - R",
       "category": "LEFT CONSOLE",
@@ -427,11 +403,10 @@
       "type": "button"
     },
     {
-      "id": "trimpitchtrimwheelnoseup",
-      "clazz": "TrimPitchTrimWheelNoseUp",
+      "id": "trimPitchTrimWheelNoseUp",
       "callback": "SimTrimNoseUp",
       "relatedActions": [
-        "trimpitchtrimwheelnosedn"
+        "trimPitchTrimWheelNoseDn"
       ],
       "description": "TRIM: PITCH TRIM Wheel - NOSE UP",
       "category": "LEFT CONSOLE",
@@ -442,11 +417,10 @@
       "type": "button"
     },
     {
-      "id": "trimpitchtrimwheelnosedn",
-      "clazz": "TrimPitchTrimWheelNoseDn",
+      "id": "trimPitchTrimWheelNoseDn",
       "callback": "SimTrimNoseDown",
       "relatedActions": [
-        "trimpitchtrimwheelnoseup"
+        "trimPitchTrimWheelNoseUp"
       ],
       "description": "TRIM: PITCH TRIM Wheel - NOSE DN",
       "category": "LEFT CONSOLE",
@@ -457,12 +431,11 @@
       "type": "button"
     },
     {
-      "id": "fuelmasterswitchon",
-      "clazz": "FuelMasterSwitchOn",
+      "id": "fuelMasterSwitchOn",
       "callback": "SimMasterFuelOn",
       "relatedActions": [
-        "fuelmasterswitchtoggle",
-        "fuelmasterswitchoff"
+        "fuelMasterSwitchToggle",
+        "fuelMasterSwitchOff"
       ],
       "description": "FUEL: MASTER Switch - ON",
       "category": "LEFT CONSOLE",
@@ -478,12 +451,11 @@
       }
     },
     {
-      "id": "fuelmasterswitchoff",
-      "clazz": "FuelMasterSwitchOff",
+      "id": "fuelMasterSwitchOff",
       "callback": "SimMasterFuelOff",
       "relatedActions": [
-        "fuelmasterswitchtoggle",
-        "fuelmasterswitchon"
+        "fuelMasterSwitchToggle",
+        "fuelMasterSwitchOn"
       ],
       "description": "FUEL: MASTER Switch - OFF",
       "category": "LEFT CONSOLE",
@@ -499,15 +471,14 @@
       }
     },
     {
-      "id": "fuelengfeedknoboff",
-      "clazz": "FuelEngFeedKnobOff",
+      "id": "fuelEngFeedKnobOff",
       "callback": "SimFuelPumpOff",
       "relatedActions": [
-        "fuelengfeedknobstepup",
-        "fuelengfeedknobstepdown",
-        "fuelengfeedknobnorm",
-        "fuelengfeedknobaft",
-        "fuelengfeedknobfwd"
+        "fuelEngFeedKnobStepUp",
+        "fuelEngFeedKnobStepDown",
+        "fuelEngFeedKnobNorm",
+        "fuelEngFeedKnobAft",
+        "fuelEngFeedKnobFwd"
       ],
       "description": "FUEL: ENG FEED Knob - OFF",
       "category": "LEFT CONSOLE",
@@ -523,15 +494,14 @@
       }
     },
     {
-      "id": "fuelengfeedknobnorm",
-      "clazz": "FuelEngFeedKnobNorm",
+      "id": "fuelEngFeedKnobNorm",
       "callback": "SimFuelPumpNorm",
       "relatedActions": [
-        "fuelengfeedknobstepup",
-        "fuelengfeedknobstepdown",
-        "fuelengfeedknoboff",
-        "fuelengfeedknobaft",
-        "fuelengfeedknobfwd"
+        "fuelEngFeedKnobStepUp",
+        "fuelEngFeedKnobStepDown",
+        "fuelEngFeedKnobOff",
+        "fuelEngFeedKnobAft",
+        "fuelEngFeedKnobFwd"
       ],
       "description": "FUEL: ENG FEED Knob - NORM",
       "category": "LEFT CONSOLE",
@@ -547,15 +517,14 @@
       }
     },
     {
-      "id": "fuelengfeedknobaft",
-      "clazz": "FuelEngFeedKnobAft",
+      "id": "fuelEngFeedKnobAft",
       "callback": "SimFuelPumpAft",
       "relatedActions": [
-        "fuelengfeedknobstepup",
-        "fuelengfeedknobstepdown",
-        "fuelengfeedknoboff",
-        "fuelengfeedknobnorm",
-        "fuelengfeedknobfwd"
+        "fuelEngFeedKnobStepUp",
+        "fuelEngFeedKnobStepDown",
+        "fuelEngFeedKnobOff",
+        "fuelEngFeedKnobNorm",
+        "fuelEngFeedKnobFwd"
       ],
       "description": "FUEL: ENG FEED Knob - AFT",
       "category": "LEFT CONSOLE",
@@ -571,15 +540,14 @@
       }
     },
     {
-      "id": "fuelengfeedknobfwd",
-      "clazz": "FuelEngFeedKnobFwd",
+      "id": "fuelEngFeedKnobFwd",
       "callback": "SimFuelPumpFwd",
       "relatedActions": [
-        "fuelengfeedknobstepup",
-        "fuelengfeedknobstepdown",
-        "fuelengfeedknoboff",
-        "fuelengfeedknobnorm",
-        "fuelengfeedknobaft"
+        "fuelEngFeedKnobStepUp",
+        "fuelEngFeedKnobStepDown",
+        "fuelEngFeedKnobOff",
+        "fuelEngFeedKnobNorm",
+        "fuelEngFeedKnobAft"
       ],
       "description": "FUEL: ENG FEED Knob - FWD",
       "category": "LEFT CONSOLE",
@@ -595,12 +563,11 @@
       }
     },
     {
-      "id": "fuelairrefuelswitchopen",
-      "clazz": "FuelAirRefuelSwitchOpen",
+      "id": "fuelAirRefuelSwitchOpen",
       "callback": "SimFuelDoorOpen",
       "relatedActions": [
-        "fuelairrefuelswitchtoggle",
-        "fuelairrefuelswitchclose"
+        "fuelAirRefuelSwitchToggle",
+        "fuelAirRefuelSwitchClose"
       ],
       "description": "FUEL: AIR REFUEL Switch - OPEN",
       "category": "LEFT CONSOLE",
@@ -616,12 +583,11 @@
       }
     },
     {
-      "id": "fuelairrefuelswitchclose",
-      "clazz": "FuelAirRefuelSwitchClose",
+      "id": "fuelAirRefuelSwitchClose",
       "callback": "SimFuelDoorClose",
       "relatedActions": [
-        "fuelairrefuelswitchtoggle",
-        "fuelairrefuelswitchopen"
+        "fuelAirRefuelSwitchToggle",
+        "fuelAirRefuelSwitchOpen"
       ],
       "description": "FUEL: AIR REFUEL Switch - CLOSE",
       "category": "LEFT CONSOLE",
@@ -637,16 +603,15 @@
       }
     },
     {
-      "id": "auxmasterknoboff",
-      "clazz": "AuxMasterKnobOff",
+      "id": "auxMasterKnobOff",
       "callback": "SimIFFMasterOff",
       "relatedActions": [
-        "auxmasterknobstepup",
-        "auxmasterknobstepdown",
-        "auxmasterknobstby",
-        "auxmasterknoblow",
-        "auxmasterknobnorm",
-        "auxmasterknobemer"
+        "auxMasterKnobStepUp",
+        "auxMasterKnobStepDown",
+        "auxMasterKnobStby",
+        "auxMasterKnobLow",
+        "auxMasterKnobNorm",
+        "auxMasterKnobEmer"
       ],
       "description": "AUX: MASTER Knob - OFF",
       "category": "LEFT CONSOLE",
@@ -662,16 +627,15 @@
       }
     },
     {
-      "id": "auxmasterknobstby",
-      "clazz": "AuxMasterKnobStby",
+      "id": "auxMasterKnobStby",
       "callback": "SimIFFMasterStby",
       "relatedActions": [
-        "auxmasterknobstepup",
-        "auxmasterknobstepdown",
-        "auxmasterknoboff",
-        "auxmasterknoblow",
-        "auxmasterknobnorm",
-        "auxmasterknobemer"
+        "auxMasterKnobStepUp",
+        "auxMasterKnobStepDown",
+        "auxMasterKnobOff",
+        "auxMasterKnobLow",
+        "auxMasterKnobNorm",
+        "auxMasterKnobEmer"
       ],
       "description": "AUX: MASTER Knob - STBY",
       "category": "LEFT CONSOLE",
@@ -687,16 +651,15 @@
       }
     },
     {
-      "id": "auxmasterknoblow",
-      "clazz": "AuxMasterKnobLow",
+      "id": "auxMasterKnobLow",
       "callback": "SimIFFMasterLow",
       "relatedActions": [
-        "auxmasterknobstepup",
-        "auxmasterknobstepdown",
-        "auxmasterknoboff",
-        "auxmasterknobstby",
-        "auxmasterknobnorm",
-        "auxmasterknobemer"
+        "auxMasterKnobStepUp",
+        "auxMasterKnobStepDown",
+        "auxMasterKnobOff",
+        "auxMasterKnobStby",
+        "auxMasterKnobNorm",
+        "auxMasterKnobEmer"
       ],
       "description": "AUX: MASTER Knob - LOW",
       "category": "LEFT CONSOLE",
@@ -712,16 +675,15 @@
       }
     },
     {
-      "id": "auxmasterknobnorm",
-      "clazz": "AuxMasterKnobNorm",
+      "id": "auxMasterKnobNorm",
       "callback": "SimIFFMasterNorm",
       "relatedActions": [
-        "auxmasterknobstepup",
-        "auxmasterknobstepdown",
-        "auxmasterknoboff",
-        "auxmasterknobstby",
-        "auxmasterknoblow",
-        "auxmasterknobemer"
+        "auxMasterKnobStepUp",
+        "auxMasterKnobStepDown",
+        "auxMasterKnobOff",
+        "auxMasterKnobStby",
+        "auxMasterKnobLow",
+        "auxMasterKnobEmer"
       ],
       "description": "AUX: MASTER Knob - NORM",
       "category": "LEFT CONSOLE",
@@ -737,16 +699,15 @@
       }
     },
     {
-      "id": "auxmasterknobemer",
-      "clazz": "AuxMasterKnobEmer",
+      "id": "auxMasterKnobEmer",
       "callback": "SimIFFMasterEmerg",
       "relatedActions": [
-        "auxmasterknobstepup",
-        "auxmasterknobstepdown",
-        "auxmasterknoboff",
-        "auxmasterknobstby",
-        "auxmasterknoblow",
-        "auxmasterknobnorm"
+        "auxMasterKnobStepUp",
+        "auxMasterKnobStepDown",
+        "auxMasterKnobOff",
+        "auxMasterKnobStby",
+        "auxMasterKnobLow",
+        "auxMasterKnobNorm"
       ],
       "description": "AUX: MASTER Knob - EMER",
       "category": "LEFT CONSOLE",
@@ -762,11 +723,10 @@
       }
     },
     {
-      "id": "auxm4codeswitchzero",
-      "clazz": "AuxM4CodeSwitchZero",
+      "id": "auxM4CodeSwitchZero",
       "callback": "SimIFFCodeSwitchZero",
       "relatedActions": [
-        "auxm4codeswitchhold"
+        "auxM4CodeSwitchHold"
       ],
       "description": "AUX: M-4 CODE Switch - ZERO",
       "category": "LEFT CONSOLE",
@@ -782,11 +742,10 @@
       }
     },
     {
-      "id": "auxm4codeswitchhold",
-      "clazz": "AuxM4CodeSwitchHold",
+      "id": "auxM4CodeSwitchHold",
       "callback": "SimIFFCodeSwitchHold",
       "relatedActions": [
-        "auxm4codeswitchzero"
+        "auxM4CodeSwitchZero"
       ],
       "description": "AUX: M-4 CODE Switch - HOLD",
       "category": "LEFT CONSOLE",
@@ -802,12 +761,11 @@
       }
     },
     {
-      "id": "auxcniknobswitchbackup",
-      "clazz": "AuxCniKnobSwitchBackup",
+      "id": "auxCniKnobSwitchBackup",
       "callback": "SimAuxComBackup",
       "relatedActions": [
-        "auxcniknobswitchtoggle",
-        "auxcniknobswitchufc"
+        "auxCniKnobSwitchToggle",
+        "auxCniKnobSwitchUfc"
       ],
       "description": "AUX: CNI Knob Switch - BACKUP",
       "category": "LEFT CONSOLE",
@@ -823,12 +781,11 @@
       }
     },
     {
-      "id": "auxcniknobswitchufc",
-      "clazz": "AuxCniKnobSwitchUfc",
+      "id": "auxCniKnobSwitchUfc",
       "callback": "SimAuxComUFC",
       "relatedActions": [
-        "auxcniknobswitchtoggle",
-        "auxcniknobswitchbackup"
+        "auxCniKnobSwitchToggle",
+        "auxCniKnobSwitchBackup"
       ],
       "description": "AUX: CNI Knob Switch - UFC",
       "category": "LEFT CONSOLE",
@@ -844,15 +801,14 @@
       }
     },
     {
-      "id": "auxreplyswitchb",
-      "clazz": "AuxReplySwitchB",
+      "id": "auxReplySwitchB",
       "callback": "SimIFFMode4ReplyBravo",
       "relatedActions": [
-        "auxreplyswitchcycle",
-        "auxreplyswitchstepup",
-        "auxreplyswitchstepdown",
-        "auxreplyswitcha",
-        "auxreplyswitchout"
+        "auxReplySwitchCycle",
+        "auxReplySwitchStepUp",
+        "auxReplySwitchStepDown",
+        "auxReplySwitchA",
+        "auxReplySwitchOut"
       ],
       "description": "AUX: REPLY Switch - B",
       "category": "LEFT CONSOLE",
@@ -868,15 +824,14 @@
       }
     },
     {
-      "id": "auxreplyswitcha",
-      "clazz": "AuxReplySwitchA",
+      "id": "auxReplySwitchA",
       "callback": "SimIFFMode4ReplyAlpha",
       "relatedActions": [
-        "auxreplyswitchcycle",
-        "auxreplyswitchstepup",
-        "auxreplyswitchstepdown",
-        "auxreplyswitchb",
-        "auxreplyswitchout"
+        "auxReplySwitchCycle",
+        "auxReplySwitchStepUp",
+        "auxReplySwitchStepDown",
+        "auxReplySwitchB",
+        "auxReplySwitchOut"
       ],
       "description": "AUX: REPLY Switch - A",
       "category": "LEFT CONSOLE",
@@ -892,15 +847,14 @@
       }
     },
     {
-      "id": "auxreplyswitchout",
-      "clazz": "AuxReplySwitchOut",
+      "id": "auxReplySwitchOut",
       "callback": "SimIFFMode4ReplyOff",
       "relatedActions": [
-        "auxreplyswitchcycle",
-        "auxreplyswitchstepup",
-        "auxreplyswitchstepdown",
-        "auxreplyswitchb",
-        "auxreplyswitcha"
+        "auxReplySwitchCycle",
+        "auxReplySwitchStepUp",
+        "auxReplySwitchStepDown",
+        "auxReplySwitchB",
+        "auxReplySwitchA"
       ],
       "description": "AUX: REPLY Switch - OUT",
       "category": "LEFT CONSOLE",
@@ -916,12 +870,11 @@
       }
     },
     {
-      "id": "auxmonitorswitchaudio",
-      "clazz": "AuxMonitorSwitchAudio",
+      "id": "auxMonitorSwitchAudio",
       "callback": "SimIFFMode4MonitorAud",
       "relatedActions": [
-        "auxmonitorswitchtoggle",
-        "auxmonitorswitchout"
+        "auxMonitorSwitchToggle",
+        "auxMonitorSwitchOut"
       ],
       "description": "AUX: MONITOR Switch - AUDIO",
       "category": "LEFT CONSOLE",
@@ -937,12 +890,11 @@
       }
     },
     {
-      "id": "auxmonitorswitchout",
-      "clazz": "AuxMonitorSwitchOut",
+      "id": "auxMonitorSwitchOut",
       "callback": "SimIFFMode4MonitorOff",
       "relatedActions": [
-        "auxmonitorswitchtoggle",
-        "auxmonitorswitchaudio"
+        "auxMonitorSwitchToggle",
+        "auxMonitorSwitchAudio"
       ],
       "description": "AUX: MONITOR Switch - OUT",
       "category": "LEFT CONSOLE",
@@ -958,18 +910,17 @@
       }
     },
     {
-      "id": "auxchannelcycleupleftdigit",
-      "clazz": "AuxChannelCycleUpLeftDigit",
+      "id": "auxChannelCycleUpLeftDigit",
       "callback": "SimCycleLeftAuxComDigit",
       "relatedActions": [
-        "auxchannelcycledownleftdigit",
-        "auxchannelcycleupcenterdigit",
-        "auxchannelcycledowncenterdig",
-        "auxchannelcycleuprightdigit",
-        "auxchannelcycledownrightdigit",
-        "auxchanneltogglebandxy",
-        "auxchanneltogglebandx",
-        "auxchanneltogglebandy"
+        "auxChannelCycleDownLeftDigit",
+        "auxChannelCycleUpCenterDigit",
+        "auxChannelCycleDownCenterDig",
+        "auxChannelCycleUpRightDigit",
+        "auxChannelCycleDownRightDigit",
+        "auxChannelToggleBandXY",
+        "auxChannelToggleBandX",
+        "auxChannelToggleBandY"
       ],
       "description": "AUX: CHANNEL - Cycle Up Left Digit",
       "category": "LEFT CONSOLE",
@@ -980,18 +931,17 @@
       "type": "button"
     },
     {
-      "id": "auxchannelcycledownleftdigit",
-      "clazz": "AuxChannelCycleDownLeftDigit",
+      "id": "auxChannelCycleDownLeftDigit",
       "callback": "SimDecLeftAuxComDigit",
       "relatedActions": [
-        "auxchannelcycleupleftdigit",
-        "auxchannelcycleupcenterdigit",
-        "auxchannelcycledowncenterdig",
-        "auxchannelcycleuprightdigit",
-        "auxchannelcycledownrightdigit",
-        "auxchanneltogglebandxy",
-        "auxchanneltogglebandx",
-        "auxchanneltogglebandy"
+        "auxChannelCycleUpLeftDigit",
+        "auxChannelCycleUpCenterDigit",
+        "auxChannelCycleDownCenterDig",
+        "auxChannelCycleUpRightDigit",
+        "auxChannelCycleDownRightDigit",
+        "auxChannelToggleBandXY",
+        "auxChannelToggleBandX",
+        "auxChannelToggleBandY"
       ],
       "description": "AUX: CHANNEL - Cycle Down Left Digit",
       "category": "LEFT CONSOLE",
@@ -1002,18 +952,17 @@
       "type": "button"
     },
     {
-      "id": "auxchannelcycleupcenterdigit",
-      "clazz": "AuxChannelCycleUpCenterDigit",
+      "id": "auxChannelCycleUpCenterDigit",
       "callback": "SimCycleCenterAuxComDigit",
       "relatedActions": [
-        "auxchannelcycleupleftdigit",
-        "auxchannelcycledownleftdigit",
-        "auxchannelcycledowncenterdig",
-        "auxchannelcycleuprightdigit",
-        "auxchannelcycledownrightdigit",
-        "auxchanneltogglebandxy",
-        "auxchanneltogglebandx",
-        "auxchanneltogglebandy"
+        "auxChannelCycleUpLeftDigit",
+        "auxChannelCycleDownLeftDigit",
+        "auxChannelCycleDownCenterDig",
+        "auxChannelCycleUpRightDigit",
+        "auxChannelCycleDownRightDigit",
+        "auxChannelToggleBandXY",
+        "auxChannelToggleBandX",
+        "auxChannelToggleBandY"
       ],
       "description": "AUX: CHANNEL - Cycle Up Center Digit",
       "category": "LEFT CONSOLE",
@@ -1024,18 +973,17 @@
       "type": "button"
     },
     {
-      "id": "auxchannelcycledowncenterdig",
-      "clazz": "AuxChannelCycleDownCenterDig",
+      "id": "auxChannelCycleDownCenterDig",
       "callback": "SimDecCenterAuxComDigit",
       "relatedActions": [
-        "auxchannelcycleupleftdigit",
-        "auxchannelcycledownleftdigit",
-        "auxchannelcycleupcenterdigit",
-        "auxchannelcycleuprightdigit",
-        "auxchannelcycledownrightdigit",
-        "auxchanneltogglebandxy",
-        "auxchanneltogglebandx",
-        "auxchanneltogglebandy"
+        "auxChannelCycleUpLeftDigit",
+        "auxChannelCycleDownLeftDigit",
+        "auxChannelCycleUpCenterDigit",
+        "auxChannelCycleUpRightDigit",
+        "auxChannelCycleDownRightDigit",
+        "auxChannelToggleBandXY",
+        "auxChannelToggleBandX",
+        "auxChannelToggleBandY"
       ],
       "description": "AUX: CHANNEL - Cycle Down Center Dig.",
       "category": "LEFT CONSOLE",
@@ -1046,18 +994,17 @@
       "type": "button"
     },
     {
-      "id": "auxchannelcycleuprightdigit",
-      "clazz": "AuxChannelCycleUpRightDigit",
+      "id": "auxChannelCycleUpRightDigit",
       "callback": "SimCycleRightAuxComDigit",
       "relatedActions": [
-        "auxchannelcycleupleftdigit",
-        "auxchannelcycledownleftdigit",
-        "auxchannelcycleupcenterdigit",
-        "auxchannelcycledowncenterdig",
-        "auxchannelcycledownrightdigit",
-        "auxchanneltogglebandxy",
-        "auxchanneltogglebandx",
-        "auxchanneltogglebandy"
+        "auxChannelCycleUpLeftDigit",
+        "auxChannelCycleDownLeftDigit",
+        "auxChannelCycleUpCenterDigit",
+        "auxChannelCycleDownCenterDig",
+        "auxChannelCycleDownRightDigit",
+        "auxChannelToggleBandXY",
+        "auxChannelToggleBandX",
+        "auxChannelToggleBandY"
       ],
       "description": "AUX: CHANNEL - Cycle Up Right Digit",
       "category": "LEFT CONSOLE",
@@ -1068,18 +1015,17 @@
       "type": "button"
     },
     {
-      "id": "auxchannelcycledownrightdigit",
-      "clazz": "AuxChannelCycleDownRightDigit",
+      "id": "auxChannelCycleDownRightDigit",
       "callback": "SimDecRightAuxComDigit",
       "relatedActions": [
-        "auxchannelcycleupleftdigit",
-        "auxchannelcycledownleftdigit",
-        "auxchannelcycleupcenterdigit",
-        "auxchannelcycledowncenterdig",
-        "auxchannelcycleuprightdigit",
-        "auxchanneltogglebandxy",
-        "auxchanneltogglebandx",
-        "auxchanneltogglebandy"
+        "auxChannelCycleUpLeftDigit",
+        "auxChannelCycleDownLeftDigit",
+        "auxChannelCycleUpCenterDigit",
+        "auxChannelCycleDownCenterDig",
+        "auxChannelCycleUpRightDigit",
+        "auxChannelToggleBandXY",
+        "auxChannelToggleBandX",
+        "auxChannelToggleBandY"
       ],
       "description": "AUX: CHANNEL - Cycle Down Right Digit",
       "category": "LEFT CONSOLE",
@@ -1090,18 +1036,17 @@
       "type": "button"
     },
     {
-      "id": "auxchanneltogglebandx",
-      "clazz": "AuxChannelToggleBandX",
+      "id": "auxChannelToggleBandX",
       "callback": "SimXBandAuxComDigit",
       "relatedActions": [
-        "auxchannelcycleupleftdigit",
-        "auxchannelcycledownleftdigit",
-        "auxchannelcycleupcenterdigit",
-        "auxchannelcycledowncenterdig",
-        "auxchannelcycleuprightdigit",
-        "auxchannelcycledownrightdigit",
-        "auxchanneltogglebandxy",
-        "auxchanneltogglebandy"
+        "auxChannelCycleUpLeftDigit",
+        "auxChannelCycleDownLeftDigit",
+        "auxChannelCycleUpCenterDigit",
+        "auxChannelCycleDownCenterDig",
+        "auxChannelCycleUpRightDigit",
+        "auxChannelCycleDownRightDigit",
+        "auxChannelToggleBandXY",
+        "auxChannelToggleBandY"
       ],
       "description": "AUX: CHANNEL - Toggle Band X",
       "category": "LEFT CONSOLE",
@@ -1112,18 +1057,17 @@
       "type": "button"
     },
     {
-      "id": "auxchanneltogglebandy",
-      "clazz": "AuxChannelToggleBandY",
+      "id": "auxChannelToggleBandY",
       "callback": "SimYBandAuxComDigit",
       "relatedActions": [
-        "auxchannelcycleupleftdigit",
-        "auxchannelcycledownleftdigit",
-        "auxchannelcycleupcenterdigit",
-        "auxchannelcycledowncenterdig",
-        "auxchannelcycleuprightdigit",
-        "auxchannelcycledownrightdigit",
-        "auxchanneltogglebandxy",
-        "auxchanneltogglebandx"
+        "auxChannelCycleUpLeftDigit",
+        "auxChannelCycleDownLeftDigit",
+        "auxChannelCycleUpCenterDigit",
+        "auxChannelCycleDownCenterDig",
+        "auxChannelCycleUpRightDigit",
+        "auxChannelCycleDownRightDigit",
+        "auxChannelToggleBandXY",
+        "auxChannelToggleBandX"
       ],
       "description": "AUX: CHANNEL - Toggle Band Y",
       "category": "LEFT CONSOLE",
@@ -1134,12 +1078,11 @@
       "type": "button"
     },
     {
-      "id": "auxstationselectorswitchtr",
-      "clazz": "AuxStationSelectorSwitchTR",
+      "id": "auxStationSelectorSwitchTR",
       "callback": "SimTACANTR",
       "relatedActions": [
-        "auxstationselectorswitchtoggle",
-        "auxstationselectorswitchaatr"
+        "auxStationSelectorSwitchToggle",
+        "auxStationSelectorSwitchAATr"
       ],
       "description": "AUX: STATION SELECTOR Switch - T/R",
       "category": "LEFT CONSOLE",
@@ -1155,12 +1098,11 @@
       }
     },
     {
-      "id": "auxstationselectorswitchaatr",
-      "clazz": "AuxStationSelectorSwitchAATr",
+      "id": "auxStationSelectorSwitchAATr",
       "callback": "SimTACANAATR",
       "relatedActions": [
-        "auxstationselectorswitchtoggle",
-        "auxstationselectorswitchtr"
+        "auxStationSelectorSwitchToggle",
+        "auxStationSelectorSwitchTR"
       ],
       "description": "AUX: STATION SELECTOR Switch - A/A TR",
       "category": "LEFT CONSOLE",
@@ -1176,12 +1118,11 @@
       }
     },
     {
-      "id": "extanticollisionswitchon",
-      "clazz": "ExtAntiCollisionSwitchOn",
+      "id": "extAntiCollisionSwitchOn",
       "callback": "SimAntiCollOn",
       "relatedActions": [
-        "extanticollisionswitchtoggle",
-        "extanticollisionswitchoff"
+        "extAntiCollisionSwitchToggle",
+        "extAntiCollisionSwitchOff"
       ],
       "description": "EXT: ANTI COLLISION Switch - ON",
       "category": "LEFT CONSOLE",
@@ -1197,12 +1138,11 @@
       }
     },
     {
-      "id": "extanticollisionswitchoff",
-      "clazz": "ExtAntiCollisionSwitchOff",
+      "id": "extAntiCollisionSwitchOff",
       "callback": "SimAntiCollOff",
       "relatedActions": [
-        "extanticollisionswitchtoggle",
-        "extanticollisionswitchon"
+        "extAntiCollisionSwitchToggle",
+        "extAntiCollisionSwitchOn"
       ],
       "description": "EXT: ANTI COLLISION Switch - OFF",
       "category": "LEFT CONSOLE",
@@ -1218,12 +1158,11 @@
       }
     },
     {
-      "id": "extpositionswitchflash",
-      "clazz": "ExtPositionSwitchFlash",
+      "id": "extPositionSwitchFlash",
       "callback": "SimLightsFlash",
       "relatedActions": [
-        "extpositionswitchtoggle",
-        "extpositionswitchsteady"
+        "extPositionSwitchToggle",
+        "extPositionSwitchSteady"
       ],
       "description": "EXT: POSITION Switch - FLASH",
       "category": "LEFT CONSOLE",
@@ -1239,12 +1178,11 @@
       }
     },
     {
-      "id": "extpositionswitchsteady",
-      "clazz": "ExtPositionSwitchSteady",
+      "id": "extPositionSwitchSteady",
       "callback": "SimLightsSteady",
       "relatedActions": [
-        "extpositionswitchtoggle",
-        "extpositionswitchflash"
+        "extPositionSwitchToggle",
+        "extPositionSwitchFlash"
       ],
       "description": "EXT: POSITION Switch - STEADY",
       "category": "LEFT CONSOLE",
@@ -1260,12 +1198,11 @@
       }
     },
     {
-      "id": "extwingtailswitchbrt",
-      "clazz": "ExtWingTailSwitchBrt",
+      "id": "extWingTailSwitchBrt",
       "callback": "SimWingLightBrt",
       "relatedActions": [
-        "extwingtailswitchtoggle",
-        "extwingtailswitchoff"
+        "extWingTailSwitchToggle",
+        "extWingTailSwitchOff"
       ],
       "description": "EXT: WING/TAIL Switch - BRT",
       "category": "LEFT CONSOLE",
@@ -1281,12 +1218,11 @@
       }
     },
     {
-      "id": "extwingtailswitchoff",
-      "clazz": "ExtWingTailSwitchOff",
+      "id": "extWingTailSwitchOff",
       "callback": "SimWingLightOff",
       "relatedActions": [
-        "extwingtailswitchtoggle",
-        "extwingtailswitchbrt"
+        "extWingTailSwitchToggle",
+        "extWingTailSwitchBrt"
       ],
       "description": "EXT: WING/TAIL Switch - OFF",
       "category": "LEFT CONSOLE",
@@ -1302,12 +1238,11 @@
       }
     },
     {
-      "id": "extmasterswitchnorm",
-      "clazz": "ExtMasterSwitchNorm",
+      "id": "extMasterSwitchNorm",
       "callback": "SimExtlMasterNorm",
       "relatedActions": [
-        "extmasterswitchtoggle",
-        "extmasterswitchoff"
+        "extMasterSwitchToggle",
+        "extMasterSwitchOff"
       ],
       "description": "EXT: MASTER Switch - NORM",
       "category": "LEFT CONSOLE",
@@ -1323,12 +1258,11 @@
       }
     },
     {
-      "id": "extmasterswitchoff",
-      "clazz": "ExtMasterSwitchOff",
+      "id": "extMasterSwitchOff",
       "callback": "SimExtlMasterOff",
       "relatedActions": [
-        "extmasterswitchtoggle",
-        "extmasterswitchnorm"
+        "extMasterSwitchToggle",
+        "extMasterSwitchNorm"
       ],
       "description": "EXT: MASTER Switch - OFF",
       "category": "LEFT CONSOLE",
@@ -1344,15 +1278,14 @@
       }
     },
     {
-      "id": "epuepuswitchon",
-      "clazz": "EpuEpuSwitchOn",
+      "id": "epuEpuSwitchOn",
       "callback": "SimEpuOn",
       "relatedActions": [
-        "epuepuswitchcycle",
-        "epuepuswitchstepup",
-        "epuepuswitchstepdown",
-        "epuepuswitchnorm",
-        "epuepuswitchoff"
+        "epuEpuSwitchCycle",
+        "epuEpuSwitchStepUp",
+        "epuEpuSwitchStepDown",
+        "epuEpuSwitchNorm",
+        "epuEpuSwitchOff"
       ],
       "description": "EPU: EPU Switch - ON",
       "category": "LEFT CONSOLE",
@@ -1368,15 +1301,14 @@
       }
     },
     {
-      "id": "epuepuswitchnorm",
-      "clazz": "EpuEpuSwitchNorm",
+      "id": "epuEpuSwitchNorm",
       "callback": "SimEpuAuto",
       "relatedActions": [
-        "epuepuswitchcycle",
-        "epuepuswitchstepup",
-        "epuepuswitchstepdown",
-        "epuepuswitchon",
-        "epuepuswitchoff"
+        "epuEpuSwitchCycle",
+        "epuEpuSwitchStepUp",
+        "epuEpuSwitchStepDown",
+        "epuEpuSwitchOn",
+        "epuEpuSwitchOff"
       ],
       "description": "EPU: EPU Switch - NORM",
       "category": "LEFT CONSOLE",
@@ -1392,15 +1324,14 @@
       }
     },
     {
-      "id": "epuepuswitchoff",
-      "clazz": "EpuEpuSwitchOff",
+      "id": "epuEpuSwitchOff",
       "callback": "SimEpuOff",
       "relatedActions": [
-        "epuepuswitchcycle",
-        "epuepuswitchstepup",
-        "epuepuswitchstepdown",
-        "epuepuswitchon",
-        "epuepuswitchnorm"
+        "epuEpuSwitchCycle",
+        "epuEpuSwitchStepUp",
+        "epuEpuSwitchStepDown",
+        "epuEpuSwitchOn",
+        "epuEpuSwitchNorm"
       ],
       "description": "EPU: EPU Switch - OFF",
       "category": "LEFT CONSOLE",
@@ -1416,14 +1347,13 @@
       }
     },
     {
-      "id": "elecmainpwrswitchmain",
-      "clazz": "ElecMainPwrSwitchMain",
+      "id": "elecMainPwrSwitchMain",
       "callback": "SimMainPowerMain",
       "relatedActions": [
-        "elecmainpwrswitchstepup",
-        "elecmainpwrswitchstepdown",
-        "elecmainpwrswitchbatt",
-        "elecmainpwrswitchoff"
+        "elecMainPwrSwitchStepUp",
+        "elecMainPwrSwitchStepDown",
+        "elecMainPwrSwitchBatt",
+        "elecMainPwrSwitchOff"
       ],
       "description": "ELEC: MAIN PWR Switch - MAIN",
       "category": "LEFT CONSOLE",
@@ -1439,14 +1369,13 @@
       }
     },
     {
-      "id": "elecmainpwrswitchbatt",
-      "clazz": "ElecMainPwrSwitchBatt",
+      "id": "elecMainPwrSwitchBatt",
       "callback": "SimMainPowerBatt",
       "relatedActions": [
-        "elecmainpwrswitchstepup",
-        "elecmainpwrswitchstepdown",
-        "elecmainpwrswitchmain",
-        "elecmainpwrswitchoff"
+        "elecMainPwrSwitchStepUp",
+        "elecMainPwrSwitchStepDown",
+        "elecMainPwrSwitchMain",
+        "elecMainPwrSwitchOff"
       ],
       "description": "ELEC: MAIN PWR Switch - BATT",
       "category": "LEFT CONSOLE",
@@ -1462,14 +1391,13 @@
       }
     },
     {
-      "id": "elecmainpwrswitchoff",
-      "clazz": "ElecMainPwrSwitchOff",
+      "id": "elecMainPwrSwitchOff",
       "callback": "SimMainPowerOff",
       "relatedActions": [
-        "elecmainpwrswitchstepup",
-        "elecmainpwrswitchstepdown",
-        "elecmainpwrswitchmain",
-        "elecmainpwrswitchbatt"
+        "elecMainPwrSwitchStepUp",
+        "elecMainPwrSwitchStepDown",
+        "elecMainPwrSwitchMain",
+        "elecMainPwrSwitchBatt"
       ],
       "description": "ELEC: MAIN PWR Switch - OFF",
       "category": "LEFT CONSOLE",
@@ -1485,8 +1413,7 @@
       }
     },
     {
-      "id": "eleccautionresetbuttonpush",
-      "clazz": "ElecCautionResetButtonPush",
+      "id": "elecCautionResetButtonPush",
       "callback": "SimElecReset",
       "description": "ELEC: CAUTION RESET Button - Push",
       "category": "LEFT CONSOLE",
@@ -1497,16 +1424,15 @@
       "type": "button"
     },
     {
-      "id": "avtravtrswitchtoggleonoff",
-      "clazz": "AvtrAvtrSwitchToggleOnOff",
+      "id": "avtrAvtrSwitchToggleOnOff",
       "callback": "SimAVTRToggle",
       "relatedActions": [
-        "avtravtrswitchcycle",
-        "avtravtrswitchstepup",
-        "avtravtrswitchstepdown",
-        "avtravtrswitchon",
-        "avtravtrswitchauto",
-        "avtravtrswitchoff"
+        "avtrAvtrSwitchCycle",
+        "avtrAvtrSwitchStepUp",
+        "avtrAvtrSwitchStepDown",
+        "avtrAvtrSwitchOn",
+        "avtrAvtrSwitchAuto",
+        "avtrAvtrSwitchOff"
       ],
       "description": "AVTR: AVTR Switch - Toggle ON / OFF",
       "category": "LEFT CONSOLE",
@@ -1517,16 +1443,15 @@
       "type": "button"
     },
     {
-      "id": "avtravtrswitchon",
-      "clazz": "AvtrAvtrSwitchOn",
+      "id": "avtrAvtrSwitchOn",
       "callback": "SimAVTRSwitchOn",
       "relatedActions": [
-        "avtravtrswitchtoggleonoff",
-        "avtravtrswitchcycle",
-        "avtravtrswitchstepup",
-        "avtravtrswitchstepdown",
-        "avtravtrswitchauto",
-        "avtravtrswitchoff"
+        "avtrAvtrSwitchToggleOnOff",
+        "avtrAvtrSwitchCycle",
+        "avtrAvtrSwitchStepUp",
+        "avtrAvtrSwitchStepDown",
+        "avtrAvtrSwitchAuto",
+        "avtrAvtrSwitchOff"
       ],
       "description": "AVTR: AVTR Switch - ON",
       "category": "LEFT CONSOLE",
@@ -1542,16 +1467,15 @@
       }
     },
     {
-      "id": "avtravtrswitchauto",
-      "clazz": "AvtrAvtrSwitchAuto",
+      "id": "avtrAvtrSwitchAuto",
       "callback": "SimAVTRSwitchAuto",
       "relatedActions": [
-        "avtravtrswitchtoggleonoff",
-        "avtravtrswitchcycle",
-        "avtravtrswitchstepup",
-        "avtravtrswitchstepdown",
-        "avtravtrswitchon",
-        "avtravtrswitchoff"
+        "avtrAvtrSwitchToggleOnOff",
+        "avtrAvtrSwitchCycle",
+        "avtrAvtrSwitchStepUp",
+        "avtrAvtrSwitchStepDown",
+        "avtrAvtrSwitchOn",
+        "avtrAvtrSwitchOff"
       ],
       "description": "AVTR: AVTR Switch - AUTO",
       "category": "LEFT CONSOLE",
@@ -1567,16 +1491,15 @@
       }
     },
     {
-      "id": "avtravtrswitchoff",
-      "clazz": "AvtrAvtrSwitchOff",
+      "id": "avtrAvtrSwitchOff",
       "callback": "SimAVTRSwitchOff",
       "relatedActions": [
-        "avtravtrswitchtoggleonoff",
-        "avtravtrswitchcycle",
-        "avtravtrswitchstepup",
-        "avtravtrswitchstepdown",
-        "avtravtrswitchon",
-        "avtravtrswitchauto"
+        "avtrAvtrSwitchToggleOnOff",
+        "avtrAvtrSwitchCycle",
+        "avtrAvtrSwitchStepUp",
+        "avtrAvtrSwitchStepDown",
+        "avtrAvtrSwitchOn",
+        "avtrAvtrSwitchAuto"
       ],
       "description": "AVTR: AVTR Switch - OFF",
       "category": "LEFT CONSOLE",
@@ -1592,12 +1515,11 @@
       }
     },
     {
-      "id": "ecmoprswitchopr",
-      "clazz": "EcmOprSwitchOpr",
+      "id": "ecmOprSwitchOpr",
       "callback": "SimEcmPowerOn",
       "relatedActions": [
-        "ecmoprswitchtoggle",
-        "ecmoprswitchoff"
+        "ecmOprSwitchToggle",
+        "ecmOprSwitchOff"
       ],
       "description": "ECM: OPR Switch - OPR",
       "category": "LEFT CONSOLE",
@@ -1613,12 +1535,11 @@
       }
     },
     {
-      "id": "ecmoprswitchoff",
-      "clazz": "EcmOprSwitchOff",
+      "id": "ecmOprSwitchOff",
       "callback": "SimEcmPowerOff",
       "relatedActions": [
-        "ecmoprswitchtoggle",
-        "ecmoprswitchopr"
+        "ecmOprSwitchToggle",
+        "ecmOprSwitchOpr"
       ],
       "description": "ECM: OPR Switch - OFF",
       "category": "LEFT CONSOLE",
@@ -1634,12 +1555,11 @@
       }
     },
     {
-      "id": "engjfsswitchoff",
-      "clazz": "EngJfsSwitchOff",
+      "id": "engJfsSwitchOff",
       "callback": "SimJfsStart_Off",
       "relatedActions": [
-        "engjfsswitchtogglestart2off",
-        "engjfsswitchstart2"
+        "engJfsSwitchToggleStart2Off",
+        "engJfsSwitchStart2"
       ],
       "description": "ENG: JFS Switch - OFF",
       "category": "LEFT CONSOLE",
@@ -1655,12 +1575,11 @@
       }
     },
     {
-      "id": "engjfsswitchstart2",
-      "clazz": "EngJfsSwitchStart2",
+      "id": "engJfsSwitchStart2",
       "callback": "SimJfsStart_Start2",
       "relatedActions": [
-        "engjfsswitchtogglestart2off",
-        "engjfsswitchoff"
+        "engJfsSwitchToggleStart2Off",
+        "engJfsSwitchOff"
       ],
       "description": "ENG: JFS Switch - START 2",
       "category": "LEFT CONSOLE",
@@ -1676,12 +1595,11 @@
       }
     },
     {
-      "id": "engengcontswitchpri",
-      "clazz": "EngEngContSwitchPri",
+      "id": "engEngContSwitchPri",
       "callback": "SimEngContPri",
       "relatedActions": [
-        "engengcontswitchtoggle",
-        "engengcontswitchsec"
+        "engEngContSwitchToggle",
+        "engEngContSwitchSec"
       ],
       "description": "ENG: ENG CONT Switch - PRI",
       "category": "LEFT CONSOLE",
@@ -1697,12 +1615,11 @@
       }
     },
     {
-      "id": "engengcontswitchsec",
-      "clazz": "EngEngContSwitchSec",
+      "id": "engEngContSwitchSec",
       "callback": "SimEngContSec",
       "relatedActions": [
-        "engengcontswitchtoggle",
-        "engengcontswitchpri"
+        "engEngContSwitchToggle",
+        "engEngContSwitchPri"
       ],
       "description": "ENG: ENG CONT Switch - SEC",
       "category": "LEFT CONSOLE",
@@ -1718,11 +1635,10 @@
       }
     },
     {
-      "id": "audio2intercomknobvolumeincr",
-      "clazz": "Audio2IntercomKnobVolumeIncr",
+      "id": "audio2IntercomKnobVolumeIncr",
       "callback": "SimStepIntercomVolumeUp",
       "relatedActions": [
-        "audio2intercomknobvolumedecr"
+        "audio2IntercomKnobVolumeDecr"
       ],
       "description": "AUDIO2: INTERCOM Knob - Volume Incr.",
       "category": "LEFT CONSOLE",
@@ -1733,11 +1649,10 @@
       "type": "button"
     },
     {
-      "id": "audio2intercomknobvolumedecr",
-      "clazz": "Audio2IntercomKnobVolumeDecr",
+      "id": "audio2IntercomKnobVolumeDecr",
       "callback": "SimStepIntercomVolumeDown",
       "relatedActions": [
-        "audio2intercomknobvolumeincr"
+        "audio2IntercomKnobVolumeIncr"
       ],
       "description": "AUDIO2: INTERCOM Knob - Volume Decr.",
       "category": "LEFT CONSOLE",
@@ -1748,12 +1663,11 @@
       "type": "button"
     },
     {
-      "id": "audio2ilsknobon",
-      "clazz": "Audio2IlsKnobOn",
+      "id": "audio2IlsKnobOn",
       "callback": "SimILSOn",
       "relatedActions": [
-        "audio2ilsknobtoggle",
-        "audio2ilsknoboff"
+        "audio2IlsKnobToggle",
+        "audio2IlsKnobOff"
       ],
       "description": "AUDIO2: ILS Knob - ON",
       "category": "LEFT CONSOLE",
@@ -1769,12 +1683,11 @@
       }
     },
     {
-      "id": "audio2ilsknoboff",
-      "clazz": "Audio2IlsKnobOff",
+      "id": "audio2IlsKnobOff",
       "callback": "SimILSOff",
       "relatedActions": [
-        "audio2ilsknobtoggle",
-        "audio2ilsknobon"
+        "audio2IlsKnobToggle",
+        "audio2IlsKnobOn"
       ],
       "description": "AUDIO2: ILS Knob - OFF",
       "category": "LEFT CONSOLE",
@@ -1790,13 +1703,12 @@
       }
     },
     {
-      "id": "audio1comm1knobvolumeincr",
-      "clazz": "Audio1Comm1KnobVolumeIncr",
+      "id": "audio1Comm1KnobVolumeIncr",
       "callback": "SimStepComm1VolumeUp",
       "relatedActions": [
-        "audio1comm1knobvolumedecr",
-        "audio1comm1knobpoweron",
-        "audio1comm1knobpoweroff"
+        "audio1Comm1KnobVolumeDecr",
+        "audio1Comm1KnobPowerOn",
+        "audio1Comm1KnobPowerOff"
       ],
       "description": "AUDIO1: COMM 1 Knob - Volume Incr.",
       "category": "LEFT CONSOLE",
@@ -1807,13 +1719,12 @@
       "type": "button"
     },
     {
-      "id": "audio1comm1knobvolumedecr",
-      "clazz": "Audio1Comm1KnobVolumeDecr",
+      "id": "audio1Comm1KnobVolumeDecr",
       "callback": "SimStepComm1VolumeDown",
       "relatedActions": [
-        "audio1comm1knobvolumeincr",
-        "audio1comm1knobpoweron",
-        "audio1comm1knobpoweroff"
+        "audio1Comm1KnobVolumeIncr",
+        "audio1Comm1KnobPowerOn",
+        "audio1Comm1KnobPowerOff"
       ],
       "description": "AUDIO1: COMM 1 Knob - Volume Decr.",
       "category": "LEFT CONSOLE",
@@ -1824,13 +1735,12 @@
       "type": "button"
     },
     {
-      "id": "audio1comm1knobpoweron",
-      "clazz": "Audio1Comm1KnobPowerOn",
+      "id": "audio1Comm1KnobPowerOn",
       "callback": "SimComm1PowerOn",
       "relatedActions": [
-        "audio1comm1knobvolumeincr",
-        "audio1comm1knobvolumedecr",
-        "audio1comm1knobpoweroff"
+        "audio1Comm1KnobVolumeIncr",
+        "audio1Comm1KnobVolumeDecr",
+        "audio1Comm1KnobPowerOff"
       ],
       "description": "AUDIO1: COMM 1 Knob - Power On",
       "category": "LEFT CONSOLE",
@@ -1846,13 +1756,12 @@
       }
     },
     {
-      "id": "audio1comm1knobpoweroff",
-      "clazz": "Audio1Comm1KnobPowerOff",
+      "id": "audio1Comm1KnobPowerOff",
       "callback": "SimComm1PowerOff",
       "relatedActions": [
-        "audio1comm1knobvolumeincr",
-        "audio1comm1knobvolumedecr",
-        "audio1comm1knobpoweron"
+        "audio1Comm1KnobVolumeIncr",
+        "audio1Comm1KnobVolumeDecr",
+        "audio1Comm1KnobPowerOn"
       ],
       "description": "AUDIO1: COMM 1 Knob - Power Off",
       "category": "LEFT CONSOLE",
@@ -1868,13 +1777,12 @@
       }
     },
     {
-      "id": "audio1comm2knobvolumeincr",
-      "clazz": "Audio1Comm2KnobVolumeIncr",
+      "id": "audio1Comm2KnobVolumeIncr",
       "callback": "SimStepComm2VolumeUp",
       "relatedActions": [
-        "audio1comm2knobvolumedecr",
-        "audio1comm2knobpoweron",
-        "audio1comm2knobpoweroff"
+        "audio1Comm2KnobVolumeDecr",
+        "audio1Comm2KnobPowerOn",
+        "audio1Comm2KnobPowerOff"
       ],
       "description": "AUDIO1: COMM 2 Knob - Volume Incr.",
       "category": "LEFT CONSOLE",
@@ -1885,13 +1793,12 @@
       "type": "button"
     },
     {
-      "id": "audio1comm2knobvolumedecr",
-      "clazz": "Audio1Comm2KnobVolumeDecr",
+      "id": "audio1Comm2KnobVolumeDecr",
       "callback": "SimStepComm2VolumeDown",
       "relatedActions": [
-        "audio1comm2knobvolumeincr",
-        "audio1comm2knobpoweron",
-        "audio1comm2knobpoweroff"
+        "audio1Comm2KnobVolumeIncr",
+        "audio1Comm2KnobPowerOn",
+        "audio1Comm2KnobPowerOff"
       ],
       "description": "AUDIO1: COMM 2 Knob - Volume Decr.",
       "category": "LEFT CONSOLE",
@@ -1902,13 +1809,12 @@
       "type": "button"
     },
     {
-      "id": "audio1comm2knobpoweron",
-      "clazz": "Audio1Comm2KnobPowerOn",
+      "id": "audio1Comm2KnobPowerOn",
       "callback": "SimComm2PowerOn",
       "relatedActions": [
-        "audio1comm2knobvolumeincr",
-        "audio1comm2knobvolumedecr",
-        "audio1comm2knobpoweroff"
+        "audio1Comm2KnobVolumeIncr",
+        "audio1Comm2KnobVolumeDecr",
+        "audio1Comm2KnobPowerOff"
       ],
       "description": "AUDIO1: COMM 2 Knob - Power On",
       "category": "LEFT CONSOLE",
@@ -1924,13 +1830,12 @@
       }
     },
     {
-      "id": "audio1comm2knobpoweroff",
-      "clazz": "Audio1Comm2KnobPowerOff",
+      "id": "audio1Comm2KnobPowerOff",
       "callback": "SimComm2PowerOff",
       "relatedActions": [
-        "audio1comm2knobvolumeincr",
-        "audio1comm2knobvolumedecr",
-        "audio1comm2knobpoweron"
+        "audio1Comm2KnobVolumeIncr",
+        "audio1Comm2KnobVolumeDecr",
+        "audio1Comm2KnobPowerOn"
       ],
       "description": "AUDIO1: COMM 2 Knob - Power Off",
       "category": "LEFT CONSOLE",
@@ -1946,11 +1851,10 @@
       }
     },
     {
-      "id": "audio1mslknobvolumeincr",
-      "clazz": "Audio1MslKnobVolumeIncr",
+      "id": "audio1MslKnobVolumeIncr",
       "callback": "SimStepMissileVolumeUp",
       "relatedActions": [
-        "audio1mslknobvolumedecr"
+        "audio1MslKnobVolumeDecr"
       ],
       "description": "AUDIO1: MSL Knob - Volume Incr.",
       "category": "LEFT CONSOLE",
@@ -1961,11 +1865,10 @@
       "type": "button"
     },
     {
-      "id": "audio1mslknobvolumedecr",
-      "clazz": "Audio1MslKnobVolumeDecr",
+      "id": "audio1MslKnobVolumeDecr",
       "callback": "SimStepMissileVolumeDown",
       "relatedActions": [
-        "audio1mslknobvolumeincr"
+        "audio1MslKnobVolumeIncr"
       ],
       "description": "AUDIO1: MSL Knob - Volume Decr.",
       "category": "LEFT CONSOLE",
@@ -1976,12 +1879,11 @@
       "type": "button"
     },
     {
-      "id": "audio1comm1modeknobsql",
-      "clazz": "Audio1Comm1ModeKnobSql",
+      "id": "audio1Comm1ModeKnobSql",
       "callback": "SimAud1Com1Sql",
       "relatedActions": [
-        "audio1comm1modeknobtoggle",
-        "audio1comm1modeknobgd"
+        "audio1Comm1ModeKnobToggle",
+        "audio1Comm1ModeKnobGd"
       ],
       "description": "AUDIO1: COMM 1 Mode Knob - SQL",
       "category": "LEFT CONSOLE",
@@ -1997,12 +1899,11 @@
       }
     },
     {
-      "id": "audio1comm1modeknobgd",
-      "clazz": "Audio1Comm1ModeKnobGd",
+      "id": "audio1Comm1ModeKnobGd",
       "callback": "SimAud1Com1Gd",
       "relatedActions": [
-        "audio1comm1modeknobtoggle",
-        "audio1comm1modeknobsql"
+        "audio1Comm1ModeKnobToggle",
+        "audio1Comm1ModeKnobSql"
       ],
       "description": "AUDIO1: COMM 1 Mode Knob - GD",
       "category": "LEFT CONSOLE",
@@ -2018,12 +1919,11 @@
       }
     },
     {
-      "id": "audio1comm2modeknobsql",
-      "clazz": "Audio1Comm2ModeKnobSql",
+      "id": "audio1Comm2ModeKnobSql",
       "callback": "SimAud1Com2Sql",
       "relatedActions": [
-        "audio1comm2modeknobtoggle",
-        "audio1comm2modeknobgd"
+        "audio1Comm2ModeKnobToggle",
+        "audio1Comm2ModeKnobGd"
       ],
       "description": "AUDIO1: COMM 2 Mode Knob - SQL",
       "category": "LEFT CONSOLE",
@@ -2039,12 +1939,11 @@
       }
     },
     {
-      "id": "audio1comm2modeknobgd",
-      "clazz": "Audio1Comm2ModeKnobGd",
+      "id": "audio1Comm2ModeKnobGd",
       "callback": "SimAud1Com2Gd",
       "relatedActions": [
-        "audio1comm2modeknobtoggle",
-        "audio1comm2modeknobsql"
+        "audio1Comm2ModeKnobToggle",
+        "audio1Comm2ModeKnobSql"
       ],
       "description": "AUDIO1: COMM 2 Mode Knob - GD",
       "category": "LEFT CONSOLE",
@@ -2060,11 +1959,10 @@
       }
     },
     {
-      "id": "audio1threatknobvolumeincr",
-      "clazz": "Audio1ThreatKnobVolumeIncr",
+      "id": "audio1ThreatKnobVolumeIncr",
       "callback": "SimStepThreatVolumeUp",
       "relatedActions": [
-        "audio1threatknobvolumedecr"
+        "audio1ThreatKnobVolumeDecr"
       ],
       "description": "AUDIO1: THREAT Knob - Volume Incr.",
       "category": "LEFT CONSOLE",
@@ -2075,11 +1973,10 @@
       "type": "button"
     },
     {
-      "id": "audio1threatknobvolumedecr",
-      "clazz": "Audio1ThreatKnobVolumeDecr",
+      "id": "audio1ThreatKnobVolumeDecr",
       "callback": "SimStepThreatVolumeDown",
       "relatedActions": [
-        "audio1threatknobvolumeincr"
+        "audio1ThreatKnobVolumeIncr"
       ],
       "description": "AUDIO1: THREAT Knob - Volume Decr.",
       "category": "LEFT CONSOLE",
@@ -2090,11 +1987,10 @@
       "type": "button"
     },
     {
-      "id": "mpomanualpitchswitchhold",
-      "clazz": "MpoManualPitchSwitchHold",
+      "id": "mpoManualPitchSwitchHold",
       "callback": "SimMPO",
       "relatedActions": [
-        "mpomanualpitchswitchtoggle"
+        "mpoManualPitchSwitchToggle"
       ],
       "description": "MPO: MANUAL PITCH Switch - Hold",
       "category": "LEFT CONSOLE",
@@ -2105,11 +2001,10 @@
       "type": "button"
     },
     {
-      "id": "uhfpresetchannelknobcycleup",
-      "clazz": "UhfPresetChannelKnobCycleUp",
+      "id": "uhfPresetChannelKnobCycleUp",
       "callback": "SimCycleRadioChannel",
       "relatedActions": [
-        "uhfpresetchannelknobcycledown"
+        "uhfPresetChannelKnobCycleDown"
       ],
       "description": "UHF: PRESET CHANNEL Knob - Cycle Up",
       "category": "LEFT CONSOLE",
@@ -2120,11 +2015,10 @@
       "type": "button"
     },
     {
-      "id": "uhfpresetchannelknobcycledown",
-      "clazz": "UhfPresetChannelKnobCycleDown",
+      "id": "uhfPresetChannelKnobCycleDown",
       "callback": "SimDecRadioChannel",
       "relatedActions": [
-        "uhfpresetchannelknobcycleup"
+        "uhfPresetChannelKnobCycleUp"
       ],
       "description": "UHF: PRESET CHANNEL Knob - Cycle Down",
       "category": "LEFT CONSOLE",
@@ -2135,11 +2029,10 @@
       "type": "button"
     },
     {
-      "id": "uhfa32trotaryxstepup",
-      "clazz": "UhfA32TRotaryXzzzzzStepUp",
+      "id": "uhfA32TRotaryXzzzzzStepUp",
       "callback": "SimBupUhfFreq1Inc",
       "relatedActions": [
-        "uhfa32trotaryxstepdown"
+        "uhfA32TRotaryXzzzzzStepDown"
       ],
       "description": "UHF: A-3-2-T Rotary X__.___ - Step Up",
       "category": "LEFT CONSOLE",
@@ -2150,11 +2043,10 @@
       "type": "button"
     },
     {
-      "id": "uhfa32trotaryxstepdown",
-      "clazz": "UhfA32TRotaryXzzzzzStepDown",
+      "id": "uhfA32TRotaryXzzzzzStepDown",
       "callback": "SimBupUhfFreq1Dec",
       "relatedActions": [
-        "uhfa32trotaryxstepup"
+        "uhfA32TRotaryXzzzzzStepUp"
       ],
       "description": "UHF: A-3-2-T Rotary X__.___ - Step Down",
       "category": "LEFT CONSOLE",
@@ -2165,11 +2057,10 @@
       "type": "button"
     },
     {
-      "id": "uhfmanualfrequencyxcycleup",
-      "clazz": "UhfManualFrequencyZxzzzzCycleUp",
+      "id": "uhfManualFrequencyZxzzzzCycleUp",
       "callback": "SimBupUhfFreq2Inc",
       "relatedActions": [
-        "uhfmanualfrequencyxcycledown"
+        "uhfManualFrequencyZxzzzzCycleDown"
       ],
       "description": "UHF: Manual Frequency _X_.___ - Cycle Up",
       "category": "LEFT CONSOLE",
@@ -2180,11 +2071,10 @@
       "type": "button"
     },
     {
-      "id": "uhfmanualfrequencyxcycledown",
-      "clazz": "UhfManualFrequencyZxzzzzCycleDown",
+      "id": "uhfManualFrequencyZxzzzzCycleDown",
       "callback": "SimBupUhfFreq2Dec",
       "relatedActions": [
-        "uhfmanualfrequencyxcycleup"
+        "uhfManualFrequencyZxzzzzCycleUp"
       ],
       "description": "UHF: Manual Frequency _X_.___ - Cycle Down",
       "category": "LEFT CONSOLE",
@@ -2195,11 +2085,10 @@
       "type": "button"
     },
     {
-      "id": "uhfmanualfrequencyxcycleup",
-      "clazz": "UhfManualFrequencyZzxzzzCycleUp",
+      "id": "uhfManualFrequencyZzxzzzCycleUp",
       "callback": "SimBupUhfFreq3Inc",
       "relatedActions": [
-        "uhfmanualfrequencyxcycledown"
+        "uhfManualFrequencyZzxzzzCycleDown"
       ],
       "description": "UHF: Manual Frequency __X.___ - Cycle Up",
       "category": "LEFT CONSOLE",
@@ -2210,11 +2099,10 @@
       "type": "button"
     },
     {
-      "id": "uhfmanualfrequencyxcycledown",
-      "clazz": "UhfManualFrequencyZzxzzzCycleDown",
+      "id": "uhfManualFrequencyZzxzzzCycleDown",
       "callback": "SimBupUhfFreq3Dec",
       "relatedActions": [
-        "uhfmanualfrequencyxcycleup"
+        "uhfManualFrequencyZzxzzzCycleUp"
       ],
       "description": "UHF: Manual Frequency __X.___ - Cycle Down",
       "category": "LEFT CONSOLE",
@@ -2225,11 +2113,10 @@
       "type": "button"
     },
     {
-      "id": "uhfmanualfrequencyxcycleup",
-      "clazz": "UhfManualFrequencyZzzxzzCycleUp",
+      "id": "uhfManualFrequencyZzzxzzCycleUp",
       "callback": "SimBupUhfFreq4Inc",
       "relatedActions": [
-        "uhfmanualfrequencyxcycledown"
+        "uhfManualFrequencyZzzxzzCycleDown"
       ],
       "description": "UHF: Manual Frequency ___.X__ - Cycle Up",
       "category": "LEFT CONSOLE",
@@ -2240,11 +2127,10 @@
       "type": "button"
     },
     {
-      "id": "uhfmanualfrequencyxcycledown",
-      "clazz": "UhfManualFrequencyZzzxzzCycleDown",
+      "id": "uhfManualFrequencyZzzxzzCycleDown",
       "callback": "SimBupUhfFreq4Dec",
       "relatedActions": [
-        "uhfmanualfrequencyxcycleup"
+        "uhfManualFrequencyZzzxzzCycleUp"
       ],
       "description": "UHF: Manual Frequency ___.X__ - Cycle Down",
       "category": "LEFT CONSOLE",
@@ -2255,11 +2141,10 @@
       "type": "button"
     },
     {
-      "id": "uhfmanualfrequencyxxcycleup",
-      "clazz": "UhfManualFrequencyZzzzxxCycleUp",
+      "id": "uhfManualFrequencyZzzzxxCycleUp",
       "callback": "SimBupUhfFreq5Inc",
       "relatedActions": [
-        "uhfmanualfrequencyxxcycledown"
+        "uhfManualFrequencyZzzzxxCycleDown"
       ],
       "description": "UHF: Manual Frequency ___._XX - Cycle Up",
       "category": "LEFT CONSOLE",
@@ -2270,11 +2155,10 @@
       "type": "button"
     },
     {
-      "id": "uhfmanualfrequencyxxcycledown",
-      "clazz": "UhfManualFrequencyZzzzxxCycleDown",
+      "id": "uhfManualFrequencyZzzzxxCycleDown",
       "callback": "SimBupUhfFreq5Dec",
       "relatedActions": [
-        "uhfmanualfrequencyxxcycleup"
+        "uhfManualFrequencyZzzzxxCycleUp"
       ],
       "description": "UHF: Manual Frequency ___._XX - Cycle Down",
       "category": "LEFT CONSOLE",
@@ -2285,14 +2169,13 @@
       "type": "button"
     },
     {
-      "id": "uhffunctionknoboff",
-      "clazz": "UhfFunctionKnobOff",
+      "id": "uhfFunctionKnobOff",
       "callback": "SimBupUhfOff",
       "relatedActions": [
-        "uhffunctionknobstepup",
-        "uhffunctionknobstepdown",
-        "uhffunctionknobmain",
-        "uhffunctionknobboth"
+        "uhfFunctionKnobStepUp",
+        "uhfFunctionKnobStepDown",
+        "uhfFunctionKnobMain",
+        "uhfFunctionKnobBoth"
       ],
       "description": "UHF: FUNCTION Knob - OFF",
       "category": "LEFT CONSOLE",
@@ -2308,14 +2191,13 @@
       }
     },
     {
-      "id": "uhffunctionknobmain",
-      "clazz": "UhfFunctionKnobMain",
+      "id": "uhfFunctionKnobMain",
       "callback": "SimBupUhfMain",
       "relatedActions": [
-        "uhffunctionknobstepup",
-        "uhffunctionknobstepdown",
-        "uhffunctionknoboff",
-        "uhffunctionknobboth"
+        "uhfFunctionKnobStepUp",
+        "uhfFunctionKnobStepDown",
+        "uhfFunctionKnobOff",
+        "uhfFunctionKnobBoth"
       ],
       "description": "UHF: FUNCTION Knob - MAIN",
       "category": "LEFT CONSOLE",
@@ -2331,14 +2213,13 @@
       }
     },
     {
-      "id": "uhffunctionknobboth",
-      "clazz": "UhfFunctionKnobBoth",
+      "id": "uhfFunctionKnobBoth",
       "callback": "SimBupUhfBoth",
       "relatedActions": [
-        "uhffunctionknobstepup",
-        "uhffunctionknobstepdown",
-        "uhffunctionknoboff",
-        "uhffunctionknobmain"
+        "uhfFunctionKnobStepUp",
+        "uhfFunctionKnobStepDown",
+        "uhfFunctionKnobOff",
+        "uhfFunctionKnobMain"
       ],
       "description": "UHF: FUNCTION Knob - BOTH",
       "category": "LEFT CONSOLE",
@@ -2354,11 +2235,10 @@
       }
     },
     {
-      "id": "uhfvolknobaivsivcvolumeincr",
-      "clazz": "UhfVolKnobAiVsIvcVolumeIncr",
+      "id": "uhfVolKnobAiVsIvcVolumeIncr",
       "callback": "OTWBalanceIVCvsAIUp",
       "relatedActions": [
-        "uhfvolknobaivsivcvolumedecr"
+        "uhfVolKnobAiVsIvcVolumeDecr"
       ],
       "description": "UHF: VOL Knob - AI vs IVC Volume Incr",
       "category": "LEFT CONSOLE",
@@ -2369,11 +2249,10 @@
       "type": "button"
     },
     {
-      "id": "uhfvolknobaivsivcvolumedecr",
-      "clazz": "UhfVolKnobAiVsIvcVolumeDecr",
+      "id": "uhfVolKnobAiVsIvcVolumeDecr",
       "callback": "OTWBalanceIVCvsAIDown",
       "relatedActions": [
-        "uhfvolknobaivsivcvolumeincr"
+        "uhfVolKnobAiVsIvcVolumeIncr"
       ],
       "description": "UHF: VOL Knob - AI vs IVC Volume Decr",
       "category": "LEFT CONSOLE",
@@ -2384,14 +2263,13 @@
       "type": "button"
     },
     {
-      "id": "uhfmodeknobmnl",
-      "clazz": "UhfModeKnobMnl",
+      "id": "uhfModeKnobMnl",
       "callback": "SimBupUhfManual",
       "relatedActions": [
-        "uhfmodeknobstepup",
-        "uhfmodeknobstepdown",
-        "uhfmodeknobpreset",
-        "uhfmodeknobgrd"
+        "uhfModeKnobStepUp",
+        "uhfModeKnobStepDown",
+        "uhfModeKnobPreset",
+        "uhfModeKnobGrd"
       ],
       "description": "UHF: MODE Knob - MNL",
       "category": "LEFT CONSOLE",
@@ -2407,14 +2285,13 @@
       }
     },
     {
-      "id": "uhfmodeknobpreset",
-      "clazz": "UhfModeKnobPreset",
+      "id": "uhfModeKnobPreset",
       "callback": "SimBupUhfPreset",
       "relatedActions": [
-        "uhfmodeknobstepup",
-        "uhfmodeknobstepdown",
-        "uhfmodeknobmnl",
-        "uhfmodeknobgrd"
+        "uhfModeKnobStepUp",
+        "uhfModeKnobStepDown",
+        "uhfModeKnobMnl",
+        "uhfModeKnobGrd"
       ],
       "description": "UHF: MODE Knob - PRESET",
       "category": "LEFT CONSOLE",
@@ -2430,14 +2307,13 @@
       }
     },
     {
-      "id": "uhfmodeknobgrd",
-      "clazz": "UhfModeKnobGrd",
+      "id": "uhfModeKnobGrd",
       "callback": "SimBupUhfGuard",
       "relatedActions": [
-        "uhfmodeknobstepup",
-        "uhfmodeknobstepdown",
-        "uhfmodeknobmnl",
-        "uhfmodeknobpreset"
+        "uhfModeKnobStepUp",
+        "uhfModeKnobStepDown",
+        "uhfModeKnobMnl",
+        "uhfModeKnobPreset"
       ],
       "description": "UHF: MODE Knob - GRD",
       "category": "LEFT CONSOLE",
@@ -2453,8 +2329,7 @@
       }
     },
     {
-      "id": "leftwallslapswitchecmpgrm5",
-      "clazz": "LeftWallSlapSwitchEcmPgrm5",
+      "id": "leftWallSlapSwitchEcmPgrm5",
       "callback": "SimSlapSwitch",
       "description": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
       "category": "LEFT CONSOLE",
@@ -2465,12 +2340,11 @@
       "type": "button"
     },
     {
-      "id": "leftwallcanopyopen",
-      "clazz": "LeftWallCanopyOpen",
+      "id": "leftWallCanopyOpen",
       "callback": "AFCanopyOpen",
       "relatedActions": [
-        "leftwallcanopytoggleopenclose",
-        "leftwallcanopyclose"
+        "leftWallCanopyToggleOpenClose",
+        "leftWallCanopyClose"
       ],
       "description": "LEFT WALL: CANOPY - Open",
       "category": "LEFT CONSOLE",
@@ -2481,12 +2355,11 @@
       "type": "button"
     },
     {
-      "id": "leftwallcanopyclose",
-      "clazz": "LeftWallCanopyClose",
+      "id": "leftWallCanopyClose",
       "callback": "AFCanopyClose",
       "relatedActions": [
-        "leftwallcanopytoggleopenclose",
-        "leftwallcanopyopen"
+        "leftWallCanopyToggleOpenClose",
+        "leftWallCanopyOpen"
       ],
       "description": "LEFT WALL: CANOPY - Close",
       "category": "LEFT CONSOLE",
@@ -2497,12 +2370,11 @@
       "type": "button"
     },
     {
-      "id": "seatsafetyleverarmed",
-      "clazz": "SeatSafetyLeverArmed",
+      "id": "seatSafetyLeverArmed",
       "callback": "SimSeatOn",
       "relatedActions": [
-        "seatsafetylevertoggle",
-        "seatsafetyleverlocked"
+        "seatSafetyLeverToggle",
+        "seatSafetyLeverLocked"
       ],
       "description": "SEAT: Safety Lever - Armed",
       "category": "LEFT CONSOLE",
@@ -2513,12 +2385,11 @@
       "type": "button"
     },
     {
-      "id": "seatsafetyleverlocked",
-      "clazz": "SeatSafetyLeverLocked",
+      "id": "seatSafetyLeverLocked",
       "callback": "SimSeatOff",
       "relatedActions": [
-        "seatsafetylevertoggle",
-        "seatsafetyleverarmed"
+        "seatSafetyLeverToggle",
+        "seatSafetyLeverArmed"
       ],
       "description": "SEAT: Safety Lever - Locked",
       "category": "LEFT CONSOLE",
@@ -2529,8 +2400,7 @@
       "type": "button"
     },
     {
-      "id": "seatejecthandleholdforeject",
-      "clazz": "SeatEjectHandleHoldForEject",
+      "id": "seatEjectHandleHoldForEject",
       "callback": "SimEject",
       "description": "SEAT: EJECT Handle - Hold For Eject",
       "category": "LEFT CONSOLE",
@@ -2541,8 +2411,7 @@
       "type": "button"
     },
     {
-      "id": "altgearextendgearhandlepush",
-      "clazz": "AltGearExtendGearHandlePush",
+      "id": "altGearExtendGearHandlePush",
       "callback": "AFAlternateGear",
       "description": "ALT GEAR: Extend Gear Handle - Push",
       "category": "LEFT AUX CONSOLE",
@@ -2553,8 +2422,7 @@
       "type": "button"
     },
     {
-      "id": "altgearresetbuttonpush",
-      "clazz": "AltGearResetButtonPush",
+      "id": "altGearResetButtonPush",
       "callback": "AFAlternateGearReset",
       "description": "ALT GEAR: Reset Button - Push",
       "category": "LEFT AUX CONSOLE",
@@ -2565,12 +2433,11 @@
       "type": "button"
     },
     {
-      "id": "twapowerbuttonon",
-      "clazz": "TwaPowerButtonOn",
+      "id": "twaPowerButtonOn",
       "callback": "SimRwrPowerOn",
       "relatedActions": [
-        "twapowerbuttontoggle",
-        "twapowerbuttonoff"
+        "twaPowerButtonToggle",
+        "twaPowerButtonOff"
       ],
       "description": "TWA: POWER Button - On",
       "category": "LEFT AUX CONSOLE",
@@ -2581,12 +2448,11 @@
       "type": "button"
     },
     {
-      "id": "twapowerbuttonoff",
-      "clazz": "TwaPowerButtonOff",
+      "id": "twaPowerButtonOff",
       "callback": "SimRwrPowerOff",
       "relatedActions": [
-        "twapowerbuttontoggle",
-        "twapowerbuttonon"
+        "twaPowerButtonToggle",
+        "twaPowerButtonOn"
       ],
       "description": "TWA: POWER Button - Off",
       "category": "LEFT AUX CONSOLE",
@@ -2597,13 +2463,12 @@
       "type": "button"
     },
     {
-      "id": "hmcshmscknobbrightnessincr",
-      "clazz": "HmcsHmscKnobBrightnessIncr",
+      "id": "hmcsHmscKnobBrightnessIncr",
       "callback": "SimHmsSymWheelUp",
       "relatedActions": [
-        "hmcshmscknobbrightnessdecr",
-        "hmcshmscknobon",
-        "hmcshmscknoboff"
+        "hmcsHmscKnobBrightnessDecr",
+        "hmcsHmscKnobOn",
+        "hmcsHmscKnobOff"
       ],
       "description": "HMCS: HMSC Knob - Brightness Incr.",
       "category": "LEFT AUX CONSOLE",
@@ -2614,13 +2479,12 @@
       "type": "button"
     },
     {
-      "id": "hmcshmscknobbrightnessdecr",
-      "clazz": "HmcsHmscKnobBrightnessDecr",
+      "id": "hmcsHmscKnobBrightnessDecr",
       "callback": "SimHmsSymWheelDn",
       "relatedActions": [
-        "hmcshmscknobbrightnessincr",
-        "hmcshmscknobon",
-        "hmcshmscknoboff"
+        "hmcsHmscKnobBrightnessIncr",
+        "hmcsHmscKnobOn",
+        "hmcsHmscKnobOff"
       ],
       "description": "HMCS: HMSC Knob - Brightness Decr.",
       "category": "LEFT AUX CONSOLE",
@@ -2631,13 +2495,12 @@
       "type": "button"
     },
     {
-      "id": "hmcshmscknobon",
-      "clazz": "HmcsHmscKnobOn",
+      "id": "hmcsHmscKnobOn",
       "callback": "SimHmsOn",
       "relatedActions": [
-        "hmcshmscknobbrightnessincr",
-        "hmcshmscknobbrightnessdecr",
-        "hmcshmscknoboff"
+        "hmcsHmscKnobBrightnessIncr",
+        "hmcsHmscKnobBrightnessDecr",
+        "hmcsHmscKnobOff"
       ],
       "description": "HMCS: HMSC Knob - ON",
       "category": "LEFT AUX CONSOLE",
@@ -2653,13 +2516,12 @@
       }
     },
     {
-      "id": "hmcshmscknoboff",
-      "clazz": "HmcsHmscKnobOff",
+      "id": "hmcsHmscKnobOff",
       "callback": "SimHmsOff",
       "relatedActions": [
-        "hmcshmscknobbrightnessincr",
-        "hmcshmscknobbrightnessdecr",
-        "hmcshmscknobon"
+        "hmcsHmscKnobBrightnessIncr",
+        "hmcsHmscKnobBrightnessDecr",
+        "hmcsHmscKnobOn"
       ],
       "description": "HMCS: HMSC Knob - OFF",
       "category": "LEFT AUX CONSOLE",
@@ -2675,12 +2537,11 @@
       }
     },
     {
-      "id": "cmdsrwrswitchpoweron",
-      "clazz": "CmdsRwrSwitchPowerOn",
+      "id": "cmdsRwrSwitchPowerOn",
       "callback": "SimEWSRWROn",
       "relatedActions": [
-        "cmdsrwrswitchtogglepower",
-        "cmdsrwrswitchpoweroff"
+        "cmdsRwrSwitchTogglePower",
+        "cmdsRwrSwitchPowerOff"
       ],
       "description": "CMDS: RWR Switch - Power ON",
       "category": "LEFT AUX CONSOLE",
@@ -2696,12 +2557,11 @@
       }
     },
     {
-      "id": "cmdsrwrswitchpoweroff",
-      "clazz": "CmdsRwrSwitchPowerOff",
+      "id": "cmdsRwrSwitchPowerOff",
       "callback": "SimEWSRWROff",
       "relatedActions": [
-        "cmdsrwrswitchtogglepower",
-        "cmdsrwrswitchpoweron"
+        "cmdsRwrSwitchTogglePower",
+        "cmdsRwrSwitchPowerOn"
       ],
       "description": "CMDS: RWR Switch - Power OFF",
       "category": "LEFT AUX CONSOLE",
@@ -2717,12 +2577,11 @@
       }
     },
     {
-      "id": "cmdsjmrswitchpoweron",
-      "clazz": "CmdsJmrSwitchPowerOn",
+      "id": "cmdsJmrSwitchPowerOn",
       "callback": "SimEWSJammerOn",
       "relatedActions": [
-        "cmdsjmrswitchtogglepower",
-        "cmdsjmrswitchpoweroff"
+        "cmdsJmrSwitchTogglePower",
+        "cmdsJmrSwitchPowerOff"
       ],
       "description": "CMDS: JMR Switch - Power ON",
       "category": "LEFT AUX CONSOLE",
@@ -2738,12 +2597,11 @@
       }
     },
     {
-      "id": "cmdsjmrswitchpoweroff",
-      "clazz": "CmdsJmrSwitchPowerOff",
+      "id": "cmdsJmrSwitchPowerOff",
       "callback": "SimEWSJammerOff",
       "relatedActions": [
-        "cmdsjmrswitchtogglepower",
-        "cmdsjmrswitchpoweron"
+        "cmdsJmrSwitchTogglePower",
+        "cmdsJmrSwitchPowerOn"
       ],
       "description": "CMDS: JMR Switch - Power OFF",
       "category": "LEFT AUX CONSOLE",
@@ -2759,12 +2617,11 @@
       }
     },
     {
-      "id": "cmdsmwsswitchpoweron",
-      "clazz": "CmdsMwsSwitchPowerOn",
+      "id": "cmdsMwsSwitchPowerOn",
       "callback": "SimEWSMwsOn",
       "relatedActions": [
-        "cmdsmwsswitchtogglepower",
-        "cmdsmwsswitchpoweroff"
+        "cmdsMwsSwitchTogglePower",
+        "cmdsMwsSwitchPowerOff"
       ],
       "description": "CMDS: MWS Switch - Power ON",
       "category": "LEFT AUX CONSOLE",
@@ -2780,12 +2637,11 @@
       }
     },
     {
-      "id": "cmdsmwsswitchpoweroff",
-      "clazz": "CmdsMwsSwitchPowerOff",
+      "id": "cmdsMwsSwitchPowerOff",
       "callback": "SimEWSMwsOff",
       "relatedActions": [
-        "cmdsmwsswitchtogglepower",
-        "cmdsmwsswitchpoweron"
+        "cmdsMwsSwitchTogglePower",
+        "cmdsMwsSwitchPowerOn"
       ],
       "description": "CMDS: MWS Switch - Power OFF",
       "category": "LEFT AUX CONSOLE",
@@ -2801,12 +2657,11 @@
       }
     },
     {
-      "id": "cmdso1switchpoweron",
-      "clazz": "CmdsO1SwitchPowerOn",
+      "id": "cmdsO1SwitchPowerOn",
       "callback": "SimEWSO1On",
       "relatedActions": [
-        "cmdso1switchtogglepower",
-        "cmdso1switchpoweroff"
+        "cmdsO1SwitchTogglePower",
+        "cmdsO1SwitchPowerOff"
       ],
       "description": "CMDS: O1 Switch - Power ON",
       "category": "LEFT AUX CONSOLE",
@@ -2822,12 +2677,11 @@
       }
     },
     {
-      "id": "cmdso1switchpoweroff",
-      "clazz": "CmdsO1SwitchPowerOff",
+      "id": "cmdsO1SwitchPowerOff",
       "callback": "SimEWSO1Off",
       "relatedActions": [
-        "cmdso1switchtogglepower",
-        "cmdso1switchpoweron"
+        "cmdsO1SwitchTogglePower",
+        "cmdsO1SwitchPowerOn"
       ],
       "description": "CMDS: O1 Switch - Power OFF",
       "category": "LEFT AUX CONSOLE",
@@ -2843,12 +2697,11 @@
       }
     },
     {
-      "id": "cmdso2switchpoweron",
-      "clazz": "CmdsO2SwitchPowerOn",
+      "id": "cmdsO2SwitchPowerOn",
       "callback": "SimEWSO2On",
       "relatedActions": [
-        "cmdso2switchtogglepower",
-        "cmdso2switchpoweroff"
+        "cmdsO2SwitchTogglePower",
+        "cmdsO2SwitchPowerOff"
       ],
       "description": "CMDS: O2 Switch - Power ON",
       "category": "LEFT AUX CONSOLE",
@@ -2864,12 +2717,11 @@
       }
     },
     {
-      "id": "cmdso2switchpoweroff",
-      "clazz": "CmdsO2SwitchPowerOff",
+      "id": "cmdsO2SwitchPowerOff",
       "callback": "SimEWSO2Off",
       "relatedActions": [
-        "cmdso2switchtogglepower",
-        "cmdso2switchpoweron"
+        "cmdsO2SwitchTogglePower",
+        "cmdsO2SwitchPowerOn"
       ],
       "description": "CMDS: O2 Switch - Power OFF",
       "category": "LEFT AUX CONSOLE",
@@ -2885,12 +2737,11 @@
       }
     },
     {
-      "id": "cmdschswitchpoweron",
-      "clazz": "CmdsChSwitchPowerOn",
+      "id": "cmdsChSwitchPowerOn",
       "callback": "SimEWSChaffOn",
       "relatedActions": [
-        "cmdschswitchtogglepower",
-        "cmdschswitchpoweroff"
+        "cmdsChSwitchTogglePower",
+        "cmdsChSwitchPowerOff"
       ],
       "description": "CMDS: CH Switch - Power ON",
       "category": "LEFT AUX CONSOLE",
@@ -2906,12 +2757,11 @@
       }
     },
     {
-      "id": "cmdschswitchpoweroff",
-      "clazz": "CmdsChSwitchPowerOff",
+      "id": "cmdsChSwitchPowerOff",
       "callback": "SimEWSChaffOff",
       "relatedActions": [
-        "cmdschswitchtogglepower",
-        "cmdschswitchpoweron"
+        "cmdsChSwitchTogglePower",
+        "cmdsChSwitchPowerOn"
       ],
       "description": "CMDS: CH Switch - Power OFF",
       "category": "LEFT AUX CONSOLE",
@@ -2927,12 +2777,11 @@
       }
     },
     {
-      "id": "cmdsflswitchpoweron",
-      "clazz": "CmdsFlSwitchPowerOn",
+      "id": "cmdsFlSwitchPowerOn",
       "callback": "SimEWSFlareOn",
       "relatedActions": [
-        "cmdsflswitchtogglepower",
-        "cmdsflswitchpoweroff"
+        "cmdsFlSwitchTogglePower",
+        "cmdsFlSwitchPowerOff"
       ],
       "description": "CMDS: FL Switch - Power ON",
       "category": "LEFT AUX CONSOLE",
@@ -2948,12 +2797,11 @@
       }
     },
     {
-      "id": "cmdsflswitchpoweroff",
-      "clazz": "CmdsFlSwitchPowerOff",
+      "id": "cmdsFlSwitchPowerOff",
       "callback": "SimEWSFlareOff",
       "relatedActions": [
-        "cmdsflswitchtogglepower",
-        "cmdsflswitchpoweron"
+        "cmdsFlSwitchTogglePower",
+        "cmdsFlSwitchPowerOn"
       ],
       "description": "CMDS: FL Switch - Power OFF",
       "category": "LEFT AUX CONSOLE",
@@ -2969,12 +2817,11 @@
       }
     },
     {
-      "id": "cmdsjettswitchon",
-      "clazz": "CmdsJettSwitchOn",
+      "id": "cmdsJettSwitchOn",
       "callback": "SimEwsJettOn",
       "relatedActions": [
-        "cmdsjettswitchtoggle",
-        "cmdsjettswitchoff"
+        "cmdsJettSwitchToggle",
+        "cmdsJettSwitchOff"
       ],
       "description": "CMDS: JETT Switch - ON",
       "category": "LEFT AUX CONSOLE",
@@ -2990,12 +2837,11 @@
       }
     },
     {
-      "id": "cmdsjettswitchoff",
-      "clazz": "CmdsJettSwitchOff",
+      "id": "cmdsJettSwitchOff",
       "callback": "SimEwsJettOff",
       "relatedActions": [
-        "cmdsjettswitchtoggle",
-        "cmdsjettswitchon"
+        "cmdsJettSwitchToggle",
+        "cmdsJettSwitchOn"
       ],
       "description": "CMDS: JETT Switch - OFF",
       "category": "LEFT AUX CONSOLE",
@@ -3011,15 +2857,14 @@
       }
     },
     {
-      "id": "cmdsprgmknob1",
-      "clazz": "CmdsPrgmKnob1",
+      "id": "cmdsPrgmKnob1",
       "callback": "SimEWSProgOne",
       "relatedActions": [
-        "cmdsprgmknobstepup",
-        "cmdsprgmknobstepdown",
-        "cmdsprgmknob2",
-        "cmdsprgmknob3",
-        "cmdsprgmknob4"
+        "cmdsPrgmKnobStepUp",
+        "cmdsPrgmKnobStepDown",
+        "cmdsPrgmKnob2",
+        "cmdsPrgmKnob3",
+        "cmdsPrgmKnob4"
       ],
       "description": "CMDS: PRGM Knob - 1",
       "category": "LEFT AUX CONSOLE",
@@ -3035,15 +2880,14 @@
       }
     },
     {
-      "id": "cmdsprgmknob2",
-      "clazz": "CmdsPrgmKnob2",
+      "id": "cmdsPrgmKnob2",
       "callback": "SimEWSProgTwo",
       "relatedActions": [
-        "cmdsprgmknobstepup",
-        "cmdsprgmknobstepdown",
-        "cmdsprgmknob1",
-        "cmdsprgmknob3",
-        "cmdsprgmknob4"
+        "cmdsPrgmKnobStepUp",
+        "cmdsPrgmKnobStepDown",
+        "cmdsPrgmKnob1",
+        "cmdsPrgmKnob3",
+        "cmdsPrgmKnob4"
       ],
       "description": "CMDS: PRGM Knob - 2",
       "category": "LEFT AUX CONSOLE",
@@ -3059,15 +2903,14 @@
       }
     },
     {
-      "id": "cmdsprgmknob3",
-      "clazz": "CmdsPrgmKnob3",
+      "id": "cmdsPrgmKnob3",
       "callback": "SimEWSProgThree",
       "relatedActions": [
-        "cmdsprgmknobstepup",
-        "cmdsprgmknobstepdown",
-        "cmdsprgmknob1",
-        "cmdsprgmknob2",
-        "cmdsprgmknob4"
+        "cmdsPrgmKnobStepUp",
+        "cmdsPrgmKnobStepDown",
+        "cmdsPrgmKnob1",
+        "cmdsPrgmKnob2",
+        "cmdsPrgmKnob4"
       ],
       "description": "CMDS: PRGM Knob - 3",
       "category": "LEFT AUX CONSOLE",
@@ -3083,15 +2926,14 @@
       }
     },
     {
-      "id": "cmdsprgmknob4",
-      "clazz": "CmdsPrgmKnob4",
+      "id": "cmdsPrgmKnob4",
       "callback": "SimEWSProgFour",
       "relatedActions": [
-        "cmdsprgmknobstepup",
-        "cmdsprgmknobstepdown",
-        "cmdsprgmknob1",
-        "cmdsprgmknob2",
-        "cmdsprgmknob3"
+        "cmdsPrgmKnobStepUp",
+        "cmdsPrgmKnobStepDown",
+        "cmdsPrgmKnob1",
+        "cmdsPrgmKnob2",
+        "cmdsPrgmKnob3"
       ],
       "description": "CMDS: PRGM Knob - 4",
       "category": "LEFT AUX CONSOLE",
@@ -3107,17 +2949,16 @@
       }
     },
     {
-      "id": "cmdsmodeknoboff",
-      "clazz": "CmdsModeKnobOff",
+      "id": "cmdsModeKnobOff",
       "callback": "SimEWSModeOff",
       "relatedActions": [
-        "cmdsmodeknobstepup",
-        "cmdsmodeknobstepdown",
-        "cmdsmodeknobstby",
-        "cmdsmodeknobman",
-        "cmdsmodeknobsemi",
-        "cmdsmodeknobauto",
-        "cmdsmodeknobbyp"
+        "cmdsModeKnobStepUp",
+        "cmdsModeKnobStepDown",
+        "cmdsModeKnobStby",
+        "cmdsModeKnobMan",
+        "cmdsModeKnobSemi",
+        "cmdsModeKnobAuto",
+        "cmdsModeKnobByp"
       ],
       "description": "CMDS: MODE Knob - OFF",
       "category": "LEFT AUX CONSOLE",
@@ -3133,17 +2974,16 @@
       }
     },
     {
-      "id": "cmdsmodeknobstby",
-      "clazz": "CmdsModeKnobStby",
+      "id": "cmdsModeKnobStby",
       "callback": "SimEWSModeStby",
       "relatedActions": [
-        "cmdsmodeknobstepup",
-        "cmdsmodeknobstepdown",
-        "cmdsmodeknoboff",
-        "cmdsmodeknobman",
-        "cmdsmodeknobsemi",
-        "cmdsmodeknobauto",
-        "cmdsmodeknobbyp"
+        "cmdsModeKnobStepUp",
+        "cmdsModeKnobStepDown",
+        "cmdsModeKnobOff",
+        "cmdsModeKnobMan",
+        "cmdsModeKnobSemi",
+        "cmdsModeKnobAuto",
+        "cmdsModeKnobByp"
       ],
       "description": "CMDS: MODE Knob - STBY",
       "category": "LEFT AUX CONSOLE",
@@ -3159,17 +2999,16 @@
       }
     },
     {
-      "id": "cmdsmodeknobman",
-      "clazz": "CmdsModeKnobMan",
+      "id": "cmdsModeKnobMan",
       "callback": "SimEWSModeMan",
       "relatedActions": [
-        "cmdsmodeknobstepup",
-        "cmdsmodeknobstepdown",
-        "cmdsmodeknoboff",
-        "cmdsmodeknobstby",
-        "cmdsmodeknobsemi",
-        "cmdsmodeknobauto",
-        "cmdsmodeknobbyp"
+        "cmdsModeKnobStepUp",
+        "cmdsModeKnobStepDown",
+        "cmdsModeKnobOff",
+        "cmdsModeKnobStby",
+        "cmdsModeKnobSemi",
+        "cmdsModeKnobAuto",
+        "cmdsModeKnobByp"
       ],
       "description": "CMDS: MODE Knob - MAN",
       "category": "LEFT AUX CONSOLE",
@@ -3185,17 +3024,16 @@
       }
     },
     {
-      "id": "cmdsmodeknobsemi",
-      "clazz": "CmdsModeKnobSemi",
+      "id": "cmdsModeKnobSemi",
       "callback": "SimEWSModeSemi",
       "relatedActions": [
-        "cmdsmodeknobstepup",
-        "cmdsmodeknobstepdown",
-        "cmdsmodeknoboff",
-        "cmdsmodeknobstby",
-        "cmdsmodeknobman",
-        "cmdsmodeknobauto",
-        "cmdsmodeknobbyp"
+        "cmdsModeKnobStepUp",
+        "cmdsModeKnobStepDown",
+        "cmdsModeKnobOff",
+        "cmdsModeKnobStby",
+        "cmdsModeKnobMan",
+        "cmdsModeKnobAuto",
+        "cmdsModeKnobByp"
       ],
       "description": "CMDS: MODE Knob - SEMI",
       "category": "LEFT AUX CONSOLE",
@@ -3211,17 +3049,16 @@
       }
     },
     {
-      "id": "cmdsmodeknobauto",
-      "clazz": "CmdsModeKnobAuto",
+      "id": "cmdsModeKnobAuto",
       "callback": "SimEWSModeAuto",
       "relatedActions": [
-        "cmdsmodeknobstepup",
-        "cmdsmodeknobstepdown",
-        "cmdsmodeknoboff",
-        "cmdsmodeknobstby",
-        "cmdsmodeknobman",
-        "cmdsmodeknobsemi",
-        "cmdsmodeknobbyp"
+        "cmdsModeKnobStepUp",
+        "cmdsModeKnobStepDown",
+        "cmdsModeKnobOff",
+        "cmdsModeKnobStby",
+        "cmdsModeKnobMan",
+        "cmdsModeKnobSemi",
+        "cmdsModeKnobByp"
       ],
       "description": "CMDS: MODE Knob - AUTO",
       "category": "LEFT AUX CONSOLE",
@@ -3237,17 +3074,16 @@
       }
     },
     {
-      "id": "cmdsmodeknobbyp",
-      "clazz": "CmdsModeKnobByp",
+      "id": "cmdsModeKnobByp",
       "callback": "SimEWSModeByp",
       "relatedActions": [
-        "cmdsmodeknobstepup",
-        "cmdsmodeknobstepdown",
-        "cmdsmodeknoboff",
-        "cmdsmodeknobstby",
-        "cmdsmodeknobman",
-        "cmdsmodeknobsemi",
-        "cmdsmodeknobauto"
+        "cmdsModeKnobStepUp",
+        "cmdsModeKnobStepDown",
+        "cmdsModeKnobOff",
+        "cmdsModeKnobStby",
+        "cmdsModeKnobMan",
+        "cmdsModeKnobSemi",
+        "cmdsModeKnobAuto"
       ],
       "description": "CMDS: MODE Knob - BYP",
       "category": "LEFT AUX CONSOLE",
@@ -3263,8 +3099,7 @@
       }
     },
     {
-      "id": "gearemerstoresjettisonbuttonhold",
-      "clazz": "GearEmerStoresJettisonButtonHold",
+      "id": "gearEmerStoresJettisonButtonHold",
       "callback": "SimEmergencyJettison",
       "description": "GEAR: EMER STORES JETTISON Button - Hold",
       "category": "LEFT AUX CONSOLE",
@@ -3275,12 +3110,11 @@
       "type": "button"
     },
     {
-      "id": "gearhookswitchup",
-      "clazz": "GearHookSwitchUp",
+      "id": "gearHookSwitchUp",
       "callback": "SimHookUp",
       "relatedActions": [
-        "gearhookswitchtoggle",
-        "gearhookswitchdn"
+        "gearHookSwitchToggle",
+        "gearHookSwitchDn"
       ],
       "description": "GEAR: HOOK Switch - UP",
       "category": "LEFT AUX CONSOLE",
@@ -3296,12 +3130,11 @@
       }
     },
     {
-      "id": "gearhookswitchdn",
-      "clazz": "GearHookSwitchDn",
+      "id": "gearHookSwitchDn",
       "callback": "SimHookDown",
       "relatedActions": [
-        "gearhookswitchtoggle",
-        "gearhookswitchup"
+        "gearHookSwitchToggle",
+        "gearHookSwitchUp"
       ],
       "description": "GEAR: HOOK Switch - DN",
       "category": "LEFT AUX CONSOLE",
@@ -3317,12 +3150,11 @@
       }
     },
     {
-      "id": "geargndjettswitchenable",
-      "clazz": "GearGndJettSwitchEnable",
+      "id": "gearGndJettSwitchEnable",
       "callback": "SimGndJettOn",
       "relatedActions": [
-        "geargndjettswitchtoggle",
-        "geargndjettswitchoff"
+        "gearGndJettSwitchToggle",
+        "gearGndJettSwitchOff"
       ],
       "description": "GEAR: GND JETT Switch - ENABLE",
       "category": "LEFT AUX CONSOLE",
@@ -3338,12 +3170,11 @@
       }
     },
     {
-      "id": "geargndjettswitchoff",
-      "clazz": "GearGndJettSwitchOff",
+      "id": "gearGndJettSwitchOff",
       "callback": "SimGndJettOff",
       "relatedActions": [
-        "geargndjettswitchtoggle",
-        "geargndjettswitchenable"
+        "gearGndJettSwitchToggle",
+        "gearGndJettSwitchEnable"
       ],
       "description": "GEAR: GND JETT Switch - OFF",
       "category": "LEFT AUX CONSOLE",
@@ -3359,12 +3190,11 @@
       }
     },
     {
-      "id": "gearparkingbreakswitchon",
-      "clazz": "GearParkingBreakSwitchOn",
+      "id": "gearParkingBreakSwitchOn",
       "callback": "SimParkingBrakeOn",
       "relatedActions": [
-        "gearparkingbreakswitchtoggle",
-        "gearparkingbreakswitchoff"
+        "gearParkingBreakSwitchToggle",
+        "gearParkingBreakSwitchOff"
       ],
       "description": "GEAR: PARKING BREAK Switch - ON",
       "category": "LEFT AUX CONSOLE",
@@ -3380,12 +3210,11 @@
       }
     },
     {
-      "id": "gearparkingbreakswitchoff",
-      "clazz": "GearParkingBreakSwitchOff",
+      "id": "gearParkingBreakSwitchOff",
       "callback": "SimParkingBrakeOff",
       "relatedActions": [
-        "gearparkingbreakswitchtoggle",
-        "gearparkingbreakswitchon"
+        "gearParkingBreakSwitchToggle",
+        "gearParkingBreakSwitchOn"
       ],
       "description": "GEAR: PARKING BREAK Switch - OFF",
       "category": "LEFT AUX CONSOLE",
@@ -3401,12 +3230,11 @@
       }
     },
     {
-      "id": "gearlghandleup",
-      "clazz": "GearLgHandleUp",
+      "id": "gearLgHandleUp",
       "callback": "AFGearUp",
       "relatedActions": [
-        "gearlghandletoggle",
-        "gearlghandledn"
+        "gearLgHandleToggle",
+        "gearLgHandleDn"
       ],
       "description": "GEAR: LG Handle - UP",
       "category": "LEFT AUX CONSOLE",
@@ -3417,12 +3245,11 @@
       "type": "switch"
     },
     {
-      "id": "gearlghandledn",
-      "clazz": "GearLgHandleDn",
+      "id": "gearLgHandleDn",
       "callback": "AFGearDown",
       "relatedActions": [
-        "gearlghandletoggle",
-        "gearlghandleup"
+        "gearLgHandleToggle",
+        "gearLgHandleUp"
       ],
       "description": "GEAR: LG Handle - DN",
       "category": "LEFT AUX CONSOLE",
@@ -3433,12 +3260,11 @@
       "type": "switch"
     },
     {
-      "id": "gearstoresconfigswitchcati",
-      "clazz": "GearStoresConfigSwitchCatI",
+      "id": "gearStoresConfigSwitchCatI",
       "callback": "SimCATI",
       "relatedActions": [
-        "gearstoresconfigswitchtoggle",
-        "gearstoresconfigswitchcatiii"
+        "gearStoresConfigSwitchToggle",
+        "gearStoresConfigSwitchCatIii"
       ],
       "description": "GEAR: STORES CONFIG Switch - CAT I",
       "category": "LEFT AUX CONSOLE",
@@ -3454,12 +3280,11 @@
       }
     },
     {
-      "id": "gearstoresconfigswitchcatiii",
-      "clazz": "GearStoresConfigSwitchCatIii",
+      "id": "gearStoresConfigSwitchCatIii",
       "callback": "SimCATIII",
       "relatedActions": [
-        "gearstoresconfigswitchtoggle",
-        "gearstoresconfigswitchcati"
+        "gearStoresConfigSwitchToggle",
+        "gearStoresConfigSwitchCatI"
       ],
       "description": "GEAR: STORES CONFIG Switch - CAT III",
       "category": "LEFT AUX CONSOLE",
@@ -3475,8 +3300,7 @@
       }
     },
     {
-      "id": "gearhornsilencerbuttonpush",
-      "clazz": "GearHornSilencerButtonPush",
+      "id": "gearHornSilencerButtonPush",
       "callback": "SimSilenceHorn",
       "description": "GEAR: HORN SILENCER Button - Push",
       "category": "LEFT AUX CONSOLE",
@@ -3487,12 +3311,11 @@
       "type": "button"
     },
     {
-      "id": "gearlightsswitchlanding",
-      "clazz": "GearLightsSwitchLanding",
+      "id": "gearLightsSwitchLanding",
       "callback": "SimLandingLightOn",
       "relatedActions": [
-        "gearlightsswitchtoggle",
-        "gearlightsswitchoff"
+        "gearLightsSwitchToggle",
+        "gearLightsSwitchOff"
       ],
       "description": "GEAR: LIGHTS Switch - LANDING",
       "category": "LEFT AUX CONSOLE",
@@ -3508,12 +3331,11 @@
       }
     },
     {
-      "id": "gearlightsswitchoff",
-      "clazz": "GearLightsSwitchOff",
+      "id": "gearLightsSwitchOff",
       "callback": "SimLandingLightOff",
       "relatedActions": [
-        "gearlightsswitchtoggle",
-        "gearlightsswitchlanding"
+        "gearLightsSwitchToggle",
+        "gearLightsSwitchLanding"
       ],
       "description": "GEAR: LIGHTS Switch - OFF",
       "category": "LEFT AUX CONSOLE",
@@ -3529,15 +3351,14 @@
       }
     },
     {
-      "id": "miscrfswitchnorm",
-      "clazz": "MiscRfSwitchNorm",
+      "id": "miscRfSwitchNorm",
       "callback": "SimRFNorm",
       "relatedActions": [
-        "miscrfswitchcycle",
-        "miscrfswitchstepup",
-        "miscrfswitchstepdown",
-        "miscrfswitchquiet",
-        "miscrfswitchsilent"
+        "miscRfSwitchCycle",
+        "miscRfSwitchStepUp",
+        "miscRfSwitchStepDown",
+        "miscRfSwitchQuiet",
+        "miscRfSwitchSilent"
       ],
       "description": "MISC: RF Switch - NORM",
       "category": "CENTER CONSOLE",
@@ -3553,15 +3374,14 @@
       }
     },
     {
-      "id": "miscrfswitchquiet",
-      "clazz": "MiscRfSwitchQuiet",
+      "id": "miscRfSwitchQuiet",
       "callback": "SimRFQuiet",
       "relatedActions": [
-        "miscrfswitchcycle",
-        "miscrfswitchstepup",
-        "miscrfswitchstepdown",
-        "miscrfswitchnorm",
-        "miscrfswitchsilent"
+        "miscRfSwitchCycle",
+        "miscRfSwitchStepUp",
+        "miscRfSwitchStepDown",
+        "miscRfSwitchNorm",
+        "miscRfSwitchSilent"
       ],
       "description": "MISC: RF Switch - QUIET",
       "category": "CENTER CONSOLE",
@@ -3577,15 +3397,14 @@
       }
     },
     {
-      "id": "miscrfswitchsilent",
-      "clazz": "MiscRfSwitchSilent",
+      "id": "miscRfSwitchSilent",
       "callback": "SimRFSilent",
       "relatedActions": [
-        "miscrfswitchcycle",
-        "miscrfswitchstepup",
-        "miscrfswitchstepdown",
-        "miscrfswitchnorm",
-        "miscrfswitchquiet"
+        "miscRfSwitchCycle",
+        "miscRfSwitchStepUp",
+        "miscRfSwitchStepDown",
+        "miscRfSwitchNorm",
+        "miscRfSwitchQuiet"
       ],
       "description": "MISC: RF Switch - SILENT",
       "category": "CENTER CONSOLE",
@@ -3601,12 +3420,11 @@
       }
     },
     {
-      "id": "misclaserswitcharm",
-      "clazz": "MiscLaserSwitchArm",
+      "id": "miscLaserSwitchArm",
       "callback": "SimLaserArmOn",
       "relatedActions": [
-        "misclaserswitchtoggle",
-        "misclaserswitchoff"
+        "miscLaserSwitchToggle",
+        "miscLaserSwitchOff"
       ],
       "description": "MISC: LASER Switch - ARM",
       "category": "CENTER CONSOLE",
@@ -3622,12 +3440,11 @@
       }
     },
     {
-      "id": "misclaserswitchoff",
-      "clazz": "MiscLaserSwitchOff",
+      "id": "miscLaserSwitchOff",
       "callback": "SimLaserArmOff",
       "relatedActions": [
-        "misclaserswitchtoggle",
-        "misclaserswitcharm"
+        "miscLaserSwitchToggle",
+        "miscLaserSwitchArm"
       ],
       "description": "MISC: LASER Switch - OFF",
       "category": "CENTER CONSOLE",
@@ -3643,15 +3460,14 @@
       }
     },
     {
-      "id": "miscmasterarmswitchon",
-      "clazz": "MiscMasterArmSwitchOn",
+      "id": "miscMasterArmSwitchOn",
       "callback": "SimArmMasterArm",
       "relatedActions": [
-        "miscmasterarmswitchcycle",
-        "miscmasterarmswitchstepup",
-        "miscmasterarmswitchstepdown",
-        "miscmasterarmswitchoff",
-        "miscmasterarmswitchsim"
+        "miscMasterArmSwitchCycle",
+        "miscMasterArmSwitchStepUp",
+        "miscMasterArmSwitchStepDown",
+        "miscMasterArmSwitchOff",
+        "miscMasterArmSwitchSim"
       ],
       "description": "MISC: MASTER ARM Switch - ON",
       "category": "CENTER CONSOLE",
@@ -3667,15 +3483,14 @@
       }
     },
     {
-      "id": "miscmasterarmswitchoff",
-      "clazz": "MiscMasterArmSwitchOff",
+      "id": "miscMasterArmSwitchOff",
       "callback": "SimSafeMasterArm",
       "relatedActions": [
-        "miscmasterarmswitchcycle",
-        "miscmasterarmswitchstepup",
-        "miscmasterarmswitchstepdown",
-        "miscmasterarmswitchon",
-        "miscmasterarmswitchsim"
+        "miscMasterArmSwitchCycle",
+        "miscMasterArmSwitchStepUp",
+        "miscMasterArmSwitchStepDown",
+        "miscMasterArmSwitchOn",
+        "miscMasterArmSwitchSim"
       ],
       "description": "MISC: MASTER ARM Switch - OFF",
       "category": "CENTER CONSOLE",
@@ -3691,15 +3506,14 @@
       }
     },
     {
-      "id": "miscmasterarmswitchsim",
-      "clazz": "MiscMasterArmSwitchSim",
+      "id": "miscMasterArmSwitchSim",
       "callback": "SimSimMasterArm",
       "relatedActions": [
-        "miscmasterarmswitchcycle",
-        "miscmasterarmswitchstepup",
-        "miscmasterarmswitchstepdown",
-        "miscmasterarmswitchon",
-        "miscmasterarmswitchoff"
+        "miscMasterArmSwitchCycle",
+        "miscMasterArmSwitchStepUp",
+        "miscMasterArmSwitchStepDown",
+        "miscMasterArmSwitchOn",
+        "miscMasterArmSwitchOff"
       ],
       "description": "MISC: MASTER ARM Switch - SIM",
       "category": "CENTER CONSOLE",
@@ -3715,8 +3529,7 @@
       }
     },
     {
-      "id": "miscadvmodetoggletfronoff",
-      "clazz": "MiscAdvModeToggleTfrOnOff",
+      "id": "miscAdvModeToggleTfrOnOff",
       "callback": "SimToggleTFR",
       "description": "MISC: ADV MODE - Toggle TFR On / Off",
       "category": "CENTER CONSOLE",
@@ -3727,15 +3540,14 @@
       "type": "button"
     },
     {
-      "id": "miscrollswitchhdgsel",
-      "clazz": "MiscRollSwitchHdgSel",
+      "id": "miscRollSwitchHdgSel",
       "callback": "SimLeftAPUp",
       "relatedActions": [
-        "miscrollswitchcycle",
-        "miscrollswitchstepup",
-        "miscrollswitchstepdown",
-        "miscrollswitchatthold",
-        "miscrollswitchstrgsel"
+        "miscRollSwitchCycle",
+        "miscRollSwitchStepUp",
+        "miscRollSwitchStepDown",
+        "miscRollSwitchAttHold",
+        "miscRollSwitchStrgSel"
       ],
       "description": "MISC: ROLL Switch - HDG SEL",
       "category": "CENTER CONSOLE",
@@ -3751,15 +3563,14 @@
       }
     },
     {
-      "id": "miscrollswitchatthold",
-      "clazz": "MiscRollSwitchAttHold",
+      "id": "miscRollSwitchAttHold",
       "callback": "SimLeftAPMid",
       "relatedActions": [
-        "miscrollswitchcycle",
-        "miscrollswitchstepup",
-        "miscrollswitchstepdown",
-        "miscrollswitchhdgsel",
-        "miscrollswitchstrgsel"
+        "miscRollSwitchCycle",
+        "miscRollSwitchStepUp",
+        "miscRollSwitchStepDown",
+        "miscRollSwitchHdgSel",
+        "miscRollSwitchStrgSel"
       ],
       "description": "MISC: ROLL Switch - ATT HOLD",
       "category": "CENTER CONSOLE",
@@ -3775,15 +3586,14 @@
       }
     },
     {
-      "id": "miscrollswitchstrgsel",
-      "clazz": "MiscRollSwitchStrgSel",
+      "id": "miscRollSwitchStrgSel",
       "callback": "SimLeftAPDown",
       "relatedActions": [
-        "miscrollswitchcycle",
-        "miscrollswitchstepup",
-        "miscrollswitchstepdown",
-        "miscrollswitchhdgsel",
-        "miscrollswitchatthold"
+        "miscRollSwitchCycle",
+        "miscRollSwitchStepUp",
+        "miscRollSwitchStepDown",
+        "miscRollSwitchHdgSel",
+        "miscRollSwitchAttHold"
       ],
       "description": "MISC: ROLL Switch -  STRG SEL",
       "category": "CENTER CONSOLE",
@@ -3799,15 +3609,14 @@
       }
     },
     {
-      "id": "miscpitchswitchalthold",
-      "clazz": "MiscPitchSwitchAltHold",
+      "id": "miscPitchSwitchAltHold",
       "callback": "SimRightAPUp",
       "relatedActions": [
-        "miscpitchswitchcyclealsocombatap",
-        "miscpitchswitchstepup",
-        "miscpitchswitchstepdown",
-        "miscpitchswitchapoff",
-        "miscpitchswitchatthold"
+        "miscPitchSwitchCycleAlsoCombatAp",
+        "miscPitchSwitchStepUp",
+        "miscPitchSwitchStepDown",
+        "miscPitchSwitchAPOff",
+        "miscPitchSwitchAttHold"
       ],
       "description": "MISC: PITCH Switch - ALT HOLD",
       "category": "CENTER CONSOLE",
@@ -3823,15 +3632,14 @@
       }
     },
     {
-      "id": "miscpitchswitchapoff",
-      "clazz": "MiscPitchSwitchAPOff",
+      "id": "miscPitchSwitchAPOff",
       "callback": "SimRightAPMid",
       "relatedActions": [
-        "miscpitchswitchcyclealsocombatap",
-        "miscpitchswitchstepup",
-        "miscpitchswitchstepdown",
-        "miscpitchswitchalthold",
-        "miscpitchswitchatthold"
+        "miscPitchSwitchCycleAlsoCombatAp",
+        "miscPitchSwitchStepUp",
+        "miscPitchSwitchStepDown",
+        "miscPitchSwitchAltHold",
+        "miscPitchSwitchAttHold"
       ],
       "description": "MISC: PITCH Switch - A/P OFF",
       "category": "CENTER CONSOLE",
@@ -3847,15 +3655,14 @@
       }
     },
     {
-      "id": "miscpitchswitchatthold",
-      "clazz": "MiscPitchSwitchAttHold",
+      "id": "miscPitchSwitchAttHold",
       "callback": "SimRightAPDown",
       "relatedActions": [
-        "miscpitchswitchcyclealsocombatap",
-        "miscpitchswitchstepup",
-        "miscpitchswitchstepdown",
-        "miscpitchswitchalthold",
-        "miscpitchswitchapoff"
+        "miscPitchSwitchCycleAlsoCombatAp",
+        "miscPitchSwitchStepUp",
+        "miscPitchSwitchStepDown",
+        "miscPitchSwitchAltHold",
+        "miscPitchSwitchAPOff"
       ],
       "description": "MISC: PITCH Switch - ATT HOLD",
       "category": "CENTER CONSOLE",
@@ -3871,8 +3678,7 @@
       }
     },
     {
-      "id": "eyemastercautionbuttonpush",
-      "clazz": "EyeMasterCautionButtonPush",
+      "id": "eyeMasterCautionButtonPush",
       "callback": "ExtinguishMasterCaution",
       "description": "EYE: MASTER CAUTION Button - Push",
       "category": "CENTER CONSOLE",
@@ -3883,8 +3689,7 @@
       "type": "button"
     },
     {
-      "id": "eyefackbuttonpush",
-      "clazz": "EyeFAckButtonPush",
+      "id": "eyeFAckButtonPush",
       "callback": "SimICPFAck",
       "description": "EYE: F ACK Button - Push",
       "category": "CENTER CONSOLE",
@@ -3895,8 +3700,7 @@
       "type": "button"
     },
     {
-      "id": "twphandoffpush",
-      "clazz": "TwpHandoffPush",
+      "id": "twpHandoffPush",
       "callback": "SimRWRHandoff",
       "description": "TWP: HANDOFF - Push",
       "category": "CENTER CONSOLE",
@@ -3907,8 +3711,7 @@
       "type": "button"
     },
     {
-      "id": "twpmissilelaunchpush",
-      "clazz": "TwpMissileLaunchPush",
+      "id": "twpMissileLaunchPush",
       "callback": "SimRWRLaunch",
       "description": "TWP: MISSILE LAUNCH - Push",
       "category": "CENTER CONSOLE",
@@ -3919,8 +3722,7 @@
       "type": "button"
     },
     {
-      "id": "twpsystestpush",
-      "clazz": "TwpSysTestPush",
+      "id": "twpSysTestPush",
       "callback": "SimRWRSysTest",
       "description": "TWP: SYS TEST - Push",
       "category": "CENTER CONSOLE",
@@ -3931,8 +3733,7 @@
       "type": "button"
     },
     {
-      "id": "twptgtseppush",
-      "clazz": "TwpTgtSepPush",
+      "id": "twpTgtSepPush",
       "callback": "SimRWRSetTargetSep",
       "description": "TWP: TGT SEP - Push",
       "category": "CENTER CONSOLE",
@@ -3943,11 +3744,10 @@
       "type": "button"
     },
     {
-      "id": "rwrbrightnessknobincrease",
-      "clazz": "RwrBrightnessKnobIncrease",
+      "id": "rwrBrightnessKnobIncrease",
       "callback": "SimRWRBrightnessUp",
       "relatedActions": [
-        "rwrbrightnessknobdecrease"
+        "rwrBrightnessKnobDecrease"
       ],
       "description": "RWR: Brightness Knob - Increase",
       "category": "CENTER CONSOLE",
@@ -3958,11 +3758,10 @@
       "type": "button"
     },
     {
-      "id": "rwrbrightnessknobdecrease",
-      "clazz": "RwrBrightnessKnobDecrease",
+      "id": "rwrBrightnessKnobDecrease",
       "callback": "SimRWRBrightnessDown",
       "relatedActions": [
-        "rwrbrightnessknobincrease"
+        "rwrBrightnessKnobIncrease"
       ],
       "description": "RWR: Brightness Knob - Decrease",
       "category": "CENTER CONSOLE",
@@ -3973,13 +3772,12 @@
       "type": "button"
     },
     {
-      "id": "mainhsihdgknobincrease5",
-      "clazz": "MainHsiHdgKnobIncrease5",
+      "id": "mainHsiHdgKnobIncrease5",
       "callback": "SimHsiHeadingInc",
       "relatedActions": [
-        "mainhsihdgknobdecrease5",
-        "mainhsihdgknobincrease1",
-        "mainhsihdgknobdecrease1"
+        "mainHsiHdgKnobDecrease5",
+        "mainHsiHdgKnobIncrease1",
+        "mainHsiHdgKnobDecrease1"
       ],
       "description": "MAIN: HSI HDG Knob - Increase (5°)",
       "category": "CENTER CONSOLE",
@@ -3995,13 +3793,12 @@
       }
     },
     {
-      "id": "mainhsihdgknobdecrease5",
-      "clazz": "MainHsiHdgKnobDecrease5",
+      "id": "mainHsiHdgKnobDecrease5",
       "callback": "SimHsiHeadingDec",
       "relatedActions": [
-        "mainhsihdgknobincrease5",
-        "mainhsihdgknobincrease1",
-        "mainhsihdgknobdecrease1"
+        "mainHsiHdgKnobIncrease5",
+        "mainHsiHdgKnobIncrease1",
+        "mainHsiHdgKnobDecrease1"
       ],
       "description": "MAIN: HSI HDG Knob - Decrease (5°)",
       "category": "CENTER CONSOLE",
@@ -4017,13 +3814,12 @@
       }
     },
     {
-      "id": "mainhsihdgknobincrease1",
-      "clazz": "MainHsiHdgKnobIncrease1",
+      "id": "mainHsiHdgKnobIncrease1",
       "callback": "SimHsiHdgIncBy1",
       "relatedActions": [
-        "mainhsihdgknobincrease5",
-        "mainhsihdgknobdecrease5",
-        "mainhsihdgknobdecrease1"
+        "mainHsiHdgKnobIncrease5",
+        "mainHsiHdgKnobDecrease5",
+        "mainHsiHdgKnobDecrease1"
       ],
       "description": "MAIN: HSI HDG Knob - Increase (1°)",
       "category": "CENTER CONSOLE",
@@ -4039,13 +3835,12 @@
       }
     },
     {
-      "id": "mainhsihdgknobdecrease1",
-      "clazz": "MainHsiHdgKnobDecrease1",
+      "id": "mainHsiHdgKnobDecrease1",
       "callback": "SimHsiHdgDecBy1",
       "relatedActions": [
-        "mainhsihdgknobincrease5",
-        "mainhsihdgknobdecrease5",
-        "mainhsihdgknobincrease1"
+        "mainHsiHdgKnobIncrease5",
+        "mainHsiHdgKnobDecrease5",
+        "mainHsiHdgKnobIncrease1"
       ],
       "description": "MAIN: HSI HDG Knob - Decrease (1°)",
       "category": "CENTER CONSOLE",
@@ -4061,13 +3856,12 @@
       }
     },
     {
-      "id": "mainhsicrsknobincrease5",
-      "clazz": "MainHsiCrsKnobIncrease5",
+      "id": "mainHsiCrsKnobIncrease5",
       "callback": "SimHsiCourseInc",
       "relatedActions": [
-        "mainhsicrsknobdecrease5",
-        "mainhsicrsknobincrease1",
-        "mainhsicrsknobdecrease1"
+        "mainHsiCrsKnobDecrease5",
+        "mainHsiCrsKnobIncrease1",
+        "mainHsiCrsKnobDecrease1"
       ],
       "description": "MAIN: HSI CRS Knob - Increase (5°)",
       "category": "CENTER CONSOLE",
@@ -4083,13 +3877,12 @@
       }
     },
     {
-      "id": "mainhsicrsknobdecrease5",
-      "clazz": "MainHsiCrsKnobDecrease5",
+      "id": "mainHsiCrsKnobDecrease5",
       "callback": "SimHsiCourseDec",
       "relatedActions": [
-        "mainhsicrsknobincrease5",
-        "mainhsicrsknobincrease1",
-        "mainhsicrsknobdecrease1"
+        "mainHsiCrsKnobIncrease5",
+        "mainHsiCrsKnobIncrease1",
+        "mainHsiCrsKnobDecrease1"
       ],
       "description": "MAIN: HSI CRS Knob - Decrease (5°)",
       "category": "CENTER CONSOLE",
@@ -4105,13 +3898,12 @@
       }
     },
     {
-      "id": "mainhsicrsknobincrease1",
-      "clazz": "MainHsiCrsKnobIncrease1",
+      "id": "mainHsiCrsKnobIncrease1",
       "callback": "SimHsiCrsIncBy1",
       "relatedActions": [
-        "mainhsicrsknobincrease5",
-        "mainhsicrsknobdecrease5",
-        "mainhsicrsknobdecrease1"
+        "mainHsiCrsKnobIncrease5",
+        "mainHsiCrsKnobDecrease5",
+        "mainHsiCrsKnobDecrease1"
       ],
       "description": "MAIN: HSI CRS Knob - Increase (1°)",
       "category": "CENTER CONSOLE",
@@ -4127,13 +3919,12 @@
       }
     },
     {
-      "id": "mainhsicrsknobdecrease1",
-      "clazz": "MainHsiCrsKnobDecrease1",
+      "id": "mainHsiCrsKnobDecrease1",
       "callback": "SimHsiCrsDecBy1",
       "relatedActions": [
-        "mainhsicrsknobincrease5",
-        "mainhsicrsknobdecrease5",
-        "mainhsicrsknobincrease1"
+        "mainHsiCrsKnobIncrease5",
+        "mainHsiCrsKnobDecrease5",
+        "mainHsiCrsKnobIncrease1"
       ],
       "description": "MAIN: HSI CRS Knob - Decrease (1°)",
       "category": "CENTER CONSOLE",
@@ -4149,13 +3940,12 @@
       }
     },
     {
-      "id": "mainaltimeterpressureknobincr5",
-      "clazz": "MainAltimeterPressureKnobIncr5",
+      "id": "mainAltimeterPressureKnobIncr5",
       "callback": "SimAltPressInc",
       "relatedActions": [
-        "mainaltimeterpressureknobdecr5",
-        "mainaltimeterpressureknobincr1",
-        "mainaltimeterpressureknobdecr1"
+        "mainAltimeterPressureKnobDecr5",
+        "mainAltimeterPressureKnobIncr1",
+        "mainAltimeterPressureKnobDecr1"
       ],
       "description": "MAIN: Altimeter Pressure Knob - Incr. (5°)",
       "category": "CENTER CONSOLE",
@@ -4171,13 +3961,12 @@
       }
     },
     {
-      "id": "mainaltimeterpressureknobdecr5",
-      "clazz": "MainAltimeterPressureKnobDecr5",
+      "id": "mainAltimeterPressureKnobDecr5",
       "callback": "SimAltPressDec",
       "relatedActions": [
-        "mainaltimeterpressureknobincr5",
-        "mainaltimeterpressureknobincr1",
-        "mainaltimeterpressureknobdecr1"
+        "mainAltimeterPressureKnobIncr5",
+        "mainAltimeterPressureKnobIncr1",
+        "mainAltimeterPressureKnobDecr1"
       ],
       "description": "MAIN: Altimeter Pressure Knob - Decr. (5°)",
       "category": "CENTER CONSOLE",
@@ -4193,13 +3982,12 @@
       }
     },
     {
-      "id": "mainaltimeterpressureknobincr1",
-      "clazz": "MainAltimeterPressureKnobIncr1",
+      "id": "mainAltimeterPressureKnobIncr1",
       "callback": "SimAltPressIncBy1",
       "relatedActions": [
-        "mainaltimeterpressureknobincr5",
-        "mainaltimeterpressureknobdecr5",
-        "mainaltimeterpressureknobdecr1"
+        "mainAltimeterPressureKnobIncr5",
+        "mainAltimeterPressureKnobDecr5",
+        "mainAltimeterPressureKnobDecr1"
       ],
       "description": "MAIN: Altimeter Pressure Knob - Incr. (1°)",
       "category": "CENTER CONSOLE",
@@ -4215,13 +4003,12 @@
       }
     },
     {
-      "id": "mainaltimeterpressureknobdecr1",
-      "clazz": "MainAltimeterPressureKnobDecr1",
+      "id": "mainAltimeterPressureKnobDecr1",
       "callback": "SimAltPressDecBy1",
       "relatedActions": [
-        "mainaltimeterpressureknobincr5",
-        "mainaltimeterpressureknobdecr5",
-        "mainaltimeterpressureknobincr1"
+        "mainAltimeterPressureKnobIncr5",
+        "mainAltimeterPressureKnobDecr5",
+        "mainAltimeterPressureKnobIncr1"
       ],
       "description": "MAIN: Altimeter Pressure Knob - Decr. (1°)",
       "category": "CENTER CONSOLE",
@@ -4237,16 +4024,15 @@
       }
     },
     {
-      "id": "instrmodeknobilstcn",
-      "clazz": "InstrModeKnobIlsTcn",
+      "id": "instrModeKnobIlsTcn",
       "callback": "SimHSIIlsTcn",
       "relatedActions": [
-        "instrmodeknobcycle",
-        "instrmodeknobstepup",
-        "instrmodeknobstepdown",
-        "instrmodeknobtcn",
-        "instrmodeknobnav",
-        "instrmodeknobilsnav"
+        "instrModeKnobCycle",
+        "instrModeKnobStepUp",
+        "instrModeKnobStepDown",
+        "instrModeKnobTcn",
+        "instrModeKnobNav",
+        "instrModeKnobIlsNav"
       ],
       "description": "INSTR: MODE Knob - ILS/TCN",
       "category": "CENTER CONSOLE",
@@ -4262,16 +4048,15 @@
       }
     },
     {
-      "id": "instrmodeknobtcn",
-      "clazz": "InstrModeKnobTcn",
+      "id": "instrModeKnobTcn",
       "callback": "SimHSITcn",
       "relatedActions": [
-        "instrmodeknobcycle",
-        "instrmodeknobstepup",
-        "instrmodeknobstepdown",
-        "instrmodeknobilstcn",
-        "instrmodeknobnav",
-        "instrmodeknobilsnav"
+        "instrModeKnobCycle",
+        "instrModeKnobStepUp",
+        "instrModeKnobStepDown",
+        "instrModeKnobIlsTcn",
+        "instrModeKnobNav",
+        "instrModeKnobIlsNav"
       ],
       "description": "INSTR: MODE Knob - TCN",
       "category": "CENTER CONSOLE",
@@ -4287,16 +4072,15 @@
       }
     },
     {
-      "id": "instrmodeknobnav",
-      "clazz": "InstrModeKnobNav",
+      "id": "instrModeKnobNav",
       "callback": "SimHSINav",
       "relatedActions": [
-        "instrmodeknobcycle",
-        "instrmodeknobstepup",
-        "instrmodeknobstepdown",
-        "instrmodeknobilstcn",
-        "instrmodeknobtcn",
-        "instrmodeknobilsnav"
+        "instrModeKnobCycle",
+        "instrModeKnobStepUp",
+        "instrModeKnobStepDown",
+        "instrModeKnobIlsTcn",
+        "instrModeKnobTcn",
+        "instrModeKnobIlsNav"
       ],
       "description": "INSTR: MODE Knob - NAV",
       "category": "CENTER CONSOLE",
@@ -4312,16 +4096,15 @@
       }
     },
     {
-      "id": "instrmodeknobilsnav",
-      "clazz": "InstrModeKnobIlsNav",
+      "id": "instrModeKnobIlsNav",
       "callback": "SimHSIIlsNav",
       "relatedActions": [
-        "instrmodeknobcycle",
-        "instrmodeknobstepup",
-        "instrmodeknobstepdown",
-        "instrmodeknobilstcn",
-        "instrmodeknobtcn",
-        "instrmodeknobnav"
+        "instrModeKnobCycle",
+        "instrModeKnobStepUp",
+        "instrModeKnobStepDown",
+        "instrModeKnobIlsTcn",
+        "instrModeKnobTcn",
+        "instrModeKnobNav"
       ],
       "description": "INSTR: MODE Knob - ILS/NAV",
       "category": "CENTER CONSOLE",
@@ -4337,17 +4120,16 @@
       }
     },
     {
-      "id": "qtyfuelqtyselknobtest",
-      "clazz": "QtyFuelQtySelKnobTest",
+      "id": "qtyFuelQtySelKnobTest",
       "callback": "SimFuelSwitchTest",
       "relatedActions": [
-        "qtyfuelqtyselknobstepup",
-        "qtyfuelqtyselknobstepdown",
-        "qtyfuelqtyselknobnorm",
-        "qtyfuelqtyselknobrsvr",
-        "qtyfuelqtyselknobintwing",
-        "qtyfuelqtyselknobextwing",
-        "qtyfuelqtyselknobextctr"
+        "qtyFuelQtySelKnobStepUp",
+        "qtyFuelQtySelKnobStepDown",
+        "qtyFuelQtySelKnobNorm",
+        "qtyFuelQtySelKnobRsvr",
+        "qtyFuelQtySelKnobIntWing",
+        "qtyFuelQtySelKnobExtWing",
+        "qtyFuelQtySelKnobExtCtr"
       ],
       "description": "QTY: FUEL QTY SEL Knob - TEST",
       "category": "CENTER CONSOLE",
@@ -4363,17 +4145,16 @@
       }
     },
     {
-      "id": "qtyfuelqtyselknobnorm",
-      "clazz": "QtyFuelQtySelKnobNorm",
+      "id": "qtyFuelQtySelKnobNorm",
       "callback": "SimFuelSwitchNorm",
       "relatedActions": [
-        "qtyfuelqtyselknobstepup",
-        "qtyfuelqtyselknobstepdown",
-        "qtyfuelqtyselknobtest",
-        "qtyfuelqtyselknobrsvr",
-        "qtyfuelqtyselknobintwing",
-        "qtyfuelqtyselknobextwing",
-        "qtyfuelqtyselknobextctr"
+        "qtyFuelQtySelKnobStepUp",
+        "qtyFuelQtySelKnobStepDown",
+        "qtyFuelQtySelKnobTest",
+        "qtyFuelQtySelKnobRsvr",
+        "qtyFuelQtySelKnobIntWing",
+        "qtyFuelQtySelKnobExtWing",
+        "qtyFuelQtySelKnobExtCtr"
       ],
       "description": "QTY: FUEL QTY SEL Knob - NORM",
       "category": "CENTER CONSOLE",
@@ -4389,17 +4170,16 @@
       }
     },
     {
-      "id": "qtyfuelqtyselknobrsvr",
-      "clazz": "QtyFuelQtySelKnobRsvr",
+      "id": "qtyFuelQtySelKnobRsvr",
       "callback": "SimFuelSwitchResv",
       "relatedActions": [
-        "qtyfuelqtyselknobstepup",
-        "qtyfuelqtyselknobstepdown",
-        "qtyfuelqtyselknobtest",
-        "qtyfuelqtyselknobnorm",
-        "qtyfuelqtyselknobintwing",
-        "qtyfuelqtyselknobextwing",
-        "qtyfuelqtyselknobextctr"
+        "qtyFuelQtySelKnobStepUp",
+        "qtyFuelQtySelKnobStepDown",
+        "qtyFuelQtySelKnobTest",
+        "qtyFuelQtySelKnobNorm",
+        "qtyFuelQtySelKnobIntWing",
+        "qtyFuelQtySelKnobExtWing",
+        "qtyFuelQtySelKnobExtCtr"
       ],
       "description": "QTY: FUEL QTY SEL Knob - RSVR",
       "category": "CENTER CONSOLE",
@@ -4415,17 +4195,16 @@
       }
     },
     {
-      "id": "qtyfuelqtyselknobintwing",
-      "clazz": "QtyFuelQtySelKnobIntWing",
+      "id": "qtyFuelQtySelKnobIntWing",
       "callback": "SimFuelSwitchWingInt",
       "relatedActions": [
-        "qtyfuelqtyselknobstepup",
-        "qtyfuelqtyselknobstepdown",
-        "qtyfuelqtyselknobtest",
-        "qtyfuelqtyselknobnorm",
-        "qtyfuelqtyselknobrsvr",
-        "qtyfuelqtyselknobextwing",
-        "qtyfuelqtyselknobextctr"
+        "qtyFuelQtySelKnobStepUp",
+        "qtyFuelQtySelKnobStepDown",
+        "qtyFuelQtySelKnobTest",
+        "qtyFuelQtySelKnobNorm",
+        "qtyFuelQtySelKnobRsvr",
+        "qtyFuelQtySelKnobExtWing",
+        "qtyFuelQtySelKnobExtCtr"
       ],
       "description": "QTY: FUEL QTY SEL Knob - INT WING",
       "category": "CENTER CONSOLE",
@@ -4441,17 +4220,16 @@
       }
     },
     {
-      "id": "qtyfuelqtyselknobextwing",
-      "clazz": "QtyFuelQtySelKnobExtWing",
+      "id": "qtyFuelQtySelKnobExtWing",
       "callback": "SimFuelSwitchWingExt",
       "relatedActions": [
-        "qtyfuelqtyselknobstepup",
-        "qtyfuelqtyselknobstepdown",
-        "qtyfuelqtyselknobtest",
-        "qtyfuelqtyselknobnorm",
-        "qtyfuelqtyselknobrsvr",
-        "qtyfuelqtyselknobintwing",
-        "qtyfuelqtyselknobextctr"
+        "qtyFuelQtySelKnobStepUp",
+        "qtyFuelQtySelKnobStepDown",
+        "qtyFuelQtySelKnobTest",
+        "qtyFuelQtySelKnobNorm",
+        "qtyFuelQtySelKnobRsvr",
+        "qtyFuelQtySelKnobIntWing",
+        "qtyFuelQtySelKnobExtCtr"
       ],
       "description": "QTY: FUEL QTY SEL Knob - EXT WING",
       "category": "CENTER CONSOLE",
@@ -4467,17 +4245,16 @@
       }
     },
     {
-      "id": "qtyfuelqtyselknobextctr",
-      "clazz": "QtyFuelQtySelKnobExtCtr",
+      "id": "qtyFuelQtySelKnobExtCtr",
       "callback": "SimFuelSwitchCenterExt",
       "relatedActions": [
-        "qtyfuelqtyselknobstepup",
-        "qtyfuelqtyselknobstepdown",
-        "qtyfuelqtyselknobtest",
-        "qtyfuelqtyselknobnorm",
-        "qtyfuelqtyselknobrsvr",
-        "qtyfuelqtyselknobintwing",
-        "qtyfuelqtyselknobextwing"
+        "qtyFuelQtySelKnobStepUp",
+        "qtyFuelQtySelKnobStepDown",
+        "qtyFuelQtySelKnobTest",
+        "qtyFuelQtySelKnobNorm",
+        "qtyFuelQtySelKnobRsvr",
+        "qtyFuelQtySelKnobIntWing",
+        "qtyFuelQtySelKnobExtWing"
       ],
       "description": "QTY: FUEL QTY SEL Knob - EXT CTR",
       "category": "CENTER CONSOLE",
@@ -4493,12 +4270,11 @@
       }
     },
     {
-      "id": "qtyextfueltransswitchnorm",
-      "clazz": "QtyExtFuelTransSwitchNorm",
+      "id": "qtyExtFuelTransSwitchNorm",
       "callback": "SimFuelTransNorm",
       "relatedActions": [
-        "qtyextfueltransswitchtoggle",
-        "qtyextfueltransswitchwingfirst"
+        "qtyExtFuelTransSwitchToggle",
+        "qtyExtFuelTransSwitchWingFirst"
       ],
       "description": "QTY: EXT FUEL TRANS Switch - NORM",
       "category": "CENTER CONSOLE",
@@ -4514,12 +4290,11 @@
       }
     },
     {
-      "id": "qtyextfueltransswitchwingfirst",
-      "clazz": "QtyExtFuelTransSwitchWingFirst",
+      "id": "qtyExtFuelTransSwitchWingFirst",
       "callback": "SimFuelTransWing",
       "relatedActions": [
-        "qtyextfueltransswitchtoggle",
-        "qtyextfueltransswitchnorm"
+        "qtyExtFuelTransSwitchToggle",
+        "qtyExtFuelTransSwitchNorm"
       ],
       "description": "QTY: EXT FUEL TRANS Switch - WING FIRST",
       "category": "CENTER CONSOLE",
@@ -4535,12 +4310,11 @@
       }
     },
     {
-      "id": "snsrlefthdptswitchon",
-      "clazz": "SnsrLeftHdptSwitchOn",
+      "id": "snsrLeftHdptSwitchOn",
       "callback": "SimLeftHptOn",
       "relatedActions": [
-        "snsrlefthdptswitchtoggle",
-        "snsrlefthdptswitchoff"
+        "snsrLeftHdptSwitchToggle",
+        "snsrLeftHdptSwitchOff"
       ],
       "description": "SNSR: LEFT HDPT Switch - ON",
       "category": "RIGHT CONSOLE",
@@ -4556,12 +4330,11 @@
       }
     },
     {
-      "id": "snsrlefthdptswitchoff",
-      "clazz": "SnsrLeftHdptSwitchOff",
+      "id": "snsrLeftHdptSwitchOff",
       "callback": "SimLeftHptOff",
       "relatedActions": [
-        "snsrlefthdptswitchtoggle",
-        "snsrlefthdptswitchon"
+        "snsrLeftHdptSwitchToggle",
+        "snsrLeftHdptSwitchOn"
       ],
       "description": "SNSR: LEFT HDPT Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -4577,12 +4350,11 @@
       }
     },
     {
-      "id": "snsrrighthdptswitchon",
-      "clazz": "SnsrRightHdptSwitchOn",
+      "id": "snsrRightHdptSwitchOn",
       "callback": "SimRightHptOn",
       "relatedActions": [
-        "snsrrighthdptswitchtoggle",
-        "snsrrighthdptswitchoff"
+        "snsrRightHdptSwitchToggle",
+        "snsrRightHdptSwitchOff"
       ],
       "description": "SNSR: RIGHT HDPT Switch - ON",
       "category": "RIGHT CONSOLE",
@@ -4598,12 +4370,11 @@
       }
     },
     {
-      "id": "snsrrighthdptswitchoff",
-      "clazz": "SnsrRightHdptSwitchOff",
+      "id": "snsrRightHdptSwitchOff",
       "callback": "SimRightHptOff",
       "relatedActions": [
-        "snsrrighthdptswitchtoggle",
-        "snsrrighthdptswitchon"
+        "snsrRightHdptSwitchToggle",
+        "snsrRightHdptSwitchOn"
       ],
       "description": "SNSR: RIGHT HDPT Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -4619,12 +4390,11 @@
       }
     },
     {
-      "id": "snsrfcrswitchon",
-      "clazz": "SnsrFcrSwitchOn",
+      "id": "snsrFcrSwitchOn",
       "callback": "SimFCROn",
       "relatedActions": [
-        "snsrfcrswitchtoggle",
-        "snsrfcrswitchoff"
+        "snsrFcrSwitchToggle",
+        "snsrFcrSwitchOff"
       ],
       "description": "SNSR: FCR Switch - ON",
       "category": "RIGHT CONSOLE",
@@ -4640,12 +4410,11 @@
       }
     },
     {
-      "id": "snsrfcrswitchoff",
-      "clazz": "SnsrFcrSwitchOff",
+      "id": "snsrFcrSwitchOff",
       "callback": "SimFCROff",
       "relatedActions": [
-        "snsrfcrswitchtoggle",
-        "snsrfcrswitchon"
+        "snsrFcrSwitchToggle",
+        "snsrFcrSwitchOn"
       ],
       "description": "SNSR: FCR Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -4661,14 +4430,13 @@
       }
     },
     {
-      "id": "snsrrdraltswitchon",
-      "clazz": "SnsrRdrAltSwitchOn",
+      "id": "snsrRdrAltSwitchOn",
       "callback": "SimRALTON",
       "relatedActions": [
-        "snsrrdraltswitchstepup",
-        "snsrrdraltswitchstepdown",
-        "snsrrdraltswitchstdby",
-        "snsrrdraltswitchoff"
+        "snsrRdrAltSwitchStepUp",
+        "snsrRdrAltSwitchStepDown",
+        "snsrRdrAltSwitchStdby",
+        "snsrRdrAltSwitchOff"
       ],
       "description": "SNSR: RDR ALT Switch - ON",
       "category": "RIGHT CONSOLE",
@@ -4684,14 +4452,13 @@
       }
     },
     {
-      "id": "snsrrdraltswitchstdby",
-      "clazz": "SnsrRdrAltSwitchStdby",
+      "id": "snsrRdrAltSwitchStdby",
       "callback": "SimRALTSTDBY",
       "relatedActions": [
-        "snsrrdraltswitchstepup",
-        "snsrrdraltswitchstepdown",
-        "snsrrdraltswitchon",
-        "snsrrdraltswitchoff"
+        "snsrRdrAltSwitchStepUp",
+        "snsrRdrAltSwitchStepDown",
+        "snsrRdrAltSwitchOn",
+        "snsrRdrAltSwitchOff"
       ],
       "description": "SNSR: RDR ALT Switch - STDBY",
       "category": "RIGHT CONSOLE",
@@ -4707,14 +4474,13 @@
       }
     },
     {
-      "id": "snsrrdraltswitchoff",
-      "clazz": "SnsrRdrAltSwitchOff",
+      "id": "snsrRdrAltSwitchOff",
       "callback": "SimRALTOFF",
       "relatedActions": [
-        "snsrrdraltswitchstepup",
-        "snsrrdraltswitchstepdown",
-        "snsrrdraltswitchon",
-        "snsrrdraltswitchstdby"
+        "snsrRdrAltSwitchStepUp",
+        "snsrRdrAltSwitchStepDown",
+        "snsrRdrAltSwitchOn",
+        "snsrRdrAltSwitchStdby"
       ],
       "description": "SNSR: RDR ALT Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -4730,15 +4496,14 @@
       }
     },
     {
-      "id": "hudscalesswitchvvvah",
-      "clazz": "HudScalesSwitchVvVah",
+      "id": "hudScalesSwitchVvVah",
       "callback": "SimScalesVVVAH",
       "relatedActions": [
-        "hudscalesswitchcycle",
-        "hudscalesswitchstepup",
-        "hudscalesswitchstepdown",
-        "hudscalesswitchvah",
-        "hudscalesswitchoff"
+        "hudScalesSwitchCycle",
+        "hudScalesSwitchStepUp",
+        "hudScalesSwitchStepDown",
+        "hudScalesSwitchVah",
+        "hudScalesSwitchOff"
       ],
       "description": "HUD: Scales Switch - VV/VAH",
       "category": "RIGHT CONSOLE",
@@ -4754,15 +4519,14 @@
       }
     },
     {
-      "id": "hudscalesswitchvah",
-      "clazz": "HudScalesSwitchVah",
+      "id": "hudScalesSwitchVah",
       "callback": "SimScalesVAH",
       "relatedActions": [
-        "hudscalesswitchcycle",
-        "hudscalesswitchstepup",
-        "hudscalesswitchstepdown",
-        "hudscalesswitchvvvah",
-        "hudscalesswitchoff"
+        "hudScalesSwitchCycle",
+        "hudScalesSwitchStepUp",
+        "hudScalesSwitchStepDown",
+        "hudScalesSwitchVvVah",
+        "hudScalesSwitchOff"
       ],
       "description": "HUD: Scales Switch - VAH",
       "category": "RIGHT CONSOLE",
@@ -4778,15 +4542,14 @@
       }
     },
     {
-      "id": "hudscalesswitchoff",
-      "clazz": "HudScalesSwitchOff",
+      "id": "hudScalesSwitchOff",
       "callback": "SimScalesOff",
       "relatedActions": [
-        "hudscalesswitchcycle",
-        "hudscalesswitchstepup",
-        "hudscalesswitchstepdown",
-        "hudscalesswitchvvvah",
-        "hudscalesswitchvah"
+        "hudScalesSwitchCycle",
+        "hudScalesSwitchStepUp",
+        "hudScalesSwitchStepDown",
+        "hudScalesSwitchVvVah",
+        "hudScalesSwitchVah"
       ],
       "description": "HUD: Scales Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -4802,15 +4565,14 @@
       }
     },
     {
-      "id": "hudfpmswitchattfpm",
-      "clazz": "HudFpmSwitchAttFpm",
+      "id": "hudFpmSwitchAttFpm",
       "callback": "SimPitchLadderATTFPM",
       "relatedActions": [
-        "hudfpmswitchcycle",
-        "hudfpmswitchstepup",
-        "hudfpmswitchstepdown",
-        "hudfpmswitchfpm",
-        "hudfpmswitchoff"
+        "hudFpmSwitchCycle",
+        "hudFpmSwitchStepUp",
+        "hudFpmSwitchStepDown",
+        "hudFpmSwitchFpm",
+        "hudFpmSwitchOff"
       ],
       "description": "HUD: FPM Switch - ATT/FPM",
       "category": "RIGHT CONSOLE",
@@ -4826,15 +4588,14 @@
       }
     },
     {
-      "id": "hudfpmswitchfpm",
-      "clazz": "HudFpmSwitchFpm",
+      "id": "hudFpmSwitchFpm",
       "callback": "SimPitchLadderFPM",
       "relatedActions": [
-        "hudfpmswitchcycle",
-        "hudfpmswitchstepup",
-        "hudfpmswitchstepdown",
-        "hudfpmswitchattfpm",
-        "hudfpmswitchoff"
+        "hudFpmSwitchCycle",
+        "hudFpmSwitchStepUp",
+        "hudFpmSwitchStepDown",
+        "hudFpmSwitchAttFpm",
+        "hudFpmSwitchOff"
       ],
       "description": "HUD: FPM Switch - FPM",
       "category": "RIGHT CONSOLE",
@@ -4850,15 +4611,14 @@
       }
     },
     {
-      "id": "hudfpmswitchoff",
-      "clazz": "HudFpmSwitchOff",
+      "id": "hudFpmSwitchOff",
       "callback": "SimPitchLadderOff",
       "relatedActions": [
-        "hudfpmswitchcycle",
-        "hudfpmswitchstepup",
-        "hudfpmswitchstepdown",
-        "hudfpmswitchattfpm",
-        "hudfpmswitchfpm"
+        "hudFpmSwitchCycle",
+        "hudFpmSwitchStepUp",
+        "hudFpmSwitchStepDown",
+        "hudFpmSwitchAttFpm",
+        "hudFpmSwitchFpm"
       ],
       "description": "HUD: FPM Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -4874,15 +4634,14 @@
       }
     },
     {
-      "id": "huddeddataswitchded",
-      "clazz": "HudDedDataSwitchDed",
+      "id": "hudDedDataSwitchDed",
       "callback": "SimHUDDEDDED",
       "relatedActions": [
-        "huddeddataswitchcycle",
-        "huddeddataswitchstepup",
-        "huddeddataswitchstepdn",
-        "huddeddataswitchpfl",
-        "huddeddataswitchoff"
+        "hudDedDataSwitchCycle",
+        "hudDedDataSwitchStepUp",
+        "hudDedDataSwitchStepDn",
+        "hudDedDataSwitchPfl",
+        "hudDedDataSwitchOff"
       ],
       "description": "HUD: DED Data Switch - DED",
       "category": "RIGHT CONSOLE",
@@ -4898,15 +4657,14 @@
       }
     },
     {
-      "id": "huddeddataswitchpfl",
-      "clazz": "HudDedDataSwitchPfl",
+      "id": "hudDedDataSwitchPfl",
       "callback": "SimHUDDEDPFL",
       "relatedActions": [
-        "huddeddataswitchcycle",
-        "huddeddataswitchstepup",
-        "huddeddataswitchstepdn",
-        "huddeddataswitchded",
-        "huddeddataswitchoff"
+        "hudDedDataSwitchCycle",
+        "hudDedDataSwitchStepUp",
+        "hudDedDataSwitchStepDn",
+        "hudDedDataSwitchDed",
+        "hudDedDataSwitchOff"
       ],
       "description": "HUD: DED Data Switch - PFL",
       "category": "RIGHT CONSOLE",
@@ -4922,15 +4680,14 @@
       }
     },
     {
-      "id": "huddeddataswitchoff",
-      "clazz": "HudDedDataSwitchOff",
+      "id": "hudDedDataSwitchOff",
       "callback": "SimHUDDEDOff",
       "relatedActions": [
-        "huddeddataswitchcycle",
-        "huddeddataswitchstepup",
-        "huddeddataswitchstepdn",
-        "huddeddataswitchded",
-        "huddeddataswitchpfl"
+        "hudDedDataSwitchCycle",
+        "hudDedDataSwitchStepUp",
+        "hudDedDataSwitchStepDn",
+        "hudDedDataSwitchDed",
+        "hudDedDataSwitchPfl"
       ],
       "description": "HUD: DED Data Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -4946,15 +4703,14 @@
       }
     },
     {
-      "id": "huddeprretswitchstby",
-      "clazz": "HudDeprRetSwitchStby",
+      "id": "hudDeprRetSwitchStby",
       "callback": "SimReticleStby",
       "relatedActions": [
-        "huddeprretswitchcycle",
-        "huddeprretswitchstepup",
-        "huddeprretswitchstepdown",
-        "huddeprretswitchpri",
-        "huddeprretswitchoff"
+        "hudDeprRetSwitchCycle",
+        "hudDeprRetSwitchStepUp",
+        "hudDeprRetSwitchStepDown",
+        "hudDeprRetSwitchPri",
+        "hudDeprRetSwitchOff"
       ],
       "description": "HUD: DEPR RET Switch - STBY",
       "category": "RIGHT CONSOLE",
@@ -4970,15 +4726,14 @@
       }
     },
     {
-      "id": "huddeprretswitchpri",
-      "clazz": "HudDeprRetSwitchPri",
+      "id": "hudDeprRetSwitchPri",
       "callback": "SimReticlePri",
       "relatedActions": [
-        "huddeprretswitchcycle",
-        "huddeprretswitchstepup",
-        "huddeprretswitchstepdown",
-        "huddeprretswitchstby",
-        "huddeprretswitchoff"
+        "hudDeprRetSwitchCycle",
+        "hudDeprRetSwitchStepUp",
+        "hudDeprRetSwitchStepDown",
+        "hudDeprRetSwitchStby",
+        "hudDeprRetSwitchOff"
       ],
       "description": "HUD: DEPR RET Switch - PRI",
       "category": "RIGHT CONSOLE",
@@ -4994,15 +4749,14 @@
       }
     },
     {
-      "id": "huddeprretswitchoff",
-      "clazz": "HudDeprRetSwitchOff",
+      "id": "hudDeprRetSwitchOff",
       "callback": "SimReticleOff",
       "relatedActions": [
-        "huddeprretswitchcycle",
-        "huddeprretswitchstepup",
-        "huddeprretswitchstepdown",
-        "huddeprretswitchstby",
-        "huddeprretswitchpri"
+        "hudDeprRetSwitchCycle",
+        "hudDeprRetSwitchStepUp",
+        "hudDeprRetSwitchStepDown",
+        "hudDeprRetSwitchStby",
+        "hudDeprRetSwitchPri"
       ],
       "description": "HUD: DEPR RET Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -5018,15 +4772,14 @@
       }
     },
     {
-      "id": "hudvelocityswitchcas",
-      "clazz": "HudVelocitySwitchCas",
+      "id": "hudVelocitySwitchCas",
       "callback": "SimHUDVelocityCAS",
       "relatedActions": [
-        "hudvelocityswitchcycle",
-        "hudvelocityswitchstepup",
-        "hudvelocityswitchstepdn",
-        "hudvelocityswitchtas",
-        "hudvelocityswitchgndspd"
+        "hudVelocitySwitchCycle",
+        "hudVelocitySwitchStepUp",
+        "hudVelocitySwitchStepDn",
+        "hudVelocitySwitchTas",
+        "hudVelocitySwitchGndSpd"
       ],
       "description": "HUD: Velocity Switch - CAS",
       "category": "RIGHT CONSOLE",
@@ -5042,15 +4795,14 @@
       }
     },
     {
-      "id": "hudvelocityswitchtas",
-      "clazz": "HudVelocitySwitchTas",
+      "id": "hudVelocitySwitchTas",
       "callback": "SimHUDVelocityTAS",
       "relatedActions": [
-        "hudvelocityswitchcycle",
-        "hudvelocityswitchstepup",
-        "hudvelocityswitchstepdn",
-        "hudvelocityswitchcas",
-        "hudvelocityswitchgndspd"
+        "hudVelocitySwitchCycle",
+        "hudVelocitySwitchStepUp",
+        "hudVelocitySwitchStepDn",
+        "hudVelocitySwitchCas",
+        "hudVelocitySwitchGndSpd"
       ],
       "description": "HUD: Velocity Switch - TAS",
       "category": "RIGHT CONSOLE",
@@ -5066,15 +4818,14 @@
       }
     },
     {
-      "id": "hudvelocityswitchgndspd",
-      "clazz": "HudVelocitySwitchGndSpd",
+      "id": "hudVelocitySwitchGndSpd",
       "callback": "SimHUDVelocityGND",
       "relatedActions": [
-        "hudvelocityswitchcycle",
-        "hudvelocityswitchstepup",
-        "hudvelocityswitchstepdn",
-        "hudvelocityswitchcas",
-        "hudvelocityswitchtas"
+        "hudVelocitySwitchCycle",
+        "hudVelocitySwitchStepUp",
+        "hudVelocitySwitchStepDn",
+        "hudVelocitySwitchCas",
+        "hudVelocitySwitchTas"
       ],
       "description": "HUD: Velocity Switch - GND SPD",
       "category": "RIGHT CONSOLE",
@@ -5090,15 +4841,14 @@
       }
     },
     {
-      "id": "hudaltitudeswitchradar",
-      "clazz": "HudAltitudeSwitchRadar",
+      "id": "hudAltitudeSwitchRadar",
       "callback": "SimHUDAltRadar",
       "relatedActions": [
-        "hudaltitudeswitchcycle",
-        "hudaltitudeswitchstepup",
-        "hudaltitudeswitchstepdn",
-        "hudaltitudeswitchbaro",
-        "hudaltitudeswitchauto"
+        "hudAltitudeSwitchCycle",
+        "hudAltitudeSwitchStepUp",
+        "hudAltitudeSwitchStepDn",
+        "hudAltitudeSwitchBaro",
+        "hudAltitudeSwitchAuto"
       ],
       "description": "HUD: Altitude Switch - RADAR",
       "category": "RIGHT CONSOLE",
@@ -5114,15 +4864,14 @@
       }
     },
     {
-      "id": "hudaltitudeswitchbaro",
-      "clazz": "HudAltitudeSwitchBaro",
+      "id": "hudAltitudeSwitchBaro",
       "callback": "SimHUDAltBaro",
       "relatedActions": [
-        "hudaltitudeswitchcycle",
-        "hudaltitudeswitchstepup",
-        "hudaltitudeswitchstepdn",
-        "hudaltitudeswitchradar",
-        "hudaltitudeswitchauto"
+        "hudAltitudeSwitchCycle",
+        "hudAltitudeSwitchStepUp",
+        "hudAltitudeSwitchStepDn",
+        "hudAltitudeSwitchRadar",
+        "hudAltitudeSwitchAuto"
       ],
       "description": "HUD: Altitude Switch - BARO",
       "category": "RIGHT CONSOLE",
@@ -5138,15 +4887,14 @@
       }
     },
     {
-      "id": "hudaltitudeswitchauto",
-      "clazz": "HudAltitudeSwitchAuto",
+      "id": "hudAltitudeSwitchAuto",
       "callback": "SimHUDAltAuto",
       "relatedActions": [
-        "hudaltitudeswitchcycle",
-        "hudaltitudeswitchstepup",
-        "hudaltitudeswitchstepdn",
-        "hudaltitudeswitchradar",
-        "hudaltitudeswitchbaro"
+        "hudAltitudeSwitchCycle",
+        "hudAltitudeSwitchStepUp",
+        "hudAltitudeSwitchStepDn",
+        "hudAltitudeSwitchRadar",
+        "hudAltitudeSwitchBaro"
       ],
       "description": "HUD: Altitude Switch - AUTO",
       "category": "RIGHT CONSOLE",
@@ -5162,15 +4910,14 @@
       }
     },
     {
-      "id": "hudbrightnessswitchday",
-      "clazz": "HudBrightnessSwitchDay",
+      "id": "hudBrightnessSwitchDay",
       "callback": "SimHUDBrtDay",
       "relatedActions": [
-        "hudbrightnessswitchcycle",
-        "hudbrightnessswitchstepup",
-        "hudbrightnessswitchstepdn",
-        "hudbrightnessswitchautobrt",
-        "hudbrightnessswitchnig"
+        "hudBrightnessSwitchCycle",
+        "hudBrightnessSwitchStepUp",
+        "hudBrightnessSwitchStepDn",
+        "hudBrightnessSwitchAutoBrt",
+        "hudBrightnessSwitchNig"
       ],
       "description": "HUD: Brightness Switch - DAY",
       "category": "RIGHT CONSOLE",
@@ -5186,15 +4933,14 @@
       }
     },
     {
-      "id": "hudbrightnessswitchautobrt",
-      "clazz": "HudBrightnessSwitchAutoBrt",
+      "id": "hudBrightnessSwitchAutoBrt",
       "callback": "SimHUDBrtAuto",
       "relatedActions": [
-        "hudbrightnessswitchcycle",
-        "hudbrightnessswitchstepup",
-        "hudbrightnessswitchstepdn",
-        "hudbrightnessswitchday",
-        "hudbrightnessswitchnig"
+        "hudBrightnessSwitchCycle",
+        "hudBrightnessSwitchStepUp",
+        "hudBrightnessSwitchStepDn",
+        "hudBrightnessSwitchDay",
+        "hudBrightnessSwitchNig"
       ],
       "description": "HUD: Brightness Switch - AUTO BRT",
       "category": "RIGHT CONSOLE",
@@ -5210,15 +4956,14 @@
       }
     },
     {
-      "id": "hudbrightnessswitchnig",
-      "clazz": "HudBrightnessSwitchNig",
+      "id": "hudBrightnessSwitchNig",
       "callback": "SimHUDBrtNight",
       "relatedActions": [
-        "hudbrightnessswitchcycle",
-        "hudbrightnessswitchstepup",
-        "hudbrightnessswitchstepdn",
-        "hudbrightnessswitchday",
-        "hudbrightnessswitchautobrt"
+        "hudBrightnessSwitchCycle",
+        "hudBrightnessSwitchStepUp",
+        "hudBrightnessSwitchStepDn",
+        "hudBrightnessSwitchDay",
+        "hudBrightnessSwitchAutoBrt"
       ],
       "description": "HUD: Brightness Switch - NIG",
       "category": "RIGHT CONSOLE",
@@ -5234,12 +4979,11 @@
       }
     },
     {
-      "id": "lightinstpnlknobprimarystepup",
-      "clazz": "LightInstPnlKnobPrimaryStepUp",
+      "id": "lightInstPnlKnobPrimaryStepUp",
       "callback": "SimInstrumentLightCW",
       "relatedActions": [
-        "lightinstpnlknobprimarycycle",
-        "lightinstpnlknobprimarystepdown"
+        "lightInstPnlKnobPrimaryCycle",
+        "lightInstPnlKnobPrimaryStepDown"
       ],
       "description": "LIGHT: INST PNL Knob (Primary) - Step Up",
       "category": "RIGHT CONSOLE",
@@ -5250,12 +4994,11 @@
       "type": "button"
     },
     {
-      "id": "lightinstpnlknobprimarystepdown",
-      "clazz": "LightInstPnlKnobPrimaryStepDown",
+      "id": "lightInstPnlKnobPrimaryStepDown",
       "callback": "SimInstrumentLightCCW",
       "relatedActions": [
-        "lightinstpnlknobprimarycycle",
-        "lightinstpnlknobprimarystepup"
+        "lightInstPnlKnobPrimaryCycle",
+        "lightInstPnlKnobPrimaryStepUp"
       ],
       "description": "LIGHT: INST PNL Knob (Primary) - Step Down",
       "category": "RIGHT CONSOLE",
@@ -5266,12 +5009,11 @@
       "type": "button"
     },
     {
-      "id": "lightdedknobprimarystepup",
-      "clazz": "LightDedKnobPrimaryStepUp",
+      "id": "lightDedKnobPrimaryStepUp",
       "callback": "SimDedBrightnessCW",
       "relatedActions": [
-        "lightdedknobprimarycycle",
-        "lightdedknobprimarystepdown"
+        "lightDedKnobPrimaryCycle",
+        "lightDedKnobPrimaryStepDown"
       ],
       "description": "LIGHT: DED Knob (Primary) - Step Up",
       "category": "RIGHT CONSOLE",
@@ -5282,12 +5024,11 @@
       "type": "button"
     },
     {
-      "id": "lightdedknobprimarystepdown",
-      "clazz": "LightDedKnobPrimaryStepDown",
+      "id": "lightDedKnobPrimaryStepDown",
       "callback": "SimDedBrightnessCCW",
       "relatedActions": [
-        "lightdedknobprimarycycle",
-        "lightdedknobprimarystepup"
+        "lightDedKnobPrimaryCycle",
+        "lightDedKnobPrimaryStepUp"
       ],
       "description": "LIGHT: DED Knob (Primary) - Step Down",
       "category": "RIGHT CONSOLE",
@@ -5298,12 +5039,11 @@
       "type": "button"
     },
     {
-      "id": "lightconsolesknobfloodstepup",
-      "clazz": "LightConsolesKnobFloodStepUp",
+      "id": "lightConsolesKnobFloodStepUp",
       "callback": "SimInteriorLightCW",
       "relatedActions": [
-        "lightconsolesknobfloodcycle",
-        "lightconsolesknobfloodstepdown"
+        "lightConsolesKnobFloodCycle",
+        "lightConsolesKnobFloodStepDown"
       ],
       "description": "LIGHT: CONSOLES Knob (Flood) - Step Up",
       "category": "RIGHT CONSOLE",
@@ -5314,12 +5054,11 @@
       "type": "button"
     },
     {
-      "id": "lightconsolesknobfloodstepdown",
-      "clazz": "LightConsolesKnobFloodStepDown",
+      "id": "lightConsolesKnobFloodStepDown",
       "callback": "SimInteriorLightCCW",
       "relatedActions": [
-        "lightconsolesknobfloodcycle",
-        "lightconsolesknobfloodstepup"
+        "lightConsolesKnobFloodCycle",
+        "lightConsolesKnobFloodStepUp"
       ],
       "description": "LIGHT: CONSOLES Knob (Flood) - Step Down",
       "category": "RIGHT CONSOLE",
@@ -5330,15 +5069,14 @@
       "type": "button"
     },
     {
-      "id": "airairsourceknoboff",
-      "clazz": "AirAirSourceKnobOff",
+      "id": "airAirSourceKnobOff",
       "callback": "SimAirSourceOff",
       "relatedActions": [
-        "airairsourceknobstepup",
-        "airairsourceknobstepdown",
-        "airairsourceknobnorm",
-        "airairsourceknobdump",
-        "airairsourceknobram"
+        "airAirSourceKnobStepUp",
+        "airAirSourceKnobStepDown",
+        "airAirSourceKnobNorm",
+        "airAirSourceKnobDump",
+        "airAirSourceKnobRam"
       ],
       "description": "AIR: AIR SOURCE Knob - OFF",
       "category": "RIGHT CONSOLE",
@@ -5354,15 +5092,14 @@
       }
     },
     {
-      "id": "airairsourceknobnorm",
-      "clazz": "AirAirSourceKnobNorm",
+      "id": "airAirSourceKnobNorm",
       "callback": "SimAirSourceNorm",
       "relatedActions": [
-        "airairsourceknobstepup",
-        "airairsourceknobstepdown",
-        "airairsourceknoboff",
-        "airairsourceknobdump",
-        "airairsourceknobram"
+        "airAirSourceKnobStepUp",
+        "airAirSourceKnobStepDown",
+        "airAirSourceKnobOff",
+        "airAirSourceKnobDump",
+        "airAirSourceKnobRam"
       ],
       "description": "AIR: AIR SOURCE Knob - NORM",
       "category": "RIGHT CONSOLE",
@@ -5378,15 +5115,14 @@
       }
     },
     {
-      "id": "airairsourceknobdump",
-      "clazz": "AirAirSourceKnobDump",
+      "id": "airAirSourceKnobDump",
       "callback": "SimAirSourceDump",
       "relatedActions": [
-        "airairsourceknobstepup",
-        "airairsourceknobstepdown",
-        "airairsourceknoboff",
-        "airairsourceknobnorm",
-        "airairsourceknobram"
+        "airAirSourceKnobStepUp",
+        "airAirSourceKnobStepDown",
+        "airAirSourceKnobOff",
+        "airAirSourceKnobNorm",
+        "airAirSourceKnobRam"
       ],
       "description": "AIR: AIR SOURCE Knob - DUMP",
       "category": "RIGHT CONSOLE",
@@ -5402,15 +5138,14 @@
       }
     },
     {
-      "id": "airairsourceknobram",
-      "clazz": "AirAirSourceKnobRam",
+      "id": "airAirSourceKnobRam",
       "callback": "SimAirSourceRam",
       "relatedActions": [
-        "airairsourceknobstepup",
-        "airairsourceknobstepdown",
-        "airairsourceknoboff",
-        "airairsourceknobnorm",
-        "airairsourceknobdump"
+        "airAirSourceKnobStepUp",
+        "airAirSourceKnobStepDown",
+        "airAirSourceKnobOff",
+        "airAirSourceKnobNorm",
+        "airAirSourceKnobDump"
       ],
       "description": "AIR: AIR SOURCE Knob - RAM",
       "category": "RIGHT CONSOLE",
@@ -5426,12 +5161,11 @@
       }
     },
     {
-      "id": "zerovmsswitchon",
-      "clazz": "ZeroVmsSwitchOn",
+      "id": "zeroVmsSwitchOn",
       "callback": "SimVMSOn",
       "relatedActions": [
-        "zerovmsswitchtoggle",
-        "zerovmsswitchinhibit"
+        "zeroVmsSwitchToggle",
+        "zeroVmsSwitchInhibit"
       ],
       "description": "ZERO: VMS Switch - ON",
       "category": "RIGHT CONSOLE",
@@ -5447,12 +5181,11 @@
       }
     },
     {
-      "id": "zerovmsswitchinhibit",
-      "clazz": "ZeroVmsSwitchInhibit",
+      "id": "zeroVmsSwitchInhibit",
       "callback": "SimVMSOff",
       "relatedActions": [
-        "zerovmsswitchtoggle",
-        "zerovmsswitchon"
+        "zeroVmsSwitchToggle",
+        "zeroVmsSwitchOn"
       ],
       "description": "ZERO: VMS Switch - INHIBIT",
       "category": "RIGHT CONSOLE",
@@ -5468,15 +5201,14 @@
       }
     },
     {
-      "id": "avionicsinsknoboff",
-      "clazz": "AvionicsInsKnobOff",
+      "id": "avionicsInsKnobOff",
       "callback": "SimINSOff",
       "relatedActions": [
-        "avionicsinsknobstepup",
-        "avionicsinsknobstepdown",
-        "avionicsinsknobnorm",
-        "avionicsinsknobnav",
-        "avionicsinsknobinfltalign"
+        "avionicsInsKnobStepUp",
+        "avionicsInsKnobStepDown",
+        "avionicsInsKnobNorm",
+        "avionicsInsKnobNav",
+        "avionicsInsKnobInFltAlign"
       ],
       "description": "AVIONICS: INS Knob - OFF",
       "category": "RIGHT CONSOLE",
@@ -5492,15 +5224,14 @@
       }
     },
     {
-      "id": "avionicsinsknobnorm",
-      "clazz": "AvionicsInsKnobNorm",
+      "id": "avionicsInsKnobNorm",
       "callback": "SimINSNorm",
       "relatedActions": [
-        "avionicsinsknobstepup",
-        "avionicsinsknobstepdown",
-        "avionicsinsknoboff",
-        "avionicsinsknobnav",
-        "avionicsinsknobinfltalign"
+        "avionicsInsKnobStepUp",
+        "avionicsInsKnobStepDown",
+        "avionicsInsKnobOff",
+        "avionicsInsKnobNav",
+        "avionicsInsKnobInFltAlign"
       ],
       "description": "AVIONICS: INS Knob - NORM",
       "category": "RIGHT CONSOLE",
@@ -5516,15 +5247,14 @@
       }
     },
     {
-      "id": "avionicsinsknobnav",
-      "clazz": "AvionicsInsKnobNav",
+      "id": "avionicsInsKnobNav",
       "callback": "SimINSNav",
       "relatedActions": [
-        "avionicsinsknobstepup",
-        "avionicsinsknobstepdown",
-        "avionicsinsknoboff",
-        "avionicsinsknobnorm",
-        "avionicsinsknobinfltalign"
+        "avionicsInsKnobStepUp",
+        "avionicsInsKnobStepDown",
+        "avionicsInsKnobOff",
+        "avionicsInsKnobNorm",
+        "avionicsInsKnobInFltAlign"
       ],
       "description": "AVIONICS: INS Knob - NAV",
       "category": "RIGHT CONSOLE",
@@ -5540,15 +5270,14 @@
       }
     },
     {
-      "id": "avionicsinsknobinfltalign",
-      "clazz": "AvionicsInsKnobInFltAlign",
+      "id": "avionicsInsKnobInFltAlign",
       "callback": "SimINSInFlt",
       "relatedActions": [
-        "avionicsinsknobstepup",
-        "avionicsinsknobstepdown",
-        "avionicsinsknoboff",
-        "avionicsinsknobnorm",
-        "avionicsinsknobnav"
+        "avionicsInsKnobStepUp",
+        "avionicsInsKnobStepDown",
+        "avionicsInsKnobOff",
+        "avionicsInsKnobNorm",
+        "avionicsInsKnobNav"
       ],
       "description": "AVIONICS: INS Knob - IN FLT ALIGN",
       "category": "RIGHT CONSOLE",
@@ -5564,12 +5293,11 @@
       }
     },
     {
-      "id": "avionicsfccswitchon",
-      "clazz": "AvionicsFccSwitchOn",
+      "id": "avionicsFccSwitchOn",
       "callback": "SimFCCOn",
       "relatedActions": [
-        "avionicsfccswitchtoggle",
-        "avionicsfccswitchoff"
+        "avionicsFccSwitchToggle",
+        "avionicsFccSwitchOff"
       ],
       "description": "AVIONICS: FCC Switch - ON",
       "category": "RIGHT CONSOLE",
@@ -5585,12 +5313,11 @@
       }
     },
     {
-      "id": "avionicsfccswitchoff",
-      "clazz": "AvionicsFccSwitchOff",
+      "id": "avionicsFccSwitchOff",
       "callback": "SimFCCOff",
       "relatedActions": [
-        "avionicsfccswitchtoggle",
-        "avionicsfccswitchon"
+        "avionicsFccSwitchToggle",
+        "avionicsFccSwitchOn"
       ],
       "description": "AVIONICS: FCC Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -5606,12 +5333,11 @@
       }
     },
     {
-      "id": "avionicssmsswitchon",
-      "clazz": "AvionicsSmsSwitchOn",
+      "id": "avionicsSmsSwitchOn",
       "callback": "SimSMSOn",
       "relatedActions": [
-        "avionicssmsswitchtoggle",
-        "avionicssmsswitchoff"
+        "avionicsSmsSwitchToggle",
+        "avionicsSmsSwitchOff"
       ],
       "description": "AVIONICS: SMS Switch - ON",
       "category": "RIGHT CONSOLE",
@@ -5627,12 +5353,11 @@
       }
     },
     {
-      "id": "avionicssmsswitchoff",
-      "clazz": "AvionicsSmsSwitchOff",
+      "id": "avionicsSmsSwitchOff",
       "callback": "SimSMSOff",
       "relatedActions": [
-        "avionicssmsswitchtoggle",
-        "avionicssmsswitchon"
+        "avionicsSmsSwitchToggle",
+        "avionicsSmsSwitchOn"
       ],
       "description": "AVIONICS: SMS Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -5648,12 +5373,11 @@
       }
     },
     {
-      "id": "avionicsmfdswitchon",
-      "clazz": "AvionicsMfdSwitchOn",
+      "id": "avionicsMfdSwitchOn",
       "callback": "SimMFDOn",
       "relatedActions": [
-        "avionicsmfdswitchtoggle",
-        "avionicsmfdswitchoff"
+        "avionicsMfdSwitchToggle",
+        "avionicsMfdSwitchOff"
       ],
       "description": "AVIONICS: MFD Switch - ON",
       "category": "RIGHT CONSOLE",
@@ -5669,12 +5393,11 @@
       }
     },
     {
-      "id": "avionicsmfdswitchoff",
-      "clazz": "AvionicsMfdSwitchOff",
+      "id": "avionicsMfdSwitchOff",
       "callback": "SimMFDOff",
       "relatedActions": [
-        "avionicsmfdswitchtoggle",
-        "avionicsmfdswitchon"
+        "avionicsMfdSwitchToggle",
+        "avionicsMfdSwitchOn"
       ],
       "description": "AVIONICS: MFD Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -5690,12 +5413,11 @@
       }
     },
     {
-      "id": "avionicsufcswitchon",
-      "clazz": "AvionicsUfcSwitchOn",
+      "id": "avionicsUfcSwitchOn",
       "callback": "SimUFCOn",
       "relatedActions": [
-        "avionicsufcswitchtoggle",
-        "avionicsufcswitchoff"
+        "avionicsUfcSwitchToggle",
+        "avionicsUfcSwitchOff"
       ],
       "description": "AVIONICS: UFC Switch - ON",
       "category": "RIGHT CONSOLE",
@@ -5711,12 +5433,11 @@
       }
     },
     {
-      "id": "avionicsufcswitchoff",
-      "clazz": "AvionicsUfcSwitchOff",
+      "id": "avionicsUfcSwitchOff",
       "callback": "SimUFCOff",
       "relatedActions": [
-        "avionicsufcswitchtoggle",
-        "avionicsufcswitchon"
+        "avionicsUfcSwitchToggle",
+        "avionicsUfcSwitchOn"
       ],
       "description": "AVIONICS: UFC Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -5732,12 +5453,11 @@
       }
     },
     {
-      "id": "avionicsgpsswitchon",
-      "clazz": "AvionicsGpsSwitchOn",
+      "id": "avionicsGpsSwitchOn",
       "callback": "SimGPSOn",
       "relatedActions": [
-        "avionicsgpsswitchtoggle",
-        "avionicsgpsswitchoff"
+        "avionicsGpsSwitchToggle",
+        "avionicsGpsSwitchOff"
       ],
       "description": "AVIONICS: GPS Switch - ON",
       "category": "RIGHT CONSOLE",
@@ -5753,12 +5473,11 @@
       }
     },
     {
-      "id": "avionicsgpsswitchoff",
-      "clazz": "AvionicsGpsSwitchOff",
+      "id": "avionicsGpsSwitchOff",
       "callback": "SimGPSOff",
       "relatedActions": [
-        "avionicsgpsswitchtoggle",
-        "avionicsgpsswitchon"
+        "avionicsGpsSwitchToggle",
+        "avionicsGpsSwitchOn"
       ],
       "description": "AVIONICS: GPS Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -5774,12 +5493,11 @@
       }
     },
     {
-      "id": "avionicsdlswitchon",
-      "clazz": "AvionicsDlSwitchOn",
+      "id": "avionicsDlSwitchOn",
       "callback": "SimDLOn",
       "relatedActions": [
-        "avionicsdlswitchtoggle",
-        "avionicsdlswitchoff"
+        "avionicsDlSwitchToggle",
+        "avionicsDlSwitchOff"
       ],
       "description": "AVIONICS: DL Switch - ON",
       "category": "RIGHT CONSOLE",
@@ -5795,12 +5513,11 @@
       }
     },
     {
-      "id": "avionicsdlswitchoff",
-      "clazz": "AvionicsDlSwitchOff",
+      "id": "avionicsDlSwitchOff",
       "callback": "SimDLOff",
       "relatedActions": [
-        "avionicsdlswitchtoggle",
-        "avionicsdlswitchon"
+        "avionicsDlSwitchToggle",
+        "avionicsDlSwitchOn"
       ],
       "description": "AVIONICS: DL Switch - OFF",
       "category": "RIGHT CONSOLE",
@@ -5816,12 +5533,11 @@
       }
     },
     {
-      "id": "oxysetting2onpilotbreathing",
-      "clazz": "OxySetting2OnPilotBreathing",
+      "id": "oxySetting2OnPilotBreathing",
       "callback": "SimOxySupplyOn",
       "relatedActions": [
-        "oxysetting2togglepilotbreathing",
-        "oxysetting2offpilotbreathing"
+        "oxySetting2TogglePilotBreathing",
+        "oxySetting2OffPilotBreathing"
       ],
       "description": "OXY: Setting 2 - ON (Pilot breathing)",
       "category": "RIGHT CONSOLE",
@@ -5832,12 +5548,11 @@
       "type": "button"
     },
     {
-      "id": "oxysetting2offpilotbreathing",
-      "clazz": "OxySetting2OffPilotBreathing",
+      "id": "oxySetting2OffPilotBreathing",
       "callback": "SimOxySupplyOff",
       "relatedActions": [
-        "oxysetting2togglepilotbreathing",
-        "oxysetting2onpilotbreathing"
+        "oxySetting2TogglePilotBreathing",
+        "oxySetting2OnPilotBreathing"
       ],
       "description": "OXY: Setting 2 - OFF (Pilot breathing)",
       "category": "RIGHT CONSOLE",
@@ -5848,12 +5563,11 @@
       "type": "button"
     },
     {
-      "id": "ckpitnightvisionon",
-      "clazz": "CkpitNightvisionOn",
+      "id": "ckpitNightvisionOn",
       "callback": "SimNVGModeOn",
       "relatedActions": [
-        "ckpitnightvisiontoggle",
-        "ckpitnightvisionoff"
+        "ckpitNightvisionToggle",
+        "ckpitNightvisionOff"
       ],
       "description": "CKPIT: Nightvision - On",
       "category": "MISCELLANEOUS",
@@ -5864,12 +5578,11 @@
       "type": "button"
     },
     {
-      "id": "ckpitnightvisionoff",
-      "clazz": "CkpitNightvisionOff",
+      "id": "ckpitNightvisionOff",
       "callback": "SimNVGModeOff",
       "relatedActions": [
-        "ckpitnightvisiontoggle",
-        "ckpitnightvisionon"
+        "ckpitNightvisionToggle",
+        "ckpitNightvisionOn"
       ],
       "description": "CKPIT: Nightvision - Off",
       "category": "MISCELLANEOUS",
@@ -5880,12 +5593,11 @@
       "type": "button"
     },
     {
-      "id": "ckpitsmokeon",
-      "clazz": "CkpitSmokeOn",
+      "id": "ckpitSmokeOn",
       "callback": "SimSmokeOn",
       "relatedActions": [
-        "ckpitsmoketoggle",
-        "ckpitsmokeoff"
+        "ckpitSmokeToggle",
+        "ckpitSmokeOff"
       ],
       "description": "CKPIT: Smoke - On",
       "category": "MISCELLANEOUS",
@@ -5896,12 +5608,11 @@
       "type": "button"
     },
     {
-      "id": "ckpitsmokeoff",
-      "clazz": "CkpitSmokeOff",
+      "id": "ckpitSmokeOff",
       "callback": "SimSmokeOff",
       "relatedActions": [
-        "ckpitsmoketoggle",
-        "ckpitsmokeon"
+        "ckpitSmokeToggle",
+        "ckpitSmokeOn"
       ],
       "description": "CKPIT: Smoke - Off",
       "category": "MISCELLANEOUS",
@@ -5912,8 +5623,7 @@
       "type": "button"
     },
     {
-      "id": "ckpitwheelbrakeshold",
-      "clazz": "CkpitWheelBrakesHold",
+      "id": "ckpitWheelBrakesHold",
       "callback": "SimWheelBrakes",
       "description": "CKPIT: Wheel Brakes - Hold",
       "category": "MISCELLANEOUS",
@@ -5924,13 +5634,12 @@
       "type": "button"
     },
     {
-      "id": "simtimeaccelerationtoggle2x",
-      "clazz": "SimTimeAccelerationToggle2x",
+      "id": "simTimeAccelerationToggle2x",
       "callback": "TimeAccelerate",
       "relatedActions": [
-        "simtimeaccelerationtoggle4x",
-        "simtimeaccelerationstepup",
-        "simtimeaccelerationstepdown"
+        "simTimeAccelerationToggle4x",
+        "simTimeAccelerationStepUp",
+        "simTimeAccelerationStepDown"
       ],
       "description": "SIM: Time Acceleration - Toggle 2x",
       "category": "MISCELLANEOUS",
@@ -5941,13 +5650,12 @@
       "type": "button"
     },
     {
-      "id": "simtimeaccelerationtoggle4x",
-      "clazz": "SimTimeAccelerationToggle4x",
+      "id": "simTimeAccelerationToggle4x",
       "callback": "TimeAccelerateMaxToggle",
       "relatedActions": [
-        "simtimeaccelerationtoggle2x",
-        "simtimeaccelerationstepup",
-        "simtimeaccelerationstepdown"
+        "simTimeAccelerationToggle2x",
+        "simTimeAccelerationStepUp",
+        "simTimeAccelerationStepDown"
       ],
       "description": "SIM: Time Acceleration - Toggle 4x",
       "category": "MISCELLANEOUS",
@@ -5958,13 +5666,12 @@
       "type": "button"
     },
     {
-      "id": "simtimeaccelerationstepup",
-      "clazz": "SimTimeAccelerationStepUp",
+      "id": "simTimeAccelerationStepUp",
       "callback": "TimeAccelerateInc",
       "relatedActions": [
-        "simtimeaccelerationtoggle2x",
-        "simtimeaccelerationtoggle4x",
-        "simtimeaccelerationstepdown"
+        "simTimeAccelerationToggle2x",
+        "simTimeAccelerationToggle4x",
+        "simTimeAccelerationStepDown"
       ],
       "description": "SIM: Time Acceleration - Step Up",
       "category": "MISCELLANEOUS",
@@ -5975,13 +5682,12 @@
       "type": "button"
     },
     {
-      "id": "simtimeaccelerationstepdown",
-      "clazz": "SimTimeAccelerationStepDown",
+      "id": "simTimeAccelerationStepDown",
       "callback": "TimeAccelerateDec",
       "relatedActions": [
-        "simtimeaccelerationtoggle2x",
-        "simtimeaccelerationtoggle4x",
-        "simtimeaccelerationstepup"
+        "simTimeAccelerationToggle2x",
+        "simTimeAccelerationToggle4x",
+        "simTimeAccelerationStepUp"
       ],
       "description": "SIM: Time Acceleration - Step Down",
       "category": "MISCELLANEOUS",
@@ -5992,8 +5698,7 @@
       "type": "button"
     },
     {
-      "id": "simchat",
-      "clazz": "SimChat",
+      "id": "simChat",
       "callback": "SimOpenChatBox",
       "description": "SIM: Chat",
       "category": "MISCELLANEOUS",
@@ -6004,8 +5709,7 @@
       "type": "button"
     },
     {
-      "id": "simtoggleexitsimmenu",
-      "clazz": "SimToggleExitSimMenu",
+      "id": "simToggleExitSimMenu",
       "callback": "SimEndFlight",
       "description": "SIM: Toggle Exit Sim Menu",
       "category": "MISCELLANEOUS",
@@ -6016,8 +5720,7 @@
       "type": "button"
     },
     {
-      "id": "viewgenrotateviewup",
-      "clazz": "ViewgenRotateViewUp",
+      "id": "viewgenRotateViewUp",
       "callback": "OTWViewUp",
       "description": "VIEWGEN: Rotate View Up",
       "category": "VIEWS",
@@ -6028,8 +5731,7 @@
       "type": "button"
     },
     {
-      "id": "viewgenrotateviewdown",
-      "clazz": "ViewgenRotateViewDown",
+      "id": "viewgenRotateViewDown",
       "callback": "OTWViewDown",
       "description": "VIEWGEN: Rotate View Down",
       "category": "VIEWS",
@@ -6040,8 +5742,7 @@
       "type": "button"
     },
     {
-      "id": "viewgenrotateviewleft",
-      "clazz": "ViewgenRotateViewLeft",
+      "id": "viewgenRotateViewLeft",
       "callback": "OTWViewLeft",
       "description": "VIEWGEN: Rotate View Left",
       "category": "VIEWS",
@@ -6052,8 +5753,7 @@
       "type": "button"
     },
     {
-      "id": "viewgenrotateviewright",
-      "clazz": "ViewgenRotateViewRight",
+      "id": "viewgenRotateViewRight",
       "callback": "OTWViewRight",
       "description": "VIEWGEN: Rotate View Right",
       "category": "VIEWS",
@@ -6064,8 +5764,7 @@
       "type": "button"
     },
     {
-      "id": "viewintpadlock",
-      "clazz": "ViewintPadlock",
+      "id": "viewintPadlock",
       "callback": "OTWSelectF3PadlockMode",
       "description": "VIEWINT: Padlock",
       "category": "VIEWS",
@@ -6076,8 +5775,7 @@
       "type": "button"
     },
     {
-      "id": "viewinthudonly",
-      "clazz": "ViewintHudOnly",
+      "id": "viewintHudOnly",
       "callback": "OTWSelectHUDMode",
       "description": "VIEWINT: HUD Only",
       "category": "VIEWS",
@@ -6088,8 +5786,7 @@
       "type": "button"
     },
     {
-      "id": "viewintsnap3dcockpit",
-      "clazz": "ViewintSnap3dCockpit",
+      "id": "viewintSnap3dCockpit",
       "callback": "OTWSelect2DCockpitMode",
       "description": "VIEWINT: Snap (3D) Cockpit",
       "category": "VIEWS",
@@ -6100,8 +5797,7 @@
       "type": "button"
     },
     {
-      "id": "viewintpan3dcockpit",
-      "clazz": "ViewintPan3dCockpit",
+      "id": "viewintPan3dCockpit",
       "callback": "OTWSelect3DCockpitMode",
       "description": "VIEWINT: Pan (3D) Cockpit",
       "category": "VIEWS",
@@ -6112,8 +5808,7 @@
       "type": "button"
     },
     {
-      "id": "viewintglanceforward",
-      "clazz": "ViewintGlanceForward",
+      "id": "viewintGlanceForward",
       "callback": "OTWGlanceForward",
       "description": "VIEWINT: Glance Forward",
       "category": "VIEWS",
@@ -6124,8 +5819,7 @@
       "type": "button"
     },
     {
-      "id": "viewintglancebackward",
-      "clazz": "ViewintGlanceBackward",
+      "id": "viewintGlanceBackward",
       "callback": "OTWCheckSix",
       "description": "VIEWINT: Glance Backward",
       "category": "VIEWS",
@@ -6136,8 +5830,7 @@
       "type": "button"
     },
     {
-      "id": "viewextorbitcamera",
-      "clazz": "ViewextOrbitCamera",
+      "id": "viewextOrbitCamera",
       "callback": "OTWSelectOrbitMode",
       "description": "VIEWEXT: Orbit Camera",
       "category": "VIEWS",
@@ -6148,8 +5841,7 @@
       "type": "button"
     },
     {
-      "id": "viewextsatellitecamera",
-      "clazz": "ViewextSatelliteCamera",
+      "id": "viewextSatelliteCamera",
       "callback": "OTWSelectSatelliteMode",
       "description": "VIEWEXT: Satellite Camera",
       "category": "VIEWS",
@@ -6160,8 +5852,7 @@
       "type": "button"
     },
     {
-      "id": "viewextflybycamera",
-      "clazz": "ViewextFlybyCamera",
+      "id": "viewextFlybyCamera",
       "callback": "OTWSelectFlybyMode",
       "description": "VIEWEXT: Flyby Camera",
       "category": "VIEWS",
@@ -6172,8 +5863,7 @@
       "type": "button"
     },
     {
-      "id": "viewextchasecamera",
-      "clazz": "ViewextChaseCamera",
+      "id": "viewextChaseCamera",
       "callback": "OTWSelectChaseMode",
       "description": "VIEWEXT: Chase Camera",
       "category": "VIEWS",
@@ -6184,8 +5874,7 @@
       "type": "button"
     },
     {
-      "id": "radioawacsmenu",
-      "clazz": "RadioAwacsMenu",
+      "id": "radioAwacsMenu",
       "callback": "RadioAWACSCommand",
       "description": "RADIO: AWACS Menu",
       "category": "RADIO COMMS",
@@ -6196,8 +5885,7 @@
       "type": "button"
     },
     {
-      "id": "radiowingmanmenu",
-      "clazz": "RadioWingmanMenu",
+      "id": "radioWingmanMenu",
       "callback": "RadioWingCommand",
       "description": "RADIO: Wingman Menu",
       "category": "RADIO COMMS",
@@ -6208,8 +5896,7 @@
       "type": "button"
     },
     {
-      "id": "radioelementmenu",
-      "clazz": "RadioElementMenu",
+      "id": "radioElementMenu",
       "callback": "RadioElementCommand",
       "description": "RADIO: Element Menu",
       "category": "RADIO COMMS",
@@ -6220,8 +5907,7 @@
       "type": "button"
     },
     {
-      "id": "radioflightmenu",
-      "clazz": "RadioFlightMenu",
+      "id": "radioFlightMenu",
       "callback": "RadioFlightCommand",
       "description": "RADIO: Flight Menu",
       "category": "RADIO COMMS",
@@ -6232,8 +5918,7 @@
       "type": "button"
     },
     {
-      "id": "radioatcmenu",
-      "clazz": "RadioAtcMenu",
+      "id": "radioAtcMenu",
       "callback": "RadioTowerCommand",
       "description": "RADIO: ATC Menu",
       "category": "RADIO COMMS",
@@ -6244,8 +5929,7 @@
       "type": "button"
     },
     {
-      "id": "radiotankermenu",
-      "clazz": "RadioTankerMenu",
+      "id": "radioTankerMenu",
       "callback": "RadioTankerCommand",
       "description": "RADIO: Tanker Menu",
       "category": "RADIO COMMS",
@@ -6256,8 +5940,7 @@
       "type": "button"
     },
     {
-      "id": "radiosendmessagetanker",
-      "clazz": "RadioSendMessageTanker",
+      "id": "radioSendMessageTanker",
       "callback": "RadioMessageSend",
       "description": "Radio-Send Message Tanker",
       "category": "RADIO COMMS",
@@ -6268,8 +5951,7 @@
       "type": "button"
     },
     {
-      "id": "radionextmenutanker",
-      "clazz": "RadioNextMenuTanker",
+      "id": "radioNextMenuTanker",
       "callback": "OTWRadioMenuStep",
       "description": "Radio-Next Menu Tanker",
       "category": "RADIO COMMS",
@@ -6280,8 +5962,7 @@
       "type": "button"
     },
     {
-      "id": "radiopreviousmenutanker",
-      "clazz": "RadioPreviousMenuTanker",
+      "id": "radioPreviousMenuTanker",
       "callback": "OTWRadioMenuStepBack",
       "description": "Radio-Previous Menu Tanker",
       "category": "RADIO COMMS",

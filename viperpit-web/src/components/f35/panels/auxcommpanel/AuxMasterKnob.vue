@@ -6,35 +6,35 @@
     type="switch"
   >
     <control
-      id="auxmasterknoboff"
+      id="auxMasterKnobOff"
       description="AUX: MASTER Knob - OFF"
       label="OFF"
       type="switch"
       role="off"
     />
     <control
-      id="auxmasterknobstby"
+      id="auxMasterKnobStby"
       description="AUX: MASTER Knob - STBY"
       label="STBY"
       type="switch"
       role="none"
     />
     <control
-      id="auxmasterknoblow"
+      id="auxMasterKnobLow"
       description="AUX: MASTER Knob - LOW"
       label="LOW"
       type="switch"
       role="none"
     />
     <control
-      id="auxmasterknobnorm"
+      id="auxMasterKnobNorm"
       description="AUX: MASTER Knob - NORM"
       label="NORM"
       type="switch"
       role="on"
     />
     <control
-      id="auxmasterknobemer"
+      id="auxMasterKnobEmer"
       description="AUX: MASTER Knob - EMER"
       label="EMER"
       type="switch"

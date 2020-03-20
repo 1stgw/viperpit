@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="elecmainpwrswitchmain"
+      id="elecMainPwrSwitchMain"
       description="ELEC: MAIN PWR Switch - MAIN"
       label="MAIN"
       type="switch"
       role="on"
     />
     <control
-      id="elecmainpwrswitchbatt"
+      id="elecMainPwrSwitchBatt"
       description="ELEC: MAIN PWR Switch - BATT"
       label="BATT"
       type="switch"
       role="none"
     />
     <control
-      id="elecmainpwrswitchoff"
+      id="elecMainPwrSwitchOff"
       description="ELEC: MAIN PWR Switch - OFF"
       label="OFF"
       type="switch"

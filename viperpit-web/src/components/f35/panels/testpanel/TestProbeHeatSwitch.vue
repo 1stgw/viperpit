@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="testprobeheatswitchon"
+      id="testProbeHeatSwitchOn"
       description="TEST: PROBE HEAT Switch - ON"
       label="ON"
       type="switch"
       role="on"
     />
     <control
-      id="testprobeheatswitchoff"
+      id="testProbeHeatSwitchOff"
       description="TEST: PROBE HEAT Switch - OFF"
       label="OFF"
       type="switch"
       role="off"
     />
     <control
-      id="testprobeheatswitchtest"
+      id="testProbeHeatSwitchTest"
       description="TEST: PROBE HEAT Switch - TEST"
       label="TEST"
       type="switch"

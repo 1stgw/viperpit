@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="twptgtseppush"
+      id="twpTgtSepPush"
       description="TWP: TGT SEP - Push"
       label="TGT SEP"
       type="button"

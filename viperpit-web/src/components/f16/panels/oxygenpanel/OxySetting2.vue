@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="oxysetting2onpilotbreathing"
+      id="oxySetting2OnPilotBreathing"
       description="OXY: Setting 2 - ON (Pilot breathing)"
       label="ON (Pilot breathing)"
       type="button"
       role="none"
     />
     <control
-      id="oxysetting2offpilotbreathing"
+      id="oxySetting2OffPilotBreathing"
       description="OXY: Setting 2 - OFF (Pilot breathing)"
       label="OFF (Pilot breathing)"
       type="button"

@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="radioatcmenu"
+      id="radioAtcMenu"
       description="RADIO: ATC Menu"
       label="ATC Menu"
       type="button"

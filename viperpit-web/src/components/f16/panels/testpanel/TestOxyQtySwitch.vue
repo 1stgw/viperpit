@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="testoxyqtyswitchhold"
+      id="testOxyQtySwitchHold"
       description="TEST: OXY QTY Switch - Hold"
       label="OXY QTY"
       type="button"

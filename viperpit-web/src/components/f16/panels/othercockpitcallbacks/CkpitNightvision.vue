@@ -6,14 +6,14 @@
     type="button"
   >
     <control
-      id="ckpitnightvisionon"
+      id="ckpitNightvisionOn"
       description="CKPIT: Nightvision - On"
       label="On"
       type="button"
       role="on"
     />
     <control
-      id="ckpitnightvisionoff"
+      id="ckpitNightvisionOff"
       description="CKPIT: Nightvision - Off"
       label="Off"
       type="button"

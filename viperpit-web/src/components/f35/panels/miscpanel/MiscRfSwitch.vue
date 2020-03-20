@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="miscrfswitchnorm"
+      id="miscRfSwitchNorm"
       description="MISC: RF Switch - NORM"
       label="NORM"
       type="switch"
       role="on"
     />
     <control
-      id="miscrfswitchquiet"
+      id="miscRfSwitchQuiet"
       description="MISC: RF Switch - QUIET"
       label="QUIET"
       type="switch"
       role="none"
     />
     <control
-      id="miscrfswitchsilent"
+      id="miscRfSwitchSilent"
       description="MISC: RF Switch - SILENT"
       label="SILENT"
       type="switch"

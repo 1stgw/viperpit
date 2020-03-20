@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="viewintglancebackward"
+      id="viewintGlanceBackward"
       description="VIEWINT: Glance Backward"
       label="Glance Backward"
       type="button"

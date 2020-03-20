@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="testflcspwrtestswitchhold"
+      id="testFlcsPwrTestSwitchHold"
       description="TEST: FLCS PWR TEST Switch - Hold"
       label="FLCS PWR TEST"
       type="button"

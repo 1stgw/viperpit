@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="ecmoprswitchopr"
+      id="ecmOprSwitchOpr"
       description="ECM: OPR Switch - OPR"
       label="OPR"
       type="switch"
       role="on"
     />
     <control
-      id="ecmoprswitchoff"
+      id="ecmOprSwitchOff"
       description="ECM: OPR Switch - OFF"
       label="OFF"
       type="switch"

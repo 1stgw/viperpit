@@ -6,14 +6,14 @@
     type="switch"
   >
     <control
-      id="fltleflapsswitchlock"
+      id="fltLeFlapsSwitchLock"
       description="FLT: LE FLAPS Switch - LOCK"
       label="LOCK"
       type="switch"
       role="none"
     />
     <control
-      id="fltleflapsswitchauto"
+      id="fltLeFlapsSwitchAuto"
       description="FLT: LE FLAPS Switch - AUTO"
       label="AUTO"
       type="switch"

@@ -6,21 +6,21 @@
     type="switch"
   >
     <control
-      id="huddeddataswitchded"
+      id="hudDedDataSwitchDed"
       description="HUD: DED Data Switch - DED"
       label="DED"
       type="switch"
       role="none"
     />
     <control
-      id="huddeddataswitchpfl"
+      id="hudDedDataSwitchPfl"
       description="HUD: DED Data Switch - PFL"
       label="PFL"
       type="switch"
       role="none"
     />
     <control
-      id="huddeddataswitchoff"
+      id="hudDedDataSwitchOff"
       description="HUD: DED Data Switch - OFF"
       label="OFF"
       type="switch"

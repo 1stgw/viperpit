@@ -5,7 +5,7 @@
     type="button"
   >
     <control
-      id="radioflightmenu"
+      id="radioFlightMenu"
       description="RADIO: Flight Menu"
       label="Flight Menu"
       type="button"

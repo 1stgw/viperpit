@@ -15,7 +15,6 @@ import static com.google.gson.JsonParser.parseReader
 	"action": [
 		{
 			"id": "",
-			"clazz": "",
 			"callback": "",
 			"relatedActions": [""],
 			"description": "",
