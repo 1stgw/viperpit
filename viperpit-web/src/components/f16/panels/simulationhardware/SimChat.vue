@@ -1,9 +1,5 @@
 <template>
-  <button-group
-    id="SIM: Chat"
-    description="SIM: Chat"
-    type="button"
-  >
+  <button-group id="SIM: Chat" description="SIM: Chat" type="button">
     <control
       id="simchat"
       description="SIM: Chat"

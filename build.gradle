@@ -1,11 +1,8 @@
 buildscript {
 	repositories {
 		maven {
-			url 'http://repo.springsource.org/release/'
-			url 'https://plugins.gradle.org/m2/'
+			url 'https://repo.spring.io/plugins-release/'
 		}
-		jcenter()
-		mavenCentral()
 		dependencies {
 			classpath "org.anarres.gradle:gradle-jnaerator-plugin:1.0.1"
 			classpath "com.nativelibs4java:jnaerator:0.12"
@@ -14,16 +11,17 @@ buildscript {
 }
 
 plugins {
-	id 'org.springframework.boot' version '2.1.9.RELEASE' apply false
-	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'org.springframework.boot' version '2.2.5.RELEASE' apply false
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 }
 
 allprojects {
 	buildscript {
 		repositories {
 			maven {
-				url 'http://repo.springsource.org/release/'
+				url 'https://repo.springsource.org/release/'
 				url 'https://plugins.gradle.org/m2/'
+				url 'https://repo.spring.io/plugins-release/'
 			}
 			jcenter()
 			mavenCentral()
@@ -34,7 +32,7 @@ allprojects {
 	}
 	repositories {
 		maven {
-			url 'http://repo.springsource.org/release/'
+			url 'https://repo.springsource.org/release/'
 		}
 		jcenter()
 		mavenCentral()
@@ -50,4 +48,7 @@ subprojects {
 			mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
 		}
 	}
+	ext['guava.version'] = '27.1-jre'
+	ext['jna.version'] = '5.5.0'
+	ext['jna-platform.version'] = '5.5.0'
 }

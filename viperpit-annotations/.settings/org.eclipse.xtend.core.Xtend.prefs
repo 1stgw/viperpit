@@ -1,0 +1,3 @@
+outlet.DEFAULT_OUTPUT.cleanDirectory=true
+outlet.DEFAULT_OUTPUT.derived=true
+useJavaCompilerCompliance=true

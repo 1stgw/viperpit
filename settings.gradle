@@ -1,7 +1,9 @@
 pluginManagement {
 	repositories {
 		gradlePluginPortal()
-		jcenter()
+		maven {
+			url 'https://repo.spring.io/plugins-release/'
+		}
 	}
 }
 include "viperpit-annotations", "viperpit-commons", "viperpit-generator", "viperpit-agent", "viperpit-hub", "viperpit-web", "viperpit-launcher"

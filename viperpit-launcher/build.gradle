@@ -5,12 +5,8 @@ plugins {
 	id 'io.spring.dependency-management'
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-configurations { 
-	providedCompile
-}
+sourceCompatibility = JavaVersion.VERSION_13
+targetCompatibility = JavaVersion.VERSION_13
 
 bootJar {
 	classifier = 'boot'

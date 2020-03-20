@@ -95,7 +95,7 @@ annotation Jsonized {
 	def getPropertyName() {
 		val result = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_CAMEL, entry.key.replace(' ', '_'))
 		if (isArray) {
-			return if(result.endsWith('s')) result else result + 's'
+			return if (result.endsWith('s')) result else result + 's'
 		}
 		return if (result == 'class') {
 			'clazz'
@@ -163,7 +163,7 @@ abstract class AbstractJsonized {
 				element.map[wrap(it, containerType)].toList
 			}
 			JsonObject: {
-				val jsonized = containerType.newInstance as AbstractJsonized
+				val jsonized = containerType.getConstructor().newInstance as AbstractJsonized
 				jsonized.delegate = element
 				return jsonized
 			}
@@ -234,12 +234,11 @@ class JsonizedProcessor extends AbstractClassProcessor {
 		]
 	}
 
-	def void enhanceClassesRecursively(MutableClassDeclaration clazz, Iterable<? extends JsonObjectEntry> entries,
-		extension TransformationContext context) {
+	def void enhanceClassesRecursively(MutableClassDeclaration clazz, Iterable<? extends JsonObjectEntry> entries, extension TransformationContext context) {
 		clazz.extendedClass = newTypeReference(AbstractJsonized)
 		for (entry : entries) {
 			val type = entry.getComponentType(context)
-			val realType = if(entry.isArray) getList(type) else type
+			val realType = if (entry.isArray) getList(type) else type
 			clazz.addMethod("get" + entry.propertyName.toFirstUpper) [
 				returnType = realType
 				body = [
