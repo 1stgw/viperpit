@@ -139,7 +139,7 @@ class CockpitGenerator {
 	}
 
 	private def toName(String category) {
-		val tokens = new ArrayList(on(whitespace).trimResults.splitToList(category))
+		val tokens = new ArrayList(on(whitespace).trimResults.omitEmptyStrings.splitToList(category))
 		tokens.join(' ')
 	}
 

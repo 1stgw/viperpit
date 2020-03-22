@@ -5,7 +5,27 @@
       <div class="row">
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <twa-power-button />
+            <button-group
+              id="TWA: POWER Button"
+              description="TWA: POWER Button - On"
+              label="POWER"
+              type="button"
+            >
+              <control
+                id="twaPowerButtonOn"
+                description="TWA: POWER Button - On"
+                label="On"
+                type="button"
+                role="on"
+              />
+              <control
+                id="twaPowerButtonOff"
+                description="TWA: POWER Button - Off"
+                label="Off"
+                type="button"
+                role="off"
+              />
+            </button-group>
           </div>
         </div>
       </div>
@@ -14,12 +34,14 @@
 </template>
 
 <script>
-import TwaPowerButton from "./TwaPowerButton";
+import Control from "@/components/controls/Control";
+import ButtonGroup from "@/components/controls/ButtonGroup";
 
 export default {
   name: "TwaPanel",
   components: {
-    TwaPowerButton
+    Control,
+    ButtonGroup
   }
 };
 </script>

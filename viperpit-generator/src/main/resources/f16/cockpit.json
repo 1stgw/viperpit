@@ -2791,7 +2791,7 @@
         {
           "id": "hudpanel",
           "class": "HudPanel",
-          "name": "HUD  PANEL",
+          "name": "HUD PANEL",
           "group": [
             {
               "id": "HUD: Scales Switch",
@@ -3008,7 +3008,7 @@
         {
           "id": "lightingpanel",
           "class": "LightingPanel",
-          "name": "LIGHTING  PANEL",
+          "name": "LIGHTING PANEL",
           "group": [
             {
               "id": "LIGHT: INST PNL Knob (Primary)",
@@ -3158,7 +3158,7 @@
         {
           "id": "avionicpowerpanel",
           "class": "AvionicPowerPanel",
-          "name": "AVIONIC POWER  PANEL",
+          "name": "AVIONIC POWER PANEL",
           "group": [
             {
               "id": "AVIONICS: INS Knob",

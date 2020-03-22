@@ -5,12 +5,36 @@
       <div class="row">
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <alt-gear-extend-gear-handle />
+            <button-group
+              id="ALT GEAR: Extend Gear Handle"
+              description="ALT GEAR: Extend Gear Handle - Push"
+              type="button"
+            >
+              <control
+                id="altGearExtendGearHandlePush"
+                description="ALT GEAR: Extend Gear Handle - Push"
+                label="Extend Gear"
+                type="button"
+                role="none"
+              />
+            </button-group>
           </div>
         </div>
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <alt-gear-reset-button />
+            <button-group
+              id="ALT GEAR: Reset Button"
+              description="ALT GEAR: Reset Button - Push"
+              type="button"
+            >
+              <control
+                id="altGearResetButtonPush"
+                description="ALT GEAR: Reset Button - Push"
+                label="Reset"
+                type="button"
+                role="none"
+              />
+            </button-group>
           </div>
         </div>
       </div>
@@ -19,14 +43,14 @@
 </template>
 
 <script>
-import AltGearExtendGearHandle from "./AltGearExtendGearHandle";
-import AltGearResetButton from "./AltGearResetButton";
+import Control from "@/components/controls/Control";
+import ButtonGroup from "@/components/controls/ButtonGroup";
 
 export default {
   name: "AltGearControl",
   components: {
-    AltGearExtendGearHandle,
-    AltGearResetButton
+    Control,
+    ButtonGroup
   }
 };
 </script>

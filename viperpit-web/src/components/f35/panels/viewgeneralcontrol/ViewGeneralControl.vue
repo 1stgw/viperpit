@@ -5,22 +5,70 @@
       <div class="row">
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <viewgen-rotate-view-up />
+            <button-group
+              id="VIEWGEN: Rotate View Up"
+              description="VIEWGEN: Rotate View Up"
+              type="button"
+            >
+              <control
+                id="viewgenRotateViewUp"
+                description="VIEWGEN: Rotate View Up"
+                label="Rotate View Up"
+                type="button"
+                role="up"
+              />
+            </button-group>
           </div>
         </div>
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <viewgen-rotate-view-down />
+            <button-group
+              id="VIEWGEN: Rotate View Down"
+              description="VIEWGEN: Rotate View Down"
+              type="button"
+            >
+              <control
+                id="viewgenRotateViewDown"
+                description="VIEWGEN: Rotate View Down"
+                label="Rotate View Down"
+                type="button"
+                role="down"
+              />
+            </button-group>
           </div>
         </div>
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <viewgen-rotate-view-left />
+            <button-group
+              id="VIEWGEN: Rotate View Left"
+              description="VIEWGEN: Rotate View Left"
+              type="button"
+            >
+              <control
+                id="viewgenRotateViewLeft"
+                description="VIEWGEN: Rotate View Left"
+                label="Rotate View Left"
+                type="button"
+                role="left"
+              />
+            </button-group>
           </div>
         </div>
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <viewgen-rotate-view-right />
+            <button-group
+              id="VIEWGEN: Rotate View Right"
+              description="VIEWGEN: Rotate View Right"
+              type="button"
+            >
+              <control
+                id="viewgenRotateViewRight"
+                description="VIEWGEN: Rotate View Right"
+                label="Rotate View Right"
+                type="button"
+                role="right"
+              />
+            </button-group>
           </div>
         </div>
       </div>
@@ -29,18 +77,14 @@
 </template>
 
 <script>
-import ViewgenRotateViewUp from "./ViewgenRotateViewUp";
-import ViewgenRotateViewDown from "./ViewgenRotateViewDown";
-import ViewgenRotateViewLeft from "./ViewgenRotateViewLeft";
-import ViewgenRotateViewRight from "./ViewgenRotateViewRight";
+import Control from "@/components/controls/Control";
+import ButtonGroup from "@/components/controls/ButtonGroup";
 
 export default {
   name: "ViewGeneralControl",
   components: {
-    ViewgenRotateViewUp,
-    ViewgenRotateViewDown,
-    ViewgenRotateViewLeft,
-    ViewgenRotateViewRight
+    Control,
+    ButtonGroup
   }
 };
 </script>

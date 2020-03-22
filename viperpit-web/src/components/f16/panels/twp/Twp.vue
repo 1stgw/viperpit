@@ -5,22 +5,70 @@
       <div class="row">
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <twp-handoff />
+            <button-group
+              id="TWP: HANDOFF"
+              description="TWP: HANDOFF - Push"
+              type="button"
+            >
+              <control
+                id="twpHandoffPush"
+                description="TWP: HANDOFF - Push"
+                label="HANDOFF"
+                type="button"
+                role="none"
+              />
+            </button-group>
           </div>
         </div>
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <twp-missile-launch />
+            <button-group
+              id="TWP: MISSILE LAUNCH"
+              description="TWP: MISSILE LAUNCH - Push"
+              type="button"
+            >
+              <control
+                id="twpMissileLaunchPush"
+                description="TWP: MISSILE LAUNCH - Push"
+                label="MISSILE LAUNCH"
+                type="button"
+                role="none"
+              />
+            </button-group>
           </div>
         </div>
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <twp-sys-test />
+            <button-group
+              id="TWP: SYS TEST"
+              description="TWP: SYS TEST - Push"
+              type="button"
+            >
+              <control
+                id="twpSysTestPush"
+                description="TWP: SYS TEST - Push"
+                label="SYS TEST"
+                type="button"
+                role="none"
+              />
+            </button-group>
           </div>
         </div>
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <twp-tgt-sep />
+            <button-group
+              id="TWP: TGT SEP"
+              description="TWP: TGT SEP - Push"
+              type="button"
+            >
+              <control
+                id="twpTgtSepPush"
+                description="TWP: TGT SEP - Push"
+                label="TGT SEP"
+                type="button"
+                role="none"
+              />
+            </button-group>
           </div>
         </div>
       </div>
@@ -29,18 +77,14 @@
 </template>
 
 <script>
-import TwpHandoff from "./TwpHandoff";
-import TwpMissileLaunch from "./TwpMissileLaunch";
-import TwpSysTest from "./TwpSysTest";
-import TwpTgtSep from "./TwpTgtSep";
+import Control from "@/components/controls/Control";
+import ButtonGroup from "@/components/controls/ButtonGroup";
 
 export default {
   name: "Twp",
   components: {
-    TwpHandoff,
-    TwpMissileLaunch,
-    TwpSysTest,
-    TwpTgtSep
+    Control,
+    ButtonGroup
   }
 };
 </script>

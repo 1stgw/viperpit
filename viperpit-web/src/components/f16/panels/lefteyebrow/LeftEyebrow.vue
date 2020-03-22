@@ -5,12 +5,36 @@
       <div class="row">
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <eye-master-caution-button />
+            <button-group
+              id="EYE: MASTER CAUTION Button"
+              description="EYE: MASTER CAUTION Button - Push"
+              type="button"
+            >
+              <control
+                id="eyeMasterCautionButtonPush"
+                description="EYE: MASTER CAUTION Button - Push"
+                label="MASTER CAUTION"
+                type="button"
+                role="none"
+              />
+            </button-group>
           </div>
         </div>
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <eye-f-ack-button />
+            <button-group
+              id="EYE: F ACK Button"
+              description="EYE: F ACK Button - Push"
+              type="button"
+            >
+              <control
+                id="eyeFAckButtonPush"
+                description="EYE: F ACK Button - Push"
+                label="F ACK"
+                type="button"
+                role="none"
+              />
+            </button-group>
           </div>
         </div>
       </div>
@@ -19,14 +43,14 @@
 </template>
 
 <script>
-import EyeMasterCautionButton from "./EyeMasterCautionButton";
-import EyeFAckButton from "./EyeFAckButton";
+import Control from "@/components/controls/Control";
+import ButtonGroup from "@/components/controls/ButtonGroup";
 
 export default {
   name: "LeftEyebrow",
   components: {
-    EyeMasterCautionButton,
-    EyeFAckButton
+    Control,
+    ButtonGroup
   }
 };
 </script>

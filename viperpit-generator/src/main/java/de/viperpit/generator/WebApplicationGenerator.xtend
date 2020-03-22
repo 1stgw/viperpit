@@ -146,7 +146,22 @@ class WebApplicationGenerator {
 								«FOR group : panel.groups»
 									<div class="col-xs-6 col-sm-6">
 										<div align="center" style="padding: 0px;">
-											<«group.clazz.kebapCaseName» />
+											<«group.controlName.kebapCaseName»
+												id="«group.id»"
+												description="«group.description»"
+												«IF !group.label.nullOrEmpty»label="«group.label»"«ENDIF»
+												type="«group.type»"
+											>
+												«FOR control : group.controls»
+													<control
+														id="«control.id»"
+														description="«control.description»"
+														label="«control.label»"
+														type="«group.type»"
+														role="«control.role»"
+													/>
+												«ENDFOR»
+											</«group.controlName.kebapCaseName»>
 										</div>
 									</div>
 								«ENDFOR»
@@ -156,56 +171,22 @@ class WebApplicationGenerator {
 				</template>
 				
 				<script>
-				«FOR group : panel.groups»
-					import «group.clazz» from "./«group.clazz»";
+				import Control from "@/components/controls/Control";
+				«FOR controlName : panel.groups.map[controlName].toSet.sort»
+					import «controlName» from "@/components/controls/«controlName»";
 				«ENDFOR»
 				
 				export default {
 					name: "«panel.clazz»",
 					components: {
-						«FOR group : panel.groups SEPARATOR ','»
-							«group.clazz»
+						Control,
+						«FOR controlName : panel.groups.map[controlName].toSet.sort SEPARATOR ','»
+							«controlName»
 						«ENDFOR»
 					}
 				};
 				</script>
 			'''.process, new File(pathForPanels, '''«panel.clazz».vue'''.toString), UTF_8)
-			panel.groups.forEach [ group |
-				val controlName = '''«group.type.toFirstUpper»Group'''
-				write('''
-					<template>
-						<«controlName.kebapCaseName»
-							id="«group.id»"
-							description="«group.description»"
-							«IF !group.label.nullOrEmpty»label="«group.label»"«ENDIF»
-							type="«group.type»"
-						>
-							«FOR control : group.controls»
-								<control
-									id="«control.id»"
-									description="«control.description»"
-									label="«control.label»"
-									type="«group.type»"
-									role="«control.role»"
-								/>
-							«ENDFOR»
-						</«controlName.kebapCaseName»>
-					</template>
-					
-					<script>
-					import Control from "@/components/controls/Control";
-					import «controlName» from "@/components/controls/«controlName»";
-					
-					export default {
-						name: "«group.clazz»",
-						components: {
-							Control,
-							«controlName»
-						}
-					};
-					</script>
-				'''.process, new File(pathForPanels, '''«group.clazz».vue'''.toString), UTF_8)
-			]
 		]
 		val pathForMetadata = new File('''«path.absolutePath»/viperpit-hub/src/main/resources''')
 		val builder = new Jackson2ObjectMapperBuilder()
@@ -296,6 +277,10 @@ class WebApplicationGenerator {
 		].toList
 		val stateConfigurationForAir = new de.viperpit.commons.cockpit.State(null, actionsForAir) => []
 		write(stateConfigurationForAir.writeValueAsString, new File(pathForMetadata, '''states_air.json'''.toString), UTF_8)
+	}
+
+	private def getControlName(Group group) {
+		'''«group.type.toFirstUpper»Group'''.toString
 	}
 
 	private def getKebapCaseName(String it) {

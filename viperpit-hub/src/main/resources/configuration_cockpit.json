@@ -2987,11 +2987,11 @@
   }, {
     "className" : "HudPanel",
     "id" : "hudpanel",
-    "name" : "HUD  PANEL"
+    "name" : "HUD PANEL"
   }, {
     "className" : "LightingPanel",
     "id" : "lightingpanel",
-    "name" : "LIGHTING  PANEL"
+    "name" : "LIGHTING PANEL"
   }, {
     "className" : "AirCondPanel",
     "id" : "aircondpanel",
@@ -3003,7 +3003,7 @@
   }, {
     "className" : "AvionicPowerPanel",
     "id" : "avionicpowerpanel",
-    "name" : "AVIONIC POWER  PANEL"
+    "name" : "AVIONIC POWER PANEL"
   }, {
     "className" : "OxygenPanel",
     "id" : "oxygenpanel",
