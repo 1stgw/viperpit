@@ -44,7 +44,11 @@
         </div>
         <div class="col-xs-6 col-sm-6">
           <div align="center" style="padding: 0px;">
-            <button-group id="SIM: Chat" description="SIM: Chat" type="button">
+            <button-group
+              id="SIM: Chat"
+              description="SIM: Chat"
+              type="button"
+            >
               <control
                 id="simChat"
                 description="SIM: Chat"

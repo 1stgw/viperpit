@@ -120,7 +120,7 @@ class WebApplicationGenerator {
 				
 				<script>
 				«FOR panel : console.panels»
-					import «panel.clazz» from "../panels/«panel.id»/«panel.clazz»";
+					import «panel.clazz» from "@/components/«profile»/panels/«panel.clazz»";
 				«ENDFOR»
 				
 				export default {
@@ -135,7 +135,7 @@ class WebApplicationGenerator {
 			'''.process, new File(pathForConsoles, '''«console.clazz».vue'''.toString), UTF_8)
 		]
 		cockpit.panels.forEach [ panel |
-			val pathForPanels = new File('''«pathForModule»/panels/«panel.id»''')
+			val pathForPanels = new File('''«pathForModule»/panels''')
 			pathForPanels.mkdirs
 			write('''
 				<template>

@@ -33,13 +33,13 @@
 </template>
 
 <script>
-import MiscPanel from "../panels/miscpanel/MiscPanel";
-import LeftEyebrow from "../panels/lefteyebrow/LeftEyebrow";
-import Twp from "../panels/twp/Twp";
-import Rwr from "../panels/rwr/Rwr";
-import MainInstrument from "../panels/maininstrument/MainInstrument";
-import InstrModePanel from "../panels/instrmodepanel/InstrModePanel";
-import FuelQtyPanel from "../panels/fuelqtypanel/FuelQtyPanel";
+import MiscPanel from "@/components/f35/panels/MiscPanel";
+import LeftEyebrow from "@/components/f35/panels/LeftEyebrow";
+import Twp from "@/components/f35/panels/Twp";
+import Rwr from "@/components/f35/panels/Rwr";
+import MainInstrument from "@/components/f35/panels/MainInstrument";
+import InstrModePanel from "@/components/f35/panels/InstrModePanel";
+import FuelQtyPanel from "@/components/f35/panels/FuelQtyPanel";
 
 export default {
   name: "CenterConsole",

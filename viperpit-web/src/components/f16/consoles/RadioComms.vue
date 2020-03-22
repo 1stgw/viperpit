@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import GeneralRadioOptions from "../panels/generalradiooptions/GeneralRadioOptions";
+import GeneralRadioOptions from "@/components/f16/panels/GeneralRadioOptions";
 
 export default {
   name: "RadioComms",

@@ -33,13 +33,13 @@
 </template>
 
 <script>
-import SnsrPwrPanel from "../panels/snsrpwrpanel/SnsrPwrPanel";
-import HudPanel from "../panels/hudpanel/HudPanel";
-import LightingPanel from "../panels/lightingpanel/LightingPanel";
-import AirCondPanel from "../panels/aircondpanel/AirCondPanel";
-import ZeroizePanel from "../panels/zeroizepanel/ZeroizePanel";
-import AvionicPowerPanel from "../panels/avionicpowerpanel/AvionicPowerPanel";
-import OxygenPanel from "../panels/oxygenpanel/OxygenPanel";
+import SnsrPwrPanel from "@/components/f16/panels/SnsrPwrPanel";
+import HudPanel from "@/components/f16/panels/HudPanel";
+import LightingPanel from "@/components/f16/panels/LightingPanel";
+import AirCondPanel from "@/components/f16/panels/AirCondPanel";
+import ZeroizePanel from "@/components/f16/panels/ZeroizePanel";
+import AvionicPowerPanel from "@/components/f16/panels/AvionicPowerPanel";
+import OxygenPanel from "@/components/f16/panels/OxygenPanel";
 
 export default {
   name: "RightConsole",

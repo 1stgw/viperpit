@@ -73,23 +73,23 @@
 </template>
 
 <script>
-import TestPanel from "../panels/testpanel/TestPanel";
-import FltControlPanel from "../panels/fltcontrolpanel/FltControlPanel";
-import ManualTrimPanel from "../panels/manualtrimpanel/ManualTrimPanel";
-import FuelPanel from "../panels/fuelpanel/FuelPanel";
-import AuxCommPanel from "../panels/auxcommpanel/AuxCommPanel";
-import ExtLightingPanel from "../panels/extlightingpanel/ExtLightingPanel";
-import EpuPanel from "../panels/epupanel/EpuPanel";
-import ElecPanel from "../panels/elecpanel/ElecPanel";
-import AvtrPanel from "../panels/avtrpanel/AvtrPanel";
-import EcmPanel from "../panels/ecmpanel/EcmPanel";
-import EngJetStartPanel from "../panels/engjetstartpanel/EngJetStartPanel";
-import Audio2Panel from "../panels/audio2panel/Audio2Panel";
-import Audio1Panel from "../panels/audio1panel/Audio1Panel";
-import MpoPanel from "../panels/mpopanel/MpoPanel";
-import UhfPanel from "../panels/uhfpanel/UhfPanel";
-import LeftSideWall from "../panels/leftsidewall/LeftSideWall";
-import Seat from "../panels/seat/Seat";
+import TestPanel from "@/components/f16/panels/TestPanel";
+import FltControlPanel from "@/components/f16/panels/FltControlPanel";
+import ManualTrimPanel from "@/components/f16/panels/ManualTrimPanel";
+import FuelPanel from "@/components/f16/panels/FuelPanel";
+import AuxCommPanel from "@/components/f16/panels/AuxCommPanel";
+import ExtLightingPanel from "@/components/f16/panels/ExtLightingPanel";
+import EpuPanel from "@/components/f16/panels/EpuPanel";
+import ElecPanel from "@/components/f16/panels/ElecPanel";
+import AvtrPanel from "@/components/f16/panels/AvtrPanel";
+import EcmPanel from "@/components/f16/panels/EcmPanel";
+import EngJetStartPanel from "@/components/f16/panels/EngJetStartPanel";
+import Audio2Panel from "@/components/f16/panels/Audio2Panel";
+import Audio1Panel from "@/components/f16/panels/Audio1Panel";
+import MpoPanel from "@/components/f16/panels/MpoPanel";
+import UhfPanel from "@/components/f16/panels/UhfPanel";
+import LeftSideWall from "@/components/f16/panels/LeftSideWall";
+import Seat from "@/components/f16/panels/Seat";
 
 export default {
   name: "LeftConsole",

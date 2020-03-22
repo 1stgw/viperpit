@@ -25,11 +25,11 @@
 </template>
 
 <script>
-import AltGearControl from "../panels/altgearcontrol/AltGearControl";
-import TwaPanel from "../panels/twapanel/TwaPanel";
-import HmcsPanel from "../panels/hmcspanel/HmcsPanel";
-import CmdsPanel from "../panels/cmdspanel/CmdsPanel";
-import GearPanel from "../panels/gearpanel/GearPanel";
+import AltGearControl from "@/components/f16/panels/AltGearControl";
+import TwaPanel from "@/components/f16/panels/TwaPanel";
+import HmcsPanel from "@/components/f16/panels/HmcsPanel";
+import CmdsPanel from "@/components/f16/panels/CmdsPanel";
+import GearPanel from "@/components/f16/panels/GearPanel";
 
 export default {
   name: "LeftAuxConsole",

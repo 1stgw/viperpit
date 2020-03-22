@@ -3,6 +3,7 @@ $font-family-sans-serif: "Oxanium", -apple-system, BlinkMacSystemFont,
 
 $font-size-base: 1rem;
 
+$green: #00e100;
 $body-bg: #000;
 $body-color: #fff;
 $card-bg: #000;
@@ -37,51 +38,61 @@ a:not([href]) {
 }
 
 a:not([href]):hover {
-  color: $white;
+  color: $black;
 }
 
 $cockpit-control-border-width: 1px;
-$cockpit-control-color: $green;
-$cockpit-control-active-color: $white;
-$cockpit-control-bg: $black;
-$cockpit-control-active-bg: $green;
-$cockpit-control-border: $green;
-$cockpit-control-active-border: $green;
 $cockpit-control-font-weight: normal;
 
 $types: "down", "up", "left", "right", "on", "off", "none";
 
 @each $type in $types {
   .button-#{$type} {
-    @extend .btn-success;
-    color: $cockpit-control-color;
-    background-color: $cockpit-control-bg;
+    @extend .btn;
+    color: $green;
+    background-color: $black;
     font-weight: $cockpit-control-font-weight;
-    border-color: $cockpit-control-border;
+    border-color: $green;
     border-width: $cockpit-control-border-width;
   }
   .button-#{$type}.active {
-    @extend .btn-success;
-    color: $cockpit-control-active-color;
-    background-color: $cockpit-control-active-bg;
+    @extend .btn;
+    color: $black;
+    background-color: $green;
     font-weight: $cockpit-control-font-weight;
-    border-color: $cockpit-control-active-border;
+    border-color: $green;
+    border-width: $cockpit-control-border-width;
+  }
+  .button-#{$type}:hover {
+    @extend .btn;
+    color: $black;
+    background-color: $green;
+    font-weight: $cockpit-control-font-weight;
+    border-color: $green;
     border-width: $cockpit-control-border-width;
   }
   .switch-#{$type} {
-    @extend .btn-success;
-    color: $cockpit-control-color;
-    background-color: $cockpit-control-bg;
+    @extend .btn;
+    color: $green;
+    background-color: $black;
     font-weight: $cockpit-control-font-weight;
-    border-color: $cockpit-control-border;
+    border-color: $green;
     border-width: $cockpit-control-border-width;
   }
   .switch-#{$type}.active {
-    @extend .btn-success;
-    color: $cockpit-control-active-color;
-    background-color: $cockpit-control-active-bg;
+    @extend .btn;
+    color: $black;
+    background-color: $green;
     font-weight: $cockpit-control-font-weight;
-    border-color: $cockpit-control-active-border;
+    border-color: $green;
+    border-width: $cockpit-control-border-width;
+  }
+  .switch-#{$type}:hover {
+    @extend .btn;
+    color: $black;
+    background-color: $green;
+    font-weight: $cockpit-control-font-weight;
+    border-color: $green;
     border-width: $cockpit-control-border-width;
   }
 }

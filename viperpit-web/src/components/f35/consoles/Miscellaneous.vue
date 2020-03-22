@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import OtherCockpitCallbacks from "../panels/othercockpitcallbacks/OtherCockpitCallbacks";
-import SimulationHardware from "../panels/simulationhardware/SimulationHardware";
+import OtherCockpitCallbacks from "@/components/f35/panels/OtherCockpitCallbacks";
+import SimulationHardware from "@/components/f35/panels/SimulationHardware";
 
 export default {
   name: "Miscellaneous",

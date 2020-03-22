@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import ViewGeneralControl from "../panels/viewgeneralcontrol/ViewGeneralControl";
-import ViewInternal from "../panels/viewinternal/ViewInternal";
-import ViewExternal from "../panels/viewexternal/ViewExternal";
+import ViewGeneralControl from "@/components/f35/panels/ViewGeneralControl";
+import ViewInternal from "@/components/f35/panels/ViewInternal";
+import ViewExternal from "@/components/f35/panels/ViewExternal";
 
 export default {
   name: "Views",
