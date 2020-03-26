@@ -1,13 +1,11 @@
 package de.viperpit.hub.cockpit;
 
 import static com.google.common.base.CharMatcher.javaLetterOrDigit;
-import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Maps.newHashMap;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -30,8 +28,6 @@ public class CockpitService {
 
 	private Map<String, Agent> agents = newHashMap();
 
-	private String currentPreset = null;
-
 	private Logger logger = LoggerFactory.getLogger(CockpitService.class);
 
 	@Autowired
@@ -39,8 +35,6 @@ public class CockpitService {
 
 	@Autowired
 	private ResourceLoader resourceLoader;
-
-	private Map<Agent, State> states = newHashMap();
 
 	public void connect(String sessionId, Agent agent) {
 		agentIdsBySessionId.put(sessionId, agent.getId());
@@ -50,7 +44,6 @@ public class CockpitService {
 	public void disconnect(String sessionId) {
 		Agent agent = getAgentBySessionId(sessionId);
 		if (agent != null) {
-			states.remove(agent);
 			agents.remove(agent.getId());
 			agentIdsBySessionId.remove(sessionId);
 		}
@@ -70,63 +63,26 @@ public class CockpitService {
 	}
 
 	public State load(Agent agent, String preset) {
-		State state = null;
 		if (agent == null) {
 			return null;
 		}
 		if (preset == null) {
 			return null;
 		}
-		if (preset.equals(currentPreset)) {
-			state = states.get(agent);
-		}
-		if (state == null) {
-			@SuppressWarnings("deprecation")
-			String location = "classpath:/states_" + javaLetterOrDigit().retainFrom(preset) + ".json";
-			Resource resource = resourceLoader.getResource(location);
-			if (resource.exists()) {
-				try (InputStream inputStream = resource.getInputStream()) {
-					Collection<Action> actions = objectMapper.readValue(inputStream, State.class).getActions();
-					state = new State(agent, actions);
-					currentPreset = preset;
-					states.put(agent, state);
-				} catch (IOException exception) {
-					logger.error("Error while loading: " + location, exception);
-				}
-			} else {
-				logger.error("State file in " + location + " could not be loaded");
+		@SuppressWarnings("deprecation")
+		String location = "classpath:/states_" + javaLetterOrDigit().retainFrom(preset) + ".json";
+		Resource resource = resourceLoader.getResource(location);
+		if (resource.exists()) {
+			try (InputStream inputStream = resource.getInputStream()) {
+				Collection<Action> actions = objectMapper.readValue(inputStream, State.class).getActions();
+				return new State(agent, actions);
+			} catch (IOException exception) {
+				logger.error("Error while loading: " + location, exception);
 			}
+		} else {
+			logger.error("State file in " + location + " could not be loaded");
 		}
-		return state;
-	}
-
-	public State toggle(Agent agent, String callback) {
-		if (agent == null) {
-			return null;
-		}
-		if (callback == null) {
-			return null;
-		}
-		State state = states.get(agent);
-		if (state == null) {
-			return null;
-		}
-		Action action = state.getByCallback(callback);
-		if (action == null || !action.isStateful() || action.isActive()) {
-			return null;
-		}
-		boolean active = !action.isActive();
-		action.setActive(active);
-		List<Action> affectedActions = newArrayList();
-		affectedActions.add(action);
-		for (String relatedActionId : action.getRelatedActions()) {
-			Action relatedAction = state.getById(relatedActionId);
-			if (relatedAction != null) {
-				relatedAction.setActive(!active);
-				affectedActions.add(relatedAction);
-			}
-		}
-		return new State(agent, affectedActions);
+		return null;
 	}
 
 }

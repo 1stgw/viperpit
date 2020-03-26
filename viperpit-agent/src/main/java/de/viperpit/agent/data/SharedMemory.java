@@ -2,7 +2,6 @@ package de.viperpit.agent.data;
 
 import static com.sun.jna.Native.register;
 import static com.sun.jna.Native.setProtected;
-import static com.sun.jna.platform.win32.WinBase.INVALID_HANDLE_VALUE;
 import static com.sun.jna.platform.win32.WinNT.PAGE_READWRITE;
 import static com.sun.jna.platform.win32.WinNT.SECTION_MAP_READ;
 import static com.sun.jna.platform.win32.WinNT.SECTION_MAP_WRITE;
@@ -41,8 +40,8 @@ public class SharedMemory implements Closeable {
 
 	private final Optional<Pointer> view;
 
-	public SharedMemory(String name, int size, boolean allowCreation) {
-		this.handle = openHandle(name, size, allowCreation);
+	public SharedMemory(String name) {
+		this.handle = openHandle(name);
 		this.view = handle.flatMap(h -> mapView(handle.get()));
 		this.size = findSize(view.get());
 		this.valid = handle.isPresent() && view.isPresent() && size > 0;
@@ -97,14 +96,9 @@ public class SharedMemory implements Closeable {
 
 	private native long OpenFileMappingA(DWORD access, boolean bInheritHandle, String s);
 
-	private Optional<HANDLE> openHandle(String name, int size, boolean allowCreation) {
-		if (allowCreation) {
-			return validate(Kernel32.INSTANCE.CreateFileMapping(INVALID_HANDLE_VALUE, null, PAGE_ACCESS, 0, size, name),
-					h -> h.getPointer());
-		} else {
-			return validate(new HANDLE(new Pointer(OpenFileMappingA(new DWORD(VIEW_ACCESS), false, name))),
-					h -> h.getPointer());
-		}
+	private Optional<HANDLE> openHandle(String name) {
+		Pointer pointer = new Pointer(OpenFileMappingA(new DWORD(VIEW_ACCESS), false, name));
+		return validate(new HANDLE(pointer), handle -> handle.getPointer());
 	}
 
 	private void read(byte[] bytes, int n) {

@@ -188,6 +188,68 @@ class WebApplicationGenerator {
 				</script>
 			'''.process, new File(pathForPanels, '''«panel.clazz».vue'''.toString), UTF_8)
 		]
+		val pathForStates = new File('''«path.absolutePath»/viperpit-agent/src/main/java''')
+		pathForStates.mkdirs
+		val pathForStateProvider = new File('''«pathForStates»/de/viperpit/agent/data''')
+		pathForStateProvider.mkdirs
+		val statefulActions = configuration.actions.filter[state !== null].sortBy[id]
+		write('''
+			package de.viperpit.agent.data;
+			
+			import static com.google.common.collect.Lists.newArrayList;
+			
+			import java.util.Collection;
+			import java.util.LinkedHashMap;
+			import java.util.Map;
+			
+			import org.springframework.beans.factory.annotation.Autowired;
+			import org.springframework.stereotype.Component;
+			
+			import de.viperpit.agent.data.SharedMemoryReader.SharedMemoryData;
+			
+			@Component
+			public abstract class AbstractSharedMemoryStateProvider implements StateProvider {
+			
+				private static final Collection<String> STATES = newArrayList(
+					«FOR action : statefulActions SEPARATOR "," + System.lineSeparator»"«action.id»"«ENDFOR»
+				);
+			
+				@Autowired
+				private SharedMemoryReader sharedMemoryReader;
+			
+				@Override
+				public Map<String, Object> getStates() {
+					SharedMemoryData sharedMemoryData = sharedMemoryReader.readData();
+					Map<String, Object> states = new LinkedHashMap<>(STATES.size());
+					for (String id : STATES) {
+						Object state = getStateFromSharedMemory(id, sharedMemoryData);
+						if (state != null) {
+							states.put(id, state);
+						}
+					}
+					return states;
+				}
+			
+				protected Object getStateFromSharedMemory(String id, SharedMemoryData sharedMemoryData) {
+					switch (id) {
+						«FOR action : statefulActions»
+							case "«action.id»":
+								return get«action.id.toFirstUpper»(id, sharedMemoryData);
+						«ENDFOR»
+						default:
+							return null;
+					}
+				}
+			
+				«FOR action : statefulActions»
+					protected Object get«action.id.toFirstUpper»(String id, SharedMemoryData sharedMemoryData) {
+						return null;
+					}
+
+				«ENDFOR»
+			}
+		''', new File(pathForStateProvider, '''AbstractSharedMemoryStateProvider.java'''.toString), UTF_8)
+
 		val pathForMetadata = new File('''«path.absolutePath»/viperpit-hub/src/main/resources''')
 		val builder = new Jackson2ObjectMapperBuilder()
 		builder.featuresToEnable(INDENT_OUTPUT)

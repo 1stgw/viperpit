@@ -4,10 +4,12 @@ import static org.springframework.boot.Banner.Mode.OFF;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import de.viperpit.agent.AgentConfiguration;
 import de.viperpit.hub.HubConfiguration;
 
+@EnableScheduling
 @SpringBootApplication(scanBasePackageClasses = { HubConfiguration.class, AgentConfiguration.class })
 public class LauncherApplication {
 

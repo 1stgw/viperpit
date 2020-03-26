@@ -29,6 +29,7 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 import de.viperpit.commons.cockpit.ActionEvent;
 import de.viperpit.commons.cockpit.Agent;
 import de.viperpit.commons.cockpit.State;
+import de.viperpit.commons.cockpit.StateChangeEvent;
 
 @Controller
 public class CockpitController implements ApplicationListener<ApplicationEvent> {
@@ -96,10 +97,11 @@ public class CockpitController implements ApplicationListener<ApplicationEvent> 
 
 	@SendTo(TOPIC_STATES_UPDATE)
 	@MessageMapping(APP_STATES_UPDATE)
-	public State onStatesUpdate(ActionEvent actionEvent, StompHeaderAccessor stompHeaderAccessor) throws Exception {
+	public StateChangeEvent onStatesUpdate(StateChangeEvent stateChangeEvent, StompHeaderAccessor stompHeaderAccessor)
+			throws Exception {
 		Agent agent = cockpitService.getAgentBySessionId(stompHeaderAccessor.getSessionId());
 		if (agent != null) {
-			return cockpitService.toggle(agent, actionEvent.getCallback());
+			return stateChangeEvent;
 		}
 		return null;
 	}

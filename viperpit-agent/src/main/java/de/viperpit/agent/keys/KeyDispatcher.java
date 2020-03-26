@@ -4,6 +4,7 @@ import static com.sun.jna.platform.win32.WinUser.INPUT.INPUT_KEYBOARD;
 import static com.sun.jna.platform.win32.WinUser.KEYBDINPUT.KEYEVENTF_EXTENDEDKEY;
 import static com.sun.jna.platform.win32.WinUser.KEYBDINPUT.KEYEVENTF_KEYUP;
 import static com.sun.jna.platform.win32.WinUser.KEYBDINPUT.KEYEVENTF_SCANCODE;
+import static java.lang.Thread.sleep;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -44,12 +45,22 @@ public class KeyDispatcher {
 		input.input.ki.wScan = new WORD(scanCode);
 	}
 
+	private void delayAction(int millis) {
+		try {
+			sleep(millis);
+		} catch (InterruptedException exception) {
+		}
+	}
+
 	public int fire(int... scanCodes) {
 		if (windowName != null) {
 			HWND window = OS.FindWindow(null, windowName);
 			if (window != null) {
 				OS.SetFocus(window);
 				OS.SetForegroundWindow(window);
+				if (isDelayAction()) {
+					delayAction(200);
+				}
 				INPUT[] inputs = (INPUT[]) new INPUT().toArray(scanCodes.length * 2);
 				int i = 0;
 				for (int scanCode : scanCodes) {
@@ -64,6 +75,10 @@ public class KeyDispatcher {
 			}
 		}
 		return 0;
+	}
+
+	private boolean isDelayAction() {
+		return true;
 	}
 
 	public boolean fire(Iterable<ScanCodeInterval> scanCodeIntervals) {

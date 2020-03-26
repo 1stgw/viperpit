@@ -72,7 +72,6 @@ const actions = {
         );
     }
   },
-  // eslint-disable-next-line
   fireAction(response, id) {
     const action = state.actions[id];
     if (!action) {
@@ -129,10 +128,10 @@ const mutations = {
     if (result.agent.id !== _state.agentId) {
       return;
     }
-    for (let affectedAction of result.actions) {
-      const action = state.actions[affectedAction.id];
-      if (action && action.active !== affectedAction.active) {
-        action.active = affectedAction.active;
+    for (var property in result.updatedStates) {
+      const action = state.actions[property];
+      if (action) {
+        action.active = result.updatedStates[property];
       }
     }
   }
