@@ -24,11 +24,11 @@ import de.viperpit.commons.cockpit.State;
 @Component
 public class CockpitService {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(CockpitService.class);
+
 	private Map<String, String> agentIdsBySessionId = newHashMap();
 
 	private Map<String, Agent> agents = newHashMap();
-
-	private Logger logger = LoggerFactory.getLogger(CockpitService.class);
 
 	@Autowired
 	private ObjectMapper objectMapper;
@@ -77,10 +77,10 @@ public class CockpitService {
 				Collection<Action> actions = objectMapper.readValue(inputStream, State.class).getActions();
 				return new State(agent, actions);
 			} catch (IOException exception) {
-				logger.error("Error while loading: " + location, exception);
+				LOGGER.error("Error while loading: " + location, exception);
 			}
 		} else {
-			logger.error("State file in " + location + " could not be loaded");
+			LOGGER.error("State file in " + location + " could not be loaded");
 		}
 		return null;
 	}

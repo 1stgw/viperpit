@@ -13,6 +13,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 import java.util.Collection;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
@@ -33,6 +35,8 @@ import de.viperpit.commons.cockpit.StateChangeEvent;
 
 @Controller
 public class CockpitController implements ApplicationListener<ApplicationEvent> {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(CockpitController.class);
 
 	@Autowired
 	private CockpitService cockpitService;
@@ -85,6 +89,7 @@ public class CockpitController implements ApplicationListener<ApplicationEvent> 
 	@Override
 	public void onApplicationEvent(ApplicationEvent event) {
 		if (event instanceof SessionDisconnectEvent) {
+			LOGGER.info("Disconnect: " + event);
 			SessionDisconnectEvent sessionConnectedEvent = (SessionDisconnectEvent) event;
 			StompHeaderAccessor stompHeaderAccessor = wrap(sessionConnectedEvent.getMessage());
 			Agent agent = cockpitService.getAgentBySessionId(stompHeaderAccessor.getSessionId());
