@@ -88,15 +88,16 @@ public class SharedMemoryReader {
 	}
 
 	private <T extends Structure> T readData(String sharedMemoryAreaName, Class<T> type) {
+		T structure;
 		try (SharedMemory sharedMemory = new SharedMemory(sharedMemoryAreaName)) {
 			Pointer pointer = sharedMemory.getView().get();
-			T structure = (T) Structure.newInstance(type, pointer);
+			structure = (T) Structure.newInstance(type, pointer);
 			structure.autoRead();
-			return structure;
 		} catch (Exception exception) {
-			LOGGER.error(exception.getMessage(), exception);
+			LOGGER.warn(exception.getMessage());
+			structure = (T) Structure.newInstance(type);
 		}
-		return null;
+		return structure;
 	}
 
 }

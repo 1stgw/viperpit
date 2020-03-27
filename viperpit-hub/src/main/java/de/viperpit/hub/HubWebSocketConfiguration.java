@@ -16,7 +16,9 @@ public class HubWebSocketConfiguration implements WebSocketMessageBrokerConfigur
 		// @formatter:off
 		ThreadPoolTaskScheduler taskScheduler = new ThreadPoolTaskScheduler();
 		taskScheduler.initialize();
-		messageBrokerRegistry.setApplicationDestinationPrefixes("/app").enableSimpleBroker("/topic", "/queue")
+		messageBrokerRegistry //
+				.setApplicationDestinationPrefixes("/app") //
+				.enableSimpleBroker("/topic", "/queue") //
 				.setTaskScheduler(taskScheduler);
 		// @formatter:on
 	}
@@ -24,7 +26,7 @@ public class HubWebSocketConfiguration implements WebSocketMessageBrokerConfigur
 	@Override
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
 		registry.addEndpoint("/agents");
-		registry.addEndpoint("/sockets").setAllowedOrigins("http://localhost:8080", "http://office:8080");
+		registry.addEndpoint("/sockets").setAllowedOrigins("*");
 	}
 
 }

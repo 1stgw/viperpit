@@ -226,12 +226,14 @@ public abstract class AbstractSharedMemoryStateProvider implements StateProvider
 
 	@Override
 	public Map<String, Object> getStates() {
-		SharedMemoryData sharedMemoryData = sharedMemoryReader.readData();
 		Map<String, Object> states = new LinkedHashMap<>(STATES.size());
-		for (String id : STATES) {
-			Object state = getStateFromSharedMemory(id, sharedMemoryData);
-			if (state != null) {
-				states.put(id, state);
+		SharedMemoryData sharedMemoryData = sharedMemoryReader.readData();
+		if (sharedMemoryData != null) {
+			for (String id : STATES) {
+				Object state = getStateFromSharedMemory(id, sharedMemoryData);
+				if (state != null) {
+					states.put(id, state);
+				}
 			}
 		}
 		return states;

@@ -42,11 +42,19 @@ public class SharedMemory implements Closeable {
 
 	public SharedMemory(String name) {
 		this.handle = openHandle(name);
-		this.view = handle.flatMap(h -> mapView(handle.get()));
-		this.size = findSize(view.get());
-		this.valid = handle.isPresent() && view.isPresent() && size > 0;
-		if (!valid) {
+		if (handle.isPresent()) {
+			this.view = handle.flatMap(h -> mapView(handle.get()));
+			this.size = findSize(view.get());
+		} else {
+			this.view = empty();
+			this.size = -1;
+		}
+		if (handle.isPresent() && view.isPresent() && size > 0) {
+			this.valid = true;
+		} else {
+			this.valid = false;
 			close();
+			throw new IllegalArgumentException("Shared Memory area " + name + " is not readable.");
 		}
 	}
 
