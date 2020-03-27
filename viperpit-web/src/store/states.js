@@ -10,11 +10,7 @@ const state = {
 
 const actions = {
   initialize({ dispatch, commit }) {
-    const client = services.connectToWebSocket(() => {
-      services.installAgentsConnectListener(client, commit, dispatch);
-      services.installAgentsDisconnectListener(client, commit, dispatch);
-      services.installStatesUpdateListener(client, commit);
-    });
+    services.connectToWebSocket(dispatch, commit);
     dispatch("loadAgents").then(() => {
       if (!state.agents || state.agents.length === 0) {
         return;

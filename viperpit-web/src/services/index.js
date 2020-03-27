@@ -1,25 +1,31 @@
 import Stomp from "webstomp-client";
 import * as types from "../store/mutation-types";
 
-export function connectToWebSocket(connectCallback, errorCallback) {
-  const client = Stomp.client(
-    "ws://" + window.location.hostname + ":8090" + "/sockets",
-    {
-      debug: false
+export function connectToWebSocket(dispatch, commit) {
+  const url = "ws://" + window.location.hostname + ":8090" + "/sockets";
+  return connectAndReconnect(url, dispatch, commit);
+}
+
+function connectAndReconnect(url, dispatch, commit) {
+  const client = Stomp.client(url, { debug: true });
+  client.connect(
+    {},
+    () => {
+      installAgentsConnectListener(client, commit, dispatch);
+      installAgentsDisconnectListener(client, commit, dispatch);
+      installStatesUpdateListener(client, commit);
+    },
+    error => {
+      console.log(error);
+      setTimeout(() => {
+        connectAndReconnect(url, dispatch, commit);
+      }, 1000);
     }
   );
-  if (!connectCallback) {
-    connectCallback = function() {};
-  }
-  if (!errorCallback) {
-    errorCallback = function() {};
-  }
-  const headers = {};
-  client.connect(headers, connectCallback, errorCallback);
   return client;
 }
 
-export function installAgentsConnectListener(client, commit, dispatch) {
+function installAgentsConnectListener(client, commit, dispatch) {
   function messageCallback(message) {
     const agent = JSON.parse(message.body);
     if (!agent) {
@@ -30,7 +36,7 @@ export function installAgentsConnectListener(client, commit, dispatch) {
   return client.subscribe("/topic/cockpit/agents/connect", messageCallback);
 }
 
-export function installAgentsDisconnectListener(client, commit, dispatch) {
+function installAgentsDisconnectListener(client, commit, dispatch) {
   function messageCallback(message) {
     const agent = JSON.parse(message.body);
     if (!agent) {
@@ -41,7 +47,7 @@ export function installAgentsDisconnectListener(client, commit, dispatch) {
   return client.subscribe("/topic/cockpit/agents/disconnect", messageCallback);
 }
 
-export function installStatesUpdateListener(client, commit) {
+function installStatesUpdateListener(client, commit) {
   function messageCallback(message) {
     const delta = JSON.parse(message.body);
     if (!delta.agent) {
