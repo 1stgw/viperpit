@@ -7,16 +7,17 @@ export function connectToWebSocket(dispatch, commit) {
 }
 
 function connectAndReconnect(url, dispatch, commit) {
-  const client = Stomp.client(url, { debug: true });
+  const client = Stomp.client(url, { debug: false });
   client.connect(
     {},
     () => {
-      installAgentsConnectListener(client, commit, dispatch);
-      installAgentsDisconnectListener(client, commit, dispatch);
+      installAgentsConnectListener(client, dispatch);
+      installAgentsDisconnectListener(client, dispatch);
       installStatesUpdateListener(client, commit);
     },
     error => {
       console.log(error);
+      client.disconnect();
       setTimeout(() => {
         connectAndReconnect(url, dispatch, commit);
       }, 1000);
@@ -25,35 +26,32 @@ function connectAndReconnect(url, dispatch, commit) {
   return client;
 }
 
-function installAgentsConnectListener(client, commit, dispatch) {
-  function messageCallback(message) {
+function installAgentsConnectListener(client, dispatch) {
+  return client.subscribe("/topic/cockpit/agents/connect", message => {
     const agent = JSON.parse(message.body);
     if (!agent) {
       return;
     }
     dispatch("connectAgent", agent.id);
-  }
-  return client.subscribe("/topic/cockpit/agents/connect", messageCallback);
+  });
 }
 
-function installAgentsDisconnectListener(client, commit, dispatch) {
-  function messageCallback(message) {
+function installAgentsDisconnectListener(client, dispatch) {
+  return client.subscribe("/topic/cockpit/agents/disconnect", message => {
     const agent = JSON.parse(message.body);
     if (!agent) {
       return;
     }
     dispatch("disconnectAgent", agent.id);
-  }
-  return client.subscribe("/topic/cockpit/agents/disconnect", messageCallback);
+  });
 }
 
 function installStatesUpdateListener(client, commit) {
-  function messageCallback(message) {
+  return client.subscribe("/topic/cockpit/states/update", message => {
     const delta = JSON.parse(message.body);
     if (!delta.agent) {
       return;
     }
     commit(types.STATES_UPDATE, delta);
-  }
-  return client.subscribe("/topic/cockpit/states/update", messageCallback);
+  });
 }

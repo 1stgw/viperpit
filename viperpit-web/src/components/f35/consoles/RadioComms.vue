@@ -1,11 +1,11 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-12">
+  <v-container>
+    <v-row>
+      <v-col>
         <general-radio-options />
-      </div>
-    </div>
-  </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

@@ -1,36 +1,34 @@
 <template>
-  <div class="card card-default">
-    <div class="card-heading">RWR</div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <button-group
-              id="RWR: Brightness Knob"
+  <v-card outlined>
+    <v-card-title>RWR</v-card-title>
+    <v-container>
+      <v-row>
+        <v-col>
+          <button-group
+            id="RWR: Brightness Knob"
+            description="RWR: Brightness Knob - Increase"
+            label="Brightness"
+            type="button"
+          >
+            <control
+              id="rwrBrightnessKnobIncrease"
               description="RWR: Brightness Knob - Increase"
-              label="Brightness"
+              label="Increase"
               type="button"
-            >
-              <control
-                id="rwrBrightnessKnobIncrease"
-                description="RWR: Brightness Knob - Increase"
-                label="Increase"
-                type="button"
-                role="up"
-              />
-              <control
-                id="rwrBrightnessKnobDecrease"
-                description="RWR: Brightness Knob - Decrease"
-                label="Decrease"
-                type="button"
-                role="down"
-              />
-            </button-group>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+              role="up"
+            />
+            <control
+              id="rwrBrightnessKnobDecrease"
+              description="RWR: Brightness Knob - Decrease"
+              label="Decrease"
+              type="button"
+              role="down"
+            />
+          </button-group>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>

@@ -78,6 +78,9 @@ public class AgentSessionHandler extends StompSessionHandlerAdapter {
 
 	@Scheduled(fixedRate = STATE_UPDATE_RATE)
 	public void updateStates() {
+		if (agent == null) {
+			return;
+		}
 		if (session == null) {
 			return;
 		}

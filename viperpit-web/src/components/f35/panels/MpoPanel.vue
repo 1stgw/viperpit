@@ -1,28 +1,27 @@
 <template>
-  <div class="card card-default">
-    <div class="card-heading">MPO PANEL</div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <button-group
-              id="MPO: MANUAL PITCH Switch"
+  <v-card outlined>
+    <v-card-title>MPO PANEL</v-card-title>
+    <v-container>
+      <v-row>
+        <v-col>
+          <button-group
+            id="MPO: MANUAL PITCH Switch"
+            description="MPO: MANUAL PITCH Switch - Hold"
+            label="MANUAL PITCH"
+            type="button"
+          >
+            <control
+              id="mpoManualPitchSwitchHold"
               description="MPO: MANUAL PITCH Switch - Hold"
+              label="PUSH"
               type="button"
-            >
-              <control
-                id="mpoManualPitchSwitchHold"
-                description="MPO: MANUAL PITCH Switch - Hold"
-                label="MANUAL PITCH"
-                type="button"
-                role="none"
-              />
-            </button-group>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+              role="none"
+            />
+          </button-group>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>

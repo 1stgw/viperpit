@@ -1,78 +1,73 @@
 <template>
-  <div class="card card-default">
-    <div class="card-heading">OTHER COCKPIT CALLBACKS</div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <button-group
-              id="CKPIT: Nightvision"
+  <v-card outlined>
+    <v-card-title>OTHER COCKPIT CALLBACKS</v-card-title>
+    <v-container>
+      <v-row>
+        <v-col>
+          <button-group
+            id="CKPIT: Nightvision"
+            description="CKPIT: Nightvision - On"
+            label="Nightvision"
+            type="button"
+          >
+            <control
+              id="ckpitNightvisionOn"
               description="CKPIT: Nightvision - On"
-              label="Nightvision"
+              label="On"
               type="button"
-            >
-              <control
-                id="ckpitNightvisionOn"
-                description="CKPIT: Nightvision - On"
-                label="On"
-                type="button"
-                role="on"
-              />
-              <control
-                id="ckpitNightvisionOff"
-                description="CKPIT: Nightvision - Off"
-                label="Off"
-                type="button"
-                role="off"
-              />
-            </button-group>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <button-group
-              id="CKPIT: Smoke"
+              role="on"
+            />
+            <control
+              id="ckpitNightvisionOff"
+              description="CKPIT: Nightvision - Off"
+              label="Off"
+              type="button"
+              role="off"
+            />
+          </button-group>
+        </v-col>
+        <v-col>
+          <button-group
+            id="CKPIT: Smoke"
+            description="CKPIT: Smoke - On"
+            label="Smoke"
+            type="button"
+          >
+            <control
+              id="ckpitSmokeOn"
               description="CKPIT: Smoke - On"
-              label="Smoke"
+              label="On"
               type="button"
-            >
-              <control
-                id="ckpitSmokeOn"
-                description="CKPIT: Smoke - On"
-                label="On"
-                type="button"
-                role="on"
-              />
-              <control
-                id="ckpitSmokeOff"
-                description="CKPIT: Smoke - Off"
-                label="Off"
-                type="button"
-                role="off"
-              />
-            </button-group>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <button-group
-              id="CKPIT: Wheel Brakes"
+              role="on"
+            />
+            <control
+              id="ckpitSmokeOff"
+              description="CKPIT: Smoke - Off"
+              label="Off"
+              type="button"
+              role="off"
+            />
+          </button-group>
+        </v-col>
+        <v-col>
+          <button-group
+            id="CKPIT: Wheel Brakes"
+            description="CKPIT: Wheel Brakes - Hold"
+            label="Wheel Brakes"
+            type="button"
+          >
+            <control
+              id="ckpitWheelBrakesHold"
               description="CKPIT: Wheel Brakes - Hold"
+              label="PUSH"
               type="button"
-            >
-              <control
-                id="ckpitWheelBrakesHold"
-                description="CKPIT: Wheel Brakes - Hold"
-                label="Wheel Brakes"
-                type="button"
-                role="none"
-              />
-            </button-group>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+              role="none"
+            />
+          </button-group>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>

@@ -1,19 +1,19 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6">
+  <v-container>
+    <v-row>
+      <v-col>
         <view-general-control />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <view-internal />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <view-external />
-      </div>
-    </div>
-  </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

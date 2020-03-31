@@ -1,53 +1,50 @@
 <template>
-  <div class="card card-default">
-    <div class="card-heading">LEFT SIDE WALL</div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <button-group
-              id="LEFT WALL: SLAP Switch (ECM-PGRM # 5)"
+  <v-card outlined>
+    <v-card-title>LEFT SIDE WALL</v-card-title>
+    <v-container>
+      <v-row>
+        <v-col>
+          <button-group
+            id="LEFT WALL: SLAP Switch (ECM-PGRM # 5)"
+            description="LEFT WALL: SLAP Switch (ECM-PGRM # 5)"
+            label="SLAP Switch (ECM-PGRM # 5)"
+            type="button"
+          >
+            <control
+              id="leftWallSlapSwitchEcmPgrm5"
               description="LEFT WALL: SLAP Switch (ECM-PGRM # 5)"
+              label="PUSH"
               type="button"
-            >
-              <control
-                id="leftWallSlapSwitchEcmPgrm5"
-                description="LEFT WALL: SLAP Switch (ECM-PGRM # 5)"
-                label="SLAP Switch (ECM-PGRM # 5)"
-                type="button"
-                role="none"
-              />
-            </button-group>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <button-group
-              id="LEFT WALL: CANOPY"
+              role="none"
+            />
+          </button-group>
+        </v-col>
+        <v-col>
+          <button-group
+            id="LEFT WALL: CANOPY"
+            description="LEFT WALL: CANOPY - Open"
+            label="CANOPY"
+            type="button"
+          >
+            <control
+              id="leftWallCanopyOpen"
               description="LEFT WALL: CANOPY - Open"
-              label="CANOPY"
+              label="Open"
               type="button"
-            >
-              <control
-                id="leftWallCanopyOpen"
-                description="LEFT WALL: CANOPY - Open"
-                label="Open"
-                type="button"
-                role="none"
-              />
-              <control
-                id="leftWallCanopyClose"
-                description="LEFT WALL: CANOPY - Close"
-                label="Close"
-                type="button"
-                role="none"
-              />
-            </button-group>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+              role="none"
+            />
+            <control
+              id="leftWallCanopyClose"
+              description="LEFT WALL: CANOPY - Close"
+              label="Close"
+              type="button"
+              role="none"
+            />
+          </button-group>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>

@@ -1,36 +1,34 @@
 <template>
-  <div class="card card-default">
-    <div class="card-heading">ZEROIZE PANEL</div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <switch-group
-              id="ZERO: VMS Switch"
+  <v-card outlined>
+    <v-card-title>ZEROIZE PANEL</v-card-title>
+    <v-container>
+      <v-row>
+        <v-col>
+          <switch-group
+            id="ZERO: VMS Switch"
+            description="ZERO: VMS Switch - ON"
+            label="VMS"
+            type="switch"
+          >
+            <control
+              id="zeroVmsSwitchOn"
               description="ZERO: VMS Switch - ON"
-              label="VMS"
+              label="ON"
               type="switch"
-            >
-              <control
-                id="zeroVmsSwitchOn"
-                description="ZERO: VMS Switch - ON"
-                label="ON"
-                type="switch"
-                role="on"
-              />
-              <control
-                id="zeroVmsSwitchInhibit"
-                description="ZERO: VMS Switch - INHIBIT"
-                label="INHIBIT"
-                type="switch"
-                role="none"
-              />
-            </switch-group>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+              role="on"
+            />
+            <control
+              id="zeroVmsSwitchInhibit"
+              description="ZERO: VMS Switch - INHIBIT"
+              label="INHIBIT"
+              type="switch"
+              role="none"
+            />
+          </switch-group>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>

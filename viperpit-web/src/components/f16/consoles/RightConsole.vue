@@ -1,35 +1,35 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6">
+  <v-container>
+    <v-row>
+      <v-col>
         <snsr-pwr-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <hud-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <lighting-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <air-cond-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <zeroize-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <avionic-power-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <oxygen-panel />
-      </div>
-    </div>
-  </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

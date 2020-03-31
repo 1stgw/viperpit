@@ -14,13 +14,14 @@
               "id": "TEST: FIRE & OHEAT DETECT Button",
               "class": "TestFireOheatDetectButton",
               "description": "TEST: FIRE & OHEAT DETECT Button - Hold",
+              "label": "FIRE & OHEAT DETECT",
               "type": "button",
               "control": [
                 {
                   "id": "testFireOheatDetectButtonHold",
                   "callback": "SimOverHeat",
                   "description": "TEST: FIRE & OHEAT DETECT Button - Hold",
-                  "label": "FIRE & OHEAT DETECT",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -29,13 +30,14 @@
               "id": "TEST: OXY QTY Switch",
               "class": "TestOxyQtySwitch",
               "description": "TEST: OXY QTY Switch - Hold",
+              "label": "OXY QTY",
               "type": "button",
               "control": [
                 {
                   "id": "testOxyQtySwitchHold",
                   "callback": "SimOBOGSBit",
                   "description": "TEST: OXY QTY Switch - Hold",
-                  "label": "OXY QTY",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -44,13 +46,14 @@
               "id": "TEST: MAL & IND LTS Button",
               "class": "TestMalIndLtsButton",
               "description": "TEST: MAL & IND LTS Button - Hold",
+              "label": "MAL & IND LTS",
               "type": "button",
               "control": [
                 {
                   "id": "testMalIndLtsButtonHold",
                   "callback": "SimMalIndLights",
                   "description": "TEST: MAL & IND LTS Button - Hold",
-                  "label": "MAL & IND LTS",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -89,13 +92,14 @@
               "id": "TEST: EPU/GEN Switch",
               "class": "TestEpuGenSwitch",
               "description": "TEST: EPU/GEN Switch - Hold",
+              "label": "EPU/GEN",
               "type": "button",
               "control": [
                 {
                   "id": "testEpuGenSwitchHold",
                   "callback": "SimEpuGenTest",
                   "description": "TEST: EPU/GEN Switch - Hold",
-                  "label": "EPU/GEN",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -104,13 +108,14 @@
               "id": "TEST: FLCS PWR TEST Switch",
               "class": "TestFlcsPwrTestSwitch",
               "description": "TEST: FLCS PWR TEST Switch - Hold",
+              "label": "FLCS PWR TEST",
               "type": "button",
               "control": [
                 {
                   "id": "testFlcsPwrTestSwitchHold",
                   "callback": "SimFlcsPowerTest",
                   "description": "TEST: FLCS PWR TEST Switch - Hold",
-                  "label": "FLCS PWR TEST",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -218,13 +223,14 @@
               "id": "FLT: FLCS Switch",
               "class": "FltFlcsSwitch",
               "description": "FLT: FLCS Switch - Hold",
+              "label": "FLCS",
               "type": "button",
               "control": [
                 {
                   "id": "fltFlcsSwitchHold",
                   "callback": "SimFLCSReset",
                   "description": "FLT: FLCS Switch - Hold",
-                  "label": "FLCS",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -233,13 +239,14 @@
               "id": "FLT: BIT Switch",
               "class": "FltBitSwitch",
               "description": "FLT: BIT Switch - Push",
+              "label": "BIT",
               "type": "button",
               "control": [
                 {
                   "id": "fltBitSwitchPush",
                   "callback": "SimFLTBIT",
                   "description": "FLT: BIT Switch - Push",
-                  "label": "BIT",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -848,13 +855,14 @@
               "id": "ELEC: CAUTION RESET Button",
               "class": "ElecCautionResetButton",
               "description": "ELEC: CAUTION RESET Button - Push",
+              "label": "CAUTION RESET",
               "type": "button",
               "control": [
                 {
                   "id": "elecCautionResetButtonPush",
                   "callback": "SimElecReset",
                   "description": "ELEC: CAUTION RESET Button - Push",
-                  "label": "CAUTION RESET",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -1223,13 +1231,14 @@
               "id": "MPO: MANUAL PITCH Switch",
               "class": "MpoManualPitchSwitch",
               "description": "MPO: MANUAL PITCH Switch - Hold",
+              "label": "MANUAL PITCH",
               "type": "button",
               "control": [
                 {
                   "id": "mpoManualPitchSwitchHold",
                   "callback": "SimMPO",
                   "description": "MPO: MANUAL PITCH Switch - Hold",
-                  "label": "MANUAL PITCH",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -1473,13 +1482,14 @@
               "id": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
               "class": "LeftWallSlapSwitchEcmPgrm5",
               "description": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
+              "label": "SLAP Switch (ECM-PGRM # 5)",
               "type": "button",
               "control": [
                 {
                   "id": "leftWallSlapSwitchEcmPgrm5",
                   "callback": "SimSlapSwitch",
                   "description": "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
-                  "label": "SLAP Switch (ECM-PGRM # 5)",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -1541,13 +1551,14 @@
               "id": "SEAT: EJECT Handle",
               "class": "SeatEjectHandle",
               "description": "SEAT: EJECT Handle - Hold For Eject",
+              "label": "EJECT",
               "type": "button",
               "control": [
                 {
                   "id": "seatEjectHandleHoldForEject",
                   "callback": "SimEject",
                   "description": "SEAT: EJECT Handle - Hold For Eject",
-                  "label": "EJECT",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -1570,13 +1581,14 @@
               "id": "ALT GEAR: Extend Gear Handle",
               "class": "AltGearExtendGearHandle",
               "description": "ALT GEAR: Extend Gear Handle - Push",
+              "label": "Extend Gear",
               "type": "button",
               "control": [
                 {
                   "id": "altGearExtendGearHandlePush",
                   "callback": "AFAlternateGear",
                   "description": "ALT GEAR: Extend Gear Handle - Push",
-                  "label": "Extend Gear",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -1585,13 +1597,14 @@
               "id": "ALT GEAR: Reset Button",
               "class": "AltGearResetButton",
               "description": "ALT GEAR: Reset Button - Push",
+              "label": "Reset",
               "type": "button",
               "control": [
                 {
                   "id": "altGearResetButtonPush",
                   "callback": "AFAlternateGearReset",
                   "description": "ALT GEAR: Reset Button - Push",
-                  "label": "Reset",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -1960,13 +1973,14 @@
               "id": "GEAR: EMER STORES JETTISON Button",
               "class": "GearEmerStoresJettisonButton",
               "description": "GEAR: EMER STORES JETTISON Button - Hold",
+              "label": "EMER STORES JETTISON",
               "type": "button",
               "control": [
                 {
                   "id": "gearEmerStoresJettisonButtonHold",
                   "callback": "SimEmergencyJettison",
                   "description": "GEAR: EMER STORES JETTISON Button - Hold",
-                  "label": "EMER STORES JETTISON",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -2090,13 +2104,14 @@
               "id": "GEAR: HORN SILENCER Button",
               "class": "GearHornSilencerButton",
               "description": "GEAR: HORN SILENCER Button - Push",
+              "label": "HORN SILENCER",
               "type": "button",
               "control": [
                 {
                   "id": "gearHornSilencerButtonPush",
                   "callback": "SimSilenceHorn",
                   "description": "GEAR: HORN SILENCER Button - Push",
-                  "label": "HORN SILENCER",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -2225,13 +2240,14 @@
               "id": "MISC: ADV MODE",
               "class": "MiscAdvMode",
               "description": "MISC: ADV MODE - Toggle TFR On / Off",
+              "label": "ADV MODE",
               "type": "button",
               "control": [
                 {
                   "id": "miscAdvModeToggleTfrOnOff",
                   "callback": "SimToggleTFR",
                   "description": "MISC: ADV MODE - Toggle TFR On / Off",
-                  "label": "ADV MODE",
+                  "label": "OFF",
                   "role": "off"
                 }
               ]
@@ -2307,13 +2323,14 @@
               "id": "EYE: MASTER CAUTION Button",
               "class": "EyeMasterCautionButton",
               "description": "EYE: MASTER CAUTION Button - Push",
+              "label": "MASTER CAUTION",
               "type": "button",
               "control": [
                 {
                   "id": "eyeMasterCautionButtonPush",
                   "callback": "ExtinguishMasterCaution",
                   "description": "EYE: MASTER CAUTION Button - Push",
-                  "label": "MASTER CAUTION",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -2322,13 +2339,14 @@
               "id": "EYE: F ACK Button",
               "class": "EyeFAckButton",
               "description": "EYE: F ACK Button - Push",
+              "label": "F ACK",
               "type": "button",
               "control": [
                 {
                   "id": "eyeFAckButtonPush",
                   "callback": "SimICPFAck",
                   "description": "EYE: F ACK Button - Push",
-                  "label": "F ACK",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -2344,13 +2362,14 @@
               "id": "TWP: HANDOFF",
               "class": "TwpHandoff",
               "description": "TWP: HANDOFF - Push",
+              "label": "HANDOFF",
               "type": "button",
               "control": [
                 {
                   "id": "twpHandoffPush",
                   "callback": "SimRWRHandoff",
                   "description": "TWP: HANDOFF - Push",
-                  "label": "HANDOFF",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -2359,13 +2378,14 @@
               "id": "TWP: MISSILE LAUNCH",
               "class": "TwpMissileLaunch",
               "description": "TWP: MISSILE LAUNCH - Push",
+              "label": "MISSILE LAUNCH",
               "type": "button",
               "control": [
                 {
                   "id": "twpMissileLaunchPush",
                   "callback": "SimRWRLaunch",
                   "description": "TWP: MISSILE LAUNCH - Push",
-                  "label": "MISSILE LAUNCH",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -2374,13 +2394,14 @@
               "id": "TWP: SYS TEST",
               "class": "TwpSysTest",
               "description": "TWP: SYS TEST - Push",
+              "label": "SYS TEST",
               "type": "button",
               "control": [
                 {
                   "id": "twpSysTestPush",
                   "callback": "SimRWRSysTest",
                   "description": "TWP: SYS TEST - Push",
-                  "label": "SYS TEST",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -2389,13 +2410,14 @@
               "id": "TWP: TGT SEP",
               "class": "TwpTgtSep",
               "description": "TWP: TGT SEP - Push",
+              "label": "TGT SEP",
               "type": "button",
               "control": [
                 {
                   "id": "twpTgtSepPush",
                   "callback": "SimRWRSetTargetSep",
                   "description": "TWP: TGT SEP - Push",
-                  "label": "TGT SEP",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3429,13 +3451,14 @@
               "id": "CKPIT: Wheel Brakes",
               "class": "CkpitWheelBrakes",
               "description": "CKPIT: Wheel Brakes - Hold",
+              "label": "Wheel Brakes",
               "type": "button",
               "control": [
                 {
                   "id": "ckpitWheelBrakesHold",
                   "callback": "SimWheelBrakes",
                   "description": "CKPIT: Wheel Brakes - Hold",
-                  "label": "Wheel Brakes",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3488,13 +3511,14 @@
               "id": "SIM: Chat",
               "class": "SimChat",
               "description": "SIM: Chat",
+              "label": "Chat",
               "type": "button",
               "control": [
                 {
                   "id": "simChat",
                   "callback": "SimOpenChatBox",
                   "description": "SIM: Chat",
-                  "label": "Chat",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3503,13 +3527,14 @@
               "id": "SIM: Toggle Exit Sim Menu",
               "class": "SimToggleExitSimMenu",
               "description": "SIM: Toggle Exit Sim Menu",
+              "label": "Toggle Exit Sim Menu",
               "type": "button",
               "control": [
                 {
                   "id": "simToggleExitSimMenu",
                   "callback": "SimEndFlight",
                   "description": "SIM: Toggle Exit Sim Menu",
-                  "label": "Toggle Exit Sim Menu",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3532,13 +3557,14 @@
               "id": "VIEWGEN: Rotate View Up",
               "class": "ViewgenRotateViewUp",
               "description": "VIEWGEN: Rotate View Up",
+              "label": "Rotate View Up",
               "type": "button",
               "control": [
                 {
                   "id": "viewgenRotateViewUp",
                   "callback": "OTWViewUp",
                   "description": "VIEWGEN: Rotate View Up",
-                  "label": "Rotate View Up",
+                  "label": "UP",
                   "role": "up"
                 }
               ]
@@ -3547,13 +3573,14 @@
               "id": "VIEWGEN: Rotate View Down",
               "class": "ViewgenRotateViewDown",
               "description": "VIEWGEN: Rotate View Down",
+              "label": "Rotate View Down",
               "type": "button",
               "control": [
                 {
                   "id": "viewgenRotateViewDown",
                   "callback": "OTWViewDown",
                   "description": "VIEWGEN: Rotate View Down",
-                  "label": "Rotate View Down",
+                  "label": "DOWN",
                   "role": "down"
                 }
               ]
@@ -3562,13 +3589,14 @@
               "id": "VIEWGEN: Rotate View Left",
               "class": "ViewgenRotateViewLeft",
               "description": "VIEWGEN: Rotate View Left",
+              "label": "Rotate View Left",
               "type": "button",
               "control": [
                 {
                   "id": "viewgenRotateViewLeft",
                   "callback": "OTWViewLeft",
                   "description": "VIEWGEN: Rotate View Left",
-                  "label": "Rotate View Left",
+                  "label": "LEFT",
                   "role": "left"
                 }
               ]
@@ -3577,13 +3605,14 @@
               "id": "VIEWGEN: Rotate View Right",
               "class": "ViewgenRotateViewRight",
               "description": "VIEWGEN: Rotate View Right",
+              "label": "Rotate View Right",
               "type": "button",
               "control": [
                 {
                   "id": "viewgenRotateViewRight",
                   "callback": "OTWViewRight",
                   "description": "VIEWGEN: Rotate View Right",
-                  "label": "Rotate View Right",
+                  "label": "RIGHT",
                   "role": "right"
                 }
               ]
@@ -3599,13 +3628,14 @@
               "id": "VIEWINT: Padlock",
               "class": "ViewintPadlock",
               "description": "VIEWINT: Padlock",
+              "label": "Padlock",
               "type": "button",
               "control": [
                 {
                   "id": "viewintPadlock",
                   "callback": "OTWSelectF3PadlockMode",
                   "description": "VIEWINT: Padlock",
-                  "label": "Padlock",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3614,13 +3644,14 @@
               "id": "VIEWINT: HUD Only",
               "class": "ViewintHudOnly",
               "description": "VIEWINT: HUD Only",
+              "label": "HUD Only",
               "type": "button",
               "control": [
                 {
                   "id": "viewintHudOnly",
                   "callback": "OTWSelectHUDMode",
                   "description": "VIEWINT: HUD Only",
-                  "label": "HUD Only",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3629,13 +3660,14 @@
               "id": "VIEWINT: Snap (3D) Cockpit",
               "class": "ViewintSnap3dCockpit",
               "description": "VIEWINT: Snap (3D) Cockpit",
+              "label": "Snap (3D) Cockpit",
               "type": "button",
               "control": [
                 {
                   "id": "viewintSnap3dCockpit",
                   "callback": "OTWSelect2DCockpitMode",
                   "description": "VIEWINT: Snap (3D) Cockpit",
-                  "label": "Snap (3D) Cockpit",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3644,13 +3676,14 @@
               "id": "VIEWINT: Pan (3D) Cockpit",
               "class": "ViewintPan3dCockpit",
               "description": "VIEWINT: Pan (3D) Cockpit",
+              "label": "Pan (3D) Cockpit",
               "type": "button",
               "control": [
                 {
                   "id": "viewintPan3dCockpit",
                   "callback": "OTWSelect3DCockpitMode",
                   "description": "VIEWINT: Pan (3D) Cockpit",
-                  "label": "Pan (3D) Cockpit",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3659,13 +3692,14 @@
               "id": "VIEWINT: Glance Forward",
               "class": "ViewintGlanceForward",
               "description": "VIEWINT: Glance Forward",
+              "label": "Glance Forward",
               "type": "button",
               "control": [
                 {
                   "id": "viewintGlanceForward",
                   "callback": "OTWGlanceForward",
                   "description": "VIEWINT: Glance Forward",
-                  "label": "Glance Forward",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3674,13 +3708,14 @@
               "id": "VIEWINT: Glance Backward",
               "class": "ViewintGlanceBackward",
               "description": "VIEWINT: Glance Backward",
+              "label": "Glance Backward",
               "type": "button",
               "control": [
                 {
                   "id": "viewintGlanceBackward",
                   "callback": "OTWCheckSix",
                   "description": "VIEWINT: Glance Backward",
-                  "label": "Glance Backward",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3696,13 +3731,14 @@
               "id": "VIEWEXT: Orbit Camera",
               "class": "ViewextOrbitCamera",
               "description": "VIEWEXT: Orbit Camera",
+              "label": "Orbit Camera",
               "type": "button",
               "control": [
                 {
                   "id": "viewextOrbitCamera",
                   "callback": "OTWSelectOrbitMode",
                   "description": "VIEWEXT: Orbit Camera",
-                  "label": "Orbit Camera",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3711,13 +3747,14 @@
               "id": "VIEWEXT: Satellite Camera",
               "class": "ViewextSatelliteCamera",
               "description": "VIEWEXT: Satellite Camera",
+              "label": "Satellite Camera",
               "type": "button",
               "control": [
                 {
                   "id": "viewextSatelliteCamera",
                   "callback": "OTWSelectSatelliteMode",
                   "description": "VIEWEXT: Satellite Camera",
-                  "label": "Satellite Camera",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3726,13 +3763,14 @@
               "id": "VIEWEXT: Flyby Camera",
               "class": "ViewextFlybyCamera",
               "description": "VIEWEXT: Flyby Camera",
+              "label": "Flyby Camera",
               "type": "button",
               "control": [
                 {
                   "id": "viewextFlybyCamera",
                   "callback": "OTWSelectFlybyMode",
                   "description": "VIEWEXT: Flyby Camera",
-                  "label": "Flyby Camera",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3741,13 +3779,14 @@
               "id": "VIEWEXT: Chase Camera",
               "class": "ViewextChaseCamera",
               "description": "VIEWEXT: Chase Camera",
+              "label": "Chase Camera",
               "type": "button",
               "control": [
                 {
                   "id": "viewextChaseCamera",
                   "callback": "OTWSelectChaseMode",
                   "description": "VIEWEXT: Chase Camera",
-                  "label": "Chase Camera",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3770,13 +3809,14 @@
               "id": "RADIO: AWACS Menu",
               "class": "RadioAwacsMenu",
               "description": "RADIO: AWACS Menu",
+              "label": "AWACS Menu",
               "type": "button",
               "control": [
                 {
                   "id": "radioAwacsMenu",
                   "callback": "RadioAWACSCommand",
                   "description": "RADIO: AWACS Menu",
-                  "label": "AWACS Menu",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3785,13 +3825,14 @@
               "id": "RADIO: Wingman Menu",
               "class": "RadioWingmanMenu",
               "description": "RADIO: Wingman Menu",
+              "label": "Wingman Menu",
               "type": "button",
               "control": [
                 {
                   "id": "radioWingmanMenu",
                   "callback": "RadioWingCommand",
                   "description": "RADIO: Wingman Menu",
-                  "label": "Wingman Menu",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3800,13 +3841,14 @@
               "id": "RADIO: Element Menu",
               "class": "RadioElementMenu",
               "description": "RADIO: Element Menu",
+              "label": "Element Menu",
               "type": "button",
               "control": [
                 {
                   "id": "radioElementMenu",
                   "callback": "RadioElementCommand",
                   "description": "RADIO: Element Menu",
-                  "label": "Element Menu",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3815,13 +3857,14 @@
               "id": "RADIO: Flight Menu",
               "class": "RadioFlightMenu",
               "description": "RADIO: Flight Menu",
+              "label": "Flight Menu",
               "type": "button",
               "control": [
                 {
                   "id": "radioFlightMenu",
                   "callback": "RadioFlightCommand",
                   "description": "RADIO: Flight Menu",
-                  "label": "Flight Menu",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3830,13 +3873,14 @@
               "id": "RADIO: ATC Menu",
               "class": "RadioAtcMenu",
               "description": "RADIO: ATC Menu",
+              "label": "ATC Menu",
               "type": "button",
               "control": [
                 {
                   "id": "radioAtcMenu",
                   "callback": "RadioTowerCommand",
                   "description": "RADIO: ATC Menu",
-                  "label": "ATC Menu",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3845,13 +3889,14 @@
               "id": "RADIO: Tanker Menu",
               "class": "RadioTankerMenu",
               "description": "RADIO: Tanker Menu",
+              "label": "Tanker Menu",
               "type": "button",
               "control": [
                 {
                   "id": "radioTankerMenu",
                   "callback": "RadioTankerCommand",
                   "description": "RADIO: Tanker Menu",
-                  "label": "Tanker Menu",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3860,13 +3905,14 @@
               "id": "Radio-Send Message Tanker",
               "class": "RadioSendMessageTanker",
               "description": "Radio-Send Message Tanker",
+              "label": "Send Message Tanker",
               "type": "button",
               "control": [
                 {
                   "id": "radioSendMessageTanker",
                   "callback": "RadioMessageSend",
                   "description": "Radio-Send Message Tanker",
-                  "label": "Send Message Tanker",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3875,13 +3921,14 @@
               "id": "Radio-Next Menu Tanker",
               "class": "RadioNextMenuTanker",
               "description": "Radio-Next Menu Tanker",
+              "label": "Next Menu Tanker",
               "type": "button",
               "control": [
                 {
                   "id": "radioNextMenuTanker",
                   "callback": "OTWRadioMenuStep",
                   "description": "Radio-Next Menu Tanker",
-                  "label": "Next Menu Tanker",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]
@@ -3890,13 +3937,14 @@
               "id": "Radio-Previous Menu Tanker",
               "class": "RadioPreviousMenuTanker",
               "description": "Radio-Previous Menu Tanker",
+              "label": "Previous Menu Tanker",
               "type": "button",
               "control": [
                 {
                   "id": "radioPreviousMenuTanker",
                   "callback": "OTWRadioMenuStepBack",
                   "description": "Radio-Previous Menu Tanker",
-                  "label": "Previous Menu Tanker",
+                  "label": "PUSH",
                   "role": "none"
                 }
               ]

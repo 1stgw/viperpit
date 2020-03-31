@@ -65,9 +65,7 @@ class CockpitGenerator {
 					group.id = name
 					group.clazz = name.toClassName
 					group.description = description
-					if (actions.size > 1) {
-						group.label = label
-					}
+					group.label = label
 					group.type = type
 					group.controls = actions.map [
 						val control = new Control
@@ -77,7 +75,7 @@ class CockpitGenerator {
 						if (groupDefinition.actions.size > 1) {
 							control.label = label
 						} else {
-							control.label = groupDefinition.label
+							control.label = if (role == "none") "PUSH" else role.toUpperCase
 						}
 						control.role = role
 						control

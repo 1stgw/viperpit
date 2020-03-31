@@ -1,14 +1,14 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6">
+  <v-container>
+    <v-row>
+      <v-col>
         <other-cockpit-callbacks />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <simulation-hardware />
-      </div>
-    </div>
-  </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

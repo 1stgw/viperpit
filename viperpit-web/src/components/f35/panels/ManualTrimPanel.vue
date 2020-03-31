@@ -1,111 +1,103 @@
 <template>
-  <div class="card card-default">
-    <div class="card-heading">MANUAL TRIM PANEL</div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <button-group
-              id="TRIM: ROLL TRIM Wheel"
+  <v-card outlined>
+    <v-card-title>MANUAL TRIM PANEL</v-card-title>
+    <v-container>
+      <v-row>
+        <v-col>
+          <button-group
+            id="TRIM: ROLL TRIM Wheel"
+            description="TRIM: ROLL TRIM Wheel - L WING DN"
+            label="ROLL TRIM"
+            type="button"
+          >
+            <control
+              id="trimRollTrimWheelLWingDn"
               description="TRIM: ROLL TRIM Wheel - L WING DN"
-              label="ROLL TRIM"
+              label="L WING DN"
               type="button"
-            >
-              <control
-                id="trimRollTrimWheelLWingDn"
-                description="TRIM: ROLL TRIM Wheel - L WING DN"
-                label="L WING DN"
-                type="button"
-                role="down"
-              />
-              <control
-                id="trimRollTrimWheelRWingDn"
-                description="TRIM: ROLL TRIM Wheel - R WING DN"
-                label="R WING DN"
-                type="button"
-                role="down"
-              />
-            </button-group>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <switch-group
-              id="TRIM: TRIM/AP DISC Switch"
+              role="down"
+            />
+            <control
+              id="trimRollTrimWheelRWingDn"
+              description="TRIM: ROLL TRIM Wheel - R WING DN"
+              label="R WING DN"
+              type="button"
+              role="down"
+            />
+          </button-group>
+        </v-col>
+        <v-col>
+          <switch-group
+            id="TRIM: TRIM/AP DISC Switch"
+            description="TRIM: TRIM/AP DISC Switch - DISC"
+            label="TRIM/AP DISC"
+            type="switch"
+          >
+            <control
+              id="trimTrimApDiscSwitchDisc"
               description="TRIM: TRIM/AP DISC Switch - DISC"
-              label="TRIM/AP DISC"
+              label="DISC"
               type="switch"
-            >
-              <control
-                id="trimTrimApDiscSwitchDisc"
-                description="TRIM: TRIM/AP DISC Switch - DISC"
-                label="DISC"
-                type="switch"
-                role="none"
-              />
-              <control
-                id="trimTrimApDiscSwitchNorm"
-                description="TRIM: TRIM/AP DISC Switch - NORM"
-                label="NORM"
-                type="switch"
-                role="on"
-              />
-            </switch-group>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <button-group
-              id="TRIM: YAW TRIM Knob"
+              role="none"
+            />
+            <control
+              id="trimTrimApDiscSwitchNorm"
+              description="TRIM: TRIM/AP DISC Switch - NORM"
+              label="NORM"
+              type="switch"
+              role="on"
+            />
+          </switch-group>
+        </v-col>
+        <v-col>
+          <button-group
+            id="TRIM: YAW TRIM Knob"
+            description="TRIM: YAW TRIM Knob - L"
+            label="YAW TRIM"
+            type="button"
+          >
+            <control
+              id="trimYawTrimKnobL"
               description="TRIM: YAW TRIM Knob - L"
-              label="YAW TRIM"
+              label="L"
               type="button"
-            >
-              <control
-                id="trimYawTrimKnobL"
-                description="TRIM: YAW TRIM Knob - L"
-                label="L"
-                type="button"
-                role="left"
-              />
-              <control
-                id="trimYawTrimKnobR"
-                description="TRIM: YAW TRIM Knob - R"
-                label="R"
-                type="button"
-                role="right"
-              />
-            </button-group>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <button-group
-              id="TRIM: PITCH TRIM Wheel"
+              role="left"
+            />
+            <control
+              id="trimYawTrimKnobR"
+              description="TRIM: YAW TRIM Knob - R"
+              label="R"
+              type="button"
+              role="right"
+            />
+          </button-group>
+        </v-col>
+        <v-col>
+          <button-group
+            id="TRIM: PITCH TRIM Wheel"
+            description="TRIM: PITCH TRIM Wheel - NOSE UP"
+            label="PITCH TRIM"
+            type="button"
+          >
+            <control
+              id="trimPitchTrimWheelNoseUp"
               description="TRIM: PITCH TRIM Wheel - NOSE UP"
-              label="PITCH TRIM"
+              label="NOSE UP"
               type="button"
-            >
-              <control
-                id="trimPitchTrimWheelNoseUp"
-                description="TRIM: PITCH TRIM Wheel - NOSE UP"
-                label="NOSE UP"
-                type="button"
-                role="up"
-              />
-              <control
-                id="trimPitchTrimWheelNoseDn"
-                description="TRIM: PITCH TRIM Wheel - NOSE DN"
-                label="NOSE DN"
-                type="button"
-                role="down"
-              />
-            </button-group>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+              role="up"
+            />
+            <control
+              id="trimPitchTrimWheelNoseDn"
+              description="TRIM: PITCH TRIM Wheel - NOSE DN"
+              label="NOSE DN"
+              type="button"
+              role="down"
+            />
+          </button-group>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>

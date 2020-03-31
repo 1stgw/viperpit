@@ -1,13 +1,13 @@
 import Vue from "vue";
-import Router from "vue-router";
+import VueRouter from "vue-router";
 import F16 from "@/components/f16/cockpit/F16";
 import F16Router from "@/components/f16/router";
 import F35 from "@/components/f35/cockpit/F35";
 import F35Router from "@/components/f35/router";
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-export default new Router({
+export default new VueRouter({
   routes: [
     {
       path: "/cockpits/f16",

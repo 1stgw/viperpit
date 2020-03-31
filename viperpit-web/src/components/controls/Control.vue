@@ -1,28 +1,26 @@
 <template>
-  <a
-    type="button"
-    :class="[
-      { active: isActive(id) },
-      'btn ' + type + '-' + role + ' btn-block'
-    ]"
+  <v-btn
+    :input-value="isActive(id)"
     @click="fireAction(id)"
+    outlined
+    color="light-green"
   >
     <div v-if="role === 'up'">
-      <font-awesome-icon icon="caret-up" />
+      <v-icon>mdi-menu-up</v-icon>
     </div>
     <div v-else-if="role === 'down'">
-      <font-awesome-icon icon="caret-down" />
+      <v-icon>mdi-menu-down</v-icon>
     </div>
     <div v-else-if="role === 'left'">
-      <font-awesome-icon icon="caret-left" />
+      <v-icon>mdi-menu-left</v-icon>
     </div>
     <div v-else-if="role === 'right'">
-      <font-awesome-icon icon="caret-right" />
+      <v-icon>mdi-menu-right</v-icon>
     </div>
     <div v-else>
       {{ label }}
     </div>
-  </a>
+  </v-btn>
 </template>
 
 <script>

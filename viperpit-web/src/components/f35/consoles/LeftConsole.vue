@@ -1,75 +1,75 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6">
+  <v-container>
+    <v-row>
+      <v-col>
         <test-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <flt-control-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <manual-trim-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <fuel-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <aux-comm-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <ext-lighting-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <epu-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <elec-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <avtr-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <ecm-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <eng-jet-start-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <audio2-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <audio1-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <mpo-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <uhf-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <left-side-wall />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <seat />
-      </div>
-    </div>
-  </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

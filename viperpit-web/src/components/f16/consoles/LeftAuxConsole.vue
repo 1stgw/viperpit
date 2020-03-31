@@ -1,27 +1,27 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6">
+  <v-container>
+    <v-row>
+      <v-col>
         <alt-gear-control />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <twa-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <hmcs-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <cmds-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <gear-panel />
-      </div>
-    </div>
-  </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

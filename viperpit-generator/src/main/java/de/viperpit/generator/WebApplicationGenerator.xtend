@@ -55,36 +55,20 @@ class WebApplicationGenerator {
 		'''.process, new File(pathForRouter, '''index.js'''.toString), UTF_8)
 		val pathForCockpit = new File('''«pathForModule»/cockpit''')
 		pathForCockpit.mkdirs
+		val tab = '\t'
 		write('''
 			<template>
-				<div class="container-fluid">
-					<div v-if="isConnected">
-						<nav class="nav justify-content-center">
-							«FOR console : cockpit.consoles»
-								<router-link
-									class="nav-link"
-									active-class="active"
-									to="/cockpits/«profile»/consoles/«console.id»"
-									>«console.name»</router-link
-								>
-							«ENDFOR»
-						</nav>
-						<router-view></router-view>
-					</div>
-					<div v-else>
-						<div class="alert alert-warning" role="alert">
-							<p>
-								<span
-									class="glyphicon glyphicon-warning-sign"
-									aria-hidden="true"
-								></span>
-								No Joy...
-							</p>
-							<p>Currently there is nothing Airborne.</p>
-							<p>Please connect an Agent to the server...</p>
-						</div>
-					</div>
-				</div>
+				<v-container>
+					<v-app-bar dense>
+						<v-tabs align-with-title>
+						«FOR console : cockpit.consoles»
+							«tab»<!-- eslint-disable-next-line -->
+							«tab»<v-tab to="/cockpits/«profile»/consoles/«console.id»">«console.name»</v-tab>
+						«ENDFOR»
+						</v-tabs>
+					</v-app-bar>
+					<router-view></router-view>
+				</v-container>
 			</template>
 			
 			<script>
@@ -104,18 +88,18 @@ class WebApplicationGenerator {
 			pathForConsoles.mkdirs
 			write('''
 				<template>
-					<div class="container-fluid">
+					<v-container>
 						«FOR consoleRow : consoleRows»
-							<div class="row">
+							<v-row>
 							«FOR panelRowSet : consoleRow.panelRowSets»
 								«val panel = cockpit.getPanel(panelRowSet.panel)»
-									<div class="col-sm-«12 / consoleRow.panelRowSets.size»">
+									<v-col>
 										<«panel.clazz.kebapCaseName» />
-									</div>
+									</v-col>
 							«ENDFOR»
-							</div>
+							</v-row>
 						«ENDFOR»
-					</div>
+					</v-container>
 				</template>
 				
 				<script>
@@ -139,35 +123,33 @@ class WebApplicationGenerator {
 			pathForPanels.mkdirs
 			write('''
 				<template>
-					<div class="card card-default">
-						<div class="card-heading">«panel.name»</div>
-						<div class="card-body">
-							<div class="row">
+					<v-card outlined>
+						<v-card-title>«panel.name»</v-card-title>
+						<v-container>
+							<v-row>
 								«FOR group : panel.groups»
-									<div class="col-xs-6 col-sm-6">
-										<div align="center" style="padding: 0px;">
-											<«group.controlName.kebapCaseName»
-												id="«group.id»"
-												description="«group.description»"
-												«IF !group.label.nullOrEmpty»label="«group.label»"«ENDIF»
-												type="«group.type»"
-											>
-												«FOR control : group.controls»
-													<control
-														id="«control.id»"
-														description="«control.description»"
-														label="«control.label»"
-														type="«group.type»"
-														role="«control.role»"
-													/>
-												«ENDFOR»
-											</«group.controlName.kebapCaseName»>
-										</div>
-									</div>
+									<v-col>
+										<«group.controlName.kebapCaseName»
+											id="«group.id»"
+											description="«group.description»"
+											label="«group.label»"
+											type="«group.type»"
+										>
+											«FOR control : group.controls»
+												<control
+													id="«control.id»"
+													description="«control.description»"
+													label="«control.label»"
+													type="«group.type»"
+													role="«control.role»"
+												/>
+											«ENDFOR»
+										</«group.controlName.kebapCaseName»>
+									</v-col>
 								«ENDFOR»
-							</div>
-						</div>
-					</div>
+							</v-row>
+						</v-container>
+					</v-card>
 				</template>
 				
 				<script>

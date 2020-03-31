@@ -1,36 +1,34 @@
 <template>
-  <div class="card card-default">
-    <div class="card-heading">TWA PANEL</div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-xs-6 col-sm-6">
-          <div align="center" style="padding: 0px;">
-            <button-group
-              id="TWA: POWER Button"
+  <v-card outlined>
+    <v-card-title>TWA PANEL</v-card-title>
+    <v-container>
+      <v-row>
+        <v-col>
+          <button-group
+            id="TWA: POWER Button"
+            description="TWA: POWER Button - On"
+            label="POWER"
+            type="button"
+          >
+            <control
+              id="twaPowerButtonOn"
               description="TWA: POWER Button - On"
-              label="POWER"
+              label="On"
               type="button"
-            >
-              <control
-                id="twaPowerButtonOn"
-                description="TWA: POWER Button - On"
-                label="On"
-                type="button"
-                role="on"
-              />
-              <control
-                id="twaPowerButtonOff"
-                description="TWA: POWER Button - Off"
-                label="Off"
-                type="button"
-                role="off"
-              />
-            </button-group>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+              role="on"
+            />
+            <control
+              id="twaPowerButtonOff"
+              description="TWA: POWER Button - Off"
+              label="Off"
+              type="button"
+              role="off"
+            />
+          </button-group>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>

@@ -1,35 +1,35 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6">
+  <v-container>
+    <v-row>
+      <v-col>
         <misc-panel />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <left-eyebrow />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <twp />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <rwr />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <main-instrument />
-      </div>
-      <div class="col-sm-6">
+      </v-col>
+      <v-col>
         <instr-mode-panel />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <fuel-qty-panel />
-      </div>
-    </div>
-  </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

@@ -1,13 +1,11 @@
 <template>
   <div class="switch-group">
-    <div align="center">
+    <p>
       {{ label }}
-    </div>
-    <div align="center">
-      <div class="btn-group-vertical" role="group" :aria-label="description">
-        <slot></slot>
-      </div>
-    </div>
+    </p>
+    <v-btn-toggle>
+      <slot></slot>
+    </v-btn-toggle>
   </div>
 </template>
 
