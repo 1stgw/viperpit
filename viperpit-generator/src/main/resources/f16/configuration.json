@@ -1645,7 +1645,7 @@
       "section": "AUDIO 2 PANEL",
       "group": "AUDIO2: INTERCOM Knob",
       "style": "knob",
-      "role": "up",
+      "role": "increase",
       "type": "button"
     },
     {
@@ -1659,7 +1659,7 @@
       "section": "AUDIO 2 PANEL",
       "group": "AUDIO2: INTERCOM Knob",
       "style": "knob",
-      "role": "down",
+      "role": "decrease",
       "type": "button"
     },
     {
@@ -1715,7 +1715,7 @@
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: COMM 1 Knob",
       "style": "knob",
-      "role": "up",
+      "role": "increase",
       "type": "button"
     },
     {
@@ -1731,7 +1731,7 @@
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: COMM 1 Knob",
       "style": "knob",
-      "role": "down",
+      "role": "decrease",
       "type": "button"
     },
     {
@@ -1789,7 +1789,7 @@
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: COMM 2 Knob",
       "style": "knob",
-      "role": "up",
+      "role": "increase",
       "type": "button"
     },
     {
@@ -1805,7 +1805,7 @@
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: COMM 2 Knob",
       "style": "knob",
-      "role": "down",
+      "role": "decrease",
       "type": "button"
     },
     {
@@ -1861,7 +1861,7 @@
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: MSL Knob",
       "style": "knob",
-      "role": "up",
+      "role": "increase",
       "type": "button"
     },
     {
@@ -1875,7 +1875,7 @@
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: MSL Knob",
       "style": "knob",
-      "role": "down",
+      "role": "decrease",
       "type": "button"
     },
     {
@@ -1969,7 +1969,7 @@
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: THREAT Knob",
       "style": "knob",
-      "role": "up",
+      "role": "increase",
       "type": "button"
     },
     {
@@ -1983,7 +1983,7 @@
       "section": "AUDIO 1 PANEL",
       "group": "AUDIO1: THREAT Knob",
       "style": "knob",
-      "role": "down",
+      "role": "decrease",
       "type": "button"
     },
     {
@@ -2245,7 +2245,7 @@
       "section": "UHF PANEL",
       "group": "UHF: VOL Knob",
       "style": "knob",
-      "role": "up",
+      "role": "increase",
       "type": "button"
     },
     {
@@ -2259,7 +2259,7 @@
       "section": "UHF PANEL",
       "group": "UHF: VOL Knob",
       "style": "knob",
-      "role": "down",
+      "role": "decrease",
       "type": "button"
     },
     {
@@ -2475,7 +2475,7 @@
       "section": "HMCS PANEL",
       "group": "HMCS: HMSC Knob",
       "style": "knob",
-      "role": "up",
+      "role": "increase",
       "type": "button"
     },
     {
@@ -2491,7 +2491,7 @@
       "section": "HMCS PANEL",
       "group": "HMCS: HMSC Knob",
       "style": "knob",
-      "role": "down",
+      "role": "decrease",
       "type": "button"
     },
     {
@@ -3754,7 +3754,7 @@
       "section": "RWR",
       "group": "RWR: Brightness Knob",
       "style": "knob",
-      "role": "up",
+      "role": "increase",
       "type": "button"
     },
     {
@@ -3768,7 +3768,7 @@
       "section": "RWR",
       "group": "RWR: Brightness Knob",
       "style": "knob",
-      "role": "down",
+      "role": "decrease",
       "type": "button"
     },
     {

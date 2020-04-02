@@ -15,14 +15,14 @@
               description="AUDIO2: INTERCOM Knob - Volume Incr."
               label="Volume Incr."
               type="button"
-              role="up"
+              role="increase"
             />
             <control
               id="audio2IntercomKnobVolumeDecr"
               description="AUDIO2: INTERCOM Knob - Volume Decr."
               label="Volume Decr."
               type="button"
-              role="down"
+              role="decrease"
             />
           </button-group>
         </v-col>

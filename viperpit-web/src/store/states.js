@@ -86,9 +86,9 @@ const getters = {
   getAgent: state => {
     return state.agentId;
   },
-  isActive: state => id => {
+  getValue: state => id => {
     if (state.actions[id]) {
-      return state.actions[id].active;
+      return state.actions[id].value;
     } else {
       return false;
     }
@@ -127,7 +127,7 @@ const mutations = {
     for (var property in result.updatedStates) {
       const action = state.actions[property];
       if (action) {
-        action.active = result.updatedStates[property];
+        action.value = result.updatedStates[property];
       }
     }
   }

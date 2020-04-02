@@ -1013,14 +1013,14 @@
                   "callback": "SimStepIntercomVolumeUp",
                   "description": "AUDIO2: INTERCOM Knob - Volume Incr.",
                   "label": "Volume Incr.",
-                  "role": "up"
+                  "role": "increase"
                 },
                 {
                   "id": "audio2IntercomKnobVolumeDecr",
                   "callback": "SimStepIntercomVolumeDown",
                   "description": "AUDIO2: INTERCOM Knob - Volume Decr.",
                   "label": "Volume Decr.",
-                  "role": "down"
+                  "role": "decrease"
                 }
               ]
             },
@@ -1066,14 +1066,14 @@
                   "callback": "SimStepComm1VolumeUp",
                   "description": "AUDIO1: COMM 1 Knob - Volume Incr.",
                   "label": "Volume Incr.",
-                  "role": "up"
+                  "role": "increase"
                 },
                 {
                   "id": "audio1Comm1KnobVolumeDecr",
                   "callback": "SimStepComm1VolumeDown",
                   "description": "AUDIO1: COMM 1 Knob - Volume Decr.",
                   "label": "Volume Decr.",
-                  "role": "down"
+                  "role": "decrease"
                 },
                 {
                   "id": "audio1Comm1KnobPowerOn",
@@ -1103,14 +1103,14 @@
                   "callback": "SimStepComm2VolumeUp",
                   "description": "AUDIO1: COMM 2 Knob - Volume Incr.",
                   "label": "Volume Incr.",
-                  "role": "up"
+                  "role": "increase"
                 },
                 {
                   "id": "audio1Comm2KnobVolumeDecr",
                   "callback": "SimStepComm2VolumeDown",
                   "description": "AUDIO1: COMM 2 Knob - Volume Decr.",
                   "label": "Volume Decr.",
-                  "role": "down"
+                  "role": "decrease"
                 },
                 {
                   "id": "audio1Comm2KnobPowerOn",
@@ -1140,14 +1140,14 @@
                   "callback": "SimStepMissileVolumeUp",
                   "description": "AUDIO1: MSL Knob - Volume Incr.",
                   "label": "Volume Incr.",
-                  "role": "up"
+                  "role": "increase"
                 },
                 {
                   "id": "audio1MslKnobVolumeDecr",
                   "callback": "SimStepMissileVolumeDown",
                   "description": "AUDIO1: MSL Knob - Volume Decr.",
                   "label": "Volume Decr.",
-                  "role": "down"
+                  "role": "decrease"
                 }
               ]
             },
@@ -1209,14 +1209,14 @@
                   "callback": "SimStepThreatVolumeUp",
                   "description": "AUDIO1: THREAT Knob - Volume Incr.",
                   "label": "Volume Incr.",
-                  "role": "up"
+                  "role": "increase"
                 },
                 {
                   "id": "audio1ThreatKnobVolumeDecr",
                   "callback": "SimStepThreatVolumeDown",
                   "description": "AUDIO1: THREAT Knob - Volume Decr.",
                   "label": "Volume Decr.",
-                  "role": "down"
+                  "role": "decrease"
                 }
               ]
             }
@@ -1430,14 +1430,14 @@
                   "callback": "OTWBalanceIVCvsAIUp",
                   "description": "UHF: VOL Knob - AI vs IVC Volume Incr",
                   "label": "AI vs IVC Volume Incr",
-                  "role": "up"
+                  "role": "increase"
                 },
                 {
                   "id": "uhfVolKnobAiVsIvcVolumeDecr",
                   "callback": "OTWBalanceIVCvsAIDown",
                   "description": "UHF: VOL Knob - AI vs IVC Volume Decr",
                   "label": "AI vs IVC Volume Decr",
-                  "role": "down"
+                  "role": "decrease"
                 }
               ]
             },
@@ -1658,14 +1658,14 @@
                   "callback": "SimHmsSymWheelUp",
                   "description": "HMCS: HMSC Knob - Brightness Incr.",
                   "label": "Brightness Incr.",
-                  "role": "up"
+                  "role": "increase"
                 },
                 {
                   "id": "hmcsHmscKnobBrightnessDecr",
                   "callback": "SimHmsSymWheelDn",
                   "description": "HMCS: HMSC Knob - Brightness Decr.",
                   "label": "Brightness Decr.",
-                  "role": "down"
+                  "role": "decrease"
                 },
                 {
                   "id": "hmcsHmscKnobOn",
@@ -2441,14 +2441,14 @@
                   "callback": "SimRWRBrightnessUp",
                   "description": "RWR: Brightness Knob - Increase",
                   "label": "Increase",
-                  "role": "up"
+                  "role": "increase"
                 },
                 {
                   "id": "rwrBrightnessKnobDecrease",
                   "callback": "SimRWRBrightnessDown",
                   "description": "RWR: Brightness Knob - Decrease",
                   "label": "Decrease",
-                  "role": "down"
+                  "role": "decrease"
                 }
               ]
             }

@@ -15,14 +15,14 @@
               description="AUDIO1: COMM 1 Knob - Volume Incr."
               label="Volume Incr."
               type="button"
-              role="up"
+              role="increase"
             />
             <control
               id="audio1Comm1KnobVolumeDecr"
               description="AUDIO1: COMM 1 Knob - Volume Decr."
               label="Volume Decr."
               type="button"
-              role="down"
+              role="decrease"
             />
             <control
               id="audio1Comm1KnobPowerOn"
@@ -52,14 +52,14 @@
               description="AUDIO1: COMM 2 Knob - Volume Incr."
               label="Volume Incr."
               type="button"
-              role="up"
+              role="increase"
             />
             <control
               id="audio1Comm2KnobVolumeDecr"
               description="AUDIO1: COMM 2 Knob - Volume Decr."
               label="Volume Decr."
               type="button"
-              role="down"
+              role="decrease"
             />
             <control
               id="audio1Comm2KnobPowerOn"
@@ -89,14 +89,14 @@
               description="AUDIO1: MSL Knob - Volume Incr."
               label="Volume Incr."
               type="button"
-              role="up"
+              role="increase"
             />
             <control
               id="audio1MslKnobVolumeDecr"
               description="AUDIO1: MSL Knob - Volume Decr."
               label="Volume Decr."
               type="button"
-              role="down"
+              role="decrease"
             />
           </button-group>
         </v-col>
@@ -158,14 +158,14 @@
               description="AUDIO1: THREAT Knob - Volume Incr."
               label="Volume Incr."
               type="button"
-              role="up"
+              role="increase"
             />
             <control
               id="audio1ThreatKnobVolumeDecr"
               description="AUDIO1: THREAT Knob - Volume Decr."
               label="Volume Decr."
               type="button"
-              role="down"
+              role="decrease"
             />
           </button-group>
         </v-col>

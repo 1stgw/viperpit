@@ -531,13 +531,13 @@
     "description" : "AUDIO2: INTERCOM Knob - Volume Incr.",
     "id" : "audio2IntercomKnobVolumeIncr",
     "label" : "Volume Incr.",
-    "role" : "up"
+    "role" : "increase"
   }, {
     "className" : null,
     "description" : "AUDIO2: INTERCOM Knob - Volume Decr.",
     "id" : "audio2IntercomKnobVolumeDecr",
     "label" : "Volume Decr.",
-    "role" : "down"
+    "role" : "decrease"
   }, {
     "className" : null,
     "description" : "AUDIO2: ILS Knob - ON",
@@ -555,13 +555,13 @@
     "description" : "AUDIO1: COMM 1 Knob - Volume Incr.",
     "id" : "audio1Comm1KnobVolumeIncr",
     "label" : "Volume Incr.",
-    "role" : "up"
+    "role" : "increase"
   }, {
     "className" : null,
     "description" : "AUDIO1: COMM 1 Knob - Volume Decr.",
     "id" : "audio1Comm1KnobVolumeDecr",
     "label" : "Volume Decr.",
-    "role" : "down"
+    "role" : "decrease"
   }, {
     "className" : null,
     "description" : "AUDIO1: COMM 1 Knob - Power On",
@@ -579,13 +579,13 @@
     "description" : "AUDIO1: COMM 2 Knob - Volume Incr.",
     "id" : "audio1Comm2KnobVolumeIncr",
     "label" : "Volume Incr.",
-    "role" : "up"
+    "role" : "increase"
   }, {
     "className" : null,
     "description" : "AUDIO1: COMM 2 Knob - Volume Decr.",
     "id" : "audio1Comm2KnobVolumeDecr",
     "label" : "Volume Decr.",
-    "role" : "down"
+    "role" : "decrease"
   }, {
     "className" : null,
     "description" : "AUDIO1: COMM 2 Knob - Power On",
@@ -603,13 +603,13 @@
     "description" : "AUDIO1: MSL Knob - Volume Incr.",
     "id" : "audio1MslKnobVolumeIncr",
     "label" : "Volume Incr.",
-    "role" : "up"
+    "role" : "increase"
   }, {
     "className" : null,
     "description" : "AUDIO1: MSL Knob - Volume Decr.",
     "id" : "audio1MslKnobVolumeDecr",
     "label" : "Volume Decr.",
-    "role" : "down"
+    "role" : "decrease"
   }, {
     "className" : null,
     "description" : "AUDIO1: COMM 1 Mode Knob - SQL",
@@ -639,13 +639,13 @@
     "description" : "AUDIO1: THREAT Knob - Volume Incr.",
     "id" : "audio1ThreatKnobVolumeIncr",
     "label" : "Volume Incr.",
-    "role" : "up"
+    "role" : "increase"
   }, {
     "className" : null,
     "description" : "AUDIO1: THREAT Knob - Volume Decr.",
     "id" : "audio1ThreatKnobVolumeDecr",
     "label" : "Volume Decr.",
-    "role" : "down"
+    "role" : "decrease"
   }, {
     "className" : null,
     "description" : "MPO: MANUAL PITCH Switch - Hold",
@@ -747,13 +747,13 @@
     "description" : "UHF: VOL Knob - AI vs IVC Volume Incr",
     "id" : "uhfVolKnobAiVsIvcVolumeIncr",
     "label" : "AI vs IVC Volume Incr",
-    "role" : "up"
+    "role" : "increase"
   }, {
     "className" : null,
     "description" : "UHF: VOL Knob - AI vs IVC Volume Decr",
     "id" : "uhfVolKnobAiVsIvcVolumeDecr",
     "label" : "AI vs IVC Volume Decr",
-    "role" : "down"
+    "role" : "decrease"
   }, {
     "className" : null,
     "description" : "UHF: MODE Knob - MNL",
@@ -837,13 +837,13 @@
     "description" : "HMCS: HMSC Knob - Brightness Incr.",
     "id" : "hmcsHmscKnobBrightnessIncr",
     "label" : "Brightness Incr.",
-    "role" : "up"
+    "role" : "increase"
   }, {
     "className" : null,
     "description" : "HMCS: HMSC Knob - Brightness Decr.",
     "id" : "hmcsHmscKnobBrightnessDecr",
     "label" : "Brightness Decr.",
-    "role" : "down"
+    "role" : "decrease"
   }, {
     "className" : null,
     "description" : "HMCS: HMSC Knob - ON",
@@ -1227,13 +1227,13 @@
     "description" : "RWR: Brightness Knob - Increase",
     "id" : "rwrBrightnessKnobIncrease",
     "label" : "Increase",
-    "role" : "up"
+    "role" : "increase"
   }, {
     "className" : null,
     "description" : "RWR: Brightness Knob - Decrease",
     "id" : "rwrBrightnessKnobDecrease",
     "label" : "Decrease",
-    "role" : "down"
+    "role" : "decrease"
   }, {
     "className" : null,
     "description" : "MAIN: HSI HDG Knob - Increase (5°)",

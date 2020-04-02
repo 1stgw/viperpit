@@ -183,14 +183,14 @@
               description="UHF: VOL Knob - AI vs IVC Volume Incr"
               label="AI vs IVC Volume Incr"
               type="button"
-              role="up"
+              role="increase"
             />
             <control
               id="uhfVolKnobAiVsIvcVolumeDecr"
               description="UHF: VOL Knob - AI vs IVC Volume Decr"
               label="AI vs IVC Volume Decr"
               type="button"
-              role="down"
+              role="decrease"
             />
           </button-group>
         </v-col>

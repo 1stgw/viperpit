@@ -15,14 +15,14 @@
               description="RWR: Brightness Knob - Increase"
               label="Increase"
               type="button"
-              role="up"
+              role="increase"
             />
             <control
               id="rwrBrightnessKnobDecrease"
               description="RWR: Brightness Knob - Decrease"
               label="Decrease"
               type="button"
-              role="down"
+              role="decrease"
             />
           </button-group>
         </v-col>

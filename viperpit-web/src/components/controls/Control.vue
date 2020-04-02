@@ -1,6 +1,6 @@
 <template>
   <v-btn
-    :input-value="isActive(id)"
+    :input-value="getValue(id)"
     @click="fireAction(id)"
     outlined
     color="light-green"
@@ -10,6 +10,12 @@
     </div>
     <div v-else-if="role === 'down'">
       <v-icon>mdi-menu-down</v-icon>
+    </div>
+    <div v-else-if="role === 'increase'">
+      <v-icon>mdi-plus</v-icon>
+    </div>
+    <div v-else-if="role === 'decrease'">
+      <v-icon>mdi-minus</v-icon>
     </div>
     <div v-else-if="role === 'left'">
       <v-icon>mdi-menu-left</v-icon>
@@ -50,7 +56,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["isActive"])
+    ...mapGetters(["getValue"])
   },
   methods: {
     ...mapActions(["fireAction"])

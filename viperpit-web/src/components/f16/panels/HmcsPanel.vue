@@ -15,14 +15,14 @@
               description="HMCS: HMSC Knob - Brightness Incr."
               label="Brightness Incr."
               type="button"
-              role="up"
+              role="increase"
             />
             <control
               id="hmcsHmscKnobBrightnessDecr"
               description="HMCS: HMSC Knob - Brightness Decr."
               label="Brightness Decr."
               type="button"
-              role="down"
+              role="decrease"
             />
             <control
               id="hmcsHmscKnobOn"
