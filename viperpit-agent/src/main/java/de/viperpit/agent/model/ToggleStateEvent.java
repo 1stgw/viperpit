@@ -1,4 +1,4 @@
-package de.viperpit.agent;
+package de.viperpit.agent.model;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package de.viperpit.commons.cockpit;
+package de.viperpit.agent.model;
 
 import java.util.Objects;
 

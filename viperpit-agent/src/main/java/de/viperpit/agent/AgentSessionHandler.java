@@ -39,8 +39,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import de.viperpit.agent.data.SharedMemoryStateProvider;
 import de.viperpit.agent.keys.KeyDispatcherService;
-import de.viperpit.commons.cockpit.Agent;
-import de.viperpit.commons.cockpit.StateChangeEvent;
+import de.viperpit.agent.model.Agent;
+import de.viperpit.agent.model.InitializeStateEvent;
+import de.viperpit.agent.model.StateChangeEvent;
+import de.viperpit.agent.model.ToggleStateEvent;
 import de.viperpit.commons.cockpit.StateConfiguration;
 import de.viperpit.commons.cockpit.StateConfigurationStore;
 
