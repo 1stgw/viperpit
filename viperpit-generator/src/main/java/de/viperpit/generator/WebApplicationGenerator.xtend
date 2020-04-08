@@ -1,5 +1,7 @@
 package de.viperpit.generator
 
+import de.viperpit.commons.cockpit.StateConfiguration
+import de.viperpit.commons.cockpit.StateConfigurationStore
 import java.io.File
 import org.slf4j.LoggerFactory
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
@@ -62,8 +64,7 @@ class WebApplicationGenerator {
 					<v-app-bar dense>
 						<v-tabs align-with-title>
 						«FOR console : cockpit.consoles»
-							«tab»<!-- eslint-disable-next-line -->
-							«tab»<v-tab to="/cockpits/«profile»/consoles/«console.id»">«console.name»</v-tab>
+							«tab»<v-tab :to="{ name: '«console.clazz»For«profile.toFirstUpper»' }">«console.name»</v-tab>
 						«ENDFOR»
 						</v-tabs>
 					</v-app-bar>
@@ -229,12 +230,12 @@ class WebApplicationGenerator {
 					protected Object get«action.id.toFirstUpper»(String id, SharedMemoryData sharedMemoryData) {
 						return null;
 					}
-
+					
 				«ENDFOR»
-			}
+				}
 		''', new File(pathForStateProvider, '''AbstractSharedMemoryStateProvider.java'''.toString), UTF_8)
 
-		val pathForMetadata = new File('''«path.absolutePath»/viperpit-hub/src/main/resources''')
+		val pathForMetadata = new File('''«path.absolutePath»/viperpit-agent/src/main/resources''')
 		val builder = new Jackson2ObjectMapperBuilder()
 		builder.featuresToEnable(INDENT_OUTPUT)
 		val extension objectMapper = builder.build
@@ -275,8 +276,8 @@ class WebApplicationGenerator {
 			].toList
 		]
 		write(cockpitConfiguration.writeValueAsString, new File(pathForMetadata, '''configuration_cockpit.json'''.toString), UTF_8)
-		val actionsForRamp = configuration.actions.map [ action |
-			new de.viperpit.commons.cockpit.Action() => [
+		val stateConfigurationsForRamp = configuration.actions.map [ action |
+			new StateConfiguration() => [
 				id = action.id
 				callback = action.callback
 				if (action.state !== null) {
@@ -286,13 +287,13 @@ class WebApplicationGenerator {
 					active = false
 					stateful = false
 				}
-				relatedActions = action.relatedActions
+				relatedStateConfigurations = action.relatedActions
 			]
 		].toList
-		val stateConfigurationForRamp = new de.viperpit.commons.cockpit.State(null, actionsForRamp) => []
-		write(stateConfigurationForRamp.writeValueAsString, new File(pathForMetadata, '''states_ramp.json'''.toString), UTF_8)
-		val actionsForGround = configuration.actions.map [ action |
-			new de.viperpit.commons.cockpit.Action() => [
+		val stateConfigurationStoreForRamp = new StateConfigurationStore(stateConfigurationsForRamp) => []
+		write(stateConfigurationStoreForRamp.writeValueAsString, new File(pathForMetadata, '''states_ramp.json'''.toString), UTF_8)
+		val stateConfigurationsForGround = configuration.actions.map [ action |
+			new StateConfiguration() => [
 				id = action.id
 				callback = action.callback
 				if (action.state !== null) {
@@ -302,13 +303,13 @@ class WebApplicationGenerator {
 					active = false
 					stateful = false
 				}
-				relatedActions = action.relatedActions
+				relatedStateConfigurations = action.relatedActions
 			]
 		].toList
-		val stateConfigurationForGround = new de.viperpit.commons.cockpit.State(null, actionsForGround) => []
-		write(stateConfigurationForGround.writeValueAsString, new File(pathForMetadata, '''states_ground.json'''.toString), UTF_8)
-		val actionsForAir = configuration.actions.map [ action |
-			new de.viperpit.commons.cockpit.Action() => [
+		val stateConfigurationStoreForGround = new StateConfigurationStore(stateConfigurationsForGround) => []
+		write(stateConfigurationStoreForGround.writeValueAsString, new File(pathForMetadata, '''states_ground.json'''.toString), UTF_8)
+		val stateConfigurationsForAir = configuration.actions.map [ action |
+			new StateConfiguration() => [
 				id = action.id
 				callback = action.callback
 				if (action.state !== null) {
@@ -318,11 +319,11 @@ class WebApplicationGenerator {
 					active = false
 					stateful = false
 				}
-				relatedActions = action.relatedActions
+				relatedStateConfigurations = action.relatedActions
 			]
 		].toList
-		val stateConfigurationForAir = new de.viperpit.commons.cockpit.State(null, actionsForAir) => []
-		write(stateConfigurationForAir.writeValueAsString, new File(pathForMetadata, '''states_air.json'''.toString), UTF_8)
+		val stateConfigurationStoreForAir = new StateConfigurationStore(stateConfigurationsForAir) => []
+		write(stateConfigurationStoreForAir.writeValueAsString, new File(pathForMetadata, '''states_air.json'''.toString), UTF_8)
 	}
 
 	private def getControlName(Group group) {

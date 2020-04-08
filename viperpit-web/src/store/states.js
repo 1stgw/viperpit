@@ -1,84 +1,36 @@
 import Vue from "vue";
-import * as services from "../services";
-import * as types from "./mutation-types";
+import {
+  AGENTS_CONNECT,
+  AGENTS_DISCONNECT,
+  STATES_UPDATE
+} from "./mutation-types";
 
-const state = {
+const state = () => ({
   agentId: null,
-  agents: null,
   actions: {}
-};
+});
 
 const actions = {
-  initialize({ dispatch, commit }) {
-    services.connectToWebSocket(dispatch, commit);
-    dispatch("loadAgents").then(() => {
-      if (!state.agents || state.agents.length === 0) {
-        return;
-      }
-      dispatch("connectAgent", state.agents[0]);
-    });
-  },
   connectAgent({ commit, dispatch }, agentId) {
-    dispatch("loadAgents").then(() => {
-      commit(types.AGENTS_CONNECT, agentId);
-      dispatch("loadState", "ramp").then(() => {});
-    });
+    dispatch("initStates");
+    commit(AGENTS_CONNECT, agentId);
   },
   disconnectAgent({ commit }, agentId) {
-    commit(types.AGENTS_DISCONNECT, agentId);
+    commit(AGENTS_DISCONNECT, agentId);
   },
-  loadAgents({ commit }) {
-    return Vue.http.get("/services/cockpit/agents/load").then(
-      response => {
-        if (!response.body || response.body.length === 0) {
-          return;
-        }
-        const agents = response.body.map(agent => agent.id);
-        commit(types.AGENTS_LOAD, agents);
-      },
-      response => {
-        console.log(response);
-      }
+  initStates() {
+    Vue.prototype.$stomp.send("/app/cockpit/states/init", JSON.stringify({}));
+  },
+  toggleState(context, id) {
+    Vue.prototype.$stomp.send(
+      "/app/cockpit/states/toggle",
+      JSON.stringify({
+        id: id
+      })
     );
   },
-  loadState({ commit }, preset) {
-    if (state.agentId) {
-      return Vue.http
-        .get("/services/cockpit/states/load/" + state.agentId + "/" + preset)
-        .then(
-          response => {
-            const actions = response.body.actions;
-            if (!actions) {
-              return;
-            }
-            const result = Object.assign(
-              {},
-              ...actions.map(action => ({
-                [action.id]: {
-                  active: action.active,
-                  callback: action.callback
-                }
-              }))
-            );
-            commit(types.STATES_LOAD, result);
-          },
-          response => {
-            console.log(response);
-          }
-        );
-    }
-  },
-  fireAction(response, id) {
-    const action = state.actions[id];
-    if (!action) {
-      return;
-    }
-    const callback = action.callback;
-    Vue.http
-      .post("/services/cockpit/states/fire/" + state.agentId + "/" + callback)
-      .then({}, response => {
-        console.log(response);
-      });
+  updateStates({ commit }, delta) {
+    commit(STATES_UPDATE, delta);
   }
 };
 
@@ -86,48 +38,41 @@ const getters = {
   getAgent: state => {
     return state.agentId;
   },
-  getValue: state => id => {
-    if (state.actions[id]) {
-      return state.actions[id].value;
-    } else {
-      return false;
-    }
-  },
   isConnected: state => {
     return state.actions && state.agentId;
   }
 };
 
 const mutations = {
-  [types.AGENTS_CONNECT](state, result) {
-    state.agentId = result;
+  AGENTS_CONNECT(state, agentId) {
+    state.agentId = agentId;
   },
-  [types.AGENTS_DISCONNECT](state, result) {
-    if (state.agentId === result) {
+  AGENTS_DISCONNECT(state, agentId) {
+    if (state.agentId === agentId) {
       state.agentId = undefined;
-      state.actions = undefined;
-    }
-    if (state.agents.length > 0 && state.agents[result]) {
-      state.agents[result] = undefined;
     }
   },
-  [types.AGENTS_LOAD](state, result) {
-    state.agents = result;
-  },
-  [types.STATES_LOAD](state, result) {
-    state.actions = result;
-  },
-  [types.STATES_UPDATE](_state, result) {
+  STATES_UPDATE(state, result) {
     if (!result.agent) {
       return;
     }
-    if (result.agent.id !== _state.agentId) {
+    if (!state.agentId) {
+      state.agentId = result.agent.id;
+    }
+    if (result.agent.id !== state.agentId) {
       return;
     }
-    for (var property in result.updatedStates) {
-      const action = state.actions[property];
+    for (let id in result.updatedStates) {
+      let value = result.updatedStates[id];
+      let action = state.actions[id];
       if (action) {
-        action.value = result.updatedStates[property];
+        Vue.set(action, "value", value);
+      } else {
+        let object = {
+          id: id,
+          value: value
+        };
+        Vue.set(state.actions, id, object);
       }
     }
   }

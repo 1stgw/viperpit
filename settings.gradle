@@ -6,4 +6,4 @@ pluginManagement {
 		}
 	}
 }
-include "viperpit-annotations", "viperpit-commons", "viperpit-generator", "viperpit-agent", "viperpit-hub", "viperpit-web", "viperpit-launcher"
+include "viperpit-annotations", "viperpit-commons", "viperpit-generator", "viperpit-agent", "viperpit-web", "viperpit-launcher"

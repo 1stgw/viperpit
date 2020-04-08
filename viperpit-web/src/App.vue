@@ -25,18 +25,12 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: "App",
   computed: {
     ...mapGetters(["getAgent", "isConnected"])
-  },
-  created() {
-    this.initialize();
-  },
-  methods: {
-    ...mapActions(["initialize", "loadState"])
   }
 };
 </script>

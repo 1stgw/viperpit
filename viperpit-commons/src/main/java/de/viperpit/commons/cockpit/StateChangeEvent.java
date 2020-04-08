@@ -15,7 +15,7 @@ public class StateChangeEvent {
 		this.updatedStates = new HashMap<>();
 	}
 
-	public StateChangeEvent(Agent agent, Map<String, Object> updatedStates) {
+	public StateChangeEvent(Agent agent, Map<String, ? extends Object> updatedStates) {
 		this.agent = agent;
 		this.updatedStates = new HashMap<>(updatedStates);
 	}

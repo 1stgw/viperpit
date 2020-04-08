@@ -15,7 +15,6 @@ bootJar {
 
 dependencies {
 	implementation project(':viperpit-agent')
-	implementation project(':viperpit-hub')
 	implementation 'org.slf4j:slf4j-api'
 	implementation 'ch.qos.logback:logback-classic'
 	implementation 'org.springframework.boot:spring-boot'

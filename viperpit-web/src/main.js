@@ -10,7 +10,6 @@ import "@mdi/font/css/materialdesignicons.css";
 Vue.config.productionTip = false;
 Vue.use(VueResource);
 
-/* eslint-disable no-new */
 new Vue({
   components: { App },
   el: "#app",

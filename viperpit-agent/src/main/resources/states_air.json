@@ -1,1920 +1,1917 @@
 {
-  "agent" : null,
-  "actions" : [ {
+  "stateConfigurations" : [ {
     "active" : false,
     "callback" : "SimOverHeat",
     "id" : "testFireOheatDetectButtonHold",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimOBOGSBit",
     "id" : "testOxyQtySwitchHold",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimMalIndLights",
     "id" : "testMalIndLtsButtonHold",
-    "relatedActions" : [ "testMalIndLtsButtonRelease" ],
+    "relatedStateConfigurations" : [ "testMalIndLtsButtonRelease" ],
     "stateful" : false
   }, {
     "active" : true,
     "callback" : "SimProbeHeatOn",
     "id" : "testProbeHeatSwitchOn",
-    "relatedActions" : [ "testProbeHeatSwitchStepUp", "testProbeHeatSwitchStepDown", "testProbeHeatSwitchOff", "testProbeHeatSwitchTest" ],
+    "relatedStateConfigurations" : [ "testProbeHeatSwitchStepUp", "testProbeHeatSwitchStepDown", "testProbeHeatSwitchOff", "testProbeHeatSwitchTest" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimProbeHeatOff",
     "id" : "testProbeHeatSwitchOff",
-    "relatedActions" : [ "testProbeHeatSwitchStepUp", "testProbeHeatSwitchStepDown", "testProbeHeatSwitchOn", "testProbeHeatSwitchTest" ],
+    "relatedStateConfigurations" : [ "testProbeHeatSwitchStepUp", "testProbeHeatSwitchStepDown", "testProbeHeatSwitchOn", "testProbeHeatSwitchTest" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimProbeHeatTest",
     "id" : "testProbeHeatSwitchTest",
-    "relatedActions" : [ "testProbeHeatSwitchStepUp", "testProbeHeatSwitchStepDown", "testProbeHeatSwitchOn", "testProbeHeatSwitchOff" ],
+    "relatedStateConfigurations" : [ "testProbeHeatSwitchStepUp", "testProbeHeatSwitchStepDown", "testProbeHeatSwitchOn", "testProbeHeatSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEpuGenTest",
     "id" : "testEpuGenSwitchHold",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimFlcsPowerTest",
     "id" : "testFlcsPwrTestSwitchHold",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimDigitalBUPBackup",
     "id" : "fltDigitalSwitchBackup",
-    "relatedActions" : [ "fltDigitalSwitchToggle", "fltDigitalSwitchOff" ],
+    "relatedStateConfigurations" : [ "fltDigitalSwitchToggle", "fltDigitalSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimDigitalBUPOff",
     "id" : "fltDigitalSwitchOff",
-    "relatedActions" : [ "fltDigitalSwitchToggle", "fltDigitalSwitchBackup" ],
+    "relatedStateConfigurations" : [ "fltDigitalSwitchToggle", "fltDigitalSwitchBackup" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAltFlapsExtend",
     "id" : "fltAltFlapsSwitchExtend",
-    "relatedActions" : [ "fltAltFlapsSwitchToggle", "fltAltFlapsSwitchNorm" ],
+    "relatedStateConfigurations" : [ "fltAltFlapsSwitchToggle", "fltAltFlapsSwitchNorm" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimAltFlapsNorm",
     "id" : "fltAltFlapsSwitchNorm",
-    "relatedActions" : [ "fltAltFlapsSwitchToggle", "fltAltFlapsSwitchExtend" ],
+    "relatedStateConfigurations" : [ "fltAltFlapsSwitchToggle", "fltAltFlapsSwitchExtend" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimManualFlyupDisable",
     "id" : "fltManualTfFlyupSwitchDisable",
-    "relatedActions" : [ "fltManualTfFlyupSwitchToggle", "fltManualTfFlyupSwitchEnable" ],
+    "relatedStateConfigurations" : [ "fltManualTfFlyupSwitchToggle", "fltManualTfFlyupSwitchEnable" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimManualFlyupEnable",
     "id" : "fltManualTfFlyupSwitchEnable",
-    "relatedActions" : [ "fltManualTfFlyupSwitchToggle", "fltManualTfFlyupSwitchDisable" ],
+    "relatedStateConfigurations" : [ "fltManualTfFlyupSwitchToggle", "fltManualTfFlyupSwitchDisable" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimLEFLock",
     "id" : "fltLeFlapsSwitchLock",
-    "relatedActions" : [ "fltLeFlapsSwitchToggle", "fltLeFlapsSwitchAuto" ],
+    "relatedStateConfigurations" : [ "fltLeFlapsSwitchToggle", "fltLeFlapsSwitchAuto" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimLEFAuto",
     "id" : "fltLeFlapsSwitchAuto",
-    "relatedActions" : [ "fltLeFlapsSwitchToggle", "fltLeFlapsSwitchLock" ],
+    "relatedStateConfigurations" : [ "fltLeFlapsSwitchToggle", "fltLeFlapsSwitchLock" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFLCSReset",
     "id" : "fltFlcsSwitchHold",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimFLTBIT",
     "id" : "fltBitSwitchPush",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimTrimRollLeft",
     "id" : "trimRollTrimWheelLWingDn",
-    "relatedActions" : [ "trimRollTrimWheelRWingDn" ],
+    "relatedStateConfigurations" : [ "trimRollTrimWheelRWingDn" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimTrimRollRight",
     "id" : "trimRollTrimWheelRWingDn",
-    "relatedActions" : [ "trimRollTrimWheelLWingDn" ],
+    "relatedStateConfigurations" : [ "trimRollTrimWheelLWingDn" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimTrimAPDISC",
     "id" : "trimTrimApDiscSwitchDisc",
-    "relatedActions" : [ "trimTrimApDiscSwitchToggle", "trimTrimApDiscSwitchNorm" ],
+    "relatedStateConfigurations" : [ "trimTrimApDiscSwitchToggle", "trimTrimApDiscSwitchNorm" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimTrimAPNORM",
     "id" : "trimTrimApDiscSwitchNorm",
-    "relatedActions" : [ "trimTrimApDiscSwitchToggle", "trimTrimApDiscSwitchDisc" ],
+    "relatedStateConfigurations" : [ "trimTrimApDiscSwitchToggle", "trimTrimApDiscSwitchDisc" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimTrimYawLeft",
     "id" : "trimYawTrimKnobL",
-    "relatedActions" : [ "trimYawTrimKnobR" ],
+    "relatedStateConfigurations" : [ "trimYawTrimKnobR" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimTrimYawRight",
     "id" : "trimYawTrimKnobR",
-    "relatedActions" : [ "trimYawTrimKnobL" ],
+    "relatedStateConfigurations" : [ "trimYawTrimKnobL" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimTrimNoseUp",
     "id" : "trimPitchTrimWheelNoseUp",
-    "relatedActions" : [ "trimPitchTrimWheelNoseDn" ],
+    "relatedStateConfigurations" : [ "trimPitchTrimWheelNoseDn" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimTrimNoseDown",
     "id" : "trimPitchTrimWheelNoseDn",
-    "relatedActions" : [ "trimPitchTrimWheelNoseUp" ],
+    "relatedStateConfigurations" : [ "trimPitchTrimWheelNoseUp" ],
     "stateful" : false
   }, {
     "active" : true,
     "callback" : "SimMasterFuelOn",
     "id" : "fuelMasterSwitchOn",
-    "relatedActions" : [ "fuelMasterSwitchToggle", "fuelMasterSwitchOff" ],
+    "relatedStateConfigurations" : [ "fuelMasterSwitchToggle", "fuelMasterSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimMasterFuelOff",
     "id" : "fuelMasterSwitchOff",
-    "relatedActions" : [ "fuelMasterSwitchToggle", "fuelMasterSwitchOn" ],
+    "relatedStateConfigurations" : [ "fuelMasterSwitchToggle", "fuelMasterSwitchOn" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFuelPumpOff",
     "id" : "fuelEngFeedKnobOff",
-    "relatedActions" : [ "fuelEngFeedKnobStepUp", "fuelEngFeedKnobStepDown", "fuelEngFeedKnobNorm", "fuelEngFeedKnobAft", "fuelEngFeedKnobFwd" ],
+    "relatedStateConfigurations" : [ "fuelEngFeedKnobStepUp", "fuelEngFeedKnobStepDown", "fuelEngFeedKnobNorm", "fuelEngFeedKnobAft", "fuelEngFeedKnobFwd" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimFuelPumpNorm",
     "id" : "fuelEngFeedKnobNorm",
-    "relatedActions" : [ "fuelEngFeedKnobStepUp", "fuelEngFeedKnobStepDown", "fuelEngFeedKnobOff", "fuelEngFeedKnobAft", "fuelEngFeedKnobFwd" ],
+    "relatedStateConfigurations" : [ "fuelEngFeedKnobStepUp", "fuelEngFeedKnobStepDown", "fuelEngFeedKnobOff", "fuelEngFeedKnobAft", "fuelEngFeedKnobFwd" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFuelPumpAft",
     "id" : "fuelEngFeedKnobAft",
-    "relatedActions" : [ "fuelEngFeedKnobStepUp", "fuelEngFeedKnobStepDown", "fuelEngFeedKnobOff", "fuelEngFeedKnobNorm", "fuelEngFeedKnobFwd" ],
+    "relatedStateConfigurations" : [ "fuelEngFeedKnobStepUp", "fuelEngFeedKnobStepDown", "fuelEngFeedKnobOff", "fuelEngFeedKnobNorm", "fuelEngFeedKnobFwd" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFuelPumpFwd",
     "id" : "fuelEngFeedKnobFwd",
-    "relatedActions" : [ "fuelEngFeedKnobStepUp", "fuelEngFeedKnobStepDown", "fuelEngFeedKnobOff", "fuelEngFeedKnobNorm", "fuelEngFeedKnobAft" ],
+    "relatedStateConfigurations" : [ "fuelEngFeedKnobStepUp", "fuelEngFeedKnobStepDown", "fuelEngFeedKnobOff", "fuelEngFeedKnobNorm", "fuelEngFeedKnobAft" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFuelDoorOpen",
     "id" : "fuelAirRefuelSwitchOpen",
-    "relatedActions" : [ "fuelAirRefuelSwitchToggle", "fuelAirRefuelSwitchClose" ],
+    "relatedStateConfigurations" : [ "fuelAirRefuelSwitchToggle", "fuelAirRefuelSwitchClose" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimFuelDoorClose",
     "id" : "fuelAirRefuelSwitchClose",
-    "relatedActions" : [ "fuelAirRefuelSwitchToggle", "fuelAirRefuelSwitchOpen" ],
+    "relatedStateConfigurations" : [ "fuelAirRefuelSwitchToggle", "fuelAirRefuelSwitchOpen" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimIFFMasterOff",
     "id" : "auxMasterKnobOff",
-    "relatedActions" : [ "auxMasterKnobStepUp", "auxMasterKnobStepDown", "auxMasterKnobStby", "auxMasterKnobLow", "auxMasterKnobNorm", "auxMasterKnobEmer" ],
+    "relatedStateConfigurations" : [ "auxMasterKnobStepUp", "auxMasterKnobStepDown", "auxMasterKnobStby", "auxMasterKnobLow", "auxMasterKnobNorm", "auxMasterKnobEmer" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimIFFMasterStby",
     "id" : "auxMasterKnobStby",
-    "relatedActions" : [ "auxMasterKnobStepUp", "auxMasterKnobStepDown", "auxMasterKnobOff", "auxMasterKnobLow", "auxMasterKnobNorm", "auxMasterKnobEmer" ],
+    "relatedStateConfigurations" : [ "auxMasterKnobStepUp", "auxMasterKnobStepDown", "auxMasterKnobOff", "auxMasterKnobLow", "auxMasterKnobNorm", "auxMasterKnobEmer" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimIFFMasterLow",
     "id" : "auxMasterKnobLow",
-    "relatedActions" : [ "auxMasterKnobStepUp", "auxMasterKnobStepDown", "auxMasterKnobOff", "auxMasterKnobStby", "auxMasterKnobNorm", "auxMasterKnobEmer" ],
+    "relatedStateConfigurations" : [ "auxMasterKnobStepUp", "auxMasterKnobStepDown", "auxMasterKnobOff", "auxMasterKnobStby", "auxMasterKnobNorm", "auxMasterKnobEmer" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimIFFMasterNorm",
     "id" : "auxMasterKnobNorm",
-    "relatedActions" : [ "auxMasterKnobStepUp", "auxMasterKnobStepDown", "auxMasterKnobOff", "auxMasterKnobStby", "auxMasterKnobLow", "auxMasterKnobEmer" ],
+    "relatedStateConfigurations" : [ "auxMasterKnobStepUp", "auxMasterKnobStepDown", "auxMasterKnobOff", "auxMasterKnobStby", "auxMasterKnobLow", "auxMasterKnobEmer" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimIFFMasterEmerg",
     "id" : "auxMasterKnobEmer",
-    "relatedActions" : [ "auxMasterKnobStepUp", "auxMasterKnobStepDown", "auxMasterKnobOff", "auxMasterKnobStby", "auxMasterKnobLow", "auxMasterKnobNorm" ],
+    "relatedStateConfigurations" : [ "auxMasterKnobStepUp", "auxMasterKnobStepDown", "auxMasterKnobOff", "auxMasterKnobStby", "auxMasterKnobLow", "auxMasterKnobNorm" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimIFFCodeSwitchZero",
     "id" : "auxM4CodeSwitchZero",
-    "relatedActions" : [ "auxM4CodeSwitchHold" ],
+    "relatedStateConfigurations" : [ "auxM4CodeSwitchHold" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimIFFCodeSwitchHold",
     "id" : "auxM4CodeSwitchHold",
-    "relatedActions" : [ "auxM4CodeSwitchZero" ],
+    "relatedStateConfigurations" : [ "auxM4CodeSwitchZero" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAuxComBackup",
     "id" : "auxCniKnobSwitchBackup",
-    "relatedActions" : [ "auxCniKnobSwitchToggle", "auxCniKnobSwitchUfc" ],
+    "relatedStateConfigurations" : [ "auxCniKnobSwitchToggle", "auxCniKnobSwitchUfc" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAuxComUFC",
     "id" : "auxCniKnobSwitchUfc",
-    "relatedActions" : [ "auxCniKnobSwitchToggle", "auxCniKnobSwitchBackup" ],
+    "relatedStateConfigurations" : [ "auxCniKnobSwitchToggle", "auxCniKnobSwitchBackup" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimIFFMode4ReplyBravo",
     "id" : "auxReplySwitchB",
-    "relatedActions" : [ "auxReplySwitchCycle", "auxReplySwitchStepUp", "auxReplySwitchStepDown", "auxReplySwitchA", "auxReplySwitchOut" ],
+    "relatedStateConfigurations" : [ "auxReplySwitchCycle", "auxReplySwitchStepUp", "auxReplySwitchStepDown", "auxReplySwitchA", "auxReplySwitchOut" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimIFFMode4ReplyAlpha",
     "id" : "auxReplySwitchA",
-    "relatedActions" : [ "auxReplySwitchCycle", "auxReplySwitchStepUp", "auxReplySwitchStepDown", "auxReplySwitchB", "auxReplySwitchOut" ],
+    "relatedStateConfigurations" : [ "auxReplySwitchCycle", "auxReplySwitchStepUp", "auxReplySwitchStepDown", "auxReplySwitchB", "auxReplySwitchOut" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimIFFMode4ReplyOff",
     "id" : "auxReplySwitchOut",
-    "relatedActions" : [ "auxReplySwitchCycle", "auxReplySwitchStepUp", "auxReplySwitchStepDown", "auxReplySwitchB", "auxReplySwitchA" ],
+    "relatedStateConfigurations" : [ "auxReplySwitchCycle", "auxReplySwitchStepUp", "auxReplySwitchStepDown", "auxReplySwitchB", "auxReplySwitchA" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimIFFMode4MonitorAud",
     "id" : "auxMonitorSwitchAudio",
-    "relatedActions" : [ "auxMonitorSwitchToggle", "auxMonitorSwitchOut" ],
+    "relatedStateConfigurations" : [ "auxMonitorSwitchToggle", "auxMonitorSwitchOut" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimIFFMode4MonitorOff",
     "id" : "auxMonitorSwitchOut",
-    "relatedActions" : [ "auxMonitorSwitchToggle", "auxMonitorSwitchAudio" ],
+    "relatedStateConfigurations" : [ "auxMonitorSwitchToggle", "auxMonitorSwitchAudio" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimCycleLeftAuxComDigit",
     "id" : "auxChannelCycleUpLeftDigit",
-    "relatedActions" : [ "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
+    "relatedStateConfigurations" : [ "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimDecLeftAuxComDigit",
     "id" : "auxChannelCycleDownLeftDigit",
-    "relatedActions" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
+    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimCycleCenterAuxComDigit",
     "id" : "auxChannelCycleUpCenterDigit",
-    "relatedActions" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
+    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimDecCenterAuxComDigit",
     "id" : "auxChannelCycleDownCenterDig",
-    "relatedActions" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
+    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimCycleRightAuxComDigit",
     "id" : "auxChannelCycleUpRightDigit",
-    "relatedActions" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
+    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimDecRightAuxComDigit",
     "id" : "auxChannelCycleDownRightDigit",
-    "relatedActions" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
+    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimXBandAuxComDigit",
     "id" : "auxChannelToggleBandX",
-    "relatedActions" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandY" ],
+    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandY" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimYBandAuxComDigit",
     "id" : "auxChannelToggleBandY",
-    "relatedActions" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX" ],
+    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandXY", "auxChannelToggleBandX" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimTACANTR",
     "id" : "auxStationSelectorSwitchTR",
-    "relatedActions" : [ "auxStationSelectorSwitchToggle", "auxStationSelectorSwitchAATr" ],
+    "relatedStateConfigurations" : [ "auxStationSelectorSwitchToggle", "auxStationSelectorSwitchAATr" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimTACANAATR",
     "id" : "auxStationSelectorSwitchAATr",
-    "relatedActions" : [ "auxStationSelectorSwitchToggle", "auxStationSelectorSwitchTR" ],
+    "relatedStateConfigurations" : [ "auxStationSelectorSwitchToggle", "auxStationSelectorSwitchTR" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimAntiCollOn",
     "id" : "extAntiCollisionSwitchOn",
-    "relatedActions" : [ "extAntiCollisionSwitchToggle", "extAntiCollisionSwitchOff" ],
+    "relatedStateConfigurations" : [ "extAntiCollisionSwitchToggle", "extAntiCollisionSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAntiCollOff",
     "id" : "extAntiCollisionSwitchOff",
-    "relatedActions" : [ "extAntiCollisionSwitchToggle", "extAntiCollisionSwitchOn" ],
+    "relatedStateConfigurations" : [ "extAntiCollisionSwitchToggle", "extAntiCollisionSwitchOn" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimLightsFlash",
     "id" : "extPositionSwitchFlash",
-    "relatedActions" : [ "extPositionSwitchToggle", "extPositionSwitchSteady" ],
+    "relatedStateConfigurations" : [ "extPositionSwitchToggle", "extPositionSwitchSteady" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimLightsSteady",
     "id" : "extPositionSwitchSteady",
-    "relatedActions" : [ "extPositionSwitchToggle", "extPositionSwitchFlash" ],
+    "relatedStateConfigurations" : [ "extPositionSwitchToggle", "extPositionSwitchFlash" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimWingLightBrt",
     "id" : "extWingTailSwitchBrt",
-    "relatedActions" : [ "extWingTailSwitchToggle", "extWingTailSwitchOff" ],
+    "relatedStateConfigurations" : [ "extWingTailSwitchToggle", "extWingTailSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimWingLightOff",
     "id" : "extWingTailSwitchOff",
-    "relatedActions" : [ "extWingTailSwitchToggle", "extWingTailSwitchBrt" ],
+    "relatedStateConfigurations" : [ "extWingTailSwitchToggle", "extWingTailSwitchBrt" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimExtlMasterNorm",
     "id" : "extMasterSwitchNorm",
-    "relatedActions" : [ "extMasterSwitchToggle", "extMasterSwitchOff" ],
+    "relatedStateConfigurations" : [ "extMasterSwitchToggle", "extMasterSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimExtlMasterOff",
     "id" : "extMasterSwitchOff",
-    "relatedActions" : [ "extMasterSwitchToggle", "extMasterSwitchNorm" ],
+    "relatedStateConfigurations" : [ "extMasterSwitchToggle", "extMasterSwitchNorm" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEpuOn",
     "id" : "epuEpuSwitchOn",
-    "relatedActions" : [ "epuEpuSwitchCycle", "epuEpuSwitchStepUp", "epuEpuSwitchStepDown", "epuEpuSwitchNorm", "epuEpuSwitchOff" ],
+    "relatedStateConfigurations" : [ "epuEpuSwitchCycle", "epuEpuSwitchStepUp", "epuEpuSwitchStepDown", "epuEpuSwitchNorm", "epuEpuSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEpuAuto",
     "id" : "epuEpuSwitchNorm",
-    "relatedActions" : [ "epuEpuSwitchCycle", "epuEpuSwitchStepUp", "epuEpuSwitchStepDown", "epuEpuSwitchOn", "epuEpuSwitchOff" ],
+    "relatedStateConfigurations" : [ "epuEpuSwitchCycle", "epuEpuSwitchStepUp", "epuEpuSwitchStepDown", "epuEpuSwitchOn", "epuEpuSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEpuOff",
     "id" : "epuEpuSwitchOff",
-    "relatedActions" : [ "epuEpuSwitchCycle", "epuEpuSwitchStepUp", "epuEpuSwitchStepDown", "epuEpuSwitchOn", "epuEpuSwitchNorm" ],
+    "relatedStateConfigurations" : [ "epuEpuSwitchCycle", "epuEpuSwitchStepUp", "epuEpuSwitchStepDown", "epuEpuSwitchOn", "epuEpuSwitchNorm" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimMainPowerMain",
     "id" : "elecMainPwrSwitchMain",
-    "relatedActions" : [ "elecMainPwrSwitchStepUp", "elecMainPwrSwitchStepDown", "elecMainPwrSwitchBatt", "elecMainPwrSwitchOff" ],
+    "relatedStateConfigurations" : [ "elecMainPwrSwitchStepUp", "elecMainPwrSwitchStepDown", "elecMainPwrSwitchBatt", "elecMainPwrSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimMainPowerBatt",
     "id" : "elecMainPwrSwitchBatt",
-    "relatedActions" : [ "elecMainPwrSwitchStepUp", "elecMainPwrSwitchStepDown", "elecMainPwrSwitchMain", "elecMainPwrSwitchOff" ],
+    "relatedStateConfigurations" : [ "elecMainPwrSwitchStepUp", "elecMainPwrSwitchStepDown", "elecMainPwrSwitchMain", "elecMainPwrSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimMainPowerOff",
     "id" : "elecMainPwrSwitchOff",
-    "relatedActions" : [ "elecMainPwrSwitchStepUp", "elecMainPwrSwitchStepDown", "elecMainPwrSwitchMain", "elecMainPwrSwitchBatt" ],
+    "relatedStateConfigurations" : [ "elecMainPwrSwitchStepUp", "elecMainPwrSwitchStepDown", "elecMainPwrSwitchMain", "elecMainPwrSwitchBatt" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimElecReset",
     "id" : "elecCautionResetButtonPush",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimAVTRToggle",
     "id" : "avtrAvtrSwitchToggleOnOff",
-    "relatedActions" : [ "avtrAvtrSwitchCycle", "avtrAvtrSwitchStepUp", "avtrAvtrSwitchStepDown", "avtrAvtrSwitchOn", "avtrAvtrSwitchAuto", "avtrAvtrSwitchOff" ],
+    "relatedStateConfigurations" : [ "avtrAvtrSwitchCycle", "avtrAvtrSwitchStepUp", "avtrAvtrSwitchStepDown", "avtrAvtrSwitchOn", "avtrAvtrSwitchAuto", "avtrAvtrSwitchOff" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimAVTRSwitchOn",
     "id" : "avtrAvtrSwitchOn",
-    "relatedActions" : [ "avtrAvtrSwitchToggleOnOff", "avtrAvtrSwitchCycle", "avtrAvtrSwitchStepUp", "avtrAvtrSwitchStepDown", "avtrAvtrSwitchAuto", "avtrAvtrSwitchOff" ],
+    "relatedStateConfigurations" : [ "avtrAvtrSwitchToggleOnOff", "avtrAvtrSwitchCycle", "avtrAvtrSwitchStepUp", "avtrAvtrSwitchStepDown", "avtrAvtrSwitchAuto", "avtrAvtrSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAVTRSwitchAuto",
     "id" : "avtrAvtrSwitchAuto",
-    "relatedActions" : [ "avtrAvtrSwitchToggleOnOff", "avtrAvtrSwitchCycle", "avtrAvtrSwitchStepUp", "avtrAvtrSwitchStepDown", "avtrAvtrSwitchOn", "avtrAvtrSwitchOff" ],
+    "relatedStateConfigurations" : [ "avtrAvtrSwitchToggleOnOff", "avtrAvtrSwitchCycle", "avtrAvtrSwitchStepUp", "avtrAvtrSwitchStepDown", "avtrAvtrSwitchOn", "avtrAvtrSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimAVTRSwitchOff",
     "id" : "avtrAvtrSwitchOff",
-    "relatedActions" : [ "avtrAvtrSwitchToggleOnOff", "avtrAvtrSwitchCycle", "avtrAvtrSwitchStepUp", "avtrAvtrSwitchStepDown", "avtrAvtrSwitchOn", "avtrAvtrSwitchAuto" ],
+    "relatedStateConfigurations" : [ "avtrAvtrSwitchToggleOnOff", "avtrAvtrSwitchCycle", "avtrAvtrSwitchStepUp", "avtrAvtrSwitchStepDown", "avtrAvtrSwitchOn", "avtrAvtrSwitchAuto" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEcmPowerOn",
     "id" : "ecmOprSwitchOpr",
-    "relatedActions" : [ "ecmOprSwitchToggle", "ecmOprSwitchOff" ],
+    "relatedStateConfigurations" : [ "ecmOprSwitchToggle", "ecmOprSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEcmPowerOff",
     "id" : "ecmOprSwitchOff",
-    "relatedActions" : [ "ecmOprSwitchToggle", "ecmOprSwitchOpr" ],
+    "relatedStateConfigurations" : [ "ecmOprSwitchToggle", "ecmOprSwitchOpr" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimJfsStart_Off",
     "id" : "engJfsSwitchOff",
-    "relatedActions" : [ "engJfsSwitchToggleStart2Off", "engJfsSwitchStart2" ],
+    "relatedStateConfigurations" : [ "engJfsSwitchToggleStart2Off", "engJfsSwitchStart2" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimJfsStart_Start2",
     "id" : "engJfsSwitchStart2",
-    "relatedActions" : [ "engJfsSwitchToggleStart2Off", "engJfsSwitchOff" ],
+    "relatedStateConfigurations" : [ "engJfsSwitchToggleStart2Off", "engJfsSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEngContPri",
     "id" : "engEngContSwitchPri",
-    "relatedActions" : [ "engEngContSwitchToggle", "engEngContSwitchSec" ],
+    "relatedStateConfigurations" : [ "engEngContSwitchToggle", "engEngContSwitchSec" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEngContSec",
     "id" : "engEngContSwitchSec",
-    "relatedActions" : [ "engEngContSwitchToggle", "engEngContSwitchPri" ],
+    "relatedStateConfigurations" : [ "engEngContSwitchToggle", "engEngContSwitchPri" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimStepIntercomVolumeUp",
     "id" : "audio2IntercomKnobVolumeIncr",
-    "relatedActions" : [ "audio2IntercomKnobVolumeDecr" ],
+    "relatedStateConfigurations" : [ "audio2IntercomKnobVolumeDecr" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimStepIntercomVolumeDown",
     "id" : "audio2IntercomKnobVolumeDecr",
-    "relatedActions" : [ "audio2IntercomKnobVolumeIncr" ],
+    "relatedStateConfigurations" : [ "audio2IntercomKnobVolumeIncr" ],
     "stateful" : false
   }, {
     "active" : true,
     "callback" : "SimILSOn",
     "id" : "audio2IlsKnobOn",
-    "relatedActions" : [ "audio2IlsKnobToggle", "audio2IlsKnobOff" ],
+    "relatedStateConfigurations" : [ "audio2IlsKnobToggle", "audio2IlsKnobOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimILSOff",
     "id" : "audio2IlsKnobOff",
-    "relatedActions" : [ "audio2IlsKnobToggle", "audio2IlsKnobOn" ],
+    "relatedStateConfigurations" : [ "audio2IlsKnobToggle", "audio2IlsKnobOn" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimStepComm1VolumeUp",
     "id" : "audio1Comm1KnobVolumeIncr",
-    "relatedActions" : [ "audio1Comm1KnobVolumeDecr", "audio1Comm1KnobPowerOn", "audio1Comm1KnobPowerOff" ],
+    "relatedStateConfigurations" : [ "audio1Comm1KnobVolumeDecr", "audio1Comm1KnobPowerOn", "audio1Comm1KnobPowerOff" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimStepComm1VolumeDown",
     "id" : "audio1Comm1KnobVolumeDecr",
-    "relatedActions" : [ "audio1Comm1KnobVolumeIncr", "audio1Comm1KnobPowerOn", "audio1Comm1KnobPowerOff" ],
+    "relatedStateConfigurations" : [ "audio1Comm1KnobVolumeIncr", "audio1Comm1KnobPowerOn", "audio1Comm1KnobPowerOff" ],
     "stateful" : false
   }, {
     "active" : true,
     "callback" : "SimComm1PowerOn",
     "id" : "audio1Comm1KnobPowerOn",
-    "relatedActions" : [ "audio1Comm1KnobVolumeIncr", "audio1Comm1KnobVolumeDecr", "audio1Comm1KnobPowerOff" ],
+    "relatedStateConfigurations" : [ "audio1Comm1KnobVolumeIncr", "audio1Comm1KnobVolumeDecr", "audio1Comm1KnobPowerOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimComm1PowerOff",
     "id" : "audio1Comm1KnobPowerOff",
-    "relatedActions" : [ "audio1Comm1KnobVolumeIncr", "audio1Comm1KnobVolumeDecr", "audio1Comm1KnobPowerOn" ],
+    "relatedStateConfigurations" : [ "audio1Comm1KnobVolumeIncr", "audio1Comm1KnobVolumeDecr", "audio1Comm1KnobPowerOn" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimStepComm2VolumeUp",
     "id" : "audio1Comm2KnobVolumeIncr",
-    "relatedActions" : [ "audio1Comm2KnobVolumeDecr", "audio1Comm2KnobPowerOn", "audio1Comm2KnobPowerOff" ],
+    "relatedStateConfigurations" : [ "audio1Comm2KnobVolumeDecr", "audio1Comm2KnobPowerOn", "audio1Comm2KnobPowerOff" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimStepComm2VolumeDown",
     "id" : "audio1Comm2KnobVolumeDecr",
-    "relatedActions" : [ "audio1Comm2KnobVolumeIncr", "audio1Comm2KnobPowerOn", "audio1Comm2KnobPowerOff" ],
+    "relatedStateConfigurations" : [ "audio1Comm2KnobVolumeIncr", "audio1Comm2KnobPowerOn", "audio1Comm2KnobPowerOff" ],
     "stateful" : false
   }, {
     "active" : true,
     "callback" : "SimComm2PowerOn",
     "id" : "audio1Comm2KnobPowerOn",
-    "relatedActions" : [ "audio1Comm2KnobVolumeIncr", "audio1Comm2KnobVolumeDecr", "audio1Comm2KnobPowerOff" ],
+    "relatedStateConfigurations" : [ "audio1Comm2KnobVolumeIncr", "audio1Comm2KnobVolumeDecr", "audio1Comm2KnobPowerOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimComm2PowerOff",
     "id" : "audio1Comm2KnobPowerOff",
-    "relatedActions" : [ "audio1Comm2KnobVolumeIncr", "audio1Comm2KnobVolumeDecr", "audio1Comm2KnobPowerOn" ],
+    "relatedStateConfigurations" : [ "audio1Comm2KnobVolumeIncr", "audio1Comm2KnobVolumeDecr", "audio1Comm2KnobPowerOn" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimStepMissileVolumeUp",
     "id" : "audio1MslKnobVolumeIncr",
-    "relatedActions" : [ "audio1MslKnobVolumeDecr" ],
+    "relatedStateConfigurations" : [ "audio1MslKnobVolumeDecr" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimStepMissileVolumeDown",
     "id" : "audio1MslKnobVolumeDecr",
-    "relatedActions" : [ "audio1MslKnobVolumeIncr" ],
+    "relatedStateConfigurations" : [ "audio1MslKnobVolumeIncr" ],
     "stateful" : false
   }, {
     "active" : true,
     "callback" : "SimAud1Com1Sql",
     "id" : "audio1Comm1ModeKnobSql",
-    "relatedActions" : [ "audio1Comm1ModeKnobToggle", "audio1Comm1ModeKnobGd" ],
+    "relatedStateConfigurations" : [ "audio1Comm1ModeKnobToggle", "audio1Comm1ModeKnobGd" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAud1Com1Gd",
     "id" : "audio1Comm1ModeKnobGd",
-    "relatedActions" : [ "audio1Comm1ModeKnobToggle", "audio1Comm1ModeKnobSql" ],
+    "relatedStateConfigurations" : [ "audio1Comm1ModeKnobToggle", "audio1Comm1ModeKnobSql" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimAud1Com2Sql",
     "id" : "audio1Comm2ModeKnobSql",
-    "relatedActions" : [ "audio1Comm2ModeKnobToggle", "audio1Comm2ModeKnobGd" ],
+    "relatedStateConfigurations" : [ "audio1Comm2ModeKnobToggle", "audio1Comm2ModeKnobGd" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAud1Com2Gd",
     "id" : "audio1Comm2ModeKnobGd",
-    "relatedActions" : [ "audio1Comm2ModeKnobToggle", "audio1Comm2ModeKnobSql" ],
+    "relatedStateConfigurations" : [ "audio1Comm2ModeKnobToggle", "audio1Comm2ModeKnobSql" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimStepThreatVolumeUp",
     "id" : "audio1ThreatKnobVolumeIncr",
-    "relatedActions" : [ "audio1ThreatKnobVolumeDecr" ],
+    "relatedStateConfigurations" : [ "audio1ThreatKnobVolumeDecr" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimStepThreatVolumeDown",
     "id" : "audio1ThreatKnobVolumeDecr",
-    "relatedActions" : [ "audio1ThreatKnobVolumeIncr" ],
+    "relatedStateConfigurations" : [ "audio1ThreatKnobVolumeIncr" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimMPO",
     "id" : "mpoManualPitchSwitchHold",
-    "relatedActions" : [ "mpoManualPitchSwitchToggle" ],
+    "relatedStateConfigurations" : [ "mpoManualPitchSwitchToggle" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimCycleRadioChannel",
     "id" : "uhfPresetChannelKnobCycleUp",
-    "relatedActions" : [ "uhfPresetChannelKnobCycleDown" ],
+    "relatedStateConfigurations" : [ "uhfPresetChannelKnobCycleDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimDecRadioChannel",
     "id" : "uhfPresetChannelKnobCycleDown",
-    "relatedActions" : [ "uhfPresetChannelKnobCycleUp" ],
+    "relatedStateConfigurations" : [ "uhfPresetChannelKnobCycleUp" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfFreq1Inc",
     "id" : "uhfA32TRotaryXzzzzzStepUp",
-    "relatedActions" : [ "uhfA32TRotaryXzzzzzStepDown" ],
+    "relatedStateConfigurations" : [ "uhfA32TRotaryXzzzzzStepDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfFreq1Dec",
     "id" : "uhfA32TRotaryXzzzzzStepDown",
-    "relatedActions" : [ "uhfA32TRotaryXzzzzzStepUp" ],
+    "relatedStateConfigurations" : [ "uhfA32TRotaryXzzzzzStepUp" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfFreq2Inc",
     "id" : "uhfManualFrequencyZxzzzzCycleUp",
-    "relatedActions" : [ "uhfManualFrequencyZxzzzzCycleDown" ],
+    "relatedStateConfigurations" : [ "uhfManualFrequencyZxzzzzCycleDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfFreq2Dec",
     "id" : "uhfManualFrequencyZxzzzzCycleDown",
-    "relatedActions" : [ "uhfManualFrequencyZxzzzzCycleUp" ],
+    "relatedStateConfigurations" : [ "uhfManualFrequencyZxzzzzCycleUp" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfFreq3Inc",
     "id" : "uhfManualFrequencyZzxzzzCycleUp",
-    "relatedActions" : [ "uhfManualFrequencyZzxzzzCycleDown" ],
+    "relatedStateConfigurations" : [ "uhfManualFrequencyZzxzzzCycleDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfFreq3Dec",
     "id" : "uhfManualFrequencyZzxzzzCycleDown",
-    "relatedActions" : [ "uhfManualFrequencyZzxzzzCycleUp" ],
+    "relatedStateConfigurations" : [ "uhfManualFrequencyZzxzzzCycleUp" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfFreq4Inc",
     "id" : "uhfManualFrequencyZzzxzzCycleUp",
-    "relatedActions" : [ "uhfManualFrequencyZzzxzzCycleDown" ],
+    "relatedStateConfigurations" : [ "uhfManualFrequencyZzzxzzCycleDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfFreq4Dec",
     "id" : "uhfManualFrequencyZzzxzzCycleDown",
-    "relatedActions" : [ "uhfManualFrequencyZzzxzzCycleUp" ],
+    "relatedStateConfigurations" : [ "uhfManualFrequencyZzzxzzCycleUp" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfFreq5Inc",
     "id" : "uhfManualFrequencyZzzzxxCycleUp",
-    "relatedActions" : [ "uhfManualFrequencyZzzzxxCycleDown" ],
+    "relatedStateConfigurations" : [ "uhfManualFrequencyZzzzxxCycleDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfFreq5Dec",
     "id" : "uhfManualFrequencyZzzzxxCycleDown",
-    "relatedActions" : [ "uhfManualFrequencyZzzzxxCycleUp" ],
+    "relatedStateConfigurations" : [ "uhfManualFrequencyZzzzxxCycleUp" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfOff",
     "id" : "uhfFunctionKnobOff",
-    "relatedActions" : [ "uhfFunctionKnobStepUp", "uhfFunctionKnobStepDown", "uhfFunctionKnobMain", "uhfFunctionKnobBoth" ],
+    "relatedStateConfigurations" : [ "uhfFunctionKnobStepUp", "uhfFunctionKnobStepDown", "uhfFunctionKnobMain", "uhfFunctionKnobBoth" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimBupUhfMain",
     "id" : "uhfFunctionKnobMain",
-    "relatedActions" : [ "uhfFunctionKnobStepUp", "uhfFunctionKnobStepDown", "uhfFunctionKnobOff", "uhfFunctionKnobBoth" ],
+    "relatedStateConfigurations" : [ "uhfFunctionKnobStepUp", "uhfFunctionKnobStepDown", "uhfFunctionKnobOff", "uhfFunctionKnobBoth" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimBupUhfBoth",
     "id" : "uhfFunctionKnobBoth",
-    "relatedActions" : [ "uhfFunctionKnobStepUp", "uhfFunctionKnobStepDown", "uhfFunctionKnobOff", "uhfFunctionKnobMain" ],
+    "relatedStateConfigurations" : [ "uhfFunctionKnobStepUp", "uhfFunctionKnobStepDown", "uhfFunctionKnobOff", "uhfFunctionKnobMain" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "OTWBalanceIVCvsAIUp",
     "id" : "uhfVolKnobAiVsIvcVolumeIncr",
-    "relatedActions" : [ "uhfVolKnobAiVsIvcVolumeDecr" ],
+    "relatedStateConfigurations" : [ "uhfVolKnobAiVsIvcVolumeDecr" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWBalanceIVCvsAIDown",
     "id" : "uhfVolKnobAiVsIvcVolumeDecr",
-    "relatedActions" : [ "uhfVolKnobAiVsIvcVolumeIncr" ],
+    "relatedStateConfigurations" : [ "uhfVolKnobAiVsIvcVolumeIncr" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimBupUhfManual",
     "id" : "uhfModeKnobMnl",
-    "relatedActions" : [ "uhfModeKnobStepUp", "uhfModeKnobStepDown", "uhfModeKnobPreset", "uhfModeKnobGrd" ],
+    "relatedStateConfigurations" : [ "uhfModeKnobStepUp", "uhfModeKnobStepDown", "uhfModeKnobPreset", "uhfModeKnobGrd" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimBupUhfPreset",
     "id" : "uhfModeKnobPreset",
-    "relatedActions" : [ "uhfModeKnobStepUp", "uhfModeKnobStepDown", "uhfModeKnobMnl", "uhfModeKnobGrd" ],
+    "relatedStateConfigurations" : [ "uhfModeKnobStepUp", "uhfModeKnobStepDown", "uhfModeKnobMnl", "uhfModeKnobGrd" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimBupUhfGuard",
     "id" : "uhfModeKnobGrd",
-    "relatedActions" : [ "uhfModeKnobStepUp", "uhfModeKnobStepDown", "uhfModeKnobMnl", "uhfModeKnobPreset" ],
+    "relatedStateConfigurations" : [ "uhfModeKnobStepUp", "uhfModeKnobStepDown", "uhfModeKnobMnl", "uhfModeKnobPreset" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimSlapSwitch",
     "id" : "leftWallSlapSwitchEcmPgrm5",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "AFCanopyOpen",
     "id" : "leftWallCanopyOpen",
-    "relatedActions" : [ "leftWallCanopyToggleOpenClose", "leftWallCanopyClose" ],
+    "relatedStateConfigurations" : [ "leftWallCanopyToggleOpenClose", "leftWallCanopyClose" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "AFCanopyClose",
     "id" : "leftWallCanopyClose",
-    "relatedActions" : [ "leftWallCanopyToggleOpenClose", "leftWallCanopyOpen" ],
+    "relatedStateConfigurations" : [ "leftWallCanopyToggleOpenClose", "leftWallCanopyOpen" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimSeatOn",
     "id" : "seatSafetyLeverArmed",
-    "relatedActions" : [ "seatSafetyLeverToggle", "seatSafetyLeverLocked" ],
+    "relatedStateConfigurations" : [ "seatSafetyLeverToggle", "seatSafetyLeverLocked" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimSeatOff",
     "id" : "seatSafetyLeverLocked",
-    "relatedActions" : [ "seatSafetyLeverToggle", "seatSafetyLeverArmed" ],
+    "relatedStateConfigurations" : [ "seatSafetyLeverToggle", "seatSafetyLeverArmed" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimEject",
     "id" : "seatEjectHandleHoldForEject",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "AFAlternateGear",
     "id" : "altGearExtendGearHandlePush",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "AFAlternateGearReset",
     "id" : "altGearResetButtonPush",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimRwrPowerOn",
     "id" : "twaPowerButtonOn",
-    "relatedActions" : [ "twaPowerButtonToggle", "twaPowerButtonOff" ],
+    "relatedStateConfigurations" : [ "twaPowerButtonToggle", "twaPowerButtonOff" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimRwrPowerOff",
     "id" : "twaPowerButtonOff",
-    "relatedActions" : [ "twaPowerButtonToggle", "twaPowerButtonOn" ],
+    "relatedStateConfigurations" : [ "twaPowerButtonToggle", "twaPowerButtonOn" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimHmsSymWheelUp",
     "id" : "hmcsHmscKnobBrightnessIncr",
-    "relatedActions" : [ "hmcsHmscKnobBrightnessDecr", "hmcsHmscKnobOn", "hmcsHmscKnobOff" ],
+    "relatedStateConfigurations" : [ "hmcsHmscKnobBrightnessDecr", "hmcsHmscKnobOn", "hmcsHmscKnobOff" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimHmsSymWheelDn",
     "id" : "hmcsHmscKnobBrightnessDecr",
-    "relatedActions" : [ "hmcsHmscKnobBrightnessIncr", "hmcsHmscKnobOn", "hmcsHmscKnobOff" ],
+    "relatedStateConfigurations" : [ "hmcsHmscKnobBrightnessIncr", "hmcsHmscKnobOn", "hmcsHmscKnobOff" ],
     "stateful" : false
   }, {
     "active" : true,
     "callback" : "SimHmsOn",
     "id" : "hmcsHmscKnobOn",
-    "relatedActions" : [ "hmcsHmscKnobBrightnessIncr", "hmcsHmscKnobBrightnessDecr", "hmcsHmscKnobOff" ],
+    "relatedStateConfigurations" : [ "hmcsHmscKnobBrightnessIncr", "hmcsHmscKnobBrightnessDecr", "hmcsHmscKnobOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHmsOff",
     "id" : "hmcsHmscKnobOff",
-    "relatedActions" : [ "hmcsHmscKnobBrightnessIncr", "hmcsHmscKnobBrightnessDecr", "hmcsHmscKnobOn" ],
+    "relatedStateConfigurations" : [ "hmcsHmscKnobBrightnessIncr", "hmcsHmscKnobBrightnessDecr", "hmcsHmscKnobOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEWSRWROn",
     "id" : "cmdsRwrSwitchPowerOn",
-    "relatedActions" : [ "cmdsRwrSwitchTogglePower", "cmdsRwrSwitchPowerOff" ],
+    "relatedStateConfigurations" : [ "cmdsRwrSwitchTogglePower", "cmdsRwrSwitchPowerOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSRWROff",
     "id" : "cmdsRwrSwitchPowerOff",
-    "relatedActions" : [ "cmdsRwrSwitchTogglePower", "cmdsRwrSwitchPowerOn" ],
+    "relatedStateConfigurations" : [ "cmdsRwrSwitchTogglePower", "cmdsRwrSwitchPowerOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEWSJammerOn",
     "id" : "cmdsJmrSwitchPowerOn",
-    "relatedActions" : [ "cmdsJmrSwitchTogglePower", "cmdsJmrSwitchPowerOff" ],
+    "relatedStateConfigurations" : [ "cmdsJmrSwitchTogglePower", "cmdsJmrSwitchPowerOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSJammerOff",
     "id" : "cmdsJmrSwitchPowerOff",
-    "relatedActions" : [ "cmdsJmrSwitchTogglePower", "cmdsJmrSwitchPowerOn" ],
+    "relatedStateConfigurations" : [ "cmdsJmrSwitchTogglePower", "cmdsJmrSwitchPowerOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEWSMwsOn",
     "id" : "cmdsMwsSwitchPowerOn",
-    "relatedActions" : [ "cmdsMwsSwitchTogglePower", "cmdsMwsSwitchPowerOff" ],
+    "relatedStateConfigurations" : [ "cmdsMwsSwitchTogglePower", "cmdsMwsSwitchPowerOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSMwsOff",
     "id" : "cmdsMwsSwitchPowerOff",
-    "relatedActions" : [ "cmdsMwsSwitchTogglePower", "cmdsMwsSwitchPowerOn" ],
+    "relatedStateConfigurations" : [ "cmdsMwsSwitchTogglePower", "cmdsMwsSwitchPowerOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEWSO1On",
     "id" : "cmdsO1SwitchPowerOn",
-    "relatedActions" : [ "cmdsO1SwitchTogglePower", "cmdsO1SwitchPowerOff" ],
+    "relatedStateConfigurations" : [ "cmdsO1SwitchTogglePower", "cmdsO1SwitchPowerOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSO1Off",
     "id" : "cmdsO1SwitchPowerOff",
-    "relatedActions" : [ "cmdsO1SwitchTogglePower", "cmdsO1SwitchPowerOn" ],
+    "relatedStateConfigurations" : [ "cmdsO1SwitchTogglePower", "cmdsO1SwitchPowerOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEWSO2On",
     "id" : "cmdsO2SwitchPowerOn",
-    "relatedActions" : [ "cmdsO2SwitchTogglePower", "cmdsO2SwitchPowerOff" ],
+    "relatedStateConfigurations" : [ "cmdsO2SwitchTogglePower", "cmdsO2SwitchPowerOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSO2Off",
     "id" : "cmdsO2SwitchPowerOff",
-    "relatedActions" : [ "cmdsO2SwitchTogglePower", "cmdsO2SwitchPowerOn" ],
+    "relatedStateConfigurations" : [ "cmdsO2SwitchTogglePower", "cmdsO2SwitchPowerOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEWSChaffOn",
     "id" : "cmdsChSwitchPowerOn",
-    "relatedActions" : [ "cmdsChSwitchTogglePower", "cmdsChSwitchPowerOff" ],
+    "relatedStateConfigurations" : [ "cmdsChSwitchTogglePower", "cmdsChSwitchPowerOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSChaffOff",
     "id" : "cmdsChSwitchPowerOff",
-    "relatedActions" : [ "cmdsChSwitchTogglePower", "cmdsChSwitchPowerOn" ],
+    "relatedStateConfigurations" : [ "cmdsChSwitchTogglePower", "cmdsChSwitchPowerOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEWSFlareOn",
     "id" : "cmdsFlSwitchPowerOn",
-    "relatedActions" : [ "cmdsFlSwitchTogglePower", "cmdsFlSwitchPowerOff" ],
+    "relatedStateConfigurations" : [ "cmdsFlSwitchTogglePower", "cmdsFlSwitchPowerOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSFlareOff",
     "id" : "cmdsFlSwitchPowerOff",
-    "relatedActions" : [ "cmdsFlSwitchTogglePower", "cmdsFlSwitchPowerOn" ],
+    "relatedStateConfigurations" : [ "cmdsFlSwitchTogglePower", "cmdsFlSwitchPowerOn" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEwsJettOn",
     "id" : "cmdsJettSwitchOn",
-    "relatedActions" : [ "cmdsJettSwitchToggle", "cmdsJettSwitchOff" ],
+    "relatedStateConfigurations" : [ "cmdsJettSwitchToggle", "cmdsJettSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEwsJettOff",
     "id" : "cmdsJettSwitchOff",
-    "relatedActions" : [ "cmdsJettSwitchToggle", "cmdsJettSwitchOn" ],
+    "relatedStateConfigurations" : [ "cmdsJettSwitchToggle", "cmdsJettSwitchOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEWSProgOne",
     "id" : "cmdsPrgmKnob1",
-    "relatedActions" : [ "cmdsPrgmKnobStepUp", "cmdsPrgmKnobStepDown", "cmdsPrgmKnob2", "cmdsPrgmKnob3", "cmdsPrgmKnob4" ],
+    "relatedStateConfigurations" : [ "cmdsPrgmKnobStepUp", "cmdsPrgmKnobStepDown", "cmdsPrgmKnob2", "cmdsPrgmKnob3", "cmdsPrgmKnob4" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSProgTwo",
     "id" : "cmdsPrgmKnob2",
-    "relatedActions" : [ "cmdsPrgmKnobStepUp", "cmdsPrgmKnobStepDown", "cmdsPrgmKnob1", "cmdsPrgmKnob3", "cmdsPrgmKnob4" ],
+    "relatedStateConfigurations" : [ "cmdsPrgmKnobStepUp", "cmdsPrgmKnobStepDown", "cmdsPrgmKnob1", "cmdsPrgmKnob3", "cmdsPrgmKnob4" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSProgThree",
     "id" : "cmdsPrgmKnob3",
-    "relatedActions" : [ "cmdsPrgmKnobStepUp", "cmdsPrgmKnobStepDown", "cmdsPrgmKnob1", "cmdsPrgmKnob2", "cmdsPrgmKnob4" ],
+    "relatedStateConfigurations" : [ "cmdsPrgmKnobStepUp", "cmdsPrgmKnobStepDown", "cmdsPrgmKnob1", "cmdsPrgmKnob2", "cmdsPrgmKnob4" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSProgFour",
     "id" : "cmdsPrgmKnob4",
-    "relatedActions" : [ "cmdsPrgmKnobStepUp", "cmdsPrgmKnobStepDown", "cmdsPrgmKnob1", "cmdsPrgmKnob2", "cmdsPrgmKnob3" ],
+    "relatedStateConfigurations" : [ "cmdsPrgmKnobStepUp", "cmdsPrgmKnobStepDown", "cmdsPrgmKnob1", "cmdsPrgmKnob2", "cmdsPrgmKnob3" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSModeOff",
     "id" : "cmdsModeKnobOff",
-    "relatedActions" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobStby", "cmdsModeKnobMan", "cmdsModeKnobSemi", "cmdsModeKnobAuto", "cmdsModeKnobByp" ],
+    "relatedStateConfigurations" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobStby", "cmdsModeKnobMan", "cmdsModeKnobSemi", "cmdsModeKnobAuto", "cmdsModeKnobByp" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimEWSModeStby",
     "id" : "cmdsModeKnobStby",
-    "relatedActions" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobOff", "cmdsModeKnobMan", "cmdsModeKnobSemi", "cmdsModeKnobAuto", "cmdsModeKnobByp" ],
+    "relatedStateConfigurations" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobOff", "cmdsModeKnobMan", "cmdsModeKnobSemi", "cmdsModeKnobAuto", "cmdsModeKnobByp" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSModeMan",
     "id" : "cmdsModeKnobMan",
-    "relatedActions" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobOff", "cmdsModeKnobStby", "cmdsModeKnobSemi", "cmdsModeKnobAuto", "cmdsModeKnobByp" ],
+    "relatedStateConfigurations" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobOff", "cmdsModeKnobStby", "cmdsModeKnobSemi", "cmdsModeKnobAuto", "cmdsModeKnobByp" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSModeSemi",
     "id" : "cmdsModeKnobSemi",
-    "relatedActions" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobOff", "cmdsModeKnobStby", "cmdsModeKnobMan", "cmdsModeKnobAuto", "cmdsModeKnobByp" ],
+    "relatedStateConfigurations" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobOff", "cmdsModeKnobStby", "cmdsModeKnobMan", "cmdsModeKnobAuto", "cmdsModeKnobByp" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSModeAuto",
     "id" : "cmdsModeKnobAuto",
-    "relatedActions" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobOff", "cmdsModeKnobStby", "cmdsModeKnobMan", "cmdsModeKnobSemi", "cmdsModeKnobByp" ],
+    "relatedStateConfigurations" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobOff", "cmdsModeKnobStby", "cmdsModeKnobMan", "cmdsModeKnobSemi", "cmdsModeKnobByp" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEWSModeByp",
     "id" : "cmdsModeKnobByp",
-    "relatedActions" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobOff", "cmdsModeKnobStby", "cmdsModeKnobMan", "cmdsModeKnobSemi", "cmdsModeKnobAuto" ],
+    "relatedStateConfigurations" : [ "cmdsModeKnobStepUp", "cmdsModeKnobStepDown", "cmdsModeKnobOff", "cmdsModeKnobStby", "cmdsModeKnobMan", "cmdsModeKnobSemi", "cmdsModeKnobAuto" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimEmergencyJettison",
     "id" : "gearEmerStoresJettisonButtonHold",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : true,
     "callback" : "SimHookUp",
     "id" : "gearHookSwitchUp",
-    "relatedActions" : [ "gearHookSwitchToggle", "gearHookSwitchDn" ],
+    "relatedStateConfigurations" : [ "gearHookSwitchToggle", "gearHookSwitchDn" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHookDown",
     "id" : "gearHookSwitchDn",
-    "relatedActions" : [ "gearHookSwitchToggle", "gearHookSwitchUp" ],
+    "relatedStateConfigurations" : [ "gearHookSwitchToggle", "gearHookSwitchUp" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimGndJettOn",
     "id" : "gearGndJettSwitchEnable",
-    "relatedActions" : [ "gearGndJettSwitchToggle", "gearGndJettSwitchOff" ],
+    "relatedStateConfigurations" : [ "gearGndJettSwitchToggle", "gearGndJettSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimGndJettOff",
     "id" : "gearGndJettSwitchOff",
-    "relatedActions" : [ "gearGndJettSwitchToggle", "gearGndJettSwitchEnable" ],
+    "relatedStateConfigurations" : [ "gearGndJettSwitchToggle", "gearGndJettSwitchEnable" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimParkingBrakeOn",
     "id" : "gearParkingBreakSwitchOn",
-    "relatedActions" : [ "gearParkingBreakSwitchToggle", "gearParkingBreakSwitchOff" ],
+    "relatedStateConfigurations" : [ "gearParkingBreakSwitchToggle", "gearParkingBreakSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimParkingBrakeOff",
     "id" : "gearParkingBreakSwitchOff",
-    "relatedActions" : [ "gearParkingBreakSwitchToggle", "gearParkingBreakSwitchOn" ],
+    "relatedStateConfigurations" : [ "gearParkingBreakSwitchToggle", "gearParkingBreakSwitchOn" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "AFGearUp",
     "id" : "gearLgHandleUp",
-    "relatedActions" : [ "gearLgHandleToggle", "gearLgHandleDn" ],
+    "relatedStateConfigurations" : [ "gearLgHandleToggle", "gearLgHandleDn" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "AFGearDown",
     "id" : "gearLgHandleDn",
-    "relatedActions" : [ "gearLgHandleToggle", "gearLgHandleUp" ],
+    "relatedStateConfigurations" : [ "gearLgHandleToggle", "gearLgHandleUp" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimCATI",
     "id" : "gearStoresConfigSwitchCatI",
-    "relatedActions" : [ "gearStoresConfigSwitchToggle", "gearStoresConfigSwitchCatIii" ],
+    "relatedStateConfigurations" : [ "gearStoresConfigSwitchToggle", "gearStoresConfigSwitchCatIii" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimCATIII",
     "id" : "gearStoresConfigSwitchCatIii",
-    "relatedActions" : [ "gearStoresConfigSwitchToggle", "gearStoresConfigSwitchCatI" ],
+    "relatedStateConfigurations" : [ "gearStoresConfigSwitchToggle", "gearStoresConfigSwitchCatI" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimSilenceHorn",
     "id" : "gearHornSilencerButtonPush",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimLandingLightOn",
     "id" : "gearLightsSwitchLanding",
-    "relatedActions" : [ "gearLightsSwitchToggle", "gearLightsSwitchOff" ],
+    "relatedStateConfigurations" : [ "gearLightsSwitchToggle", "gearLightsSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimLandingLightOff",
     "id" : "gearLightsSwitchOff",
-    "relatedActions" : [ "gearLightsSwitchToggle", "gearLightsSwitchLanding" ],
+    "relatedStateConfigurations" : [ "gearLightsSwitchToggle", "gearLightsSwitchLanding" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimRFNorm",
     "id" : "miscRfSwitchNorm",
-    "relatedActions" : [ "miscRfSwitchCycle", "miscRfSwitchStepUp", "miscRfSwitchStepDown", "miscRfSwitchQuiet", "miscRfSwitchSilent" ],
+    "relatedStateConfigurations" : [ "miscRfSwitchCycle", "miscRfSwitchStepUp", "miscRfSwitchStepDown", "miscRfSwitchQuiet", "miscRfSwitchSilent" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimRFQuiet",
     "id" : "miscRfSwitchQuiet",
-    "relatedActions" : [ "miscRfSwitchCycle", "miscRfSwitchStepUp", "miscRfSwitchStepDown", "miscRfSwitchNorm", "miscRfSwitchSilent" ],
+    "relatedStateConfigurations" : [ "miscRfSwitchCycle", "miscRfSwitchStepUp", "miscRfSwitchStepDown", "miscRfSwitchNorm", "miscRfSwitchSilent" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimRFSilent",
     "id" : "miscRfSwitchSilent",
-    "relatedActions" : [ "miscRfSwitchCycle", "miscRfSwitchStepUp", "miscRfSwitchStepDown", "miscRfSwitchNorm", "miscRfSwitchQuiet" ],
+    "relatedStateConfigurations" : [ "miscRfSwitchCycle", "miscRfSwitchStepUp", "miscRfSwitchStepDown", "miscRfSwitchNorm", "miscRfSwitchQuiet" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimLaserArmOn",
     "id" : "miscLaserSwitchArm",
-    "relatedActions" : [ "miscLaserSwitchToggle", "miscLaserSwitchOff" ],
+    "relatedStateConfigurations" : [ "miscLaserSwitchToggle", "miscLaserSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimLaserArmOff",
     "id" : "miscLaserSwitchOff",
-    "relatedActions" : [ "miscLaserSwitchToggle", "miscLaserSwitchArm" ],
+    "relatedStateConfigurations" : [ "miscLaserSwitchToggle", "miscLaserSwitchArm" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimArmMasterArm",
     "id" : "miscMasterArmSwitchOn",
-    "relatedActions" : [ "miscMasterArmSwitchCycle", "miscMasterArmSwitchStepUp", "miscMasterArmSwitchStepDown", "miscMasterArmSwitchOff", "miscMasterArmSwitchSim" ],
+    "relatedStateConfigurations" : [ "miscMasterArmSwitchCycle", "miscMasterArmSwitchStepUp", "miscMasterArmSwitchStepDown", "miscMasterArmSwitchOff", "miscMasterArmSwitchSim" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimSafeMasterArm",
     "id" : "miscMasterArmSwitchOff",
-    "relatedActions" : [ "miscMasterArmSwitchCycle", "miscMasterArmSwitchStepUp", "miscMasterArmSwitchStepDown", "miscMasterArmSwitchOn", "miscMasterArmSwitchSim" ],
+    "relatedStateConfigurations" : [ "miscMasterArmSwitchCycle", "miscMasterArmSwitchStepUp", "miscMasterArmSwitchStepDown", "miscMasterArmSwitchOn", "miscMasterArmSwitchSim" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimSimMasterArm",
     "id" : "miscMasterArmSwitchSim",
-    "relatedActions" : [ "miscMasterArmSwitchCycle", "miscMasterArmSwitchStepUp", "miscMasterArmSwitchStepDown", "miscMasterArmSwitchOn", "miscMasterArmSwitchOff" ],
+    "relatedStateConfigurations" : [ "miscMasterArmSwitchCycle", "miscMasterArmSwitchStepUp", "miscMasterArmSwitchStepDown", "miscMasterArmSwitchOn", "miscMasterArmSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimToggleTFR",
     "id" : "miscAdvModeToggleTfrOnOff",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimLeftAPUp",
     "id" : "miscRollSwitchHdgSel",
-    "relatedActions" : [ "miscRollSwitchCycle", "miscRollSwitchStepUp", "miscRollSwitchStepDown", "miscRollSwitchAttHold", "miscRollSwitchStrgSel" ],
+    "relatedStateConfigurations" : [ "miscRollSwitchCycle", "miscRollSwitchStepUp", "miscRollSwitchStepDown", "miscRollSwitchAttHold", "miscRollSwitchStrgSel" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimLeftAPMid",
     "id" : "miscRollSwitchAttHold",
-    "relatedActions" : [ "miscRollSwitchCycle", "miscRollSwitchStepUp", "miscRollSwitchStepDown", "miscRollSwitchHdgSel", "miscRollSwitchStrgSel" ],
+    "relatedStateConfigurations" : [ "miscRollSwitchCycle", "miscRollSwitchStepUp", "miscRollSwitchStepDown", "miscRollSwitchHdgSel", "miscRollSwitchStrgSel" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimLeftAPDown",
     "id" : "miscRollSwitchStrgSel",
-    "relatedActions" : [ "miscRollSwitchCycle", "miscRollSwitchStepUp", "miscRollSwitchStepDown", "miscRollSwitchHdgSel", "miscRollSwitchAttHold" ],
+    "relatedStateConfigurations" : [ "miscRollSwitchCycle", "miscRollSwitchStepUp", "miscRollSwitchStepDown", "miscRollSwitchHdgSel", "miscRollSwitchAttHold" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimRightAPUp",
     "id" : "miscPitchSwitchAltHold",
-    "relatedActions" : [ "miscPitchSwitchCycleAlsoCombatAp", "miscPitchSwitchStepUp", "miscPitchSwitchStepDown", "miscPitchSwitchAPOff", "miscPitchSwitchAttHold" ],
+    "relatedStateConfigurations" : [ "miscPitchSwitchCycleAlsoCombatAp", "miscPitchSwitchStepUp", "miscPitchSwitchStepDown", "miscPitchSwitchAPOff", "miscPitchSwitchAttHold" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimRightAPMid",
     "id" : "miscPitchSwitchAPOff",
-    "relatedActions" : [ "miscPitchSwitchCycleAlsoCombatAp", "miscPitchSwitchStepUp", "miscPitchSwitchStepDown", "miscPitchSwitchAltHold", "miscPitchSwitchAttHold" ],
+    "relatedStateConfigurations" : [ "miscPitchSwitchCycleAlsoCombatAp", "miscPitchSwitchStepUp", "miscPitchSwitchStepDown", "miscPitchSwitchAltHold", "miscPitchSwitchAttHold" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimRightAPDown",
     "id" : "miscPitchSwitchAttHold",
-    "relatedActions" : [ "miscPitchSwitchCycleAlsoCombatAp", "miscPitchSwitchStepUp", "miscPitchSwitchStepDown", "miscPitchSwitchAltHold", "miscPitchSwitchAPOff" ],
+    "relatedStateConfigurations" : [ "miscPitchSwitchCycleAlsoCombatAp", "miscPitchSwitchStepUp", "miscPitchSwitchStepDown", "miscPitchSwitchAltHold", "miscPitchSwitchAPOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "ExtinguishMasterCaution",
     "id" : "eyeMasterCautionButtonPush",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimICPFAck",
     "id" : "eyeFAckButtonPush",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimRWRHandoff",
     "id" : "twpHandoffPush",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimRWRLaunch",
     "id" : "twpMissileLaunchPush",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimRWRSysTest",
     "id" : "twpSysTestPush",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimRWRSetTargetSep",
     "id" : "twpTgtSepPush",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimRWRBrightnessUp",
     "id" : "rwrBrightnessKnobIncrease",
-    "relatedActions" : [ "rwrBrightnessKnobDecrease" ],
+    "relatedStateConfigurations" : [ "rwrBrightnessKnobDecrease" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimRWRBrightnessDown",
     "id" : "rwrBrightnessKnobDecrease",
-    "relatedActions" : [ "rwrBrightnessKnobIncrease" ],
+    "relatedStateConfigurations" : [ "rwrBrightnessKnobIncrease" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimHsiHeadingInc",
     "id" : "mainHsiHdgKnobIncrease5",
-    "relatedActions" : [ "mainHsiHdgKnobDecrease5", "mainHsiHdgKnobIncrease1", "mainHsiHdgKnobDecrease1" ],
+    "relatedStateConfigurations" : [ "mainHsiHdgKnobDecrease5", "mainHsiHdgKnobIncrease1", "mainHsiHdgKnobDecrease1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHsiHeadingDec",
     "id" : "mainHsiHdgKnobDecrease5",
-    "relatedActions" : [ "mainHsiHdgKnobIncrease5", "mainHsiHdgKnobIncrease1", "mainHsiHdgKnobDecrease1" ],
+    "relatedStateConfigurations" : [ "mainHsiHdgKnobIncrease5", "mainHsiHdgKnobIncrease1", "mainHsiHdgKnobDecrease1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHsiHdgIncBy1",
     "id" : "mainHsiHdgKnobIncrease1",
-    "relatedActions" : [ "mainHsiHdgKnobIncrease5", "mainHsiHdgKnobDecrease5", "mainHsiHdgKnobDecrease1" ],
+    "relatedStateConfigurations" : [ "mainHsiHdgKnobIncrease5", "mainHsiHdgKnobDecrease5", "mainHsiHdgKnobDecrease1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHsiHdgDecBy1",
     "id" : "mainHsiHdgKnobDecrease1",
-    "relatedActions" : [ "mainHsiHdgKnobIncrease5", "mainHsiHdgKnobDecrease5", "mainHsiHdgKnobIncrease1" ],
+    "relatedStateConfigurations" : [ "mainHsiHdgKnobIncrease5", "mainHsiHdgKnobDecrease5", "mainHsiHdgKnobIncrease1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHsiCourseInc",
     "id" : "mainHsiCrsKnobIncrease5",
-    "relatedActions" : [ "mainHsiCrsKnobDecrease5", "mainHsiCrsKnobIncrease1", "mainHsiCrsKnobDecrease1" ],
+    "relatedStateConfigurations" : [ "mainHsiCrsKnobDecrease5", "mainHsiCrsKnobIncrease1", "mainHsiCrsKnobDecrease1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHsiCourseDec",
     "id" : "mainHsiCrsKnobDecrease5",
-    "relatedActions" : [ "mainHsiCrsKnobIncrease5", "mainHsiCrsKnobIncrease1", "mainHsiCrsKnobDecrease1" ],
+    "relatedStateConfigurations" : [ "mainHsiCrsKnobIncrease5", "mainHsiCrsKnobIncrease1", "mainHsiCrsKnobDecrease1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHsiCrsIncBy1",
     "id" : "mainHsiCrsKnobIncrease1",
-    "relatedActions" : [ "mainHsiCrsKnobIncrease5", "mainHsiCrsKnobDecrease5", "mainHsiCrsKnobDecrease1" ],
+    "relatedStateConfigurations" : [ "mainHsiCrsKnobIncrease5", "mainHsiCrsKnobDecrease5", "mainHsiCrsKnobDecrease1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHsiCrsDecBy1",
     "id" : "mainHsiCrsKnobDecrease1",
-    "relatedActions" : [ "mainHsiCrsKnobIncrease5", "mainHsiCrsKnobDecrease5", "mainHsiCrsKnobIncrease1" ],
+    "relatedStateConfigurations" : [ "mainHsiCrsKnobIncrease5", "mainHsiCrsKnobDecrease5", "mainHsiCrsKnobIncrease1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAltPressInc",
     "id" : "mainAltimeterPressureKnobIncr5",
-    "relatedActions" : [ "mainAltimeterPressureKnobDecr5", "mainAltimeterPressureKnobIncr1", "mainAltimeterPressureKnobDecr1" ],
+    "relatedStateConfigurations" : [ "mainAltimeterPressureKnobDecr5", "mainAltimeterPressureKnobIncr1", "mainAltimeterPressureKnobDecr1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAltPressDec",
     "id" : "mainAltimeterPressureKnobDecr5",
-    "relatedActions" : [ "mainAltimeterPressureKnobIncr5", "mainAltimeterPressureKnobIncr1", "mainAltimeterPressureKnobDecr1" ],
+    "relatedStateConfigurations" : [ "mainAltimeterPressureKnobIncr5", "mainAltimeterPressureKnobIncr1", "mainAltimeterPressureKnobDecr1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAltPressIncBy1",
     "id" : "mainAltimeterPressureKnobIncr1",
-    "relatedActions" : [ "mainAltimeterPressureKnobIncr5", "mainAltimeterPressureKnobDecr5", "mainAltimeterPressureKnobDecr1" ],
+    "relatedStateConfigurations" : [ "mainAltimeterPressureKnobIncr5", "mainAltimeterPressureKnobDecr5", "mainAltimeterPressureKnobDecr1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAltPressDecBy1",
     "id" : "mainAltimeterPressureKnobDecr1",
-    "relatedActions" : [ "mainAltimeterPressureKnobIncr5", "mainAltimeterPressureKnobDecr5", "mainAltimeterPressureKnobIncr1" ],
+    "relatedStateConfigurations" : [ "mainAltimeterPressureKnobIncr5", "mainAltimeterPressureKnobDecr5", "mainAltimeterPressureKnobIncr1" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHSIIlsTcn",
     "id" : "instrModeKnobIlsTcn",
-    "relatedActions" : [ "instrModeKnobCycle", "instrModeKnobStepUp", "instrModeKnobStepDown", "instrModeKnobTcn", "instrModeKnobNav", "instrModeKnobIlsNav" ],
+    "relatedStateConfigurations" : [ "instrModeKnobCycle", "instrModeKnobStepUp", "instrModeKnobStepDown", "instrModeKnobTcn", "instrModeKnobNav", "instrModeKnobIlsNav" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHSITcn",
     "id" : "instrModeKnobTcn",
-    "relatedActions" : [ "instrModeKnobCycle", "instrModeKnobStepUp", "instrModeKnobStepDown", "instrModeKnobIlsTcn", "instrModeKnobNav", "instrModeKnobIlsNav" ],
+    "relatedStateConfigurations" : [ "instrModeKnobCycle", "instrModeKnobStepUp", "instrModeKnobStepDown", "instrModeKnobIlsTcn", "instrModeKnobNav", "instrModeKnobIlsNav" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimHSINav",
     "id" : "instrModeKnobNav",
-    "relatedActions" : [ "instrModeKnobCycle", "instrModeKnobStepUp", "instrModeKnobStepDown", "instrModeKnobIlsTcn", "instrModeKnobTcn", "instrModeKnobIlsNav" ],
+    "relatedStateConfigurations" : [ "instrModeKnobCycle", "instrModeKnobStepUp", "instrModeKnobStepDown", "instrModeKnobIlsTcn", "instrModeKnobTcn", "instrModeKnobIlsNav" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHSIIlsNav",
     "id" : "instrModeKnobIlsNav",
-    "relatedActions" : [ "instrModeKnobCycle", "instrModeKnobStepUp", "instrModeKnobStepDown", "instrModeKnobIlsTcn", "instrModeKnobTcn", "instrModeKnobNav" ],
+    "relatedStateConfigurations" : [ "instrModeKnobCycle", "instrModeKnobStepUp", "instrModeKnobStepDown", "instrModeKnobIlsTcn", "instrModeKnobTcn", "instrModeKnobNav" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFuelSwitchTest",
     "id" : "qtyFuelQtySelKnobTest",
-    "relatedActions" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobNorm", "qtyFuelQtySelKnobRsvr", "qtyFuelQtySelKnobIntWing", "qtyFuelQtySelKnobExtWing", "qtyFuelQtySelKnobExtCtr" ],
+    "relatedStateConfigurations" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobNorm", "qtyFuelQtySelKnobRsvr", "qtyFuelQtySelKnobIntWing", "qtyFuelQtySelKnobExtWing", "qtyFuelQtySelKnobExtCtr" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimFuelSwitchNorm",
     "id" : "qtyFuelQtySelKnobNorm",
-    "relatedActions" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobTest", "qtyFuelQtySelKnobRsvr", "qtyFuelQtySelKnobIntWing", "qtyFuelQtySelKnobExtWing", "qtyFuelQtySelKnobExtCtr" ],
+    "relatedStateConfigurations" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobTest", "qtyFuelQtySelKnobRsvr", "qtyFuelQtySelKnobIntWing", "qtyFuelQtySelKnobExtWing", "qtyFuelQtySelKnobExtCtr" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFuelSwitchResv",
     "id" : "qtyFuelQtySelKnobRsvr",
-    "relatedActions" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobTest", "qtyFuelQtySelKnobNorm", "qtyFuelQtySelKnobIntWing", "qtyFuelQtySelKnobExtWing", "qtyFuelQtySelKnobExtCtr" ],
+    "relatedStateConfigurations" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobTest", "qtyFuelQtySelKnobNorm", "qtyFuelQtySelKnobIntWing", "qtyFuelQtySelKnobExtWing", "qtyFuelQtySelKnobExtCtr" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFuelSwitchWingInt",
     "id" : "qtyFuelQtySelKnobIntWing",
-    "relatedActions" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobTest", "qtyFuelQtySelKnobNorm", "qtyFuelQtySelKnobRsvr", "qtyFuelQtySelKnobExtWing", "qtyFuelQtySelKnobExtCtr" ],
+    "relatedStateConfigurations" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobTest", "qtyFuelQtySelKnobNorm", "qtyFuelQtySelKnobRsvr", "qtyFuelQtySelKnobExtWing", "qtyFuelQtySelKnobExtCtr" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFuelSwitchWingExt",
     "id" : "qtyFuelQtySelKnobExtWing",
-    "relatedActions" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobTest", "qtyFuelQtySelKnobNorm", "qtyFuelQtySelKnobRsvr", "qtyFuelQtySelKnobIntWing", "qtyFuelQtySelKnobExtCtr" ],
+    "relatedStateConfigurations" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobTest", "qtyFuelQtySelKnobNorm", "qtyFuelQtySelKnobRsvr", "qtyFuelQtySelKnobIntWing", "qtyFuelQtySelKnobExtCtr" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFuelSwitchCenterExt",
     "id" : "qtyFuelQtySelKnobExtCtr",
-    "relatedActions" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobTest", "qtyFuelQtySelKnobNorm", "qtyFuelQtySelKnobRsvr", "qtyFuelQtySelKnobIntWing", "qtyFuelQtySelKnobExtWing" ],
+    "relatedStateConfigurations" : [ "qtyFuelQtySelKnobStepUp", "qtyFuelQtySelKnobStepDown", "qtyFuelQtySelKnobTest", "qtyFuelQtySelKnobNorm", "qtyFuelQtySelKnobRsvr", "qtyFuelQtySelKnobIntWing", "qtyFuelQtySelKnobExtWing" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimFuelTransNorm",
     "id" : "qtyExtFuelTransSwitchNorm",
-    "relatedActions" : [ "qtyExtFuelTransSwitchToggle", "qtyExtFuelTransSwitchWingFirst" ],
+    "relatedStateConfigurations" : [ "qtyExtFuelTransSwitchToggle", "qtyExtFuelTransSwitchWingFirst" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFuelTransWing",
     "id" : "qtyExtFuelTransSwitchWingFirst",
-    "relatedActions" : [ "qtyExtFuelTransSwitchToggle", "qtyExtFuelTransSwitchNorm" ],
+    "relatedStateConfigurations" : [ "qtyExtFuelTransSwitchToggle", "qtyExtFuelTransSwitchNorm" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimLeftHptOn",
     "id" : "snsrLeftHdptSwitchOn",
-    "relatedActions" : [ "snsrLeftHdptSwitchToggle", "snsrLeftHdptSwitchOff" ],
+    "relatedStateConfigurations" : [ "snsrLeftHdptSwitchToggle", "snsrLeftHdptSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimLeftHptOff",
     "id" : "snsrLeftHdptSwitchOff",
-    "relatedActions" : [ "snsrLeftHdptSwitchToggle", "snsrLeftHdptSwitchOn" ],
+    "relatedStateConfigurations" : [ "snsrLeftHdptSwitchToggle", "snsrLeftHdptSwitchOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimRightHptOn",
     "id" : "snsrRightHdptSwitchOn",
-    "relatedActions" : [ "snsrRightHdptSwitchToggle", "snsrRightHdptSwitchOff" ],
+    "relatedStateConfigurations" : [ "snsrRightHdptSwitchToggle", "snsrRightHdptSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimRightHptOff",
     "id" : "snsrRightHdptSwitchOff",
-    "relatedActions" : [ "snsrRightHdptSwitchToggle", "snsrRightHdptSwitchOn" ],
+    "relatedStateConfigurations" : [ "snsrRightHdptSwitchToggle", "snsrRightHdptSwitchOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimFCROn",
     "id" : "snsrFcrSwitchOn",
-    "relatedActions" : [ "snsrFcrSwitchToggle", "snsrFcrSwitchOff" ],
+    "relatedStateConfigurations" : [ "snsrFcrSwitchToggle", "snsrFcrSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFCROff",
     "id" : "snsrFcrSwitchOff",
-    "relatedActions" : [ "snsrFcrSwitchToggle", "snsrFcrSwitchOn" ],
+    "relatedStateConfigurations" : [ "snsrFcrSwitchToggle", "snsrFcrSwitchOn" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimRALTON",
     "id" : "snsrRdrAltSwitchOn",
-    "relatedActions" : [ "snsrRdrAltSwitchStepUp", "snsrRdrAltSwitchStepDown", "snsrRdrAltSwitchStdby", "snsrRdrAltSwitchOff" ],
+    "relatedStateConfigurations" : [ "snsrRdrAltSwitchStepUp", "snsrRdrAltSwitchStepDown", "snsrRdrAltSwitchStdby", "snsrRdrAltSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimRALTSTDBY",
     "id" : "snsrRdrAltSwitchStdby",
-    "relatedActions" : [ "snsrRdrAltSwitchStepUp", "snsrRdrAltSwitchStepDown", "snsrRdrAltSwitchOn", "snsrRdrAltSwitchOff" ],
+    "relatedStateConfigurations" : [ "snsrRdrAltSwitchStepUp", "snsrRdrAltSwitchStepDown", "snsrRdrAltSwitchOn", "snsrRdrAltSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimRALTOFF",
     "id" : "snsrRdrAltSwitchOff",
-    "relatedActions" : [ "snsrRdrAltSwitchStepUp", "snsrRdrAltSwitchStepDown", "snsrRdrAltSwitchOn", "snsrRdrAltSwitchStdby" ],
+    "relatedStateConfigurations" : [ "snsrRdrAltSwitchStepUp", "snsrRdrAltSwitchStepDown", "snsrRdrAltSwitchOn", "snsrRdrAltSwitchStdby" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimScalesVVVAH",
     "id" : "hudScalesSwitchVvVah",
-    "relatedActions" : [ "hudScalesSwitchCycle", "hudScalesSwitchStepUp", "hudScalesSwitchStepDown", "hudScalesSwitchVah", "hudScalesSwitchOff" ],
+    "relatedStateConfigurations" : [ "hudScalesSwitchCycle", "hudScalesSwitchStepUp", "hudScalesSwitchStepDown", "hudScalesSwitchVah", "hudScalesSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimScalesVAH",
     "id" : "hudScalesSwitchVah",
-    "relatedActions" : [ "hudScalesSwitchCycle", "hudScalesSwitchStepUp", "hudScalesSwitchStepDown", "hudScalesSwitchVvVah", "hudScalesSwitchOff" ],
+    "relatedStateConfigurations" : [ "hudScalesSwitchCycle", "hudScalesSwitchStepUp", "hudScalesSwitchStepDown", "hudScalesSwitchVvVah", "hudScalesSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimScalesOff",
     "id" : "hudScalesSwitchOff",
-    "relatedActions" : [ "hudScalesSwitchCycle", "hudScalesSwitchStepUp", "hudScalesSwitchStepDown", "hudScalesSwitchVvVah", "hudScalesSwitchVah" ],
+    "relatedStateConfigurations" : [ "hudScalesSwitchCycle", "hudScalesSwitchStepUp", "hudScalesSwitchStepDown", "hudScalesSwitchVvVah", "hudScalesSwitchVah" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimPitchLadderATTFPM",
     "id" : "hudFpmSwitchAttFpm",
-    "relatedActions" : [ "hudFpmSwitchCycle", "hudFpmSwitchStepUp", "hudFpmSwitchStepDown", "hudFpmSwitchFpm", "hudFpmSwitchOff" ],
+    "relatedStateConfigurations" : [ "hudFpmSwitchCycle", "hudFpmSwitchStepUp", "hudFpmSwitchStepDown", "hudFpmSwitchFpm", "hudFpmSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimPitchLadderFPM",
     "id" : "hudFpmSwitchFpm",
-    "relatedActions" : [ "hudFpmSwitchCycle", "hudFpmSwitchStepUp", "hudFpmSwitchStepDown", "hudFpmSwitchAttFpm", "hudFpmSwitchOff" ],
+    "relatedStateConfigurations" : [ "hudFpmSwitchCycle", "hudFpmSwitchStepUp", "hudFpmSwitchStepDown", "hudFpmSwitchAttFpm", "hudFpmSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimPitchLadderOff",
     "id" : "hudFpmSwitchOff",
-    "relatedActions" : [ "hudFpmSwitchCycle", "hudFpmSwitchStepUp", "hudFpmSwitchStepDown", "hudFpmSwitchAttFpm", "hudFpmSwitchFpm" ],
+    "relatedStateConfigurations" : [ "hudFpmSwitchCycle", "hudFpmSwitchStepUp", "hudFpmSwitchStepDown", "hudFpmSwitchAttFpm", "hudFpmSwitchFpm" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHUDDEDDED",
     "id" : "hudDedDataSwitchDed",
-    "relatedActions" : [ "hudDedDataSwitchCycle", "hudDedDataSwitchStepUp", "hudDedDataSwitchStepDn", "hudDedDataSwitchPfl", "hudDedDataSwitchOff" ],
+    "relatedStateConfigurations" : [ "hudDedDataSwitchCycle", "hudDedDataSwitchStepUp", "hudDedDataSwitchStepDn", "hudDedDataSwitchPfl", "hudDedDataSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHUDDEDPFL",
     "id" : "hudDedDataSwitchPfl",
-    "relatedActions" : [ "hudDedDataSwitchCycle", "hudDedDataSwitchStepUp", "hudDedDataSwitchStepDn", "hudDedDataSwitchDed", "hudDedDataSwitchOff" ],
+    "relatedStateConfigurations" : [ "hudDedDataSwitchCycle", "hudDedDataSwitchStepUp", "hudDedDataSwitchStepDn", "hudDedDataSwitchDed", "hudDedDataSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimHUDDEDOff",
     "id" : "hudDedDataSwitchOff",
-    "relatedActions" : [ "hudDedDataSwitchCycle", "hudDedDataSwitchStepUp", "hudDedDataSwitchStepDn", "hudDedDataSwitchDed", "hudDedDataSwitchPfl" ],
+    "relatedStateConfigurations" : [ "hudDedDataSwitchCycle", "hudDedDataSwitchStepUp", "hudDedDataSwitchStepDn", "hudDedDataSwitchDed", "hudDedDataSwitchPfl" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimReticleStby",
     "id" : "hudDeprRetSwitchStby",
-    "relatedActions" : [ "hudDeprRetSwitchCycle", "hudDeprRetSwitchStepUp", "hudDeprRetSwitchStepDown", "hudDeprRetSwitchPri", "hudDeprRetSwitchOff" ],
+    "relatedStateConfigurations" : [ "hudDeprRetSwitchCycle", "hudDeprRetSwitchStepUp", "hudDeprRetSwitchStepDown", "hudDeprRetSwitchPri", "hudDeprRetSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimReticlePri",
     "id" : "hudDeprRetSwitchPri",
-    "relatedActions" : [ "hudDeprRetSwitchCycle", "hudDeprRetSwitchStepUp", "hudDeprRetSwitchStepDown", "hudDeprRetSwitchStby", "hudDeprRetSwitchOff" ],
+    "relatedStateConfigurations" : [ "hudDeprRetSwitchCycle", "hudDeprRetSwitchStepUp", "hudDeprRetSwitchStepDown", "hudDeprRetSwitchStby", "hudDeprRetSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimReticleOff",
     "id" : "hudDeprRetSwitchOff",
-    "relatedActions" : [ "hudDeprRetSwitchCycle", "hudDeprRetSwitchStepUp", "hudDeprRetSwitchStepDown", "hudDeprRetSwitchStby", "hudDeprRetSwitchPri" ],
+    "relatedStateConfigurations" : [ "hudDeprRetSwitchCycle", "hudDeprRetSwitchStepUp", "hudDeprRetSwitchStepDown", "hudDeprRetSwitchStby", "hudDeprRetSwitchPri" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimHUDVelocityCAS",
     "id" : "hudVelocitySwitchCas",
-    "relatedActions" : [ "hudVelocitySwitchCycle", "hudVelocitySwitchStepUp", "hudVelocitySwitchStepDn", "hudVelocitySwitchTas", "hudVelocitySwitchGndSpd" ],
+    "relatedStateConfigurations" : [ "hudVelocitySwitchCycle", "hudVelocitySwitchStepUp", "hudVelocitySwitchStepDn", "hudVelocitySwitchTas", "hudVelocitySwitchGndSpd" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHUDVelocityTAS",
     "id" : "hudVelocitySwitchTas",
-    "relatedActions" : [ "hudVelocitySwitchCycle", "hudVelocitySwitchStepUp", "hudVelocitySwitchStepDn", "hudVelocitySwitchCas", "hudVelocitySwitchGndSpd" ],
+    "relatedStateConfigurations" : [ "hudVelocitySwitchCycle", "hudVelocitySwitchStepUp", "hudVelocitySwitchStepDn", "hudVelocitySwitchCas", "hudVelocitySwitchGndSpd" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHUDVelocityGND",
     "id" : "hudVelocitySwitchGndSpd",
-    "relatedActions" : [ "hudVelocitySwitchCycle", "hudVelocitySwitchStepUp", "hudVelocitySwitchStepDn", "hudVelocitySwitchCas", "hudVelocitySwitchTas" ],
+    "relatedStateConfigurations" : [ "hudVelocitySwitchCycle", "hudVelocitySwitchStepUp", "hudVelocitySwitchStepDn", "hudVelocitySwitchCas", "hudVelocitySwitchTas" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHUDAltRadar",
     "id" : "hudAltitudeSwitchRadar",
-    "relatedActions" : [ "hudAltitudeSwitchCycle", "hudAltitudeSwitchStepUp", "hudAltitudeSwitchStepDn", "hudAltitudeSwitchBaro", "hudAltitudeSwitchAuto" ],
+    "relatedStateConfigurations" : [ "hudAltitudeSwitchCycle", "hudAltitudeSwitchStepUp", "hudAltitudeSwitchStepDn", "hudAltitudeSwitchBaro", "hudAltitudeSwitchAuto" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHUDAltBaro",
     "id" : "hudAltitudeSwitchBaro",
-    "relatedActions" : [ "hudAltitudeSwitchCycle", "hudAltitudeSwitchStepUp", "hudAltitudeSwitchStepDn", "hudAltitudeSwitchRadar", "hudAltitudeSwitchAuto" ],
+    "relatedStateConfigurations" : [ "hudAltitudeSwitchCycle", "hudAltitudeSwitchStepUp", "hudAltitudeSwitchStepDn", "hudAltitudeSwitchRadar", "hudAltitudeSwitchAuto" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimHUDAltAuto",
     "id" : "hudAltitudeSwitchAuto",
-    "relatedActions" : [ "hudAltitudeSwitchCycle", "hudAltitudeSwitchStepUp", "hudAltitudeSwitchStepDn", "hudAltitudeSwitchRadar", "hudAltitudeSwitchBaro" ],
+    "relatedStateConfigurations" : [ "hudAltitudeSwitchCycle", "hudAltitudeSwitchStepUp", "hudAltitudeSwitchStepDn", "hudAltitudeSwitchRadar", "hudAltitudeSwitchBaro" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimHUDBrtDay",
     "id" : "hudBrightnessSwitchDay",
-    "relatedActions" : [ "hudBrightnessSwitchCycle", "hudBrightnessSwitchStepUp", "hudBrightnessSwitchStepDn", "hudBrightnessSwitchAutoBrt", "hudBrightnessSwitchNig" ],
+    "relatedStateConfigurations" : [ "hudBrightnessSwitchCycle", "hudBrightnessSwitchStepUp", "hudBrightnessSwitchStepDn", "hudBrightnessSwitchAutoBrt", "hudBrightnessSwitchNig" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHUDBrtAuto",
     "id" : "hudBrightnessSwitchAutoBrt",
-    "relatedActions" : [ "hudBrightnessSwitchCycle", "hudBrightnessSwitchStepUp", "hudBrightnessSwitchStepDn", "hudBrightnessSwitchDay", "hudBrightnessSwitchNig" ],
+    "relatedStateConfigurations" : [ "hudBrightnessSwitchCycle", "hudBrightnessSwitchStepUp", "hudBrightnessSwitchStepDn", "hudBrightnessSwitchDay", "hudBrightnessSwitchNig" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimHUDBrtNight",
     "id" : "hudBrightnessSwitchNig",
-    "relatedActions" : [ "hudBrightnessSwitchCycle", "hudBrightnessSwitchStepUp", "hudBrightnessSwitchStepDn", "hudBrightnessSwitchDay", "hudBrightnessSwitchAutoBrt" ],
+    "relatedStateConfigurations" : [ "hudBrightnessSwitchCycle", "hudBrightnessSwitchStepUp", "hudBrightnessSwitchStepDn", "hudBrightnessSwitchDay", "hudBrightnessSwitchAutoBrt" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimInstrumentLightCW",
     "id" : "lightInstPnlKnobPrimaryStepUp",
-    "relatedActions" : [ "lightInstPnlKnobPrimaryCycle", "lightInstPnlKnobPrimaryStepDown" ],
+    "relatedStateConfigurations" : [ "lightInstPnlKnobPrimaryCycle", "lightInstPnlKnobPrimaryStepDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimInstrumentLightCCW",
     "id" : "lightInstPnlKnobPrimaryStepDown",
-    "relatedActions" : [ "lightInstPnlKnobPrimaryCycle", "lightInstPnlKnobPrimaryStepUp" ],
+    "relatedStateConfigurations" : [ "lightInstPnlKnobPrimaryCycle", "lightInstPnlKnobPrimaryStepUp" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimDedBrightnessCW",
     "id" : "lightDedKnobPrimaryStepUp",
-    "relatedActions" : [ "lightDedKnobPrimaryCycle", "lightDedKnobPrimaryStepDown" ],
+    "relatedStateConfigurations" : [ "lightDedKnobPrimaryCycle", "lightDedKnobPrimaryStepDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimDedBrightnessCCW",
     "id" : "lightDedKnobPrimaryStepDown",
-    "relatedActions" : [ "lightDedKnobPrimaryCycle", "lightDedKnobPrimaryStepUp" ],
+    "relatedStateConfigurations" : [ "lightDedKnobPrimaryCycle", "lightDedKnobPrimaryStepUp" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimInteriorLightCW",
     "id" : "lightConsolesKnobFloodStepUp",
-    "relatedActions" : [ "lightConsolesKnobFloodCycle", "lightConsolesKnobFloodStepDown" ],
+    "relatedStateConfigurations" : [ "lightConsolesKnobFloodCycle", "lightConsolesKnobFloodStepDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimInteriorLightCCW",
     "id" : "lightConsolesKnobFloodStepDown",
-    "relatedActions" : [ "lightConsolesKnobFloodCycle", "lightConsolesKnobFloodStepUp" ],
+    "relatedStateConfigurations" : [ "lightConsolesKnobFloodCycle", "lightConsolesKnobFloodStepUp" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimAirSourceOff",
     "id" : "airAirSourceKnobOff",
-    "relatedActions" : [ "airAirSourceKnobStepUp", "airAirSourceKnobStepDown", "airAirSourceKnobNorm", "airAirSourceKnobDump", "airAirSourceKnobRam" ],
+    "relatedStateConfigurations" : [ "airAirSourceKnobStepUp", "airAirSourceKnobStepDown", "airAirSourceKnobNorm", "airAirSourceKnobDump", "airAirSourceKnobRam" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimAirSourceNorm",
     "id" : "airAirSourceKnobNorm",
-    "relatedActions" : [ "airAirSourceKnobStepUp", "airAirSourceKnobStepDown", "airAirSourceKnobOff", "airAirSourceKnobDump", "airAirSourceKnobRam" ],
+    "relatedStateConfigurations" : [ "airAirSourceKnobStepUp", "airAirSourceKnobStepDown", "airAirSourceKnobOff", "airAirSourceKnobDump", "airAirSourceKnobRam" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAirSourceDump",
     "id" : "airAirSourceKnobDump",
-    "relatedActions" : [ "airAirSourceKnobStepUp", "airAirSourceKnobStepDown", "airAirSourceKnobOff", "airAirSourceKnobNorm", "airAirSourceKnobRam" ],
+    "relatedStateConfigurations" : [ "airAirSourceKnobStepUp", "airAirSourceKnobStepDown", "airAirSourceKnobOff", "airAirSourceKnobNorm", "airAirSourceKnobRam" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimAirSourceRam",
     "id" : "airAirSourceKnobRam",
-    "relatedActions" : [ "airAirSourceKnobStepUp", "airAirSourceKnobStepDown", "airAirSourceKnobOff", "airAirSourceKnobNorm", "airAirSourceKnobDump" ],
+    "relatedStateConfigurations" : [ "airAirSourceKnobStepUp", "airAirSourceKnobStepDown", "airAirSourceKnobOff", "airAirSourceKnobNorm", "airAirSourceKnobDump" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimVMSOn",
     "id" : "zeroVmsSwitchOn",
-    "relatedActions" : [ "zeroVmsSwitchToggle", "zeroVmsSwitchInhibit" ],
+    "relatedStateConfigurations" : [ "zeroVmsSwitchToggle", "zeroVmsSwitchInhibit" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimVMSOff",
     "id" : "zeroVmsSwitchInhibit",
-    "relatedActions" : [ "zeroVmsSwitchToggle", "zeroVmsSwitchOn" ],
+    "relatedStateConfigurations" : [ "zeroVmsSwitchToggle", "zeroVmsSwitchOn" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimINSOff",
     "id" : "avionicsInsKnobOff",
-    "relatedActions" : [ "avionicsInsKnobStepUp", "avionicsInsKnobStepDown", "avionicsInsKnobNorm", "avionicsInsKnobNav", "avionicsInsKnobInFltAlign" ],
+    "relatedStateConfigurations" : [ "avionicsInsKnobStepUp", "avionicsInsKnobStepDown", "avionicsInsKnobNorm", "avionicsInsKnobNav", "avionicsInsKnobInFltAlign" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimINSNorm",
     "id" : "avionicsInsKnobNorm",
-    "relatedActions" : [ "avionicsInsKnobStepUp", "avionicsInsKnobStepDown", "avionicsInsKnobOff", "avionicsInsKnobNav", "avionicsInsKnobInFltAlign" ],
+    "relatedStateConfigurations" : [ "avionicsInsKnobStepUp", "avionicsInsKnobStepDown", "avionicsInsKnobOff", "avionicsInsKnobNav", "avionicsInsKnobInFltAlign" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimINSNav",
     "id" : "avionicsInsKnobNav",
-    "relatedActions" : [ "avionicsInsKnobStepUp", "avionicsInsKnobStepDown", "avionicsInsKnobOff", "avionicsInsKnobNorm", "avionicsInsKnobInFltAlign" ],
+    "relatedStateConfigurations" : [ "avionicsInsKnobStepUp", "avionicsInsKnobStepDown", "avionicsInsKnobOff", "avionicsInsKnobNorm", "avionicsInsKnobInFltAlign" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimINSInFlt",
     "id" : "avionicsInsKnobInFltAlign",
-    "relatedActions" : [ "avionicsInsKnobStepUp", "avionicsInsKnobStepDown", "avionicsInsKnobOff", "avionicsInsKnobNorm", "avionicsInsKnobNav" ],
+    "relatedStateConfigurations" : [ "avionicsInsKnobStepUp", "avionicsInsKnobStepDown", "avionicsInsKnobOff", "avionicsInsKnobNorm", "avionicsInsKnobNav" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimFCCOn",
     "id" : "avionicsFccSwitchOn",
-    "relatedActions" : [ "avionicsFccSwitchToggle", "avionicsFccSwitchOff" ],
+    "relatedStateConfigurations" : [ "avionicsFccSwitchToggle", "avionicsFccSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimFCCOff",
     "id" : "avionicsFccSwitchOff",
-    "relatedActions" : [ "avionicsFccSwitchToggle", "avionicsFccSwitchOn" ],
+    "relatedStateConfigurations" : [ "avionicsFccSwitchToggle", "avionicsFccSwitchOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimSMSOn",
     "id" : "avionicsSmsSwitchOn",
-    "relatedActions" : [ "avionicsSmsSwitchToggle", "avionicsSmsSwitchOff" ],
+    "relatedStateConfigurations" : [ "avionicsSmsSwitchToggle", "avionicsSmsSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimSMSOff",
     "id" : "avionicsSmsSwitchOff",
-    "relatedActions" : [ "avionicsSmsSwitchToggle", "avionicsSmsSwitchOn" ],
+    "relatedStateConfigurations" : [ "avionicsSmsSwitchToggle", "avionicsSmsSwitchOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimMFDOn",
     "id" : "avionicsMfdSwitchOn",
-    "relatedActions" : [ "avionicsMfdSwitchToggle", "avionicsMfdSwitchOff" ],
+    "relatedStateConfigurations" : [ "avionicsMfdSwitchToggle", "avionicsMfdSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimMFDOff",
     "id" : "avionicsMfdSwitchOff",
-    "relatedActions" : [ "avionicsMfdSwitchToggle", "avionicsMfdSwitchOn" ],
+    "relatedStateConfigurations" : [ "avionicsMfdSwitchToggle", "avionicsMfdSwitchOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimUFCOn",
     "id" : "avionicsUfcSwitchOn",
-    "relatedActions" : [ "avionicsUfcSwitchToggle", "avionicsUfcSwitchOff" ],
+    "relatedStateConfigurations" : [ "avionicsUfcSwitchToggle", "avionicsUfcSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimUFCOff",
     "id" : "avionicsUfcSwitchOff",
-    "relatedActions" : [ "avionicsUfcSwitchToggle", "avionicsUfcSwitchOn" ],
+    "relatedStateConfigurations" : [ "avionicsUfcSwitchToggle", "avionicsUfcSwitchOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimGPSOn",
     "id" : "avionicsGpsSwitchOn",
-    "relatedActions" : [ "avionicsGpsSwitchToggle", "avionicsGpsSwitchOff" ],
+    "relatedStateConfigurations" : [ "avionicsGpsSwitchToggle", "avionicsGpsSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimGPSOff",
     "id" : "avionicsGpsSwitchOff",
-    "relatedActions" : [ "avionicsGpsSwitchToggle", "avionicsGpsSwitchOn" ],
+    "relatedStateConfigurations" : [ "avionicsGpsSwitchToggle", "avionicsGpsSwitchOn" ],
     "stateful" : true
   }, {
     "active" : true,
     "callback" : "SimDLOn",
     "id" : "avionicsDlSwitchOn",
-    "relatedActions" : [ "avionicsDlSwitchToggle", "avionicsDlSwitchOff" ],
+    "relatedStateConfigurations" : [ "avionicsDlSwitchToggle", "avionicsDlSwitchOff" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimDLOff",
     "id" : "avionicsDlSwitchOff",
-    "relatedActions" : [ "avionicsDlSwitchToggle", "avionicsDlSwitchOn" ],
+    "relatedStateConfigurations" : [ "avionicsDlSwitchToggle", "avionicsDlSwitchOn" ],
     "stateful" : true
   }, {
     "active" : false,
     "callback" : "SimOxySupplyOn",
     "id" : "oxySetting2OnPilotBreathing",
-    "relatedActions" : [ "oxySetting2TogglePilotBreathing", "oxySetting2OffPilotBreathing" ],
+    "relatedStateConfigurations" : [ "oxySetting2TogglePilotBreathing", "oxySetting2OffPilotBreathing" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimOxySupplyOff",
     "id" : "oxySetting2OffPilotBreathing",
-    "relatedActions" : [ "oxySetting2TogglePilotBreathing", "oxySetting2OnPilotBreathing" ],
+    "relatedStateConfigurations" : [ "oxySetting2TogglePilotBreathing", "oxySetting2OnPilotBreathing" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimNVGModeOn",
     "id" : "ckpitNightvisionOn",
-    "relatedActions" : [ "ckpitNightvisionToggle", "ckpitNightvisionOff" ],
+    "relatedStateConfigurations" : [ "ckpitNightvisionToggle", "ckpitNightvisionOff" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimNVGModeOff",
     "id" : "ckpitNightvisionOff",
-    "relatedActions" : [ "ckpitNightvisionToggle", "ckpitNightvisionOn" ],
+    "relatedStateConfigurations" : [ "ckpitNightvisionToggle", "ckpitNightvisionOn" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimSmokeOn",
     "id" : "ckpitSmokeOn",
-    "relatedActions" : [ "ckpitSmokeToggle", "ckpitSmokeOff" ],
+    "relatedStateConfigurations" : [ "ckpitSmokeToggle", "ckpitSmokeOff" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimSmokeOff",
     "id" : "ckpitSmokeOff",
-    "relatedActions" : [ "ckpitSmokeToggle", "ckpitSmokeOn" ],
+    "relatedStateConfigurations" : [ "ckpitSmokeToggle", "ckpitSmokeOn" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimWheelBrakes",
     "id" : "ckpitWheelBrakesHold",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "TimeAccelerate",
     "id" : "simTimeAccelerationToggle2x",
-    "relatedActions" : [ "simTimeAccelerationToggle4x", "simTimeAccelerationStepUp", "simTimeAccelerationStepDown" ],
+    "relatedStateConfigurations" : [ "simTimeAccelerationToggle4x", "simTimeAccelerationStepUp", "simTimeAccelerationStepDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "TimeAccelerateMaxToggle",
     "id" : "simTimeAccelerationToggle4x",
-    "relatedActions" : [ "simTimeAccelerationToggle2x", "simTimeAccelerationStepUp", "simTimeAccelerationStepDown" ],
+    "relatedStateConfigurations" : [ "simTimeAccelerationToggle2x", "simTimeAccelerationStepUp", "simTimeAccelerationStepDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "TimeAccelerateInc",
     "id" : "simTimeAccelerationStepUp",
-    "relatedActions" : [ "simTimeAccelerationToggle2x", "simTimeAccelerationToggle4x", "simTimeAccelerationStepDown" ],
+    "relatedStateConfigurations" : [ "simTimeAccelerationToggle2x", "simTimeAccelerationToggle4x", "simTimeAccelerationStepDown" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "TimeAccelerateDec",
     "id" : "simTimeAccelerationStepDown",
-    "relatedActions" : [ "simTimeAccelerationToggle2x", "simTimeAccelerationToggle4x", "simTimeAccelerationStepUp" ],
+    "relatedStateConfigurations" : [ "simTimeAccelerationToggle2x", "simTimeAccelerationToggle4x", "simTimeAccelerationStepUp" ],
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimOpenChatBox",
     "id" : "simChat",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimEndFlight",
     "id" : "simToggleExitSimMenu",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWViewUp",
     "id" : "viewgenRotateViewUp",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWViewDown",
     "id" : "viewgenRotateViewDown",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWViewLeft",
     "id" : "viewgenRotateViewLeft",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWViewRight",
     "id" : "viewgenRotateViewRight",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWSelectF3PadlockMode",
     "id" : "viewintPadlock",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWSelectHUDMode",
     "id" : "viewintHudOnly",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWSelect2DCockpitMode",
     "id" : "viewintSnap3dCockpit",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWSelect3DCockpitMode",
     "id" : "viewintPan3dCockpit",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWGlanceForward",
     "id" : "viewintGlanceForward",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWCheckSix",
     "id" : "viewintGlanceBackward",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWSelectOrbitMode",
     "id" : "viewextOrbitCamera",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWSelectSatelliteMode",
     "id" : "viewextSatelliteCamera",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWSelectFlybyMode",
     "id" : "viewextFlybyCamera",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWSelectChaseMode",
     "id" : "viewextChaseCamera",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "RadioAWACSCommand",
     "id" : "radioAwacsMenu",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "RadioWingCommand",
     "id" : "radioWingmanMenu",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "RadioElementCommand",
     "id" : "radioElementMenu",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "RadioFlightCommand",
     "id" : "radioFlightMenu",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "RadioTowerCommand",
     "id" : "radioAtcMenu",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "RadioTankerCommand",
     "id" : "radioTankerMenu",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "RadioMessageSend",
     "id" : "radioSendMessageTanker",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWRadioMenuStep",
     "id" : "radioNextMenuTanker",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
   }, {
     "active" : false,
     "callback" : "OTWRadioMenuStepBack",
     "id" : "radioPreviousMenuTanker",
-    "relatedActions" : null,
+    "relatedStateConfigurations" : null,
     "stateful" : false
-  } ],
-  "byCallback" : null,
-  "byId" : null
+  } ]
 }

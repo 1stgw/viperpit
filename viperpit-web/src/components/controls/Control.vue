@@ -1,7 +1,7 @@
 <template>
   <v-btn
-    :input-value="getValue(id)"
-    @click="fireAction(id)"
+    :input-value="action.value"
+    @click="toggleState(id)"
     outlined
     color="light-green"
   >
@@ -23,14 +23,12 @@
     <div v-else-if="role === 'right'">
       <v-icon>mdi-menu-right</v-icon>
     </div>
-    <div v-else>
-      {{ label }}
-    </div>
+    <div v-else>{{ label }}</div>
   </v-btn>
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapState } from "vuex";
 
 export default {
   props: {
@@ -55,11 +53,20 @@ export default {
       required: true
     }
   },
-  computed: {
-    ...mapGetters(["getValue"])
-  },
+  computed: mapState({
+    action(state) {
+      let actions = state.states.actions;
+      if (!actions || !actions[this.id]) {
+        return {
+          id: this.id,
+          value: false
+        };
+      }
+      return actions[this.id];
+    }
+  }),
   methods: {
-    ...mapActions(["fireAction"])
+    ...mapActions(["toggleState"])
   }
 };
 </script>

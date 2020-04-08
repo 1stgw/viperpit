@@ -2,20 +2,13 @@
   <v-container>
     <v-app-bar dense>
       <v-tabs align-with-title>
-        <!-- eslint-disable-next-line -->
-        <v-tab to="/cockpits/f35/consoles/leftconsole">Left Console</v-tab>
-        <!-- eslint-disable-next-line -->
-        <v-tab to="/cockpits/f35/consoles/leftauxconsole">Left Aux Console</v-tab>
-        <!-- eslint-disable-next-line -->
-        <v-tab to="/cockpits/f35/consoles/centerconsole">Center Console</v-tab>
-        <!-- eslint-disable-next-line -->
-        <v-tab to="/cockpits/f35/consoles/rightconsole">Right Console</v-tab>
-        <!-- eslint-disable-next-line -->
-        <v-tab to="/cockpits/f35/consoles/miscellaneous">Miscellaneous</v-tab>
-        <!-- eslint-disable-next-line -->
-        <v-tab to="/cockpits/f35/consoles/views">Views</v-tab>
-        <!-- eslint-disable-next-line -->
-        <v-tab to="/cockpits/f35/consoles/radiocomms">Radio Comms</v-tab>
+        <v-tab :to="{ name: 'LeftConsoleForF35' }">Left Console</v-tab>
+        <v-tab :to="{ name: 'LeftAuxConsoleForF35' }">Left Aux Console</v-tab>
+        <v-tab :to="{ name: 'CenterConsoleForF35' }">Center Console</v-tab>
+        <v-tab :to="{ name: 'RightConsoleForF35' }">Right Console</v-tab>
+        <v-tab :to="{ name: 'MiscellaneousForF35' }">Miscellaneous</v-tab>
+        <v-tab :to="{ name: 'ViewsForF35' }">Views</v-tab>
+        <v-tab :to="{ name: 'RadioCommsForF35' }">Radio Comms</v-tab>
       </v-tabs>
     </v-app-bar>
     <router-view></router-view>

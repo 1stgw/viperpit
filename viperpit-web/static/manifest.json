@@ -1,41 +1,41 @@
 {
-	"short_name": "Viperpit",
-	"name": "Viperpit Control",
-	"icons": [
-		{
-			"src": "/images/icons-16.png",
-			"type": "image/png",
-			"sizes": "16x16"
-		},
-		{
-			"src": "/images/icons-32.png",
-			"type": "image/png",
-			"sizes": "32x32"
-		},
-		{
-			"src": "/images/icons-48.png",
-			"type": "image/png",
-			"sizes": "48x48"
-		},
-		{
-			"src": "/images/icons-64.png",
-			"type": "image/png",
-			"sizes": "64x64"
-		},
-		{
-			"src": "/images/icons-128.png",
-			"type": "image/png",
-			"sizes": "128x128"
-		},
-		{
-			"src": "/images/icons-256.png",
-			"type": "image/png",
-			"sizes": "256x256"
-		}
-	],
-	"start_url": "/#/cockpits/f16",
-	"background_color": "#000000",
-	"display": "standalone",
-	"scope": "/",
-	"theme_color": "#282828"
+  "short_name": "Viperpit",
+  "name": "Viperpit Control",
+  "icons": [
+    {
+      "src": "/images/icons-16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/images/icons-32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/images/icons-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/images/icons-64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "/images/icons-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/images/icons-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ],
+  "start_url": "/#/cockpits/f16",
+  "background_color": "#000000",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#282828"
 }

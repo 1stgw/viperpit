@@ -7,12 +7,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "express": "vue-cli-service express:watch",
+    "express:run": "vue-cli-service express:run"
   },
   "dependencies": {
     "@mdi/font": "^3.6.95",
     "core-js": "^3.6.4",
     "roboto-fontface": "*",
+    "stomp-broker-js": "^1.3.0",
     "typeface-oxanium": "^1.1.4",
     "vue": "^2.6.11",
     "vue-resource": "^1.5.1",
@@ -37,6 +40,7 @@
     "prettier": "^1.19.1",
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
+    "vue-cli-plugin-express": "^1.0.2",
     "vue-cli-plugin-vuetify": "~2.0.5",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.3.0"

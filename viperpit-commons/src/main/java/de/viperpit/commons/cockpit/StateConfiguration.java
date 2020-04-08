@@ -3,7 +3,7 @@ package de.viperpit.commons.cockpit;
 import java.util.Collection;
 import java.util.Objects;
 
-public class Action {
+public class StateConfiguration {
 
 	private boolean active;
 
@@ -11,7 +11,7 @@ public class Action {
 
 	private String id;
 
-	private Collection<String> relatedActions;
+	private Collection<String> relatedStateConfigurations;
 
 	private boolean stateful;
 
@@ -26,9 +26,8 @@ public class Action {
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
-		Action other = (Action) obj;
-		return active == other.active && Objects.equals(callback, other.callback) && Objects.equals(id, other.id)
-				&& Objects.equals(relatedActions, other.relatedActions) && stateful == other.stateful;
+		StateConfiguration other = (StateConfiguration) obj;
+		return Objects.equals(id, other.id);
 	}
 
 	public String getCallback() {
@@ -39,13 +38,13 @@ public class Action {
 		return this.id;
 	}
 
-	public Collection<String> getRelatedActions() {
-		return this.relatedActions;
+	public Collection<String> getRelatedStateConfigurations() {
+		return this.relatedStateConfigurations;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(active, callback, id, relatedActions, stateful);
+		return Objects.hash(id);
 	}
 
 	public boolean isActive() {
@@ -56,39 +55,39 @@ public class Action {
 		return this.stateful;
 	}
 
-	public void setActive(final boolean active) {
+	public void setActive(boolean active) {
 		this.active = active;
 	}
 
-	public void setCallback(final String callback) {
+	public void setCallback(String callback) {
 		this.callback = callback;
 	}
 
-	public void setId(final String id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
-	public void setRelatedActions(final Collection<String> relatedActions) {
-		this.relatedActions = relatedActions;
+	public void setRelatedStateConfigurations(Collection<String> relatedStateConfigurations) {
+		this.relatedStateConfigurations = relatedStateConfigurations;
 	}
 
-	public void setStateful(final boolean stateful) {
+	public void setStateful(boolean stateful) {
 		this.stateful = stateful;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Action [id=");
+		builder.append("StateConfiguration [id=");
 		builder.append(id);
 		builder.append(", callback=");
 		builder.append(callback);
+		builder.append(", relatedStateConfigurations=");
+		builder.append(relatedStateConfigurations);
 		builder.append(", active=");
 		builder.append(active);
 		builder.append(", stateful=");
 		builder.append(stateful);
-		builder.append(", relatedActions=");
-		builder.append(relatedActions);
 		builder.append("]");
 		return builder.toString();
 	}

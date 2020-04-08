@@ -1,8 +1,6 @@
 <template>
   <div class="switch-group">
-    <p>
-      {{ label }}
-    </p>
+    <p>{{ label }}</p>
     <v-btn-toggle>
       <slot></slot>
     </v-btn-toggle>

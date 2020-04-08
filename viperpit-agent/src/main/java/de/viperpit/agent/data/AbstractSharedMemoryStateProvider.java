@@ -657,817 +657,817 @@ public abstract class AbstractSharedMemoryStateProvider implements StateProvider
 	protected Object getAirAirSourceKnobDump(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAirAirSourceKnobNorm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAirAirSourceKnobOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAirAirSourceKnobRam(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAudio1Comm1KnobPowerOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAudio1Comm1KnobPowerOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAudio1Comm1ModeKnobGd(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAudio1Comm1ModeKnobSql(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAudio1Comm2KnobPowerOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAudio1Comm2KnobPowerOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAudio1Comm2ModeKnobGd(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAudio1Comm2ModeKnobSql(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAudio2IlsKnobOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAudio2IlsKnobOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxCniKnobSwitchBackup(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxCniKnobSwitchUfc(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxM4CodeSwitchHold(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxM4CodeSwitchZero(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxMasterKnobEmer(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxMasterKnobLow(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxMasterKnobNorm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxMasterKnobOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxMasterKnobStby(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxMonitorSwitchAudio(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxMonitorSwitchOut(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxReplySwitchA(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxReplySwitchB(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxReplySwitchOut(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxStationSelectorSwitchAATr(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAuxStationSelectorSwitchTR(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsDlSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsDlSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsFccSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsFccSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsGpsSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsGpsSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsInsKnobInFltAlign(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsInsKnobNav(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsInsKnobNorm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsInsKnobOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsMfdSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsMfdSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsSmsSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsSmsSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsUfcSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvionicsUfcSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvtrAvtrSwitchAuto(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvtrAvtrSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getAvtrAvtrSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsChSwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsChSwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsFlSwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsFlSwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsJettSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsJettSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsJmrSwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsJmrSwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsModeKnobAuto(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsModeKnobByp(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsModeKnobMan(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsModeKnobOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsModeKnobSemi(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsModeKnobStby(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsMwsSwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsMwsSwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsO1SwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsO1SwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsO2SwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsO2SwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsPrgmKnob1(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsPrgmKnob2(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsPrgmKnob3(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsPrgmKnob4(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsRwrSwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getCmdsRwrSwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getEcmOprSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getEcmOprSwitchOpr(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getElecMainPwrSwitchBatt(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getElecMainPwrSwitchMain(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getElecMainPwrSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getEngEngContSwitchPri(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getEngEngContSwitchSec(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getEngJfsSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getEngJfsSwitchStart2(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getEpuEpuSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getEpuEpuSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getEpuEpuSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getExtAntiCollisionSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getExtAntiCollisionSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getExtMasterSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getExtMasterSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getExtPositionSwitchFlash(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getExtPositionSwitchSteady(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getExtWingTailSwitchBrt(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getExtWingTailSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFltAltFlapsSwitchExtend(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFltAltFlapsSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFltDigitalSwitchBackup(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFltDigitalSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFltLeFlapsSwitchAuto(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFltLeFlapsSwitchLock(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFltManualTfFlyupSwitchDisable(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFltManualTfFlyupSwitchEnable(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFuelAirRefuelSwitchClose(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFuelAirRefuelSwitchOpen(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFuelEngFeedKnobAft(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFuelEngFeedKnobFwd(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFuelEngFeedKnobNorm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFuelEngFeedKnobOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFuelMasterSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getFuelMasterSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getGearGndJettSwitchEnable(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getGearGndJettSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getGearHookSwitchDn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getGearHookSwitchUp(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getGearLightsSwitchLanding(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getGearLightsSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getGearParkingBreakSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getGearParkingBreakSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getGearStoresConfigSwitchCatI(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getGearStoresConfigSwitchCatIii(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHmcsHmscKnobOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHmcsHmscKnobOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudAltitudeSwitchAuto(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudAltitudeSwitchBaro(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudAltitudeSwitchRadar(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudBrightnessSwitchAutoBrt(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudBrightnessSwitchDay(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudBrightnessSwitchNig(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudDedDataSwitchDed(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudDedDataSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudDedDataSwitchPfl(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudDeprRetSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudDeprRetSwitchPri(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudDeprRetSwitchStby(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudFpmSwitchAttFpm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudFpmSwitchFpm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudFpmSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudScalesSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudScalesSwitchVah(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudScalesSwitchVvVah(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudVelocitySwitchCas(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudVelocitySwitchGndSpd(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getHudVelocitySwitchTas(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getInstrModeKnobIlsNav(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getInstrModeKnobIlsTcn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getInstrModeKnobNav(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getInstrModeKnobTcn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainAltimeterPressureKnobDecr1(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainAltimeterPressureKnobDecr5(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainAltimeterPressureKnobIncr1(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainAltimeterPressureKnobIncr5(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainHsiCrsKnobDecrease1(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainHsiCrsKnobDecrease5(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainHsiCrsKnobIncrease1(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainHsiCrsKnobIncrease5(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainHsiHdgKnobDecrease1(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainHsiHdgKnobDecrease5(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainHsiHdgKnobIncrease1(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMainHsiHdgKnobIncrease5(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscLaserSwitchArm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscLaserSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscMasterArmSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscMasterArmSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscMasterArmSwitchSim(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscPitchSwitchAPOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscPitchSwitchAltHold(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscPitchSwitchAttHold(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscRfSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscRfSwitchQuiet(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscRfSwitchSilent(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscRollSwitchAttHold(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscRollSwitchHdgSel(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getMiscRollSwitchStrgSel(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getQtyExtFuelTransSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getQtyExtFuelTransSwitchWingFirst(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getQtyFuelQtySelKnobExtCtr(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getQtyFuelQtySelKnobExtWing(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getQtyFuelQtySelKnobIntWing(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getQtyFuelQtySelKnobNorm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getQtyFuelQtySelKnobRsvr(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getQtyFuelQtySelKnobTest(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getSnsrFcrSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getSnsrFcrSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getSnsrLeftHdptSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getSnsrLeftHdptSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getSnsrRdrAltSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getSnsrRdrAltSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getSnsrRdrAltSwitchStdby(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getSnsrRightHdptSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getSnsrRightHdptSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getTestProbeHeatSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getTestProbeHeatSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getTestProbeHeatSwitchTest(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getTrimTrimApDiscSwitchDisc(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getTrimTrimApDiscSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getUhfFunctionKnobBoth(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getUhfFunctionKnobMain(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getUhfFunctionKnobOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getUhfModeKnobGrd(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getUhfModeKnobMnl(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getUhfModeKnobPreset(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getZeroVmsSwitchInhibit(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
+	
 	protected Object getZeroVmsSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
-
-}
+	
+	}

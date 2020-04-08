@@ -24,7 +24,6 @@ dependencies {
 	implementation 'net.java.dev.jna:jna'
 	implementation 'net.java.dev.jna:jna-platform'
 	implementation 'javax.websocket:javax.websocket-client-api'
-	implementation 'org.eclipse.jetty.websocket:javax-websocket-server-impl'
 	implementation 'org.eclipse.jetty.websocket:javax-websocket-client-impl'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation('org.springframework.boot:spring-boot-starter-websocket') {

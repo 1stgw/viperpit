@@ -55,7 +55,7 @@ public class KeyFileTests {
 	public void testDemoKeyFiles() {
 		Map<String, KeyCodeLine> keyCodeLines = keyFile.getKeyCodeLines();
 		assertNotNull(keyCodeLines);
-		assertEquals(keyCodeLines.size(), 953);
+		assertEquals(953, keyCodeLines.size());
 	}
 
 	@Test
