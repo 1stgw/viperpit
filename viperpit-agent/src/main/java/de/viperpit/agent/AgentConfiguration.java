@@ -1,17 +1,53 @@
 package de.viperpit.agent;
 
+import static org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.json;
+
 import java.io.IOException;
 import java.util.Properties;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.FilterType;
 import org.springframework.core.io.Resource;
 
+import com.fasterxml.jackson.core.SerializableString;
+import com.fasterxml.jackson.core.io.CharacterEscapes;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 @Configuration
-@ComponentScan("de.viperpit.agent")
+//@ComponentScan("de.viperpit.agent")
+@ComponentScan(basePackages = { "de.viperpit.agent" }, excludeFilters = {
+		@Filter(type = FilterType.ANNOTATION, value = Configuration.class) })
 public class AgentConfiguration {
+
+	@SuppressWarnings("serial")
+	public static class SafeCharacterEscapes extends CharacterEscapes {
+
+		private final int[] escapedCharacters;
+
+		public SafeCharacterEscapes() {
+			int[] escapedCharacters = standardAsciiEscapesForJSON();
+			escapedCharacters['<'] = ESCAPE_STANDARD;
+			escapedCharacters['>'] = ESCAPE_STANDARD;
+			escapedCharacters['&'] = ESCAPE_STANDARD;
+			escapedCharacters['\''] = ESCAPE_STANDARD;
+			this.escapedCharacters = escapedCharacters;
+		}
+
+		@Override
+		public int[] getEscapeCodesForAscii() {
+			return escapedCharacters;
+		}
+
+		@Override
+		public SerializableString getEscapeSequence(int character) {
+			return null;
+		}
+
+	}
 
 	@Bean
 	public Properties directInputProperties(@Value("classpath:/mapping_directinput.properties") Resource resource)
@@ -19,6 +55,13 @@ public class AgentConfiguration {
 		Properties properties = new Properties();
 		properties.load(resource.getInputStream());
 		return properties;
+	}
+
+	@Bean
+	public ObjectMapper objectMapper() {
+		ObjectMapper objectMapper = json().build();
+		objectMapper.getFactory().setCharacterEscapes(new SafeCharacterEscapes());
+		return objectMapper;
 	}
 
 	@Bean

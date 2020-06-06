@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import de.viperpit.agent.AgentConfiguration;
 
 @EnableScheduling
-@SpringBootApplication(scanBasePackageClasses = { AgentConfiguration.class })
+@SpringBootApplication(scanBasePackageClasses = AgentConfiguration.class)
 public class LauncherApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {

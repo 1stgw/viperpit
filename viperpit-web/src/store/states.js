@@ -19,11 +19,13 @@ const actions = {
     commit(AGENTS_DISCONNECT, agentId);
   },
   initStates() {
-    Vue.prototype.$stomp.send("/app/cockpit/states/init", JSON.stringify({}));
+    const topic = "/app/cockpit/states/init";
+    Vue.prototype.$stomp.send(topic, JSON.stringify({}));
   },
   toggleState(context, id) {
+    const topic = "/app/cockpit/states/toggle";
     Vue.prototype.$stomp.send(
-      "/app/cockpit/states/toggle",
+      topic,
       JSON.stringify({
         id: id
       })
@@ -53,15 +55,6 @@ const mutations = {
     }
   },
   STATES_UPDATE(state, result) {
-    if (!result.agent) {
-      return;
-    }
-    if (!state.agentId) {
-      state.agentId = result.agent.id;
-    }
-    if (result.agent.id !== state.agentId) {
-      return;
-    }
     for (let id in result.updatedStates) {
       let value = result.updatedStates[id];
       let action = state.actions[id];
