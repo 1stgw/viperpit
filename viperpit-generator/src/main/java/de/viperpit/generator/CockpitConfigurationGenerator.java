@@ -11,6 +11,7 @@ import static com.google.common.base.Splitter.on;
 import static com.google.common.base.Strings.commonPrefix;
 import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Multimaps.index;
+import static com.google.common.collect.Sets.newHashSet;
 import static de.viperpit.generator.DefaultStateConfigurations.StateType.AIR;
 import static de.viperpit.generator.DefaultStateConfigurations.StateType.RAMP;
 import static de.viperpit.generator.DefaultStateConfigurations.StateType.TAXI;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -43,6 +45,9 @@ import de.viperpit.commons.cockpit.Pair;
 
 public class CockpitConfigurationGenerator {
 
+	private static final Set<String> GROUP_SUFFIXES = newHashSet("Button", "Switch", "Knob", "Handle", "Wheel",
+			"Rotary", "Rocker");
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(CockpitConfigurationGenerator.class);
 
 	@SuppressWarnings("deprecation")
@@ -59,16 +64,21 @@ public class CockpitConfigurationGenerator {
 		var stateFile = new File(metadataPath.getAbsolutePath(), "state.properties");
 		DefaultStateConfigurations defaultStateConfigurations = DefaultStateConfigurations.read(stateFile);
 		LOGGER.info("Loading filter file.");
-		var filterFile = new File(metadataPath.getAbsolutePath(), "state.properties");
+		var filterFile = new File(metadataPath.getAbsolutePath(), "filter.properties");
 		FilterConfigurations filterConfigurations = FilterConfigurations.read(filterFile);
 		LOGGER.info("Found key file and loading key file entries.");
-		var keyCodeLines = new KeyFile(keyFile, UTF_8).getKeyCodeLines().values();
+		var keyCodeLines = new KeyFile(keyFile, UTF_8) //
+				.getKeyCodeLines() //
+				.values() //
+				.stream() //
+				.filter(keyCodeLine -> filterConfigurations.isIncluded(keyCodeLine.getCallback())) //
+				.collect(toList());
 		LOGGER.info("Running the Generator.");
 		Multimap<String, ControlConfiguration> controlConfigurationsByGroup = LinkedHashMultimap.create();
 		keyCodeLines //
 				.stream() //
-				.filter(keyCodeLine -> filterConfigurations.isIncluded(keyCodeLine.getCallback())) //
 				.forEach(keyCodeLine -> {
+					String callback = keyCodeLine.getCallback();
 					var id = toId(keyCodeLine.getDescription());
 					var groupAndLabel = toGroupAndLabel(keyCodeLine);
 					var group = groupAndLabel.first();
@@ -109,7 +119,7 @@ public class CockpitConfigurationGenerator {
 					} else if (group.endsWith("Rocker")) {
 						style = "rocker";
 					}
-					var role = roleConfigurations.getRoleConfiguration(keyCodeLine.getCallback());
+					var role = roleConfigurations.getRoleConfiguration(callback);
 					var switchStyles = newArrayList("switch", "handle");
 					var type = "button";
 					if (switchStyles.contains(style) && relatedCallbacks.isEmpty()) {
@@ -124,15 +134,15 @@ public class CockpitConfigurationGenerator {
 					}
 					var controlConfiguration = new ControlConfiguration( //
 							id, //
-							keyCodeLine.getCallback(), //
+							callback, //
 							toLabel(keyCodeLine), //
 							keyCodeLine.getDescription(), //
 							style, //
-							role, //
-							defaultStateConfigurations.getDefaultConfiguration(keyCodeLine.getCallback(), RAMP), //
-							defaultStateConfigurations.getDefaultConfiguration(keyCodeLine.getCallback(), TAXI), //
-							defaultStateConfigurations.getDefaultConfiguration(keyCodeLine.getCallback(), AIR), //
-							type //
+							role.role(), //
+							type, //
+							defaultStateConfigurations.getDefaultValue(callback, RAMP), //
+							defaultStateConfigurations.getDefaultValue(callback, TAXI), //
+							defaultStateConfigurations.getDefaultValue(callback, AIR) //
 					);
 					controlConfigurationsByGroup.put(group, controlConfiguration);
 				});
@@ -143,7 +153,14 @@ public class CockpitConfigurationGenerator {
 		for (var keyCodeLineByGroup : keyCodeLinesByGroup.entries()) {
 			var keyCodeLine = keyCodeLineByGroup.getValue();
 			var id = keyCodeLineByGroup.getKey();
-			var label = toGroupAndLabel(keyCodeLine).second();
+			var firstIndexToken = ": ";
+			if (id.indexOf(firstIndexToken) < 0) {
+				firstIndexToken = "-";
+			}
+			var firstIndex = id.indexOf(firstIndexToken);
+			var lastIndexToken = GROUP_SUFFIXES.stream().filter(suffix -> id.endsWith(suffix)).findFirst();
+			var lastIndex = (lastIndexToken.isEmpty()) ? id.length() : id.lastIndexOf(lastIndexToken.get());
+			var label = toCapitalizedName(id.substring(firstIndex + 1, lastIndex).trim());
 			var controlGroupConfiguration = controlGroupConfigurations.get(id);
 			if (controlGroupConfiguration == null) {
 				controlGroupConfiguration = new ControlGroupConfiguration( //
@@ -195,7 +212,6 @@ public class CockpitConfigurationGenerator {
 				cockpitLabel, //
 				consoleConfigurations.values() //
 		);
-
 		var file = new File(metadataPath, "configuration.json");
 		var objectMapper = new ObjectMapper();
 		objectMapper.setVisibility(PropertyAccessor.FIELD, ANY);
@@ -250,12 +266,6 @@ public class CockpitConfigurationGenerator {
 	private String toName(String string) {
 		var tokens = new ArrayList<>(on(whitespace()).omitEmptyStrings().trimResults().splitToList(string));
 		return tokens.stream().collect(joining(" "));
-	}
-
-	@SuppressWarnings("deprecation")
-	private String toPathName(String string) {
-		var tokens = new ArrayList<>(on(whitespace()).trimResults().splitToList(string));
-		return javaLetterOrDigit().retainFrom(tokens.stream().map(token -> token.toLowerCase()).collect(joining()));
 	}
 
 	private Collection<KeyCodeLine> toRelated(KeyCodeLine keyCodeLine, Pair<String, String> groupAndLabel,

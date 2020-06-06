@@ -64,8 +64,12 @@ public class DefaultStateConfigurations {
 		}
 	}
 
-	public DefaultStateConfiguration getDefaultConfiguration(String id, StateType stateType) {
-		return map.get(new Pair<>(id, stateType));
+	public Object getDefaultValue(String id, StateType stateType) {
+		DefaultStateConfiguration defaultStateConfiguration = map.get(new Pair<>(id, stateType));
+		if (defaultStateConfiguration == null) {
+			return null;
+		}
+		return defaultStateConfiguration.defaultValue();
 	}
 
 }
