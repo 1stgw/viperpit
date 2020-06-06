@@ -42,9 +42,17 @@ public class KeyFile {
 
 		private final int sound;
 
-		public KeyCodeLine(final String category, final String section, final String callback, final int sound,
-				final int key, final int modifiers, final int keyCombinationKey, final int keyCombinationModifiers,
-				final String description) {
+		public KeyCodeLine( //
+				String category, //
+				String section, //
+				String callback, //
+				int sound, //
+				int key, //
+				int modifiers, //
+				int keyCombinationKey, //
+				int keyCombinationModifiers, //
+				String description //
+		) {
 			super();
 			this.category = category;
 			this.section = section;
@@ -207,13 +215,13 @@ public class KeyFile {
 		}
 	}
 
-	private List<String> parse(final String line) {
+	private List<String> parse(String line) {
 		return Splitter.on(CharMatcher.whitespace()).limit(9).trimResults().splitToList(line);
 	}
 
 	@SuppressWarnings("deprecation")
-	private String toCategory(final String line) {
-		final List<String> tokens = this.parse(line);
+	private String toCategory(String line) {
+		List<String> tokens = this.parse(line);
 		if ((tokens.size() != 9)) {
 			return null;
 		}
@@ -229,14 +237,14 @@ public class KeyFile {
 		if ((Integer.valueOf(tokens.get(7)).intValue() != (-1))) {
 			return null;
 		}
-		final String description = tokens.get(8);
+		String description = tokens.get(8);
 		if ((javaDigit().indexIn(description) != 1)) {
 			return null;
 		}
 		return description.substring(4, CharMatcher.is('\"').indexIn(description, 4)).trim();
 	}
 
-	private KeyCodeLine toKeyCodeLine(final String line, final String category, final String section) {
+	private KeyCodeLine toKeyCodeLine(String line, String category, String section) {
 		List<String> tokens = parse(line);
 		if (tokens.size() != 9) {
 			return null;
@@ -260,9 +268,9 @@ public class KeyFile {
 		} else {
 			comboKey = (-1);
 		}
-		final int comboModifiers = Integer.valueOf(tokens.get(6)).intValue();
-		final int visibility = Integer.valueOf(tokens.get(7)).intValue();
-		final String description = CharMatcher.is('\"').trimFrom(tokens.get(8));
+		int comboModifiers = Integer.valueOf(tokens.get(6)).intValue();
+		int visibility = Integer.valueOf(tokens.get(7)).intValue();
+		String description = CharMatcher.is('\"').trimFrom(tokens.get(8));
 		if (visibility == -1) {
 			return null;
 		}
@@ -270,46 +278,34 @@ public class KeyFile {
 				description);
 	}
 
-	private String toSection(final String line) {
-		final List<String> it = this.parse(line);
-		int _size = it.size();
-		boolean _tripleNotEquals = (_size != 9);
-		if (_tripleNotEquals) {
+	private String toSection(String line) {
+		List<String> tokens = parse(line);
+		if (tokens.size() != 9) {
 			return null;
 		}
-		String _get = it.get(0);
-		boolean _notEquals = (!Objects.equals(_get, "SimDoNothing"));
-		if (_notEquals) {
+		if (!Objects.equals(tokens.get(0), "SimDoNothing")) {
 			return null;
 		}
-		String _get_1 = it.get(3);
-		boolean _notEquals_1 = (!Objects.equals(_get_1, "0XFFFFFFFF"));
-		if (_notEquals_1) {
+		if (!Objects.equals(tokens.get(3), "0XFFFFFFFF")) {
 			return null;
 		}
-		if (any(it.subList(4, 6), (String string) -> Integer.valueOf(string).intValue() != 0)) {
+		if (any(tokens.subList(4, 6), (String string) -> Integer.valueOf(string).intValue() != 0)) {
 			return null;
 		}
-		int _intValue = Integer.valueOf(it.get(7)).intValue();
-		boolean _notEquals_2 = (_intValue != (-1));
-		if (_notEquals_2) {
+		if (Integer.valueOf(tokens.get(7)).intValue() != (-1)) {
 			return null;
 		}
-		final String description = it.get(8);
+		String description = tokens.get(8);
 		boolean _and = false;
 		StringBuilder stringBuilder = new StringBuilder();
 		stringBuilder.append("\"======== ");
-		boolean _startsWith = description.startsWith(stringBuilder.toString());
-		boolean _not = (!_startsWith);
-		if (!_not) {
+		if (!(!description.startsWith(stringBuilder.toString()))) {
 			_and = false;
 		} else {
 			StringBuilder stringBuilder1 = new StringBuilder();
 			stringBuilder1.append(" ");
 			stringBuilder1.append("========\"");
-			boolean _endsWith = description.endsWith(stringBuilder1.toString());
-			boolean _not_1 = (!_endsWith);
-			_and = _not_1;
+			_and = (!description.endsWith(stringBuilder1.toString()));
 		}
 		if (_and) {
 			return null;
