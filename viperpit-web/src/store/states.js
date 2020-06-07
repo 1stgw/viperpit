@@ -52,20 +52,15 @@ const getters = {
   },
   getControlConfigurationWithActiveState: state => controlGroupConfiguration => {
     let actions = state.actions;
-    let firstActiveControlConfiguration = controlGroupConfiguration.controlConfigurations.find(
+    return controlGroupConfiguration.controlConfigurations.find(
       controlConfiguration => {
-        const action = actions[controlConfiguration.id];
+        let action = actions[controlConfiguration.id];
         if (!action) {
           return false;
         }
         return actions[controlConfiguration.id].value === true;
       }
     );
-    if (!firstActiveControlConfiguration) {
-      firstActiveControlConfiguration =
-        controlGroupConfiguration.controlConfigurations[0];
-    }
-    return firstActiveControlConfiguration;
   },
   isConnected: state => {
     return state.actions && state.agentId;

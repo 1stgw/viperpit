@@ -166,6 +166,7 @@ public class CockpitConfigurationGenerator {
 				controlGroupConfiguration = new ControlGroupConfiguration( //
 						id, //
 						label, //
+						defaultStateConfigurations.isStateful(keyCodeLine.getCallback()),
 						controlConfigurationsByGroup.get(id) //
 				);
 				controlGroupConfigurations.put(id, controlGroupConfiguration);

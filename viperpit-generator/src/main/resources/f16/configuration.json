@@ -10,6 +10,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "TEST: FIRE & OHEAT DETECT Button",
         "label" : "Fire & Oheat Detect",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "testFireOheatDetectButtonHold",
           "callback" : "SimOverHeat",
@@ -25,6 +26,7 @@
       }, {
         "id" : "TEST: OXY QTY Switch",
         "label" : "Oxy Qty",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "testOxyQtySwitchHold",
           "callback" : "SimOBOGSBit",
@@ -40,6 +42,7 @@
       }, {
         "id" : "TEST: MAL & IND LTS Button",
         "label" : "Mal & Ind Lts",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "testMalIndLtsButtonHold",
           "callback" : "SimMalIndLights",
@@ -55,6 +58,7 @@
       }, {
         "id" : "TEST: PROBE HEAT Switch",
         "label" : "Probe Heat",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "testProbeHeatSwitchOn",
           "callback" : "SimProbeHeatOn",
@@ -92,6 +96,7 @@
       }, {
         "id" : "TEST: EPU/GEN Switch",
         "label" : "Epu/gen",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "testEpuGenSwitchHold",
           "callback" : "SimEpuGenTest",
@@ -107,6 +112,7 @@
       }, {
         "id" : "TEST: FLCS PWR TEST Switch",
         "label" : "Flcs Pwr Test",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "testFlcsPwrTestSwitchHold",
           "callback" : "SimFlcsPowerTest",
@@ -126,6 +132,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "FLT: DIGITAL Switch",
         "label" : "Digital",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "fltDigitalSwitchBackup",
           "callback" : "SimDigitalBUPBackup",
@@ -152,6 +159,7 @@
       }, {
         "id" : "FLT: ALT FLAPS Switch",
         "label" : "Alt Flaps",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "fltAltFlapsSwitchExtend",
           "callback" : "SimAltFlapsExtend",
@@ -178,6 +186,7 @@
       }, {
         "id" : "FLT: MANUAL TF FLYUP Switch",
         "label" : "Manual Tf Flyup",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "fltManualTfFlyupSwitchDisable",
           "callback" : "SimManualFlyupDisable",
@@ -204,6 +213,7 @@
       }, {
         "id" : "FLT: LE FLAPS Switch",
         "label" : "Le Flaps",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "fltLeFlapsSwitchLock",
           "callback" : "SimLEFLock",
@@ -230,6 +240,7 @@
       }, {
         "id" : "FLT: FLCS Switch",
         "label" : "Flcs",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "fltFlcsSwitchHold",
           "callback" : "SimFLCSReset",
@@ -245,6 +256,7 @@
       }, {
         "id" : "FLT: BIT Switch",
         "label" : "Bit",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "fltBitSwitchPush",
           "callback" : "SimFLTBIT",
@@ -264,6 +276,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "TRIM: ROLL TRIM Wheel",
         "label" : "Roll Trim",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "trimRollTrimWheelLWingDn",
           "callback" : "SimTrimRollLeft",
@@ -290,6 +303,7 @@
       }, {
         "id" : "TRIM: TRIM/AP DISC Switch",
         "label" : "Trim/ap Disc",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "trimTrimApDiscSwitchDisc",
           "callback" : "SimTrimAPDISC",
@@ -316,6 +330,7 @@
       }, {
         "id" : "TRIM: YAW TRIM Knob",
         "label" : "Yaw Trim",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "trimYawTrimKnobL",
           "callback" : "SimTrimYawLeft",
@@ -342,6 +357,7 @@
       }, {
         "id" : "TRIM: PITCH TRIM Wheel",
         "label" : "Pitch Trim",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "trimPitchTrimWheelNoseUp",
           "callback" : "SimTrimNoseUp",
@@ -372,6 +388,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "FUEL: MASTER Switch",
         "label" : "Master",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "fuelMasterSwitchOn",
           "callback" : "SimMasterFuelOn",
@@ -398,6 +415,7 @@
       }, {
         "id" : "FUEL: ENG FEED Knob",
         "label" : "Eng Feed",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "fuelEngFeedKnobOff",
           "callback" : "SimFuelPumpOff",
@@ -446,6 +464,7 @@
       }, {
         "id" : "FUEL: AIR REFUEL Switch",
         "label" : "Air Refuel",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "fuelAirRefuelSwitchOpen",
           "callback" : "SimFuelDoorOpen",
@@ -476,6 +495,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "AUX: MASTER Knob",
         "label" : "Master",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "auxMasterKnobOff",
           "callback" : "SimIFFMasterOff",
@@ -535,6 +555,7 @@
       }, {
         "id" : "AUX: M-4 CODE Switch",
         "label" : "M-4 Code",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "auxM4CodeSwitchZero",
           "callback" : "SimIFFCodeSwitchZero",
@@ -561,6 +582,7 @@
       }, {
         "id" : "AUX: CNI Knob Switch",
         "label" : "Cni Knob",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "auxCniKnobSwitchBackup",
           "callback" : "SimAuxComBackup",
@@ -587,6 +609,7 @@
       }, {
         "id" : "AUX: REPLY Switch",
         "label" : "Reply",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "auxReplySwitchB",
           "callback" : "SimIFFMode4ReplyBravo",
@@ -624,6 +647,7 @@
       }, {
         "id" : "AUX: MONITOR Switch",
         "label" : "Monitor",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "auxMonitorSwitchAudio",
           "callback" : "SimIFFMode4MonitorAud",
@@ -650,6 +674,7 @@
       }, {
         "id" : "AUX: CHANNEL",
         "label" : "Channel",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "auxChannelCycleUpLeftDigit",
           "callback" : "SimCycleLeftAuxComDigit",
@@ -742,6 +767,7 @@
       }, {
         "id" : "AUX: STATION SELECTOR Switch",
         "label" : "Station Selector",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "auxStationSelectorSwitchTR",
           "callback" : "SimTACANTR",
@@ -772,6 +798,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "EXT: ANTI COLLISION Switch",
         "label" : "Anti Collision",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "extAntiCollisionSwitchOn",
           "callback" : "SimAntiCollOn",
@@ -798,6 +825,7 @@
       }, {
         "id" : "EXT: POSITION Switch",
         "label" : "Position",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "extPositionSwitchFlash",
           "callback" : "SimLightsFlash",
@@ -824,6 +852,7 @@
       }, {
         "id" : "EXT: WING/TAIL Switch",
         "label" : "Wing/tail",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "extWingTailSwitchBrt",
           "callback" : "SimWingLightBrt",
@@ -850,6 +879,7 @@
       }, {
         "id" : "EXT: MASTER Switch",
         "label" : "Master",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "extMasterSwitchNorm",
           "callback" : "SimExtlMasterNorm",
@@ -880,6 +910,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "EPU: EPU Switch",
         "label" : "Epu",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "epuEpuSwitchOn",
           "callback" : "SimEpuOn",
@@ -921,6 +952,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "ELEC: MAIN PWR Switch",
         "label" : "Main Pwr",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "elecMainPwrSwitchMain",
           "callback" : "SimMainPowerMain",
@@ -958,6 +990,7 @@
       }, {
         "id" : "ELEC: CAUTION RESET Button",
         "label" : "Caution Reset",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "elecCautionResetButtonPush",
           "callback" : "SimElecReset",
@@ -977,6 +1010,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "AVTR: AVTR Switch",
         "label" : "Avtr",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "avtrAvtrSwitchToggleOnOff",
           "callback" : "SimAVTRToggle",
@@ -1029,6 +1063,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "ECM: OPR Switch",
         "label" : "Opr",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "ecmOprSwitchOpr",
           "callback" : "SimEcmPowerOn",
@@ -1059,6 +1094,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "ENG: JFS Switch",
         "label" : "Jfs",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "engJfsSwitchOff",
           "callback" : "SimJfsStart_Off",
@@ -1085,6 +1121,7 @@
       }, {
         "id" : "ENG: ENG CONT Switch",
         "label" : "Eng Cont",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "engEngContSwitchPri",
           "callback" : "SimEngContPri",
@@ -1115,6 +1152,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "AUDIO2: INTERCOM Knob",
         "label" : "Intercom",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "audio2IntercomKnobVolumeIncr",
           "callback" : "SimStepIntercomVolumeUp",
@@ -1141,6 +1179,7 @@
       }, {
         "id" : "AUDIO2: ILS Knob",
         "label" : "Ils",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "audio2IlsKnobOn",
           "callback" : "SimILSOn",
@@ -1171,6 +1210,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "AUDIO1: COMM 1 Knob",
         "label" : "Comm 1",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "audio1Comm1KnobVolumeIncr",
           "callback" : "SimStepComm1VolumeUp",
@@ -1219,6 +1259,7 @@
       }, {
         "id" : "AUDIO1: COMM 2 Knob",
         "label" : "Comm 2",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "audio1Comm2KnobVolumeIncr",
           "callback" : "SimStepComm2VolumeUp",
@@ -1267,6 +1308,7 @@
       }, {
         "id" : "AUDIO1: MSL Knob",
         "label" : "Msl",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "audio1MslKnobVolumeIncr",
           "callback" : "SimStepMissileVolumeUp",
@@ -1293,6 +1335,7 @@
       }, {
         "id" : "AUDIO1: COMM 1 Mode Knob",
         "label" : "Comm 1 Mode",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "audio1Comm1ModeKnobSql",
           "callback" : "SimAud1Com1Sql",
@@ -1319,6 +1362,7 @@
       }, {
         "id" : "AUDIO1: COMM 2 Mode Knob",
         "label" : "Comm 2 Mode",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "audio1Comm2ModeKnobSql",
           "callback" : "SimAud1Com2Sql",
@@ -1345,6 +1389,7 @@
       }, {
         "id" : "AUDIO1: THREAT Knob",
         "label" : "Threat",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "audio1ThreatKnobVolumeIncr",
           "callback" : "SimStepThreatVolumeUp",
@@ -1375,6 +1420,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "MPO: MANUAL PITCH Switch",
         "label" : "Manual Pitch",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "mpoManualPitchSwitchHold",
           "callback" : "SimMPO",
@@ -1394,6 +1440,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "UHF: PRESET CHANNEL Knob",
         "label" : "Preset Channel",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "uhfPresetChannelKnobCycleUp",
           "callback" : "SimCycleRadioChannel",
@@ -1420,6 +1467,7 @@
       }, {
         "id" : "UHF: A-3-2-T Rotary X__.___",
         "label" : "A-3-2-t Rotary X__.___",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "uhfA32TRotaryXzzzzzStepUp",
           "callback" : "SimBupUhfFreq1Inc",
@@ -1446,6 +1494,7 @@
       }, {
         "id" : "UHF: Manual Frequency _X_.___",
         "label" : "Manual Frequency _x_.___",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "uhfManualFrequencyZxzzzzCycleUp",
           "callback" : "SimBupUhfFreq2Inc",
@@ -1472,6 +1521,7 @@
       }, {
         "id" : "UHF: Manual Frequency __X.___",
         "label" : "Manual Frequency __x.___",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "uhfManualFrequencyZzxzzzCycleUp",
           "callback" : "SimBupUhfFreq3Inc",
@@ -1498,6 +1548,7 @@
       }, {
         "id" : "UHF: Manual Frequency ___.X__",
         "label" : "Manual Frequency ___.x__",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "uhfManualFrequencyZzzxzzCycleUp",
           "callback" : "SimBupUhfFreq4Inc",
@@ -1524,6 +1575,7 @@
       }, {
         "id" : "UHF: Manual Frequency ___._XX",
         "label" : "Manual Frequency ___._xx",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "uhfManualFrequencyZzzzxxCycleUp",
           "callback" : "SimBupUhfFreq5Inc",
@@ -1550,6 +1602,7 @@
       }, {
         "id" : "UHF: FUNCTION Knob",
         "label" : "Function",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "uhfFunctionKnobOff",
           "callback" : "SimBupUhfOff",
@@ -1587,6 +1640,7 @@
       }, {
         "id" : "UHF: VOL Knob",
         "label" : "Vol",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "uhfVolKnobAiVsIvcVolumeIncr",
           "callback" : "OTWBalanceIVCvsAIUp",
@@ -1613,6 +1667,7 @@
       }, {
         "id" : "UHF: MODE Knob",
         "label" : "Mode",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "uhfModeKnobMnl",
           "callback" : "SimBupUhfManual",
@@ -1654,6 +1709,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "LEFT WALL: SLAP Switch (ECM-PGRM # 5)",
         "label" : "Slap Switch (ecm-pgrm # 5)",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "leftWallSlapSwitchEcmPgrm5",
           "callback" : "SimSlapSwitch",
@@ -1669,6 +1725,7 @@
       }, {
         "id" : "LEFT WALL: CANOPY",
         "label" : "Canopy",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "leftWallCanopyOpen",
           "callback" : "AFCanopyOpen",
@@ -1699,6 +1756,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "SEAT: Safety Lever",
         "label" : "Safety Lever",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "seatSafetyLeverArmed",
           "callback" : "SimSeatOn",
@@ -1725,6 +1783,7 @@
       }, {
         "id" : "SEAT: EJECT Handle",
         "label" : "Eject",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "seatEjectHandleHoldForEject",
           "callback" : "SimEject",
@@ -1748,6 +1807,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "ALT GEAR: Extend Gear Handle",
         "label" : "Extend Gear",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "altGearExtendGearHandlePush",
           "callback" : "AFAlternateGear",
@@ -1763,6 +1823,7 @@
       }, {
         "id" : "ALT GEAR: Reset Button",
         "label" : "Reset",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "altGearResetButtonPush",
           "callback" : "AFAlternateGearReset",
@@ -1782,6 +1843,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "TWA: POWER Button",
         "label" : "Power",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "twaPowerButtonOn",
           "callback" : "SimRwrPowerOn",
@@ -1812,6 +1874,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "HMCS: HMSC Knob",
         "label" : "Hmsc",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "hmcsHmscKnobBrightnessIncr",
           "callback" : "SimHmsSymWheelUp",
@@ -1864,6 +1927,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "CMDS: RWR Switch",
         "label" : "Rwr",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "cmdsRwrSwitchPowerOn",
           "callback" : "SimEWSRWROn",
@@ -1890,6 +1954,7 @@
       }, {
         "id" : "CMDS: JMR Switch",
         "label" : "Jmr",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "cmdsJmrSwitchPowerOn",
           "callback" : "SimEWSJammerOn",
@@ -1916,6 +1981,7 @@
       }, {
         "id" : "CMDS: MWS Switch",
         "label" : "Mws",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "cmdsMwsSwitchPowerOn",
           "callback" : "SimEWSMwsOn",
@@ -1942,6 +2008,7 @@
       }, {
         "id" : "CMDS: O1 Switch",
         "label" : "O1",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "cmdsO1SwitchPowerOn",
           "callback" : "SimEWSO1On",
@@ -1968,6 +2035,7 @@
       }, {
         "id" : "CMDS: O2 Switch",
         "label" : "O2",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "cmdsO2SwitchPowerOn",
           "callback" : "SimEWSO2On",
@@ -1994,6 +2062,7 @@
       }, {
         "id" : "CMDS: CH Switch",
         "label" : "Ch",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "cmdsChSwitchPowerOn",
           "callback" : "SimEWSChaffOn",
@@ -2020,6 +2089,7 @@
       }, {
         "id" : "CMDS: FL Switch",
         "label" : "Fl",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "cmdsFlSwitchPowerOn",
           "callback" : "SimEWSFlareOn",
@@ -2046,6 +2116,7 @@
       }, {
         "id" : "CMDS: JETT Switch",
         "label" : "Jett",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "cmdsJettSwitchOn",
           "callback" : "SimEwsJettOn",
@@ -2072,6 +2143,7 @@
       }, {
         "id" : "CMDS: PRGM Knob",
         "label" : "Prgm",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "cmdsPrgmKnob1",
           "callback" : "SimEWSProgOne",
@@ -2120,6 +2192,7 @@
       }, {
         "id" : "CMDS: MODE Knob",
         "label" : "Mode",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "cmdsModeKnobOff",
           "callback" : "SimEWSModeOff",
@@ -2194,6 +2267,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "GEAR: EMER STORES JETTISON Button",
         "label" : "Emer Stores Jettison",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "gearEmerStoresJettisonButtonHold",
           "callback" : "SimEmergencyJettison",
@@ -2209,6 +2283,7 @@
       }, {
         "id" : "GEAR: HOOK Switch",
         "label" : "Hook",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "gearHookSwitchUp",
           "callback" : "SimHookUp",
@@ -2235,6 +2310,7 @@
       }, {
         "id" : "GEAR: GND JETT Switch",
         "label" : "Gnd Jett",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "gearGndJettSwitchEnable",
           "callback" : "SimGndJettOn",
@@ -2261,6 +2337,7 @@
       }, {
         "id" : "GEAR: PARKING BREAK Switch",
         "label" : "Parking Break",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "gearParkingBreakSwitchOn",
           "callback" : "SimParkingBrakeOn",
@@ -2287,6 +2364,7 @@
       }, {
         "id" : "GEAR: LG Handle",
         "label" : "Lg",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "gearLgHandleUp",
           "callback" : "AFGearUp",
@@ -2313,6 +2391,7 @@
       }, {
         "id" : "GEAR: STORES CONFIG Switch",
         "label" : "Stores Config",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "gearStoresConfigSwitchCatI",
           "callback" : "SimCATI",
@@ -2339,6 +2418,7 @@
       }, {
         "id" : "GEAR: HORN SILENCER Button",
         "label" : "Horn Silencer",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "gearHornSilencerButtonPush",
           "callback" : "SimSilenceHorn",
@@ -2354,6 +2434,7 @@
       }, {
         "id" : "GEAR: LIGHTS Switch",
         "label" : "Lights",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "gearLightsSwitchLanding",
           "callback" : "SimLandingLightOn",
@@ -2388,6 +2469,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "MISC: RF Switch",
         "label" : "Rf",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "miscRfSwitchNorm",
           "callback" : "SimRFNorm",
@@ -2425,6 +2507,7 @@
       }, {
         "id" : "MISC: LASER Switch",
         "label" : "Laser",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "miscLaserSwitchArm",
           "callback" : "SimLaserArmOn",
@@ -2451,6 +2534,7 @@
       }, {
         "id" : "MISC: MASTER ARM Switch",
         "label" : "Master Arm",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "miscMasterArmSwitchOn",
           "callback" : "SimArmMasterArm",
@@ -2488,6 +2572,7 @@
       }, {
         "id" : "MISC: ADV MODE",
         "label" : "Adv Mode",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "miscAdvModeToggleTfrOnOff",
           "callback" : "SimToggleTFR",
@@ -2503,6 +2588,7 @@
       }, {
         "id" : "MISC: ROLL Switch",
         "label" : "Roll",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "miscRollSwitchHdgSel",
           "callback" : "SimLeftAPUp",
@@ -2540,6 +2626,7 @@
       }, {
         "id" : "MISC: PITCH Switch",
         "label" : "Pitch",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "miscPitchSwitchAltHold",
           "callback" : "SimRightAPUp",
@@ -2581,6 +2668,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "EYE: MASTER CAUTION Button",
         "label" : "Master Caution",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "eyeMasterCautionButtonPush",
           "callback" : "ExtinguishMasterCaution",
@@ -2596,6 +2684,7 @@
       }, {
         "id" : "EYE: F ACK Button",
         "label" : "F Ack",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "eyeFAckButtonPush",
           "callback" : "SimICPFAck",
@@ -2615,6 +2704,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "TWP: HANDOFF",
         "label" : "Handoff",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "twpHandoffPush",
           "callback" : "SimRWRHandoff",
@@ -2630,6 +2720,7 @@
       }, {
         "id" : "TWP: MISSILE LAUNCH",
         "label" : "Missile Launch",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "twpMissileLaunchPush",
           "callback" : "SimRWRLaunch",
@@ -2645,6 +2736,7 @@
       }, {
         "id" : "TWP: SYS TEST",
         "label" : "Sys Test",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "twpSysTestPush",
           "callback" : "SimRWRSysTest",
@@ -2660,6 +2752,7 @@
       }, {
         "id" : "TWP: TGT SEP",
         "label" : "Tgt Sep",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "twpTgtSepPush",
           "callback" : "SimRWRSetTargetSep",
@@ -2679,6 +2772,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "RWR: Brightness Knob",
         "label" : "Brightness",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "rwrBrightnessKnobIncrease",
           "callback" : "SimRWRBrightnessUp",
@@ -2709,6 +2803,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "MAIN: HSI HDG Knob",
         "label" : "Hsi Hdg",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "mainHsiHdgKnobIncrease5",
           "callback" : "SimHsiHeadingInc",
@@ -2757,6 +2852,7 @@
       }, {
         "id" : "MAIN: HSI CRS Knob",
         "label" : "Hsi Crs",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "mainHsiCrsKnobIncrease5",
           "callback" : "SimHsiCourseInc",
@@ -2805,6 +2901,7 @@
       }, {
         "id" : "MAIN: Altimeter Pressure Knob",
         "label" : "Altimeter Pressure",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "mainAltimeterPressureKnobIncr5",
           "callback" : "SimAltPressInc",
@@ -2857,6 +2954,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "INSTR: MODE Knob",
         "label" : "Mode",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "instrModeKnobIlsTcn",
           "callback" : "SimHSIIlsTcn",
@@ -2909,6 +3007,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "QTY: FUEL QTY SEL Knob",
         "label" : "Fuel Qty Sel",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "qtyFuelQtySelKnobTest",
           "callback" : "SimFuelSwitchTest",
@@ -2979,6 +3078,7 @@
       }, {
         "id" : "QTY: EXT FUEL TRANS Switch",
         "label" : "Ext Fuel Trans",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "qtyExtFuelTransSwitchNorm",
           "callback" : "SimFuelTransNorm",
@@ -3013,6 +3113,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "SNSR: LEFT HDPT Switch",
         "label" : "Left Hdpt",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "snsrLeftHdptSwitchOn",
           "callback" : "SimLeftHptOn",
@@ -3039,6 +3140,7 @@
       }, {
         "id" : "SNSR: RIGHT HDPT Switch",
         "label" : "Right Hdpt",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "snsrRightHdptSwitchOn",
           "callback" : "SimRightHptOn",
@@ -3065,6 +3167,7 @@
       }, {
         "id" : "SNSR: FCR Switch",
         "label" : "Fcr",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "snsrFcrSwitchOn",
           "callback" : "SimFCROn",
@@ -3091,6 +3194,7 @@
       }, {
         "id" : "SNSR: RDR ALT Switch",
         "label" : "Rdr Alt",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "snsrRdrAltSwitchOn",
           "callback" : "SimRALTON",
@@ -3132,6 +3236,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "HUD: Scales Switch",
         "label" : "Scales",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "hudScalesSwitchVvVah",
           "callback" : "SimScalesVVVAH",
@@ -3169,6 +3274,7 @@
       }, {
         "id" : "HUD: FPM Switch",
         "label" : "Fpm",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "hudFpmSwitchAttFpm",
           "callback" : "SimPitchLadderATTFPM",
@@ -3206,6 +3312,7 @@
       }, {
         "id" : "HUD: DED Data Switch",
         "label" : "Ded Data",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "hudDedDataSwitchDed",
           "callback" : "SimHUDDEDDED",
@@ -3243,6 +3350,7 @@
       }, {
         "id" : "HUD: DEPR RET Switch",
         "label" : "Depr Ret",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "hudDeprRetSwitchStby",
           "callback" : "SimReticleStby",
@@ -3280,6 +3388,7 @@
       }, {
         "id" : "HUD: Velocity Switch",
         "label" : "Velocity",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "hudVelocitySwitchCas",
           "callback" : "SimHUDVelocityCAS",
@@ -3317,6 +3426,7 @@
       }, {
         "id" : "HUD: Altitude Switch",
         "label" : "Altitude",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "hudAltitudeSwitchRadar",
           "callback" : "SimHUDAltRadar",
@@ -3354,6 +3464,7 @@
       }, {
         "id" : "HUD: Brightness Switch",
         "label" : "Brightness",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "hudBrightnessSwitchDay",
           "callback" : "SimHUDBrtDay",
@@ -3395,6 +3506,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "LIGHT: INST PNL Knob (Primary)",
         "label" : "Inst Pnl Knob (primary)",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "lightInstPnlKnobPrimaryStepUp",
           "callback" : "SimInstrumentLightCW",
@@ -3421,6 +3533,7 @@
       }, {
         "id" : "LIGHT: DED Knob (Primary)",
         "label" : "Ded Knob (primary)",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "lightDedKnobPrimaryStepUp",
           "callback" : "SimDedBrightnessCW",
@@ -3447,6 +3560,7 @@
       }, {
         "id" : "LIGHT: CONSOLES Knob (Flood)",
         "label" : "Consoles Knob (flood)",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "lightConsolesKnobFloodStepUp",
           "callback" : "SimInteriorLightCW",
@@ -3477,6 +3591,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "AIR: AIR SOURCE Knob",
         "label" : "Air Source",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "airAirSourceKnobOff",
           "callback" : "SimAirSourceOff",
@@ -3529,6 +3644,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "ZERO: VMS Switch",
         "label" : "Vms",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "zeroVmsSwitchOn",
           "callback" : "SimVMSOn",
@@ -3559,6 +3675,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "AVIONICS: INS Knob",
         "label" : "Ins",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "avionicsInsKnobOff",
           "callback" : "SimINSOff",
@@ -3607,6 +3724,7 @@
       }, {
         "id" : "AVIONICS: FCC Switch",
         "label" : "Fcc",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "avionicsFccSwitchOn",
           "callback" : "SimFCCOn",
@@ -3633,6 +3751,7 @@
       }, {
         "id" : "AVIONICS: SMS Switch",
         "label" : "Sms",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "avionicsSmsSwitchOn",
           "callback" : "SimSMSOn",
@@ -3659,6 +3778,7 @@
       }, {
         "id" : "AVIONICS: MFD Switch",
         "label" : "Mfd",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "avionicsMfdSwitchOn",
           "callback" : "SimMFDOn",
@@ -3685,6 +3805,7 @@
       }, {
         "id" : "AVIONICS: UFC Switch",
         "label" : "Ufc",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "avionicsUfcSwitchOn",
           "callback" : "SimUFCOn",
@@ -3711,6 +3832,7 @@
       }, {
         "id" : "AVIONICS: GPS Switch",
         "label" : "Gps",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "avionicsGpsSwitchOn",
           "callback" : "SimGPSOn",
@@ -3737,6 +3859,7 @@
       }, {
         "id" : "AVIONICS: DL Switch",
         "label" : "Dl",
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "avionicsDlSwitchOn",
           "callback" : "SimDLOn",
@@ -3767,6 +3890,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "OXY: Setting 2",
         "label" : "Setting 2",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "oxySetting2OnPilotBreathing",
           "callback" : "SimOxySupplyOn",
@@ -3801,6 +3925,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "CKPIT: Nightvision",
         "label" : "Nightvision",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "ckpitNightvisionOn",
           "callback" : "SimNVGModeOn",
@@ -3827,6 +3952,7 @@
       }, {
         "id" : "CKPIT: Smoke",
         "label" : "Smoke",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "ckpitSmokeOn",
           "callback" : "SimSmokeOn",
@@ -3853,6 +3979,7 @@
       }, {
         "id" : "CKPIT: Wheel Brakes",
         "label" : "Wheel Brakes",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "ckpitWheelBrakesHold",
           "callback" : "SimWheelBrakes",
@@ -3872,6 +3999,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "SIM: Time Acceleration",
         "label" : "Time Acceleration",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "simTimeAccelerationToggle2x",
           "callback" : "TimeAccelerate",
@@ -3920,6 +4048,7 @@
       }, {
         "id" : "SIM: Chat",
         "label" : "Chat",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "simChat",
           "callback" : "SimOpenChatBox",
@@ -3935,6 +4064,7 @@
       }, {
         "id" : "SIM: Toggle Exit Sim Menu",
         "label" : "Toggle Exit Sim Menu",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "simToggleExitSimMenu",
           "callback" : "SimEndFlight",
@@ -3958,6 +4088,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "VIEWGEN: Rotate View Up",
         "label" : "Rotate View Up",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewgenRotateViewUp",
           "callback" : "OTWViewUp",
@@ -3973,6 +4104,7 @@
       }, {
         "id" : "VIEWGEN: Rotate View Down",
         "label" : "Rotate View Down",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewgenRotateViewDown",
           "callback" : "OTWViewDown",
@@ -3988,6 +4120,7 @@
       }, {
         "id" : "VIEWGEN: Rotate View Left",
         "label" : "Rotate View Left",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewgenRotateViewLeft",
           "callback" : "OTWViewLeft",
@@ -4003,6 +4136,7 @@
       }, {
         "id" : "VIEWGEN: Rotate View Right",
         "label" : "Rotate View Right",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewgenRotateViewRight",
           "callback" : "OTWViewRight",
@@ -4022,6 +4156,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "VIEWINT: Padlock",
         "label" : "Padlock",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewintPadlock",
           "callback" : "OTWSelectF3PadlockMode",
@@ -4037,6 +4172,7 @@
       }, {
         "id" : "VIEWINT: HUD Only",
         "label" : "Hud Only",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewintHudOnly",
           "callback" : "OTWSelectHUDMode",
@@ -4052,6 +4188,7 @@
       }, {
         "id" : "VIEWINT: Snap (3D) Cockpit",
         "label" : "Snap (3d) Cockpit",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewintSnap3dCockpit",
           "callback" : "OTWSelect2DCockpitMode",
@@ -4067,6 +4204,7 @@
       }, {
         "id" : "VIEWINT: Pan (3D) Cockpit",
         "label" : "Pan (3d) Cockpit",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewintPan3dCockpit",
           "callback" : "OTWSelect3DCockpitMode",
@@ -4082,6 +4220,7 @@
       }, {
         "id" : "VIEWINT: Glance Forward",
         "label" : "Glance Forward",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewintGlanceForward",
           "callback" : "OTWGlanceForward",
@@ -4097,6 +4236,7 @@
       }, {
         "id" : "VIEWINT: Glance Backward",
         "label" : "Glance Backward",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewintGlanceBackward",
           "callback" : "OTWCheckSix",
@@ -4116,6 +4256,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "VIEWEXT: Orbit Camera",
         "label" : "Orbit Camera",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewextOrbitCamera",
           "callback" : "OTWSelectOrbitMode",
@@ -4131,6 +4272,7 @@
       }, {
         "id" : "VIEWEXT: Satellite Camera",
         "label" : "Satellite Camera",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewextSatelliteCamera",
           "callback" : "OTWSelectSatelliteMode",
@@ -4146,6 +4288,7 @@
       }, {
         "id" : "VIEWEXT: Flyby Camera",
         "label" : "Flyby Camera",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewextFlybyCamera",
           "callback" : "OTWSelectFlybyMode",
@@ -4161,6 +4304,7 @@
       }, {
         "id" : "VIEWEXT: Chase Camera",
         "label" : "Chase Camera",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "viewextChaseCamera",
           "callback" : "OTWSelectChaseMode",
@@ -4184,6 +4328,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "RADIO: AWACS Menu",
         "label" : "Awacs Menu",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "radioAwacsMenu",
           "callback" : "RadioAWACSCommand",
@@ -4199,6 +4344,7 @@
       }, {
         "id" : "RADIO: Wingman Menu",
         "label" : "Wingman Menu",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "radioWingmanMenu",
           "callback" : "RadioWingCommand",
@@ -4214,6 +4360,7 @@
       }, {
         "id" : "RADIO: Element Menu",
         "label" : "Element Menu",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "radioElementMenu",
           "callback" : "RadioElementCommand",
@@ -4229,6 +4376,7 @@
       }, {
         "id" : "RADIO: Flight Menu",
         "label" : "Flight Menu",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "radioFlightMenu",
           "callback" : "RadioFlightCommand",
@@ -4244,6 +4392,7 @@
       }, {
         "id" : "RADIO: ATC Menu",
         "label" : "Atc Menu",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "radioAtcMenu",
           "callback" : "RadioTowerCommand",
@@ -4259,6 +4408,7 @@
       }, {
         "id" : "RADIO: Tanker Menu",
         "label" : "Tanker Menu",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "radioTankerMenu",
           "callback" : "RadioTankerCommand",
@@ -4274,6 +4424,7 @@
       }, {
         "id" : "Radio-Send Message Tanker",
         "label" : "Send Message Tanker",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "radioSendMessageTanker",
           "callback" : "RadioMessageSend",
@@ -4289,6 +4440,7 @@
       }, {
         "id" : "Radio-Next Menu Tanker",
         "label" : "Next Menu Tanker",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "radioNextMenuTanker",
           "callback" : "OTWRadioMenuStep",
@@ -4304,6 +4456,7 @@
       }, {
         "id" : "Radio-Previous Menu Tanker",
         "label" : "Previous Menu Tanker",
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "radioPreviousMenuTanker",
           "callback" : "OTWRadioMenuStepBack",

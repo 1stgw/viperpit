@@ -6,19 +6,19 @@
         v-for="controlGroupConfiguration in panelConfiguration.controlGroupConfigurations"
         :key="controlGroupConfiguration.id"
       >
-        <button-group :controlGroupConfiguration="controlGroupConfiguration" />
+        <control-group :controlGroupConfiguration="controlGroupConfiguration" />
       </div>
     </div>
   </v-card>
 </template>
 
 <script>
-import ButtonGroup from "@/components/controls/ButtonGroup";
+import ControlGroup from "@/components/controls/ControlGroup";
 
 export default {
   name: "Panel",
   components: {
-    ButtonGroup
+    ControlGroup
   },
   props: {
     panelConfiguration: {

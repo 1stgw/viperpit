@@ -1,6 +1,9 @@
 package de.viperpit.generator;
 
 import static com.google.common.base.Splitter.on;
+import static de.viperpit.generator.DefaultStateConfigurations.StateType.AIR;
+import static de.viperpit.generator.DefaultStateConfigurations.StateType.RAMP;
+import static de.viperpit.generator.DefaultStateConfigurations.StateType.TAXI;
 import static java.util.Collections.emptyList;
 
 import java.io.File;
@@ -45,9 +48,9 @@ public class DefaultStateConfigurations {
 			properties.load(new FileReader(file));
 			properties.forEach((key, value) -> {
 				var triState = on(',').trimResults().splitToList(value.toString());
-				list.add(new DefaultStateConfiguration(key.toString(), StateType.RAMP, triState.get(0)));
-				list.add(new DefaultStateConfiguration(key.toString(), StateType.TAXI, triState.get(1)));
-				list.add(new DefaultStateConfiguration(key.toString(), StateType.AIR, triState.get(2)));
+				list.add(new DefaultStateConfiguration(key.toString(), RAMP, triState.get(0)));
+				list.add(new DefaultStateConfiguration(key.toString(), TAXI, triState.get(1)));
+				list.add(new DefaultStateConfiguration(key.toString(), AIR, triState.get(2)));
 			});
 			return new DefaultStateConfigurations(list);
 		} catch (IOException exception) {
@@ -70,6 +73,11 @@ public class DefaultStateConfigurations {
 			return null;
 		}
 		return defaultStateConfiguration.defaultValue();
+	}
+
+	public boolean isStateful(String id) {
+		DefaultStateConfiguration defaultStateConfiguration = map.get(new Pair<>(id, RAMP));
+		return defaultStateConfiguration != null;
 	}
 
 }

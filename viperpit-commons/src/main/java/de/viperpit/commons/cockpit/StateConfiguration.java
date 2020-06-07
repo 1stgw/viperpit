@@ -31,15 +31,15 @@ public class StateConfiguration {
 	}
 
 	public String getCallback() {
-		return this.callback;
+		return callback;
 	}
 
 	public String getId() {
-		return this.id;
+		return id;
 	}
 
 	public Collection<String> getRelatedStateConfigurations() {
-		return this.relatedStateConfigurations;
+		return relatedStateConfigurations;
 	}
 
 	@Override
@@ -48,11 +48,11 @@ public class StateConfiguration {
 	}
 
 	public boolean isActive() {
-		return this.active;
+		return active;
 	}
 
 	public boolean isStateful() {
-		return this.stateful;
+		return stateful;
 	}
 
 	public void setActive(boolean active) {
