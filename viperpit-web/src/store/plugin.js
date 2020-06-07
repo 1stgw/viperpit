@@ -9,8 +9,6 @@ export default function stompPlugin(store) {
   client.connect(
     {},
     () => {
-      store.dispatch("initStates");
-      store.dispatch("connectAgent", agentId);
       client.subscribe("/topic/cockpit/states/update", message => {
         const delta = JSON.parse(message.body);
         if (!delta.agent) {
@@ -18,6 +16,8 @@ export default function stompPlugin(store) {
         }
         store.dispatch("updateStates", delta);
       });
+      store.dispatch("connectAgent", agentId);
+      store.dispatch("initStates");
     },
     error => {
       console.log(error);

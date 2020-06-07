@@ -1,4 +1,5 @@
 import Vue from "vue";
+import configuration from "@/data/f16/configuration.json";
 import {
   AGENTS_CONNECT,
   AGENTS_DISCONNECT,
@@ -7,7 +8,8 @@ import {
 
 const state = () => ({
   agentId: null,
-  actions: {}
+  actions: {},
+  configuration: configuration
 });
 
 const actions = {
@@ -39,6 +41,31 @@ const actions = {
 const getters = {
   getAgent: state => {
     return state.agentId;
+  },
+  getConfiguration: state => {
+    return state.configuration;
+  },
+  getConsole: state => id => {
+    return state.configuration.consoleConfigurations.find(
+      consoleConfiguration => consoleConfiguration.id === id
+    );
+  },
+  getControlConfigurationWithActiveState: state => controlGroupConfiguration => {
+    let actions = state.actions;
+    let firstActiveControlConfiguration = controlGroupConfiguration.controlConfigurations.find(
+      controlConfiguration => {
+        const action = actions[controlConfiguration.id];
+        if (!action) {
+          return false;
+        }
+        return actions[controlConfiguration.id].value === true;
+      }
+    );
+    if (!firstActiveControlConfiguration) {
+      firstActiveControlConfiguration =
+        controlGroupConfiguration.controlConfigurations[0];
+    }
+    return firstActiveControlConfiguration;
   },
   isConnected: state => {
     return state.actions && state.agentId;
