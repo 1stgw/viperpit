@@ -1,14 +1,19 @@
 <template>
   <v-card outlined>
     <v-card-title>{{ panelConfiguration.label }}</v-card-title>
-    <div>
-      <div
-        v-for="controlGroupConfiguration in panelConfiguration.controlGroupConfigurations"
-        :key="controlGroupConfiguration.id"
-      >
-        <control-group :controlGroupConfiguration="controlGroupConfiguration" />
-      </div>
-    </div>
+    <v-container>
+      <v-row justify="center">
+        <v-col
+          v-for="controlGroupConfiguration in panelConfiguration.controlGroupConfigurations"
+          :key="controlGroupConfiguration.id"
+          cols="auto"
+        >
+          <control-group
+            :controlGroupConfiguration="controlGroupConfiguration"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
   </v-card>
 </template>
 

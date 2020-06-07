@@ -6,9 +6,8 @@
         v-for="controlConfiguration in controlGroupConfiguration.controlConfigurations"
         :key="controlConfiguration.id"
         @click="toggleState(controlConfiguration.id)"
-        outlined
-        mandatory
         color="light-green"
+        outlined
       >
         <button-content :controlConfiguration="controlConfiguration" />
       </v-btn>

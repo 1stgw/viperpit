@@ -4,8 +4,8 @@
       <v-col
         v-for="panelConfiguration in getConsole(id).panelConfigurations"
         :key="panelConfiguration.id"
-        cols="4"
-        sm="2"
+        md="6"
+        sm="12"
       >
         <panel :panelConfiguration="panelConfiguration" />
       </v-col>

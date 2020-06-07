@@ -7,9 +7,8 @@
         :key="controlConfiguration.id"
         :value="controlConfiguration.id"
         @click="toggleState(controlConfiguration.id)"
-        outlined
-        mandatory
         color="light-green"
+        outlined
       >
         <button-content :controlConfiguration="controlConfiguration" />
       </v-btn>
