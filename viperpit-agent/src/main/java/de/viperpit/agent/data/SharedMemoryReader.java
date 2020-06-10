@@ -1,8 +1,5 @@
 package de.viperpit.agent.data;
 
-import static org.slf4j.LoggerFactory.getLogger;
-
-import org.slf4j.Logger;
 import org.springframework.stereotype.Component;
 
 import com.sun.jna.Pointer;
@@ -75,8 +72,6 @@ public class SharedMemoryReader {
 
 	}
 
-	private static final Logger LOGGER = getLogger(SharedMemoryReader.class);
-
 	public SharedMemoryData readData() {
 		SharedMemoryData sharedMemoryData = new SharedMemoryData();
 		sharedMemoryData.setFlightData(readData("FalconSharedMemoryArea", FlightData.class));
@@ -94,7 +89,6 @@ public class SharedMemoryReader {
 			structure = (T) Structure.newInstance(type, pointer);
 			structure.autoRead();
 		} catch (Exception exception) {
-			LOGGER.warn(exception.getMessage());
 			structure = (T) Structure.newInstance(type);
 		}
 		return structure;
