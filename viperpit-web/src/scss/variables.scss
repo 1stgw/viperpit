@@ -1,4 +1,21 @@
+@import "~vuetify/src/styles/tools/_functions.sass";
+@import "~vuetify/src/styles/settings/_colors.scss";
+
 $body-font-family: "Oxanium", serif;
 $material-dark: (
-  "background": #000
+  "background": #000,
+  "cards": #000,
+  "dividers": map-get($light-green, "base"),
+  "icons": (
+    "active": map-get($light-green, "base"),
+    "inactive": rgba(map-get($light-green, "base"), 0.5)
+  ),
+  "text": (
+    "theme": map-get($light-green, "base"),
+    "primary": map-get($light-green, "base"),
+    "secondary": rgba(map-get($light-green, "base"), 0.7),
+    "disabled": rgba(map-get($light-green, "base"), 0.5),
+    "link": map-get($light-green, "accent-1"),
+    "link-hover": map-get($light-green, "lighten-3")
+  )
 );

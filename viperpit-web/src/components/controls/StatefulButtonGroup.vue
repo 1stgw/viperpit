@@ -7,7 +7,6 @@
         :key="controlConfiguration.id"
         :value="controlConfiguration.id"
         @click="toggleState(controlConfiguration.id)"
-        color="light-green"
         outlined
       >
         <button-content :controlConfiguration="controlConfiguration" />

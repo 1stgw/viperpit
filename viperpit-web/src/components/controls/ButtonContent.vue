@@ -1,22 +1,7 @@
 <template>
   <span>
-    <div v-if="controlConfiguration.role === 'up'">
-      <v-icon>mdi-menu-up</v-icon>
-    </div>
-    <div v-else-if="controlConfiguration.role === 'down'">
-      <v-icon>mdi-menu-down</v-icon>
-    </div>
-    <div v-else-if="controlConfiguration.role === 'increase'">
-      <v-icon>mdi-plus</v-icon>
-    </div>
-    <div v-else-if="controlConfiguration.role === 'decrease'">
-      <v-icon>mdi-minus</v-icon>
-    </div>
-    <div v-else-if="controlConfiguration.role === 'left'">
-      <v-icon>mdi-menu-left</v-icon>
-    </div>
-    <div v-else-if="controlConfiguration.role === 'right'">
-      <v-icon>mdi-menu-right</v-icon>
+    <div v-if="icon">
+      <v-icon>icon</v-icon>
     </div>
     <div v-else>{{ controlConfiguration.label }}</div>
   </span>
@@ -29,6 +14,26 @@ export default {
     controlConfiguration: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    icon: function() {
+      switch (this.controlConfiguration) {
+        case "up":
+          return "mdi-menu-up";
+        case "down":
+          return "mdi-menu-down";
+        case "left":
+          return "mdi-menu-left";
+        case "right":
+          return "mdi-menu-right";
+        case "increase":
+          return "mdi-menu-plus";
+        case "decrease":
+          return "mdi-menu-minus";
+        default:
+          return null;
+      }
     }
   }
 };
