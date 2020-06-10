@@ -8,10 +8,10 @@ sourceCompatibility = JavaVersion.VERSION_14
 targetCompatibility = JavaVersion.VERSION_14
 
 dependencies {
-	implementation project(':viperpit-annotations')
 	implementation project(':viperpit-commons')
 	implementation project(':viperpit-agent')
 	implementation 'org.slf4j:slf4j-api'
 	implementation 'ch.qos.logback:logback-classic'
+	implementation 'com.google.code.gson:gson:2.2.4'
 	implementation 'org.eclipse.xtend:org.eclipse.xtend.lib:2.21.0'
 }

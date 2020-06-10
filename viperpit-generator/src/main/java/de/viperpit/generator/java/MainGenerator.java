@@ -1,9 +1,12 @@
-package de.viperpit.generator;
+package de.viperpit.generator.java;
 
 import java.io.File;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import de.viperpit.generator.FilterGenerator;
+import de.viperpit.generator.StateGenerator;
 
 public class MainGenerator {
 

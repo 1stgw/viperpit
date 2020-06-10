@@ -1,9 +1,9 @@
-package de.viperpit.generator;
+package de.viperpit.generator.java;
 
 import static com.google.common.base.Splitter.on;
-import static de.viperpit.generator.DefaultStateConfigurations.StateType.AIR;
-import static de.viperpit.generator.DefaultStateConfigurations.StateType.RAMP;
-import static de.viperpit.generator.DefaultStateConfigurations.StateType.TAXI;
+import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.AIR;
+import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.RAMP;
+import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.TAXI;
 import static java.util.Collections.emptyList;
 
 import java.io.File;

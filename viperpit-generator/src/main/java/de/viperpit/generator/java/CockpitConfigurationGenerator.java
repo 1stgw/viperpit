@@ -1,4 +1,4 @@
-package de.viperpit.generator;
+package de.viperpit.generator.java;
 
 import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
 import static com.fasterxml.jackson.core.JsonEncoding.UTF8;
@@ -12,9 +12,9 @@ import static com.google.common.base.Strings.commonPrefix;
 import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Multimaps.index;
 import static com.google.common.collect.Sets.newHashSet;
-import static de.viperpit.generator.DefaultStateConfigurations.StateType.AIR;
-import static de.viperpit.generator.DefaultStateConfigurations.StateType.RAMP;
-import static de.viperpit.generator.DefaultStateConfigurations.StateType.TAXI;
+import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.AIR;
+import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.RAMP;
+import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.TAXI;
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;

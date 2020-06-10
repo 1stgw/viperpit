@@ -1,4 +1,4 @@
-package de.viperpit.generator;
+package de.viperpit.generator.java;
 
 public record ControlConfiguration( //
 		String id, //

@@ -1,4 +1,4 @@
-package de.viperpit.generator;
+package de.viperpit.generator.java;
 
 import java.io.File;
 import java.io.FileReader;
@@ -8,6 +8,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 import java.util.Properties;
+
+import de.viperpit.generator.java.FilterConfigurations.FilterConfiguration;
 
 public record FilterConfigurations(Collection<FilterConfiguration> filterConfigurations) {
 

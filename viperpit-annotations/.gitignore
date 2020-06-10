@@ -1,7 +1,0 @@
-/.settings/*
-!/.settings/org.eclipse.xtend.core.Xtend.prefs
-/bin/
-/build/
-/src/main/xtend-gen
-/.classpath
-/.project
