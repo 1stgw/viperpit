@@ -1,38 +1,55 @@
 package de.viperpit.generator.java;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 import java.util.Objects;
-import java.util.Properties;
 
-import de.viperpit.generator.java.RoleConfigurations.RoleConfiguration;
+public class RoleConfigurations {
 
-public record RoleConfigurations(Collection<RoleConfiguration> roleConfigurations) {
+	private final Collection<RoleConfiguration> roleConfigurations;
 
-	public static record RoleConfiguration(String id, String role) {
+	RoleConfigurations(Collection<RoleConfiguration> roleConfigurations) {
+		this.roleConfigurations = roleConfigurations;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		RoleConfigurations other = (RoleConfigurations) obj;
+		return Objects.equals(roleConfigurations, other.roleConfigurations);
 	}
 
 	public RoleConfiguration getRoleConfiguration(String id) {
-		return roleConfigurations().stream().filter(it -> Objects.equals(id, it.id())).findFirst().orElse(null);
+		return getRoleConfigurations() //
+				.stream() //
+				.filter(roleConfiguration -> Objects.equals(id, roleConfiguration.getId())) //
+				.findFirst() //
+				.orElse(null);
 	}
 
-	public static RoleConfigurations read(File file) {
-		if (file == null || !file.exists()) {
-			return new RoleConfigurations(List.of());
-		}
-		try {
-			var list = new ArrayList<RoleConfiguration>();
-			var properties = new Properties();
-			properties.load(new FileReader(file));
-			properties.forEach((key, value) -> list.add(new RoleConfiguration(key.toString(), value.toString())));
-			return new RoleConfigurations(List.copyOf(list));
-		} catch (IOException exception) {
-			return new RoleConfigurations(List.of());
-		}
+	public Collection<RoleConfiguration> getRoleConfigurations() {
+		return roleConfigurations;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(roleConfigurations);
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("RoleConfigurations [roleConfigurations=");
+		builder.append(roleConfigurations);
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

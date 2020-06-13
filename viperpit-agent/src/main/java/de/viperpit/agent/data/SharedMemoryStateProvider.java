@@ -18,6 +18,7 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 	protected Object getGearParkingBreakSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return isBitNotSet(ParkBrakeOn, sharedMemoryData.getFlightData().lightBits3);
 	}
+	
 
 	private boolean isBitNotSet(int bit, int value) {
 		return !isBitSet(bit, value);

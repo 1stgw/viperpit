@@ -67,9 +67,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "testProbeHeatSwitchOff",
           "callback" : "SimProbeHeatOff",
@@ -78,9 +78,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "testProbeHeatSwitchTest",
           "callback" : "SimProbeHeatTest",
@@ -89,9 +89,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "TEST: EPU/GEN Switch",
@@ -141,9 +141,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "fltDigitalSwitchOff",
           "callback" : "SimDigitalBUPOff",
@@ -152,9 +152,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "FLT: ALT FLAPS Switch",
@@ -168,9 +168,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "fltAltFlapsSwitchNorm",
           "callback" : "SimAltFlapsNorm",
@@ -179,9 +179,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "FLT: MANUAL TF FLYUP Switch",
@@ -195,9 +195,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "fltManualTfFlyupSwitchEnable",
           "callback" : "SimManualFlyupEnable",
@@ -206,9 +206,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "FLT: LE FLAPS Switch",
@@ -222,9 +222,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "fltLeFlapsSwitchAuto",
           "callback" : "SimLEFAuto",
@@ -233,9 +233,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "FLT: FLCS Switch",
@@ -312,9 +312,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "trimTrimApDiscSwitchNorm",
           "callback" : "SimTrimAPNORM",
@@ -323,14 +323,14 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "TRIM: YAW TRIM Knob",
         "label" : "Yaw Trim",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "trimYawTrimKnobL",
           "callback" : "SimTrimYawLeft",
@@ -339,9 +339,9 @@
           "style" : "knob",
           "role" : "left",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "trimYawTrimKnobR",
           "callback" : "SimTrimYawRight",
@@ -350,9 +350,9 @@
           "style" : "knob",
           "role" : "right",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "TRIM: PITCH TRIM Wheel",
@@ -397,9 +397,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "fuelMasterSwitchOff",
           "callback" : "SimMasterFuelOff",
@@ -408,9 +408,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "FUEL: ENG FEED Knob",
@@ -424,9 +424,9 @@
           "style" : "knob",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "fuelEngFeedKnobNorm",
           "callback" : "SimFuelPumpNorm",
@@ -435,9 +435,9 @@
           "style" : "knob",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "fuelEngFeedKnobAft",
           "callback" : "SimFuelPumpAft",
@@ -446,9 +446,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "fuelEngFeedKnobFwd",
           "callback" : "SimFuelPumpFwd",
@@ -457,9 +457,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "FUEL: AIR REFUEL Switch",
@@ -473,9 +473,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "fuelAirRefuelSwitchClose",
           "callback" : "SimFuelDoorClose",
@@ -484,9 +484,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       } ]
     }, {
@@ -504,9 +504,9 @@
           "style" : "knob",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "auxMasterKnobStby",
           "callback" : "SimIFFMasterStby",
@@ -515,9 +515,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "auxMasterKnobLow",
           "callback" : "SimIFFMasterLow",
@@ -526,9 +526,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "auxMasterKnobNorm",
           "callback" : "SimIFFMasterNorm",
@@ -537,9 +537,9 @@
           "style" : "knob",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "auxMasterKnobEmer",
           "callback" : "SimIFFMasterEmerg",
@@ -548,9 +548,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AUX: M-4 CODE Switch",
@@ -564,9 +564,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "auxM4CodeSwitchHold",
           "callback" : "SimIFFCodeSwitchHold",
@@ -575,9 +575,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AUX: CNI Knob Switch",
@@ -591,9 +591,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "auxCniKnobSwitchUfc",
           "callback" : "SimAuxComUFC",
@@ -602,9 +602,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AUX: REPLY Switch",
@@ -618,9 +618,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "auxReplySwitchA",
           "callback" : "SimIFFMode4ReplyAlpha",
@@ -629,9 +629,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "auxReplySwitchOut",
           "callback" : "SimIFFMode4ReplyOff",
@@ -640,9 +640,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AUX: MONITOR Switch",
@@ -656,9 +656,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "auxMonitorSwitchOut",
           "callback" : "SimIFFMode4MonitorOff",
@@ -667,9 +667,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AUX: CHANNEL",
@@ -776,9 +776,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "auxStationSelectorSwitchAATr",
           "callback" : "SimTACANAATR",
@@ -787,9 +787,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -807,9 +807,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "extAntiCollisionSwitchOff",
           "callback" : "SimAntiCollOff",
@@ -818,9 +818,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "EXT: POSITION Switch",
@@ -834,9 +834,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "extPositionSwitchSteady",
           "callback" : "SimLightsSteady",
@@ -845,9 +845,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "EXT: WING/TAIL Switch",
@@ -861,9 +861,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "extWingTailSwitchOff",
           "callback" : "SimWingLightOff",
@@ -872,9 +872,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "EXT: MASTER Switch",
@@ -888,9 +888,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "extMasterSwitchOff",
           "callback" : "SimExtlMasterOff",
@@ -899,9 +899,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -919,9 +919,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "epuEpuSwitchNorm",
           "callback" : "SimEpuAuto",
@@ -930,9 +930,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "epuEpuSwitchOff",
           "callback" : "SimEpuOff",
@@ -941,9 +941,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -961,9 +961,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "elecMainPwrSwitchBatt",
           "callback" : "SimMainPowerBatt",
@@ -972,9 +972,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "elecMainPwrSwitchOff",
           "callback" : "SimMainPowerOff",
@@ -983,9 +983,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "ELEC: CAUTION RESET Button",
@@ -1030,9 +1030,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "avtrAvtrSwitchAuto",
           "callback" : "SimAVTRSwitchAuto",
@@ -1041,9 +1041,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "avtrAvtrSwitchOff",
           "callback" : "SimAVTRSwitchOff",
@@ -1052,9 +1052,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       } ]
     }, {
@@ -1072,9 +1072,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "ecmOprSwitchOff",
           "callback" : "SimEcmPowerOff",
@@ -1083,9 +1083,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -1103,9 +1103,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "engJfsSwitchStart2",
           "callback" : "SimJfsStart_Start2",
@@ -1114,9 +1114,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "ENG: ENG CONT Switch",
@@ -1130,9 +1130,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "engEngContSwitchSec",
           "callback" : "SimEngContSec",
@@ -1141,9 +1141,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -1152,7 +1152,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "AUDIO2: INTERCOM Knob",
         "label" : "Intercom",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "audio2IntercomKnobVolumeIncr",
           "callback" : "SimStepIntercomVolumeUp",
@@ -1161,9 +1161,9 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "audio2IntercomKnobVolumeDecr",
           "callback" : "SimStepIntercomVolumeDown",
@@ -1172,9 +1172,9 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AUDIO2: ILS Knob",
@@ -1188,9 +1188,9 @@
           "style" : "knob",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "audio2IlsKnobOff",
           "callback" : "SimILSOff",
@@ -1199,9 +1199,9 @@
           "style" : "knob",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -1210,7 +1210,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "AUDIO1: COMM 1 Knob",
         "label" : "Comm 1",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "audio1Comm1KnobVolumeIncr",
           "callback" : "SimStepComm1VolumeUp",
@@ -1219,9 +1219,9 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "audio1Comm1KnobVolumeDecr",
           "callback" : "SimStepComm1VolumeDown",
@@ -1230,9 +1230,9 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "audio1Comm1KnobPowerOn",
           "callback" : "SimComm1PowerOn",
@@ -1241,9 +1241,9 @@
           "style" : "knob",
           "role" : "on",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "audio1Comm1KnobPowerOff",
           "callback" : "SimComm1PowerOff",
@@ -1252,14 +1252,14 @@
           "style" : "knob",
           "role" : "off",
           "type" : "button",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AUDIO1: COMM 2 Knob",
         "label" : "Comm 2",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "audio1Comm2KnobVolumeIncr",
           "callback" : "SimStepComm2VolumeUp",
@@ -1268,9 +1268,9 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "audio1Comm2KnobVolumeDecr",
           "callback" : "SimStepComm2VolumeDown",
@@ -1279,9 +1279,9 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "audio1Comm2KnobPowerOn",
           "callback" : "SimComm2PowerOn",
@@ -1290,9 +1290,9 @@
           "style" : "knob",
           "role" : "on",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "audio1Comm2KnobPowerOff",
           "callback" : "SimComm2PowerOff",
@@ -1301,14 +1301,14 @@
           "style" : "knob",
           "role" : "off",
           "type" : "button",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AUDIO1: MSL Knob",
         "label" : "Msl",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "audio1MslKnobVolumeIncr",
           "callback" : "SimStepMissileVolumeUp",
@@ -1317,9 +1317,9 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "audio1MslKnobVolumeDecr",
           "callback" : "SimStepMissileVolumeDown",
@@ -1328,9 +1328,9 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AUDIO1: COMM 1 Mode Knob",
@@ -1344,9 +1344,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "audio1Comm1ModeKnobGd",
           "callback" : "SimAud1Com1Gd",
@@ -1355,9 +1355,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AUDIO1: COMM 2 Mode Knob",
@@ -1371,9 +1371,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "audio1Comm2ModeKnobGd",
           "callback" : "SimAud1Com2Gd",
@@ -1382,14 +1382,14 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AUDIO1: THREAT Knob",
         "label" : "Threat",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "audio1ThreatKnobVolumeIncr",
           "callback" : "SimStepThreatVolumeUp",
@@ -1398,9 +1398,9 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "audio1ThreatKnobVolumeDecr",
           "callback" : "SimStepThreatVolumeDown",
@@ -1409,9 +1409,9 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -1440,7 +1440,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "UHF: PRESET CHANNEL Knob",
         "label" : "Preset Channel",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "uhfPresetChannelKnobCycleUp",
           "callback" : "SimCycleRadioChannel",
@@ -1449,9 +1449,9 @@
           "style" : "knob",
           "role" : "up",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "uhfPresetChannelKnobCycleDown",
           "callback" : "SimDecRadioChannel",
@@ -1460,9 +1460,9 @@
           "style" : "knob",
           "role" : "down",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "UHF: A-3-2-T Rotary X__.___",
@@ -1611,9 +1611,9 @@
           "style" : "knob",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "uhfFunctionKnobMain",
           "callback" : "SimBupUhfMain",
@@ -1622,9 +1622,9 @@
           "style" : "knob",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "uhfFunctionKnobBoth",
           "callback" : "SimBupUhfBoth",
@@ -1633,14 +1633,14 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "UHF: VOL Knob",
         "label" : "Vol",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "uhfVolKnobAiVsIvcVolumeIncr",
           "callback" : "OTWBalanceIVCvsAIUp",
@@ -1649,9 +1649,9 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "uhfVolKnobAiVsIvcVolumeDecr",
           "callback" : "OTWBalanceIVCvsAIDown",
@@ -1660,9 +1660,9 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "UHF: MODE Knob",
@@ -1676,9 +1676,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "uhfModeKnobPreset",
           "callback" : "SimBupUhfPreset",
@@ -1687,9 +1687,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "uhfModeKnobGrd",
           "callback" : "SimBupUhfGuard",
@@ -1698,9 +1698,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -1874,7 +1874,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "HMCS: HMSC Knob",
         "label" : "Hmsc",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "hmcsHmscKnobBrightnessIncr",
           "callback" : "SimHmsSymWheelUp",
@@ -1883,9 +1883,9 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hmcsHmscKnobBrightnessDecr",
           "callback" : "SimHmsSymWheelDn",
@@ -1894,9 +1894,9 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hmcsHmscKnobOn",
           "callback" : "SimHmsOn",
@@ -1905,9 +1905,9 @@
           "style" : "knob",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "hmcsHmscKnobOff",
           "callback" : "SimHmsOff",
@@ -1916,9 +1916,9 @@
           "style" : "knob",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -1936,9 +1936,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "cmdsRwrSwitchPowerOff",
           "callback" : "SimEWSRWROff",
@@ -1947,9 +1947,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "CMDS: JMR Switch",
@@ -1963,9 +1963,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "cmdsJmrSwitchPowerOff",
           "callback" : "SimEWSJammerOff",
@@ -1974,9 +1974,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "CMDS: MWS Switch",
@@ -1990,9 +1990,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "cmdsMwsSwitchPowerOff",
           "callback" : "SimEWSMwsOff",
@@ -2001,9 +2001,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "CMDS: O1 Switch",
@@ -2017,9 +2017,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "cmdsO1SwitchPowerOff",
           "callback" : "SimEWSO1Off",
@@ -2028,9 +2028,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "CMDS: O2 Switch",
@@ -2044,9 +2044,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "cmdsO2SwitchPowerOff",
           "callback" : "SimEWSO2Off",
@@ -2055,9 +2055,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "CMDS: CH Switch",
@@ -2071,9 +2071,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "cmdsChSwitchPowerOff",
           "callback" : "SimEWSChaffOff",
@@ -2082,9 +2082,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "CMDS: FL Switch",
@@ -2098,9 +2098,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "cmdsFlSwitchPowerOff",
           "callback" : "SimEWSFlareOff",
@@ -2109,9 +2109,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "CMDS: JETT Switch",
@@ -2125,9 +2125,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "cmdsJettSwitchOff",
           "callback" : "SimEwsJettOff",
@@ -2136,9 +2136,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "CMDS: PRGM Knob",
@@ -2152,9 +2152,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "cmdsPrgmKnob2",
           "callback" : "SimEWSProgTwo",
@@ -2163,9 +2163,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "cmdsPrgmKnob3",
           "callback" : "SimEWSProgThree",
@@ -2174,9 +2174,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "cmdsPrgmKnob4",
           "callback" : "SimEWSProgFour",
@@ -2185,9 +2185,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "CMDS: MODE Knob",
@@ -2201,9 +2201,9 @@
           "style" : "knob",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "cmdsModeKnobStby",
           "callback" : "SimEWSModeStby",
@@ -2212,9 +2212,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "cmdsModeKnobMan",
           "callback" : "SimEWSModeMan",
@@ -2223,9 +2223,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "cmdsModeKnobSemi",
           "callback" : "SimEWSModeSemi",
@@ -2234,9 +2234,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "cmdsModeKnobAuto",
           "callback" : "SimEWSModeAuto",
@@ -2245,9 +2245,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "cmdsModeKnobByp",
           "callback" : "SimEWSModeByp",
@@ -2256,9 +2256,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -2292,9 +2292,9 @@
           "style" : "switch",
           "role" : "up",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "gearHookSwitchDn",
           "callback" : "SimHookDown",
@@ -2303,9 +2303,9 @@
           "style" : "switch",
           "role" : "down",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "GEAR: GND JETT Switch",
@@ -2319,9 +2319,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "gearGndJettSwitchOff",
           "callback" : "SimGndJettOff",
@@ -2330,9 +2330,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "GEAR: PARKING BREAK Switch",
@@ -2346,9 +2346,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "gearParkingBreakSwitchOff",
           "callback" : "SimParkingBrakeOff",
@@ -2357,9 +2357,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "GEAR: LG Handle",
@@ -2400,9 +2400,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "gearStoresConfigSwitchCatIii",
           "callback" : "SimCATIII",
@@ -2411,9 +2411,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "GEAR: HORN SILENCER Button",
@@ -2443,9 +2443,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "gearLightsSwitchOff",
           "callback" : "SimLandingLightOff",
@@ -2454,9 +2454,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       } ]
     } ]
@@ -2478,9 +2478,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "miscRfSwitchQuiet",
           "callback" : "SimRFQuiet",
@@ -2489,9 +2489,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "miscRfSwitchSilent",
           "callback" : "SimRFSilent",
@@ -2500,9 +2500,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "MISC: LASER Switch",
@@ -2516,9 +2516,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "miscLaserSwitchOff",
           "callback" : "SimLaserArmOff",
@@ -2527,9 +2527,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "MISC: MASTER ARM Switch",
@@ -2543,9 +2543,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "miscMasterArmSwitchOff",
           "callback" : "SimSafeMasterArm",
@@ -2554,9 +2554,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "miscMasterArmSwitchSim",
           "callback" : "SimSimMasterArm",
@@ -2565,9 +2565,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "MISC: ADV MODE",
@@ -2597,9 +2597,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "miscRollSwitchAttHold",
           "callback" : "SimLeftAPMid",
@@ -2608,9 +2608,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "miscRollSwitchStrgSel",
           "callback" : "SimLeftAPDown",
@@ -2619,9 +2619,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "MISC: PITCH Switch",
@@ -2635,9 +2635,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "miscPitchSwitchAPOff",
           "callback" : "SimRightAPMid",
@@ -2646,9 +2646,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "miscPitchSwitchAttHold",
           "callback" : "SimRightAPDown",
@@ -2657,9 +2657,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -2772,7 +2772,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "RWR: Brightness Knob",
         "label" : "Brightness",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "rwrBrightnessKnobIncrease",
           "callback" : "SimRWRBrightnessUp",
@@ -2781,9 +2781,9 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "rwrBrightnessKnobDecrease",
           "callback" : "SimRWRBrightnessDown",
@@ -2792,9 +2792,9 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -2812,9 +2812,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "mainHsiHdgKnobDecrease5",
           "callback" : "SimHsiHeadingDec",
@@ -2823,9 +2823,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "mainHsiHdgKnobIncrease1",
           "callback" : "SimHsiHdgIncBy1",
@@ -2834,9 +2834,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "mainHsiHdgKnobDecrease1",
           "callback" : "SimHsiHdgDecBy1",
@@ -2845,9 +2845,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "MAIN: HSI CRS Knob",
@@ -2861,9 +2861,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "mainHsiCrsKnobDecrease5",
           "callback" : "SimHsiCourseDec",
@@ -2872,9 +2872,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "mainHsiCrsKnobIncrease1",
           "callback" : "SimHsiCrsIncBy1",
@@ -2883,9 +2883,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "mainHsiCrsKnobDecrease1",
           "callback" : "SimHsiCrsDecBy1",
@@ -2894,9 +2894,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "MAIN: Altimeter Pressure Knob",
@@ -2910,9 +2910,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "mainAltimeterPressureKnobDecr5",
           "callback" : "SimAltPressDec",
@@ -2921,9 +2921,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "mainAltimeterPressureKnobIncr1",
           "callback" : "SimAltPressIncBy1",
@@ -2932,9 +2932,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "mainAltimeterPressureKnobDecr1",
           "callback" : "SimAltPressDecBy1",
@@ -2943,9 +2943,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "button",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -2963,9 +2963,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "instrModeKnobTcn",
           "callback" : "SimHSITcn",
@@ -2974,9 +2974,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "instrModeKnobNav",
           "callback" : "SimHSINav",
@@ -2985,9 +2985,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "instrModeKnobIlsNav",
           "callback" : "SimHSIIlsNav",
@@ -2996,9 +2996,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -3016,9 +3016,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "qtyFuelQtySelKnobNorm",
           "callback" : "SimFuelSwitchNorm",
@@ -3027,9 +3027,9 @@
           "style" : "knob",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "qtyFuelQtySelKnobRsvr",
           "callback" : "SimFuelSwitchResv",
@@ -3038,9 +3038,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "qtyFuelQtySelKnobIntWing",
           "callback" : "SimFuelSwitchWingInt",
@@ -3049,9 +3049,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "qtyFuelQtySelKnobExtWing",
           "callback" : "SimFuelSwitchWingExt",
@@ -3060,9 +3060,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "qtyFuelQtySelKnobExtCtr",
           "callback" : "SimFuelSwitchCenterExt",
@@ -3071,9 +3071,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "QTY: EXT FUEL TRANS Switch",
@@ -3087,9 +3087,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "qtyExtFuelTransSwitchWingFirst",
           "callback" : "SimFuelTransWing",
@@ -3098,9 +3098,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     } ]
@@ -3122,9 +3122,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "snsrLeftHdptSwitchOff",
           "callback" : "SimLeftHptOff",
@@ -3133,9 +3133,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "SNSR: RIGHT HDPT Switch",
@@ -3149,9 +3149,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "snsrRightHdptSwitchOff",
           "callback" : "SimRightHptOff",
@@ -3160,9 +3160,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "SNSR: FCR Switch",
@@ -3176,9 +3176,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "snsrFcrSwitchOff",
           "callback" : "SimFCROff",
@@ -3187,9 +3187,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "SNSR: RDR ALT Switch",
@@ -3203,9 +3203,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "snsrRdrAltSwitchStdby",
           "callback" : "SimRALTSTDBY",
@@ -3214,9 +3214,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "snsrRdrAltSwitchOff",
           "callback" : "SimRALTOFF",
@@ -3225,9 +3225,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       } ]
     }, {
@@ -3245,9 +3245,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hudScalesSwitchVah",
           "callback" : "SimScalesVAH",
@@ -3256,9 +3256,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "hudScalesSwitchOff",
           "callback" : "SimScalesOff",
@@ -3267,9 +3267,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "HUD: FPM Switch",
@@ -3283,9 +3283,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "hudFpmSwitchFpm",
           "callback" : "SimPitchLadderFPM",
@@ -3294,9 +3294,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hudFpmSwitchOff",
           "callback" : "SimPitchLadderOff",
@@ -3305,9 +3305,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "HUD: DED Data Switch",
@@ -3321,9 +3321,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hudDedDataSwitchPfl",
           "callback" : "SimHUDDEDPFL",
@@ -3332,9 +3332,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hudDedDataSwitchOff",
           "callback" : "SimHUDDEDOff",
@@ -3343,9 +3343,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "HUD: DEPR RET Switch",
@@ -3359,9 +3359,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hudDeprRetSwitchPri",
           "callback" : "SimReticlePri",
@@ -3370,9 +3370,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hudDeprRetSwitchOff",
           "callback" : "SimReticleOff",
@@ -3381,9 +3381,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "HUD: Velocity Switch",
@@ -3397,9 +3397,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "hudVelocitySwitchTas",
           "callback" : "SimHUDVelocityTAS",
@@ -3408,9 +3408,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hudVelocitySwitchGndSpd",
           "callback" : "SimHUDVelocityGND",
@@ -3419,9 +3419,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "HUD: Altitude Switch",
@@ -3435,9 +3435,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hudAltitudeSwitchBaro",
           "callback" : "SimHUDAltBaro",
@@ -3446,9 +3446,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hudAltitudeSwitchAuto",
           "callback" : "SimHUDAltAuto",
@@ -3457,9 +3457,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         } ]
       }, {
         "id" : "HUD: Brightness Switch",
@@ -3473,9 +3473,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "hudBrightnessSwitchAutoBrt",
           "callback" : "SimHUDBrtAuto",
@@ -3484,9 +3484,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "hudBrightnessSwitchNig",
           "callback" : "SimHUDBrtNight",
@@ -3495,9 +3495,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -3506,7 +3506,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "LIGHT: INST PNL Knob (Primary)",
         "label" : "Inst Pnl Knob (primary)",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "lightInstPnlKnobPrimaryStepUp",
           "callback" : "SimInstrumentLightCW",
@@ -3515,9 +3515,9 @@
           "style" : "knob",
           "role" : "up",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "lightInstPnlKnobPrimaryStepDown",
           "callback" : "SimInstrumentLightCCW",
@@ -3526,14 +3526,14 @@
           "style" : "knob",
           "role" : "down",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "LIGHT: DED Knob (Primary)",
         "label" : "Ded Knob (primary)",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "lightDedKnobPrimaryStepUp",
           "callback" : "SimDedBrightnessCW",
@@ -3542,9 +3542,9 @@
           "style" : "knob",
           "role" : "up",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "lightDedKnobPrimaryStepDown",
           "callback" : "SimDedBrightnessCCW",
@@ -3553,14 +3553,14 @@
           "style" : "knob",
           "role" : "down",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "LIGHT: CONSOLES Knob (Flood)",
         "label" : "Consoles Knob (flood)",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "lightConsolesKnobFloodStepUp",
           "callback" : "SimInteriorLightCW",
@@ -3569,9 +3569,9 @@
           "style" : "knob",
           "role" : "up",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "lightConsolesKnobFloodStepDown",
           "callback" : "SimInteriorLightCCW",
@@ -3580,9 +3580,9 @@
           "style" : "knob",
           "role" : "down",
           "type" : "button",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -3600,9 +3600,9 @@
           "style" : "knob",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "airAirSourceKnobNorm",
           "callback" : "SimAirSourceNorm",
@@ -3611,9 +3611,9 @@
           "style" : "knob",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "airAirSourceKnobDump",
           "callback" : "SimAirSourceDump",
@@ -3622,9 +3622,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "airAirSourceKnobRam",
           "callback" : "SimAirSourceRam",
@@ -3633,9 +3633,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -3653,9 +3653,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "zeroVmsSwitchInhibit",
           "callback" : "SimVMSOff",
@@ -3664,9 +3664,9 @@
           "style" : "switch",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {
@@ -3684,9 +3684,9 @@
           "style" : "knob",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "avionicsInsKnobNorm",
           "callback" : "SimINSNorm",
@@ -3695,9 +3695,9 @@
           "style" : "knob",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         }, {
           "id" : "avionicsInsKnobNav",
           "callback" : "SimINSNav",
@@ -3706,9 +3706,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "avionicsInsKnobInFltAlign",
           "callback" : "SimINSInFlt",
@@ -3717,9 +3717,9 @@
           "style" : "knob",
           "role" : "none",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AVIONICS: FCC Switch",
@@ -3733,9 +3733,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "avionicsFccSwitchOff",
           "callback" : "SimFCCOff",
@@ -3744,9 +3744,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AVIONICS: SMS Switch",
@@ -3760,9 +3760,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "avionicsSmsSwitchOff",
           "callback" : "SimSMSOff",
@@ -3771,9 +3771,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AVIONICS: MFD Switch",
@@ -3787,9 +3787,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "avionicsMfdSwitchOff",
           "callback" : "SimMFDOff",
@@ -3798,9 +3798,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AVIONICS: UFC Switch",
@@ -3814,9 +3814,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "avionicsUfcSwitchOff",
           "callback" : "SimUFCOff",
@@ -3825,9 +3825,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AVIONICS: GPS Switch",
@@ -3841,9 +3841,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "avionicsGpsSwitchOff",
           "callback" : "SimGPSOff",
@@ -3852,9 +3852,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "AVIONICS: DL Switch",
@@ -3868,9 +3868,9 @@
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
-          "defaultValueForRamp" : "false",
-          "defaultValueForTaxi" : "true",
-          "defaultValueForAir" : "true"
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "avionicsDlSwitchOff",
           "callback" : "SimDLOff",
@@ -3879,9 +3879,9 @@
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
-          "defaultValueForRamp" : "true",
-          "defaultValueForTaxi" : "false",
-          "defaultValueForAir" : "false"
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       } ]
     }, {

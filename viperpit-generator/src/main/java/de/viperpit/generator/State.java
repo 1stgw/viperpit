@@ -2,6 +2,7 @@ package de.viperpit.generator;
 
 @SuppressWarnings("all")
 public class State extends AbstractJsonized {
+
 	public Boolean getRamp() {
 		return (Boolean) wrap(delegate.get("ramp"), Boolean.class);
 	}
@@ -25,4 +26,5 @@ public class State extends AbstractJsonized {
 	public void setAir(final Boolean air) {
 		delegate.add("air", unWrap(air, Boolean.class));
 	}
+
 }

@@ -1,19 +1,10 @@
 package de.viperpit.generator.java;
 
-import static com.google.common.base.Splitter.on;
-import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.AIR;
 import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.RAMP;
-import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.TAXI;
-import static java.util.Collections.emptyList;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
 import de.viperpit.commons.cockpit.Pair;
 
@@ -38,29 +29,9 @@ public class DefaultStateConfigurations {
 	public static record DefaultStateConfiguration(String id, StateType stateType, Object defaultValue) {
 	}
 
-	public static DefaultStateConfigurations read(File file) {
-		if (file == null || !file.exists()) {
-			return new DefaultStateConfigurations(emptyList());
-		}
-		try {
-			var list = new ArrayList<DefaultStateConfiguration>();
-			var properties = new Properties();
-			properties.load(new FileReader(file));
-			properties.forEach((key, value) -> {
-				var triState = on(',').trimResults().splitToList(value.toString());
-				list.add(new DefaultStateConfiguration(key.toString(), RAMP, triState.get(0)));
-				list.add(new DefaultStateConfiguration(key.toString(), TAXI, triState.get(1)));
-				list.add(new DefaultStateConfiguration(key.toString(), AIR, triState.get(2)));
-			});
-			return new DefaultStateConfigurations(list);
-		} catch (IOException exception) {
-			return new DefaultStateConfigurations(emptyList());
-		}
-	}
-
 	private final Map<Pair<String, StateType>, DefaultStateConfiguration> map = new HashMap<>(650);
 
-	private DefaultStateConfigurations(Collection<DefaultStateConfiguration> defaultStateConfigurations) {
+	DefaultStateConfigurations(Collection<DefaultStateConfiguration> defaultStateConfigurations) {
 		for (DefaultStateConfiguration defaultStateConfiguration : defaultStateConfigurations) {
 			var key = new Pair<>(defaultStateConfiguration.id(), defaultStateConfiguration.stateType());
 			map.put(key, defaultStateConfiguration);
@@ -76,8 +47,7 @@ public class DefaultStateConfigurations {
 	}
 
 	public boolean isStateful(String id) {
-		DefaultStateConfiguration defaultStateConfiguration = map.get(new Pair<>(id, RAMP));
-		return defaultStateConfiguration != null;
+		return map.get(new Pair<>(id, RAMP)) != null;
 	}
 
 }

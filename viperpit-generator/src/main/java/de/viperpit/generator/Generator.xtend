@@ -1,5 +1,6 @@
 package de.viperpit.generator
 
+import de.viperpit.generator.java.FilterGenerator
 import java.io.File
 import org.slf4j.LoggerFactory
 
@@ -19,14 +20,8 @@ class Generator {
 		LOGGER.info("Running the Filter Generator...")
 		val workspace = args.head.toPath
 		val source = '''«args.head»/viperpit-generator/src/main/resources/«profile»'''.toPath
-		LOGGER.info("Running the State Generator...")
-		new StateGenerator().run(source)
 		LOGGER.info("Running the Filter Generator...")
 		new FilterGenerator().run(source)
-		LOGGER.info("Running the Configuration Generator...")
-		new ConfigurationGenerator().run(source)
-		LOGGER.info("Running the Cockpit Generator...")
-		new CockpitGenerator().run(source)
 		LOGGER.info("Running the Layout Generator...")
 		new LayoutGenerator().run(source)
 		LOGGER.info("Running the Web Application Generator...")

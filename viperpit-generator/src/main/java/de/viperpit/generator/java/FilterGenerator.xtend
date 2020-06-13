@@ -1,4 +1,4 @@
-package de.viperpit.generator
+package de.viperpit.generator.java
 
 import de.viperpit.agent.keys.KeyFile
 import java.io.File

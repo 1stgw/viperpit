@@ -5,9 +5,6 @@ import java.io.File;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.viperpit.generator.FilterGenerator;
-import de.viperpit.generator.StateGenerator;
-
 public class MainGenerator {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(MainGenerator.class);
@@ -24,8 +21,6 @@ public class MainGenerator {
 		LOGGER.info("Running the Generator for " + label + "...");
 		LOGGER.info("Running the Filter Generator...");
 		File source = toPath(args[0] + "/viperpit-generator/src/main/resources/" + id);
-		LOGGER.info("Running the State Generator...");
-		new StateGenerator().run(source);
 		LOGGER.info("Running the Filter Generator...");
 		new FilterGenerator().run(source);
 		LOGGER.info("Running the Cockpit Configuration Generator...");
