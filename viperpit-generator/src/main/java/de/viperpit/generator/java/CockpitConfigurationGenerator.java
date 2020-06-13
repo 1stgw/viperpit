@@ -120,6 +120,7 @@ public class CockpitConfigurationGenerator {
 			"SimMasterFuelOff", //
 			"SimBupUhfBoth", //
 			"AFCanopyClose", //
+			"AFGearUp", //
 			"SimSeatOn", //
 			"SimEWSModeStby", //
 			"SimINSNav" //
@@ -129,6 +130,7 @@ public class CockpitConfigurationGenerator {
 			"SimAuxComBackup", //
 			"SimTACANAATR", //
 			"SimLEFAuto", //
+			"AFGearDown", //
 			"SimTrimAPNORSimMasterFuelOnM", //
 			"SimLightsSteady", //
 			"AFCanopyOpen", //
@@ -191,8 +193,19 @@ public class CockpitConfigurationGenerator {
 			RoleConfigurations roleConfigurations) {
 		var collection = new ArrayList<DefaultStateConfiguration>();
 		keyCodeLines.stream().filter(keyCodeLine -> {
-			String style = roleConfigurations.getRoleConfiguration(keyCodeLine.getCallback()).getStyle();
-			return equal(style, "switch") || equal(style, "knob");
+			RoleConfiguration roleConfiguration = roleConfigurations.getRoleConfiguration(keyCodeLine.getCallback());
+			String role = roleConfiguration.getRole();
+			String style = roleConfiguration.getStyle();
+			if (equal(style, "switch")) {
+				return true;
+			}
+			if (equal(style, "knob")) {
+				return true;
+			}
+			if (equal(style, "handle") && (equal(role, "down") || equal(role, "up"))) {
+				return true;
+			}
+			return false;
 		}).forEach(keyCodeLine -> {
 			String role = roleConfigurations.getRoleConfiguration(keyCodeLine.getCallback()).getRole();
 			String callback = keyCodeLine.getCallback();

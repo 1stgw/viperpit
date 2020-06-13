@@ -2364,7 +2364,7 @@
       }, {
         "id" : "GEAR: LG Handle",
         "label" : "Lg",
-        "stateful" : false,
+        "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "gearLgHandleUp",
           "callback" : "AFGearUp",
@@ -2373,9 +2373,9 @@
           "style" : "handle",
           "role" : "up",
           "type" : "switch",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : false,
+          "defaultValueForTaxi" : true,
+          "defaultValueForAir" : true
         }, {
           "id" : "gearLgHandleDn",
           "callback" : "AFGearDown",
@@ -2384,9 +2384,9 @@
           "style" : "handle",
           "role" : "down",
           "type" : "switch",
-          "defaultValueForRamp" : null,
-          "defaultValueForTaxi" : null,
-          "defaultValueForAir" : null
+          "defaultValueForRamp" : true,
+          "defaultValueForTaxi" : false,
+          "defaultValueForAir" : false
         } ]
       }, {
         "id" : "GEAR: STORES CONFIG Switch",
