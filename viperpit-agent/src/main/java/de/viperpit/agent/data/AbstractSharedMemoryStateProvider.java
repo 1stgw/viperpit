@@ -130,6 +130,8 @@ public abstract class AbstractSharedMemoryStateProvider implements StateProvider
 		"gearGndJettSwitchOff",
 		"gearHookSwitchDn",
 		"gearHookSwitchUp",
+		"gearLgHandleDn",
+		"gearLgHandleUp",
 		"gearLightsSwitchLanding",
 		"gearLightsSwitchOff",
 		"gearParkingBreakSwitchOff",
@@ -471,6 +473,10 @@ public abstract class AbstractSharedMemoryStateProvider implements StateProvider
 				return getGearHookSwitchDn(id, sharedMemoryData);
 			case "gearHookSwitchUp":
 				return getGearHookSwitchUp(id, sharedMemoryData);
+			case "gearLgHandleDn":
+				return getGearLgHandleDn(id, sharedMemoryData);
+			case "gearLgHandleUp":
+				return getGearLgHandleUp(id, sharedMemoryData);
 			case "gearLightsSwitchLanding":
 				return getGearLightsSwitchLanding(id, sharedMemoryData);
 			case "gearLightsSwitchOff":
@@ -1111,6 +1117,14 @@ public abstract class AbstractSharedMemoryStateProvider implements StateProvider
 	}
 	
 	protected Object getGearHookSwitchUp(String id, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getGearLgHandleDn(String id, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getGearLgHandleUp(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	

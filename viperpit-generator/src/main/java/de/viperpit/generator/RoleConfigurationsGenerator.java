@@ -1,8 +1,8 @@
-package de.viperpit.generator.java;
+package de.viperpit.generator;
 
-import static de.viperpit.generator.java.KeyCodeLineNames.toGroupAndLabel;
-import static de.viperpit.generator.java.KeyCodeLineNames.toId;
-import static de.viperpit.generator.java.KeyCodeLineNames.toRelated;
+import static de.viperpit.generator.KeyCodeLineNames.toGroupAndLabel;
+import static de.viperpit.generator.KeyCodeLineNames.toId;
+import static de.viperpit.generator.KeyCodeLineNames.toRelated;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import java.io.File;
@@ -19,7 +19,7 @@ public class RoleConfigurationsGenerator {
 	private static final Logger LOGGER = getLogger(RoleConfigurationsGenerator.class);
 
 	public RoleConfigurations run( //
-			File metadataPath, //
+			File target, //
 			Collection<KeyCodeLine> keyCodeLines, //
 			FilterConfigurations filterConfigurations) throws Exception {
 		LOGGER.info("Generating roles.");

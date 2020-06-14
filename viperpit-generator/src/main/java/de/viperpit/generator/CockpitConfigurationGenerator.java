@@ -1,15 +1,15 @@
-package de.viperpit.generator.java;
+package de.viperpit.generator;
 
 import static com.google.common.base.CharMatcher.javaLowerCase;
 import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Multimaps.index;
 import static com.google.common.collect.Sets.newHashSet;
-import static de.viperpit.generator.java.JsonFileWriter.writeObject;
-import static de.viperpit.generator.java.KeyCodeLineNames.toCapitalizedName;
-import static de.viperpit.generator.java.KeyCodeLineNames.toGroupAndLabel;
-import static de.viperpit.generator.java.KeyCodeLineNames.toId;
-import static de.viperpit.generator.java.KeyCodeLineNames.toLabel;
-import static de.viperpit.generator.java.KeyCodeLineNames.toName;
+import static de.viperpit.generator.JsonFileWriter.writeObject;
+import static de.viperpit.generator.KeyCodeLineNames.toCapitalizedName;
+import static de.viperpit.generator.KeyCodeLineNames.toGroupAndLabel;
+import static de.viperpit.generator.KeyCodeLineNames.toId;
+import static de.viperpit.generator.KeyCodeLineNames.toLabel;
+import static de.viperpit.generator.KeyCodeLineNames.toName;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import java.io.File;
@@ -41,7 +41,7 @@ public class CockpitConfigurationGenerator {
 
 	@SuppressWarnings("deprecation")
 	public CockpitConfiguration run( //
-			File metadataPath, //
+			File target, //
 			Collection<KeyCodeLine> keyCodeLines, //
 			RoleConfigurations roleConfigurations, //
 			DefaultStateConfigurations defaultStateConfigurations, //
@@ -150,7 +150,7 @@ public class CockpitConfigurationGenerator {
 				cockpitLabel, //
 				consoleConfigurations.values() //
 		);
-		writeObject(new File(metadataPath, "configuration.json"), cockpitConfiguration);
+		writeObject(new File(target, "configuration_" + cockpitId + ".json"), cockpitConfiguration);
 		return cockpitConfiguration;
 	}
 

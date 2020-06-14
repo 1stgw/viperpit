@@ -1,4 +1,4 @@
-package de.viperpit.generator.java
+package de.viperpit.generator
 
 import com.google.common.io.Files
 import de.viperpit.agent.keys.KeyFile
@@ -75,7 +75,7 @@ class FilterGenerator {
 			«ENDFOR»
 		''', new File(path, '''filter.properties'''.toString), UTF_8)
 	}
-	
+
 	static def write(CharSequence charSequence, File file, Charset charset) {
 		Files.asCharSink(file, charset).write(charSequence)
 	}

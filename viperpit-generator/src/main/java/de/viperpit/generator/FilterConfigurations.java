@@ -1,4 +1,4 @@
-package de.viperpit.generator.java;
+package de.viperpit.generator;
 
 import java.io.File;
 import java.io.FileReader;

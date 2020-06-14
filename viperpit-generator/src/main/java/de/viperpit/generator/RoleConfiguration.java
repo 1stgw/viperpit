@@ -1,4 +1,4 @@
-package de.viperpit.generator.java;
+package de.viperpit.generator;
 
 import java.util.Collection;
 import java.util.Objects;

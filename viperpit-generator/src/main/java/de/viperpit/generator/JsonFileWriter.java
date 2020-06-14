@@ -1,4 +1,4 @@
-package de.viperpit.generator.java;
+package de.viperpit.generator;
 
 import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
 import static com.fasterxml.jackson.annotation.PropertyAccessor.FIELD;

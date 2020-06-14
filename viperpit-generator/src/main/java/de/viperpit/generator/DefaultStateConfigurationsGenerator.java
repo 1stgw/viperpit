@@ -1,12 +1,12 @@
-package de.viperpit.generator.java;
+package de.viperpit.generator;
 
 import static com.google.common.base.Objects.equal;
 import static com.google.common.collect.Sets.newHashSet;
-import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.AIR;
-import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.RAMP;
-import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.TAXI;
-import static de.viperpit.generator.java.JsonFileWriter.writeObject;
-import static de.viperpit.generator.java.KeyCodeLineNames.toId;
+import static de.viperpit.generator.DefaultStateConfigurations.StateType.AIR;
+import static de.viperpit.generator.DefaultStateConfigurations.StateType.RAMP;
+import static de.viperpit.generator.DefaultStateConfigurations.StateType.TAXI;
+import static de.viperpit.generator.JsonFileWriter.writeObject;
+import static de.viperpit.generator.KeyCodeLineNames.toId;
 import static java.util.Collections.unmodifiableSet;
 
 import java.io.File;
@@ -19,7 +19,7 @@ import com.google.common.base.Objects;
 import de.viperpit.agent.keys.KeyFile.KeyCodeLine;
 import de.viperpit.commons.cockpit.StateConfiguration;
 import de.viperpit.commons.cockpit.StateConfigurationStore;
-import de.viperpit.generator.java.DefaultStateConfigurations.DefaultStateConfiguration;
+import de.viperpit.generator.DefaultStateConfigurations.DefaultStateConfiguration;
 
 public class DefaultStateConfigurationsGenerator {
 
@@ -103,7 +103,7 @@ public class DefaultStateConfigurationsGenerator {
 	));
 
 	public DefaultStateConfigurations run( //
-			File metadataPath, //
+			File target, //
 			Collection<KeyCodeLine> keyCodeLines, //
 			RoleConfigurations roleConfigurations) throws Exception {
 		var collection = new ArrayList<DefaultStateConfiguration>();
@@ -115,10 +115,15 @@ public class DefaultStateConfigurationsGenerator {
 				return true;
 			}
 			if (equal(style, "knob")) {
-				return true;
+				if (!equal(role, "left") && !equal(role, "right") && !equal(role, "increase")
+						&& !equal(role, "decrease") && !equal(role, "up") && !equal(role, "down")) {
+					return true;
+				}
 			}
-			if (equal(style, "handle") && (equal(role, "down") || equal(role, "up"))) {
-				return true;
+			if (equal(style, "handle")) {
+				if (equal(role, "on") || equal(role, "off") || equal(role, "down") || equal(role, "up")) {
+					return true;
+				}
 			}
 			return false;
 		}).forEach(keyCodeLine -> {
@@ -178,13 +183,13 @@ public class DefaultStateConfigurationsGenerator {
 					defaultValueForAir));
 		}
 		writeObject( //
-				new File(metadataPath, "states_ramp.json"), //
+				new File(target, "states_ramp.json"), //
 				new StateConfigurationStore(stateConfigurationsForRamp));
 		writeObject(//
-				new File(metadataPath, "states_taxi.json"), //
+				new File(target, "states_taxi.json"), //
 				new StateConfigurationStore(stateConfigurationsForTaxi));
 		writeObject( //
-				new File(metadataPath, "states_air.json"), //
+				new File(target, "states_air.json"), //
 				new StateConfigurationStore(stateConfigurationsForAir));
 		return defaultStateConfigurations;
 	}

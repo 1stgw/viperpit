@@ -1,6 +1,6 @@
 {
-  "id" : "f35",
-  "label" : "F-35",
+  "id" : "f16",
+  "label" : "F-16",
   "consoleConfigurations" : [ {
     "id" : "leftConsole",
     "label" : "LEFT CONSOLE",
@@ -286,7 +286,7 @@
       }, {
         "id" : "TRIM: YAW TRIM Knob",
         "label" : "Yaw Trim",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "trimYawTrimKnobL",
           "callback" : "SimTrimYawLeft",
@@ -295,7 +295,7 @@
           "style" : "knob",
           "role" : "left",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "trimYawTrimKnobR",
           "callback" : "SimTrimYawRight",
@@ -304,7 +304,7 @@
           "style" : "knob",
           "role" : "right",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         } ]
       }, {
         "id" : "TRIM: PITCH TRIM Wheel",
@@ -986,7 +986,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "AUDIO2: INTERCOM Knob",
         "label" : "Intercom",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "audio2IntercomKnobVolumeIncr",
           "callback" : "SimStepIntercomVolumeUp",
@@ -995,7 +995,7 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "audio2IntercomKnobVolumeDecr",
           "callback" : "SimStepIntercomVolumeDown",
@@ -1004,7 +1004,7 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         } ]
       }, {
         "id" : "AUDIO2: ILS Knob",
@@ -1036,7 +1036,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "AUDIO1: COMM 1 Knob",
         "label" : "Comm 1",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "audio1Comm1KnobVolumeIncr",
           "callback" : "SimStepComm1VolumeUp",
@@ -1045,7 +1045,7 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "audio1Comm1KnobVolumeDecr",
           "callback" : "SimStepComm1VolumeDown",
@@ -1054,7 +1054,7 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "audio1Comm1KnobPowerOn",
           "callback" : "SimComm1PowerOn",
@@ -1077,7 +1077,7 @@
       }, {
         "id" : "AUDIO1: COMM 2 Knob",
         "label" : "Comm 2",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "audio1Comm2KnobVolumeIncr",
           "callback" : "SimStepComm2VolumeUp",
@@ -1086,7 +1086,7 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "audio1Comm2KnobVolumeDecr",
           "callback" : "SimStepComm2VolumeDown",
@@ -1095,7 +1095,7 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "audio1Comm2KnobPowerOn",
           "callback" : "SimComm2PowerOn",
@@ -1118,7 +1118,7 @@
       }, {
         "id" : "AUDIO1: MSL Knob",
         "label" : "Msl",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "audio1MslKnobVolumeIncr",
           "callback" : "SimStepMissileVolumeUp",
@@ -1127,7 +1127,7 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "audio1MslKnobVolumeDecr",
           "callback" : "SimStepMissileVolumeDown",
@@ -1136,7 +1136,7 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         } ]
       }, {
         "id" : "AUDIO1: COMM 1 Mode Knob",
@@ -1187,7 +1187,7 @@
       }, {
         "id" : "AUDIO1: THREAT Knob",
         "label" : "Threat",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "audio1ThreatKnobVolumeIncr",
           "callback" : "SimStepThreatVolumeUp",
@@ -1196,7 +1196,7 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "audio1ThreatKnobVolumeDecr",
           "callback" : "SimStepThreatVolumeDown",
@@ -1205,7 +1205,7 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         } ]
       } ]
     }, {
@@ -1232,7 +1232,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "UHF: PRESET CHANNEL Knob",
         "label" : "Preset Channel",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "uhfPresetChannelKnobCycleUp",
           "callback" : "SimCycleRadioChannel",
@@ -1241,7 +1241,7 @@
           "style" : "knob",
           "role" : "up",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "uhfPresetChannelKnobCycleDown",
           "callback" : "SimDecRadioChannel",
@@ -1250,7 +1250,7 @@
           "style" : "knob",
           "role" : "down",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         } ]
       }, {
         "id" : "UHF: A-3-2-T Rotary X__.___",
@@ -1402,7 +1402,7 @@
       }, {
         "id" : "UHF: VOL Knob",
         "label" : "Vol",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "uhfVolKnobAiVsIvcVolumeIncr",
           "callback" : "OTWBalanceIVCvsAIUp",
@@ -1411,7 +1411,7 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "uhfVolKnobAiVsIvcVolumeDecr",
           "callback" : "OTWBalanceIVCvsAIDown",
@@ -1420,7 +1420,7 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         } ]
       }, {
         "id" : "UHF: MODE Knob",
@@ -1606,7 +1606,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "HMCS: HMSC Knob",
         "label" : "Hmsc",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "hmcsHmscKnobBrightnessIncr",
           "callback" : "SimHmsSymWheelUp",
@@ -1615,7 +1615,7 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "hmcsHmscKnobBrightnessDecr",
           "callback" : "SimHmsSymWheelDn",
@@ -1624,7 +1624,7 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "hmcsHmscKnobOn",
           "callback" : "SimHmsOn",
@@ -2374,7 +2374,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "RWR: Brightness Knob",
         "label" : "Brightness",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "rwrBrightnessKnobIncrease",
           "callback" : "SimRWRBrightnessUp",
@@ -2383,7 +2383,7 @@
           "style" : "knob",
           "role" : "increase",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "rwrBrightnessKnobDecrease",
           "callback" : "SimRWRBrightnessDown",
@@ -2392,7 +2392,7 @@
           "style" : "knob",
           "role" : "decrease",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         } ]
       } ]
     }, {
@@ -2996,7 +2996,7 @@
       "controlGroupConfigurations" : [ {
         "id" : "LIGHT: INST PNL Knob (Primary)",
         "label" : "Inst Pnl Knob (primary)",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "lightInstPnlKnobPrimaryStepUp",
           "callback" : "SimInstrumentLightCW",
@@ -3005,7 +3005,7 @@
           "style" : "knob",
           "role" : "up",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "lightInstPnlKnobPrimaryStepDown",
           "callback" : "SimInstrumentLightCCW",
@@ -3014,12 +3014,12 @@
           "style" : "knob",
           "role" : "down",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         } ]
       }, {
         "id" : "LIGHT: DED Knob (Primary)",
         "label" : "Ded Knob (primary)",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "lightDedKnobPrimaryStepUp",
           "callback" : "SimDedBrightnessCW",
@@ -3028,7 +3028,7 @@
           "style" : "knob",
           "role" : "up",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "lightDedKnobPrimaryStepDown",
           "callback" : "SimDedBrightnessCCW",
@@ -3037,12 +3037,12 @@
           "style" : "knob",
           "role" : "down",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         } ]
       }, {
         "id" : "LIGHT: CONSOLES Knob (Flood)",
         "label" : "Consoles Knob (flood)",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "lightConsolesKnobFloodStepUp",
           "callback" : "SimInteriorLightCW",
@@ -3051,7 +3051,7 @@
           "style" : "knob",
           "role" : "up",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         }, {
           "id" : "lightConsolesKnobFloodStepDown",
           "callback" : "SimInteriorLightCCW",
@@ -3060,7 +3060,7 @@
           "style" : "knob",
           "role" : "down",
           "type" : "button",
-          "stateful" : true
+          "stateful" : false
         } ]
       } ]
     }, {
@@ -4040,7 +4040,7 @@
     "style" : "knob",
     "role" : "left",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "trimYawTrimKnobR",
     "callback" : "SimTrimYawRight",
@@ -4049,7 +4049,7 @@
     "style" : "knob",
     "role" : "right",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "trimPitchTrimWheelNoseUp",
     "callback" : "SimTrimNoseUp",
@@ -4589,7 +4589,7 @@
     "style" : "knob",
     "role" : "increase",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "audio2IntercomKnobVolumeDecr",
     "callback" : "SimStepIntercomVolumeDown",
@@ -4598,7 +4598,7 @@
     "style" : "knob",
     "role" : "decrease",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "audio2IlsKnobOn",
     "callback" : "SimILSOn",
@@ -4625,7 +4625,7 @@
     "style" : "knob",
     "role" : "increase",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "audio1Comm1KnobVolumeDecr",
     "callback" : "SimStepComm1VolumeDown",
@@ -4634,7 +4634,7 @@
     "style" : "knob",
     "role" : "decrease",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "audio1Comm1KnobPowerOn",
     "callback" : "SimComm1PowerOn",
@@ -4661,7 +4661,7 @@
     "style" : "knob",
     "role" : "increase",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "audio1Comm2KnobVolumeDecr",
     "callback" : "SimStepComm2VolumeDown",
@@ -4670,7 +4670,7 @@
     "style" : "knob",
     "role" : "decrease",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "audio1Comm2KnobPowerOn",
     "callback" : "SimComm2PowerOn",
@@ -4697,7 +4697,7 @@
     "style" : "knob",
     "role" : "increase",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "audio1MslKnobVolumeDecr",
     "callback" : "SimStepMissileVolumeDown",
@@ -4706,7 +4706,7 @@
     "style" : "knob",
     "role" : "decrease",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "audio1Comm1ModeKnobSql",
     "callback" : "SimAud1Com1Sql",
@@ -4751,7 +4751,7 @@
     "style" : "knob",
     "role" : "increase",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "audio1ThreatKnobVolumeDecr",
     "callback" : "SimStepThreatVolumeDown",
@@ -4760,7 +4760,7 @@
     "style" : "knob",
     "role" : "decrease",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "mpoManualPitchSwitchHold",
     "callback" : "SimMPO",
@@ -4778,7 +4778,7 @@
     "style" : "knob",
     "role" : "up",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "uhfPresetChannelKnobCycleDown",
     "callback" : "SimDecRadioChannel",
@@ -4787,7 +4787,7 @@
     "style" : "knob",
     "role" : "down",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "uhfA32TRotaryXzzzzzStepUp",
     "callback" : "SimBupUhfFreq1Inc",
@@ -4913,7 +4913,7 @@
     "style" : "knob",
     "role" : "increase",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "uhfVolKnobAiVsIvcVolumeDecr",
     "callback" : "OTWBalanceIVCvsAIDown",
@@ -4922,7 +4922,7 @@
     "style" : "knob",
     "role" : "decrease",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "uhfModeKnobMnl",
     "callback" : "SimBupUhfManual",
@@ -5048,7 +5048,7 @@
     "style" : "knob",
     "role" : "increase",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "hmcsHmscKnobBrightnessDecr",
     "callback" : "SimHmsSymWheelDn",
@@ -5057,7 +5057,7 @@
     "style" : "knob",
     "role" : "decrease",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "hmcsHmscKnobOn",
     "callback" : "SimHmsOn",
@@ -5633,7 +5633,7 @@
     "style" : "knob",
     "role" : "increase",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "rwrBrightnessKnobDecrease",
     "callback" : "SimRWRBrightnessDown",
@@ -5642,7 +5642,7 @@
     "style" : "knob",
     "role" : "decrease",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "mainHsiHdgKnobIncrease5",
     "callback" : "SimHsiHeadingInc",
@@ -6137,7 +6137,7 @@
     "style" : "knob",
     "role" : "up",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "lightInstPnlKnobPrimaryStepDown",
     "callback" : "SimInstrumentLightCCW",
@@ -6146,7 +6146,7 @@
     "style" : "knob",
     "role" : "down",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "lightDedKnobPrimaryStepUp",
     "callback" : "SimDedBrightnessCW",
@@ -6155,7 +6155,7 @@
     "style" : "knob",
     "role" : "up",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "lightDedKnobPrimaryStepDown",
     "callback" : "SimDedBrightnessCCW",
@@ -6164,7 +6164,7 @@
     "style" : "knob",
     "role" : "down",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "lightConsolesKnobFloodStepUp",
     "callback" : "SimInteriorLightCW",
@@ -6173,7 +6173,7 @@
     "style" : "knob",
     "role" : "up",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "lightConsolesKnobFloodStepDown",
     "callback" : "SimInteriorLightCCW",
@@ -6182,7 +6182,7 @@
     "style" : "knob",
     "role" : "down",
     "type" : "button",
-    "stateful" : true
+    "stateful" : false
   }, {
     "id" : "airAirSourceKnobOff",
     "callback" : "SimAirSourceOff",

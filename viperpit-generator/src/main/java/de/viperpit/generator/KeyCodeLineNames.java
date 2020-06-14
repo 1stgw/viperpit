@@ -1,4 +1,4 @@
-package de.viperpit.generator.java;
+package de.viperpit.generator;
 
 import static com.google.common.base.CharMatcher.is;
 import static com.google.common.base.CharMatcher.javaLetterOrDigit;

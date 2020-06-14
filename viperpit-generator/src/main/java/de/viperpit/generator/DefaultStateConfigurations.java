@@ -1,8 +1,8 @@
-package de.viperpit.generator.java;
+package de.viperpit.generator;
 
-import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.AIR;
-import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.RAMP;
-import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.TAXI;
+import static de.viperpit.generator.DefaultStateConfigurations.StateType.AIR;
+import static de.viperpit.generator.DefaultStateConfigurations.StateType.RAMP;
+import static de.viperpit.generator.DefaultStateConfigurations.StateType.TAXI;
 
 import java.util.Collection;
 import java.util.HashMap;

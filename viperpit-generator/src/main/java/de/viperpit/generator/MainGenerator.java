@@ -1,4 +1,4 @@
-package de.viperpit.generator.java;
+package de.viperpit.generator;
 
 import static com.google.common.base.Charsets.UTF_8;
 import static java.util.stream.Collectors.toList;
@@ -42,19 +42,21 @@ public class MainGenerator {
 				.stream() //
 				.filter(keyCodeLine -> filterConfigurations.isIncluded(keyCodeLine.getCallback())) //
 				.collect(toList());
+		var targetForJavaFiles = toPath(args[0] + "/viperpit-agent/src/main/java/");
+		var targetForResourceFiles = toPath(args[0] + "/viperpit-agent/src/main/resources/");
 		LOGGER.info("Running the Role Configuration Generator...");
 		var roleConfigurations = new RoleConfigurationsGenerator().run( //
-				source, //
+				targetForResourceFiles, //
 				keyCodeLines, //
 				filterConfigurations);
 		LOGGER.info("Running the State Configuration Generator...");
 		var defaultStateConfigurations = new DefaultStateConfigurationsGenerator().run( //
-				source, //
+				targetForResourceFiles, //
 				keyCodeLines, //
 				roleConfigurations);
 		LOGGER.info("Running the Cockpit Configuration Generator...");
 		var cockpitConfiguration = new CockpitConfigurationGenerator().run( //
-				source, //
+				targetForResourceFiles, //
 				keyCodeLines, //
 				roleConfigurations, //
 				defaultStateConfigurations, //
@@ -62,9 +64,9 @@ public class MainGenerator {
 				label);
 		LOGGER.info("Running the Code Generator...");
 		new WebApplicationGenerator().run( //
-				source, //
-				id, //
+				targetForJavaFiles, //
 				cockpitConfiguration);
+		LOGGER.info("Generator has finished successfully.");
 	}
 
 	private static File toPath(String pathArgument) {
