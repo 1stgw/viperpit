@@ -35,8 +35,6 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 
 	private static final Logger LOGGER = getLogger(AgentController.class);
 
-	private static final int STATE_UPDATE_RATE = 1000;
-
 	private static final String TOPIC_STATES_UPDATE = "/topic/cockpit/states/update";
 
 	private final Agent agent;
@@ -69,7 +67,11 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 	@SendTo(TOPIC_STATES_UPDATE)
 	public StateChangeEvent onStatesInit(InitializeStateEvent initializeStateEvent) {
 		LOGGER.info("State intialization requested.");
-		return updateStates(false);
+		Map<String, Object> statesToUpdate = new HashMap<>();
+		for (Entry<StateConfiguration, Object> entry : stateConfigurationReader.getStates()) {
+			statesToUpdate.put(entry.getKey().getId(), entry.getValue());
+		}
+		return updateStates(statesToUpdate);
 	}
 
 	@MessageMapping(APP_STATES_TOGGLE)
@@ -95,22 +97,9 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 		return updateStates(statesToUpdate);
 	}
 
-	@Scheduled(fixedRate = STATE_UPDATE_RATE)
-	public void updateStates() {
-		StateChangeEvent stateChangeEvent = updateStates(true);
-		if (stateChangeEvent.getUpdatedStates().isEmpty()) {
-			return;
-		}
-		template.convertAndSend(TOPIC_STATES_UPDATE, stateChangeEvent);
-	}
-
-	private StateChangeEvent updateStates(boolean modifiedOnly) {
+	@Scheduled(fixedRate = 1000)
+	public void onStatesUpdate() {
 		Map<String, Object> statesToUpdate = new HashMap<>();
-		if (!modifiedOnly) {
-			for (Entry<StateConfiguration, Object> entry : stateConfigurationReader.getStates()) {
-				statesToUpdate.put(entry.getKey().getId(), entry.getValue());
-			}
-		}
 		Map<String, Object> statesFromSharedMemory = sharedMemoryStateProvider.getStates();
 		for (Entry<String, Object> entry : statesFromSharedMemory.entrySet()) {
 			String id = entry.getKey();
@@ -124,7 +113,11 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 				}
 			}
 		}
-		return updateStates(statesToUpdate);
+		StateChangeEvent stateChangeEvent = updateStates(statesToUpdate);
+		if (stateChangeEvent.getUpdatedStates().isEmpty()) {
+			return;
+		}
+		template.convertAndSend(TOPIC_STATES_UPDATE, stateChangeEvent);
 	}
 
 	private StateChangeEvent updateStates(Map<String, ? extends Object> statesToUpdate) {
