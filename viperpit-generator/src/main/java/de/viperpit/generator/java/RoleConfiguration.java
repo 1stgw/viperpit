@@ -57,6 +57,10 @@ public class RoleConfiguration {
 		return Objects.hash(id, relatedCallbacks, role, style);
 	}
 
+	public boolean hasRelatedCallbacks() {
+		return relatedCallbacks != null && !relatedCallbacks.isEmpty();
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

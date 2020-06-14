@@ -1,6 +1,8 @@
 package de.viperpit.generator.java;
 
+import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.AIR;
 import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.RAMP;
+import static de.viperpit.generator.java.DefaultStateConfigurations.StateType.TAXI;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -27,6 +29,19 @@ public class DefaultStateConfigurations {
 	}
 
 	public static record DefaultStateConfiguration(String id, StateType stateType, Object defaultValue) {
+
+		public boolean isAir() {
+			return AIR.equals(stateType);
+		}
+
+		public boolean isRamp() {
+			return RAMP.equals(stateType);
+		}
+
+		public boolean isTaxi() {
+			return TAXI.equals(stateType);
+		}
+
 	}
 
 	private final Map<Pair<String, StateType>, DefaultStateConfiguration> map = new HashMap<>(650);

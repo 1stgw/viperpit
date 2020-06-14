@@ -1,12 +1,13 @@
 package de.viperpit.generator.java
 
+import com.google.common.io.Files
 import de.viperpit.agent.keys.KeyFile
 import java.io.File
+import java.nio.charset.Charset
 import java.util.HashSet
 import org.slf4j.LoggerFactory
 
 import static com.google.common.base.Charsets.UTF_8
-import static de.viperpit.generator.GeneratorUtils.write
 
 class FilterGenerator {
 
@@ -73,6 +74,10 @@ class FilterGenerator {
 				«callback»=toggle
 			«ENDFOR»
 		''', new File(path, '''filter.properties'''.toString), UTF_8)
+	}
+	
+	static def write(CharSequence charSequence, File file, Charset charset) {
+		Files.asCharSink(file, charset).write(charSequence)
 	}
 
 }

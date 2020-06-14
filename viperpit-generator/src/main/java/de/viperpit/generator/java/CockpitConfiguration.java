@@ -1,5 +1,6 @@
 package de.viperpit.generator.java;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -35,6 +36,19 @@ public class CockpitConfiguration {
 
 	public Collection<ConsoleConfiguration> getConsoleConfigurations() {
 		return consoleConfigurations;
+	}
+
+	public Collection<ControlConfiguration> getControlConfigurations() {
+		var collection = new ArrayList<ControlConfiguration>();
+		for (ConsoleConfiguration consoleConfiguration : getConsoleConfigurations()) {
+			for (PanelConfiguration panelConfiguration : consoleConfiguration.getPanelConfigurations()) {
+				for (ControlGroupConfiguration controlGroupConfiguration : panelConfiguration
+						.getControlGroupConfigurations()) {
+					collection.addAll(controlGroupConfiguration.getControlConfigurations());
+				}
+			}
+		}
+		return collection;
 	}
 
 	public String getId() {

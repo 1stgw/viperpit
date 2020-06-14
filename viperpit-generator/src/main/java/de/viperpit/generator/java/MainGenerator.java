@@ -1,9 +1,14 @@
 package de.viperpit.generator.java;
 
+import static com.google.common.base.Charsets.UTF_8;
+import static java.util.stream.Collectors.toList;
+
 import java.io.File;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import de.viperpit.agent.keys.KeyFile;
 
 public class MainGenerator {
 
@@ -20,11 +25,46 @@ public class MainGenerator {
 	private static void run(String[] args, String id, String label) throws Exception {
 		LOGGER.info("Running the Generator for " + label + "...");
 		LOGGER.info("Running the Filter Generator...");
-		File source = toPath(args[0] + "/viperpit-generator/src/main/resources/" + id);
+		var source = toPath(args[0] + "/viperpit-generator/src/main/resources/" + id);
 		LOGGER.info("Running the Filter Generator...");
 		new FilterGenerator().run(source);
+		var filterConfigurations = FilterConfigurations.read(new File(source, "filter.properties"));
+		LOGGER.info("Loading the Key file...");
+		var keyFile = new File(source.getAbsolutePath(), "full.key");
+		if (keyFile == null || !keyFile.exists()) {
+			LOGGER.error("Key file could not be loaded");
+			return;
+		}
+		LOGGER.info("Found key file and loading key file entries.");
+		var keyCodeLines = new KeyFile(keyFile, UTF_8) //
+				.getKeyCodeLines() //
+				.values() //
+				.stream() //
+				.filter(keyCodeLine -> filterConfigurations.isIncluded(keyCodeLine.getCallback())) //
+				.collect(toList());
+		LOGGER.info("Running the Role Configuration Generator...");
+		var roleConfigurations = new RoleConfigurationsGenerator().run( //
+				source, //
+				keyCodeLines, //
+				filterConfigurations);
+		LOGGER.info("Running the State Configuration Generator...");
+		var defaultStateConfigurations = new DefaultStateConfigurationsGenerator().run( //
+				source, //
+				keyCodeLines, //
+				roleConfigurations);
 		LOGGER.info("Running the Cockpit Configuration Generator...");
-		new CockpitConfigurationGenerator().run(source, id, label);
+		var cockpitConfiguration = new CockpitConfigurationGenerator().run( //
+				source, //
+				keyCodeLines, //
+				roleConfigurations, //
+				defaultStateConfigurations, //
+				id, //
+				label);
+		LOGGER.info("Running the Code Generator...");
+		new WebApplicationGenerator().run( //
+				source, //
+				id, //
+				cockpitConfiguration);
 	}
 
 	private static File toPath(String pathArgument) {
