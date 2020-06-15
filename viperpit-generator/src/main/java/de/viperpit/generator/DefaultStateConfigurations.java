@@ -11,14 +11,11 @@ import de.viperpit.commons.cockpit.StateType;
 
 public class DefaultStateConfigurations {
 
-	public static record DefaultStateConfiguration(String id, StateType stateType, Object defaultValue) {
-	}
-
 	private final Map<Pair<String, StateType>, DefaultStateConfiguration> map = new HashMap<>(650);
 
 	DefaultStateConfigurations(Collection<DefaultStateConfiguration> defaultStateConfigurations) {
 		for (DefaultStateConfiguration defaultStateConfiguration : defaultStateConfigurations) {
-			var key = new Pair<>(defaultStateConfiguration.id(), defaultStateConfiguration.stateType());
+			var key = new Pair<>(defaultStateConfiguration.getId(), defaultStateConfiguration.getStateType());
 			map.put(key, defaultStateConfiguration);
 		}
 	}
@@ -28,7 +25,7 @@ public class DefaultStateConfigurations {
 		if (defaultStateConfiguration == null) {
 			return null;
 		}
-		return defaultStateConfiguration.defaultValue();
+		return defaultStateConfiguration.getDefaultValue();
 	}
 
 	public boolean isStateful(String id) {

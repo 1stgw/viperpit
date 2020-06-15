@@ -19,7 +19,6 @@ import com.google.common.base.Objects;
 import de.viperpit.agent.keys.KeyFile.KeyCodeLine;
 import de.viperpit.commons.cockpit.StateConfiguration;
 import de.viperpit.commons.cockpit.StateConfigurationStore;
-import de.viperpit.generator.DefaultStateConfigurations.DefaultStateConfiguration;
 
 public class DefaultStateConfigurationsGenerator {
 
