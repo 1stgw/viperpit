@@ -26,18 +26,17 @@ public class KeyDispatcherService {
 	private Logger logger = LoggerFactory.getLogger(KeyDispatcherService.class);
 
 	public boolean fire(String callback) {
-		if (keyFile != null) {
-			KeyCodeLine keyCodeLine = keyFile.getKeyCodeLines().get(callback);
-			if (keyCodeLine != null) {
-				return keyDispatcher.fire(keyCodeLineConverter.toScanCodeIntervals(keyCodeLine, true));
-			} else {
-				logger.error(callback + " has not been found.");
-				return false;
-			}
-		} else {
+		if (keyFile == null) {
 			logger.error("Key file could not be loaded");
+			return false;
 		}
-		return false;
+		KeyCodeLine keyCodeLine = keyFile.getKeyCodeLines().get(callback);
+		if (keyCodeLine != null) {
+			return keyDispatcher.fire(keyCodeLineConverter.toScanCodeIntervals(keyCodeLine, true));
+		} else {
+			logger.error(callback + " has not been found.");
+			return false;
+		}
 	}
 
 }

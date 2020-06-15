@@ -8,9 +8,7 @@ import java.util.Properties;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.FilterType;
 import org.springframework.core.io.Resource;
 
 import com.fasterxml.jackson.core.SerializableString;
@@ -18,9 +16,7 @@ import com.fasterxml.jackson.core.io.CharacterEscapes;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration
-//@ComponentScan("de.viperpit.agent")
-@ComponentScan(basePackages = { "de.viperpit.agent" }, excludeFilters = {
-		@Filter(type = FilterType.ANNOTATION, value = Configuration.class) })
+@ComponentScan("de.viperpit.agent")
 public class AgentConfiguration {
 
 	@SuppressWarnings("serial")

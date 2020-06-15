@@ -55,7 +55,7 @@ public class KeyFileTests {
 	public void testDemoKeyFiles() {
 		Map<String, KeyCodeLine> keyCodeLines = keyFile.getKeyCodeLines();
 		assertNotNull(keyCodeLines);
-		assertEquals(953, keyCodeLines.size());
+		assertEquals(1008, keyCodeLines.size());
 	}
 
 	@Test
@@ -94,8 +94,7 @@ public class KeyFileTests {
 		assertEquals(keyCodeLine.getSection(), "SIMULATION & HARDWARE");
 		assertEquals(keyCodeLine.getCallback(), "OTWToggleFrameRate");
 		assertEquals(keyCodeLine.getSound(), -1);
-		Iterable<ScanCodeInterval> expected = newArrayList(new ScanCodeInterval(0x38, 0x2E),
-				new ScanCodeInterval(0x21));
+		Iterable<ScanCodeInterval> expected = newArrayList(new ScanCodeInterval(0x38, 0x2E), new ScanCodeInterval(0x21));
 		Iterable<ScanCodeInterval> actual = keyCodeLineConverter.toScanCodeIntervals(keyCodeLine, false);
 		assertIterableEquals(expected, actual, ScanCodeInterval.class);
 		assertEquals(keyCodeLine.getDescription(), "SIM: Display Frame Rate - Toggle");
