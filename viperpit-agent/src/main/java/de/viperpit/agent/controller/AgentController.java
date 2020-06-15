@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 
 import de.viperpit.agent.keys.KeyDispatcherService;
 import de.viperpit.agent.model.InitializeStateEvent;
+import de.viperpit.agent.model.ResetStateEvent;
 import de.viperpit.agent.model.StateChangeEvent;
 import de.viperpit.agent.model.ToggleStateEvent;
 import de.viperpit.commons.cockpit.StateConfiguration;
@@ -23,6 +24,8 @@ import de.viperpit.commons.cockpit.StateConfiguration;
 public class AgentController implements ApplicationListener<ApplicationEvent> {
 
 	private static final String APP_STATES_INIT = "/cockpit/states/init";
+
+	private static final String APP_STATES_RESET = "/cockpit/states/reset";
 
 	private static final String APP_STATES_TOGGLE = "/cockpit/states/toggle";
 
@@ -52,6 +55,13 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 	public StateChangeEvent onStatesInit(InitializeStateEvent initializeStateEvent) {
 		LOGGER.info("State intialization requested.");
 		return stateProvider.initializeStates();
+	}
+
+	@MessageMapping(APP_STATES_RESET)
+	@SendTo(TOPIC_STATES_UPDATE)
+	public StateChangeEvent onStatesReset(ResetStateEvent resetStateEvent) {
+		LOGGER.info("State reset requested.");
+		return stateProvider.resetStates();
 	}
 
 	@MessageMapping(APP_STATES_TOGGLE)

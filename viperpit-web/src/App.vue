@@ -9,15 +9,15 @@
             name: 'Cockpit',
             params: { cockpitId: 'f16' }
           }"
-          >F-16
-        </v-tab>
+          >F-16</v-tab
+        >
         <v-tab
           :to="{
             name: 'Cockpit',
             params: { cockpitId: 'f35' }
           }"
-          >F-35
-        </v-tab>
+          >F-35</v-tab
+        >
         <v-divider vertical></v-divider>
         <v-tab
           v-for="consoleConfiguration in getConfiguration.consoleConfigurations"
@@ -26,14 +26,17 @@
             name: 'CockpitWithConsole',
             params: { consoleId: consoleConfiguration.id }
           }"
+          >{{ consoleConfiguration.label }}</v-tab
         >
-          {{ consoleConfiguration.label }}
-        </v-tab>
       </v-tabs>
+      <v-spacer />
+      <v-btn @click="resetStates()" icon>
+        <v-icon>mdi-sync</v-icon>
+      </v-btn>
     </v-app-bar>
-    <v-content dark>
+    <v-main dark>
       <router-view />
-    </v-content>
+    </v-main>
     <v-overlay :value="!isConnected">
       <v-row justify="center">
         <v-dialog :value="!isConnected" persistent max-width="290">
@@ -48,7 +51,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "App",
@@ -59,6 +62,9 @@ export default {
     return {
       tab: null
     };
+  },
+  methods: {
+    ...mapActions(["resetStates"])
   }
 };
 </script>

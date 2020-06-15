@@ -113,6 +113,13 @@ public class StateProvider {
 		states.put(stateConfiguration, value);
 	}
 
+	public StateChangeEvent resetStates() {
+		synchronized (states) {
+			states = null;
+		}
+		return initializeStates();
+	}
+
 	public StateChangeEvent toggleBooleanState(StateConfiguration stateConfiguration) {
 		if (stateConfiguration == null || !stateConfiguration.isStateful()) {
 			return null;

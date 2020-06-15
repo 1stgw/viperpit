@@ -24,6 +24,10 @@ const actions = {
     const topic = "/app/cockpit/states/init";
     Vue.prototype.$stomp.send(topic, JSON.stringify({}));
   },
+  resetStates() {
+    const topic = "/app/cockpit/states/reset";
+    Vue.prototype.$stomp.send(topic, JSON.stringify({}));
+  },
   toggleState(context, id) {
     const topic = "/app/cockpit/states/toggle";
     Vue.prototype.$stomp.send(
