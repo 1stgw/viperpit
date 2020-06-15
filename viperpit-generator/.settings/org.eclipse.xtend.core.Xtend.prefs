@@ -1,3 +1,11 @@
+eclipse.preferences.version=1
+BuilderConfiguration.is_project_specific=true
+autobuilding=true
+generateGeneratedAnnotation=true
+generateSuppressWarnings=true
+targetJavaVersion=JAVA11
+useJavaCompilerCompliance=false
 outlet.DEFAULT_OUTPUT.cleanDirectory=true
+outlet.DEFAULT_OUTPUT.cleanupDerived=true
 outlet.DEFAULT_OUTPUT.derived=true
-useJavaCompilerCompliance=true
+outlet.DEFAULT_OUTPUT.directory=xtend-gen
