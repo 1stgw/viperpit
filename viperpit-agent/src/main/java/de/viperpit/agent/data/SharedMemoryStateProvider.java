@@ -20,6 +20,22 @@ import de.viperpit.commons.cockpit.StateType;
 @Component
 public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider {
 
+	public StateType getCurrentStateType() {
+		SharedMemoryData sharedMemoryData = getSharedMemoryReader().readData();
+		if (sharedMemoryData != null) {
+			if (isBitSet(OnGround, sharedMemoryData.getFlightData().lightBits3)) {
+				if (isBitSet(Power_Off, sharedMemoryData.getFlightData().lightBits3)) {
+					return RAMP;
+				} else {
+					return TAXI;
+				}
+			} else {
+				return AIR;
+			}
+		}
+		return RAMP;
+	}
+
 	@Override
 	protected Object getEcmOprSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return isBitNotSet(EcmPwr, sharedMemoryData.getFlightData().lightBits2);
@@ -79,22 +95,6 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 	@Override
 	protected Object getGearParkingBreakSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return isBitSet(ParkBrakeOn, sharedMemoryData.getFlightData().lightBits3);
-	}
-
-	public StateType getStateType() {
-		SharedMemoryData sharedMemoryData = getSharedMemoryReader().readData();
-		if (sharedMemoryData != null) {
-			if (isBitSet(OnGround, sharedMemoryData.getFlightData().lightBits3)) {
-				if (isBitSet(Power_Off, sharedMemoryData.getFlightData().lightBits3)) {
-					return RAMP;
-				} else {
-					return TAXI;
-				}
-			} else {
-				return AIR;
-			}
-		}
-		return RAMP;
 	}
 
 	private boolean isBitNotSet(int bit, int value) {

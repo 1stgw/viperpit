@@ -1,11 +1,9 @@
 package de.viperpit.agent.controller;
 
-import static de.viperpit.commons.cockpit.StateType.RAMP;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -69,11 +67,6 @@ public class StateProvider {
 		}
 	}
 
-	private Collection<Entry<StateConfiguration, Object>> getStates() {
-		initialize();
-		return states.entrySet();
-	}
-
 	private Object getValue(StateConfiguration stateConfiguration) {
 		initialize();
 		return states.get(stateConfiguration);
@@ -84,7 +77,8 @@ public class StateProvider {
 			return;
 		}
 		states = new HashMap<>();
-		String location = getStateFileName(RAMP);
+		StateType stateType = sharedMemoryStateProvider.getCurrentStateType();
+		String location = getStateFileName(stateType);
 		if (location == null) {
 			return;
 		}
@@ -106,8 +100,9 @@ public class StateProvider {
 	}
 
 	public StateChangeEvent initializeStates() {
+		initialize();
 		Map<StateConfiguration, Object> statesToUpdate = new HashMap<>();
-		for (Entry<StateConfiguration, Object> entry : getStates()) {
+		for (Entry<StateConfiguration, Object> entry : states.entrySet()) {
 			statesToUpdate.put(entry.getKey(), entry.getValue());
 		}
 		return updateStates(statesToUpdate);
