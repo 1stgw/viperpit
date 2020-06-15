@@ -4,12 +4,18 @@ import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits.
 import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits2.EcmPwr;
 import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits3.LeftGearDown;
 import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits3.NoseGearDown;
+import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits3.OnGround;
 import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits3.ParkBrakeOn;
+import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits3.Power_Off;
 import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits3.RightGearDown;
+import static de.viperpit.commons.cockpit.StateType.AIR;
+import static de.viperpit.commons.cockpit.StateType.RAMP;
+import static de.viperpit.commons.cockpit.StateType.TAXI;
 
 import org.springframework.stereotype.Component;
 
 import de.viperpit.agent.data.SharedMemoryReader.SharedMemoryData;
+import de.viperpit.commons.cockpit.StateType;
 
 @Component
 public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider {
@@ -36,6 +42,9 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 
 	@Override
 	protected Object getGearLgHandleDn(String id, SharedMemoryData sharedMemoryData) {
+		if (isBitSet(OnGround, sharedMemoryData.getFlightData().lightBits3)) {
+			return true;
+		}
 		if (isBitSet(NoseGearDown, sharedMemoryData.getFlightData().lightBits3)) {
 			return true;
 		}
@@ -70,6 +79,22 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 	@Override
 	protected Object getGearParkingBreakSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return isBitSet(ParkBrakeOn, sharedMemoryData.getFlightData().lightBits3);
+	}
+
+	public StateType getStateType() {
+		SharedMemoryData sharedMemoryData = getSharedMemoryReader().readData();
+		if (sharedMemoryData != null) {
+			if (isBitSet(OnGround, sharedMemoryData.getFlightData().lightBits3)) {
+				if (isBitSet(Power_Off, sharedMemoryData.getFlightData().lightBits3)) {
+					return RAMP;
+				} else {
+					return TAXI;
+				}
+			} else {
+				return AIR;
+			}
+		}
+		return RAMP;
 	}
 
 	private boolean isBitNotSet(int bit, int value) {

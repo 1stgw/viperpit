@@ -1,5 +1,6 @@
 package de.viperpit.agent.controller;
 
+import static de.viperpit.commons.cockpit.StateType.RAMP;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import java.io.IOException;
@@ -19,11 +20,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import de.viperpit.commons.cockpit.StateConfiguration;
 import de.viperpit.commons.cockpit.StateConfigurationStore;
+import de.viperpit.commons.cockpit.StateType;
 
 @Component
-public class StateConfigurationReader {
+public class StateProvider {
 
-	private static final Logger LOGGER = getLogger(StateConfigurationReader.class);
+	private static final Logger LOGGER = getLogger(StateProvider.class);
 
 	@Autowired
 	private ObjectMapper objectMapper;
@@ -40,14 +42,14 @@ public class StateConfigurationReader {
 		return stateConfigurationStore.getById(id);
 	}
 
-	private String getStateFileName(String preset) {
-		switch (preset) {
-		case "ramp":
-			return "classpath:/states_ramp.json";
-		case "ground":
-			return "classpath:/states_ground.json";
-		case "air":
+	private String getStateFileName(StateType stateType) {
+		switch (stateType) {
+		case AIR:
 			return "classpath:/states_air.json";
+		case RAMP:
+			return "classpath:/states_ramp.json";
+		case TAXI:
+			return "classpath:/states_taxi.json";
 		default:
 			return null;
 		}
@@ -68,7 +70,7 @@ public class StateConfigurationReader {
 			return;
 		}
 		states = new HashMap<>();
-		String location = getStateFileName("ramp");
+		String location = getStateFileName(RAMP);
 		if (location == null) {
 			return;
 		}

@@ -2,9 +2,9 @@ package de.viperpit.generator;
 
 import static com.google.common.base.Objects.equal;
 import static com.google.common.collect.Sets.newHashSet;
-import static de.viperpit.generator.DefaultStateConfigurations.StateType.AIR;
-import static de.viperpit.generator.DefaultStateConfigurations.StateType.RAMP;
-import static de.viperpit.generator.DefaultStateConfigurations.StateType.TAXI;
+import static de.viperpit.commons.cockpit.StateType.AIR;
+import static de.viperpit.commons.cockpit.StateType.RAMP;
+import static de.viperpit.commons.cockpit.StateType.TAXI;
 import static de.viperpit.generator.JsonFileWriter.writeObject;
 import static de.viperpit.generator.KeyCodeLineNames.toId;
 import static java.util.Collections.unmodifiableSet;

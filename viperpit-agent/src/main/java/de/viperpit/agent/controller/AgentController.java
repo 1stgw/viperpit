@@ -46,7 +46,7 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 	private SharedMemoryStateProvider sharedMemoryStateProvider;
 
 	@Autowired
-	private StateConfigurationReader stateConfigurationReader;
+	private StateProvider stateProvider;
 
 	@Autowired
 	private SimpMessagingTemplate template;
@@ -68,7 +68,7 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 	public StateChangeEvent onStatesInit(InitializeStateEvent initializeStateEvent) {
 		LOGGER.info("State intialization requested.");
 		Map<String, Object> statesToUpdate = new HashMap<>();
-		for (Entry<StateConfiguration, Object> entry : stateConfigurationReader.getStates()) {
+		for (Entry<StateConfiguration, Object> entry : stateProvider.getStates()) {
 			statesToUpdate.put(entry.getKey().getId(), entry.getValue());
 		}
 		return updateStates(statesToUpdate);
@@ -81,20 +81,21 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 			return null;
 		}
 		String id = toggleStateEvent.getId();
-		StateConfiguration stateConfiguration = stateConfigurationReader.getStateConfiguration(id);
+		StateConfiguration stateConfiguration = stateProvider.getStateConfiguration(id);
 		if (stateConfiguration == null) {
 			return null;
 		}
 		keyDispatcherService.fire(stateConfiguration.getCallback());
-		if (!stateConfiguration.isStateful()) {
+		if (stateConfiguration.isStateful()) {
+			Map<String, Object> statesToUpdate = new HashMap<>();
+			statesToUpdate.put(id, true);
+			for (String idOfRelated : stateConfiguration.getRelatedStateConfigurations()) {
+				statesToUpdate.put(idOfRelated, false);
+			}
+			return updateStates(statesToUpdate);
+		} else {
 			return null;
 		}
-		Map<String, Object> statesToUpdate = new HashMap<>();
-		statesToUpdate.put(id, true);
-		for (String idOfRelated : stateConfiguration.getRelatedStateConfigurations()) {
-			statesToUpdate.put(idOfRelated, false);
-		}
-		return updateStates(statesToUpdate);
 	}
 
 	@Scheduled(fixedRate = 1000)
@@ -103,10 +104,10 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 		Map<String, Object> statesFromSharedMemory = sharedMemoryStateProvider.getStates();
 		for (Entry<String, Object> entry : statesFromSharedMemory.entrySet()) {
 			String id = entry.getKey();
-			StateConfiguration stateConfiguration = stateConfigurationReader.getStateConfiguration(id);
+			StateConfiguration stateConfiguration = stateProvider.getStateConfiguration(id);
 			if (stateConfiguration != null) {
 				Object newValue = entry.getValue();
-				Object oldValue = stateConfigurationReader.getValue(stateConfiguration);
+				Object oldValue = stateProvider.getValue(stateConfiguration);
 				if (!Objects.equals(oldValue, newValue)) {
 					statesToUpdate.put(id, newValue);
 					LOGGER.info("Updating " + stateConfiguration + ": " + newValue);
@@ -122,9 +123,9 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 
 	private StateChangeEvent updateStates(Map<String, ? extends Object> statesToUpdate) {
 		statesToUpdate.forEach((id, value) -> {
-			StateConfiguration stateConfiguration = stateConfigurationReader.getStateConfiguration(id);
+			StateConfiguration stateConfiguration = stateProvider.getStateConfiguration(id);
 			if (stateConfiguration != null) {
-				stateConfigurationReader.put(stateConfiguration, value);
+				stateProvider.put(stateConfiguration, value);
 			}
 		});
 		return new StateChangeEvent(agent, statesToUpdate);

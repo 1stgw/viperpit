@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import de.viperpit.agent.data.SharedMemoryReader.SharedMemoryData;
 
 @Component
-public abstract class AbstractSharedMemoryStateProvider implements StateProvider {
+public abstract class AbstractSharedMemoryStateProvider {
 
 	private static final Collection<String> STATES = newArrayList(
 		"airAirSourceKnobDump",
@@ -226,7 +226,10 @@ public abstract class AbstractSharedMemoryStateProvider implements StateProvider
 	@Autowired
 	private SharedMemoryReader sharedMemoryReader;
 
-	@Override
+	protected SharedMemoryReader getSharedMemoryReader() {
+		return sharedMemoryReader;
+	}
+
 	public Map<String, Object> getStates() {
 		Map<String, Object> states = new LinkedHashMap<>(STATES.size());
 		SharedMemoryData sharedMemoryData = sharedMemoryReader.readData();
