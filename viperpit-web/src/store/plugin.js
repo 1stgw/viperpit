@@ -4,7 +4,10 @@ import Stomp from "webstomp-client";
 export default function stompPlugin(store) {
   const agentId = window.location.hostname;
   const url = "ws://" + agentId + ":8090/sockets";
-  const client = Stomp.client(url, { debug: false });
+  const socket = new WebSocket(url);
+  var client = Stomp.over(socket, {
+    debug: false
+  });
   Vue.prototype.$stomp = client;
   client.connect(
     {},

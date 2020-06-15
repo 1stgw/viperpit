@@ -12,7 +12,7 @@ public class AgentWebConfiguration implements WebMvcConfigurer {
 
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
-		registry.addMapping("/hub/**").allowedOrigins( //
+		registry.addMapping("/sockets/**").allowedOrigins( //
 				"http://office:8080", //
 				"http://localhost:8080" //
 		);
