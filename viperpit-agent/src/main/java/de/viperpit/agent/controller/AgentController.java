@@ -60,7 +60,7 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 
 	@Override
 	public void onApplicationEvent(ApplicationEvent event) {
-		System.out.println(event);
+		LOGGER.debug(event.toString());
 	}
 
 	@MessageMapping(APP_STATES_INIT)
