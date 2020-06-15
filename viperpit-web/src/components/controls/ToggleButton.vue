@@ -17,7 +17,7 @@ import ButtonContent from "@/components/controls/ButtonContent";
 import { mapActions } from "vuex";
 
 export default {
-  name: "StatelessButton",
+  name: "ToggleButton",
   components: {
     ButtonContent
   },

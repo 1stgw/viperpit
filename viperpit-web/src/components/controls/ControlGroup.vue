@@ -1,36 +1,24 @@
 <template>
   <div>
-    <div v-if="controlGroupConfiguration.stateful">
-      <stateful-button-group
-        :controlGroupConfiguration="controlGroupConfiguration"
-      />
+    <div v-if="controlGroupConfiguration.controlConfigurations.length > 1">
+      <!-- eslint-disable-next-line -->
+      <toggle-button-group :controlGroupConfiguration="controlGroupConfiguration" />
     </div>
     <div v-else>
-      <div v-if="controlGroupConfiguration.controlConfigurations.length > 1">
-        <stateless-button-group
-          :controlGroupConfiguration="controlGroupConfiguration"
-        />
-      </div>
-      <div v-else>
-        <stateless-button
-          :controlGroupConfiguration="controlGroupConfiguration"
-        />
-      </div>
+      <toggle-button :controlGroupConfiguration="controlGroupConfiguration" />
     </div>
   </div>
 </template>
 
 <script>
-import StatefulButtonGroup from "@/components/controls/StatefulButtonGroup";
-import StatelessButton from "@/components/controls/StatelessButton";
-import StatelessButtonGroup from "@/components/controls/StatelessButtonGroup";
+import ToggleButton from "@/components/controls/ToggleButton";
+import ToggleButtonGroup from "@/components/controls/ToggleButtonGroup";
 
 export default {
   name: "ControlGroup",
   components: {
-    StatelessButton,
-    StatefulButtonGroup,
-    StatelessButtonGroup
+    ToggleButton,
+    ToggleButtonGroup
   },
   props: {
     controlGroupConfiguration: {
