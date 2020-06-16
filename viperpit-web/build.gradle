@@ -1,7 +1,7 @@
 import com.moowork.gradle.node.task.NodeTask
 
 plugins {
-	id 'base'
+	id 'java'
 	id 'com.github.node-gradle.node' version '2.2.4'
 }
 
@@ -50,30 +50,15 @@ task vueCliServe(type: NodeTask, dependsOn: 'npmInstall') {
 	args = ['serve']
 }
 
-task packageNpmApp(type: Zip) {
-	dependsOn vueCliBuild
-	baseName 'viperpit-web'
-	extension 'jar'
-	from('dist') {
-		into 'static' 
-	}
+jar.dependsOn 'vueCliBuild'
+
+jar {
+	from 'dist' into 'static'
 }
 
 configurations {
 	npmResources
 }
 
-artifacts {
-	npmResources(packageNpmApp.archivePath) {
-		builtBy packageNpmApp
-		type 'jar'
-	}
-}
-
-configurations.default.extendsFrom(configurations.npmResources)
-
-assemble.dependsOn packageNpmApp
-
-clean.delete << file(packageNpmApp.archivePath)
 clean.delete << file('node_modules')
 clean.delete << file('dist')
