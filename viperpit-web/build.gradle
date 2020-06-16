@@ -20,6 +20,17 @@ task npmUpdate(type: NpmTask, dependsOn: 'npmInstall') {
 }
 
 task vueCliBuild(type: NodeTask, dependsOn: 'npmInstall') {
+	inputs.files fileTree("config")
+	inputs.files fileTree("public")
+	inputs.files fileTree("src")
+	inputs.files fileTree("test")
+	inputs.files fileTree("webpack")
+	inputs.file 'babel.config.js'
+	inputs.file 'package.json'
+	inputs.file 'package-lock.json'
+	inputs.file 'postcss.config.js'
+	inputs.file 'vue.config.js'
+	outputs.dir 'build'
 	def osName = System.getProperty('os.name').toLowerCase();
 	if (osName.contains('windows')) {
 		script = project.file('node_modules/@vue/cli-service/bin/vue-cli-service.js')
@@ -43,8 +54,7 @@ task packageNpmApp(type: Zip) {
 	dependsOn vueCliBuild
 	baseName 'viperpit-web'
 	extension 'jar'
-	destinationDir file("${projectDir}/build-npm")
-	from('build') {
+	from('dist') {
 		into 'static' 
 	}
 }

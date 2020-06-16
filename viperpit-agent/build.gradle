@@ -19,7 +19,7 @@ targetCompatibility = JavaVersion.VERSION_14
 
 dependencies {
 	implementation project(':viperpit-commons')
-	runtimeOnly project(':viperpit-web')
+	implementation project(':viperpit-web')
 	implementation 'com.google.guava:guava:27.1-jre'
 	implementation 'ch.qos.logback:logback-classic'
 	implementation 'net.java.dev.jna:jna:5.5.0'
