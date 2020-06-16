@@ -4,7 +4,6 @@ import static org.slf4j.LoggerFactory.getLogger;
 
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -41,9 +40,6 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 
 	@Autowired
 	private SimpMessagingTemplate template;
-
-	@Value("${url}")
-	private String url;
 
 	@Override
 	public void onApplicationEvent(ApplicationEvent event) {
