@@ -1,16 +1,16 @@
 plugins {
 	id 'java'
 	id 'application'
-	id 'org.springframework.boot'
 	id 'io.spring.dependency-management'
 }
 
 sourceCompatibility = JavaVersion.VERSION_14
 targetCompatibility = JavaVersion.VERSION_14
 
-bootJar {
-	classifier = 'boot'
-	mainClassName = 'de.viperpit.launcher.LauncherApplication'
+tasks.jar {
+	manifest {
+		attributes('Automatic-Module-Name': 'de.viperpit.launcher')
+	}
 }
 
 dependencies {
@@ -20,3 +20,40 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot'
 	implementation 'org.springframework.boot:spring-boot-autoconfigure'
 }
+
+mainClassName = 'de.viperpit.launcher.LauncherApplication'
+
+task assembleJpackageLauncher(type: Copy) {
+	dependsOn jar.archiveFile
+	from jar.archiveFile into "${project.buildDir}/jpackage-libs"
+}
+
+task assembleJpackageDependencies(type: Copy) {
+	dependsOn configurations.runtimeClasspath
+	from configurations.runtimeClasspath into "${project.buildDir}/jpackage-libs"
+}
+
+task runJpackage(type: Exec) {
+	dependsOn assembleJpackageLauncher
+	dependsOn assembleJpackageDependencies
+	def javaHome = System.properties['java.home']
+	if (javaHome == null) {
+		throw new RuntimeException("javaHome is not defined.")
+	}
+	def name = 'Viperpit Agent'
+	def resourcesDirectory = project.sourceSets.main.resources.srcDirs.first()
+	commandLine "$javaHome/bin/jpackage",
+				'--type', 'exe',
+				'--resource-dir', "$resourcesDirectory",
+				'--input', "$project.buildDir/jpackage-libs",
+				'--dest', "$project.buildDir/jpackage",
+				'--name', "$name",
+				'--icon', "$resourcesDirectory/icon.ico",
+				'--app-version', "$project.version",
+				'--main-class', "$project.mainClassName",
+				'--main-jar', "$jar.archiveName",
+				'--win-console',
+				'--win-dir-chooser'
+}
+
+build.dependsOn runJpackage

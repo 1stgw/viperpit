@@ -43,6 +43,12 @@ sourceSets {
 	}
 }
 
+tasks.jar {
+	manifest {
+		attributes('Automatic-Module-Name': 'de.viperpit.agent')
+	}
+}
+
 // Can be enabled when a new JNA Structure has to be generated from an updated header file.
 jnaerator.enabled = false
 jnaerator {

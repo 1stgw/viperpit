@@ -19,6 +19,12 @@ dependencies {
 	implementation 'org.eclipse.xtend:org.eclipse.xtend.lib:2.22.0'
 }
 
+tasks.jar {
+	manifest {
+		attributes('Automatic-Module-Name': 'de.viperpit.generator')
+	}
+}
+
 xtend{
 	generator {
 		javaSourceLevel = '11'
