@@ -41,19 +41,25 @@ task runJpackage(type: Exec) {
 		throw new RuntimeException("javaHome is not defined.")
 	}
 	def name = 'Viperpit Agent'
+	def description = 'Serves a touch-enabled web interface for Falcon BMS.'
+	def vendor = 'Viper Pits Devs'
 	def resourcesDirectory = project.sourceSets.main.resources.srcDirs.first()
 	commandLine "$javaHome/bin/jpackage",
-				'--type', 'exe',
 				'--resource-dir', "$resourcesDirectory",
 				'--input', "$project.buildDir/jpackage-libs",
 				'--dest', "$project.buildDir/jpackage",
 				'--name', "$name",
+				'--description', "$description",
+				'--vendor', "$vendor",
+				'--java-options', '-DkeyFile=file:/$ROOTDIR/input.key',
+				'--java-options', '-Djava.library.path=$ROOTDIR;$ROOTDIR/app;C:\\Windows\\System32',
 				'--icon', "$resourcesDirectory/icon.ico",
 				'--app-version', "$project.version",
 				'--main-class', "$project.mainClassName",
 				'--main-jar', "$jar.archiveName",
 				'--win-console',
-				'--win-dir-chooser'
+				'--win-dir-chooser',
+				'--win-per-user-install'
 }
 
 build.dependsOn runJpackage
