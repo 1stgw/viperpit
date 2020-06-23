@@ -1,5 +1,5 @@
 import Vue from "vue";
-import configuration from "@/data/f16/configuration.json";
+import configuration from "@/data/configuration_f16.json";
 import {
   AGENTS_CONNECT,
   AGENTS_DISCONNECT,

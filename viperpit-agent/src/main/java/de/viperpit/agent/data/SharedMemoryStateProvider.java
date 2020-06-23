@@ -1,7 +1,7 @@
 package de.viperpit.agent.data;
 
 import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits.RefuelRDY;
-import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits2.EcmPwr;
+import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits2.Degr;
 import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits3.LeftGearDown;
 import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits3.NoseGearDown;
 import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits3.OnGround;
@@ -41,12 +41,12 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 
 	@Override
 	protected Object getEcmOprSwitchOff(String id, SharedMemoryData sharedMemoryData) {
-		return isBitNotSet(EcmPwr, sharedMemoryData.getFlightData().lightBits2);
+		return isBitSet(Degr, sharedMemoryData.getFlightData().lightBits2);
 	}
 
 	@Override
 	protected Object getEcmOprSwitchOpr(String id, SharedMemoryData sharedMemoryData) {
-		return isBitSet(EcmPwr, sharedMemoryData.getFlightData().lightBits2);
+		return isBitNotSet(Degr, sharedMemoryData.getFlightData().lightBits2);
 	}
 
 	@Override
@@ -61,9 +61,6 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 
 	@Override
 	protected Object getGearLgHandleDn(String id, SharedMemoryData sharedMemoryData) {
-		if (isBitSet(OnGround, sharedMemoryData.getFlightData().lightBits3)) {
-			return true;
-		}
 		if (isBitSet(NoseGearDown, sharedMemoryData.getFlightData().lightBits3)) {
 			return true;
 		}
