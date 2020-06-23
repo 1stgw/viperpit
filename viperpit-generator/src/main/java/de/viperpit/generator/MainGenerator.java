@@ -42,21 +42,22 @@ public class MainGenerator {
 				.stream() //
 				.filter(keyCodeLine -> filterConfigurations.isIncluded(keyCodeLine.getCallback())) //
 				.collect(toList());
-		var targetForJavaFiles = toPath(args[0] + "/viperpit-agent/src/main/java/");
-		var targetForResourceFiles = toPath(args[0] + "/viperpit-agent/src/main/resources/");
+		var targetForAgentJavaFiles = toPath(args[0] + "/viperpit-agent/src/main/java/");
+		var targetForAgentResourceFiles = toPath(args[0] + "/viperpit-agent/src/main/resources/");
 		LOGGER.info("Running the Role Configuration Generator...");
 		var roleConfigurations = new RoleConfigurationsGenerator().run( //
-				targetForResourceFiles, //
+				targetForAgentResourceFiles, //
 				keyCodeLines, //
 				filterConfigurations);
 		LOGGER.info("Running the State Configuration Generator...");
 		var defaultStateConfigurations = new DefaultStateConfigurationsGenerator().run( //
-				targetForResourceFiles, //
+				targetForAgentResourceFiles, //
 				keyCodeLines, //
 				roleConfigurations);
 		LOGGER.info("Running the Cockpit Configuration Generator...");
+		var targetForWebApplicationResourceFiles = toPath(args[0] + "/viperpit-web/src/data/");
 		var cockpitConfiguration = new CockpitConfigurationGenerator().run( //
-				targetForResourceFiles, //
+				targetForWebApplicationResourceFiles, //
 				keyCodeLines, //
 				roleConfigurations, //
 				defaultStateConfigurations, //
@@ -64,7 +65,7 @@ public class MainGenerator {
 				label);
 		LOGGER.info("Running the Code Generator...");
 		new WebApplicationGenerator().run( //
-				targetForJavaFiles, //
+				targetForAgentJavaFiles, //
 				cockpitConfiguration);
 		LOGGER.info("Generator has finished successfully.");
 	}
