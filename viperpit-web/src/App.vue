@@ -1,9 +1,9 @@
 <template>
   <v-app dark>
-    <v-app-bar dense>
+    <v-app-bar dense flat short color="black">
       <div v-if="isConnected">{{ getAgent }}</div>
       <v-spacer />
-      <v-tabs align-with-title v-model="tab">
+      <v-tabs align-with-title show-arrows>
         <v-tab
           :to="{
             name: 'Cockpit',
