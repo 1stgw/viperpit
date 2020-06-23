@@ -10,5 +10,4 @@
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="de.viperpit.launcher.LauncherApplication"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="viperpit-launcher"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="viperpit-launcher"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-DkeyFile=${file_uri:${resource_loc:/viperpit-agent/src/test/resources/demo.key}}"/>
 </launchConfiguration>

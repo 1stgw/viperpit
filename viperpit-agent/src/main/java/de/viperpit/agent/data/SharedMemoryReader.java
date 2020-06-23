@@ -1,9 +1,17 @@
 package de.viperpit.agent.data;
 
+import static com.google.common.base.Charsets.UTF_8;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.BiConsumer;
+
 import org.springframework.stereotype.Component;
 
+import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.platform.win32.WinDef.UINT;
 
 import de.viperpit.agent.data.jna.FlightDataLibrary.FlightData;
 import de.viperpit.agent.data.jna.FlightDataLibrary.FlightData2;
@@ -74,24 +82,72 @@ public class SharedMemoryReader {
 
 	public SharedMemoryData readData() {
 		SharedMemoryData sharedMemoryData = new SharedMemoryData();
-		sharedMemoryData.setFlightData(readData("FalconSharedMemoryArea", FlightData.class));
-		sharedMemoryData.setFlightData2(readData("FalconSharedMemoryArea2", FlightData2.class));
-		sharedMemoryData.setIntellivibeData(readData("FalconIntellivibeSharedMemoryArea", IntellivibeData.class));
-		sharedMemoryData.setOsbData(readData("FalconSharedOsbMemoryArea", OSBData.class));
-		sharedMemoryData.setStringData(readData("FalconSharedMemoryAreaString", StringData.class));
+		readFlightData((data, pointer) -> sharedMemoryData.setFlightData(data));
+		readFlightData2((data, pointer) -> sharedMemoryData.setFlightData2(data));
+		readIntellivibeData((data, pointer) -> sharedMemoryData.setIntellivibeData(data));
+		readOSBData((data, pointer) -> sharedMemoryData.setOsbData(data));
+		readStringData((data, pointer) -> sharedMemoryData.setStringData(data));
 		return sharedMemoryData;
 	}
 
-	private <T extends Structure> T readData(String sharedMemoryAreaName, Class<T> type) {
-		T structure;
+	protected <T extends Structure> void readData(String sharedMemoryAreaName, Class<T> type,
+			BiConsumer<T, Pointer> consumer) {
 		try (SharedMemory sharedMemory = new SharedMemory(sharedMemoryAreaName)) {
 			Pointer pointer = sharedMemory.getView().get();
-			structure = (T) Structure.newInstance(type, pointer);
+			T structure = (T) Structure.newInstance(type, pointer);
 			structure.autoRead();
+			if (consumer != null) {
+				consumer.accept(structure, pointer);
+			}
 		} catch (Exception exception) {
-			structure = (T) Structure.newInstance(type);
+			T structure = (T) Structure.newInstance(type);
+			if (consumer != null) {
+				consumer.accept(structure, null);
+			}
 		}
-		return structure;
+	}
+
+	public void readFlightData(BiConsumer<FlightData, Pointer> consumer) {
+		readData("FalconSharedMemoryArea", FlightData.class, consumer);
+	}
+
+	public void readFlightData2(BiConsumer<FlightData2, Pointer> consumer) {
+		readData("FalconSharedMemoryArea2", FlightData2.class, consumer);
+	}
+
+	public void readIntellivibeData(BiConsumer<IntellivibeData, Pointer> consumer) {
+		readData("FalconIntellivibeSharedMemoryArea", IntellivibeData.class, consumer);
+	}
+
+	public void readOSBData(BiConsumer<OSBData, Pointer> consumer) {
+		readData("FalconSharedOsbMemoryArea", OSBData.class, consumer);
+	}
+
+	public void readStringData(BiConsumer<StringData, Pointer> consumer) {
+		readData("FalconSharedMemoryAreaString", StringData.class, consumer);
+	}
+
+	public String[] readStrings() {
+		List<String> strings = new ArrayList<>();
+		readStringData((stringData, pointer) -> {
+			long offset = 0;
+			// We can skip the version number
+			offset += UINT.SIZE;
+			int numberOfStrings = pointer.getInt(offset);
+			offset += UINT.SIZE;
+			// We can skip the data size
+			offset += UINT.SIZE;
+			for (int i = 0; i < numberOfStrings; i++) {
+				int stringIdentifier = pointer.getInt(offset);
+				offset += UINT.SIZE;
+				int stringLength = pointer.getInt(offset);
+				offset += UINT.SIZE;
+				byte[] byteArray = pointer.getByteArray(offset, stringLength + 1);
+				strings.add(stringIdentifier, Native.toString(byteArray, UTF_8.name()));
+				offset += stringLength + 1;
+			}
+		});
+		return strings.toArray(new String[strings.size()]);
 	}
 
 }

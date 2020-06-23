@@ -5,10 +5,12 @@ import static org.springframework.boot.Banner.Mode.OFF;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import de.viperpit.agent.AgentConfiguration;
 
+@EnableCaching
 @EnableScheduling
 @SpringBootApplication(scanBasePackageClasses = AgentConfiguration.class)
 public class LauncherApplication implements CommandLineRunner {

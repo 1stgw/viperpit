@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.Resource;
 
 import com.fasterxml.jackson.core.SerializableString;
@@ -17,6 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration
 @ComponentScan("de.viperpit.agent")
+@PropertySource("classpath:/agent.properties")
 public class AgentConfiguration {
 
 	@SuppressWarnings("serial")

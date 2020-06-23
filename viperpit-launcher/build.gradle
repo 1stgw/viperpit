@@ -51,7 +51,6 @@ task runJpackage(type: Exec) {
 				'--name', "$name",
 				'--description', "$description",
 				'--vendor', "$vendor",
-				'--java-options', '-DkeyFile=file:/$ROOTDIR/input.key',
 				'--java-options', '-Djava.library.path=$ROOTDIR;$ROOTDIR/app;C:\\Windows\\System32',
 				'--icon', "$resourcesDirectory/icon.ico",
 				'--app-version', "$project.version",

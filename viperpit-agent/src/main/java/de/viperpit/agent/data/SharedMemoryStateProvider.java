@@ -12,9 +12,12 @@ import static de.viperpit.commons.cockpit.StateType.AIR;
 import static de.viperpit.commons.cockpit.StateType.RAMP;
 import static de.viperpit.commons.cockpit.StateType.TAXI;
 
+import java.io.File;
+
 import org.springframework.stereotype.Component;
 
 import de.viperpit.agent.data.SharedMemoryReader.SharedMemoryData;
+import de.viperpit.agent.data.jna.FlightDataLibrary.StringData.StringIdentifier;
 import de.viperpit.commons.cockpit.StateType;
 
 @Component
@@ -22,18 +25,18 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 
 	public StateType getCurrentStateType() {
 		SharedMemoryData sharedMemoryData = getSharedMemoryReader().readData();
-		if (sharedMemoryData != null) {
-			if (isBitSet(OnGround, sharedMemoryData.getFlightData().lightBits3)) {
-				if (isBitSet(Power_Off, sharedMemoryData.getFlightData().lightBits3)) {
-					return RAMP;
-				} else {
-					return TAXI;
-				}
-			} else {
-				return AIR;
-			}
+		if (sharedMemoryData == null) {
+			return RAMP;
 		}
-		return RAMP;
+		if (isBitSet(OnGround, sharedMemoryData.getFlightData().lightBits3)) {
+			if (isBitSet(Power_Off, sharedMemoryData.getFlightData().lightBits3)) {
+				return RAMP;
+			} else {
+				return TAXI;
+			}
+		} else {
+			return AIR;
+		}
 	}
 
 	@Override
@@ -95,6 +98,23 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 	@Override
 	protected Object getGearParkingBreakSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return isBitSet(ParkBrakeOn, sharedMemoryData.getFlightData().lightBits3);
+	}
+
+	public File getKeyFileLocation() {
+		String[] strings = getSharedMemoryReader().readStrings();
+		int identifier = StringIdentifier.KeyFile;
+		if (strings.length <= identifier) {
+			return null;
+		}
+		String keyFilePath = strings[identifier];
+		if (keyFilePath == null) {
+			return null;
+		}
+		File file = new File(keyFilePath);
+		if (!file.canRead()) {
+			return null;
+		}
+		return file;
 	}
 
 	private boolean isBitNotSet(int bit, int value) {
