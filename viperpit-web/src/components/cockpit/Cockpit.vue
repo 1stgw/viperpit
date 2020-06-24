@@ -15,16 +15,18 @@ export default {
   components: {
     Console
   },
-  computed: {
-    ...mapGetters(["getConfiguration", "isConnected"])
-  },
   props: {
     cockpitId: {
-      type: String
+      type: String,
+      default: null
     },
     consoleId: {
-      type: String
+      type: String,
+      default: null
     }
+  },
+  computed: {
+    ...mapGetters(["getConfiguration", "isConnected"])
   }
 };
 </script>

@@ -4,10 +4,10 @@
     <v-btn
       v-for="controlConfiguration in controlGroupConfiguration.controlConfigurations"
       :key="controlConfiguration.id"
-      @click="toggleState(controlConfiguration.id)"
       outlined
+      @click="toggleState(controlConfiguration.id)"
     >
-      <button-content :controlConfiguration="controlConfiguration" />
+      <button-content :control-configuration="controlConfiguration" />
     </v-btn>
   </div>
 </template>

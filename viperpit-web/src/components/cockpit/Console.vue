@@ -7,7 +7,7 @@
         md="6"
         sm="12"
       >
-        <panel :panelConfiguration="panelConfiguration" />
+        <panel :panel-configuration="panelConfiguration" />
       </v-col>
     </v-row>
   </v-container>

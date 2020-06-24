@@ -17,7 +17,7 @@ export default {
     }
   },
   computed: {
-    icon: function() {
+    icon: function () {
       switch (this.controlConfiguration) {
         case "up":
           return "mdi-menu-up";

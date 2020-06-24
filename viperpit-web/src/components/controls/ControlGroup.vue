@@ -5,7 +5,7 @@
       <toggle-button-group :controlGroupConfiguration="controlGroupConfiguration" />
     </div>
     <div v-else>
-      <toggle-button :controlGroupConfiguration="controlGroupConfiguration" />
+      <toggle-button :control-group-configuration="controlGroupConfiguration" />
     </div>
   </div>
 </template>

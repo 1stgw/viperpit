@@ -8,9 +8,7 @@
           :key="controlGroupConfiguration.id"
           cols="auto"
         >
-          <control-group
-            :controlGroupConfiguration="controlGroupConfiguration"
-          />
+          <control-group :control-group-configuration="controlGroupConfiguration" />
         </v-col>
       </v-row>
     </v-container>

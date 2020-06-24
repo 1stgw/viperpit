@@ -1,10 +1,6 @@
 import configuration from "@/data/configuration_f16.json";
 import Vue from "vue";
-import {
-  AGENTS_CONNECT,
-  AGENTS_DISCONNECT,
-  STATES_UPDATE
-} from "./mutation-types";
+import { AGENTS_CONNECT, AGENTS_DISCONNECT, STATES_UPDATE } from "./mutation-types";
 
 const state = () => ({
   agentId: null,
@@ -49,21 +45,17 @@ const getters = {
     return state.configuration;
   },
   getConsole: state => id => {
-    return state.configuration.consoleConfigurations.find(
-      consoleConfiguration => consoleConfiguration.id === id
-    );
+    return state.configuration.consoleConfigurations.find(consoleConfiguration => consoleConfiguration.id === id);
   },
   getControlConfigurationWithActiveState: state => controlGroupConfiguration => {
     let actions = state.actions;
-    return controlGroupConfiguration.controlConfigurations.find(
-      controlConfiguration => {
-        let action = actions[controlConfiguration.id];
-        if (!action) {
-          return false;
-        }
-        return actions[controlConfiguration.id].value === true;
+    return controlGroupConfiguration.controlConfigurations.find(controlConfiguration => {
+      let action = actions[controlConfiguration.id];
+      if (!action) {
+        return false;
       }
-    );
+      return actions[controlConfiguration.id].value === true;
+    });
   },
   isConnected: state => {
     return state.actions && state.agentId;

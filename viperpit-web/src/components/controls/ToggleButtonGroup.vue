@@ -1,15 +1,15 @@
 <template>
   <div>
     <p>{{ controlGroupConfiguration.label }}</p>
-    <v-btn-toggle :class="orientation" v-model="selected" dense>
+    <v-btn-toggle v-model="selected" :class="orientation" dense>
       <v-btn
         v-for="controlConfiguration in controlGroupConfiguration.controlConfigurations"
         :key="controlConfiguration.id"
         :value="controlConfiguration.id"
-        @click="toggleState(controlConfiguration.id)"
         outlined
+        @click="toggleState(controlConfiguration.id)"
       >
-        <button-content :controlConfiguration="controlConfiguration" />
+        <button-content :control-configuration="controlConfiguration" />
       </v-btn>
     </v-btn-toggle>
   </div>
@@ -67,7 +67,7 @@ export default {
     }
   },
   computed: {
-    orientation: function() {
+    orientation: function () {
       if (this.vertical) {
         return "vertical";
       } else {
@@ -75,11 +75,9 @@ export default {
       }
     },
     selected: {
-      get: function() {
+      get: function () {
         if (this.controlGroupConfiguration.stateful) {
-          const selected = this.$store.getters.getControlConfigurationWithActiveState(
-            this.controlGroupConfiguration
-          );
+          const selected = this.$store.getters.getControlConfigurationWithActiveState(this.controlGroupConfiguration);
           if (selected) {
             return selected.id;
           }
@@ -87,7 +85,7 @@ export default {
         return null;
       },
       // eslint-disable-next-line no-unused-vars
-      set: function(newValue) {}
+      set: function (newValue) {}
     }
   },
   methods: {
