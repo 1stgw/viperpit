@@ -1,5 +1,5 @@
-import Vue from "vue";
 import configuration from "@/data/configuration_f16.json";
+import Vue from "vue";
 import {
   AGENTS_CONNECT,
   AGENTS_DISCONNECT,
@@ -13,8 +13,7 @@ const state = () => ({
 });
 
 const actions = {
-  connectAgent({ commit, dispatch }, agentId) {
-    dispatch("initStates");
+  connectAgent({ commit }, agentId) {
     commit(AGENTS_CONNECT, agentId);
   },
   disconnectAgent({ commit }, agentId) {
