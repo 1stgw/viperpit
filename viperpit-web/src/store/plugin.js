@@ -20,6 +20,7 @@ export default function stompPlugin(store) {
         store.dispatch("updateStates", delta);
       });
       store.dispatch("connectAgent", agentId);
+      store.dispatch("initConfiguration");
       store.dispatch("initStates");
     },
     error => {

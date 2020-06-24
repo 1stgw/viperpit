@@ -55,7 +55,7 @@ public class MainGenerator {
 				keyCodeLines, //
 				roleConfigurations);
 		LOGGER.info("Running the Cockpit Configuration Generator...");
-		var targetForWebApplicationResourceFiles = toPath(args[0] + "/viperpit-web/src/data/");
+		var targetForWebApplicationResourceFiles = toPath(args[0] + "/viperpit-web/public/data/");
 		var cockpitConfiguration = new CockpitConfigurationGenerator().run( //
 				targetForWebApplicationResourceFiles, //
 				keyCodeLines, //

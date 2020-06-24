@@ -1,11 +1,12 @@
-import configuration from "@/data/configuration_f16.json";
 import Vue from "vue";
-import { AGENTS_CONNECT, AGENTS_DISCONNECT, STATES_UPDATE } from "./mutation-types";
+import { AGENTS_CONNECT, AGENTS_DISCONNECT, CONFIGURATION_UPDATE, STATES_UPDATE } from "./mutation-types";
 
 const state = () => ({
   agentId: null,
   actions: {},
-  configuration: configuration
+  configuration: {
+    consoleConfigurations: []
+  }
 });
 
 const actions = {
@@ -14,6 +15,11 @@ const actions = {
   },
   disconnectAgent({ commit }, agentId) {
     commit(AGENTS_DISCONNECT, agentId);
+  },
+  initConfiguration({ commit }) {
+    Vue.http.get("/data/configuration_f16.json").then(response => {
+      commit(CONFIGURATION_UPDATE, response.data);
+    });
   },
   initStates() {
     const topic = "/app/cockpit/states/init";
@@ -45,7 +51,16 @@ const getters = {
     return state.configuration;
   },
   getConsole: state => id => {
-    return state.configuration.consoleConfigurations.find(consoleConfiguration => consoleConfiguration.id === id);
+    const consoleConfiguration = state.configuration.consoleConfigurations.find(
+      consoleConfiguration => consoleConfiguration.id === id
+    );
+    if (consoleConfiguration) {
+      return consoleConfiguration;
+    } else {
+      return {
+        panelConfigurations: []
+      };
+    }
   },
   getControlConfigurationWithActiveState: state => controlGroupConfiguration => {
     let actions = state.actions;
@@ -70,6 +85,9 @@ const mutations = {
     if (state.agentId === agentId) {
       state.agentId = undefined;
     }
+  },
+  CONFIGURATION_UPDATE(state, configuration) {
+    state.configuration = configuration;
   },
   STATES_UPDATE(state, result) {
     for (let id in result.updatedStates) {
