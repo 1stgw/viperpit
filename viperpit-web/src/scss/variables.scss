@@ -6,10 +6,6 @@ $material-dark: (
   "background": #000,
   "cards": #000,
   "dividers": map-get($light-green, "base"),
-  "icons": (
-    "active": map-get($light-green, "base"),
-    "inactive": rgba(map-get($light-green, "base"), 0.5)
-  ),
   "text": (
     "theme": map-get($light-green, "base"),
     "primary": map-get($light-green, "base"),

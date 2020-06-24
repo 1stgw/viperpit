@@ -1,7 +1,7 @@
 <template>
   <span>
     <div v-if="icon">
-      <v-icon>{{ icon }}</v-icon>
+      <v-icon color="light-green">{{ icon }}</v-icon>
     </div>
     <div v-else>{{ controlConfiguration.label }}</div>
   </span>
@@ -28,9 +28,9 @@ export default {
         case "right":
           return "mdi-menu-right";
         case "increase":
-          return "mdi-menu-plus";
+          return "mdi-plus";
         case "decrease":
-          return "mdi-menu-minus";
+          return "mdi-minus";
         default:
           return null;
       }
