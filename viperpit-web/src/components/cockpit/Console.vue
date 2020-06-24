@@ -7,7 +7,9 @@
         md="6"
         sm="12"
       >
-        <panel :panel-configuration="panelConfiguration" />
+        <v-lazy>
+          <panel :panel-configuration="panelConfiguration" />
+        </v-lazy>
       </v-col>
     </v-row>
   </v-container>
