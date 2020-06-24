@@ -1,7 +1,7 @@
 <template>
   <span>
     <div v-if="icon">
-      <v-icon>icon</v-icon>
+      <v-icon>{{ icon }}</v-icon>
     </div>
     <div v-else>{{ controlConfiguration.label }}</div>
   </span>
@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     icon: function () {
-      switch (this.controlConfiguration) {
+      switch (this.controlConfiguration.role) {
         case "up":
           return "mdi-menu-up";
         case "down":

@@ -1,8 +1,7 @@
 <template>
   <div>
     <div v-if="controlGroupConfiguration.controlConfigurations.length > 1">
-      <!-- eslint-disable-next-line -->
-      <toggle-button-group :controlGroupConfiguration="controlGroupConfiguration" />
+      <toggle-button-group :control-group-configuration="controlGroupConfiguration" />
     </div>
     <div v-else>
       <toggle-button :control-group-configuration="controlGroupConfiguration" />
