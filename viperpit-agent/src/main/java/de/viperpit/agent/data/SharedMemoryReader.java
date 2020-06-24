@@ -130,6 +130,9 @@ public class SharedMemoryReader {
 	public String[] readStrings() {
 		List<String> strings = new ArrayList<>();
 		readStringData((stringData, pointer) -> {
+			if (pointer == null) {
+				return;
+			}
 			long offset = 0;
 			// We can skip the version number
 			offset += UINT.SIZE;
