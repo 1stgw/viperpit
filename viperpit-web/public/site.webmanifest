@@ -15,7 +15,8 @@
   ],
   "start_url": "/#/cockpit/f16",
   "scope": "/",
-  "theme_color": "#000000",
+  "theme_color": "#8bc34a",
   "background_color": "#000000",
-  "display": "standalone"
+  "display": "fullscreen",
+  "orientation": "portrait"
 }
