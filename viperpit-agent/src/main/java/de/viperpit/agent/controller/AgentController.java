@@ -16,7 +16,7 @@ import de.viperpit.agent.keys.KeyDispatcherService;
 import de.viperpit.agent.model.InitializeStateEvent;
 import de.viperpit.agent.model.ResetStateEvent;
 import de.viperpit.agent.model.StateChangeEvent;
-import de.viperpit.agent.model.ToggleStateEvent;
+import de.viperpit.agent.model.TriggerStateChangeEvent;
 import de.viperpit.commons.cockpit.StateConfiguration;
 
 @Controller
@@ -26,7 +26,7 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 
 	private static final String APP_STATES_RESET = "/cockpit/states/reset";
 
-	private static final String APP_STATES_TOGGLE = "/cockpit/states/toggle";
+	private static final String APP_STATES_TRIGGER_STATE_CHANGE = "/cockpit/states/triggerStateChange";
 
 	private static final Logger LOGGER = getLogger(AgentController.class);
 
@@ -60,18 +60,23 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 		return stateProvider.resetStates();
 	}
 
-	@MessageMapping(APP_STATES_TOGGLE)
+	@MessageMapping(APP_STATES_TRIGGER_STATE_CHANGE)
 	@SendTo(TOPIC_STATES_UPDATE)
-	public StateChangeEvent onStatesToggle(ToggleStateEvent toggleStateEvent) {
-		if (toggleStateEvent == null) {
+	public StateChangeEvent onStatesToggle(TriggerStateChangeEvent triggerStateChangeEvent) {
+		if (triggerStateChangeEvent == null) {
 			return null;
 		}
-		StateConfiguration stateConfiguration = stateProvider.getStateConfiguration(toggleStateEvent.getId());
+		StateConfiguration stateConfiguration = stateProvider.getStateConfiguration(triggerStateChangeEvent.getId());
 		if (stateConfiguration == null) {
 			return null;
 		}
-		keyDispatcherService.fire(stateConfiguration.getCallback());
-		return stateProvider.toggleBooleanState(stateConfiguration);
+		if (triggerStateChangeEvent.isStart()) {
+			keyDispatcherService.keyDown(stateConfiguration.getCallback());
+			return null;
+		} else {
+			keyDispatcherService.keyUp(stateConfiguration.getCallback());
+			return stateProvider.toggleBooleanState(stateConfiguration);
+		}
 	}
 
 	@Scheduled(fixedRate = 1000)

@@ -5,7 +5,8 @@
       v-for="controlConfiguration in controlGroupConfiguration.controlConfigurations"
       :key="controlConfiguration.id"
       outlined
-      @click="toggleState(controlConfiguration.id)"
+      @mousedown="startStateChange(controlConfiguration.id)"
+      @mouseup="endStateChange(controlConfiguration.id)"
     >
       <button-content :control-configuration="controlConfiguration" />
     </v-btn>
@@ -28,7 +29,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(["toggleState"])
+    ...mapActions(["endStateChange", "startStateChange"])
   }
 };
 </script>

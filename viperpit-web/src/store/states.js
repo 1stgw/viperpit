@@ -29,12 +29,23 @@ const actions = {
     const topic = "/app/cockpit/states/reset";
     Vue.prototype.$stomp.send(topic, JSON.stringify({}));
   },
-  toggleState(context, id) {
-    const topic = "/app/cockpit/states/toggle";
+  startStateChange(context, id) {
+    const topic = "/app/cockpit/states/triggerStateChange";
     Vue.prototype.$stomp.send(
       topic,
       JSON.stringify({
-        id: id
+        id: id,
+        start: true
+      })
+    );
+  },
+  endStateChange(context, id) {
+    const topic = "/app/cockpit/states/triggerStateChange";
+    Vue.prototype.$stomp.send(
+      topic,
+      JSON.stringify({
+        id: id,
+        start: false
       })
     );
   },

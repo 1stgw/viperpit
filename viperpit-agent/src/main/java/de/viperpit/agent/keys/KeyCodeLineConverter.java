@@ -1,5 +1,6 @@
 package de.viperpit.agent.keys;
 
+import static com.google.common.collect.Lists.newArrayList;
 import static com.sun.jna.Native.load;
 import static com.sun.jna.win32.W32APIOptions.DEFAULT_OPTIONS;
 import static java.awt.event.KeyEvent.VK_ALT;
@@ -11,8 +12,8 @@ import static java.lang.Integer.valueOf;
 import static java.util.Arrays.copyOf;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Enumeration;
-import java.util.List;
 import java.util.Properties;
 
 import org.slf4j.Logger;
@@ -23,7 +24,6 @@ import org.springframework.stereotype.Component;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
-import com.google.common.collect.Lists;
 import com.sun.jna.platform.win32.User32;
 import com.sun.jna.ptr.IntByReference;
 
@@ -139,8 +139,8 @@ public class KeyCodeLineConverter {
 		return OS.MapVirtualKeyEx(keyCode, 4, OS.GetKeyboardLayout(0));
 	}
 
-	public Iterable<ScanCodeInterval> toScanCodeIntervals(KeyCodeLine keyCodeLine, boolean disableNumLock) {
-		List<ScanCodeInterval> scanCodeIntervals = Lists.newArrayList();
+	public Collection<ScanCodeInterval> toScanCodeIntervals(KeyCodeLine keyCodeLine, boolean disableNumLock) {
+		Collection<ScanCodeInterval> scanCodeIntervals = newArrayList();
 		if (disableNumLock && OS.GetKeyState(VK_NUM_LOCK) == 1) {
 			int scanCode = toScanCodeFromVirtualKeyCode(VK_NUM_LOCK);
 			scanCodeIntervals.add(new ScanCodeInterval(scanCode));

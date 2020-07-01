@@ -2,14 +2,16 @@ package de.viperpit.agent.model;
 
 import java.util.Objects;
 
-public class ToggleStateEvent {
+public class TriggerStateChangeEvent {
 
 	private String id;
 
-	public ToggleStateEvent() {
+	private boolean start;
+
+	public TriggerStateChangeEvent() {
 	}
 
-	public ToggleStateEvent(String id) {
+	public TriggerStateChangeEvent(String id) {
 		this.id = id;
 	}
 
@@ -24,7 +26,7 @@ public class ToggleStateEvent {
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
-		ToggleStateEvent other = (ToggleStateEvent) obj;
+		TriggerStateChangeEvent other = (TriggerStateChangeEvent) obj;
 		return Objects.equals(id, other.id);
 	}
 
@@ -37,15 +39,25 @@ public class ToggleStateEvent {
 		return Objects.hash(id);
 	}
 
+	public boolean isStart() {
+		return start;
+	}
+
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public void setStart(boolean start) {
+		this.start = start;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("ToggleStateEvent [id=");
+		builder.append("TriggerStateChangeEvent [id=");
 		builder.append(id);
+		builder.append(", start=");
+		builder.append(start);
 		builder.append("]");
 		return builder.toString();
 	}

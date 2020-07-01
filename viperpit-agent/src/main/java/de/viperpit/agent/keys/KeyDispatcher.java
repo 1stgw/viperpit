@@ -4,7 +4,13 @@ import static com.sun.jna.platform.win32.WinUser.INPUT.INPUT_KEYBOARD;
 import static com.sun.jna.platform.win32.WinUser.KEYBDINPUT.KEYEVENTF_EXTENDEDKEY;
 import static com.sun.jna.platform.win32.WinUser.KEYBDINPUT.KEYEVENTF_KEYUP;
 import static com.sun.jna.platform.win32.WinUser.KEYBDINPUT.KEYEVENTF_SCANCODE;
+import static de.viperpit.agent.keys.KeyDispatcher.KeyDispatchType.KEY_DOWN;
+import static de.viperpit.agent.keys.KeyDispatcher.KeyDispatchType.KEY_UP;
 import static java.lang.Thread.sleep;
+import static java.util.Arrays.asList;
+import static java.util.EnumSet.copyOf;
+
+import java.util.EnumSet;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -20,6 +26,10 @@ import de.viperpit.agent.keys.KeyCodeLineConverter.ScanCodeInterval;
 
 @Component
 public class KeyDispatcher {
+
+	public static enum KeyDispatchType {
+		KEY_DOWN, KEY_UP
+	}
 
 	private static final User32 OS = User32.INSTANCE;
 
@@ -52,7 +62,7 @@ public class KeyDispatcher {
 		}
 	}
 
-	public int fire(int... scanCodes) {
+	private int fire(int[] scanCodes, EnumSet<KeyDispatchType> keyDispatchTypes) {
 		if (windowName != null) {
 			HWND window = OS.FindWindow(null, windowName);
 			if (window != null) {
@@ -63,13 +73,17 @@ public class KeyDispatcher {
 				}
 				INPUT[] inputs = (INPUT[]) new INPUT().toArray(scanCodes.length * 2);
 				int i = 0;
-				for (int scanCode : scanCodes) {
-					configure(inputs[i], scanCode, false);
-					i++;
+				if (keyDispatchTypes.contains(KEY_DOWN)) {
+					for (int scanCode : scanCodes) {
+						configure(inputs[i], scanCode, false);
+						i++;
+					}
 				}
-				for (int scanCode : scanCodes) {
-					configure(inputs[i], scanCode, true);
-					i++;
+				if (keyDispatchTypes.contains(KEY_UP)) {
+					for (int scanCode : scanCodes) {
+						configure(inputs[i], scanCode, true);
+						i++;
+					}
 				}
 				return OS.SendInput(new DWORD(inputs.length), inputs, inputs[0].size()).intValue();
 			}
@@ -77,16 +91,16 @@ public class KeyDispatcher {
 		return 0;
 	}
 
-	private boolean isDelayAction() {
-		return true;
-	}
-
-	public boolean fire(Iterable<ScanCodeInterval> scanCodeIntervals) {
+	public boolean fire(Iterable<ScanCodeInterval> scanCodeIntervals, KeyDispatchType... keyDispatchTypes) {
 		int result = 0;
 		for (ScanCodeInterval scanCodeInterval : scanCodeIntervals) {
-			result += fire(scanCodeInterval.getScanCodes());
+			result += fire(scanCodeInterval.getScanCodes(), copyOf(asList(keyDispatchTypes)));
 		}
 		return result != 0;
+	}
+
+	private boolean isDelayAction() {
+		return true;
 	}
 
 }
