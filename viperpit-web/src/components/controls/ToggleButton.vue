@@ -7,6 +7,8 @@
       outlined
       @mousedown="startStateChange(controlConfiguration.id)"
       @mouseup="endStateChange(controlConfiguration.id)"
+      @ontouchstart="startStateChange(controlConfiguration.id)"
+      @ontouchend="endStateChange(controlConfiguration.id)"
     >
       <button-content :control-configuration="controlConfiguration" />
     </v-btn>
