@@ -7,8 +7,6 @@
         :key="controlConfiguration.id"
         :value="controlConfiguration.id"
         outlined
-        @mousedown="startStateChange(controlConfiguration.id)"
-        @mouseup="endStateChange(controlConfiguration.id)"
         @touchstart="startStateChange(controlConfiguration.id)"
         @touchend="endStateChange(controlConfiguration.id)"
       >
