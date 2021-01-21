@@ -8,5 +8,5 @@ Building Instructions
 ---------------
 You'll have to use Windows to build the software (as will be usable only on Windows anyway).
 
-# git clone git@github.com:1stgw/viperpit.git
-# Run ./gradlew build
+* git clone git@github.com:1stgw/viperpit.git
+* Run ./gradlew build
