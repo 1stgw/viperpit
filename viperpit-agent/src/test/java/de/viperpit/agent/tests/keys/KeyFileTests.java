@@ -3,24 +3,24 @@ package de.viperpit.agent.tests.keys;
 import static com.google.common.base.Charsets.ISO_8859_1;
 import static com.google.common.collect.Iterables.toArray;
 import static com.google.common.collect.Lists.newArrayList;
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
 import java.net.URISyntaxException;
 import java.util.Map;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import de.viperpit.agent.AgentConfiguration;
 import de.viperpit.agent.keys.KeyCodeLineConverter;
@@ -28,7 +28,7 @@ import de.viperpit.agent.keys.KeyCodeLineConverter.ScanCodeInterval;
 import de.viperpit.agent.keys.KeyFile;
 import de.viperpit.agent.keys.KeyFile.KeyCodeLine;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest
 @ActiveProfiles("test")
 @ContextConfiguration(classes = { AgentConfiguration.class })
@@ -39,14 +39,14 @@ public class KeyFileTests {
 
 	private KeyFile keyFile;
 
-	@Before
+	@BeforeEach
 	public void loadKeyFile() throws URISyntaxException {
 		File file = new File(KeyFileTests.class.getResource("/demo.key").toURI());
 		assertTrue(file.exists());
 		keyFile = new KeyFile(file, ISO_8859_1);
 	}
 
-	@After
+	@AfterEach
 	public void resetKeyFile() {
 		keyFile = null;
 	}
@@ -94,7 +94,8 @@ public class KeyFileTests {
 		assertEquals(keyCodeLine.getSection(), "SIMULATION & HARDWARE");
 		assertEquals(keyCodeLine.getCallback(), "OTWToggleFrameRate");
 		assertEquals(keyCodeLine.getSound(), -1);
-		Iterable<ScanCodeInterval> expected = newArrayList(new ScanCodeInterval(0x38, 0x2E), new ScanCodeInterval(0x21));
+		Iterable<ScanCodeInterval> expected = newArrayList(new ScanCodeInterval(0x38, 0x2E),
+				new ScanCodeInterval(0x21));
 		Iterable<ScanCodeInterval> actual = keyCodeLineConverter.toScanCodeIntervals(keyCodeLine, false);
 		assertIterableEquals(expected, actual, ScanCodeInterval.class);
 		assertEquals(keyCodeLine.getDescription(), "SIM: Display Frame Rate - Toggle");
