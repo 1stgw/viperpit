@@ -1,11 +1,10 @@
 <template>
   <v-app dark>
-    <v-app-bar dense flat short color="black">
+    <v-app-bar app dense flat short clipped-left color="black">
       <div v-if="isConnected">
         {{ getAgent }}
       </div>
-      <v-spacer />
-      <v-tabs align-with-title show-arrows>
+      <v-tabs color="green" align-with-title show-arrows>
         <v-tab
           :to="{
             name: 'Cockpit',
@@ -22,20 +21,9 @@
         >
           F-35
         </v-tab>
-        <v-divider vertical />
-        <v-tab
-          v-for="consoleConfiguration in getConfiguration.consoleConfigurations"
-          :key="consoleConfiguration.id"
-          :to="{
-            name: 'CockpitWithConsole',
-            params: { consoleId: consoleConfiguration.id }
-          }"
-        >
-          {{ consoleConfiguration.label }}
-        </v-tab>
       </v-tabs>
       <v-spacer />
-      <v-btn icon @click="resetStates()">
+      <v-btn color="green" icon @click="resetStates()">
         <v-icon>mdi-sync</v-icon>
       </v-btn>
     </v-app-bar>
@@ -46,9 +34,7 @@
       <v-row justify="center">
         <v-dialog :value="!isConnected" persistent max-width="290">
           <v-card>
-            <v-card-title class="headline">
-              No Joy...
-            </v-card-title>
+            <v-card-title class="headline"> No Joy... </v-card-title>
             <v-card-text>Currently there is no flight Airborne...</v-card-text>
           </v-card>
         </v-dialog>
@@ -68,7 +54,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["getAgent", "getConfiguration", "isConnected"])
+    ...mapGetters(["getAgent", "getConfiguration", "getConsoles", "isConnected"])
   },
   methods: {
     ...mapActions(["resetStates"])

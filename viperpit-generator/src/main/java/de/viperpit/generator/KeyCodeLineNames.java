@@ -69,7 +69,7 @@ public class KeyCodeLineNames {
 		return description.substring(description.lastIndexOf(lastIndexToken) + 1, description.length()).trim();
 	}
 
-	public static String toName(String string) {
+	public static String toLabel(String string) {
 		var tokens = new ArrayList<>(on(whitespace()).omitEmptyStrings().trimResults().splitToList(string));
 		return tokens.stream().collect(joining(" "));
 	}

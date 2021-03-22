@@ -17,6 +17,12 @@ export default new VueRouter({
       path: "/cockpit/:cockpitId/console/:consoleId",
       component: Cockpit,
       props: true
+    },
+    {
+      name: "CockpitWithConsoleAndPanel",
+      path: "/cockpit/:cockpitId/console/:consoleId/panel/:panelId",
+      component: Cockpit,
+      props: true
     }
   ]
 });

@@ -4,7 +4,9 @@
 $body-font-family: "Oxanium", serif;
 $material-dark: (
   "background": #000,
+  "bottom-navigation": #000,
   "cards": #000,
+  "navigation-drawer": #000,
   "dividers": map-get($light-green, "base"),
   "text": (
     "theme": map-get($light-green, "base"),

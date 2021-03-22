@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch LauncherApplication",
+            "request": "launch",
+            "mainClass": "de.viperpit.launcher.LauncherApplication",
+            "projectName": "viperpit-launcher"
+        },
+        {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",

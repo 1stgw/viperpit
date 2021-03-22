@@ -1,11 +1,14 @@
 import Vue from "vue";
+import store from ".";
 import { AGENTS_CONNECT, AGENTS_DISCONNECT, CONFIGURATION_UPDATE, STATES_UPDATE } from "./mutation-types";
 
 const state = () => ({
   agentId: null,
+  cockpitId: "f16",
   actions: {},
   configuration: {
-    consoleConfigurations: []
+    consoleConfigurations: [],
+    panelConfigurations: []
   }
 });
 
@@ -16,10 +19,13 @@ const actions = {
   disconnectAgent({ commit }, agentId) {
     commit(AGENTS_DISCONNECT, agentId);
   },
-  initConfiguration({ commit }) {
-    Vue.http.get("/data/configuration_f16.json").then(response => {
-      commit(CONFIGURATION_UPDATE, response.data);
-    });
+  initConfiguration(context) {
+    const cockpitId = context.getters.getCockpit;
+    if (cockpitId) {
+      Vue.http.get("/data/configuration_" + context.getters.getCockpit + ".json").then(response => {
+        context.commit(CONFIGURATION_UPDATE, response.data);
+      });
+    }
   },
   initStates() {
     const topic = "/app/cockpit/states/init";
@@ -58,8 +64,14 @@ const getters = {
   getAgent: state => {
     return state.agentId;
   },
+  getCockpit: state => {
+    return state.cockpitId;
+  },
   getConfiguration: state => {
     return state.configuration;
+  },
+  getConsoles: state => {
+    return state.configuration.consoleConfigurations;
   },
   getConsole: state => id => {
     const consoleConfiguration = state.configuration.consoleConfigurations.find(
@@ -82,6 +94,25 @@ const getters = {
       }
       return actions[controlConfiguration.id].value === true;
     });
+  },
+  getPanel: state => (consoleId, panelId) => {
+    if (panelId) {
+      const panelConfiguration = state.configuration.panelConfigurations.find(
+        panelConfiguration => panelConfiguration.id === panelId
+      );
+      if (panelConfiguration) {
+        return panelConfiguration;
+      }
+    } else if (consoleId) {
+      return store.getters.getPanels(consoleId)[0];
+    }
+    return {
+      controlConfigurations: []
+    };
+  },
+  // eslint-disable-next-line no-unused-vars
+  getPanels: state => consoleId => {
+    return store.getters.getConsole(consoleId).panelConfigurations;
   },
   isConnected: state => {
     return state.actions && state.agentId;

@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined>
+  <v-card v-if="panelConfiguration" outlined>
     <v-card-title>{{ panelConfiguration.label }}</v-card-title>
     <v-container>
       <v-row justify="center">
@@ -26,7 +26,8 @@ export default {
   props: {
     panelConfiguration: {
       type: Object,
-      required: true
+      required: false,
+      default: null
     }
   }
 };

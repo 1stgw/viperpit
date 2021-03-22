@@ -9,7 +9,6 @@ import static de.viperpit.generator.KeyCodeLineNames.toCapitalizedName;
 import static de.viperpit.generator.KeyCodeLineNames.toGroupAndLabel;
 import static de.viperpit.generator.KeyCodeLineNames.toId;
 import static de.viperpit.generator.KeyCodeLineNames.toLabel;
-import static de.viperpit.generator.KeyCodeLineNames.toName;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import java.io.File;
@@ -117,7 +116,7 @@ public class CockpitConfigurationGenerator {
 			var keyCodeLine = keyCodeLineBySection.getValue();
 			var section = keyCodeLineBySection.getKey();
 			var id = toId(section);
-			var label = toName(section);
+			var label = toLabel(section).replace(" PANEL", "");;
 			var panelConfiguration = panelConfigurations.get(id);
 			if (panelConfiguration == null) {
 				panelConfiguration = new PanelConfiguration( //
@@ -134,7 +133,7 @@ public class CockpitConfigurationGenerator {
 		for (Entry<String, KeyCodeLine> keyCodeLineByCategory : keyCodeLinesByCategory.entries()) {
 			var category = keyCodeLineByCategory.getKey();
 			var id = toId(category);
-			var label = toName(category);
+			var label = toLabel(category).replace(" CONSOLE", "");
 			var consoleConfiguration = consoleConfigurations.get(id);
 			if (consoleConfiguration == null) {
 				consoleConfiguration = new ConsoleConfiguration( //

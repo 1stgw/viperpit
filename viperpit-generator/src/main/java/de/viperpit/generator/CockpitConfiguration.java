@@ -5,9 +5,9 @@ import java.util.Collection;
 import java.util.Objects;
 
 public class CockpitConfiguration {
-
+	
 	private final String id;
-
+	
 	private final String label;
 
 	private final Collection<ConsoleConfiguration> consoleConfigurations;
@@ -30,8 +30,7 @@ public class CockpitConfiguration {
 			return false;
 		}
 		CockpitConfiguration other = (CockpitConfiguration) obj;
-		return Objects.equals(consoleConfigurations, other.consoleConfigurations) && Objects.equals(id, other.id)
-				&& Objects.equals(label, other.label);
+		return Objects.equals(id, other.id) && Objects.equals(label, other.label);
 	}
 
 	public Collection<ConsoleConfiguration> getConsoleConfigurations() {
@@ -57,6 +56,14 @@ public class CockpitConfiguration {
 
 	public String getLabel() {
 		return label;
+	}
+
+	public Collection<PanelConfiguration> getPanelConfigurations() {
+		var collection = new ArrayList<PanelConfiguration>();
+		for (ConsoleConfiguration consoleConfiguration : getConsoleConfigurations()) {
+			collection.addAll(consoleConfiguration.getPanelConfigurations());
+		}
+		return collection;
 	}
 
 	@Override
