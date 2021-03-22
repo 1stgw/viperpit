@@ -88,12 +88,12 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 	}
 
 	@Override
-	protected Object getGearParkingBreakSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getGearParkingBrakeSwitchOff(String id, SharedMemoryData sharedMemoryData) {
 		return isBitNotSet(ParkBrakeOn, sharedMemoryData.getFlightData().lightBits3);
 	}
 
 	@Override
-	protected Object getGearParkingBreakSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getGearParkingBrakeSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return isBitSet(ParkBrakeOn, sharedMemoryData.getFlightData().lightBits3);
 	}
 

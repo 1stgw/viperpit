@@ -101,6 +101,10 @@ public class DefaultStateConfigurationsGenerator {
 			"SimSeatOff" //
 	));
 
+	private boolean isValidDefaultValue(RoleConfiguration roleConfiguration, Object defaultValue) {
+		return defaultValue instanceof Boolean;
+	}
+
 	public DefaultStateConfigurations run( //
 			File target, //
 			Collection<KeyCodeLine> keyCodeLines, //
@@ -157,7 +161,6 @@ public class DefaultStateConfigurationsGenerator {
 				collection.add(new DefaultStateConfiguration(callback, TAXI, false));
 				collection.add(new DefaultStateConfiguration(callback, AIR, false));
 			}
-
 		});
 		DefaultStateConfigurations defaultStateConfigurations = new DefaultStateConfigurations(collection);
 		var stateConfigurationsForRamp = new ArrayList<StateConfiguration>();
@@ -166,20 +169,26 @@ public class DefaultStateConfigurationsGenerator {
 		for (KeyCodeLine keyCodeLine : keyCodeLines) {
 			var roleConfiguration = roleConfigurations.getRoleConfiguration(keyCodeLine.getCallback());
 			var defaultValueForRamp = defaultStateConfigurations.getDefaultValue(keyCodeLine.getCallback(), RAMP);
-			stateConfigurationsForRamp.add(toStateConfiguration( //
-					keyCodeLine, //
-					roleConfiguration, //
-					defaultValueForRamp));
+			if (isValidDefaultValue(roleConfiguration, defaultValueForRamp)) {
+				stateConfigurationsForRamp.add(toStateConfiguration( //
+						keyCodeLine, //
+						roleConfiguration, //
+						defaultValueForRamp));
+			}
 			var defaultValueForTaxi = defaultStateConfigurations.getDefaultValue(keyCodeLine.getCallback(), TAXI);
-			stateConfigurationsForTaxi.add(toStateConfiguration( //
-					keyCodeLine, //
-					roleConfiguration, //
-					defaultValueForTaxi));
+			if (isValidDefaultValue(roleConfiguration, defaultValueForTaxi)) {
+				stateConfigurationsForTaxi.add(toStateConfiguration( //
+						keyCodeLine, //
+						roleConfiguration, //
+						defaultValueForTaxi));
+			}
 			var defaultValueForAir = defaultStateConfigurations.getDefaultValue(keyCodeLine.getCallback(), AIR);
-			stateConfigurationsForAir.add(toStateConfiguration( //
-					keyCodeLine, //
-					roleConfiguration, //
-					defaultValueForAir));
+			if (isValidDefaultValue(roleConfiguration, defaultValueForAir)) {
+				stateConfigurationsForAir.add(toStateConfiguration( //
+						keyCodeLine, //
+						roleConfiguration, //
+						defaultValueForAir));
+			}
 		}
 		writeObject( //
 				new File(target, "states_ramp.json"), //

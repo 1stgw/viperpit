@@ -938,8 +938,17 @@
         "label" : "Jfs",
         "stateful" : true,
         "controlConfigurations" : [ {
+          "id" : "engJfsSwitchStart1",
+          "callback" : "SimJfsStartUp",
+          "label" : "START 1",
+          "description" : "ENG: JFS Switch - START 1",
+          "style" : "switch",
+          "role" : "none",
+          "type" : "switch",
+          "stateful" : true
+        }, {
           "id" : "engJfsSwitchOff",
-          "callback" : "SimJfsStart_Off",
+          "callback" : "SimJfsStartMid",
           "label" : "OFF",
           "description" : "ENG: JFS Switch - OFF",
           "style" : "switch",
@@ -948,7 +957,7 @@
           "stateful" : true
         }, {
           "id" : "engJfsSwitchStart2",
-          "callback" : "SimJfsStart_Start2",
+          "callback" : "SimJfsStartDown",
           "label" : "START 2",
           "description" : "ENG: JFS Switch - START 2",
           "style" : "switch",
@@ -1009,25 +1018,25 @@
       }, {
         "id" : "AUDIO2: ILS Knob",
         "label" : "Ils",
-        "stateful" : true,
+        "stateful" : false,
         "controlConfigurations" : [ {
-          "id" : "audio2IlsKnobOn",
-          "callback" : "SimILSOn",
-          "label" : "ON",
-          "description" : "AUDIO2: ILS Knob - ON",
+          "id" : "audio2IlsKnobVolumeIncr",
+          "callback" : "SimILSUp",
+          "label" : "Volume Incr.",
+          "description" : "AUDIO2: ILS Knob - Volume Incr.",
           "style" : "knob",
-          "role" : "on",
-          "type" : "switch",
-          "stateful" : true
+          "role" : "increase",
+          "type" : "button",
+          "stateful" : false
         }, {
-          "id" : "audio2IlsKnobOff",
-          "callback" : "SimILSOff",
-          "label" : "OFF",
-          "description" : "AUDIO2: ILS Knob - OFF",
+          "id" : "audio2IlsKnobVolumeDecr",
+          "callback" : "SimILSDown",
+          "label" : "Volume Decr.",
+          "description" : "AUDIO2: ILS Knob - Volume Decr.",
           "style" : "knob",
-          "role" : "off",
-          "type" : "switch",
-          "stateful" : true
+          "role" : "decrease",
+          "type" : "button",
+          "stateful" : false
         } ]
       } ]
     }, {
@@ -1253,117 +1262,506 @@
           "stateful" : false
         } ]
       }, {
-        "id" : "UHF: A-3-2-T Rotary X__.___",
-        "label" : "A-3-2-t Rotary X__.___",
+        "id" : "UHF: A-3-2-T Rotary 2**.***",
+        "label" : "A-3-2-t Rotary 2**.***",
         "stateful" : false,
         "controlConfigurations" : [ {
-          "id" : "uhfA32TRotaryXzzzzzStepUp",
-          "callback" : "SimBupUhfFreq1Inc",
-          "label" : "Step Up",
-          "description" : "UHF: A-3-2-T Rotary X__.___ - Step Up",
+          "id" : "uhfA32TRotary2",
+          "callback" : "SimBupUhfFreq1_2",
+          "label" : "T Rotary 2**.***",
+          "description" : "UHF: A-3-2-T Rotary 2**.***",
           "style" : "button",
-          "role" : "up",
-          "type" : "button",
-          "stateful" : false
-        }, {
-          "id" : "uhfA32TRotaryXzzzzzStepDown",
-          "callback" : "SimBupUhfFreq1Dec",
-          "label" : "Step Down",
-          "description" : "UHF: A-3-2-T Rotary X__.___ - Step Down",
-          "style" : "button",
-          "role" : "down",
+          "role" : "none",
           "type" : "button",
           "stateful" : false
         } ]
       }, {
-        "id" : "UHF: Manual Frequency _X_.___",
-        "label" : "Manual Frequency _x_.___",
+        "id" : "UHF: A-3-2-T Rotary 3**.***",
+        "label" : "A-3-2-t Rotary 3**.***",
         "stateful" : false,
         "controlConfigurations" : [ {
-          "id" : "uhfManualFrequencyZxzzzzCycleUp",
-          "callback" : "SimBupUhfFreq2Inc",
-          "label" : "Cycle Up",
-          "description" : "UHF: Manual Frequency _X_.___ - Cycle Up",
+          "id" : "uhfA32TRotary3",
+          "callback" : "SimBupUhfFreq1_3",
+          "label" : "T Rotary 3**.***",
+          "description" : "UHF: A-3-2-T Rotary 3**.***",
           "style" : "button",
-          "role" : "up",
-          "type" : "button",
-          "stateful" : false
-        }, {
-          "id" : "uhfManualFrequencyZxzzzzCycleDown",
-          "callback" : "SimBupUhfFreq2Dec",
-          "label" : "Cycle Down",
-          "description" : "UHF: Manual Frequency _X_.___ - Cycle Down",
-          "style" : "button",
-          "role" : "down",
+          "role" : "none",
           "type" : "button",
           "stateful" : false
         } ]
       }, {
-        "id" : "UHF: Manual Frequency __X.___",
-        "label" : "Manual Frequency __x.___",
+        "id" : "UHF: Manual Frequency *0*.***",
+        "label" : "Manual Frequency *0*.***",
         "stateful" : false,
         "controlConfigurations" : [ {
-          "id" : "uhfManualFrequencyZzxzzzCycleUp",
-          "callback" : "SimBupUhfFreq3Inc",
-          "label" : "Cycle Up",
-          "description" : "UHF: Manual Frequency __X.___ - Cycle Up",
+          "id" : "uhfManualFrequency0",
+          "callback" : "SimBupUhfFreq2_0",
+          "label" : "Manual Frequency *0*.***",
+          "description" : "UHF: Manual Frequency *0*.***",
           "style" : "button",
-          "role" : "up",
-          "type" : "button",
-          "stateful" : false
-        }, {
-          "id" : "uhfManualFrequencyZzxzzzCycleDown",
-          "callback" : "SimBupUhfFreq3Dec",
-          "label" : "Cycle Down",
-          "description" : "UHF: Manual Frequency __X.___ - Cycle Down",
-          "style" : "button",
-          "role" : "down",
+          "role" : "none",
           "type" : "button",
           "stateful" : false
         } ]
       }, {
-        "id" : "UHF: Manual Frequency ___.X__",
-        "label" : "Manual Frequency ___.x__",
+        "id" : "UHF: Manual Frequency *1*.***",
+        "label" : "Manual Frequency *1*.***",
         "stateful" : false,
         "controlConfigurations" : [ {
-          "id" : "uhfManualFrequencyZzzxzzCycleUp",
-          "callback" : "SimBupUhfFreq4Inc",
-          "label" : "Cycle Up",
-          "description" : "UHF: Manual Frequency ___.X__ - Cycle Up",
+          "id" : "uhfManualFrequency1",
+          "callback" : "SimBupUhfFreq2_1",
+          "label" : "Manual Frequency *1*.***",
+          "description" : "UHF: Manual Frequency *1*.***",
           "style" : "button",
-          "role" : "up",
-          "type" : "button",
-          "stateful" : false
-        }, {
-          "id" : "uhfManualFrequencyZzzxzzCycleDown",
-          "callback" : "SimBupUhfFreq4Dec",
-          "label" : "Cycle Down",
-          "description" : "UHF: Manual Frequency ___.X__ - Cycle Down",
-          "style" : "button",
-          "role" : "down",
+          "role" : "none",
           "type" : "button",
           "stateful" : false
         } ]
       }, {
-        "id" : "UHF: Manual Frequency ___._XX",
-        "label" : "Manual Frequency ___._xx",
+        "id" : "UHF: Manual Frequency *2*.***",
+        "label" : "Manual Frequency *2*.***",
         "stateful" : false,
         "controlConfigurations" : [ {
-          "id" : "uhfManualFrequencyZzzzxxCycleUp",
-          "callback" : "SimBupUhfFreq5Inc",
-          "label" : "Cycle Up",
-          "description" : "UHF: Manual Frequency ___._XX - Cycle Up",
+          "id" : "uhfManualFrequency2",
+          "callback" : "SimBupUhfFreq2_2",
+          "label" : "Manual Frequency *2*.***",
+          "description" : "UHF: Manual Frequency *2*.***",
           "style" : "button",
-          "role" : "up",
+          "role" : "none",
           "type" : "button",
           "stateful" : false
-        }, {
-          "id" : "uhfManualFrequencyZzzzxxCycleDown",
-          "callback" : "SimBupUhfFreq5Dec",
-          "label" : "Cycle Down",
-          "description" : "UHF: Manual Frequency ___._XX - Cycle Down",
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency *3*.***",
+        "label" : "Manual Frequency *3*.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency3",
+          "callback" : "SimBupUhfFreq2_3",
+          "label" : "Manual Frequency *3*.***",
+          "description" : "UHF: Manual Frequency *3*.***",
           "style" : "button",
-          "role" : "down",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency *4*.***",
+        "label" : "Manual Frequency *4*.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency4",
+          "callback" : "SimBupUhfFreq2_4",
+          "label" : "Manual Frequency *4*.***",
+          "description" : "UHF: Manual Frequency *4*.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency *5*.***",
+        "label" : "Manual Frequency *5*.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency5",
+          "callback" : "SimBupUhfFreq2_5",
+          "label" : "Manual Frequency *5*.***",
+          "description" : "UHF: Manual Frequency *5*.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency *6*.***",
+        "label" : "Manual Frequency *6*.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency6",
+          "callback" : "SimBupUhfFreq2_6",
+          "label" : "Manual Frequency *6*.***",
+          "description" : "UHF: Manual Frequency *6*.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency *7*.***",
+        "label" : "Manual Frequency *7*.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency7",
+          "callback" : "SimBupUhfFreq2_7",
+          "label" : "Manual Frequency *7*.***",
+          "description" : "UHF: Manual Frequency *7*.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency *8*.***",
+        "label" : "Manual Frequency *8*.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency8",
+          "callback" : "SimBupUhfFreq2_8",
+          "label" : "Manual Frequency *8*.***",
+          "description" : "UHF: Manual Frequency *8*.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency *9*.***",
+        "label" : "Manual Frequency *9*.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency9",
+          "callback" : "SimBupUhfFreq2_9",
+          "label" : "Manual Frequency *9*.***",
+          "description" : "UHF: Manual Frequency *9*.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency **0.***",
+        "label" : "Manual Frequency **0.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency0",
+          "callback" : "SimBupUhfFreq3_0",
+          "label" : "Manual Frequency **0.***",
+          "description" : "UHF: Manual Frequency **0.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency **1.***",
+        "label" : "Manual Frequency **1.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency1",
+          "callback" : "SimBupUhfFreq3_1",
+          "label" : "Manual Frequency **1.***",
+          "description" : "UHF: Manual Frequency **1.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency **2.***",
+        "label" : "Manual Frequency **2.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency2",
+          "callback" : "SimBupUhfFreq3_2",
+          "label" : "Manual Frequency **2.***",
+          "description" : "UHF: Manual Frequency **2.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency **3.***",
+        "label" : "Manual Frequency **3.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency3",
+          "callback" : "SimBupUhfFreq3_3",
+          "label" : "Manual Frequency **3.***",
+          "description" : "UHF: Manual Frequency **3.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency **4.***",
+        "label" : "Manual Frequency **4.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency4",
+          "callback" : "SimBupUhfFreq3_4",
+          "label" : "Manual Frequency **4.***",
+          "description" : "UHF: Manual Frequency **4.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency **5.***",
+        "label" : "Manual Frequency **5.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency5",
+          "callback" : "SimBupUhfFreq3_5",
+          "label" : "Manual Frequency **5.***",
+          "description" : "UHF: Manual Frequency **5.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency **6.***",
+        "label" : "Manual Frequency **6.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency6",
+          "callback" : "SimBupUhfFreq3_6",
+          "label" : "Manual Frequency **6.***",
+          "description" : "UHF: Manual Frequency **6.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency **7.***",
+        "label" : "Manual Frequency **7.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency7",
+          "callback" : "SimBupUhfFreq3_7",
+          "label" : "Manual Frequency **7.***",
+          "description" : "UHF: Manual Frequency **7.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency **8.***",
+        "label" : "Manual Frequency **8.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency8",
+          "callback" : "SimBupUhfFreq3_8",
+          "label" : "Manual Frequency **8.***",
+          "description" : "UHF: Manual Frequency **8.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency **9.***",
+        "label" : "Manual Frequency **9.***",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency9",
+          "callback" : "SimBupUhfFreq3_9",
+          "label" : "Manual Frequency **9.***",
+          "description" : "UHF: Manual Frequency **9.***",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.0**",
+        "label" : "Manual Frequency ***.0**",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency0",
+          "callback" : "SimBupUhfFreq4_0",
+          "label" : "Manual Frequency ***.0**",
+          "description" : "UHF: Manual Frequency ***.0**",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.1**",
+        "label" : "Manual Frequency ***.1**",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency1",
+          "callback" : "SimBupUhfFreq4_1",
+          "label" : "Manual Frequency ***.1**",
+          "description" : "UHF: Manual Frequency ***.1**",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.2**",
+        "label" : "Manual Frequency ***.2**",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency2",
+          "callback" : "SimBupUhfFreq4_2",
+          "label" : "Manual Frequency ***.2**",
+          "description" : "UHF: Manual Frequency ***.2**",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.3**",
+        "label" : "Manual Frequency ***.3**",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency3",
+          "callback" : "SimBupUhfFreq4_3",
+          "label" : "Manual Frequency ***.3**",
+          "description" : "UHF: Manual Frequency ***.3**",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.4**",
+        "label" : "Manual Frequency ***.4**",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency4",
+          "callback" : "SimBupUhfFreq4_4",
+          "label" : "Manual Frequency ***.4**",
+          "description" : "UHF: Manual Frequency ***.4**",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.5**",
+        "label" : "Manual Frequency ***.5**",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency5",
+          "callback" : "SimBupUhfFreq4_5",
+          "label" : "Manual Frequency ***.5**",
+          "description" : "UHF: Manual Frequency ***.5**",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.6**",
+        "label" : "Manual Frequency ***.6**",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency6",
+          "callback" : "SimBupUhfFreq4_6",
+          "label" : "Manual Frequency ***.6**",
+          "description" : "UHF: Manual Frequency ***.6**",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.7**",
+        "label" : "Manual Frequency ***.7**",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency7",
+          "callback" : "SimBupUhfFreq4_7",
+          "label" : "Manual Frequency ***.7**",
+          "description" : "UHF: Manual Frequency ***.7**",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.8**",
+        "label" : "Manual Frequency ***.8**",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency8",
+          "callback" : "SimBupUhfFreq4_8",
+          "label" : "Manual Frequency ***.8**",
+          "description" : "UHF: Manual Frequency ***.8**",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.9**",
+        "label" : "Manual Frequency ***.9**",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency9",
+          "callback" : "SimBupUhfFreq4_9",
+          "label" : "Manual Frequency ***.9**",
+          "description" : "UHF: Manual Frequency ***.9**",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.*00",
+        "label" : "Manual Frequency ***.*00",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency00",
+          "callback" : "SimBupUhfFreq5_00",
+          "label" : "Manual Frequency ***.*00",
+          "description" : "UHF: Manual Frequency ***.*00",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.*25",
+        "label" : "Manual Frequency ***.*25",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency25",
+          "callback" : "SimBupUhfFreq5_25",
+          "label" : "Manual Frequency ***.*25",
+          "description" : "UHF: Manual Frequency ***.*25",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.*50",
+        "label" : "Manual Frequency ***.*50",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency50",
+          "callback" : "SimBupUhfFreq5_50",
+          "label" : "Manual Frequency ***.*50",
+          "description" : "UHF: Manual Frequency ***.*50",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "UHF: Manual Frequency ***.*75",
+        "label" : "Manual Frequency ***.*75",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "uhfManualFrequency75",
+          "callback" : "SimBupUhfFreq5_75",
+          "label" : "Manual Frequency ***.*75",
+          "description" : "UHF: Manual Frequency ***.*75",
+          "style" : "button",
+          "role" : "none",
           "type" : "button",
           "stateful" : false
         } ]
@@ -1478,7 +1876,7 @@
         "stateful" : false,
         "controlConfigurations" : [ {
           "id" : "leftWallCanopyOpen",
-          "callback" : "AFCanopyOpen",
+          "callback" : "AFCanopyInc",
           "label" : "Open",
           "description" : "LEFT WALL: CANOPY - Open",
           "style" : "button",
@@ -1486,10 +1884,42 @@
           "type" : "button",
           "stateful" : false
         }, {
+          "id" : "leftWallCanopyStop",
+          "callback" : "AFCanopyStop",
+          "label" : "Stop",
+          "description" : "LEFT WALL: CANOPY - Stop",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        }, {
           "id" : "leftWallCanopyClose",
-          "callback" : "AFCanopyClose",
+          "callback" : "AFCanopyDec",
           "label" : "Close",
           "description" : "LEFT WALL: CANOPY - Close",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "LEFT WALL: SPIDER",
+        "label" : "Spider",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "leftWallSpiderLock",
+          "callback" : "AFCanopyLock",
+          "label" : "Lock",
+          "description" : "LEFT WALL: SPIDER - Lock",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        }, {
+          "id" : "leftWallSpiderUnlock",
+          "callback" : "AFCanopyUnlock",
+          "label" : "Unlock",
+          "description" : "LEFT WALL: SPIDER - Unlock",
           "style" : "button",
           "role" : "none",
           "type" : "button",
@@ -1519,6 +1949,34 @@
           "description" : "SEAT: Safety Lever - Locked",
           "style" : "button",
           "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "SEAT: Move Up",
+        "label" : "Move Up",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "seatMoveUp",
+          "callback" : "SimSeatUp",
+          "label" : "Move Up",
+          "description" : "SEAT: Move Up",
+          "style" : "button",
+          "role" : "up",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "SEAT: Move Down",
+        "label" : "Move Down",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "seatMoveDown",
+          "callback" : "SimSeatDown",
+          "label" : "Move Down",
+          "description" : "SEAT: Move Down",
+          "style" : "button",
+          "role" : "down",
           "type" : "button",
           "stateful" : false
         } ]
@@ -1997,23 +2455,55 @@
           "stateful" : true
         } ]
       }, {
-        "id" : "GEAR: PARKING BREAK Switch",
-        "label" : "Parking Break",
+        "id" : "GEAR: BRAKES",
+        "label" : "Brakes",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "gearBrakesChannel1",
+          "callback" : "SimBrakeChannelUp",
+          "label" : "Channel 1",
+          "description" : "GEAR: BRAKES - Channel 1",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        }, {
+          "id" : "gearBrakesChannel2",
+          "callback" : "SimBrakeChannelDown",
+          "label" : "Channel 2",
+          "description" : "GEAR: BRAKES - Channel 2",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "GEAR: PARKING BRAKE Switch",
+        "label" : "Parking Brake",
         "stateful" : true,
         "controlConfigurations" : [ {
-          "id" : "gearParkingBreakSwitchOn",
-          "callback" : "SimParkingBrakeOn",
+          "id" : "gearParkingBrakeSwitchOn",
+          "callback" : "SimParkingBrakeUp",
           "label" : "ON",
-          "description" : "GEAR: PARKING BREAK Switch - ON",
+          "description" : "GEAR: PARKING BRAKE Switch - ON",
           "style" : "switch",
           "role" : "on",
           "type" : "switch",
           "stateful" : true
         }, {
-          "id" : "gearParkingBreakSwitchOff",
-          "callback" : "SimParkingBrakeOff",
+          "id" : "gearParkingBrakeSwitchAntiSkid",
+          "callback" : "SimParkingBrakeMid",
+          "label" : "ANTI SKID",
+          "description" : "GEAR: PARKING BRAKE Switch - ANTI SKID",
+          "style" : "switch",
+          "role" : "none",
+          "type" : "switch",
+          "stateful" : true
+        }, {
+          "id" : "gearParkingBrakeSwitchOff",
+          "callback" : "SimParkingBrakeDown",
           "label" : "OFF",
-          "description" : "GEAR: PARKING BREAK Switch - OFF",
+          "description" : "GEAR: PARKING BRAKE Switch - OFF",
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
@@ -2041,6 +2531,20 @@
           "role" : "down",
           "type" : "switch",
           "stateful" : true
+        } ]
+      }, {
+        "id" : "GEAR: DN LOCK REL",
+        "label" : "Dn Lock Rel",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "gearDnLockRelPush",
+          "callback" : "AFEmergencyGearHandleUnlock",
+          "label" : "Push",
+          "description" : "GEAR: DN LOCK REL - Push",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
         } ]
       }, {
         "id" : "GEAR: STORES CONFIG Switch",
@@ -2085,7 +2589,7 @@
         "stateful" : true,
         "controlConfigurations" : [ {
           "id" : "gearLightsSwitchLanding",
-          "callback" : "SimLandingLightOn",
+          "callback" : "SimLandingLightUp",
           "label" : "LANDING",
           "description" : "GEAR: LIGHTS Switch - LANDING",
           "style" : "switch",
@@ -2094,11 +2598,20 @@
           "stateful" : true
         }, {
           "id" : "gearLightsSwitchOff",
-          "callback" : "SimLandingLightOff",
+          "callback" : "SimLandingLightMid",
           "label" : "OFF",
           "description" : "GEAR: LIGHTS Switch - OFF",
           "style" : "switch",
           "role" : "off",
+          "type" : "switch",
+          "stateful" : true
+        }, {
+          "id" : "gearLightsSwitchTaxi",
+          "callback" : "SimLandingLightDown",
+          "label" : "TAXI",
+          "description" : "GEAR: LIGHTS Switch - TAXI",
+          "style" : "switch",
+          "role" : "none",
           "type" : "switch",
           "stateful" : true
         } ]
@@ -2405,8 +2918,8 @@
         "controlConfigurations" : [ {
           "id" : "mainHsiHdgKnobIncrease5",
           "callback" : "SimHsiHeadingInc",
-          "label" : "Increase (5°)",
-          "description" : "MAIN: HSI HDG Knob - Increase (5°)",
+          "label" : "Increase (5�)",
+          "description" : "MAIN: HSI HDG Knob - Increase (5�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2414,8 +2927,8 @@
         }, {
           "id" : "mainHsiHdgKnobDecrease5",
           "callback" : "SimHsiHeadingDec",
-          "label" : "Decrease (5°)",
-          "description" : "MAIN: HSI HDG Knob - Decrease (5°)",
+          "label" : "Decrease (5�)",
+          "description" : "MAIN: HSI HDG Knob - Decrease (5�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2423,8 +2936,8 @@
         }, {
           "id" : "mainHsiHdgKnobIncrease1",
           "callback" : "SimHsiHdgIncBy1",
-          "label" : "Increase (1°)",
-          "description" : "MAIN: HSI HDG Knob - Increase (1°)",
+          "label" : "Increase (1�)",
+          "description" : "MAIN: HSI HDG Knob - Increase (1�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2432,8 +2945,8 @@
         }, {
           "id" : "mainHsiHdgKnobDecrease1",
           "callback" : "SimHsiHdgDecBy1",
-          "label" : "Decrease (1°)",
-          "description" : "MAIN: HSI HDG Knob - Decrease (1°)",
+          "label" : "Decrease (1�)",
+          "description" : "MAIN: HSI HDG Knob - Decrease (1�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2446,8 +2959,8 @@
         "controlConfigurations" : [ {
           "id" : "mainHsiCrsKnobIncrease5",
           "callback" : "SimHsiCourseInc",
-          "label" : "Increase (5°)",
-          "description" : "MAIN: HSI CRS Knob - Increase (5°)",
+          "label" : "Increase (5�)",
+          "description" : "MAIN: HSI CRS Knob - Increase (5�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2455,8 +2968,8 @@
         }, {
           "id" : "mainHsiCrsKnobDecrease5",
           "callback" : "SimHsiCourseDec",
-          "label" : "Decrease (5°)",
-          "description" : "MAIN: HSI CRS Knob - Decrease (5°)",
+          "label" : "Decrease (5�)",
+          "description" : "MAIN: HSI CRS Knob - Decrease (5�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2464,8 +2977,8 @@
         }, {
           "id" : "mainHsiCrsKnobIncrease1",
           "callback" : "SimHsiCrsIncBy1",
-          "label" : "Increase (1°)",
-          "description" : "MAIN: HSI CRS Knob - Increase (1°)",
+          "label" : "Increase (1�)",
+          "description" : "MAIN: HSI CRS Knob - Increase (1�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2473,8 +2986,8 @@
         }, {
           "id" : "mainHsiCrsKnobDecrease1",
           "callback" : "SimHsiCrsDecBy1",
-          "label" : "Decrease (1°)",
-          "description" : "MAIN: HSI CRS Knob - Decrease (1°)",
+          "label" : "Decrease (1�)",
+          "description" : "MAIN: HSI CRS Knob - Decrease (1�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2487,8 +3000,8 @@
         "controlConfigurations" : [ {
           "id" : "mainAltimeterPressureKnobIncr5",
           "callback" : "SimAltPressInc",
-          "label" : "Incr. (5°)",
-          "description" : "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+          "label" : "Incr. (5�)",
+          "description" : "MAIN: Altimeter Pressure Knob - Incr. (5�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2496,8 +3009,8 @@
         }, {
           "id" : "mainAltimeterPressureKnobDecr5",
           "callback" : "SimAltPressDec",
-          "label" : "Decr. (5°)",
-          "description" : "MAIN: Altimeter Pressure Knob - Decr. (5°)",
+          "label" : "Decr. (5�)",
+          "description" : "MAIN: Altimeter Pressure Knob - Decr. (5�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2505,8 +3018,8 @@
         }, {
           "id" : "mainAltimeterPressureKnobIncr1",
           "callback" : "SimAltPressIncBy1",
-          "label" : "Incr. (1°)",
-          "description" : "MAIN: Altimeter Pressure Knob - Incr. (1°)",
+          "label" : "Incr. (1�)",
+          "description" : "MAIN: Altimeter Pressure Knob - Incr. (1�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2514,8 +3027,8 @@
         }, {
           "id" : "mainAltimeterPressureKnobDecr1",
           "callback" : "SimAltPressDecBy1",
-          "label" : "Decr. (1°)",
-          "description" : "MAIN: Altimeter Pressure Knob - Decr. (1°)",
+          "label" : "Decr. (1�)",
+          "description" : "MAIN: Altimeter Pressure Knob - Decr. (1�)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -3136,6 +3649,74 @@
         } ]
       } ]
     }, {
+      "id" : "antiIceAntSelPanel",
+      "label" : "ANTI ICE / ANT SEL",
+      "controlGroupConfigurations" : [ {
+        "id" : "ICE: ENGINE Switch",
+        "label" : "Engine",
+        "stateful" : true,
+        "controlConfigurations" : [ {
+          "id" : "iceEngineSwitchOn",
+          "callback" : "SimAntiIceUp",
+          "label" : "ON",
+          "description" : "ICE: ENGINE Switch - ON",
+          "style" : "switch",
+          "role" : "on",
+          "type" : "switch",
+          "stateful" : true
+        }, {
+          "id" : "iceEngineSwitchAuto",
+          "callback" : "SimAntiIceMid",
+          "label" : "AUTO",
+          "description" : "ICE: ENGINE Switch - AUTO",
+          "style" : "switch",
+          "role" : "none",
+          "type" : "switch",
+          "stateful" : true
+        }, {
+          "id" : "iceEngineSwitchOff",
+          "callback" : "SimAntiIceDown",
+          "label" : "OFF",
+          "description" : "ICE: ENGINE Switch - OFF",
+          "style" : "switch",
+          "role" : "off",
+          "type" : "switch",
+          "stateful" : true
+        } ]
+      }, {
+        "id" : "ANT: IFF UHF Switch",
+        "label" : "Iff Uhf",
+        "stateful" : true,
+        "controlConfigurations" : [ {
+          "id" : "antIffUhfSwitchUpper",
+          "callback" : "SimAntennaSelectUp",
+          "label" : "UPPER",
+          "description" : "ANT: IFF UHF Switch - UPPER",
+          "style" : "switch",
+          "role" : "none",
+          "type" : "switch",
+          "stateful" : true
+        }, {
+          "id" : "antIffUhfSwitchNorm",
+          "callback" : "SimAntennaSelectMid",
+          "label" : "NORM",
+          "description" : "ANT: IFF UHF Switch - NORM",
+          "style" : "switch",
+          "role" : "on",
+          "type" : "switch",
+          "stateful" : true
+        }, {
+          "id" : "antIffUhfSwitchLower",
+          "callback" : "SimAntennaSelectDown",
+          "label" : "LOWER",
+          "description" : "ANT: IFF UHF Switch - LOWER",
+          "style" : "switch",
+          "role" : "none",
+          "type" : "switch",
+          "stateful" : true
+        } ]
+      } ]
+    }, {
       "id" : "avionicPowerPanel",
       "label" : "AVIONIC POWER",
       "controlGroupConfigurations" : [ {
@@ -3353,52 +3934,6 @@
       "id" : "otherCockpitCallbacks",
       "label" : "OTHER COCKPIT CALLBACKS",
       "controlGroupConfigurations" : [ {
-        "id" : "CKPIT: Nightvision",
-        "label" : "Nightvision",
-        "stateful" : false,
-        "controlConfigurations" : [ {
-          "id" : "ckpitNightvisionOn",
-          "callback" : "SimNVGModeOn",
-          "label" : "On",
-          "description" : "CKPIT: Nightvision - On",
-          "style" : "button",
-          "role" : "on",
-          "type" : "button",
-          "stateful" : false
-        }, {
-          "id" : "ckpitNightvisionOff",
-          "callback" : "SimNVGModeOff",
-          "label" : "Off",
-          "description" : "CKPIT: Nightvision - Off",
-          "style" : "button",
-          "role" : "off",
-          "type" : "button",
-          "stateful" : false
-        } ]
-      }, {
-        "id" : "CKPIT: Smoke",
-        "label" : "Smoke",
-        "stateful" : false,
-        "controlConfigurations" : [ {
-          "id" : "ckpitSmokeOn",
-          "callback" : "SimSmokeOn",
-          "label" : "On",
-          "description" : "CKPIT: Smoke - On",
-          "style" : "button",
-          "role" : "on",
-          "type" : "button",
-          "stateful" : false
-        }, {
-          "id" : "ckpitSmokeOff",
-          "callback" : "SimSmokeOff",
-          "label" : "Off",
-          "description" : "CKPIT: Smoke - Off",
-          "style" : "button",
-          "role" : "off",
-          "type" : "button",
-          "stateful" : false
-        } ]
-      }, {
         "id" : "CKPIT: Wheel Brakes",
         "label" : "Wheel Brakes",
         "stateful" : false,
@@ -4546,8 +5081,17 @@
     "type" : "switch",
     "stateful" : true
   }, {
+    "id" : "engJfsSwitchStart1",
+    "callback" : "SimJfsStartUp",
+    "label" : "START 1",
+    "description" : "ENG: JFS Switch - START 1",
+    "style" : "switch",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
     "id" : "engJfsSwitchOff",
-    "callback" : "SimJfsStart_Off",
+    "callback" : "SimJfsStartMid",
     "label" : "OFF",
     "description" : "ENG: JFS Switch - OFF",
     "style" : "switch",
@@ -4556,7 +5100,7 @@
     "stateful" : true
   }, {
     "id" : "engJfsSwitchStart2",
-    "callback" : "SimJfsStart_Start2",
+    "callback" : "SimJfsStartDown",
     "label" : "START 2",
     "description" : "ENG: JFS Switch - START 2",
     "style" : "switch",
@@ -4600,23 +5144,23 @@
     "type" : "button",
     "stateful" : false
   }, {
-    "id" : "audio2IlsKnobOn",
-    "callback" : "SimILSOn",
-    "label" : "ON",
-    "description" : "AUDIO2: ILS Knob - ON",
+    "id" : "audio2IlsKnobVolumeIncr",
+    "callback" : "SimILSUp",
+    "label" : "Volume Incr.",
+    "description" : "AUDIO2: ILS Knob - Volume Incr.",
     "style" : "knob",
-    "role" : "on",
-    "type" : "switch",
-    "stateful" : true
+    "role" : "increase",
+    "type" : "button",
+    "stateful" : false
   }, {
-    "id" : "audio2IlsKnobOff",
-    "callback" : "SimILSOff",
-    "label" : "OFF",
-    "description" : "AUDIO2: ILS Knob - OFF",
+    "id" : "audio2IlsKnobVolumeDecr",
+    "callback" : "SimILSDown",
+    "label" : "Volume Decr.",
+    "description" : "AUDIO2: ILS Knob - Volume Decr.",
     "style" : "knob",
-    "role" : "off",
-    "type" : "switch",
-    "stateful" : true
+    "role" : "decrease",
+    "type" : "button",
+    "stateful" : false
   }, {
     "id" : "audio1Comm1KnobVolumeIncr",
     "callback" : "SimStepComm1VolumeUp",
@@ -4789,93 +5333,327 @@
     "type" : "button",
     "stateful" : false
   }, {
-    "id" : "uhfA32TRotaryXzzzzzStepUp",
-    "callback" : "SimBupUhfFreq1Inc",
-    "label" : "Step Up",
-    "description" : "UHF: A-3-2-T Rotary X__.___ - Step Up",
+    "id" : "uhfA32TRotary2",
+    "callback" : "SimBupUhfFreq1_2",
+    "label" : "T Rotary 2**.***",
+    "description" : "UHF: A-3-2-T Rotary 2**.***",
     "style" : "button",
-    "role" : "up",
+    "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
-    "id" : "uhfA32TRotaryXzzzzzStepDown",
-    "callback" : "SimBupUhfFreq1Dec",
-    "label" : "Step Down",
-    "description" : "UHF: A-3-2-T Rotary X__.___ - Step Down",
+    "id" : "uhfA32TRotary3",
+    "callback" : "SimBupUhfFreq1_3",
+    "label" : "T Rotary 3**.***",
+    "description" : "UHF: A-3-2-T Rotary 3**.***",
     "style" : "button",
-    "role" : "down",
+    "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
-    "id" : "uhfManualFrequencyZxzzzzCycleUp",
-    "callback" : "SimBupUhfFreq2Inc",
-    "label" : "Cycle Up",
-    "description" : "UHF: Manual Frequency _X_.___ - Cycle Up",
+    "id" : "uhfManualFrequency0",
+    "callback" : "SimBupUhfFreq2_0",
+    "label" : "Manual Frequency *0*.***",
+    "description" : "UHF: Manual Frequency *0*.***",
     "style" : "button",
-    "role" : "up",
+    "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
-    "id" : "uhfManualFrequencyZxzzzzCycleDown",
-    "callback" : "SimBupUhfFreq2Dec",
-    "label" : "Cycle Down",
-    "description" : "UHF: Manual Frequency _X_.___ - Cycle Down",
+    "id" : "uhfManualFrequency1",
+    "callback" : "SimBupUhfFreq2_1",
+    "label" : "Manual Frequency *1*.***",
+    "description" : "UHF: Manual Frequency *1*.***",
     "style" : "button",
-    "role" : "down",
+    "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
-    "id" : "uhfManualFrequencyZzxzzzCycleUp",
-    "callback" : "SimBupUhfFreq3Inc",
-    "label" : "Cycle Up",
-    "description" : "UHF: Manual Frequency __X.___ - Cycle Up",
+    "id" : "uhfManualFrequency2",
+    "callback" : "SimBupUhfFreq2_2",
+    "label" : "Manual Frequency *2*.***",
+    "description" : "UHF: Manual Frequency *2*.***",
     "style" : "button",
-    "role" : "up",
+    "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
-    "id" : "uhfManualFrequencyZzxzzzCycleDown",
-    "callback" : "SimBupUhfFreq3Dec",
-    "label" : "Cycle Down",
-    "description" : "UHF: Manual Frequency __X.___ - Cycle Down",
+    "id" : "uhfManualFrequency3",
+    "callback" : "SimBupUhfFreq2_3",
+    "label" : "Manual Frequency *3*.***",
+    "description" : "UHF: Manual Frequency *3*.***",
     "style" : "button",
-    "role" : "down",
+    "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
-    "id" : "uhfManualFrequencyZzzxzzCycleUp",
-    "callback" : "SimBupUhfFreq4Inc",
-    "label" : "Cycle Up",
-    "description" : "UHF: Manual Frequency ___.X__ - Cycle Up",
+    "id" : "uhfManualFrequency4",
+    "callback" : "SimBupUhfFreq2_4",
+    "label" : "Manual Frequency *4*.***",
+    "description" : "UHF: Manual Frequency *4*.***",
     "style" : "button",
-    "role" : "up",
+    "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
-    "id" : "uhfManualFrequencyZzzxzzCycleDown",
-    "callback" : "SimBupUhfFreq4Dec",
-    "label" : "Cycle Down",
-    "description" : "UHF: Manual Frequency ___.X__ - Cycle Down",
+    "id" : "uhfManualFrequency5",
+    "callback" : "SimBupUhfFreq2_5",
+    "label" : "Manual Frequency *5*.***",
+    "description" : "UHF: Manual Frequency *5*.***",
     "style" : "button",
-    "role" : "down",
+    "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
-    "id" : "uhfManualFrequencyZzzzxxCycleUp",
-    "callback" : "SimBupUhfFreq5Inc",
-    "label" : "Cycle Up",
-    "description" : "UHF: Manual Frequency ___._XX - Cycle Up",
+    "id" : "uhfManualFrequency6",
+    "callback" : "SimBupUhfFreq2_6",
+    "label" : "Manual Frequency *6*.***",
+    "description" : "UHF: Manual Frequency *6*.***",
     "style" : "button",
-    "role" : "up",
+    "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
-    "id" : "uhfManualFrequencyZzzzxxCycleDown",
-    "callback" : "SimBupUhfFreq5Dec",
-    "label" : "Cycle Down",
-    "description" : "UHF: Manual Frequency ___._XX - Cycle Down",
+    "id" : "uhfManualFrequency7",
+    "callback" : "SimBupUhfFreq2_7",
+    "label" : "Manual Frequency *7*.***",
+    "description" : "UHF: Manual Frequency *7*.***",
     "style" : "button",
-    "role" : "down",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency8",
+    "callback" : "SimBupUhfFreq2_8",
+    "label" : "Manual Frequency *8*.***",
+    "description" : "UHF: Manual Frequency *8*.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency9",
+    "callback" : "SimBupUhfFreq2_9",
+    "label" : "Manual Frequency *9*.***",
+    "description" : "UHF: Manual Frequency *9*.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency0",
+    "callback" : "SimBupUhfFreq3_0",
+    "label" : "Manual Frequency **0.***",
+    "description" : "UHF: Manual Frequency **0.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency1",
+    "callback" : "SimBupUhfFreq3_1",
+    "label" : "Manual Frequency **1.***",
+    "description" : "UHF: Manual Frequency **1.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency2",
+    "callback" : "SimBupUhfFreq3_2",
+    "label" : "Manual Frequency **2.***",
+    "description" : "UHF: Manual Frequency **2.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency3",
+    "callback" : "SimBupUhfFreq3_3",
+    "label" : "Manual Frequency **3.***",
+    "description" : "UHF: Manual Frequency **3.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency4",
+    "callback" : "SimBupUhfFreq3_4",
+    "label" : "Manual Frequency **4.***",
+    "description" : "UHF: Manual Frequency **4.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency5",
+    "callback" : "SimBupUhfFreq3_5",
+    "label" : "Manual Frequency **5.***",
+    "description" : "UHF: Manual Frequency **5.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency6",
+    "callback" : "SimBupUhfFreq3_6",
+    "label" : "Manual Frequency **6.***",
+    "description" : "UHF: Manual Frequency **6.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency7",
+    "callback" : "SimBupUhfFreq3_7",
+    "label" : "Manual Frequency **7.***",
+    "description" : "UHF: Manual Frequency **7.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency8",
+    "callback" : "SimBupUhfFreq3_8",
+    "label" : "Manual Frequency **8.***",
+    "description" : "UHF: Manual Frequency **8.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency9",
+    "callback" : "SimBupUhfFreq3_9",
+    "label" : "Manual Frequency **9.***",
+    "description" : "UHF: Manual Frequency **9.***",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency0",
+    "callback" : "SimBupUhfFreq4_0",
+    "label" : "Manual Frequency ***.0**",
+    "description" : "UHF: Manual Frequency ***.0**",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency1",
+    "callback" : "SimBupUhfFreq4_1",
+    "label" : "Manual Frequency ***.1**",
+    "description" : "UHF: Manual Frequency ***.1**",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency2",
+    "callback" : "SimBupUhfFreq4_2",
+    "label" : "Manual Frequency ***.2**",
+    "description" : "UHF: Manual Frequency ***.2**",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency3",
+    "callback" : "SimBupUhfFreq4_3",
+    "label" : "Manual Frequency ***.3**",
+    "description" : "UHF: Manual Frequency ***.3**",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency4",
+    "callback" : "SimBupUhfFreq4_4",
+    "label" : "Manual Frequency ***.4**",
+    "description" : "UHF: Manual Frequency ***.4**",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency5",
+    "callback" : "SimBupUhfFreq4_5",
+    "label" : "Manual Frequency ***.5**",
+    "description" : "UHF: Manual Frequency ***.5**",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency6",
+    "callback" : "SimBupUhfFreq4_6",
+    "label" : "Manual Frequency ***.6**",
+    "description" : "UHF: Manual Frequency ***.6**",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency7",
+    "callback" : "SimBupUhfFreq4_7",
+    "label" : "Manual Frequency ***.7**",
+    "description" : "UHF: Manual Frequency ***.7**",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency8",
+    "callback" : "SimBupUhfFreq4_8",
+    "label" : "Manual Frequency ***.8**",
+    "description" : "UHF: Manual Frequency ***.8**",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency9",
+    "callback" : "SimBupUhfFreq4_9",
+    "label" : "Manual Frequency ***.9**",
+    "description" : "UHF: Manual Frequency ***.9**",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency00",
+    "callback" : "SimBupUhfFreq5_00",
+    "label" : "Manual Frequency ***.*00",
+    "description" : "UHF: Manual Frequency ***.*00",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency25",
+    "callback" : "SimBupUhfFreq5_25",
+    "label" : "Manual Frequency ***.*25",
+    "description" : "UHF: Manual Frequency ***.*25",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency50",
+    "callback" : "SimBupUhfFreq5_50",
+    "label" : "Manual Frequency ***.*50",
+    "description" : "UHF: Manual Frequency ***.*50",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "uhfManualFrequency75",
+    "callback" : "SimBupUhfFreq5_75",
+    "label" : "Manual Frequency ***.*75",
+    "description" : "UHF: Manual Frequency ***.*75",
+    "style" : "button",
+    "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
@@ -4961,7 +5739,7 @@
     "stateful" : false
   }, {
     "id" : "leftWallCanopyOpen",
-    "callback" : "AFCanopyOpen",
+    "callback" : "AFCanopyInc",
     "label" : "Open",
     "description" : "LEFT WALL: CANOPY - Open",
     "style" : "button",
@@ -4969,10 +5747,37 @@
     "type" : "button",
     "stateful" : false
   }, {
+    "id" : "leftWallCanopyStop",
+    "callback" : "AFCanopyStop",
+    "label" : "Stop",
+    "description" : "LEFT WALL: CANOPY - Stop",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
     "id" : "leftWallCanopyClose",
-    "callback" : "AFCanopyClose",
+    "callback" : "AFCanopyDec",
     "label" : "Close",
     "description" : "LEFT WALL: CANOPY - Close",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "leftWallSpiderLock",
+    "callback" : "AFCanopyLock",
+    "label" : "Lock",
+    "description" : "LEFT WALL: SPIDER - Lock",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "leftWallSpiderUnlock",
+    "callback" : "AFCanopyUnlock",
+    "label" : "Unlock",
+    "description" : "LEFT WALL: SPIDER - Unlock",
     "style" : "button",
     "role" : "none",
     "type" : "button",
@@ -4993,6 +5798,24 @@
     "description" : "SEAT: Safety Lever - Locked",
     "style" : "button",
     "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "seatMoveUp",
+    "callback" : "SimSeatUp",
+    "label" : "Move Up",
+    "description" : "SEAT: Move Up",
+    "style" : "button",
+    "role" : "up",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "seatMoveDown",
+    "callback" : "SimSeatDown",
+    "label" : "Move Down",
+    "description" : "SEAT: Move Down",
+    "style" : "button",
+    "role" : "down",
     "type" : "button",
     "stateful" : false
   }, {
@@ -5356,19 +6179,46 @@
     "type" : "switch",
     "stateful" : true
   }, {
-    "id" : "gearParkingBreakSwitchOn",
-    "callback" : "SimParkingBrakeOn",
+    "id" : "gearBrakesChannel1",
+    "callback" : "SimBrakeChannelUp",
+    "label" : "Channel 1",
+    "description" : "GEAR: BRAKES - Channel 1",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "gearBrakesChannel2",
+    "callback" : "SimBrakeChannelDown",
+    "label" : "Channel 2",
+    "description" : "GEAR: BRAKES - Channel 2",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "id" : "gearParkingBrakeSwitchOn",
+    "callback" : "SimParkingBrakeUp",
     "label" : "ON",
-    "description" : "GEAR: PARKING BREAK Switch - ON",
+    "description" : "GEAR: PARKING BRAKE Switch - ON",
     "style" : "switch",
     "role" : "on",
     "type" : "switch",
     "stateful" : true
   }, {
-    "id" : "gearParkingBreakSwitchOff",
-    "callback" : "SimParkingBrakeOff",
+    "id" : "gearParkingBrakeSwitchAntiSkid",
+    "callback" : "SimParkingBrakeMid",
+    "label" : "ANTI SKID",
+    "description" : "GEAR: PARKING BRAKE Switch - ANTI SKID",
+    "style" : "switch",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "id" : "gearParkingBrakeSwitchOff",
+    "callback" : "SimParkingBrakeDown",
     "label" : "OFF",
-    "description" : "GEAR: PARKING BREAK Switch - OFF",
+    "description" : "GEAR: PARKING BRAKE Switch - OFF",
     "style" : "switch",
     "role" : "off",
     "type" : "switch",
@@ -5391,6 +6241,15 @@
     "role" : "down",
     "type" : "switch",
     "stateful" : true
+  }, {
+    "id" : "gearDnLockRelPush",
+    "callback" : "AFEmergencyGearHandleUnlock",
+    "label" : "Push",
+    "description" : "GEAR: DN LOCK REL - Push",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
   }, {
     "id" : "gearStoresConfigSwitchCatI",
     "callback" : "SimCATI",
@@ -5420,7 +6279,7 @@
     "stateful" : false
   }, {
     "id" : "gearLightsSwitchLanding",
-    "callback" : "SimLandingLightOn",
+    "callback" : "SimLandingLightUp",
     "label" : "LANDING",
     "description" : "GEAR: LIGHTS Switch - LANDING",
     "style" : "switch",
@@ -5429,11 +6288,20 @@
     "stateful" : true
   }, {
     "id" : "gearLightsSwitchOff",
-    "callback" : "SimLandingLightOff",
+    "callback" : "SimLandingLightMid",
     "label" : "OFF",
     "description" : "GEAR: LIGHTS Switch - OFF",
     "style" : "switch",
     "role" : "off",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "id" : "gearLightsSwitchTaxi",
+    "callback" : "SimLandingLightDown",
+    "label" : "TAXI",
+    "description" : "GEAR: LIGHTS Switch - TAXI",
+    "style" : "switch",
+    "role" : "none",
     "type" : "switch",
     "stateful" : true
   }, {
@@ -5646,8 +6514,8 @@
   }, {
     "id" : "mainHsiHdgKnobIncrease5",
     "callback" : "SimHsiHeadingInc",
-    "label" : "Increase (5°)",
-    "description" : "MAIN: HSI HDG Knob - Increase (5°)",
+    "label" : "Increase (5�)",
+    "description" : "MAIN: HSI HDG Knob - Increase (5�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -5655,8 +6523,8 @@
   }, {
     "id" : "mainHsiHdgKnobDecrease5",
     "callback" : "SimHsiHeadingDec",
-    "label" : "Decrease (5°)",
-    "description" : "MAIN: HSI HDG Knob - Decrease (5°)",
+    "label" : "Decrease (5�)",
+    "description" : "MAIN: HSI HDG Knob - Decrease (5�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -5664,8 +6532,8 @@
   }, {
     "id" : "mainHsiHdgKnobIncrease1",
     "callback" : "SimHsiHdgIncBy1",
-    "label" : "Increase (1°)",
-    "description" : "MAIN: HSI HDG Knob - Increase (1°)",
+    "label" : "Increase (1�)",
+    "description" : "MAIN: HSI HDG Knob - Increase (1�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -5673,8 +6541,8 @@
   }, {
     "id" : "mainHsiHdgKnobDecrease1",
     "callback" : "SimHsiHdgDecBy1",
-    "label" : "Decrease (1°)",
-    "description" : "MAIN: HSI HDG Knob - Decrease (1°)",
+    "label" : "Decrease (1�)",
+    "description" : "MAIN: HSI HDG Knob - Decrease (1�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -5682,8 +6550,8 @@
   }, {
     "id" : "mainHsiCrsKnobIncrease5",
     "callback" : "SimHsiCourseInc",
-    "label" : "Increase (5°)",
-    "description" : "MAIN: HSI CRS Knob - Increase (5°)",
+    "label" : "Increase (5�)",
+    "description" : "MAIN: HSI CRS Knob - Increase (5�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -5691,8 +6559,8 @@
   }, {
     "id" : "mainHsiCrsKnobDecrease5",
     "callback" : "SimHsiCourseDec",
-    "label" : "Decrease (5°)",
-    "description" : "MAIN: HSI CRS Knob - Decrease (5°)",
+    "label" : "Decrease (5�)",
+    "description" : "MAIN: HSI CRS Knob - Decrease (5�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -5700,8 +6568,8 @@
   }, {
     "id" : "mainHsiCrsKnobIncrease1",
     "callback" : "SimHsiCrsIncBy1",
-    "label" : "Increase (1°)",
-    "description" : "MAIN: HSI CRS Knob - Increase (1°)",
+    "label" : "Increase (1�)",
+    "description" : "MAIN: HSI CRS Knob - Increase (1�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -5709,8 +6577,8 @@
   }, {
     "id" : "mainHsiCrsKnobDecrease1",
     "callback" : "SimHsiCrsDecBy1",
-    "label" : "Decrease (1°)",
-    "description" : "MAIN: HSI CRS Knob - Decrease (1°)",
+    "label" : "Decrease (1�)",
+    "description" : "MAIN: HSI CRS Knob - Decrease (1�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -5718,8 +6586,8 @@
   }, {
     "id" : "mainAltimeterPressureKnobIncr5",
     "callback" : "SimAltPressInc",
-    "label" : "Incr. (5°)",
-    "description" : "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+    "label" : "Incr. (5�)",
+    "description" : "MAIN: Altimeter Pressure Knob - Incr. (5�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -5727,8 +6595,8 @@
   }, {
     "id" : "mainAltimeterPressureKnobDecr5",
     "callback" : "SimAltPressDec",
-    "label" : "Decr. (5°)",
-    "description" : "MAIN: Altimeter Pressure Knob - Decr. (5°)",
+    "label" : "Decr. (5�)",
+    "description" : "MAIN: Altimeter Pressure Knob - Decr. (5�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -5736,8 +6604,8 @@
   }, {
     "id" : "mainAltimeterPressureKnobIncr1",
     "callback" : "SimAltPressIncBy1",
-    "label" : "Incr. (1°)",
-    "description" : "MAIN: Altimeter Pressure Knob - Incr. (1°)",
+    "label" : "Incr. (1�)",
+    "description" : "MAIN: Altimeter Pressure Knob - Incr. (1�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -5745,8 +6613,8 @@
   }, {
     "id" : "mainAltimeterPressureKnobDecr1",
     "callback" : "SimAltPressDecBy1",
-    "label" : "Decr. (1°)",
-    "description" : "MAIN: Altimeter Pressure Knob - Decr. (1°)",
+    "label" : "Decr. (1�)",
+    "description" : "MAIN: Altimeter Pressure Knob - Decr. (1�)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -6238,6 +7106,60 @@
     "type" : "switch",
     "stateful" : true
   }, {
+    "id" : "iceEngineSwitchOn",
+    "callback" : "SimAntiIceUp",
+    "label" : "ON",
+    "description" : "ICE: ENGINE Switch - ON",
+    "style" : "switch",
+    "role" : "on",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "id" : "iceEngineSwitchAuto",
+    "callback" : "SimAntiIceMid",
+    "label" : "AUTO",
+    "description" : "ICE: ENGINE Switch - AUTO",
+    "style" : "switch",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "id" : "iceEngineSwitchOff",
+    "callback" : "SimAntiIceDown",
+    "label" : "OFF",
+    "description" : "ICE: ENGINE Switch - OFF",
+    "style" : "switch",
+    "role" : "off",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "id" : "antIffUhfSwitchUpper",
+    "callback" : "SimAntennaSelectUp",
+    "label" : "UPPER",
+    "description" : "ANT: IFF UHF Switch - UPPER",
+    "style" : "switch",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "id" : "antIffUhfSwitchNorm",
+    "callback" : "SimAntennaSelectMid",
+    "label" : "NORM",
+    "description" : "ANT: IFF UHF Switch - NORM",
+    "style" : "switch",
+    "role" : "on",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "id" : "antIffUhfSwitchLower",
+    "callback" : "SimAntennaSelectDown",
+    "label" : "LOWER",
+    "description" : "ANT: IFF UHF Switch - LOWER",
+    "style" : "switch",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
     "id" : "avionicsInsKnobOff",
     "callback" : "SimINSOff",
     "label" : "OFF",
@@ -6397,42 +7319,6 @@
     "description" : "OXY: Setting 2 - OFF (Pilot breathing)",
     "style" : "button",
     "role" : "none",
-    "type" : "button",
-    "stateful" : false
-  }, {
-    "id" : "ckpitNightvisionOn",
-    "callback" : "SimNVGModeOn",
-    "label" : "On",
-    "description" : "CKPIT: Nightvision - On",
-    "style" : "button",
-    "role" : "on",
-    "type" : "button",
-    "stateful" : false
-  }, {
-    "id" : "ckpitNightvisionOff",
-    "callback" : "SimNVGModeOff",
-    "label" : "Off",
-    "description" : "CKPIT: Nightvision - Off",
-    "style" : "button",
-    "role" : "off",
-    "type" : "button",
-    "stateful" : false
-  }, {
-    "id" : "ckpitSmokeOn",
-    "callback" : "SimSmokeOn",
-    "label" : "On",
-    "description" : "CKPIT: Smoke - On",
-    "style" : "button",
-    "role" : "on",
-    "type" : "button",
-    "stateful" : false
-  }, {
-    "id" : "ckpitSmokeOff",
-    "callback" : "SimSmokeOff",
-    "label" : "Off",
-    "description" : "CKPIT: Smoke - Off",
-    "style" : "button",
-    "role" : "off",
     "type" : "button",
     "stateful" : false
   }, {
@@ -7640,8 +8526,17 @@
       "label" : "Jfs",
       "stateful" : true,
       "controlConfigurations" : [ {
+        "id" : "engJfsSwitchStart1",
+        "callback" : "SimJfsStartUp",
+        "label" : "START 1",
+        "description" : "ENG: JFS Switch - START 1",
+        "style" : "switch",
+        "role" : "none",
+        "type" : "switch",
+        "stateful" : true
+      }, {
         "id" : "engJfsSwitchOff",
-        "callback" : "SimJfsStart_Off",
+        "callback" : "SimJfsStartMid",
         "label" : "OFF",
         "description" : "ENG: JFS Switch - OFF",
         "style" : "switch",
@@ -7650,7 +8545,7 @@
         "stateful" : true
       }, {
         "id" : "engJfsSwitchStart2",
-        "callback" : "SimJfsStart_Start2",
+        "callback" : "SimJfsStartDown",
         "label" : "START 2",
         "description" : "ENG: JFS Switch - START 2",
         "style" : "switch",
@@ -7711,25 +8606,25 @@
     }, {
       "id" : "AUDIO2: ILS Knob",
       "label" : "Ils",
-      "stateful" : true,
+      "stateful" : false,
       "controlConfigurations" : [ {
-        "id" : "audio2IlsKnobOn",
-        "callback" : "SimILSOn",
-        "label" : "ON",
-        "description" : "AUDIO2: ILS Knob - ON",
+        "id" : "audio2IlsKnobVolumeIncr",
+        "callback" : "SimILSUp",
+        "label" : "Volume Incr.",
+        "description" : "AUDIO2: ILS Knob - Volume Incr.",
         "style" : "knob",
-        "role" : "on",
-        "type" : "switch",
-        "stateful" : true
+        "role" : "increase",
+        "type" : "button",
+        "stateful" : false
       }, {
-        "id" : "audio2IlsKnobOff",
-        "callback" : "SimILSOff",
-        "label" : "OFF",
-        "description" : "AUDIO2: ILS Knob - OFF",
+        "id" : "audio2IlsKnobVolumeDecr",
+        "callback" : "SimILSDown",
+        "label" : "Volume Decr.",
+        "description" : "AUDIO2: ILS Knob - Volume Decr.",
         "style" : "knob",
-        "role" : "off",
-        "type" : "switch",
-        "stateful" : true
+        "role" : "decrease",
+        "type" : "button",
+        "stateful" : false
       } ]
     } ]
   }, {
@@ -7955,117 +8850,506 @@
         "stateful" : false
       } ]
     }, {
-      "id" : "UHF: A-3-2-T Rotary X__.___",
-      "label" : "A-3-2-t Rotary X__.___",
+      "id" : "UHF: A-3-2-T Rotary 2**.***",
+      "label" : "A-3-2-t Rotary 2**.***",
       "stateful" : false,
       "controlConfigurations" : [ {
-        "id" : "uhfA32TRotaryXzzzzzStepUp",
-        "callback" : "SimBupUhfFreq1Inc",
-        "label" : "Step Up",
-        "description" : "UHF: A-3-2-T Rotary X__.___ - Step Up",
+        "id" : "uhfA32TRotary2",
+        "callback" : "SimBupUhfFreq1_2",
+        "label" : "T Rotary 2**.***",
+        "description" : "UHF: A-3-2-T Rotary 2**.***",
         "style" : "button",
-        "role" : "up",
-        "type" : "button",
-        "stateful" : false
-      }, {
-        "id" : "uhfA32TRotaryXzzzzzStepDown",
-        "callback" : "SimBupUhfFreq1Dec",
-        "label" : "Step Down",
-        "description" : "UHF: A-3-2-T Rotary X__.___ - Step Down",
-        "style" : "button",
-        "role" : "down",
+        "role" : "none",
         "type" : "button",
         "stateful" : false
       } ]
     }, {
-      "id" : "UHF: Manual Frequency _X_.___",
-      "label" : "Manual Frequency _x_.___",
+      "id" : "UHF: A-3-2-T Rotary 3**.***",
+      "label" : "A-3-2-t Rotary 3**.***",
       "stateful" : false,
       "controlConfigurations" : [ {
-        "id" : "uhfManualFrequencyZxzzzzCycleUp",
-        "callback" : "SimBupUhfFreq2Inc",
-        "label" : "Cycle Up",
-        "description" : "UHF: Manual Frequency _X_.___ - Cycle Up",
+        "id" : "uhfA32TRotary3",
+        "callback" : "SimBupUhfFreq1_3",
+        "label" : "T Rotary 3**.***",
+        "description" : "UHF: A-3-2-T Rotary 3**.***",
         "style" : "button",
-        "role" : "up",
-        "type" : "button",
-        "stateful" : false
-      }, {
-        "id" : "uhfManualFrequencyZxzzzzCycleDown",
-        "callback" : "SimBupUhfFreq2Dec",
-        "label" : "Cycle Down",
-        "description" : "UHF: Manual Frequency _X_.___ - Cycle Down",
-        "style" : "button",
-        "role" : "down",
+        "role" : "none",
         "type" : "button",
         "stateful" : false
       } ]
     }, {
-      "id" : "UHF: Manual Frequency __X.___",
-      "label" : "Manual Frequency __x.___",
+      "id" : "UHF: Manual Frequency *0*.***",
+      "label" : "Manual Frequency *0*.***",
       "stateful" : false,
       "controlConfigurations" : [ {
-        "id" : "uhfManualFrequencyZzxzzzCycleUp",
-        "callback" : "SimBupUhfFreq3Inc",
-        "label" : "Cycle Up",
-        "description" : "UHF: Manual Frequency __X.___ - Cycle Up",
+        "id" : "uhfManualFrequency0",
+        "callback" : "SimBupUhfFreq2_0",
+        "label" : "Manual Frequency *0*.***",
+        "description" : "UHF: Manual Frequency *0*.***",
         "style" : "button",
-        "role" : "up",
-        "type" : "button",
-        "stateful" : false
-      }, {
-        "id" : "uhfManualFrequencyZzxzzzCycleDown",
-        "callback" : "SimBupUhfFreq3Dec",
-        "label" : "Cycle Down",
-        "description" : "UHF: Manual Frequency __X.___ - Cycle Down",
-        "style" : "button",
-        "role" : "down",
+        "role" : "none",
         "type" : "button",
         "stateful" : false
       } ]
     }, {
-      "id" : "UHF: Manual Frequency ___.X__",
-      "label" : "Manual Frequency ___.x__",
+      "id" : "UHF: Manual Frequency *1*.***",
+      "label" : "Manual Frequency *1*.***",
       "stateful" : false,
       "controlConfigurations" : [ {
-        "id" : "uhfManualFrequencyZzzxzzCycleUp",
-        "callback" : "SimBupUhfFreq4Inc",
-        "label" : "Cycle Up",
-        "description" : "UHF: Manual Frequency ___.X__ - Cycle Up",
+        "id" : "uhfManualFrequency1",
+        "callback" : "SimBupUhfFreq2_1",
+        "label" : "Manual Frequency *1*.***",
+        "description" : "UHF: Manual Frequency *1*.***",
         "style" : "button",
-        "role" : "up",
-        "type" : "button",
-        "stateful" : false
-      }, {
-        "id" : "uhfManualFrequencyZzzxzzCycleDown",
-        "callback" : "SimBupUhfFreq4Dec",
-        "label" : "Cycle Down",
-        "description" : "UHF: Manual Frequency ___.X__ - Cycle Down",
-        "style" : "button",
-        "role" : "down",
+        "role" : "none",
         "type" : "button",
         "stateful" : false
       } ]
     }, {
-      "id" : "UHF: Manual Frequency ___._XX",
-      "label" : "Manual Frequency ___._xx",
+      "id" : "UHF: Manual Frequency *2*.***",
+      "label" : "Manual Frequency *2*.***",
       "stateful" : false,
       "controlConfigurations" : [ {
-        "id" : "uhfManualFrequencyZzzzxxCycleUp",
-        "callback" : "SimBupUhfFreq5Inc",
-        "label" : "Cycle Up",
-        "description" : "UHF: Manual Frequency ___._XX - Cycle Up",
+        "id" : "uhfManualFrequency2",
+        "callback" : "SimBupUhfFreq2_2",
+        "label" : "Manual Frequency *2*.***",
+        "description" : "UHF: Manual Frequency *2*.***",
         "style" : "button",
-        "role" : "up",
+        "role" : "none",
         "type" : "button",
         "stateful" : false
-      }, {
-        "id" : "uhfManualFrequencyZzzzxxCycleDown",
-        "callback" : "SimBupUhfFreq5Dec",
-        "label" : "Cycle Down",
-        "description" : "UHF: Manual Frequency ___._XX - Cycle Down",
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency *3*.***",
+      "label" : "Manual Frequency *3*.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency3",
+        "callback" : "SimBupUhfFreq2_3",
+        "label" : "Manual Frequency *3*.***",
+        "description" : "UHF: Manual Frequency *3*.***",
         "style" : "button",
-        "role" : "down",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency *4*.***",
+      "label" : "Manual Frequency *4*.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency4",
+        "callback" : "SimBupUhfFreq2_4",
+        "label" : "Manual Frequency *4*.***",
+        "description" : "UHF: Manual Frequency *4*.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency *5*.***",
+      "label" : "Manual Frequency *5*.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency5",
+        "callback" : "SimBupUhfFreq2_5",
+        "label" : "Manual Frequency *5*.***",
+        "description" : "UHF: Manual Frequency *5*.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency *6*.***",
+      "label" : "Manual Frequency *6*.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency6",
+        "callback" : "SimBupUhfFreq2_6",
+        "label" : "Manual Frequency *6*.***",
+        "description" : "UHF: Manual Frequency *6*.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency *7*.***",
+      "label" : "Manual Frequency *7*.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency7",
+        "callback" : "SimBupUhfFreq2_7",
+        "label" : "Manual Frequency *7*.***",
+        "description" : "UHF: Manual Frequency *7*.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency *8*.***",
+      "label" : "Manual Frequency *8*.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency8",
+        "callback" : "SimBupUhfFreq2_8",
+        "label" : "Manual Frequency *8*.***",
+        "description" : "UHF: Manual Frequency *8*.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency *9*.***",
+      "label" : "Manual Frequency *9*.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency9",
+        "callback" : "SimBupUhfFreq2_9",
+        "label" : "Manual Frequency *9*.***",
+        "description" : "UHF: Manual Frequency *9*.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency **0.***",
+      "label" : "Manual Frequency **0.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency0",
+        "callback" : "SimBupUhfFreq3_0",
+        "label" : "Manual Frequency **0.***",
+        "description" : "UHF: Manual Frequency **0.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency **1.***",
+      "label" : "Manual Frequency **1.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency1",
+        "callback" : "SimBupUhfFreq3_1",
+        "label" : "Manual Frequency **1.***",
+        "description" : "UHF: Manual Frequency **1.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency **2.***",
+      "label" : "Manual Frequency **2.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency2",
+        "callback" : "SimBupUhfFreq3_2",
+        "label" : "Manual Frequency **2.***",
+        "description" : "UHF: Manual Frequency **2.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency **3.***",
+      "label" : "Manual Frequency **3.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency3",
+        "callback" : "SimBupUhfFreq3_3",
+        "label" : "Manual Frequency **3.***",
+        "description" : "UHF: Manual Frequency **3.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency **4.***",
+      "label" : "Manual Frequency **4.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency4",
+        "callback" : "SimBupUhfFreq3_4",
+        "label" : "Manual Frequency **4.***",
+        "description" : "UHF: Manual Frequency **4.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency **5.***",
+      "label" : "Manual Frequency **5.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency5",
+        "callback" : "SimBupUhfFreq3_5",
+        "label" : "Manual Frequency **5.***",
+        "description" : "UHF: Manual Frequency **5.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency **6.***",
+      "label" : "Manual Frequency **6.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency6",
+        "callback" : "SimBupUhfFreq3_6",
+        "label" : "Manual Frequency **6.***",
+        "description" : "UHF: Manual Frequency **6.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency **7.***",
+      "label" : "Manual Frequency **7.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency7",
+        "callback" : "SimBupUhfFreq3_7",
+        "label" : "Manual Frequency **7.***",
+        "description" : "UHF: Manual Frequency **7.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency **8.***",
+      "label" : "Manual Frequency **8.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency8",
+        "callback" : "SimBupUhfFreq3_8",
+        "label" : "Manual Frequency **8.***",
+        "description" : "UHF: Manual Frequency **8.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency **9.***",
+      "label" : "Manual Frequency **9.***",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency9",
+        "callback" : "SimBupUhfFreq3_9",
+        "label" : "Manual Frequency **9.***",
+        "description" : "UHF: Manual Frequency **9.***",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.0**",
+      "label" : "Manual Frequency ***.0**",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency0",
+        "callback" : "SimBupUhfFreq4_0",
+        "label" : "Manual Frequency ***.0**",
+        "description" : "UHF: Manual Frequency ***.0**",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.1**",
+      "label" : "Manual Frequency ***.1**",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency1",
+        "callback" : "SimBupUhfFreq4_1",
+        "label" : "Manual Frequency ***.1**",
+        "description" : "UHF: Manual Frequency ***.1**",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.2**",
+      "label" : "Manual Frequency ***.2**",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency2",
+        "callback" : "SimBupUhfFreq4_2",
+        "label" : "Manual Frequency ***.2**",
+        "description" : "UHF: Manual Frequency ***.2**",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.3**",
+      "label" : "Manual Frequency ***.3**",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency3",
+        "callback" : "SimBupUhfFreq4_3",
+        "label" : "Manual Frequency ***.3**",
+        "description" : "UHF: Manual Frequency ***.3**",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.4**",
+      "label" : "Manual Frequency ***.4**",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency4",
+        "callback" : "SimBupUhfFreq4_4",
+        "label" : "Manual Frequency ***.4**",
+        "description" : "UHF: Manual Frequency ***.4**",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.5**",
+      "label" : "Manual Frequency ***.5**",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency5",
+        "callback" : "SimBupUhfFreq4_5",
+        "label" : "Manual Frequency ***.5**",
+        "description" : "UHF: Manual Frequency ***.5**",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.6**",
+      "label" : "Manual Frequency ***.6**",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency6",
+        "callback" : "SimBupUhfFreq4_6",
+        "label" : "Manual Frequency ***.6**",
+        "description" : "UHF: Manual Frequency ***.6**",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.7**",
+      "label" : "Manual Frequency ***.7**",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency7",
+        "callback" : "SimBupUhfFreq4_7",
+        "label" : "Manual Frequency ***.7**",
+        "description" : "UHF: Manual Frequency ***.7**",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.8**",
+      "label" : "Manual Frequency ***.8**",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency8",
+        "callback" : "SimBupUhfFreq4_8",
+        "label" : "Manual Frequency ***.8**",
+        "description" : "UHF: Manual Frequency ***.8**",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.9**",
+      "label" : "Manual Frequency ***.9**",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency9",
+        "callback" : "SimBupUhfFreq4_9",
+        "label" : "Manual Frequency ***.9**",
+        "description" : "UHF: Manual Frequency ***.9**",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.*00",
+      "label" : "Manual Frequency ***.*00",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency00",
+        "callback" : "SimBupUhfFreq5_00",
+        "label" : "Manual Frequency ***.*00",
+        "description" : "UHF: Manual Frequency ***.*00",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.*25",
+      "label" : "Manual Frequency ***.*25",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency25",
+        "callback" : "SimBupUhfFreq5_25",
+        "label" : "Manual Frequency ***.*25",
+        "description" : "UHF: Manual Frequency ***.*25",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.*50",
+      "label" : "Manual Frequency ***.*50",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency50",
+        "callback" : "SimBupUhfFreq5_50",
+        "label" : "Manual Frequency ***.*50",
+        "description" : "UHF: Manual Frequency ***.*50",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "UHF: Manual Frequency ***.*75",
+      "label" : "Manual Frequency ***.*75",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "uhfManualFrequency75",
+        "callback" : "SimBupUhfFreq5_75",
+        "label" : "Manual Frequency ***.*75",
+        "description" : "UHF: Manual Frequency ***.*75",
+        "style" : "button",
+        "role" : "none",
         "type" : "button",
         "stateful" : false
       } ]
@@ -8180,7 +9464,7 @@
       "stateful" : false,
       "controlConfigurations" : [ {
         "id" : "leftWallCanopyOpen",
-        "callback" : "AFCanopyOpen",
+        "callback" : "AFCanopyInc",
         "label" : "Open",
         "description" : "LEFT WALL: CANOPY - Open",
         "style" : "button",
@@ -8188,10 +9472,42 @@
         "type" : "button",
         "stateful" : false
       }, {
+        "id" : "leftWallCanopyStop",
+        "callback" : "AFCanopyStop",
+        "label" : "Stop",
+        "description" : "LEFT WALL: CANOPY - Stop",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      }, {
         "id" : "leftWallCanopyClose",
-        "callback" : "AFCanopyClose",
+        "callback" : "AFCanopyDec",
         "label" : "Close",
         "description" : "LEFT WALL: CANOPY - Close",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "LEFT WALL: SPIDER",
+      "label" : "Spider",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "leftWallSpiderLock",
+        "callback" : "AFCanopyLock",
+        "label" : "Lock",
+        "description" : "LEFT WALL: SPIDER - Lock",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      }, {
+        "id" : "leftWallSpiderUnlock",
+        "callback" : "AFCanopyUnlock",
+        "label" : "Unlock",
+        "description" : "LEFT WALL: SPIDER - Unlock",
         "style" : "button",
         "role" : "none",
         "type" : "button",
@@ -8221,6 +9537,34 @@
         "description" : "SEAT: Safety Lever - Locked",
         "style" : "button",
         "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "SEAT: Move Up",
+      "label" : "Move Up",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "seatMoveUp",
+        "callback" : "SimSeatUp",
+        "label" : "Move Up",
+        "description" : "SEAT: Move Up",
+        "style" : "button",
+        "role" : "up",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "SEAT: Move Down",
+      "label" : "Move Down",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "seatMoveDown",
+        "callback" : "SimSeatDown",
+        "label" : "Move Down",
+        "description" : "SEAT: Move Down",
+        "style" : "button",
+        "role" : "down",
         "type" : "button",
         "stateful" : false
       } ]
@@ -8695,23 +10039,55 @@
         "stateful" : true
       } ]
     }, {
-      "id" : "GEAR: PARKING BREAK Switch",
-      "label" : "Parking Break",
+      "id" : "GEAR: BRAKES",
+      "label" : "Brakes",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "gearBrakesChannel1",
+        "callback" : "SimBrakeChannelUp",
+        "label" : "Channel 1",
+        "description" : "GEAR: BRAKES - Channel 1",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      }, {
+        "id" : "gearBrakesChannel2",
+        "callback" : "SimBrakeChannelDown",
+        "label" : "Channel 2",
+        "description" : "GEAR: BRAKES - Channel 2",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "GEAR: PARKING BRAKE Switch",
+      "label" : "Parking Brake",
       "stateful" : true,
       "controlConfigurations" : [ {
-        "id" : "gearParkingBreakSwitchOn",
-        "callback" : "SimParkingBrakeOn",
+        "id" : "gearParkingBrakeSwitchOn",
+        "callback" : "SimParkingBrakeUp",
         "label" : "ON",
-        "description" : "GEAR: PARKING BREAK Switch - ON",
+        "description" : "GEAR: PARKING BRAKE Switch - ON",
         "style" : "switch",
         "role" : "on",
         "type" : "switch",
         "stateful" : true
       }, {
-        "id" : "gearParkingBreakSwitchOff",
-        "callback" : "SimParkingBrakeOff",
+        "id" : "gearParkingBrakeSwitchAntiSkid",
+        "callback" : "SimParkingBrakeMid",
+        "label" : "ANTI SKID",
+        "description" : "GEAR: PARKING BRAKE Switch - ANTI SKID",
+        "style" : "switch",
+        "role" : "none",
+        "type" : "switch",
+        "stateful" : true
+      }, {
+        "id" : "gearParkingBrakeSwitchOff",
+        "callback" : "SimParkingBrakeDown",
         "label" : "OFF",
-        "description" : "GEAR: PARKING BREAK Switch - OFF",
+        "description" : "GEAR: PARKING BRAKE Switch - OFF",
         "style" : "switch",
         "role" : "off",
         "type" : "switch",
@@ -8739,6 +10115,20 @@
         "role" : "down",
         "type" : "switch",
         "stateful" : true
+      } ]
+    }, {
+      "id" : "GEAR: DN LOCK REL",
+      "label" : "Dn Lock Rel",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "gearDnLockRelPush",
+        "callback" : "AFEmergencyGearHandleUnlock",
+        "label" : "Push",
+        "description" : "GEAR: DN LOCK REL - Push",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
       } ]
     }, {
       "id" : "GEAR: STORES CONFIG Switch",
@@ -8783,7 +10173,7 @@
       "stateful" : true,
       "controlConfigurations" : [ {
         "id" : "gearLightsSwitchLanding",
-        "callback" : "SimLandingLightOn",
+        "callback" : "SimLandingLightUp",
         "label" : "LANDING",
         "description" : "GEAR: LIGHTS Switch - LANDING",
         "style" : "switch",
@@ -8792,11 +10182,20 @@
         "stateful" : true
       }, {
         "id" : "gearLightsSwitchOff",
-        "callback" : "SimLandingLightOff",
+        "callback" : "SimLandingLightMid",
         "label" : "OFF",
         "description" : "GEAR: LIGHTS Switch - OFF",
         "style" : "switch",
         "role" : "off",
+        "type" : "switch",
+        "stateful" : true
+      }, {
+        "id" : "gearLightsSwitchTaxi",
+        "callback" : "SimLandingLightDown",
+        "label" : "TAXI",
+        "description" : "GEAR: LIGHTS Switch - TAXI",
+        "style" : "switch",
+        "role" : "none",
         "type" : "switch",
         "stateful" : true
       } ]
@@ -9099,8 +10498,8 @@
       "controlConfigurations" : [ {
         "id" : "mainHsiHdgKnobIncrease5",
         "callback" : "SimHsiHeadingInc",
-        "label" : "Increase (5°)",
-        "description" : "MAIN: HSI HDG Knob - Increase (5°)",
+        "label" : "Increase (5�)",
+        "description" : "MAIN: HSI HDG Knob - Increase (5�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9108,8 +10507,8 @@
       }, {
         "id" : "mainHsiHdgKnobDecrease5",
         "callback" : "SimHsiHeadingDec",
-        "label" : "Decrease (5°)",
-        "description" : "MAIN: HSI HDG Knob - Decrease (5°)",
+        "label" : "Decrease (5�)",
+        "description" : "MAIN: HSI HDG Knob - Decrease (5�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9117,8 +10516,8 @@
       }, {
         "id" : "mainHsiHdgKnobIncrease1",
         "callback" : "SimHsiHdgIncBy1",
-        "label" : "Increase (1°)",
-        "description" : "MAIN: HSI HDG Knob - Increase (1°)",
+        "label" : "Increase (1�)",
+        "description" : "MAIN: HSI HDG Knob - Increase (1�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9126,8 +10525,8 @@
       }, {
         "id" : "mainHsiHdgKnobDecrease1",
         "callback" : "SimHsiHdgDecBy1",
-        "label" : "Decrease (1°)",
-        "description" : "MAIN: HSI HDG Knob - Decrease (1°)",
+        "label" : "Decrease (1�)",
+        "description" : "MAIN: HSI HDG Knob - Decrease (1�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9140,8 +10539,8 @@
       "controlConfigurations" : [ {
         "id" : "mainHsiCrsKnobIncrease5",
         "callback" : "SimHsiCourseInc",
-        "label" : "Increase (5°)",
-        "description" : "MAIN: HSI CRS Knob - Increase (5°)",
+        "label" : "Increase (5�)",
+        "description" : "MAIN: HSI CRS Knob - Increase (5�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9149,8 +10548,8 @@
       }, {
         "id" : "mainHsiCrsKnobDecrease5",
         "callback" : "SimHsiCourseDec",
-        "label" : "Decrease (5°)",
-        "description" : "MAIN: HSI CRS Knob - Decrease (5°)",
+        "label" : "Decrease (5�)",
+        "description" : "MAIN: HSI CRS Knob - Decrease (5�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9158,8 +10557,8 @@
       }, {
         "id" : "mainHsiCrsKnobIncrease1",
         "callback" : "SimHsiCrsIncBy1",
-        "label" : "Increase (1°)",
-        "description" : "MAIN: HSI CRS Knob - Increase (1°)",
+        "label" : "Increase (1�)",
+        "description" : "MAIN: HSI CRS Knob - Increase (1�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9167,8 +10566,8 @@
       }, {
         "id" : "mainHsiCrsKnobDecrease1",
         "callback" : "SimHsiCrsDecBy1",
-        "label" : "Decrease (1°)",
-        "description" : "MAIN: HSI CRS Knob - Decrease (1°)",
+        "label" : "Decrease (1�)",
+        "description" : "MAIN: HSI CRS Knob - Decrease (1�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9181,8 +10580,8 @@
       "controlConfigurations" : [ {
         "id" : "mainAltimeterPressureKnobIncr5",
         "callback" : "SimAltPressInc",
-        "label" : "Incr. (5°)",
-        "description" : "MAIN: Altimeter Pressure Knob - Incr. (5°)",
+        "label" : "Incr. (5�)",
+        "description" : "MAIN: Altimeter Pressure Knob - Incr. (5�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9190,8 +10589,8 @@
       }, {
         "id" : "mainAltimeterPressureKnobDecr5",
         "callback" : "SimAltPressDec",
-        "label" : "Decr. (5°)",
-        "description" : "MAIN: Altimeter Pressure Knob - Decr. (5°)",
+        "label" : "Decr. (5�)",
+        "description" : "MAIN: Altimeter Pressure Knob - Decr. (5�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9199,8 +10598,8 @@
       }, {
         "id" : "mainAltimeterPressureKnobIncr1",
         "callback" : "SimAltPressIncBy1",
-        "label" : "Incr. (1°)",
-        "description" : "MAIN: Altimeter Pressure Knob - Incr. (1°)",
+        "label" : "Incr. (1�)",
+        "description" : "MAIN: Altimeter Pressure Knob - Incr. (1�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9208,8 +10607,8 @@
       }, {
         "id" : "mainAltimeterPressureKnobDecr1",
         "callback" : "SimAltPressDecBy1",
-        "label" : "Decr. (1°)",
-        "description" : "MAIN: Altimeter Pressure Knob - Decr. (1°)",
+        "label" : "Decr. (1�)",
+        "description" : "MAIN: Altimeter Pressure Knob - Decr. (1�)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9826,6 +11225,74 @@
       } ]
     } ]
   }, {
+    "id" : "antiIceAntSelPanel",
+    "label" : "ANTI ICE / ANT SEL",
+    "controlGroupConfigurations" : [ {
+      "id" : "ICE: ENGINE Switch",
+      "label" : "Engine",
+      "stateful" : true,
+      "controlConfigurations" : [ {
+        "id" : "iceEngineSwitchOn",
+        "callback" : "SimAntiIceUp",
+        "label" : "ON",
+        "description" : "ICE: ENGINE Switch - ON",
+        "style" : "switch",
+        "role" : "on",
+        "type" : "switch",
+        "stateful" : true
+      }, {
+        "id" : "iceEngineSwitchAuto",
+        "callback" : "SimAntiIceMid",
+        "label" : "AUTO",
+        "description" : "ICE: ENGINE Switch - AUTO",
+        "style" : "switch",
+        "role" : "none",
+        "type" : "switch",
+        "stateful" : true
+      }, {
+        "id" : "iceEngineSwitchOff",
+        "callback" : "SimAntiIceDown",
+        "label" : "OFF",
+        "description" : "ICE: ENGINE Switch - OFF",
+        "style" : "switch",
+        "role" : "off",
+        "type" : "switch",
+        "stateful" : true
+      } ]
+    }, {
+      "id" : "ANT: IFF UHF Switch",
+      "label" : "Iff Uhf",
+      "stateful" : true,
+      "controlConfigurations" : [ {
+        "id" : "antIffUhfSwitchUpper",
+        "callback" : "SimAntennaSelectUp",
+        "label" : "UPPER",
+        "description" : "ANT: IFF UHF Switch - UPPER",
+        "style" : "switch",
+        "role" : "none",
+        "type" : "switch",
+        "stateful" : true
+      }, {
+        "id" : "antIffUhfSwitchNorm",
+        "callback" : "SimAntennaSelectMid",
+        "label" : "NORM",
+        "description" : "ANT: IFF UHF Switch - NORM",
+        "style" : "switch",
+        "role" : "on",
+        "type" : "switch",
+        "stateful" : true
+      }, {
+        "id" : "antIffUhfSwitchLower",
+        "callback" : "SimAntennaSelectDown",
+        "label" : "LOWER",
+        "description" : "ANT: IFF UHF Switch - LOWER",
+        "style" : "switch",
+        "role" : "none",
+        "type" : "switch",
+        "stateful" : true
+      } ]
+    } ]
+  }, {
     "id" : "avionicPowerPanel",
     "label" : "AVIONIC POWER",
     "controlGroupConfigurations" : [ {
@@ -10039,52 +11506,6 @@
     "id" : "otherCockpitCallbacks",
     "label" : "OTHER COCKPIT CALLBACKS",
     "controlGroupConfigurations" : [ {
-      "id" : "CKPIT: Nightvision",
-      "label" : "Nightvision",
-      "stateful" : false,
-      "controlConfigurations" : [ {
-        "id" : "ckpitNightvisionOn",
-        "callback" : "SimNVGModeOn",
-        "label" : "On",
-        "description" : "CKPIT: Nightvision - On",
-        "style" : "button",
-        "role" : "on",
-        "type" : "button",
-        "stateful" : false
-      }, {
-        "id" : "ckpitNightvisionOff",
-        "callback" : "SimNVGModeOff",
-        "label" : "Off",
-        "description" : "CKPIT: Nightvision - Off",
-        "style" : "button",
-        "role" : "off",
-        "type" : "button",
-        "stateful" : false
-      } ]
-    }, {
-      "id" : "CKPIT: Smoke",
-      "label" : "Smoke",
-      "stateful" : false,
-      "controlConfigurations" : [ {
-        "id" : "ckpitSmokeOn",
-        "callback" : "SimSmokeOn",
-        "label" : "On",
-        "description" : "CKPIT: Smoke - On",
-        "style" : "button",
-        "role" : "on",
-        "type" : "button",
-        "stateful" : false
-      }, {
-        "id" : "ckpitSmokeOff",
-        "callback" : "SimSmokeOff",
-        "label" : "Off",
-        "description" : "CKPIT: Smoke - Off",
-        "style" : "button",
-        "role" : "off",
-        "type" : "button",
-        "stateful" : false
-      } ]
-    }, {
       "id" : "CKPIT: Wheel Brakes",
       "label" : "Wheel Brakes",
       "stateful" : false,

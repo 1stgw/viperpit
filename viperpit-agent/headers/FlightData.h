@@ -7,7 +7,7 @@
 //#include "stl_vector.h"
 //#include "stringfwd.h"
 
-#define FLIGHTDATA_VERSION 117
+#define FLIGHTDATA_VERSION 118
 // changelog:
 // 110: initial BMS 4.33 version
 // 111: added SysTest to LightBits3
@@ -17,6 +17,7 @@
 // 115: renamed "real" WOW in MLGWOW, added NLGWOW
 // 116: bitfields are now unsigned instead of signed
 // 117: added ATF_Not_Engaged to LightBits3
+// 118: added Inlet_Icing to LightBits3
 
 // *** "FalconSharedMemoryArea" ***
 struct FlightData
@@ -173,7 +174,7 @@ public:
 
 		// Caution panel
 		cadc	= 0x400000,
-
+		
 		// Left Aux console
 		SpeedBrake = 0x800000,  // True if speed brake is in anything other than stowed position
 
@@ -190,15 +191,17 @@ public:
 		NLGWOW = 0x8000000,
 
 		ATF_Not_Engaged = 0x10000000,
+		
+		// Caution panel
+		Inlet_Icing = 0x20000000,
 
-		// Free bits in LightBits3
-		//0x20000000,
+		// Free bits in LightBits3		
 		//0x40000000,
 		//0x80000000,
 
 		// Used with the MAL/IND light code to light up "everything"
         // please update this if you add/change bits!
-		AllLampBits3On = 0x1147EFFF,
+		AllLampBits3On = 0x3147EFFF,
 		AllLampBits3OnExceptCarapace = AllLampBits3On ^ SysTest
     };
 
@@ -250,7 +253,7 @@ public:
     float gs;           // Ownship Normal Gs
     float windOffset;   // Wind delta to FPM (Radians)
     float nozzlePos;    // Ownship engine nozzle percent open (0-100)
-	//float nozzlePos2;   // MOVED TO FlightData2! Ownship engine nozzle2 percent open (0-100)
+	//float nozzlePos2;   // MOVED TO FlightData2! Ownship engine nozzle2 percent open (0-100) 
     float internalFuel; // Ownship internal fuel (Lbs)
     float externalFuel; // Ownship external fuel (Lbs)
     float fuelFlow;     // Ownship fuel flow (Lbs/Hour)
@@ -387,7 +390,7 @@ public:
 };
 
 
-#define FLIGHTDATA2_VERSION 16
+#define FLIGHTDATA2_VERSION 17
 // changelog:
 // 1: initial BMS 4.33 version
 // 2: added AltCalReading, altBits, BupUhfPreset, powerBits, blinkBits, cmdsMode
@@ -403,8 +406,9 @@ public:
 // 12: added RTT info
 // 13: added IFF panel backup digits
 // 14: added instrument backlight brightness
-// 15: added MiscBits, BettyBits, radar altitude, bingo fuel, cara alow, bullseye, BMS version information, string area size/time
+// 15: added MiscBits, BettyBits, radar altitude, bingo fuel, cara alow, bullseye, BMS version information, string area size/time, drawing area size
 // 16: added turn rate
+// 17: added Flcs_Flcc, SolenoidStatus to MiscBits
 
 // do NOT change these w/o crosschecking the BMS code
 #define RWRINFO_SIZE 512
@@ -483,7 +487,7 @@ public:
 	enum NavModes
 	{
 		ILS_TACAN   = 0,
-		TACAN       = 1,
+		TACAN       = 1, 
 		NAV         = 2,
 		ILS_NAV     = 3,
 	};
@@ -546,7 +550,14 @@ public:
 	// various flags - chances are that by now, we'll add new flags rarely and sparsely, so having a single "bulk pool" seems reasonable, size-wise
 	enum MiscBits
 	{
-		RALT_Valid = 0x1    // indicates weather the RALT reading is valid/reliable
+		RALT_Valid			= 0x01, // indicates weather the RALT reading is valid/reliable
+		Flcs_Flcc_A			= 0x02,
+		Flcs_Flcc_B			= 0x04,
+		Flcs_Flcc_C			= 0x08,
+		Flcs_Flcc_D			= 0x10,
+		SolenoidStatus		= 0x20, //0 not powered or failed or WOW  , 1 is working OK
+
+		AllLampBitsFlccOn	= 0x1e,
 	};
 
 	// VERSION 1
@@ -628,8 +639,8 @@ public:
 	int BMSBuildNumber;          //              build 20050
 	unsigned int StringAreaSize; // the overall size of the StringData/FalconSharedMemoryAreaString area
 	unsigned int StringAreaTime; // last time the StringData/FalconSharedMemoryAreaString area has been changed - you only need to re-read the string shared mem if this changes
-	unsigned int DrawingAreaSize;// (unused in 4.34)
-
+	unsigned int DrawingAreaSize;// the overall size of the DrawingData/FalconSharedMemoryAreaDrawing area
+	
 	// VERSION 16
 	float turnRate;              // actual turn rate (no delay or dampening) in degrees/second
 
@@ -817,9 +828,98 @@ public:
 };
 
 
+#define DRAWINGDATA_VERSION 1
+#define DRAWINGDATA_AREA_SIZE_MAX (1024 * 1024)
+// - NOTE: Check DrawingAreaSize in FalconSharedMemoryArea2 for the actual size of this area!
+// - NOTE: Treat this shared memory area as a pure "char*", not as "DrawingData*", since the size is not fixed!
+
+// changelog:
+// 1: initial BMS 4.35 version: added export of 2D drawing commands for HUD, RWR, and HMS in the following string variables
+//     HUD_commands  (only populated if g_bExportDrawingCommandsForHUD is set to 1 in Falcon BMS config)
+//     RWR_commands  (only populated if g_bExportDrawingCommandsForRWR is set to 1 in Falcon BMS config)
+//     HMS_commands  (only populated if g_bExportDrawingCommandsForHMS is set to 1 in Falcon BMS config)
+//
+//         Common data format for 2D drawing command strings:
+//         Command strings consist of a symbol indicating the command type, followed by a colon, followed by a comma-delimited list of arguments for that commmand, all followed by a terminating semicolon. e.g;
+//	           COMMAND: arg1, arg2, ..., argN;  
+//
+//         The following table lists all the available commands and their arguments. 
+//
+//		   Command       Arguments          Type              Description
+//         -------       ---------          ---------        -------------------------------------------------------------------
+//          R:                                               Set canvas resolution
+//                       width,               int                canvas width
+//                       height;              int                canvas height
+//
+//			F:                                               Set font            
+//                       "fontFile";          string              font texture file
+//
+//			P:                                               Draw point           
+//                       x,                   float               X coordinate
+//                       y;                   float               Y coordinate
+//
+//			L:                                               Draw line           
+//                       x1,                  float               starting X coordinate
+//                       y1,                  float               starting Y coordinate
+//                       x2,                  float               ending X coordinate
+//                       y2;                  float               ending Y coordinate
+//
+//			T:                                               Draw filled triangle           
+//                       x1,                  float               vertex 1 X coordinate
+//                       y1,                  float               vertex 1 Y coordinate
+//                       x2,                  float               vertex 2 X coordinate
+//                       y2,                  float               vertex 2 Y coordinate
+//                       x3,                  float               vertex 3 X coordinate
+//                       y3;                  float               vertex 3 Y coordinate
+//
+//			S:                                               Draw string
+//                       xLeft,               float               X coordinate 
+//                       yTop,                float               Y coordinate 
+//                       "textString",        string              string to draw
+//                       invert;              unsigned char       0=draw text normally; 1=draw text inverted
+//
+//			SR:                                               Draw string with rotated text
+//                       xLeft,               float               X coordinate
+//                       yTop,                float               Y coordinate 
+//                       "textString",        string              string to draw
+//                       angle;               float               rotation angle (radians)
+//
+//			FG:                                              Set foreground (text and line) color
+//                       packedABGR;          unsigned int        foreground color in packed Alpha-Blue-Green-Red bit order (8 bits for each component)
+//                                                                   alpha: bits 24-31 (most significant 8 bits)
+//                                                                   blue:  bits 16-23
+//                                                                   green: bits 8-15
+//                                                                   red:   bits 0-7 (least significant 8 bits)
+//
+//			BG:                                              Set background (text and line) color
+//                       packedABGR;          unsigned int        foreground color in packed Alpha-Blue-Green-Red bit order (8 bits for each component)
+//                                                                   alpha: bits 24-31 (most significant 8 bits)
+//                                                                   blue:  bits 16-23
+//                                                                   green: bits 8-15
+//                                                                   red:   bits 0-7 (least significant 8 bits)
+
+// *** "FalconSharedMemoryAreaDrawing" ***
+struct DrawingData
+{
+public:
+	unsigned int VersionNum;   // Version of the DrawingData shared memory area
+
+	unsigned int HUD_length;   // The length of the string in "HUD_commands", *without* termination, note that HUD_commands *does* have termination
+	char* HUD_commands;        // Data storage blob for the string
+	                           // Should be handled as char[HUD_length+1] by external apps, std::string is only used in BMS internally for storage purposes
+	unsigned int RWR_length;   // The length of the string in "RWR_commands", *without* termination, note that RWR_commands *does* have termination
+	char* RWR_commands;        // Data storage blob for the string
+	                           // Should be handled as char[RWR_length+1] by external apps, std::string is only used in BMS internally for storage purposes
+	unsigned int HMS_length;   // The length of the string in "HMS_commands", *without* termination, note that HMS_commands *does* have termination
+	char* HMS_commands;        // Data storage blob for the string
+	                           // Should be handled as char[HMS_length+1] by external apps, std::string is only used in BMS internally for storage purposes
+};
+
+
 extern OSBData cockpitOSBData;         // "FalconSharedOsbMemoryArea"
 extern FlightData cockpitFlightData;   // "FalconSharedMemoryArea"
 extern FlightData2 cockpitFlightData2; // "FalconSharedMemoryArea2"
 extern StringData cockpitStringData;   // "FalconSharedMemoryAreaString"
+extern DrawingData cockpitDrawingData; // "FalconSharedMemoryAreaDrawing"
 
 #endif // _FLIGHT_DATA_H

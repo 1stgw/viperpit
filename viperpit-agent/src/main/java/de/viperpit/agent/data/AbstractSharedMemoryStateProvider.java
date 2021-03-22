@@ -19,6 +19,9 @@ public abstract class AbstractSharedMemoryStateProvider {
 		"airAirSourceKnobNorm",
 		"airAirSourceKnobOff",
 		"airAirSourceKnobRam",
+		"antIffUhfSwitchLower",
+		"antIffUhfSwitchNorm",
+		"antIffUhfSwitchUpper",
 		"audio1Comm1KnobPowerOff",
 		"audio1Comm1KnobPowerOn",
 		"audio1Comm1ModeKnobGd",
@@ -27,8 +30,6 @@ public abstract class AbstractSharedMemoryStateProvider {
 		"audio1Comm2KnobPowerOn",
 		"audio1Comm2ModeKnobGd",
 		"audio1Comm2ModeKnobSql",
-		"audio2IlsKnobOff",
-		"audio2IlsKnobOn",
 		"auxCniKnobSwitchBackup",
 		"auxCniKnobSwitchUfc",
 		"auxM4CodeSwitchHold",
@@ -98,6 +99,7 @@ public abstract class AbstractSharedMemoryStateProvider {
 		"engEngContSwitchPri",
 		"engEngContSwitchSec",
 		"engJfsSwitchOff",
+		"engJfsSwitchStart1",
 		"engJfsSwitchStart2",
 		"epuEpuSwitchNorm",
 		"epuEpuSwitchOff",
@@ -134,8 +136,10 @@ public abstract class AbstractSharedMemoryStateProvider {
 		"gearLgHandleUp",
 		"gearLightsSwitchLanding",
 		"gearLightsSwitchOff",
-		"gearParkingBreakSwitchOff",
-		"gearParkingBreakSwitchOn",
+		"gearLightsSwitchTaxi",
+		"gearParkingBrakeSwitchAntiSkid",
+		"gearParkingBrakeSwitchOff",
+		"gearParkingBrakeSwitchOn",
 		"gearStoresConfigSwitchCatI",
 		"gearStoresConfigSwitchCatIii",
 		"hmcsHmscKnobOff",
@@ -161,6 +165,9 @@ public abstract class AbstractSharedMemoryStateProvider {
 		"hudVelocitySwitchCas",
 		"hudVelocitySwitchGndSpd",
 		"hudVelocitySwitchTas",
+		"iceEngineSwitchAuto",
+		"iceEngineSwitchOff",
+		"iceEngineSwitchOn",
 		"instrModeKnobIlsNav",
 		"instrModeKnobIlsTcn",
 		"instrModeKnobNav",
@@ -254,6 +261,12 @@ public abstract class AbstractSharedMemoryStateProvider {
 				return getAirAirSourceKnobOff(id, sharedMemoryData);
 			case "airAirSourceKnobRam":
 				return getAirAirSourceKnobRam(id, sharedMemoryData);
+			case "antIffUhfSwitchLower":
+				return getAntIffUhfSwitchLower(id, sharedMemoryData);
+			case "antIffUhfSwitchNorm":
+				return getAntIffUhfSwitchNorm(id, sharedMemoryData);
+			case "antIffUhfSwitchUpper":
+				return getAntIffUhfSwitchUpper(id, sharedMemoryData);
 			case "audio1Comm1KnobPowerOff":
 				return getAudio1Comm1KnobPowerOff(id, sharedMemoryData);
 			case "audio1Comm1KnobPowerOn":
@@ -270,10 +283,6 @@ public abstract class AbstractSharedMemoryStateProvider {
 				return getAudio1Comm2ModeKnobGd(id, sharedMemoryData);
 			case "audio1Comm2ModeKnobSql":
 				return getAudio1Comm2ModeKnobSql(id, sharedMemoryData);
-			case "audio2IlsKnobOff":
-				return getAudio2IlsKnobOff(id, sharedMemoryData);
-			case "audio2IlsKnobOn":
-				return getAudio2IlsKnobOn(id, sharedMemoryData);
 			case "auxCniKnobSwitchBackup":
 				return getAuxCniKnobSwitchBackup(id, sharedMemoryData);
 			case "auxCniKnobSwitchUfc":
@@ -412,6 +421,8 @@ public abstract class AbstractSharedMemoryStateProvider {
 				return getEngEngContSwitchSec(id, sharedMemoryData);
 			case "engJfsSwitchOff":
 				return getEngJfsSwitchOff(id, sharedMemoryData);
+			case "engJfsSwitchStart1":
+				return getEngJfsSwitchStart1(id, sharedMemoryData);
 			case "engJfsSwitchStart2":
 				return getEngJfsSwitchStart2(id, sharedMemoryData);
 			case "epuEpuSwitchNorm":
@@ -484,10 +495,14 @@ public abstract class AbstractSharedMemoryStateProvider {
 				return getGearLightsSwitchLanding(id, sharedMemoryData);
 			case "gearLightsSwitchOff":
 				return getGearLightsSwitchOff(id, sharedMemoryData);
-			case "gearParkingBreakSwitchOff":
-				return getGearParkingBreakSwitchOff(id, sharedMemoryData);
-			case "gearParkingBreakSwitchOn":
-				return getGearParkingBreakSwitchOn(id, sharedMemoryData);
+			case "gearLightsSwitchTaxi":
+				return getGearLightsSwitchTaxi(id, sharedMemoryData);
+			case "gearParkingBrakeSwitchAntiSkid":
+				return getGearParkingBrakeSwitchAntiSkid(id, sharedMemoryData);
+			case "gearParkingBrakeSwitchOff":
+				return getGearParkingBrakeSwitchOff(id, sharedMemoryData);
+			case "gearParkingBrakeSwitchOn":
+				return getGearParkingBrakeSwitchOn(id, sharedMemoryData);
 			case "gearStoresConfigSwitchCatI":
 				return getGearStoresConfigSwitchCatI(id, sharedMemoryData);
 			case "gearStoresConfigSwitchCatIii":
@@ -538,6 +553,12 @@ public abstract class AbstractSharedMemoryStateProvider {
 				return getHudVelocitySwitchGndSpd(id, sharedMemoryData);
 			case "hudVelocitySwitchTas":
 				return getHudVelocitySwitchTas(id, sharedMemoryData);
+			case "iceEngineSwitchAuto":
+				return getIceEngineSwitchAuto(id, sharedMemoryData);
+			case "iceEngineSwitchOff":
+				return getIceEngineSwitchOff(id, sharedMemoryData);
+			case "iceEngineSwitchOn":
+				return getIceEngineSwitchOn(id, sharedMemoryData);
 			case "instrModeKnobIlsNav":
 				return getInstrModeKnobIlsNav(id, sharedMemoryData);
 			case "instrModeKnobIlsTcn":
@@ -679,6 +700,18 @@ public abstract class AbstractSharedMemoryStateProvider {
 		return null;
 	}
 	
+	protected Object getAntIffUhfSwitchLower(String id, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getAntIffUhfSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getAntIffUhfSwitchUpper(String id, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
 	protected Object getAudio1Comm1KnobPowerOff(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
@@ -708,14 +741,6 @@ public abstract class AbstractSharedMemoryStateProvider {
 	}
 	
 	protected Object getAudio1Comm2ModeKnobSql(String id, SharedMemoryData sharedMemoryData) {
-		return null;
-	}
-	
-	protected Object getAudio2IlsKnobOff(String id, SharedMemoryData sharedMemoryData) {
-		return null;
-	}
-	
-	protected Object getAudio2IlsKnobOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
@@ -995,6 +1020,10 @@ public abstract class AbstractSharedMemoryStateProvider {
 		return null;
 	}
 	
+	protected Object getEngJfsSwitchStart1(String id, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
 	protected Object getEngJfsSwitchStart2(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
@@ -1139,11 +1168,19 @@ public abstract class AbstractSharedMemoryStateProvider {
 		return null;
 	}
 	
-	protected Object getGearParkingBreakSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getGearLightsSwitchTaxi(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearParkingBreakSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getGearParkingBrakeSwitchAntiSkid(String id, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getGearParkingBrakeSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getGearParkingBrakeSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
@@ -1244,6 +1281,18 @@ public abstract class AbstractSharedMemoryStateProvider {
 	}
 	
 	protected Object getHudVelocitySwitchTas(String id, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getIceEngineSwitchAuto(String id, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getIceEngineSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getIceEngineSwitchOn(String id, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	

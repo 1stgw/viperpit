@@ -1,23 +1,5 @@
 {
   "stateConfigurations" : [ {
-    "active" : false,
-    "callback" : "SimOverHeat",
-    "id" : "testFireOheatDetectButtonHold",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimOBOGSBit",
-    "id" : "testOxyQtySwitchHold",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimMalIndLights",
-    "id" : "testMalIndLtsButtonHold",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
     "active" : true,
     "callback" : "SimProbeHeatOn",
     "id" : "testProbeHeatSwitchOn",
@@ -35,18 +17,6 @@
     "id" : "testProbeHeatSwitchTest",
     "relatedStateConfigurations" : [ "testProbeHeatSwitchOn", "testProbeHeatSwitchOff" ],
     "stateful" : true
-  }, {
-    "active" : false,
-    "callback" : "SimEpuGenTest",
-    "id" : "testEpuGenSwitchHold",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimFlcsPowerTest",
-    "id" : "testFlcsPwrTestSwitchHold",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimDigitalBUPBackup",
@@ -97,30 +67,6 @@
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "SimFLCSReset",
-    "id" : "fltFlcsSwitchHold",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimFLTBIT",
-    "id" : "fltBitSwitchPush",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimTrimRollLeft",
-    "id" : "trimRollTrimWheelLWingDn",
-    "relatedStateConfigurations" : [ "trimRollTrimWheelRWingDn" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimTrimRollRight",
-    "id" : "trimRollTrimWheelRWingDn",
-    "relatedStateConfigurations" : [ "trimRollTrimWheelLWingDn" ],
-    "stateful" : false
-  }, {
-    "active" : false,
     "callback" : "SimTrimAPDISC",
     "id" : "trimTrimApDiscSwitchDisc",
     "relatedStateConfigurations" : [ "trimTrimApDiscSwitchNorm" ],
@@ -131,30 +77,6 @@
     "id" : "trimTrimApDiscSwitchNorm",
     "relatedStateConfigurations" : [ "trimTrimApDiscSwitchDisc" ],
     "stateful" : true
-  }, {
-    "active" : false,
-    "callback" : "SimTrimYawLeft",
-    "id" : "trimYawTrimKnobL",
-    "relatedStateConfigurations" : [ "trimYawTrimKnobR" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimTrimYawRight",
-    "id" : "trimYawTrimKnobR",
-    "relatedStateConfigurations" : [ "trimYawTrimKnobL" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimTrimNoseUp",
-    "id" : "trimPitchTrimWheelNoseUp",
-    "relatedStateConfigurations" : [ "trimPitchTrimWheelNoseDn" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimTrimNoseDown",
-    "id" : "trimPitchTrimWheelNoseDn",
-    "relatedStateConfigurations" : [ "trimPitchTrimWheelNoseUp" ],
-    "stateful" : false
   }, {
     "active" : true,
     "callback" : "SimMasterFuelOn",
@@ -289,54 +211,6 @@
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "SimCycleLeftAuxComDigit",
-    "id" : "auxChannelCycleUpLeftDigit",
-    "relatedStateConfigurations" : [ "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimDecLeftAuxComDigit",
-    "id" : "auxChannelCycleDownLeftDigit",
-    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimCycleCenterAuxComDigit",
-    "id" : "auxChannelCycleUpCenterDigit",
-    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimDecCenterAuxComDigit",
-    "id" : "auxChannelCycleDownCenterDig",
-    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimCycleRightAuxComDigit",
-    "id" : "auxChannelCycleUpRightDigit",
-    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleDownRightDigit", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimDecRightAuxComDigit",
-    "id" : "auxChannelCycleDownRightDigit",
-    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelToggleBandX", "auxChannelToggleBandY" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimXBandAuxComDigit",
-    "id" : "auxChannelToggleBandX",
-    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandY" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimYBandAuxComDigit",
-    "id" : "auxChannelToggleBandY",
-    "relatedStateConfigurations" : [ "auxChannelCycleUpLeftDigit", "auxChannelCycleDownLeftDigit", "auxChannelCycleUpCenterDigit", "auxChannelCycleDownCenterDig", "auxChannelCycleUpRightDigit", "auxChannelCycleDownRightDigit", "auxChannelToggleBandX" ],
-    "stateful" : false
-  }, {
-    "active" : false,
     "callback" : "SimTACANTR",
     "id" : "auxStationSelectorSwitchTR",
     "relatedStateConfigurations" : [ "auxStationSelectorSwitchAATr" ],
@@ -433,18 +307,6 @@
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "SimElecReset",
-    "id" : "elecCautionResetButtonPush",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimAVTRToggle",
-    "id" : "avtrAvtrSwitchToggleOnOff",
-    "relatedStateConfigurations" : [ "avtrAvtrSwitchOn", "avtrAvtrSwitchAuto", "avtrAvtrSwitchOff" ],
-    "stateful" : false
-  }, {
-    "active" : false,
     "callback" : "SimAVTRSwitchOn",
     "id" : "avtrAvtrSwitchOn",
     "relatedStateConfigurations" : [ "avtrAvtrSwitchToggleOnOff", "avtrAvtrSwitchAuto", "avtrAvtrSwitchOff" ],
@@ -474,16 +336,22 @@
     "relatedStateConfigurations" : [ "ecmOprSwitchOpr" ],
     "stateful" : true
   }, {
-    "active" : true,
-    "callback" : "SimJfsStart_Off",
-    "id" : "engJfsSwitchOff",
-    "relatedStateConfigurations" : [ "engJfsSwitchStart2" ],
+    "active" : false,
+    "callback" : "SimJfsStartUp",
+    "id" : "engJfsSwitchStart1",
+    "relatedStateConfigurations" : [ "engJfsSwitchOff", "engJfsSwitchStart2" ],
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "SimJfsStart_Start2",
+    "callback" : "SimJfsStartMid",
+    "id" : "engJfsSwitchOff",
+    "relatedStateConfigurations" : [ "engJfsSwitchStart1", "engJfsSwitchStart2" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimJfsStartDown",
     "id" : "engJfsSwitchStart2",
-    "relatedStateConfigurations" : [ "engJfsSwitchOff" ],
+    "relatedStateConfigurations" : [ "engJfsSwitchStart1", "engJfsSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
@@ -498,42 +366,6 @@
     "relatedStateConfigurations" : [ "engEngContSwitchPri" ],
     "stateful" : true
   }, {
-    "active" : false,
-    "callback" : "SimStepIntercomVolumeUp",
-    "id" : "audio2IntercomKnobVolumeIncr",
-    "relatedStateConfigurations" : [ "audio2IntercomKnobVolumeDecr" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimStepIntercomVolumeDown",
-    "id" : "audio2IntercomKnobVolumeDecr",
-    "relatedStateConfigurations" : [ "audio2IntercomKnobVolumeIncr" ],
-    "stateful" : false
-  }, {
-    "active" : true,
-    "callback" : "SimILSOn",
-    "id" : "audio2IlsKnobOn",
-    "relatedStateConfigurations" : [ "audio2IlsKnobOff" ],
-    "stateful" : true
-  }, {
-    "active" : false,
-    "callback" : "SimILSOff",
-    "id" : "audio2IlsKnobOff",
-    "relatedStateConfigurations" : [ "audio2IlsKnobOn" ],
-    "stateful" : true
-  }, {
-    "active" : false,
-    "callback" : "SimStepComm1VolumeUp",
-    "id" : "audio1Comm1KnobVolumeIncr",
-    "relatedStateConfigurations" : [ "audio1Comm1KnobVolumeDecr", "audio1Comm1KnobPowerOn", "audio1Comm1KnobPowerOff" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimStepComm1VolumeDown",
-    "id" : "audio1Comm1KnobVolumeDecr",
-    "relatedStateConfigurations" : [ "audio1Comm1KnobVolumeIncr", "audio1Comm1KnobPowerOn", "audio1Comm1KnobPowerOff" ],
-    "stateful" : false
-  }, {
     "active" : true,
     "callback" : "SimComm1PowerOn",
     "id" : "audio1Comm1KnobPowerOn",
@@ -546,18 +378,6 @@
     "relatedStateConfigurations" : [ "audio1Comm1KnobVolumeIncr", "audio1Comm1KnobVolumeDecr", "audio1Comm1KnobPowerOn" ],
     "stateful" : true
   }, {
-    "active" : false,
-    "callback" : "SimStepComm2VolumeUp",
-    "id" : "audio1Comm2KnobVolumeIncr",
-    "relatedStateConfigurations" : [ "audio1Comm2KnobVolumeDecr", "audio1Comm2KnobPowerOn", "audio1Comm2KnobPowerOff" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimStepComm2VolumeDown",
-    "id" : "audio1Comm2KnobVolumeDecr",
-    "relatedStateConfigurations" : [ "audio1Comm2KnobVolumeIncr", "audio1Comm2KnobPowerOn", "audio1Comm2KnobPowerOff" ],
-    "stateful" : false
-  }, {
     "active" : true,
     "callback" : "SimComm2PowerOn",
     "id" : "audio1Comm2KnobPowerOn",
@@ -569,18 +389,6 @@
     "id" : "audio1Comm2KnobPowerOff",
     "relatedStateConfigurations" : [ "audio1Comm2KnobVolumeIncr", "audio1Comm2KnobVolumeDecr", "audio1Comm2KnobPowerOn" ],
     "stateful" : true
-  }, {
-    "active" : false,
-    "callback" : "SimStepMissileVolumeUp",
-    "id" : "audio1MslKnobVolumeIncr",
-    "relatedStateConfigurations" : [ "audio1MslKnobVolumeDecr" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimStepMissileVolumeDown",
-    "id" : "audio1MslKnobVolumeDecr",
-    "relatedStateConfigurations" : [ "audio1MslKnobVolumeIncr" ],
-    "stateful" : false
   }, {
     "active" : true,
     "callback" : "SimAud1Com1Sql",
@@ -607,96 +415,6 @@
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "SimStepThreatVolumeUp",
-    "id" : "audio1ThreatKnobVolumeIncr",
-    "relatedStateConfigurations" : [ "audio1ThreatKnobVolumeDecr" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimStepThreatVolumeDown",
-    "id" : "audio1ThreatKnobVolumeDecr",
-    "relatedStateConfigurations" : [ "audio1ThreatKnobVolumeIncr" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimMPO",
-    "id" : "mpoManualPitchSwitchHold",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimCycleRadioChannel",
-    "id" : "uhfPresetChannelKnobCycleUp",
-    "relatedStateConfigurations" : [ "uhfPresetChannelKnobCycleDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimDecRadioChannel",
-    "id" : "uhfPresetChannelKnobCycleDown",
-    "relatedStateConfigurations" : [ "uhfPresetChannelKnobCycleUp" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimBupUhfFreq1Inc",
-    "id" : "uhfA32TRotaryXzzzzzStepUp",
-    "relatedStateConfigurations" : [ "uhfA32TRotaryXzzzzzStepDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimBupUhfFreq1Dec",
-    "id" : "uhfA32TRotaryXzzzzzStepDown",
-    "relatedStateConfigurations" : [ "uhfA32TRotaryXzzzzzStepUp" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimBupUhfFreq2Inc",
-    "id" : "uhfManualFrequencyZxzzzzCycleUp",
-    "relatedStateConfigurations" : [ "uhfManualFrequencyZxzzzzCycleDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimBupUhfFreq2Dec",
-    "id" : "uhfManualFrequencyZxzzzzCycleDown",
-    "relatedStateConfigurations" : [ "uhfManualFrequencyZxzzzzCycleUp" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimBupUhfFreq3Inc",
-    "id" : "uhfManualFrequencyZzxzzzCycleUp",
-    "relatedStateConfigurations" : [ "uhfManualFrequencyZzxzzzCycleDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimBupUhfFreq3Dec",
-    "id" : "uhfManualFrequencyZzxzzzCycleDown",
-    "relatedStateConfigurations" : [ "uhfManualFrequencyZzxzzzCycleUp" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimBupUhfFreq4Inc",
-    "id" : "uhfManualFrequencyZzzxzzCycleUp",
-    "relatedStateConfigurations" : [ "uhfManualFrequencyZzzxzzCycleDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimBupUhfFreq4Dec",
-    "id" : "uhfManualFrequencyZzzxzzCycleDown",
-    "relatedStateConfigurations" : [ "uhfManualFrequencyZzzxzzCycleUp" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimBupUhfFreq5Inc",
-    "id" : "uhfManualFrequencyZzzzxxCycleUp",
-    "relatedStateConfigurations" : [ "uhfManualFrequencyZzzzxxCycleDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimBupUhfFreq5Dec",
-    "id" : "uhfManualFrequencyZzzzxxCycleDown",
-    "relatedStateConfigurations" : [ "uhfManualFrequencyZzzzxxCycleUp" ],
-    "stateful" : false
-  }, {
-    "active" : false,
     "callback" : "SimBupUhfOff",
     "id" : "uhfFunctionKnobOff",
     "relatedStateConfigurations" : [ "uhfFunctionKnobMain", "uhfFunctionKnobBoth" ],
@@ -715,18 +433,6 @@
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "OTWBalanceIVCvsAIUp",
-    "id" : "uhfVolKnobAiVsIvcVolumeIncr",
-    "relatedStateConfigurations" : [ "uhfVolKnobAiVsIvcVolumeDecr" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWBalanceIVCvsAIDown",
-    "id" : "uhfVolKnobAiVsIvcVolumeDecr",
-    "relatedStateConfigurations" : [ "uhfVolKnobAiVsIvcVolumeIncr" ],
-    "stateful" : false
-  }, {
-    "active" : false,
     "callback" : "SimBupUhfManual",
     "id" : "uhfModeKnobMnl",
     "relatedStateConfigurations" : [ "uhfModeKnobPreset", "uhfModeKnobGrd" ],
@@ -743,78 +449,6 @@
     "id" : "uhfModeKnobGrd",
     "relatedStateConfigurations" : [ "uhfModeKnobMnl", "uhfModeKnobPreset" ],
     "stateful" : true
-  }, {
-    "active" : false,
-    "callback" : "SimSlapSwitch",
-    "id" : "leftWallSlapSwitchEcmPgrm5",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "AFCanopyOpen",
-    "id" : "leftWallCanopyOpen",
-    "relatedStateConfigurations" : [ "leftWallCanopyClose" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "AFCanopyClose",
-    "id" : "leftWallCanopyClose",
-    "relatedStateConfigurations" : [ "leftWallCanopyOpen" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimSeatOn",
-    "id" : "seatSafetyLeverArmed",
-    "relatedStateConfigurations" : [ "seatSafetyLeverLocked" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimSeatOff",
-    "id" : "seatSafetyLeverLocked",
-    "relatedStateConfigurations" : [ "seatSafetyLeverArmed" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimEject",
-    "id" : "seatEjectHandleHoldForEject",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "AFAlternateGear",
-    "id" : "altGearExtendGearHandlePush",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "AFAlternateGearReset",
-    "id" : "altGearResetButtonPush",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimRwrPowerOn",
-    "id" : "twaPowerButtonOn",
-    "relatedStateConfigurations" : [ "twaPowerButtonOff" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimRwrPowerOff",
-    "id" : "twaPowerButtonOff",
-    "relatedStateConfigurations" : [ "twaPowerButtonOn" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimHmsSymWheelUp",
-    "id" : "hmcsHmscKnobBrightnessIncr",
-    "relatedStateConfigurations" : [ "hmcsHmscKnobBrightnessDecr", "hmcsHmscKnobOn", "hmcsHmscKnobOff" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimHmsSymWheelDn",
-    "id" : "hmcsHmscKnobBrightnessDecr",
-    "relatedStateConfigurations" : [ "hmcsHmscKnobBrightnessIncr", "hmcsHmscKnobOn", "hmcsHmscKnobOff" ],
-    "stateful" : false
   }, {
     "active" : true,
     "callback" : "SimHmsOn",
@@ -984,12 +618,6 @@
     "relatedStateConfigurations" : [ "cmdsModeKnobOff", "cmdsModeKnobStby", "cmdsModeKnobMan", "cmdsModeKnobSemi", "cmdsModeKnobAuto" ],
     "stateful" : true
   }, {
-    "active" : false,
-    "callback" : "SimEmergencyJettison",
-    "id" : "gearEmerStoresJettisonButtonHold",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
     "active" : true,
     "callback" : "SimHookUp",
     "id" : "gearHookSwitchUp",
@@ -1014,16 +642,22 @@
     "relatedStateConfigurations" : [ "gearGndJettSwitchEnable" ],
     "stateful" : true
   }, {
-    "active" : false,
-    "callback" : "SimParkingBrakeOn",
-    "id" : "gearParkingBreakSwitchOn",
-    "relatedStateConfigurations" : [ "gearParkingBreakSwitchOff" ],
+    "active" : true,
+    "callback" : "SimParkingBrakeUp",
+    "id" : "gearParkingBrakeSwitchOn",
+    "relatedStateConfigurations" : [ "gearParkingBrakeSwitchAntiSkid", "gearParkingBrakeSwitchOff" ],
     "stateful" : true
   }, {
-    "active" : true,
-    "callback" : "SimParkingBrakeOff",
-    "id" : "gearParkingBreakSwitchOff",
-    "relatedStateConfigurations" : [ "gearParkingBreakSwitchOn" ],
+    "active" : false,
+    "callback" : "SimParkingBrakeMid",
+    "id" : "gearParkingBrakeSwitchAntiSkid",
+    "relatedStateConfigurations" : [ "gearParkingBrakeSwitchOn", "gearParkingBrakeSwitchOff" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimParkingBrakeDown",
+    "id" : "gearParkingBrakeSwitchOff",
+    "relatedStateConfigurations" : [ "gearParkingBrakeSwitchOn", "gearParkingBrakeSwitchAntiSkid" ],
     "stateful" : true
   }, {
     "active" : true,
@@ -1051,21 +685,21 @@
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "SimSilenceHorn",
-    "id" : "gearHornSilencerButtonPush",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimLandingLightOn",
+    "callback" : "SimLandingLightUp",
     "id" : "gearLightsSwitchLanding",
-    "relatedStateConfigurations" : [ "gearLightsSwitchOff" ],
+    "relatedStateConfigurations" : [ "gearLightsSwitchOff", "gearLightsSwitchTaxi" ],
     "stateful" : true
   }, {
-    "active" : true,
-    "callback" : "SimLandingLightOff",
+    "active" : false,
+    "callback" : "SimLandingLightMid",
     "id" : "gearLightsSwitchOff",
-    "relatedStateConfigurations" : [ "gearLightsSwitchLanding" ],
+    "relatedStateConfigurations" : [ "gearLightsSwitchLanding", "gearLightsSwitchTaxi" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimLandingLightDown",
+    "id" : "gearLightsSwitchTaxi",
+    "relatedStateConfigurations" : [ "gearLightsSwitchLanding", "gearLightsSwitchOff" ],
     "stateful" : true
   }, {
     "active" : true,
@@ -1117,12 +751,6 @@
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "SimToggleTFR",
-    "id" : "miscAdvModeToggleTfrOnOff",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
     "callback" : "SimLeftAPUp",
     "id" : "miscRollSwitchHdgSel",
     "relatedStateConfigurations" : [ "miscRollSwitchAttHold", "miscRollSwitchStrgSel" ],
@@ -1157,54 +785,6 @@
     "id" : "miscPitchSwitchAttHold",
     "relatedStateConfigurations" : [ "miscPitchSwitchAltHold", "miscPitchSwitchAPOff" ],
     "stateful" : true
-  }, {
-    "active" : false,
-    "callback" : "ExtinguishMasterCaution",
-    "id" : "eyeMasterCautionButtonPush",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimICPFAck",
-    "id" : "eyeFAckButtonPush",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimRWRHandoff",
-    "id" : "twpHandoffPush",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimRWRLaunch",
-    "id" : "twpMissileLaunchPush",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimRWRSysTest",
-    "id" : "twpSysTestPush",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimRWRSetTargetSep",
-    "id" : "twpTgtSepPush",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimRWRBrightnessUp",
-    "id" : "rwrBrightnessKnobIncrease",
-    "relatedStateConfigurations" : [ "rwrBrightnessKnobDecrease" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimRWRBrightnessDown",
-    "id" : "rwrBrightnessKnobDecrease",
-    "relatedStateConfigurations" : [ "rwrBrightnessKnobIncrease" ],
-    "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimHsiHeadingInc",
@@ -1531,42 +1111,6 @@
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "SimInstrumentLightCW",
-    "id" : "lightInstPnlKnobPrimaryStepUp",
-    "relatedStateConfigurations" : [ "lightInstPnlKnobPrimaryStepDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimInstrumentLightCCW",
-    "id" : "lightInstPnlKnobPrimaryStepDown",
-    "relatedStateConfigurations" : [ "lightInstPnlKnobPrimaryStepUp" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimDedBrightnessCW",
-    "id" : "lightDedKnobPrimaryStepUp",
-    "relatedStateConfigurations" : [ "lightDedKnobPrimaryStepDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimDedBrightnessCCW",
-    "id" : "lightDedKnobPrimaryStepDown",
-    "relatedStateConfigurations" : [ "lightDedKnobPrimaryStepUp" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimInteriorLightCW",
-    "id" : "lightConsolesKnobFloodStepUp",
-    "relatedStateConfigurations" : [ "lightConsolesKnobFloodStepDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimInteriorLightCCW",
-    "id" : "lightConsolesKnobFloodStepDown",
-    "relatedStateConfigurations" : [ "lightConsolesKnobFloodStepUp" ],
-    "stateful" : false
-  }, {
-    "active" : false,
     "callback" : "SimAirSourceOff",
     "id" : "airAirSourceKnobOff",
     "relatedStateConfigurations" : [ "airAirSourceKnobNorm", "airAirSourceKnobDump", "airAirSourceKnobRam" ],
@@ -1600,6 +1144,42 @@
     "callback" : "SimVMSOff",
     "id" : "zeroVmsSwitchInhibit",
     "relatedStateConfigurations" : [ "zeroVmsSwitchOn" ],
+    "stateful" : true
+  }, {
+    "active" : true,
+    "callback" : "SimAntiIceUp",
+    "id" : "iceEngineSwitchOn",
+    "relatedStateConfigurations" : [ "iceEngineSwitchAuto", "iceEngineSwitchOff" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimAntiIceMid",
+    "id" : "iceEngineSwitchAuto",
+    "relatedStateConfigurations" : [ "iceEngineSwitchOn", "iceEngineSwitchOff" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimAntiIceDown",
+    "id" : "iceEngineSwitchOff",
+    "relatedStateConfigurations" : [ "iceEngineSwitchOn", "iceEngineSwitchAuto" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimAntennaSelectUp",
+    "id" : "antIffUhfSwitchUpper",
+    "relatedStateConfigurations" : [ "antIffUhfSwitchNorm", "antIffUhfSwitchLower" ],
+    "stateful" : true
+  }, {
+    "active" : true,
+    "callback" : "SimAntennaSelectMid",
+    "id" : "antIffUhfSwitchNorm",
+    "relatedStateConfigurations" : [ "antIffUhfSwitchUpper", "antIffUhfSwitchLower" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimAntennaSelectDown",
+    "id" : "antIffUhfSwitchLower",
+    "relatedStateConfigurations" : [ "antIffUhfSwitchUpper", "antIffUhfSwitchNorm" ],
     "stateful" : true
   }, {
     "active" : false,
@@ -1697,221 +1277,5 @@
     "id" : "avionicsDlSwitchOff",
     "relatedStateConfigurations" : [ "avionicsDlSwitchOn" ],
     "stateful" : true
-  }, {
-    "active" : false,
-    "callback" : "SimOxySupplyOn",
-    "id" : "oxySetting2OnPilotBreathing",
-    "relatedStateConfigurations" : [ "oxySetting2OffPilotBreathing" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimOxySupplyOff",
-    "id" : "oxySetting2OffPilotBreathing",
-    "relatedStateConfigurations" : [ "oxySetting2OnPilotBreathing" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimNVGModeOn",
-    "id" : "ckpitNightvisionOn",
-    "relatedStateConfigurations" : [ "ckpitNightvisionOff" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimNVGModeOff",
-    "id" : "ckpitNightvisionOff",
-    "relatedStateConfigurations" : [ "ckpitNightvisionOn" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimSmokeOn",
-    "id" : "ckpitSmokeOn",
-    "relatedStateConfigurations" : [ "ckpitSmokeOff" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimSmokeOff",
-    "id" : "ckpitSmokeOff",
-    "relatedStateConfigurations" : [ "ckpitSmokeOn" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimWheelBrakes",
-    "id" : "ckpitWheelBrakesHold",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "TimeAccelerate",
-    "id" : "simTimeAccelerationToggle2x",
-    "relatedStateConfigurations" : [ "simTimeAccelerationToggle4x", "simTimeAccelerationStepUp", "simTimeAccelerationStepDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "TimeAccelerateMaxToggle",
-    "id" : "simTimeAccelerationToggle4x",
-    "relatedStateConfigurations" : [ "simTimeAccelerationToggle2x", "simTimeAccelerationStepUp", "simTimeAccelerationStepDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "TimeAccelerateInc",
-    "id" : "simTimeAccelerationStepUp",
-    "relatedStateConfigurations" : [ "simTimeAccelerationToggle2x", "simTimeAccelerationToggle4x", "simTimeAccelerationStepDown" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "TimeAccelerateDec",
-    "id" : "simTimeAccelerationStepDown",
-    "relatedStateConfigurations" : [ "simTimeAccelerationToggle2x", "simTimeAccelerationToggle4x", "simTimeAccelerationStepUp" ],
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimOpenChatBox",
-    "id" : "simChat",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "SimEndFlight",
-    "id" : "simToggleExitSimMenu",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWViewUp",
-    "id" : "viewgenRotateViewUp",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWViewDown",
-    "id" : "viewgenRotateViewDown",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWViewLeft",
-    "id" : "viewgenRotateViewLeft",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWViewRight",
-    "id" : "viewgenRotateViewRight",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWSelectF3PadlockMode",
-    "id" : "viewintPadlock",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWSelectHUDMode",
-    "id" : "viewintHudOnly",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWSelect2DCockpitMode",
-    "id" : "viewintSnap3dCockpit",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWSelect3DCockpitMode",
-    "id" : "viewintPan3dCockpit",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWGlanceForward",
-    "id" : "viewintGlanceForward",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWCheckSix",
-    "id" : "viewintGlanceBackward",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWSelectOrbitMode",
-    "id" : "viewextOrbitCamera",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWSelectSatelliteMode",
-    "id" : "viewextSatelliteCamera",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWSelectFlybyMode",
-    "id" : "viewextFlybyCamera",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWSelectChaseMode",
-    "id" : "viewextChaseCamera",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "RadioAWACSCommand",
-    "id" : "radioAwacsMenu",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "RadioWingCommand",
-    "id" : "radioWingmanMenu",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "RadioElementCommand",
-    "id" : "radioElementMenu",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "RadioFlightCommand",
-    "id" : "radioFlightMenu",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "RadioTowerCommand",
-    "id" : "radioAtcMenu",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "RadioTankerCommand",
-    "id" : "radioTankerMenu",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "RadioMessageSend",
-    "id" : "radioSendMessageTanker",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWRadioMenuStep",
-    "id" : "radioNextMenuTanker",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
-  }, {
-    "active" : false,
-    "callback" : "OTWRadioMenuStepBack",
-    "id" : "radioPreviousMenuTanker",
-    "relatedStateConfigurations" : null,
-    "stateful" : false
   } ]
 }
