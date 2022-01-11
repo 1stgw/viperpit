@@ -1,11 +1,11 @@
 plugins {
 	id 'java'
-	id 'org.xtext.xtend' version '2.0.8'
+	id 'org.xtext.xtend' version '3.0.0'
 	id 'io.spring.dependency-management'
 }
 
-sourceCompatibility = JavaVersion.VERSION_15
-targetCompatibility = JavaVersion.VERSION_15
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 dependencies {
 	implementation project(':viperpit-commons')
@@ -16,7 +16,7 @@ dependencies {
 	implementation 'com.fasterxml.jackson.core:jackson-core'
 	implementation 'com.fasterxml.jackson.core:jackson-annotations'
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
-	implementation 'org.eclipse.xtend:org.eclipse.xtend.lib:2.22.0'
+	implementation 'org.eclipse.xtend:org.eclipse.xtend.lib:2.25.0'
 }
 
 tasks.jar {
@@ -25,7 +25,7 @@ tasks.jar {
 	}
 }
 
-xtend{
+xtend {
 	generator {
 		javaSourceLevel = '11'
 	}
