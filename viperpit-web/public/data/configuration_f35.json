@@ -1995,6 +1995,24 @@
           "stateful" : false
         } ]
       } ]
+    }, {
+      "id" : "throttleQuadrantSystem",
+      "label" : "THROTTLE QUADRANT SYSTEM",
+      "controlGroupConfigurations" : [ {
+        "id" : "TQS: CUTOFF RELEASE - Idle Detent",
+        "label" : "Cutoff Release - Idle Detent",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "id" : "tqsCutoffReleaseIdleDetentToggle",
+          "callback" : "SimThrottleIdleDetent",
+          "label" : "Toggle",
+          "description" : "TQS: CUTOFF RELEASE - Idle Detent - Toggle",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      } ]
     } ]
   }, {
     "id" : "leftAuxConsole",
@@ -5828,6 +5846,15 @@
     "type" : "button",
     "stateful" : false
   }, {
+    "id" : "tqsCutoffReleaseIdleDetentToggle",
+    "callback" : "SimThrottleIdleDetent",
+    "label" : "Toggle",
+    "description" : "TQS: CUTOFF RELEASE - Idle Detent - Toggle",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
     "id" : "altGearExtendGearHandlePush",
     "callback" : "AFAlternateGear",
     "label" : "Push",
@@ -9578,6 +9605,24 @@
         "label" : "Hold For Eject",
         "description" : "SEAT: EJECT Handle - Hold For Eject",
         "style" : "handle",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    } ]
+  }, {
+    "id" : "throttleQuadrantSystem",
+    "label" : "THROTTLE QUADRANT SYSTEM",
+    "controlGroupConfigurations" : [ {
+      "id" : "TQS: CUTOFF RELEASE - Idle Detent",
+      "label" : "Cutoff Release - Idle Detent",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "id" : "tqsCutoffReleaseIdleDetentToggle",
+        "callback" : "SimThrottleIdleDetent",
+        "label" : "Toggle",
+        "description" : "TQS: CUTOFF RELEASE - Idle Detent - Toggle",
+        "style" : "button",
         "role" : "none",
         "type" : "button",
         "stateful" : false
