@@ -127,19 +127,19 @@ public class KeyFile {
 		}
 
 		public boolean hasKey() {
-			return (this.key != (-1));
+			return this.key != -1;
 		}
 
 		public boolean hasKeyCombinationModifiers() {
-			return (this.keyCombinationModifiers != 0);
+			return this.keyCombinationModifiers != 0;
 		}
 
 		public boolean hasKeyCombinations() {
-			return (this.keyCombinationKey != 0);
+			return this.keyCombinationKey != 0;
 		}
 
 		public boolean hasModifiers() {
-			return (this.modifiers != 0);
+			return this.modifiers != 0;
 		}
 
 		@Override

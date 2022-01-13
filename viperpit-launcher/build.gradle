@@ -35,6 +35,7 @@ task assembleJpackageDependencies(type: Copy) {
 }
 
 task runJpackage(type: Exec) {
+    dependsOn bootJar
 	dependsOn assembleJpackageLauncher
 	dependsOn assembleJpackageDependencies
 	def javaHome = System.properties['java.home']
@@ -55,7 +56,7 @@ task runJpackage(type: Exec) {
 				'--java-options', '-Djava.library.path=$ROOTDIR;$ROOTDIR/app;C:\\Windows\\System32',
 				'--icon', "$resourcesDirectory/icon.ico",
 				'--app-version', "$project.version",
-				'--main-class', "$project.mainClassName",
+				'--main-class', "org.springframework.boot.loader.JarLauncher",
 				'--main-jar', "$jar.archiveName",
 				'--win-console',
 				'--win-dir-chooser',

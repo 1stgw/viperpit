@@ -7,7 +7,6 @@
         <listEntry value="1"/>
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
-    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="de.viperpit.launcher.LauncherApplication"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="viperpit-launcher"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="viperpit-launcher"/>
