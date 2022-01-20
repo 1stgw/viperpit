@@ -4,11 +4,11 @@
     <v-btn-toggle v-model="selected" :class="orientation" dense>
       <v-btn
         v-for="controlConfiguration in controlGroupConfiguration.controlConfigurations"
-        :key="controlConfiguration.id"
-        :value="controlConfiguration.id"
+        :key="controlConfiguration.callback"
+        :value="controlConfiguration.callback"
         outlined
-        @touchstart="startStateChange(controlConfiguration.id)"
-        @touchend="endStateChange(controlConfiguration.id)"
+        @touchstart="startStateChange(controlConfiguration.callback)"
+        @touchend="endStateChange(controlConfiguration.callback)"
       >
         <button-content :control-configuration="controlConfiguration" />
       </v-btn>

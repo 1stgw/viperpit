@@ -16,7 +16,7 @@ class WebApplicationGenerator {
 		if (cockpitConfiguration !== null) {
 			val pathForStateProvider = new File('''«target»/de/viperpit/agent/data''')
 			pathForStateProvider.mkdirs
-			val statefulActions = cockpitConfiguration.controlConfigurations.filter[stateful].sortBy[id]
+			val statefulActions = cockpitConfiguration.controlConfigurations.filter[stateful].sortBy[callback]
 			write('''
 				package de.viperpit.agent.data;
 				
@@ -35,7 +35,7 @@ class WebApplicationGenerator {
 				public abstract class AbstractSharedMemoryStateProvider {
 				
 					private static final Collection<String> STATES = newArrayList(
-						«FOR action : statefulActions SEPARATOR "," + System.lineSeparator»"«action.id»"«ENDFOR»
+						«FOR action : statefulActions SEPARATOR "," + System.lineSeparator»"«action.callback»"«ENDFOR»
 					);
 				
 					@Autowired
@@ -59,11 +59,11 @@ class WebApplicationGenerator {
 						return states;
 					}
 				
-					protected Object getStateFromSharedMemory(String id, SharedMemoryData sharedMemoryData) {
-						switch (id) {
+					protected Object getStateFromSharedMemory(String callback, SharedMemoryData sharedMemoryData) {
+						switch (callback) {
 							«FOR action : statefulActions»
-								case "«action.id»":
-									return get«action.id.toFirstUpper»(id, sharedMemoryData);
+								case "«action.callback»":
+									return get«action.callback.toFirstUpper»(callback, sharedMemoryData);
 							«ENDFOR»
 							default:
 								return null;
@@ -71,7 +71,7 @@ class WebApplicationGenerator {
 					}
 				
 					«FOR action : statefulActions»
-						protected Object get«action.id.toFirstUpper»(String id, SharedMemoryData sharedMemoryData) {
+						protected Object get«action.callback.toFirstUpper»(String callback, SharedMemoryData sharedMemoryData) {
 							return null;
 						}
 						

@@ -9,8 +9,6 @@ public class StateConfigurationStore {
 
 	private transient Map<String, StateConfiguration> byCallback;
 
-	private transient Map<String, StateConfiguration> byId;
-
 	private Collection<StateConfiguration> stateConfigurations;
 
 	public StateConfigurationStore() {
@@ -26,14 +24,6 @@ public class StateConfigurationStore {
 					.collect(toMap(StateConfiguration::getCallback, stateConfiguration -> stateConfiguration));
 		}
 		return byCallback.get(callback);
-	}
-
-	public StateConfiguration getById(String id) {
-		if (byId == null) {
-			byId = stateConfigurations.stream()
-					.collect(toMap(StateConfiguration::getId, stateConfiguration -> stateConfiguration));
-		}
-		return byId.get(id);
 	}
 
 	public Collection<StateConfiguration> getStateConfigurations() {

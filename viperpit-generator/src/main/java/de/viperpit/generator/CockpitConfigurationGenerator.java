@@ -52,7 +52,6 @@ public class CockpitConfigurationGenerator {
 				.stream() //
 				.forEach(keyCodeLine -> {
 					String callback = keyCodeLine.getCallback();
-					var id = toId(keyCodeLine);
 					var groupAndLabel = toGroupAndLabel(keyCodeLine);
 					var group = groupAndLabel.first();
 					var label = groupAndLabel.second();
@@ -72,7 +71,6 @@ public class CockpitConfigurationGenerator {
 						type = "switch";
 					}
 					var controlConfiguration = new ControlConfiguration( //
-							id, //
 							callback, //
 							toLabel(keyCodeLine), //
 							keyCodeLine.getDescription(), //

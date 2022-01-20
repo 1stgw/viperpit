@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonPropertyOrder({ "id", "label", "consoleConfigurations", "controlConfigurations", "panelConfigurations" })
 public class CockpitConfiguration {
-	
+
 	private final String id;
-	
+
 	private final String label;
 
 	private final Collection<ConsoleConfiguration> consoleConfigurations;

@@ -1,7 +1,6 @@
 package de.viperpit.generator;
 
 import static de.viperpit.generator.KeyCodeLineNames.toGroupAndLabel;
-import static de.viperpit.generator.KeyCodeLineNames.toId;
 import static de.viperpit.generator.KeyCodeLineNames.toRelated;
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -30,7 +29,7 @@ public class RoleConfigurationsGenerator {
 			var label = groupAndLabel.second();
 			var relatedCallbacks = toRelated(keyCodeLine, groupAndLabel, keyCodeLines) //
 					.stream() //
-					.map(relatedKeyCodeLine -> toId(relatedKeyCodeLine)) //
+					.map(relatedKeyCodeLine -> relatedKeyCodeLine.getCallback()) //
 					.collect(Collectors.toList()); //
 			var style = "button";
 			if (label != null && label.equals("Push")) {

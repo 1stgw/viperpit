@@ -35,22 +35,22 @@ const actions = {
     const topic = "/app/cockpit/states/reset";
     Vue.prototype.$stomp.send(topic, JSON.stringify({}));
   },
-  startStateChange(context, id) {
+  startStateChange(context, callback) {
     const topic = "/app/cockpit/states/triggerStateChange";
     Vue.prototype.$stomp.send(
       topic,
       JSON.stringify({
-        id: id,
+        callback: callback,
         start: true
       })
     );
   },
-  endStateChange(context, id) {
+  endStateChange(context, callback) {
     const topic = "/app/cockpit/states/triggerStateChange";
     Vue.prototype.$stomp.send(
       topic,
       JSON.stringify({
-        id: id,
+        callback: callback,
         start: false
       })
     );
@@ -88,11 +88,11 @@ const getters = {
   getControlConfigurationWithActiveState: state => controlGroupConfiguration => {
     let actions = state.actions;
     return controlGroupConfiguration.controlConfigurations.find(controlConfiguration => {
-      let action = actions[controlConfiguration.id];
+      let action = actions[controlConfiguration.callback];
       if (!action) {
         return false;
       }
-      return actions[controlConfiguration.id].value === true;
+      return actions[controlConfiguration.callback].value === true;
     });
   },
   getPanel: state => (consoleId, panelId) => {
@@ -132,17 +132,17 @@ const mutations = {
     state.configuration = configuration;
   },
   STATES_UPDATE(state, result) {
-    for (let id in result.updatedStates) {
-      let value = result.updatedStates[id];
-      let action = state.actions[id];
+    for (let callback in result.updatedStates) {
+      let value = result.updatedStates[callback];
+      let action = state.actions[callback];
       if (action) {
         Vue.set(action, "value", value);
       } else {
         let object = {
-          id: id,
+          callback: callback,
           value: value
         };
-        Vue.set(state.actions, id, object);
+        Vue.set(state.actions, callback, object);
       }
     }
   }

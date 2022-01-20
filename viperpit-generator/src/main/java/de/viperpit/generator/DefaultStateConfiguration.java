@@ -6,16 +6,23 @@ import de.viperpit.commons.cockpit.StateType;
 
 public class DefaultStateConfiguration {
 
-	private final String id;
+	private final String callback;
 
 	private final StateType stateType;
 
 	private final Object defaultValue;
 
-	DefaultStateConfiguration(String id, StateType stateType, Object defaultValue) {
-		this.id = id;
+	private final boolean stateful;
+
+	DefaultStateConfiguration(String callback, StateType stateType, Object defaultValue) {
+		this(callback, stateType, defaultValue, true);
+	}
+
+	DefaultStateConfiguration(String callback, StateType stateType, Object defaultValue, boolean stateful) {
+		this.callback = callback;
 		this.stateType = stateType;
 		this.defaultValue = defaultValue;
+		this.stateful = stateful;
 	}
 
 	@Override
@@ -30,16 +37,15 @@ public class DefaultStateConfiguration {
 			return false;
 		}
 		DefaultStateConfiguration other = (DefaultStateConfiguration) obj;
-		return Objects.equals(defaultValue, other.defaultValue) && Objects.equals(id, other.id)
-				&& stateType == other.stateType;
+		return Objects.equals(callback, other.callback);
+	}
+
+	public String getCallback() {
+		return callback;
 	}
 
 	public Object getDefaultValue() {
 		return defaultValue;
-	}
-
-	public String getId() {
-		return id;
 	}
 
 	public StateType getStateType() {
@@ -48,18 +54,24 @@ public class DefaultStateConfiguration {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(defaultValue, id, stateType);
+		return Objects.hash(callback);
+	}
+
+	public boolean isStateful() {
+		return stateful;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("DefaultStateConfiguration [id=");
-		builder.append(id);
+		builder.append("DefaultStateConfiguration [callback=");
+		builder.append(callback);
 		builder.append(", stateType=");
 		builder.append(stateType);
 		builder.append(", defaultValue=");
 		builder.append(defaultValue);
+		builder.append(", stateful=");
+		builder.append(stateful);
 		builder.append("]");
 		return builder.toString();
 	}

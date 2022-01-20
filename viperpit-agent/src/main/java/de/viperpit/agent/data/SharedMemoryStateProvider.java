@@ -39,64 +39,6 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 		}
 	}
 
-	@Override
-	protected Object getEcmOprSwitchOff(String id, SharedMemoryData sharedMemoryData) {
-		return isBitSet(Degr, sharedMemoryData.getFlightData().lightBits2);
-	}
-
-	@Override
-	protected Object getEcmOprSwitchOpr(String id, SharedMemoryData sharedMemoryData) {
-		return isBitNotSet(Degr, sharedMemoryData.getFlightData().lightBits2);
-	}
-
-	@Override
-	protected Object getFuelAirRefuelSwitchClose(String id, SharedMemoryData sharedMemoryData) {
-		return isBitNotSet(RefuelRDY, sharedMemoryData.getFlightData().lightBits);
-	}
-
-	@Override
-	protected Object getFuelAirRefuelSwitchOpen(String id, SharedMemoryData sharedMemoryData) {
-		return isBitSet(RefuelRDY, sharedMemoryData.getFlightData().lightBits);
-	}
-
-	@Override
-	protected Object getGearLgHandleDn(String id, SharedMemoryData sharedMemoryData) {
-		if (isBitSet(NoseGearDown, sharedMemoryData.getFlightData().lightBits3)) {
-			return true;
-		}
-		if (isBitSet(LeftGearDown, sharedMemoryData.getFlightData().lightBits3)) {
-			return true;
-		}
-		if (isBitSet(RightGearDown, sharedMemoryData.getFlightData().lightBits3)) {
-			return true;
-		}
-		return false;
-	}
-
-	@Override
-	protected Object getGearLgHandleUp(String id, SharedMemoryData sharedMemoryData) {
-		if (isBitSet(NoseGearDown, sharedMemoryData.getFlightData().lightBits3)) {
-			return false;
-		}
-		if (isBitSet(LeftGearDown, sharedMemoryData.getFlightData().lightBits3)) {
-			return false;
-		}
-		if (isBitSet(RightGearDown, sharedMemoryData.getFlightData().lightBits3)) {
-			return false;
-		}
-		return true;
-	}
-
-	@Override
-	protected Object getGearParkingBrakeSwitchOff(String id, SharedMemoryData sharedMemoryData) {
-		return isBitNotSet(ParkBrakeOn, sharedMemoryData.getFlightData().lightBits3);
-	}
-
-	@Override
-	protected Object getGearParkingBrakeSwitchOn(String id, SharedMemoryData sharedMemoryData) {
-		return isBitSet(ParkBrakeOn, sharedMemoryData.getFlightData().lightBits3);
-	}
-
 	public File getKeyFileLocation() {
 		String[] strings = getSharedMemoryReader().readStrings();
 		int identifier = StringIdentifier.KeyFile;
@@ -112,6 +54,64 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 			return null;
 		}
 		return file;
+	}
+
+	@Override
+	protected Object getAFGearDown(String id, SharedMemoryData sharedMemoryData) {
+		if (isBitSet(NoseGearDown, sharedMemoryData.getFlightData().lightBits3)) {
+			return true;
+		}
+		if (isBitSet(LeftGearDown, sharedMemoryData.getFlightData().lightBits3)) {
+			return true;
+		}
+		if (isBitSet(RightGearDown, sharedMemoryData.getFlightData().lightBits3)) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	protected Object getAFGearUp(String id, SharedMemoryData sharedMemoryData) {
+		if (isBitSet(NoseGearDown, sharedMemoryData.getFlightData().lightBits3)) {
+			return false;
+		}
+		if (isBitSet(LeftGearDown, sharedMemoryData.getFlightData().lightBits3)) {
+			return false;
+		}
+		if (isBitSet(RightGearDown, sharedMemoryData.getFlightData().lightBits3)) {
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	protected Object getSimEcmPowerOff(String id, SharedMemoryData sharedMemoryData) {
+		return isBitSet(Degr, sharedMemoryData.getFlightData().lightBits2);
+	}
+
+	@Override
+	protected Object getSimEcmPowerOn(String id, SharedMemoryData sharedMemoryData) {
+		return isBitNotSet(Degr, sharedMemoryData.getFlightData().lightBits2);
+	}
+
+	@Override
+	protected Object getSimFuelDoorClose(String id, SharedMemoryData sharedMemoryData) {
+		return isBitNotSet(RefuelRDY, sharedMemoryData.getFlightData().lightBits);
+	}
+
+	@Override
+	protected Object getSimFuelDoorOpen(String id, SharedMemoryData sharedMemoryData) {
+		return isBitSet(RefuelRDY, sharedMemoryData.getFlightData().lightBits);
+	}
+
+	@Override
+	protected Object getSimParkingBrakeDown(String id, SharedMemoryData sharedMemoryData) {
+		return isBitNotSet(ParkBrakeOn, sharedMemoryData.getFlightData().lightBits3);
+	}
+
+	@Override
+	protected Object getSimParkingBrakeUp(String id, SharedMemoryData sharedMemoryData) {
+		return isBitSet(ParkBrakeOn, sharedMemoryData.getFlightData().lightBits3);
 	}
 
 	private boolean isBitNotSet(int bit, int value) {

@@ -49,9 +49,9 @@ public class StateProvider {
 		this.agent = new Agent(agentId);
 	}
 
-	public StateConfiguration getStateConfiguration(String id) {
+	public StateConfiguration getStateConfiguration(String callback) {
 		initialize();
-		return stateConfigurationStore.getById(id);
+		return stateConfigurationStore.getByCallback(callback);
 	}
 
 	private String getStateFileName(StateType stateType) {
@@ -80,22 +80,21 @@ public class StateProvider {
 		StateType stateType = sharedMemoryStateProvider.getCurrentStateType();
 		String location = getStateFileName(stateType);
 		if (location == null) {
+			LOGGER.error("No file found for type " + stateType);
 			return;
 		}
 		Resource resource = resourceLoader.getResource(location);
-		if (resource.exists()) {
-			try (InputStream inputStream = resource.getInputStream()) {
-				stateConfigurationStore = objectMapper.readValue(inputStream, StateConfigurationStore.class);
-				for (StateConfiguration stateConfiguration : stateConfigurationStore.getStateConfigurations()) {
-					if (stateConfiguration.isStateful()) {
-						states.put(stateConfiguration, stateConfiguration.isActive());
-					}
-				}
-			} catch (IOException exception) {
-				LOGGER.error("Error while loading: " + location, exception);
-			}
-		} else {
+		if (!resource.exists()) {
 			LOGGER.error("State file in " + location + " could not be loaded");
+			return;
+		}
+		try (InputStream inputStream = resource.getInputStream()) {
+			stateConfigurationStore = objectMapper.readValue(inputStream, StateConfigurationStore.class);
+			for (StateConfiguration stateConfiguration : stateConfigurationStore.getStateConfigurations()) {
+				states.put(stateConfiguration, stateConfiguration.isActive());
+			}
+		} catch (IOException exception) {
+			LOGGER.error("Error while loading: " + location, exception);
 		}
 	}
 
@@ -130,8 +129,8 @@ public class StateProvider {
 			boolean oldValue = ((Boolean) value).booleanValue();
 			boolean newValue = !oldValue;
 			statesToUpdate.put(stateConfiguration, newValue);
-			for (String idOfRelated : stateConfiguration.getRelatedStateConfigurations()) {
-				var relatedStateConfiguration = getStateConfiguration(idOfRelated);
+			for (String callbackOfRelated : stateConfiguration.getRelatedStateConfigurations()) {
+				var relatedStateConfiguration = getStateConfiguration(callbackOfRelated);
 				if (relatedStateConfiguration != null) {
 					statesToUpdate.put(relatedStateConfiguration, oldValue);
 				}
@@ -145,7 +144,7 @@ public class StateProvider {
 		statesToUpdate.forEach((stateConfiguration, value) -> {
 			if (stateConfiguration != null) {
 				put(stateConfiguration, value);
-				updatedStates.put(stateConfiguration.getId(), value);
+				updatedStates.put(stateConfiguration.getCallback(), value);
 			}
 		});
 		return new StateChangeEvent(agent, updatedStates);
@@ -155,8 +154,8 @@ public class StateProvider {
 		Map<StateConfiguration, Object> statesToUpdate = new HashMap<>();
 		Map<String, Object> statesFromSharedMemory = sharedMemoryStateProvider.getStates();
 		for (Entry<String, Object> entry : statesFromSharedMemory.entrySet()) {
-			String id = entry.getKey();
-			StateConfiguration stateConfiguration = getStateConfiguration(id);
+			String callback = entry.getKey();
+			StateConfiguration stateConfiguration = getStateConfiguration(callback);
 			if (stateConfiguration != null) {
 				Object newValue = entry.getValue();
 				Object oldValue = getValue(stateConfiguration);

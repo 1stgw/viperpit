@@ -1,20 +1,19 @@
 package de.viperpit.generator;
 
 import static com.google.common.base.Objects.equal;
+import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Sets.newHashSet;
 import static de.viperpit.commons.cockpit.StateType.AIR;
 import static de.viperpit.commons.cockpit.StateType.RAMP;
 import static de.viperpit.commons.cockpit.StateType.TAXI;
 import static de.viperpit.generator.JsonFileWriter.writeObject;
-import static de.viperpit.generator.KeyCodeLineNames.toId;
+import static java.util.Collections.emptyList;
 import static java.util.Collections.unmodifiableSet;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
-
-import com.google.common.base.Objects;
 
 import de.viperpit.agent.keys.KeyFile.KeyCodeLine;
 import de.viperpit.commons.cockpit.StateConfiguration;
@@ -110,29 +109,16 @@ public class DefaultStateConfigurationsGenerator {
 			Collection<KeyCodeLine> keyCodeLines, //
 			RoleConfigurations roleConfigurations) throws Exception {
 		var collection = new ArrayList<DefaultStateConfiguration>();
-		keyCodeLines.stream().filter(keyCodeLine -> {
+		keyCodeLines.stream().forEach(keyCodeLine -> {
+			boolean stateful = isStateful(keyCodeLine, roleConfigurations);
 			RoleConfiguration roleConfiguration = roleConfigurations.getRoleConfiguration(keyCodeLine.getCallback());
 			String role = roleConfiguration.getRole();
-			String style = roleConfiguration.getStyle();
-			if (equal(style, "switch")) {
-				return true;
-			}
-			if (equal(style, "knob")) {
-				if (!equal(role, "left") && !equal(role, "right") && !equal(role, "increase")
-						&& !equal(role, "decrease") && !equal(role, "up") && !equal(role, "down")) {
-					return true;
-				}
-			}
-			if (equal(style, "handle")) {
-				if (equal(role, "on") || equal(role, "off") || equal(role, "down") || equal(role, "up")) {
-					return true;
-				}
-			}
-			return false;
-		}).forEach(keyCodeLine -> {
-			String role = roleConfigurations.getRoleConfiguration(keyCodeLine.getCallback()).getRole();
 			String callback = keyCodeLine.getCallback();
-			if (STATES_ALWAYS_ON.contains(callback)) {
+			if (!stateful) {
+				collection.add(new DefaultStateConfiguration(callback, RAMP, false, stateful));
+				collection.add(new DefaultStateConfiguration(callback, TAXI, false, stateful));
+				collection.add(new DefaultStateConfiguration(callback, AIR, false, stateful));
+			} else if (STATES_ALWAYS_ON.contains(callback)) {
 				collection.add(new DefaultStateConfiguration(callback, RAMP, true));
 				collection.add(new DefaultStateConfiguration(callback, TAXI, true));
 				collection.add(new DefaultStateConfiguration(callback, AIR, true));
@@ -148,11 +134,11 @@ public class DefaultStateConfigurationsGenerator {
 				collection.add(new DefaultStateConfiguration(callback, RAMP, false));
 				collection.add(new DefaultStateConfiguration(callback, TAXI, true));
 				collection.add(new DefaultStateConfiguration(callback, AIR, true));
-			} else if (Objects.equal(role, "off")) {
+			} else if (equal(role, "off")) {
 				collection.add(new DefaultStateConfiguration(callback, RAMP, true));
 				collection.add(new DefaultStateConfiguration(callback, TAXI, false));
 				collection.add(new DefaultStateConfiguration(callback, AIR, false));
-			} else if (Objects.equal(role, "on")) {
+			} else if (equal(role, "on")) {
 				collection.add(new DefaultStateConfiguration(callback, RAMP, false));
 				collection.add(new DefaultStateConfiguration(callback, TAXI, true));
 				collection.add(new DefaultStateConfiguration(callback, AIR, true));
@@ -173,21 +159,27 @@ public class DefaultStateConfigurationsGenerator {
 				stateConfigurationsForRamp.add(toStateConfiguration( //
 						keyCodeLine, //
 						roleConfiguration, //
-						defaultValueForRamp));
+						defaultValueForRamp, //
+						defaultStateConfigurations.isStateful(keyCodeLine.getCallback()) //
+				));
 			}
 			var defaultValueForTaxi = defaultStateConfigurations.getDefaultValue(keyCodeLine.getCallback(), TAXI);
 			if (isValidDefaultValue(roleConfiguration, defaultValueForTaxi)) {
 				stateConfigurationsForTaxi.add(toStateConfiguration( //
 						keyCodeLine, //
 						roleConfiguration, //
-						defaultValueForTaxi));
+						defaultValueForTaxi, //
+						defaultStateConfigurations.isStateful(keyCodeLine.getCallback()) //
+				));
 			}
 			var defaultValueForAir = defaultStateConfigurations.getDefaultValue(keyCodeLine.getCallback(), AIR);
 			if (isValidDefaultValue(roleConfiguration, defaultValueForAir)) {
 				stateConfigurationsForAir.add(toStateConfiguration( //
 						keyCodeLine, //
 						roleConfiguration, //
-						defaultValueForAir));
+						defaultValueForAir, //
+						defaultStateConfigurations.isStateful(keyCodeLine.getCallback()) //
+				));
 			}
 		}
 		writeObject( //
@@ -202,15 +194,52 @@ public class DefaultStateConfigurationsGenerator {
 		return defaultStateConfigurations;
 	}
 
-	private StateConfiguration toStateConfiguration(KeyCodeLine keyCodeLine, RoleConfiguration roleConfiguration,
-			Object defaultValue) {
+	private boolean isStateful(KeyCodeLine keyCodeLine, RoleConfigurations roleConfigurations) {
+		RoleConfiguration roleConfiguration = roleConfigurations.getRoleConfiguration(keyCodeLine.getCallback());
+		String role = roleConfiguration.getRole();
+		String style = roleConfiguration.getStyle();
+		if (equal(style, "switch")) {
+			return true;
+		}
+		if (equal(style, "knob") //
+				&& (!equal(role, "left") //
+						&& !equal(role, "right") //
+						&& !equal(role, "increase") //
+						&& !equal(role, "decrease") //
+						&& !equal(role, "up") //
+						&& !equal(role, "down") //
+				)) {
+			return true;
+		}
+		if (equal(style, "handle") //
+				&& (equal(role, "on") //
+						|| equal(role, "off") //
+						|| equal(role, "down") //
+						|| equal(role, "up") //
+				)) {
+			return true;
+		}
+		return false;
+	}
+
+	private StateConfiguration toStateConfiguration( //
+			KeyCodeLine keyCodeLine, //
+			RoleConfiguration roleConfiguration, //
+			Object defaultValue, //
+			boolean stateful //
+	) {
 		StateConfiguration stateConfiguration = new StateConfiguration();
-		stateConfiguration.setId(toId(keyCodeLine));
 		stateConfiguration.setCallback(keyCodeLine.getCallback());
-		stateConfiguration.setRelatedStateConfigurations(roleConfiguration.getRelatedCallbacks());
+		Collection<String> relatedCallbacks;
+		if (roleConfiguration.getRelatedCallbacks() == null) {
+			relatedCallbacks = emptyList();
+		} else {
+			relatedCallbacks = newArrayList(roleConfiguration.getRelatedCallbacks());
+		}
+		stateConfiguration.setRelatedStateConfigurations(relatedCallbacks);
 		if (defaultValue instanceof Boolean) {
 			stateConfiguration.setActive((Boolean) defaultValue);
-			stateConfiguration.setStateful(true);
+			stateConfiguration.setStateful(stateful);
 		}
 		return stateConfiguration;
 	}

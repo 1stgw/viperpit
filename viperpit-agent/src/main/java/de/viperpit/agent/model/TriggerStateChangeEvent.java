@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class TriggerStateChangeEvent {
 
-	private String id;
+	private String callback;
 
 	private boolean start;
 
 	public TriggerStateChangeEvent() {
 	}
 
-	public TriggerStateChangeEvent(String id) {
-		this.id = id;
+	public TriggerStateChangeEvent(String callback) {
+		this.callback = callback;
 	}
 
 	@Override
@@ -27,24 +27,24 @@ public class TriggerStateChangeEvent {
 			return false;
 		}
 		TriggerStateChangeEvent other = (TriggerStateChangeEvent) obj;
-		return Objects.equals(id, other.id);
+		return Objects.equals(callback, other.callback);
 	}
 
-	public String getId() {
-		return id;
+	public String getCallback() {
+		return callback;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(callback);
 	}
 
 	public boolean isStart() {
 		return start;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setCallback(String callback) {
+		this.callback = callback;
 	}
 
 	public void setStart(boolean start) {
@@ -54,8 +54,8 @@ public class TriggerStateChangeEvent {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("TriggerStateChangeEvent [id=");
-		builder.append(id);
+		builder.append("TriggerStateChangeEvent [callback=");
+		builder.append(callback);
 		builder.append(", start=");
 		builder.append(start);
 		builder.append("]");

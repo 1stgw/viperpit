@@ -4,8 +4,6 @@ import java.util.Objects;
 
 public class ControlConfiguration {
 
-	private final String id;
-
 	private final String callback;
 
 	private final String label;
@@ -20,9 +18,8 @@ public class ControlConfiguration {
 
 	private final boolean stateful;
 
-	ControlConfiguration(String id, String callback, String label, String description, String style, String role,
-			String type, boolean stateful) {
-		this.id = id;
+	ControlConfiguration(String callback, String label, String description, String style, String role, String type,
+			boolean stateful) {
 		this.callback = callback;
 		this.label = label;
 		this.description = description;
@@ -45,9 +42,8 @@ public class ControlConfiguration {
 		}
 		ControlConfiguration other = (ControlConfiguration) obj;
 		return Objects.equals(callback, other.callback) && Objects.equals(description, other.description)
-				&& Objects.equals(id, other.id) && Objects.equals(label, other.label)
-				&& Objects.equals(role, other.role) && stateful == other.stateful && Objects.equals(style, other.style)
-				&& Objects.equals(type, other.type);
+				&& Objects.equals(label, other.label) && Objects.equals(role, other.role) && stateful == other.stateful
+				&& Objects.equals(style, other.style) && Objects.equals(type, other.type);
 	}
 
 	public String getCallback() {
@@ -56,10 +52,6 @@ public class ControlConfiguration {
 
 	public String getDescription() {
 		return description;
-	}
-
-	public String getId() {
-		return id;
 	}
 
 	public String getLabel() {
@@ -80,7 +72,7 @@ public class ControlConfiguration {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(callback, description, id, label, role, stateful, style, type);
+		return Objects.hash(callback, description, label, role, stateful, style, type);
 	}
 
 	public boolean isStateful() {
@@ -90,9 +82,7 @@ public class ControlConfiguration {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("ControlConfiguration [id=");
-		builder.append(id);
-		builder.append(", callback=");
+		builder.append("ControlConfiguration [callback=");
 		builder.append(callback);
 		builder.append(", label=");
 		builder.append(label);

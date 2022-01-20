@@ -66,15 +66,16 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 		if (triggerStateChangeEvent == null) {
 			return null;
 		}
-		StateConfiguration stateConfiguration = stateProvider.getStateConfiguration(triggerStateChangeEvent.getId());
+		String callback = triggerStateChangeEvent.getCallback();
+		StateConfiguration stateConfiguration = stateProvider.getStateConfiguration(callback);
 		if (stateConfiguration == null) {
 			return null;
 		}
 		if (triggerStateChangeEvent.isStart()) {
-			keyDispatcherService.keyDown(stateConfiguration.getCallback());
+			keyDispatcherService.keyDown(callback);
 			return null;
 		} else {
-			keyDispatcherService.keyUp(stateConfiguration.getCallback());
+			keyDispatcherService.keyUp(callback);
 			return stateProvider.toggleBooleanState(stateConfiguration);
 		}
 	}

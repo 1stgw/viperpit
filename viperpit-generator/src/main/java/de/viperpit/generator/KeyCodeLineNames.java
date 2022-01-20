@@ -8,16 +8,15 @@ import static com.google.common.base.Strings.commonPrefix;
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
+import static org.eclipse.xtext.xbase.lib.IterableExtensions.join;
+import static org.eclipse.xtext.xbase.lib.ListExtensions.map;
 import static org.eclipse.xtext.xbase.lib.StringExtensions.toFirstLower;
 import static org.eclipse.xtext.xbase.lib.StringExtensions.toFirstUpper;
 import static org.springframework.util.StringUtils.capitalize;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
-import org.eclipse.xtext.xbase.lib.Functions.Function1;
-import org.eclipse.xtext.xbase.lib.IterableExtensions;
-import org.eclipse.xtext.xbase.lib.ListExtensions;
+import java.util.List;
 
 import com.google.common.base.CharMatcher;
 
@@ -52,10 +51,6 @@ public class KeyCodeLineNames {
 		return new Pair<>(description, null);
 	}
 
-	public static String toId(KeyCodeLine keyCodeLine) {
-		return toId(keyCodeLine.getDescription());
-	}
-
 	public static String toId(String string) {
 		return toFirstLower(toClassName(string));
 	}
@@ -76,20 +71,14 @@ public class KeyCodeLineNames {
 
 	@SuppressWarnings("deprecation")
 	public static String toPathName(final String category) {
-		final ArrayList<String> tokens = new ArrayList<String>( //
+		List<String> tokens = new ArrayList<String>( //
 				on(whitespace()) //
 						.trimResults() //
 						.splitToList(category) //
 		);
-		final Function1<String, String> _function = new Function1<String, String>() {
-			public String apply(final String it) {
-				return it.toLowerCase();
-			}
-		};
-		String _join = IterableExtensions.join(ListExtensions.map(tokens, _function));
-		StringBuilder _builder = new StringBuilder();
-		_builder.append(_join);
-		return CharMatcher.javaLetterOrDigit().retainFrom(_builder.toString());
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(join(map(tokens, it -> it.toLowerCase())));
+		return CharMatcher.javaLetterOrDigit().retainFrom(stringBuilder.toString());
 	}
 
 	public static Collection<KeyCodeLine> toRelated(KeyCodeLine keyCodeLine, Pair<String, String> groupAndLabel,

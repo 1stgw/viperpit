@@ -15,219 +15,219 @@ import de.viperpit.agent.data.SharedMemoryReader.SharedMemoryData;
 public abstract class AbstractSharedMemoryStateProvider {
 
 	private static final Collection<String> STATES = newArrayList(
-		"airAirSourceKnobDump",
-		"airAirSourceKnobNorm",
-		"airAirSourceKnobOff",
-		"airAirSourceKnobRam",
-		"antIffUhfSwitchLower",
-		"antIffUhfSwitchNorm",
-		"antIffUhfSwitchUpper",
-		"audio1Comm1KnobPowerOff",
-		"audio1Comm1KnobPowerOn",
-		"audio1Comm1ModeKnobGd",
-		"audio1Comm1ModeKnobSql",
-		"audio1Comm2KnobPowerOff",
-		"audio1Comm2KnobPowerOn",
-		"audio1Comm2ModeKnobGd",
-		"audio1Comm2ModeKnobSql",
-		"auxCniKnobSwitchBackup",
-		"auxCniKnobSwitchUfc",
-		"auxM4CodeSwitchHold",
-		"auxM4CodeSwitchZero",
-		"auxMasterKnobEmer",
-		"auxMasterKnobLow",
-		"auxMasterKnobNorm",
-		"auxMasterKnobOff",
-		"auxMasterKnobStby",
-		"auxMonitorSwitchAudio",
-		"auxMonitorSwitchOut",
-		"auxReplySwitchA",
-		"auxReplySwitchB",
-		"auxReplySwitchOut",
-		"auxStationSelectorSwitchAATr",
-		"auxStationSelectorSwitchTR",
-		"avionicsDlSwitchOff",
-		"avionicsDlSwitchOn",
-		"avionicsFccSwitchOff",
-		"avionicsFccSwitchOn",
-		"avionicsGpsSwitchOff",
-		"avionicsGpsSwitchOn",
-		"avionicsInsKnobInFltAlign",
-		"avionicsInsKnobNav",
-		"avionicsInsKnobNorm",
-		"avionicsInsKnobOff",
-		"avionicsMfdSwitchOff",
-		"avionicsMfdSwitchOn",
-		"avionicsSmsSwitchOff",
-		"avionicsSmsSwitchOn",
-		"avionicsUfcSwitchOff",
-		"avionicsUfcSwitchOn",
-		"avtrAvtrSwitchAuto",
-		"avtrAvtrSwitchOff",
-		"avtrAvtrSwitchOn",
-		"cmdsChSwitchPowerOff",
-		"cmdsChSwitchPowerOn",
-		"cmdsFlSwitchPowerOff",
-		"cmdsFlSwitchPowerOn",
-		"cmdsJettSwitchOff",
-		"cmdsJettSwitchOn",
-		"cmdsJmrSwitchPowerOff",
-		"cmdsJmrSwitchPowerOn",
-		"cmdsModeKnobAuto",
-		"cmdsModeKnobByp",
-		"cmdsModeKnobMan",
-		"cmdsModeKnobOff",
-		"cmdsModeKnobSemi",
-		"cmdsModeKnobStby",
-		"cmdsMwsSwitchPowerOff",
-		"cmdsMwsSwitchPowerOn",
-		"cmdsO1SwitchPowerOff",
-		"cmdsO1SwitchPowerOn",
-		"cmdsO2SwitchPowerOff",
-		"cmdsO2SwitchPowerOn",
-		"cmdsPrgmKnob1",
-		"cmdsPrgmKnob2",
-		"cmdsPrgmKnob3",
-		"cmdsPrgmKnob4",
-		"cmdsRwrSwitchPowerOff",
-		"cmdsRwrSwitchPowerOn",
-		"ecmOprSwitchOff",
-		"ecmOprSwitchOpr",
-		"elecMainPwrSwitchBatt",
-		"elecMainPwrSwitchMain",
-		"elecMainPwrSwitchOff",
-		"engEngContSwitchPri",
-		"engEngContSwitchSec",
-		"engJfsSwitchOff",
-		"engJfsSwitchStart1",
-		"engJfsSwitchStart2",
-		"epuEpuSwitchNorm",
-		"epuEpuSwitchOff",
-		"epuEpuSwitchOn",
-		"extAntiCollisionSwitchOff",
-		"extAntiCollisionSwitchOn",
-		"extMasterSwitchNorm",
-		"extMasterSwitchOff",
-		"extPositionSwitchFlash",
-		"extPositionSwitchSteady",
-		"extWingTailSwitchBrt",
-		"extWingTailSwitchOff",
-		"fltAltFlapsSwitchExtend",
-		"fltAltFlapsSwitchNorm",
-		"fltDigitalSwitchBackup",
-		"fltDigitalSwitchOff",
-		"fltLeFlapsSwitchAuto",
-		"fltLeFlapsSwitchLock",
-		"fltManualTfFlyupSwitchDisable",
-		"fltManualTfFlyupSwitchEnable",
-		"fuelAirRefuelSwitchClose",
-		"fuelAirRefuelSwitchOpen",
-		"fuelEngFeedKnobAft",
-		"fuelEngFeedKnobFwd",
-		"fuelEngFeedKnobNorm",
-		"fuelEngFeedKnobOff",
-		"fuelMasterSwitchOff",
-		"fuelMasterSwitchOn",
-		"gearGndJettSwitchEnable",
-		"gearGndJettSwitchOff",
-		"gearHookSwitchDn",
-		"gearHookSwitchUp",
-		"gearLgHandleDn",
-		"gearLgHandleUp",
-		"gearLightsSwitchLanding",
-		"gearLightsSwitchOff",
-		"gearLightsSwitchTaxi",
-		"gearParkingBrakeSwitchAntiSkid",
-		"gearParkingBrakeSwitchOff",
-		"gearParkingBrakeSwitchOn",
-		"gearStoresConfigSwitchCatI",
-		"gearStoresConfigSwitchCatIii",
-		"hmcsHmscKnobOff",
-		"hmcsHmscKnobOn",
-		"hudAltitudeSwitchAuto",
-		"hudAltitudeSwitchBaro",
-		"hudAltitudeSwitchRadar",
-		"hudBrightnessSwitchAutoBrt",
-		"hudBrightnessSwitchDay",
-		"hudBrightnessSwitchNig",
-		"hudDedDataSwitchDed",
-		"hudDedDataSwitchOff",
-		"hudDedDataSwitchPfl",
-		"hudDeprRetSwitchOff",
-		"hudDeprRetSwitchPri",
-		"hudDeprRetSwitchStby",
-		"hudFpmSwitchAttFpm",
-		"hudFpmSwitchFpm",
-		"hudFpmSwitchOff",
-		"hudScalesSwitchOff",
-		"hudScalesSwitchVah",
-		"hudScalesSwitchVvVah",
-		"hudVelocitySwitchCas",
-		"hudVelocitySwitchGndSpd",
-		"hudVelocitySwitchTas",
-		"iceEngineSwitchAuto",
-		"iceEngineSwitchOff",
-		"iceEngineSwitchOn",
-		"instrModeKnobIlsNav",
-		"instrModeKnobIlsTcn",
-		"instrModeKnobNav",
-		"instrModeKnobTcn",
-		"mainAltimeterPressureKnobDecr1",
-		"mainAltimeterPressureKnobDecr5",
-		"mainAltimeterPressureKnobIncr1",
-		"mainAltimeterPressureKnobIncr5",
-		"mainHsiCrsKnobDecrease1",
-		"mainHsiCrsKnobDecrease5",
-		"mainHsiCrsKnobIncrease1",
-		"mainHsiCrsKnobIncrease5",
-		"mainHsiHdgKnobDecrease1",
-		"mainHsiHdgKnobDecrease5",
-		"mainHsiHdgKnobIncrease1",
-		"mainHsiHdgKnobIncrease5",
-		"miscLaserSwitchArm",
-		"miscLaserSwitchOff",
-		"miscMasterArmSwitchOff",
-		"miscMasterArmSwitchOn",
-		"miscMasterArmSwitchSim",
-		"miscPitchSwitchAPOff",
-		"miscPitchSwitchAltHold",
-		"miscPitchSwitchAttHold",
-		"miscRfSwitchNorm",
-		"miscRfSwitchQuiet",
-		"miscRfSwitchSilent",
-		"miscRollSwitchAttHold",
-		"miscRollSwitchHdgSel",
-		"miscRollSwitchStrgSel",
-		"qtyExtFuelTransSwitchNorm",
-		"qtyExtFuelTransSwitchWingFirst",
-		"qtyFuelQtySelKnobExtCtr",
-		"qtyFuelQtySelKnobExtWing",
-		"qtyFuelQtySelKnobIntWing",
-		"qtyFuelQtySelKnobNorm",
-		"qtyFuelQtySelKnobRsvr",
-		"qtyFuelQtySelKnobTest",
-		"snsrFcrSwitchOff",
-		"snsrFcrSwitchOn",
-		"snsrLeftHdptSwitchOff",
-		"snsrLeftHdptSwitchOn",
-		"snsrRdrAltSwitchOff",
-		"snsrRdrAltSwitchOn",
-		"snsrRdrAltSwitchStdby",
-		"snsrRightHdptSwitchOff",
-		"snsrRightHdptSwitchOn",
-		"testProbeHeatSwitchOff",
-		"testProbeHeatSwitchOn",
-		"testProbeHeatSwitchTest",
-		"trimTrimApDiscSwitchDisc",
-		"trimTrimApDiscSwitchNorm",
-		"uhfFunctionKnobBoth",
-		"uhfFunctionKnobMain",
-		"uhfFunctionKnobOff",
-		"uhfModeKnobGrd",
-		"uhfModeKnobMnl",
-		"uhfModeKnobPreset",
-		"zeroVmsSwitchInhibit",
-		"zeroVmsSwitchOn"
+		"AFGearDown",
+		"AFGearUp",
+		"SimAVTRSwitchAuto",
+		"SimAVTRSwitchOff",
+		"SimAVTRSwitchOn",
+		"SimAirSourceDump",
+		"SimAirSourceNorm",
+		"SimAirSourceOff",
+		"SimAirSourceRam",
+		"SimAltFlapsExtend",
+		"SimAltFlapsNorm",
+		"SimAltPressDec",
+		"SimAltPressDecBy1",
+		"SimAltPressInc",
+		"SimAltPressIncBy1",
+		"SimAntennaSelectDown",
+		"SimAntennaSelectMid",
+		"SimAntennaSelectUp",
+		"SimAntiCollOff",
+		"SimAntiCollOn",
+		"SimAntiIceDown",
+		"SimAntiIceMid",
+		"SimAntiIceUp",
+		"SimArmMasterArm",
+		"SimAud1Com1Gd",
+		"SimAud1Com1Sql",
+		"SimAud1Com2Gd",
+		"SimAud1Com2Sql",
+		"SimAuxComBackup",
+		"SimAuxComUFC",
+		"SimBupUhfBoth",
+		"SimBupUhfGuard",
+		"SimBupUhfMain",
+		"SimBupUhfManual",
+		"SimBupUhfOff",
+		"SimBupUhfPreset",
+		"SimCATI",
+		"SimCATIII",
+		"SimComm1PowerOff",
+		"SimComm1PowerOn",
+		"SimComm2PowerOff",
+		"SimComm2PowerOn",
+		"SimDLOff",
+		"SimDLOn",
+		"SimDigitalBUPBackup",
+		"SimDigitalBUPOff",
+		"SimEWSChaffOff",
+		"SimEWSChaffOn",
+		"SimEWSFlareOff",
+		"SimEWSFlareOn",
+		"SimEWSJammerOff",
+		"SimEWSJammerOn",
+		"SimEWSModeAuto",
+		"SimEWSModeByp",
+		"SimEWSModeMan",
+		"SimEWSModeOff",
+		"SimEWSModeSemi",
+		"SimEWSModeStby",
+		"SimEWSMwsOff",
+		"SimEWSMwsOn",
+		"SimEWSO1Off",
+		"SimEWSO1On",
+		"SimEWSO2Off",
+		"SimEWSO2On",
+		"SimEWSProgFour",
+		"SimEWSProgOne",
+		"SimEWSProgThree",
+		"SimEWSProgTwo",
+		"SimEWSRWROff",
+		"SimEWSRWROn",
+		"SimEcmPowerOff",
+		"SimEcmPowerOn",
+		"SimEngContPri",
+		"SimEngContSec",
+		"SimEpuAuto",
+		"SimEpuOff",
+		"SimEpuOn",
+		"SimEwsJettOff",
+		"SimEwsJettOn",
+		"SimExtlMasterNorm",
+		"SimExtlMasterOff",
+		"SimFCCOff",
+		"SimFCCOn",
+		"SimFCROff",
+		"SimFCROn",
+		"SimFuelDoorClose",
+		"SimFuelDoorOpen",
+		"SimFuelPumpAft",
+		"SimFuelPumpFwd",
+		"SimFuelPumpNorm",
+		"SimFuelPumpOff",
+		"SimFuelSwitchCenterExt",
+		"SimFuelSwitchNorm",
+		"SimFuelSwitchResv",
+		"SimFuelSwitchTest",
+		"SimFuelSwitchWingExt",
+		"SimFuelSwitchWingInt",
+		"SimFuelTransNorm",
+		"SimFuelTransWing",
+		"SimGPSOff",
+		"SimGPSOn",
+		"SimGndJettOff",
+		"SimGndJettOn",
+		"SimHSIIlsNav",
+		"SimHSIIlsTcn",
+		"SimHSINav",
+		"SimHSITcn",
+		"SimHUDAltAuto",
+		"SimHUDAltBaro",
+		"SimHUDAltRadar",
+		"SimHUDBrtAuto",
+		"SimHUDBrtDay",
+		"SimHUDBrtNight",
+		"SimHUDDEDDED",
+		"SimHUDDEDOff",
+		"SimHUDDEDPFL",
+		"SimHUDVelocityCAS",
+		"SimHUDVelocityGND",
+		"SimHUDVelocityTAS",
+		"SimHmsOff",
+		"SimHmsOn",
+		"SimHookDown",
+		"SimHookUp",
+		"SimHsiCourseDec",
+		"SimHsiCourseInc",
+		"SimHsiCrsDecBy1",
+		"SimHsiCrsIncBy1",
+		"SimHsiHdgDecBy1",
+		"SimHsiHdgIncBy1",
+		"SimHsiHeadingDec",
+		"SimHsiHeadingInc",
+		"SimIFFCodeSwitchHold",
+		"SimIFFCodeSwitchZero",
+		"SimIFFMasterEmerg",
+		"SimIFFMasterLow",
+		"SimIFFMasterNorm",
+		"SimIFFMasterOff",
+		"SimIFFMasterStby",
+		"SimIFFMode4MonitorAud",
+		"SimIFFMode4MonitorOff",
+		"SimIFFMode4ReplyAlpha",
+		"SimIFFMode4ReplyBravo",
+		"SimIFFMode4ReplyOff",
+		"SimINSInFlt",
+		"SimINSNav",
+		"SimINSNorm",
+		"SimINSOff",
+		"SimJfsStartDown",
+		"SimJfsStartMid",
+		"SimJfsStartUp",
+		"SimLEFAuto",
+		"SimLEFLock",
+		"SimLandingLightDown",
+		"SimLandingLightMid",
+		"SimLandingLightUp",
+		"SimLaserArmOff",
+		"SimLaserArmOn",
+		"SimLeftAPDown",
+		"SimLeftAPMid",
+		"SimLeftAPUp",
+		"SimLeftHptOff",
+		"SimLeftHptOn",
+		"SimLightsFlash",
+		"SimLightsSteady",
+		"SimMFDOff",
+		"SimMFDOn",
+		"SimMainPowerBatt",
+		"SimMainPowerMain",
+		"SimMainPowerOff",
+		"SimManualFlyupDisable",
+		"SimManualFlyupEnable",
+		"SimMasterFuelOff",
+		"SimMasterFuelOn",
+		"SimParkingBrakeDown",
+		"SimParkingBrakeMid",
+		"SimParkingBrakeUp",
+		"SimPitchLadderATTFPM",
+		"SimPitchLadderFPM",
+		"SimPitchLadderOff",
+		"SimProbeHeatOff",
+		"SimProbeHeatOn",
+		"SimProbeHeatTest",
+		"SimRALTOFF",
+		"SimRALTON",
+		"SimRALTSTDBY",
+		"SimRFNorm",
+		"SimRFQuiet",
+		"SimRFSilent",
+		"SimReticleOff",
+		"SimReticlePri",
+		"SimReticleStby",
+		"SimRightAPDown",
+		"SimRightAPMid",
+		"SimRightAPUp",
+		"SimRightHptOff",
+		"SimRightHptOn",
+		"SimSMSOff",
+		"SimSMSOn",
+		"SimSafeMasterArm",
+		"SimScalesOff",
+		"SimScalesVAH",
+		"SimScalesVVVAH",
+		"SimSimMasterArm",
+		"SimTACANAATR",
+		"SimTACANTR",
+		"SimTrimAPDISC",
+		"SimTrimAPNORM",
+		"SimUFCOff",
+		"SimUFCOn",
+		"SimVMSOff",
+		"SimVMSOn",
+		"SimWingLightBrt",
+		"SimWingLightOff"
 	);
 
 	@Autowired
@@ -251,1288 +251,1288 @@ public abstract class AbstractSharedMemoryStateProvider {
 		return states;
 	}
 
-	protected Object getStateFromSharedMemory(String id, SharedMemoryData sharedMemoryData) {
-		switch (id) {
-			case "airAirSourceKnobDump":
-				return getAirAirSourceKnobDump(id, sharedMemoryData);
-			case "airAirSourceKnobNorm":
-				return getAirAirSourceKnobNorm(id, sharedMemoryData);
-			case "airAirSourceKnobOff":
-				return getAirAirSourceKnobOff(id, sharedMemoryData);
-			case "airAirSourceKnobRam":
-				return getAirAirSourceKnobRam(id, sharedMemoryData);
-			case "antIffUhfSwitchLower":
-				return getAntIffUhfSwitchLower(id, sharedMemoryData);
-			case "antIffUhfSwitchNorm":
-				return getAntIffUhfSwitchNorm(id, sharedMemoryData);
-			case "antIffUhfSwitchUpper":
-				return getAntIffUhfSwitchUpper(id, sharedMemoryData);
-			case "audio1Comm1KnobPowerOff":
-				return getAudio1Comm1KnobPowerOff(id, sharedMemoryData);
-			case "audio1Comm1KnobPowerOn":
-				return getAudio1Comm1KnobPowerOn(id, sharedMemoryData);
-			case "audio1Comm1ModeKnobGd":
-				return getAudio1Comm1ModeKnobGd(id, sharedMemoryData);
-			case "audio1Comm1ModeKnobSql":
-				return getAudio1Comm1ModeKnobSql(id, sharedMemoryData);
-			case "audio1Comm2KnobPowerOff":
-				return getAudio1Comm2KnobPowerOff(id, sharedMemoryData);
-			case "audio1Comm2KnobPowerOn":
-				return getAudio1Comm2KnobPowerOn(id, sharedMemoryData);
-			case "audio1Comm2ModeKnobGd":
-				return getAudio1Comm2ModeKnobGd(id, sharedMemoryData);
-			case "audio1Comm2ModeKnobSql":
-				return getAudio1Comm2ModeKnobSql(id, sharedMemoryData);
-			case "auxCniKnobSwitchBackup":
-				return getAuxCniKnobSwitchBackup(id, sharedMemoryData);
-			case "auxCniKnobSwitchUfc":
-				return getAuxCniKnobSwitchUfc(id, sharedMemoryData);
-			case "auxM4CodeSwitchHold":
-				return getAuxM4CodeSwitchHold(id, sharedMemoryData);
-			case "auxM4CodeSwitchZero":
-				return getAuxM4CodeSwitchZero(id, sharedMemoryData);
-			case "auxMasterKnobEmer":
-				return getAuxMasterKnobEmer(id, sharedMemoryData);
-			case "auxMasterKnobLow":
-				return getAuxMasterKnobLow(id, sharedMemoryData);
-			case "auxMasterKnobNorm":
-				return getAuxMasterKnobNorm(id, sharedMemoryData);
-			case "auxMasterKnobOff":
-				return getAuxMasterKnobOff(id, sharedMemoryData);
-			case "auxMasterKnobStby":
-				return getAuxMasterKnobStby(id, sharedMemoryData);
-			case "auxMonitorSwitchAudio":
-				return getAuxMonitorSwitchAudio(id, sharedMemoryData);
-			case "auxMonitorSwitchOut":
-				return getAuxMonitorSwitchOut(id, sharedMemoryData);
-			case "auxReplySwitchA":
-				return getAuxReplySwitchA(id, sharedMemoryData);
-			case "auxReplySwitchB":
-				return getAuxReplySwitchB(id, sharedMemoryData);
-			case "auxReplySwitchOut":
-				return getAuxReplySwitchOut(id, sharedMemoryData);
-			case "auxStationSelectorSwitchAATr":
-				return getAuxStationSelectorSwitchAATr(id, sharedMemoryData);
-			case "auxStationSelectorSwitchTR":
-				return getAuxStationSelectorSwitchTR(id, sharedMemoryData);
-			case "avionicsDlSwitchOff":
-				return getAvionicsDlSwitchOff(id, sharedMemoryData);
-			case "avionicsDlSwitchOn":
-				return getAvionicsDlSwitchOn(id, sharedMemoryData);
-			case "avionicsFccSwitchOff":
-				return getAvionicsFccSwitchOff(id, sharedMemoryData);
-			case "avionicsFccSwitchOn":
-				return getAvionicsFccSwitchOn(id, sharedMemoryData);
-			case "avionicsGpsSwitchOff":
-				return getAvionicsGpsSwitchOff(id, sharedMemoryData);
-			case "avionicsGpsSwitchOn":
-				return getAvionicsGpsSwitchOn(id, sharedMemoryData);
-			case "avionicsInsKnobInFltAlign":
-				return getAvionicsInsKnobInFltAlign(id, sharedMemoryData);
-			case "avionicsInsKnobNav":
-				return getAvionicsInsKnobNav(id, sharedMemoryData);
-			case "avionicsInsKnobNorm":
-				return getAvionicsInsKnobNorm(id, sharedMemoryData);
-			case "avionicsInsKnobOff":
-				return getAvionicsInsKnobOff(id, sharedMemoryData);
-			case "avionicsMfdSwitchOff":
-				return getAvionicsMfdSwitchOff(id, sharedMemoryData);
-			case "avionicsMfdSwitchOn":
-				return getAvionicsMfdSwitchOn(id, sharedMemoryData);
-			case "avionicsSmsSwitchOff":
-				return getAvionicsSmsSwitchOff(id, sharedMemoryData);
-			case "avionicsSmsSwitchOn":
-				return getAvionicsSmsSwitchOn(id, sharedMemoryData);
-			case "avionicsUfcSwitchOff":
-				return getAvionicsUfcSwitchOff(id, sharedMemoryData);
-			case "avionicsUfcSwitchOn":
-				return getAvionicsUfcSwitchOn(id, sharedMemoryData);
-			case "avtrAvtrSwitchAuto":
-				return getAvtrAvtrSwitchAuto(id, sharedMemoryData);
-			case "avtrAvtrSwitchOff":
-				return getAvtrAvtrSwitchOff(id, sharedMemoryData);
-			case "avtrAvtrSwitchOn":
-				return getAvtrAvtrSwitchOn(id, sharedMemoryData);
-			case "cmdsChSwitchPowerOff":
-				return getCmdsChSwitchPowerOff(id, sharedMemoryData);
-			case "cmdsChSwitchPowerOn":
-				return getCmdsChSwitchPowerOn(id, sharedMemoryData);
-			case "cmdsFlSwitchPowerOff":
-				return getCmdsFlSwitchPowerOff(id, sharedMemoryData);
-			case "cmdsFlSwitchPowerOn":
-				return getCmdsFlSwitchPowerOn(id, sharedMemoryData);
-			case "cmdsJettSwitchOff":
-				return getCmdsJettSwitchOff(id, sharedMemoryData);
-			case "cmdsJettSwitchOn":
-				return getCmdsJettSwitchOn(id, sharedMemoryData);
-			case "cmdsJmrSwitchPowerOff":
-				return getCmdsJmrSwitchPowerOff(id, sharedMemoryData);
-			case "cmdsJmrSwitchPowerOn":
-				return getCmdsJmrSwitchPowerOn(id, sharedMemoryData);
-			case "cmdsModeKnobAuto":
-				return getCmdsModeKnobAuto(id, sharedMemoryData);
-			case "cmdsModeKnobByp":
-				return getCmdsModeKnobByp(id, sharedMemoryData);
-			case "cmdsModeKnobMan":
-				return getCmdsModeKnobMan(id, sharedMemoryData);
-			case "cmdsModeKnobOff":
-				return getCmdsModeKnobOff(id, sharedMemoryData);
-			case "cmdsModeKnobSemi":
-				return getCmdsModeKnobSemi(id, sharedMemoryData);
-			case "cmdsModeKnobStby":
-				return getCmdsModeKnobStby(id, sharedMemoryData);
-			case "cmdsMwsSwitchPowerOff":
-				return getCmdsMwsSwitchPowerOff(id, sharedMemoryData);
-			case "cmdsMwsSwitchPowerOn":
-				return getCmdsMwsSwitchPowerOn(id, sharedMemoryData);
-			case "cmdsO1SwitchPowerOff":
-				return getCmdsO1SwitchPowerOff(id, sharedMemoryData);
-			case "cmdsO1SwitchPowerOn":
-				return getCmdsO1SwitchPowerOn(id, sharedMemoryData);
-			case "cmdsO2SwitchPowerOff":
-				return getCmdsO2SwitchPowerOff(id, sharedMemoryData);
-			case "cmdsO2SwitchPowerOn":
-				return getCmdsO2SwitchPowerOn(id, sharedMemoryData);
-			case "cmdsPrgmKnob1":
-				return getCmdsPrgmKnob1(id, sharedMemoryData);
-			case "cmdsPrgmKnob2":
-				return getCmdsPrgmKnob2(id, sharedMemoryData);
-			case "cmdsPrgmKnob3":
-				return getCmdsPrgmKnob3(id, sharedMemoryData);
-			case "cmdsPrgmKnob4":
-				return getCmdsPrgmKnob4(id, sharedMemoryData);
-			case "cmdsRwrSwitchPowerOff":
-				return getCmdsRwrSwitchPowerOff(id, sharedMemoryData);
-			case "cmdsRwrSwitchPowerOn":
-				return getCmdsRwrSwitchPowerOn(id, sharedMemoryData);
-			case "ecmOprSwitchOff":
-				return getEcmOprSwitchOff(id, sharedMemoryData);
-			case "ecmOprSwitchOpr":
-				return getEcmOprSwitchOpr(id, sharedMemoryData);
-			case "elecMainPwrSwitchBatt":
-				return getElecMainPwrSwitchBatt(id, sharedMemoryData);
-			case "elecMainPwrSwitchMain":
-				return getElecMainPwrSwitchMain(id, sharedMemoryData);
-			case "elecMainPwrSwitchOff":
-				return getElecMainPwrSwitchOff(id, sharedMemoryData);
-			case "engEngContSwitchPri":
-				return getEngEngContSwitchPri(id, sharedMemoryData);
-			case "engEngContSwitchSec":
-				return getEngEngContSwitchSec(id, sharedMemoryData);
-			case "engJfsSwitchOff":
-				return getEngJfsSwitchOff(id, sharedMemoryData);
-			case "engJfsSwitchStart1":
-				return getEngJfsSwitchStart1(id, sharedMemoryData);
-			case "engJfsSwitchStart2":
-				return getEngJfsSwitchStart2(id, sharedMemoryData);
-			case "epuEpuSwitchNorm":
-				return getEpuEpuSwitchNorm(id, sharedMemoryData);
-			case "epuEpuSwitchOff":
-				return getEpuEpuSwitchOff(id, sharedMemoryData);
-			case "epuEpuSwitchOn":
-				return getEpuEpuSwitchOn(id, sharedMemoryData);
-			case "extAntiCollisionSwitchOff":
-				return getExtAntiCollisionSwitchOff(id, sharedMemoryData);
-			case "extAntiCollisionSwitchOn":
-				return getExtAntiCollisionSwitchOn(id, sharedMemoryData);
-			case "extMasterSwitchNorm":
-				return getExtMasterSwitchNorm(id, sharedMemoryData);
-			case "extMasterSwitchOff":
-				return getExtMasterSwitchOff(id, sharedMemoryData);
-			case "extPositionSwitchFlash":
-				return getExtPositionSwitchFlash(id, sharedMemoryData);
-			case "extPositionSwitchSteady":
-				return getExtPositionSwitchSteady(id, sharedMemoryData);
-			case "extWingTailSwitchBrt":
-				return getExtWingTailSwitchBrt(id, sharedMemoryData);
-			case "extWingTailSwitchOff":
-				return getExtWingTailSwitchOff(id, sharedMemoryData);
-			case "fltAltFlapsSwitchExtend":
-				return getFltAltFlapsSwitchExtend(id, sharedMemoryData);
-			case "fltAltFlapsSwitchNorm":
-				return getFltAltFlapsSwitchNorm(id, sharedMemoryData);
-			case "fltDigitalSwitchBackup":
-				return getFltDigitalSwitchBackup(id, sharedMemoryData);
-			case "fltDigitalSwitchOff":
-				return getFltDigitalSwitchOff(id, sharedMemoryData);
-			case "fltLeFlapsSwitchAuto":
-				return getFltLeFlapsSwitchAuto(id, sharedMemoryData);
-			case "fltLeFlapsSwitchLock":
-				return getFltLeFlapsSwitchLock(id, sharedMemoryData);
-			case "fltManualTfFlyupSwitchDisable":
-				return getFltManualTfFlyupSwitchDisable(id, sharedMemoryData);
-			case "fltManualTfFlyupSwitchEnable":
-				return getFltManualTfFlyupSwitchEnable(id, sharedMemoryData);
-			case "fuelAirRefuelSwitchClose":
-				return getFuelAirRefuelSwitchClose(id, sharedMemoryData);
-			case "fuelAirRefuelSwitchOpen":
-				return getFuelAirRefuelSwitchOpen(id, sharedMemoryData);
-			case "fuelEngFeedKnobAft":
-				return getFuelEngFeedKnobAft(id, sharedMemoryData);
-			case "fuelEngFeedKnobFwd":
-				return getFuelEngFeedKnobFwd(id, sharedMemoryData);
-			case "fuelEngFeedKnobNorm":
-				return getFuelEngFeedKnobNorm(id, sharedMemoryData);
-			case "fuelEngFeedKnobOff":
-				return getFuelEngFeedKnobOff(id, sharedMemoryData);
-			case "fuelMasterSwitchOff":
-				return getFuelMasterSwitchOff(id, sharedMemoryData);
-			case "fuelMasterSwitchOn":
-				return getFuelMasterSwitchOn(id, sharedMemoryData);
-			case "gearGndJettSwitchEnable":
-				return getGearGndJettSwitchEnable(id, sharedMemoryData);
-			case "gearGndJettSwitchOff":
-				return getGearGndJettSwitchOff(id, sharedMemoryData);
-			case "gearHookSwitchDn":
-				return getGearHookSwitchDn(id, sharedMemoryData);
-			case "gearHookSwitchUp":
-				return getGearHookSwitchUp(id, sharedMemoryData);
-			case "gearLgHandleDn":
-				return getGearLgHandleDn(id, sharedMemoryData);
-			case "gearLgHandleUp":
-				return getGearLgHandleUp(id, sharedMemoryData);
-			case "gearLightsSwitchLanding":
-				return getGearLightsSwitchLanding(id, sharedMemoryData);
-			case "gearLightsSwitchOff":
-				return getGearLightsSwitchOff(id, sharedMemoryData);
-			case "gearLightsSwitchTaxi":
-				return getGearLightsSwitchTaxi(id, sharedMemoryData);
-			case "gearParkingBrakeSwitchAntiSkid":
-				return getGearParkingBrakeSwitchAntiSkid(id, sharedMemoryData);
-			case "gearParkingBrakeSwitchOff":
-				return getGearParkingBrakeSwitchOff(id, sharedMemoryData);
-			case "gearParkingBrakeSwitchOn":
-				return getGearParkingBrakeSwitchOn(id, sharedMemoryData);
-			case "gearStoresConfigSwitchCatI":
-				return getGearStoresConfigSwitchCatI(id, sharedMemoryData);
-			case "gearStoresConfigSwitchCatIii":
-				return getGearStoresConfigSwitchCatIii(id, sharedMemoryData);
-			case "hmcsHmscKnobOff":
-				return getHmcsHmscKnobOff(id, sharedMemoryData);
-			case "hmcsHmscKnobOn":
-				return getHmcsHmscKnobOn(id, sharedMemoryData);
-			case "hudAltitudeSwitchAuto":
-				return getHudAltitudeSwitchAuto(id, sharedMemoryData);
-			case "hudAltitudeSwitchBaro":
-				return getHudAltitudeSwitchBaro(id, sharedMemoryData);
-			case "hudAltitudeSwitchRadar":
-				return getHudAltitudeSwitchRadar(id, sharedMemoryData);
-			case "hudBrightnessSwitchAutoBrt":
-				return getHudBrightnessSwitchAutoBrt(id, sharedMemoryData);
-			case "hudBrightnessSwitchDay":
-				return getHudBrightnessSwitchDay(id, sharedMemoryData);
-			case "hudBrightnessSwitchNig":
-				return getHudBrightnessSwitchNig(id, sharedMemoryData);
-			case "hudDedDataSwitchDed":
-				return getHudDedDataSwitchDed(id, sharedMemoryData);
-			case "hudDedDataSwitchOff":
-				return getHudDedDataSwitchOff(id, sharedMemoryData);
-			case "hudDedDataSwitchPfl":
-				return getHudDedDataSwitchPfl(id, sharedMemoryData);
-			case "hudDeprRetSwitchOff":
-				return getHudDeprRetSwitchOff(id, sharedMemoryData);
-			case "hudDeprRetSwitchPri":
-				return getHudDeprRetSwitchPri(id, sharedMemoryData);
-			case "hudDeprRetSwitchStby":
-				return getHudDeprRetSwitchStby(id, sharedMemoryData);
-			case "hudFpmSwitchAttFpm":
-				return getHudFpmSwitchAttFpm(id, sharedMemoryData);
-			case "hudFpmSwitchFpm":
-				return getHudFpmSwitchFpm(id, sharedMemoryData);
-			case "hudFpmSwitchOff":
-				return getHudFpmSwitchOff(id, sharedMemoryData);
-			case "hudScalesSwitchOff":
-				return getHudScalesSwitchOff(id, sharedMemoryData);
-			case "hudScalesSwitchVah":
-				return getHudScalesSwitchVah(id, sharedMemoryData);
-			case "hudScalesSwitchVvVah":
-				return getHudScalesSwitchVvVah(id, sharedMemoryData);
-			case "hudVelocitySwitchCas":
-				return getHudVelocitySwitchCas(id, sharedMemoryData);
-			case "hudVelocitySwitchGndSpd":
-				return getHudVelocitySwitchGndSpd(id, sharedMemoryData);
-			case "hudVelocitySwitchTas":
-				return getHudVelocitySwitchTas(id, sharedMemoryData);
-			case "iceEngineSwitchAuto":
-				return getIceEngineSwitchAuto(id, sharedMemoryData);
-			case "iceEngineSwitchOff":
-				return getIceEngineSwitchOff(id, sharedMemoryData);
-			case "iceEngineSwitchOn":
-				return getIceEngineSwitchOn(id, sharedMemoryData);
-			case "instrModeKnobIlsNav":
-				return getInstrModeKnobIlsNav(id, sharedMemoryData);
-			case "instrModeKnobIlsTcn":
-				return getInstrModeKnobIlsTcn(id, sharedMemoryData);
-			case "instrModeKnobNav":
-				return getInstrModeKnobNav(id, sharedMemoryData);
-			case "instrModeKnobTcn":
-				return getInstrModeKnobTcn(id, sharedMemoryData);
-			case "mainAltimeterPressureKnobDecr1":
-				return getMainAltimeterPressureKnobDecr1(id, sharedMemoryData);
-			case "mainAltimeterPressureKnobDecr5":
-				return getMainAltimeterPressureKnobDecr5(id, sharedMemoryData);
-			case "mainAltimeterPressureKnobIncr1":
-				return getMainAltimeterPressureKnobIncr1(id, sharedMemoryData);
-			case "mainAltimeterPressureKnobIncr5":
-				return getMainAltimeterPressureKnobIncr5(id, sharedMemoryData);
-			case "mainHsiCrsKnobDecrease1":
-				return getMainHsiCrsKnobDecrease1(id, sharedMemoryData);
-			case "mainHsiCrsKnobDecrease5":
-				return getMainHsiCrsKnobDecrease5(id, sharedMemoryData);
-			case "mainHsiCrsKnobIncrease1":
-				return getMainHsiCrsKnobIncrease1(id, sharedMemoryData);
-			case "mainHsiCrsKnobIncrease5":
-				return getMainHsiCrsKnobIncrease5(id, sharedMemoryData);
-			case "mainHsiHdgKnobDecrease1":
-				return getMainHsiHdgKnobDecrease1(id, sharedMemoryData);
-			case "mainHsiHdgKnobDecrease5":
-				return getMainHsiHdgKnobDecrease5(id, sharedMemoryData);
-			case "mainHsiHdgKnobIncrease1":
-				return getMainHsiHdgKnobIncrease1(id, sharedMemoryData);
-			case "mainHsiHdgKnobIncrease5":
-				return getMainHsiHdgKnobIncrease5(id, sharedMemoryData);
-			case "miscLaserSwitchArm":
-				return getMiscLaserSwitchArm(id, sharedMemoryData);
-			case "miscLaserSwitchOff":
-				return getMiscLaserSwitchOff(id, sharedMemoryData);
-			case "miscMasterArmSwitchOff":
-				return getMiscMasterArmSwitchOff(id, sharedMemoryData);
-			case "miscMasterArmSwitchOn":
-				return getMiscMasterArmSwitchOn(id, sharedMemoryData);
-			case "miscMasterArmSwitchSim":
-				return getMiscMasterArmSwitchSim(id, sharedMemoryData);
-			case "miscPitchSwitchAPOff":
-				return getMiscPitchSwitchAPOff(id, sharedMemoryData);
-			case "miscPitchSwitchAltHold":
-				return getMiscPitchSwitchAltHold(id, sharedMemoryData);
-			case "miscPitchSwitchAttHold":
-				return getMiscPitchSwitchAttHold(id, sharedMemoryData);
-			case "miscRfSwitchNorm":
-				return getMiscRfSwitchNorm(id, sharedMemoryData);
-			case "miscRfSwitchQuiet":
-				return getMiscRfSwitchQuiet(id, sharedMemoryData);
-			case "miscRfSwitchSilent":
-				return getMiscRfSwitchSilent(id, sharedMemoryData);
-			case "miscRollSwitchAttHold":
-				return getMiscRollSwitchAttHold(id, sharedMemoryData);
-			case "miscRollSwitchHdgSel":
-				return getMiscRollSwitchHdgSel(id, sharedMemoryData);
-			case "miscRollSwitchStrgSel":
-				return getMiscRollSwitchStrgSel(id, sharedMemoryData);
-			case "qtyExtFuelTransSwitchNorm":
-				return getQtyExtFuelTransSwitchNorm(id, sharedMemoryData);
-			case "qtyExtFuelTransSwitchWingFirst":
-				return getQtyExtFuelTransSwitchWingFirst(id, sharedMemoryData);
-			case "qtyFuelQtySelKnobExtCtr":
-				return getQtyFuelQtySelKnobExtCtr(id, sharedMemoryData);
-			case "qtyFuelQtySelKnobExtWing":
-				return getQtyFuelQtySelKnobExtWing(id, sharedMemoryData);
-			case "qtyFuelQtySelKnobIntWing":
-				return getQtyFuelQtySelKnobIntWing(id, sharedMemoryData);
-			case "qtyFuelQtySelKnobNorm":
-				return getQtyFuelQtySelKnobNorm(id, sharedMemoryData);
-			case "qtyFuelQtySelKnobRsvr":
-				return getQtyFuelQtySelKnobRsvr(id, sharedMemoryData);
-			case "qtyFuelQtySelKnobTest":
-				return getQtyFuelQtySelKnobTest(id, sharedMemoryData);
-			case "snsrFcrSwitchOff":
-				return getSnsrFcrSwitchOff(id, sharedMemoryData);
-			case "snsrFcrSwitchOn":
-				return getSnsrFcrSwitchOn(id, sharedMemoryData);
-			case "snsrLeftHdptSwitchOff":
-				return getSnsrLeftHdptSwitchOff(id, sharedMemoryData);
-			case "snsrLeftHdptSwitchOn":
-				return getSnsrLeftHdptSwitchOn(id, sharedMemoryData);
-			case "snsrRdrAltSwitchOff":
-				return getSnsrRdrAltSwitchOff(id, sharedMemoryData);
-			case "snsrRdrAltSwitchOn":
-				return getSnsrRdrAltSwitchOn(id, sharedMemoryData);
-			case "snsrRdrAltSwitchStdby":
-				return getSnsrRdrAltSwitchStdby(id, sharedMemoryData);
-			case "snsrRightHdptSwitchOff":
-				return getSnsrRightHdptSwitchOff(id, sharedMemoryData);
-			case "snsrRightHdptSwitchOn":
-				return getSnsrRightHdptSwitchOn(id, sharedMemoryData);
-			case "testProbeHeatSwitchOff":
-				return getTestProbeHeatSwitchOff(id, sharedMemoryData);
-			case "testProbeHeatSwitchOn":
-				return getTestProbeHeatSwitchOn(id, sharedMemoryData);
-			case "testProbeHeatSwitchTest":
-				return getTestProbeHeatSwitchTest(id, sharedMemoryData);
-			case "trimTrimApDiscSwitchDisc":
-				return getTrimTrimApDiscSwitchDisc(id, sharedMemoryData);
-			case "trimTrimApDiscSwitchNorm":
-				return getTrimTrimApDiscSwitchNorm(id, sharedMemoryData);
-			case "uhfFunctionKnobBoth":
-				return getUhfFunctionKnobBoth(id, sharedMemoryData);
-			case "uhfFunctionKnobMain":
-				return getUhfFunctionKnobMain(id, sharedMemoryData);
-			case "uhfFunctionKnobOff":
-				return getUhfFunctionKnobOff(id, sharedMemoryData);
-			case "uhfModeKnobGrd":
-				return getUhfModeKnobGrd(id, sharedMemoryData);
-			case "uhfModeKnobMnl":
-				return getUhfModeKnobMnl(id, sharedMemoryData);
-			case "uhfModeKnobPreset":
-				return getUhfModeKnobPreset(id, sharedMemoryData);
-			case "zeroVmsSwitchInhibit":
-				return getZeroVmsSwitchInhibit(id, sharedMemoryData);
-			case "zeroVmsSwitchOn":
-				return getZeroVmsSwitchOn(id, sharedMemoryData);
+	protected Object getStateFromSharedMemory(String callback, SharedMemoryData sharedMemoryData) {
+		switch (callback) {
+			case "AFGearDown":
+				return getAFGearDown(callback, sharedMemoryData);
+			case "AFGearUp":
+				return getAFGearUp(callback, sharedMemoryData);
+			case "SimAVTRSwitchAuto":
+				return getSimAVTRSwitchAuto(callback, sharedMemoryData);
+			case "SimAVTRSwitchOff":
+				return getSimAVTRSwitchOff(callback, sharedMemoryData);
+			case "SimAVTRSwitchOn":
+				return getSimAVTRSwitchOn(callback, sharedMemoryData);
+			case "SimAirSourceDump":
+				return getSimAirSourceDump(callback, sharedMemoryData);
+			case "SimAirSourceNorm":
+				return getSimAirSourceNorm(callback, sharedMemoryData);
+			case "SimAirSourceOff":
+				return getSimAirSourceOff(callback, sharedMemoryData);
+			case "SimAirSourceRam":
+				return getSimAirSourceRam(callback, sharedMemoryData);
+			case "SimAltFlapsExtend":
+				return getSimAltFlapsExtend(callback, sharedMemoryData);
+			case "SimAltFlapsNorm":
+				return getSimAltFlapsNorm(callback, sharedMemoryData);
+			case "SimAltPressDec":
+				return getSimAltPressDec(callback, sharedMemoryData);
+			case "SimAltPressDecBy1":
+				return getSimAltPressDecBy1(callback, sharedMemoryData);
+			case "SimAltPressInc":
+				return getSimAltPressInc(callback, sharedMemoryData);
+			case "SimAltPressIncBy1":
+				return getSimAltPressIncBy1(callback, sharedMemoryData);
+			case "SimAntennaSelectDown":
+				return getSimAntennaSelectDown(callback, sharedMemoryData);
+			case "SimAntennaSelectMid":
+				return getSimAntennaSelectMid(callback, sharedMemoryData);
+			case "SimAntennaSelectUp":
+				return getSimAntennaSelectUp(callback, sharedMemoryData);
+			case "SimAntiCollOff":
+				return getSimAntiCollOff(callback, sharedMemoryData);
+			case "SimAntiCollOn":
+				return getSimAntiCollOn(callback, sharedMemoryData);
+			case "SimAntiIceDown":
+				return getSimAntiIceDown(callback, sharedMemoryData);
+			case "SimAntiIceMid":
+				return getSimAntiIceMid(callback, sharedMemoryData);
+			case "SimAntiIceUp":
+				return getSimAntiIceUp(callback, sharedMemoryData);
+			case "SimArmMasterArm":
+				return getSimArmMasterArm(callback, sharedMemoryData);
+			case "SimAud1Com1Gd":
+				return getSimAud1Com1Gd(callback, sharedMemoryData);
+			case "SimAud1Com1Sql":
+				return getSimAud1Com1Sql(callback, sharedMemoryData);
+			case "SimAud1Com2Gd":
+				return getSimAud1Com2Gd(callback, sharedMemoryData);
+			case "SimAud1Com2Sql":
+				return getSimAud1Com2Sql(callback, sharedMemoryData);
+			case "SimAuxComBackup":
+				return getSimAuxComBackup(callback, sharedMemoryData);
+			case "SimAuxComUFC":
+				return getSimAuxComUFC(callback, sharedMemoryData);
+			case "SimBupUhfBoth":
+				return getSimBupUhfBoth(callback, sharedMemoryData);
+			case "SimBupUhfGuard":
+				return getSimBupUhfGuard(callback, sharedMemoryData);
+			case "SimBupUhfMain":
+				return getSimBupUhfMain(callback, sharedMemoryData);
+			case "SimBupUhfManual":
+				return getSimBupUhfManual(callback, sharedMemoryData);
+			case "SimBupUhfOff":
+				return getSimBupUhfOff(callback, sharedMemoryData);
+			case "SimBupUhfPreset":
+				return getSimBupUhfPreset(callback, sharedMemoryData);
+			case "SimCATI":
+				return getSimCATI(callback, sharedMemoryData);
+			case "SimCATIII":
+				return getSimCATIII(callback, sharedMemoryData);
+			case "SimComm1PowerOff":
+				return getSimComm1PowerOff(callback, sharedMemoryData);
+			case "SimComm1PowerOn":
+				return getSimComm1PowerOn(callback, sharedMemoryData);
+			case "SimComm2PowerOff":
+				return getSimComm2PowerOff(callback, sharedMemoryData);
+			case "SimComm2PowerOn":
+				return getSimComm2PowerOn(callback, sharedMemoryData);
+			case "SimDLOff":
+				return getSimDLOff(callback, sharedMemoryData);
+			case "SimDLOn":
+				return getSimDLOn(callback, sharedMemoryData);
+			case "SimDigitalBUPBackup":
+				return getSimDigitalBUPBackup(callback, sharedMemoryData);
+			case "SimDigitalBUPOff":
+				return getSimDigitalBUPOff(callback, sharedMemoryData);
+			case "SimEWSChaffOff":
+				return getSimEWSChaffOff(callback, sharedMemoryData);
+			case "SimEWSChaffOn":
+				return getSimEWSChaffOn(callback, sharedMemoryData);
+			case "SimEWSFlareOff":
+				return getSimEWSFlareOff(callback, sharedMemoryData);
+			case "SimEWSFlareOn":
+				return getSimEWSFlareOn(callback, sharedMemoryData);
+			case "SimEWSJammerOff":
+				return getSimEWSJammerOff(callback, sharedMemoryData);
+			case "SimEWSJammerOn":
+				return getSimEWSJammerOn(callback, sharedMemoryData);
+			case "SimEWSModeAuto":
+				return getSimEWSModeAuto(callback, sharedMemoryData);
+			case "SimEWSModeByp":
+				return getSimEWSModeByp(callback, sharedMemoryData);
+			case "SimEWSModeMan":
+				return getSimEWSModeMan(callback, sharedMemoryData);
+			case "SimEWSModeOff":
+				return getSimEWSModeOff(callback, sharedMemoryData);
+			case "SimEWSModeSemi":
+				return getSimEWSModeSemi(callback, sharedMemoryData);
+			case "SimEWSModeStby":
+				return getSimEWSModeStby(callback, sharedMemoryData);
+			case "SimEWSMwsOff":
+				return getSimEWSMwsOff(callback, sharedMemoryData);
+			case "SimEWSMwsOn":
+				return getSimEWSMwsOn(callback, sharedMemoryData);
+			case "SimEWSO1Off":
+				return getSimEWSO1Off(callback, sharedMemoryData);
+			case "SimEWSO1On":
+				return getSimEWSO1On(callback, sharedMemoryData);
+			case "SimEWSO2Off":
+				return getSimEWSO2Off(callback, sharedMemoryData);
+			case "SimEWSO2On":
+				return getSimEWSO2On(callback, sharedMemoryData);
+			case "SimEWSProgFour":
+				return getSimEWSProgFour(callback, sharedMemoryData);
+			case "SimEWSProgOne":
+				return getSimEWSProgOne(callback, sharedMemoryData);
+			case "SimEWSProgThree":
+				return getSimEWSProgThree(callback, sharedMemoryData);
+			case "SimEWSProgTwo":
+				return getSimEWSProgTwo(callback, sharedMemoryData);
+			case "SimEWSRWROff":
+				return getSimEWSRWROff(callback, sharedMemoryData);
+			case "SimEWSRWROn":
+				return getSimEWSRWROn(callback, sharedMemoryData);
+			case "SimEcmPowerOff":
+				return getSimEcmPowerOff(callback, sharedMemoryData);
+			case "SimEcmPowerOn":
+				return getSimEcmPowerOn(callback, sharedMemoryData);
+			case "SimEngContPri":
+				return getSimEngContPri(callback, sharedMemoryData);
+			case "SimEngContSec":
+				return getSimEngContSec(callback, sharedMemoryData);
+			case "SimEpuAuto":
+				return getSimEpuAuto(callback, sharedMemoryData);
+			case "SimEpuOff":
+				return getSimEpuOff(callback, sharedMemoryData);
+			case "SimEpuOn":
+				return getSimEpuOn(callback, sharedMemoryData);
+			case "SimEwsJettOff":
+				return getSimEwsJettOff(callback, sharedMemoryData);
+			case "SimEwsJettOn":
+				return getSimEwsJettOn(callback, sharedMemoryData);
+			case "SimExtlMasterNorm":
+				return getSimExtlMasterNorm(callback, sharedMemoryData);
+			case "SimExtlMasterOff":
+				return getSimExtlMasterOff(callback, sharedMemoryData);
+			case "SimFCCOff":
+				return getSimFCCOff(callback, sharedMemoryData);
+			case "SimFCCOn":
+				return getSimFCCOn(callback, sharedMemoryData);
+			case "SimFCROff":
+				return getSimFCROff(callback, sharedMemoryData);
+			case "SimFCROn":
+				return getSimFCROn(callback, sharedMemoryData);
+			case "SimFuelDoorClose":
+				return getSimFuelDoorClose(callback, sharedMemoryData);
+			case "SimFuelDoorOpen":
+				return getSimFuelDoorOpen(callback, sharedMemoryData);
+			case "SimFuelPumpAft":
+				return getSimFuelPumpAft(callback, sharedMemoryData);
+			case "SimFuelPumpFwd":
+				return getSimFuelPumpFwd(callback, sharedMemoryData);
+			case "SimFuelPumpNorm":
+				return getSimFuelPumpNorm(callback, sharedMemoryData);
+			case "SimFuelPumpOff":
+				return getSimFuelPumpOff(callback, sharedMemoryData);
+			case "SimFuelSwitchCenterExt":
+				return getSimFuelSwitchCenterExt(callback, sharedMemoryData);
+			case "SimFuelSwitchNorm":
+				return getSimFuelSwitchNorm(callback, sharedMemoryData);
+			case "SimFuelSwitchResv":
+				return getSimFuelSwitchResv(callback, sharedMemoryData);
+			case "SimFuelSwitchTest":
+				return getSimFuelSwitchTest(callback, sharedMemoryData);
+			case "SimFuelSwitchWingExt":
+				return getSimFuelSwitchWingExt(callback, sharedMemoryData);
+			case "SimFuelSwitchWingInt":
+				return getSimFuelSwitchWingInt(callback, sharedMemoryData);
+			case "SimFuelTransNorm":
+				return getSimFuelTransNorm(callback, sharedMemoryData);
+			case "SimFuelTransWing":
+				return getSimFuelTransWing(callback, sharedMemoryData);
+			case "SimGPSOff":
+				return getSimGPSOff(callback, sharedMemoryData);
+			case "SimGPSOn":
+				return getSimGPSOn(callback, sharedMemoryData);
+			case "SimGndJettOff":
+				return getSimGndJettOff(callback, sharedMemoryData);
+			case "SimGndJettOn":
+				return getSimGndJettOn(callback, sharedMemoryData);
+			case "SimHSIIlsNav":
+				return getSimHSIIlsNav(callback, sharedMemoryData);
+			case "SimHSIIlsTcn":
+				return getSimHSIIlsTcn(callback, sharedMemoryData);
+			case "SimHSINav":
+				return getSimHSINav(callback, sharedMemoryData);
+			case "SimHSITcn":
+				return getSimHSITcn(callback, sharedMemoryData);
+			case "SimHUDAltAuto":
+				return getSimHUDAltAuto(callback, sharedMemoryData);
+			case "SimHUDAltBaro":
+				return getSimHUDAltBaro(callback, sharedMemoryData);
+			case "SimHUDAltRadar":
+				return getSimHUDAltRadar(callback, sharedMemoryData);
+			case "SimHUDBrtAuto":
+				return getSimHUDBrtAuto(callback, sharedMemoryData);
+			case "SimHUDBrtDay":
+				return getSimHUDBrtDay(callback, sharedMemoryData);
+			case "SimHUDBrtNight":
+				return getSimHUDBrtNight(callback, sharedMemoryData);
+			case "SimHUDDEDDED":
+				return getSimHUDDEDDED(callback, sharedMemoryData);
+			case "SimHUDDEDOff":
+				return getSimHUDDEDOff(callback, sharedMemoryData);
+			case "SimHUDDEDPFL":
+				return getSimHUDDEDPFL(callback, sharedMemoryData);
+			case "SimHUDVelocityCAS":
+				return getSimHUDVelocityCAS(callback, sharedMemoryData);
+			case "SimHUDVelocityGND":
+				return getSimHUDVelocityGND(callback, sharedMemoryData);
+			case "SimHUDVelocityTAS":
+				return getSimHUDVelocityTAS(callback, sharedMemoryData);
+			case "SimHmsOff":
+				return getSimHmsOff(callback, sharedMemoryData);
+			case "SimHmsOn":
+				return getSimHmsOn(callback, sharedMemoryData);
+			case "SimHookDown":
+				return getSimHookDown(callback, sharedMemoryData);
+			case "SimHookUp":
+				return getSimHookUp(callback, sharedMemoryData);
+			case "SimHsiCourseDec":
+				return getSimHsiCourseDec(callback, sharedMemoryData);
+			case "SimHsiCourseInc":
+				return getSimHsiCourseInc(callback, sharedMemoryData);
+			case "SimHsiCrsDecBy1":
+				return getSimHsiCrsDecBy1(callback, sharedMemoryData);
+			case "SimHsiCrsIncBy1":
+				return getSimHsiCrsIncBy1(callback, sharedMemoryData);
+			case "SimHsiHdgDecBy1":
+				return getSimHsiHdgDecBy1(callback, sharedMemoryData);
+			case "SimHsiHdgIncBy1":
+				return getSimHsiHdgIncBy1(callback, sharedMemoryData);
+			case "SimHsiHeadingDec":
+				return getSimHsiHeadingDec(callback, sharedMemoryData);
+			case "SimHsiHeadingInc":
+				return getSimHsiHeadingInc(callback, sharedMemoryData);
+			case "SimIFFCodeSwitchHold":
+				return getSimIFFCodeSwitchHold(callback, sharedMemoryData);
+			case "SimIFFCodeSwitchZero":
+				return getSimIFFCodeSwitchZero(callback, sharedMemoryData);
+			case "SimIFFMasterEmerg":
+				return getSimIFFMasterEmerg(callback, sharedMemoryData);
+			case "SimIFFMasterLow":
+				return getSimIFFMasterLow(callback, sharedMemoryData);
+			case "SimIFFMasterNorm":
+				return getSimIFFMasterNorm(callback, sharedMemoryData);
+			case "SimIFFMasterOff":
+				return getSimIFFMasterOff(callback, sharedMemoryData);
+			case "SimIFFMasterStby":
+				return getSimIFFMasterStby(callback, sharedMemoryData);
+			case "SimIFFMode4MonitorAud":
+				return getSimIFFMode4MonitorAud(callback, sharedMemoryData);
+			case "SimIFFMode4MonitorOff":
+				return getSimIFFMode4MonitorOff(callback, sharedMemoryData);
+			case "SimIFFMode4ReplyAlpha":
+				return getSimIFFMode4ReplyAlpha(callback, sharedMemoryData);
+			case "SimIFFMode4ReplyBravo":
+				return getSimIFFMode4ReplyBravo(callback, sharedMemoryData);
+			case "SimIFFMode4ReplyOff":
+				return getSimIFFMode4ReplyOff(callback, sharedMemoryData);
+			case "SimINSInFlt":
+				return getSimINSInFlt(callback, sharedMemoryData);
+			case "SimINSNav":
+				return getSimINSNav(callback, sharedMemoryData);
+			case "SimINSNorm":
+				return getSimINSNorm(callback, sharedMemoryData);
+			case "SimINSOff":
+				return getSimINSOff(callback, sharedMemoryData);
+			case "SimJfsStartDown":
+				return getSimJfsStartDown(callback, sharedMemoryData);
+			case "SimJfsStartMid":
+				return getSimJfsStartMid(callback, sharedMemoryData);
+			case "SimJfsStartUp":
+				return getSimJfsStartUp(callback, sharedMemoryData);
+			case "SimLEFAuto":
+				return getSimLEFAuto(callback, sharedMemoryData);
+			case "SimLEFLock":
+				return getSimLEFLock(callback, sharedMemoryData);
+			case "SimLandingLightDown":
+				return getSimLandingLightDown(callback, sharedMemoryData);
+			case "SimLandingLightMid":
+				return getSimLandingLightMid(callback, sharedMemoryData);
+			case "SimLandingLightUp":
+				return getSimLandingLightUp(callback, sharedMemoryData);
+			case "SimLaserArmOff":
+				return getSimLaserArmOff(callback, sharedMemoryData);
+			case "SimLaserArmOn":
+				return getSimLaserArmOn(callback, sharedMemoryData);
+			case "SimLeftAPDown":
+				return getSimLeftAPDown(callback, sharedMemoryData);
+			case "SimLeftAPMid":
+				return getSimLeftAPMid(callback, sharedMemoryData);
+			case "SimLeftAPUp":
+				return getSimLeftAPUp(callback, sharedMemoryData);
+			case "SimLeftHptOff":
+				return getSimLeftHptOff(callback, sharedMemoryData);
+			case "SimLeftHptOn":
+				return getSimLeftHptOn(callback, sharedMemoryData);
+			case "SimLightsFlash":
+				return getSimLightsFlash(callback, sharedMemoryData);
+			case "SimLightsSteady":
+				return getSimLightsSteady(callback, sharedMemoryData);
+			case "SimMFDOff":
+				return getSimMFDOff(callback, sharedMemoryData);
+			case "SimMFDOn":
+				return getSimMFDOn(callback, sharedMemoryData);
+			case "SimMainPowerBatt":
+				return getSimMainPowerBatt(callback, sharedMemoryData);
+			case "SimMainPowerMain":
+				return getSimMainPowerMain(callback, sharedMemoryData);
+			case "SimMainPowerOff":
+				return getSimMainPowerOff(callback, sharedMemoryData);
+			case "SimManualFlyupDisable":
+				return getSimManualFlyupDisable(callback, sharedMemoryData);
+			case "SimManualFlyupEnable":
+				return getSimManualFlyupEnable(callback, sharedMemoryData);
+			case "SimMasterFuelOff":
+				return getSimMasterFuelOff(callback, sharedMemoryData);
+			case "SimMasterFuelOn":
+				return getSimMasterFuelOn(callback, sharedMemoryData);
+			case "SimParkingBrakeDown":
+				return getSimParkingBrakeDown(callback, sharedMemoryData);
+			case "SimParkingBrakeMid":
+				return getSimParkingBrakeMid(callback, sharedMemoryData);
+			case "SimParkingBrakeUp":
+				return getSimParkingBrakeUp(callback, sharedMemoryData);
+			case "SimPitchLadderATTFPM":
+				return getSimPitchLadderATTFPM(callback, sharedMemoryData);
+			case "SimPitchLadderFPM":
+				return getSimPitchLadderFPM(callback, sharedMemoryData);
+			case "SimPitchLadderOff":
+				return getSimPitchLadderOff(callback, sharedMemoryData);
+			case "SimProbeHeatOff":
+				return getSimProbeHeatOff(callback, sharedMemoryData);
+			case "SimProbeHeatOn":
+				return getSimProbeHeatOn(callback, sharedMemoryData);
+			case "SimProbeHeatTest":
+				return getSimProbeHeatTest(callback, sharedMemoryData);
+			case "SimRALTOFF":
+				return getSimRALTOFF(callback, sharedMemoryData);
+			case "SimRALTON":
+				return getSimRALTON(callback, sharedMemoryData);
+			case "SimRALTSTDBY":
+				return getSimRALTSTDBY(callback, sharedMemoryData);
+			case "SimRFNorm":
+				return getSimRFNorm(callback, sharedMemoryData);
+			case "SimRFQuiet":
+				return getSimRFQuiet(callback, sharedMemoryData);
+			case "SimRFSilent":
+				return getSimRFSilent(callback, sharedMemoryData);
+			case "SimReticleOff":
+				return getSimReticleOff(callback, sharedMemoryData);
+			case "SimReticlePri":
+				return getSimReticlePri(callback, sharedMemoryData);
+			case "SimReticleStby":
+				return getSimReticleStby(callback, sharedMemoryData);
+			case "SimRightAPDown":
+				return getSimRightAPDown(callback, sharedMemoryData);
+			case "SimRightAPMid":
+				return getSimRightAPMid(callback, sharedMemoryData);
+			case "SimRightAPUp":
+				return getSimRightAPUp(callback, sharedMemoryData);
+			case "SimRightHptOff":
+				return getSimRightHptOff(callback, sharedMemoryData);
+			case "SimRightHptOn":
+				return getSimRightHptOn(callback, sharedMemoryData);
+			case "SimSMSOff":
+				return getSimSMSOff(callback, sharedMemoryData);
+			case "SimSMSOn":
+				return getSimSMSOn(callback, sharedMemoryData);
+			case "SimSafeMasterArm":
+				return getSimSafeMasterArm(callback, sharedMemoryData);
+			case "SimScalesOff":
+				return getSimScalesOff(callback, sharedMemoryData);
+			case "SimScalesVAH":
+				return getSimScalesVAH(callback, sharedMemoryData);
+			case "SimScalesVVVAH":
+				return getSimScalesVVVAH(callback, sharedMemoryData);
+			case "SimSimMasterArm":
+				return getSimSimMasterArm(callback, sharedMemoryData);
+			case "SimTACANAATR":
+				return getSimTACANAATR(callback, sharedMemoryData);
+			case "SimTACANTR":
+				return getSimTACANTR(callback, sharedMemoryData);
+			case "SimTrimAPDISC":
+				return getSimTrimAPDISC(callback, sharedMemoryData);
+			case "SimTrimAPNORM":
+				return getSimTrimAPNORM(callback, sharedMemoryData);
+			case "SimUFCOff":
+				return getSimUFCOff(callback, sharedMemoryData);
+			case "SimUFCOn":
+				return getSimUFCOn(callback, sharedMemoryData);
+			case "SimVMSOff":
+				return getSimVMSOff(callback, sharedMemoryData);
+			case "SimVMSOn":
+				return getSimVMSOn(callback, sharedMemoryData);
+			case "SimWingLightBrt":
+				return getSimWingLightBrt(callback, sharedMemoryData);
+			case "SimWingLightOff":
+				return getSimWingLightOff(callback, sharedMemoryData);
 			default:
 				return null;
 		}
 	}
 
-	protected Object getAirAirSourceKnobDump(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getAFGearDown(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAirAirSourceKnobNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getAFGearUp(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAirAirSourceKnobOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAVTRSwitchAuto(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAirAirSourceKnobRam(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAVTRSwitchOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAntIffUhfSwitchLower(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAVTRSwitchOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAntIffUhfSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAirSourceDump(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAntIffUhfSwitchUpper(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAirSourceNorm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAudio1Comm1KnobPowerOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAirSourceOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAudio1Comm1KnobPowerOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAirSourceRam(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAudio1Comm1ModeKnobGd(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAltFlapsExtend(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAudio1Comm1ModeKnobSql(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAltFlapsNorm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAudio1Comm2KnobPowerOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAltPressDec(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAudio1Comm2KnobPowerOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAltPressDecBy1(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAudio1Comm2ModeKnobGd(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAltPressInc(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAudio1Comm2ModeKnobSql(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAltPressIncBy1(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxCniKnobSwitchBackup(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAntennaSelectDown(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxCniKnobSwitchUfc(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAntennaSelectMid(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxM4CodeSwitchHold(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAntennaSelectUp(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxM4CodeSwitchZero(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAntiCollOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxMasterKnobEmer(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAntiCollOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxMasterKnobLow(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAntiIceDown(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxMasterKnobNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAntiIceMid(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxMasterKnobOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAntiIceUp(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxMasterKnobStby(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimArmMasterArm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxMonitorSwitchAudio(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAud1Com1Gd(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxMonitorSwitchOut(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAud1Com1Sql(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxReplySwitchA(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAud1Com2Gd(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxReplySwitchB(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAud1Com2Sql(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxReplySwitchOut(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAuxComBackup(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxStationSelectorSwitchAATr(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimAuxComUFC(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAuxStationSelectorSwitchTR(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimBupUhfBoth(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsDlSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimBupUhfGuard(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsDlSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimBupUhfMain(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsFccSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimBupUhfManual(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsFccSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimBupUhfOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsGpsSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimBupUhfPreset(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsGpsSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimCATI(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsInsKnobInFltAlign(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimCATIII(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsInsKnobNav(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimComm1PowerOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsInsKnobNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimComm1PowerOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsInsKnobOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimComm2PowerOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsMfdSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimComm2PowerOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsMfdSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimDLOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsSmsSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimDLOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsSmsSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimDigitalBUPBackup(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsUfcSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimDigitalBUPOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvionicsUfcSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSChaffOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvtrAvtrSwitchAuto(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSChaffOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvtrAvtrSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSFlareOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getAvtrAvtrSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSFlareOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsChSwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSJammerOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsChSwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSJammerOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsFlSwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSModeAuto(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsFlSwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSModeByp(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsJettSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSModeMan(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsJettSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSModeOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsJmrSwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSModeSemi(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsJmrSwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSModeStby(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsModeKnobAuto(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSMwsOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsModeKnobByp(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSMwsOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsModeKnobMan(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSO1Off(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsModeKnobOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSO1On(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsModeKnobSemi(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSO2Off(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsModeKnobStby(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSO2On(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsMwsSwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSProgFour(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsMwsSwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSProgOne(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsO1SwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSProgThree(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsO1SwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSProgTwo(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsO2SwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSRWROff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsO2SwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEWSRWROn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsPrgmKnob1(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEcmPowerOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsPrgmKnob2(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEcmPowerOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsPrgmKnob3(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEngContPri(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsPrgmKnob4(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEngContSec(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsRwrSwitchPowerOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEpuAuto(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getCmdsRwrSwitchPowerOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEpuOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getEcmOprSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEpuOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getEcmOprSwitchOpr(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEwsJettOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getElecMainPwrSwitchBatt(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimEwsJettOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getElecMainPwrSwitchMain(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimExtlMasterNorm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getElecMainPwrSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimExtlMasterOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getEngEngContSwitchPri(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFCCOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getEngEngContSwitchSec(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFCCOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getEngJfsSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFCROff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getEngJfsSwitchStart1(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFCROn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getEngJfsSwitchStart2(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelDoorClose(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getEpuEpuSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelDoorOpen(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getEpuEpuSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelPumpAft(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getEpuEpuSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelPumpFwd(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getExtAntiCollisionSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelPumpNorm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getExtAntiCollisionSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelPumpOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getExtMasterSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelSwitchCenterExt(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getExtMasterSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelSwitchNorm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getExtPositionSwitchFlash(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelSwitchResv(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getExtPositionSwitchSteady(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelSwitchTest(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getExtWingTailSwitchBrt(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelSwitchWingExt(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getExtWingTailSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelSwitchWingInt(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFltAltFlapsSwitchExtend(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelTransNorm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFltAltFlapsSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimFuelTransWing(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFltDigitalSwitchBackup(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimGPSOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFltDigitalSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimGPSOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFltLeFlapsSwitchAuto(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimGndJettOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFltLeFlapsSwitchLock(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimGndJettOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFltManualTfFlyupSwitchDisable(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHSIIlsNav(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFltManualTfFlyupSwitchEnable(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHSIIlsTcn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFuelAirRefuelSwitchClose(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHSINav(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFuelAirRefuelSwitchOpen(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHSITcn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFuelEngFeedKnobAft(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDAltAuto(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFuelEngFeedKnobFwd(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDAltBaro(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFuelEngFeedKnobNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDAltRadar(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFuelEngFeedKnobOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDBrtAuto(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFuelMasterSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDBrtDay(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getFuelMasterSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDBrtNight(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearGndJettSwitchEnable(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDDEDDED(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearGndJettSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDDEDOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearHookSwitchDn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDDEDPFL(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearHookSwitchUp(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDVelocityCAS(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearLgHandleDn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDVelocityGND(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearLgHandleUp(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHUDVelocityTAS(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearLightsSwitchLanding(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHmsOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearLightsSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHmsOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearLightsSwitchTaxi(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHookDown(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearParkingBrakeSwitchAntiSkid(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHookUp(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearParkingBrakeSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHsiCourseDec(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearParkingBrakeSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHsiCourseInc(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearStoresConfigSwitchCatI(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHsiCrsDecBy1(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getGearStoresConfigSwitchCatIii(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHsiCrsIncBy1(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHmcsHmscKnobOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHsiHdgDecBy1(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHmcsHmscKnobOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHsiHdgIncBy1(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudAltitudeSwitchAuto(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHsiHeadingDec(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudAltitudeSwitchBaro(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimHsiHeadingInc(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudAltitudeSwitchRadar(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFCodeSwitchHold(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudBrightnessSwitchAutoBrt(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFCodeSwitchZero(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudBrightnessSwitchDay(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFMasterEmerg(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudBrightnessSwitchNig(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFMasterLow(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudDedDataSwitchDed(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFMasterNorm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudDedDataSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFMasterOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudDedDataSwitchPfl(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFMasterStby(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudDeprRetSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFMode4MonitorAud(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudDeprRetSwitchPri(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFMode4MonitorOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudDeprRetSwitchStby(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFMode4ReplyAlpha(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudFpmSwitchAttFpm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFMode4ReplyBravo(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudFpmSwitchFpm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimIFFMode4ReplyOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudFpmSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimINSInFlt(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudScalesSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimINSNav(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudScalesSwitchVah(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimINSNorm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudScalesSwitchVvVah(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimINSOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudVelocitySwitchCas(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimJfsStartDown(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudVelocitySwitchGndSpd(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimJfsStartMid(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getHudVelocitySwitchTas(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimJfsStartUp(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getIceEngineSwitchAuto(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLEFAuto(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getIceEngineSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLEFLock(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getIceEngineSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLandingLightDown(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getInstrModeKnobIlsNav(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLandingLightMid(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getInstrModeKnobIlsTcn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLandingLightUp(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getInstrModeKnobNav(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLaserArmOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getInstrModeKnobTcn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLaserArmOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainAltimeterPressureKnobDecr1(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLeftAPDown(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainAltimeterPressureKnobDecr5(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLeftAPMid(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainAltimeterPressureKnobIncr1(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLeftAPUp(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainAltimeterPressureKnobIncr5(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLeftHptOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainHsiCrsKnobDecrease1(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLeftHptOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainHsiCrsKnobDecrease5(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLightsFlash(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainHsiCrsKnobIncrease1(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimLightsSteady(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainHsiCrsKnobIncrease5(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimMFDOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainHsiHdgKnobDecrease1(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimMFDOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainHsiHdgKnobDecrease5(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimMainPowerBatt(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainHsiHdgKnobIncrease1(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimMainPowerMain(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMainHsiHdgKnobIncrease5(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimMainPowerOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscLaserSwitchArm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimManualFlyupDisable(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscLaserSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimManualFlyupEnable(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscMasterArmSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimMasterFuelOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscMasterArmSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimMasterFuelOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscMasterArmSwitchSim(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimParkingBrakeDown(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscPitchSwitchAPOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimParkingBrakeMid(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscPitchSwitchAltHold(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimParkingBrakeUp(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscPitchSwitchAttHold(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimPitchLadderATTFPM(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscRfSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimPitchLadderFPM(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscRfSwitchQuiet(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimPitchLadderOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscRfSwitchSilent(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimProbeHeatOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscRollSwitchAttHold(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimProbeHeatOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscRollSwitchHdgSel(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimProbeHeatTest(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getMiscRollSwitchStrgSel(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimRALTOFF(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getQtyExtFuelTransSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimRALTON(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getQtyExtFuelTransSwitchWingFirst(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimRALTSTDBY(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getQtyFuelQtySelKnobExtCtr(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimRFNorm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getQtyFuelQtySelKnobExtWing(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimRFQuiet(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getQtyFuelQtySelKnobIntWing(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimRFSilent(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getQtyFuelQtySelKnobNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimReticleOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getQtyFuelQtySelKnobRsvr(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimReticlePri(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getQtyFuelQtySelKnobTest(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimReticleStby(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getSnsrFcrSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimRightAPDown(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getSnsrFcrSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimRightAPMid(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getSnsrLeftHdptSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimRightAPUp(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getSnsrLeftHdptSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimRightHptOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getSnsrRdrAltSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimRightHptOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getSnsrRdrAltSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimSMSOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getSnsrRdrAltSwitchStdby(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimSMSOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getSnsrRightHdptSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimSafeMasterArm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getSnsrRightHdptSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimScalesOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getTestProbeHeatSwitchOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimScalesVAH(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getTestProbeHeatSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimScalesVVVAH(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getTestProbeHeatSwitchTest(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimSimMasterArm(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getTrimTrimApDiscSwitchDisc(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimTACANAATR(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getTrimTrimApDiscSwitchNorm(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimTACANTR(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getUhfFunctionKnobBoth(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimTrimAPDISC(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getUhfFunctionKnobMain(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimTrimAPNORM(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getUhfFunctionKnobOff(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimUFCOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getUhfModeKnobGrd(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimUFCOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getUhfModeKnobMnl(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimVMSOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getUhfModeKnobPreset(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimVMSOn(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getZeroVmsSwitchInhibit(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimWingLightBrt(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getZeroVmsSwitchOn(String id, SharedMemoryData sharedMemoryData) {
+	protected Object getSimWingLightOff(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	

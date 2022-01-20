@@ -3,10 +3,10 @@
     <p>{{ controlGroupConfiguration.label }}</p>
     <v-btn
       v-for="controlConfiguration in controlGroupConfiguration.controlConfigurations"
-      :key="controlConfiguration.id"
+      :key="controlConfiguration.callback"
       outlined
-      @touchstart="startStateChange(controlConfiguration.id)"
-      @touchend="endStateChange(controlConfiguration.id)"
+      @touchstart="startStateChange(controlConfiguration.callback)"
+      @touchend="endStateChange(controlConfiguration.callback)"
     >
       <button-content :control-configuration="controlConfiguration" />
     </v-btn>

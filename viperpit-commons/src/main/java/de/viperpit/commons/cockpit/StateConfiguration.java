@@ -9,8 +9,6 @@ public class StateConfiguration {
 
 	private String callback;
 
-	private String id;
-
 	private Collection<String> relatedStateConfigurations;
 
 	private boolean stateful;
@@ -27,15 +25,11 @@ public class StateConfiguration {
 			return false;
 		}
 		StateConfiguration other = (StateConfiguration) obj;
-		return Objects.equals(id, other.id);
+		return Objects.equals(callback, other.callback);
 	}
 
 	public String getCallback() {
 		return callback;
-	}
-
-	public String getId() {
-		return id;
 	}
 
 	public Collection<String> getRelatedStateConfigurations() {
@@ -44,7 +38,7 @@ public class StateConfiguration {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(callback);
 	}
 
 	public boolean isActive() {
@@ -63,10 +57,6 @@ public class StateConfiguration {
 		this.callback = callback;
 	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
-
 	public void setRelatedStateConfigurations(Collection<String> relatedStateConfigurations) {
 		this.relatedStateConfigurations = relatedStateConfigurations;
 	}
@@ -78,9 +68,7 @@ public class StateConfiguration {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("StateConfiguration [id=");
-		builder.append(id);
-		builder.append(", callback=");
+		builder.append("StateConfiguration [callback=");
 		builder.append(callback);
 		builder.append(", relatedStateConfigurations=");
 		builder.append(relatedStateConfigurations);
