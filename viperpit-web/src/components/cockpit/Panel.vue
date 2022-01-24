@@ -1,6 +1,5 @@
 <template>
   <v-card v-if="panelConfiguration" outlined>
-    <v-card-title>{{ panelConfiguration.label }}</v-card-title>
     <v-container>
       <v-row justify="center">
         <v-col

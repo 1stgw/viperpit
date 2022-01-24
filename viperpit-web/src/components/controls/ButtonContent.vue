@@ -1,7 +1,7 @@
 <template>
   <span>
     <div v-if="icon">
-      <v-icon color="light-green">{{ icon }}</v-icon>
+      <v-icon>{{ icon }}</v-icon>
     </div>
     <div v-else>{{ controlConfiguration.label }}</div>
   </span>

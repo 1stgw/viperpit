@@ -1,10 +1,10 @@
 <template>
   <v-app dark>
     <v-app-bar app dense flat short clipped-left color="black">
-      <div v-if="isConnected">
+      <v-toolbar-title v-if="isConnected">
         {{ getAgent }}
-      </div>
-      <v-tabs color="green" align-with-title show-arrows>
+      </v-toolbar-title>
+      <v-tabs align-with-title show-arrows>
         <v-tab
           :to="{
             name: 'Cockpit',
@@ -23,7 +23,7 @@
         </v-tab>
       </v-tabs>
       <v-spacer />
-      <v-btn color="green" icon @click="resetStates()">
+      <v-btn icon @click="resetStates()">
         <v-icon>mdi-sync</v-icon>
       </v-btn>
     </v-app-bar>
@@ -35,7 +35,7 @@
         <v-dialog :value="!isConnected" persistent max-width="290">
           <v-card>
             <v-card-title class="headline"> No Joy... </v-card-title>
-            <v-card-text>Currently there is no flight Airborne...</v-card-text>
+            <v-card-text>Please start the agent...</v-card-text>
           </v-card>
         </v-dialog>
       </v-row>
