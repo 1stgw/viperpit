@@ -2696,32 +2696,32 @@
         "stateful" : true,
         "controlConfigurations" : [ {
           "callback" : "SimHsiHeadingInc",
-          "label" : "Increase (5�)",
-          "description" : "MAIN: HSI HDG Knob - Increase (5�)",
+          "label" : "Increase (5°)",
+          "description" : "MAIN: HSI HDG Knob - Increase (5°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
           "stateful" : true
         }, {
           "callback" : "SimHsiHeadingDec",
-          "label" : "Decrease (5�)",
-          "description" : "MAIN: HSI HDG Knob - Decrease (5�)",
+          "label" : "Decrease (5°)",
+          "description" : "MAIN: HSI HDG Knob - Decrease (5°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
           "stateful" : true
         }, {
           "callback" : "SimHsiHdgIncBy1",
-          "label" : "Increase (1�)",
-          "description" : "MAIN: HSI HDG Knob - Increase (1�)",
+          "label" : "Increase (1°)",
+          "description" : "MAIN: HSI HDG Knob - Increase (1°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
           "stateful" : true
         }, {
           "callback" : "SimHsiHdgDecBy1",
-          "label" : "Decrease (1�)",
-          "description" : "MAIN: HSI HDG Knob - Decrease (1�)",
+          "label" : "Decrease (1°)",
+          "description" : "MAIN: HSI HDG Knob - Decrease (1°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2733,32 +2733,32 @@
         "stateful" : true,
         "controlConfigurations" : [ {
           "callback" : "SimHsiCourseInc",
-          "label" : "Increase (5�)",
-          "description" : "MAIN: HSI CRS Knob - Increase (5�)",
+          "label" : "Increase (5°)",
+          "description" : "MAIN: HSI CRS Knob - Increase (5°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
           "stateful" : true
         }, {
           "callback" : "SimHsiCourseDec",
-          "label" : "Decrease (5�)",
-          "description" : "MAIN: HSI CRS Knob - Decrease (5�)",
+          "label" : "Decrease (5°)",
+          "description" : "MAIN: HSI CRS Knob - Decrease (5°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
           "stateful" : true
         }, {
           "callback" : "SimHsiCrsIncBy1",
-          "label" : "Increase (1�)",
-          "description" : "MAIN: HSI CRS Knob - Increase (1�)",
+          "label" : "Increase (1°)",
+          "description" : "MAIN: HSI CRS Knob - Increase (1°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
           "stateful" : true
         }, {
           "callback" : "SimHsiCrsDecBy1",
-          "label" : "Decrease (1�)",
-          "description" : "MAIN: HSI CRS Knob - Decrease (1�)",
+          "label" : "Decrease (1°)",
+          "description" : "MAIN: HSI CRS Knob - Decrease (1°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -2770,32 +2770,32 @@
         "stateful" : true,
         "controlConfigurations" : [ {
           "callback" : "SimAltPressInc",
-          "label" : "Incr. (5�)",
-          "description" : "MAIN: Altimeter Pressure Knob - Incr. (5�)",
+          "label" : "Incr. (5°)",
+          "description" : "MAIN: Altimeter Pressure Knob - Incr. (5°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
           "stateful" : true
         }, {
           "callback" : "SimAltPressDec",
-          "label" : "Decr. (5�)",
-          "description" : "MAIN: Altimeter Pressure Knob - Decr. (5�)",
+          "label" : "Decr. (5°)",
+          "description" : "MAIN: Altimeter Pressure Knob - Decr. (5°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
           "stateful" : true
         }, {
           "callback" : "SimAltPressIncBy1",
-          "label" : "Incr. (1�)",
-          "description" : "MAIN: Altimeter Pressure Knob - Incr. (1�)",
+          "label" : "Incr. (1°)",
+          "description" : "MAIN: Altimeter Pressure Knob - Incr. (1°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
           "stateful" : true
         }, {
           "callback" : "SimAltPressDecBy1",
-          "label" : "Decr. (1�)",
-          "description" : "MAIN: Altimeter Pressure Knob - Decr. (1�)",
+          "label" : "Decr. (1°)",
+          "description" : "MAIN: Altimeter Pressure Knob - Decr. (1°)",
           "style" : "knob",
           "role" : "none",
           "type" : "button",
@@ -5942,96 +5942,96 @@
     "stateful" : false
   }, {
     "callback" : "SimHsiHeadingInc",
-    "label" : "Increase (5�)",
-    "description" : "MAIN: HSI HDG Knob - Increase (5�)",
+    "label" : "Increase (5°)",
+    "description" : "MAIN: HSI HDG Knob - Increase (5°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
     "stateful" : true
   }, {
     "callback" : "SimHsiHeadingDec",
-    "label" : "Decrease (5�)",
-    "description" : "MAIN: HSI HDG Knob - Decrease (5�)",
+    "label" : "Decrease (5°)",
+    "description" : "MAIN: HSI HDG Knob - Decrease (5°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
     "stateful" : true
   }, {
     "callback" : "SimHsiHdgIncBy1",
-    "label" : "Increase (1�)",
-    "description" : "MAIN: HSI HDG Knob - Increase (1�)",
+    "label" : "Increase (1°)",
+    "description" : "MAIN: HSI HDG Knob - Increase (1°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
     "stateful" : true
   }, {
     "callback" : "SimHsiHdgDecBy1",
-    "label" : "Decrease (1�)",
-    "description" : "MAIN: HSI HDG Knob - Decrease (1�)",
+    "label" : "Decrease (1°)",
+    "description" : "MAIN: HSI HDG Knob - Decrease (1°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
     "stateful" : true
   }, {
     "callback" : "SimHsiCourseInc",
-    "label" : "Increase (5�)",
-    "description" : "MAIN: HSI CRS Knob - Increase (5�)",
+    "label" : "Increase (5°)",
+    "description" : "MAIN: HSI CRS Knob - Increase (5°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
     "stateful" : true
   }, {
     "callback" : "SimHsiCourseDec",
-    "label" : "Decrease (5�)",
-    "description" : "MAIN: HSI CRS Knob - Decrease (5�)",
+    "label" : "Decrease (5°)",
+    "description" : "MAIN: HSI CRS Knob - Decrease (5°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
     "stateful" : true
   }, {
     "callback" : "SimHsiCrsIncBy1",
-    "label" : "Increase (1�)",
-    "description" : "MAIN: HSI CRS Knob - Increase (1�)",
+    "label" : "Increase (1°)",
+    "description" : "MAIN: HSI CRS Knob - Increase (1°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
     "stateful" : true
   }, {
     "callback" : "SimHsiCrsDecBy1",
-    "label" : "Decrease (1�)",
-    "description" : "MAIN: HSI CRS Knob - Decrease (1�)",
+    "label" : "Decrease (1°)",
+    "description" : "MAIN: HSI CRS Knob - Decrease (1°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
     "stateful" : true
   }, {
     "callback" : "SimAltPressInc",
-    "label" : "Incr. (5�)",
-    "description" : "MAIN: Altimeter Pressure Knob - Incr. (5�)",
+    "label" : "Incr. (5°)",
+    "description" : "MAIN: Altimeter Pressure Knob - Incr. (5°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
     "stateful" : true
   }, {
     "callback" : "SimAltPressDec",
-    "label" : "Decr. (5�)",
-    "description" : "MAIN: Altimeter Pressure Knob - Decr. (5�)",
+    "label" : "Decr. (5°)",
+    "description" : "MAIN: Altimeter Pressure Knob - Decr. (5°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
     "stateful" : true
   }, {
     "callback" : "SimAltPressIncBy1",
-    "label" : "Incr. (1�)",
-    "description" : "MAIN: Altimeter Pressure Knob - Incr. (1�)",
+    "label" : "Incr. (1°)",
+    "description" : "MAIN: Altimeter Pressure Knob - Incr. (1°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
     "stateful" : true
   }, {
     "callback" : "SimAltPressDecBy1",
-    "label" : "Decr. (1�)",
-    "description" : "MAIN: Altimeter Pressure Knob - Decr. (1�)",
+    "label" : "Decr. (1°)",
+    "description" : "MAIN: Altimeter Pressure Knob - Decr. (1°)",
     "style" : "knob",
     "role" : "none",
     "type" : "button",
@@ -9585,32 +9585,32 @@
       "stateful" : true,
       "controlConfigurations" : [ {
         "callback" : "SimHsiHeadingInc",
-        "label" : "Increase (5�)",
-        "description" : "MAIN: HSI HDG Knob - Increase (5�)",
+        "label" : "Increase (5°)",
+        "description" : "MAIN: HSI HDG Knob - Increase (5°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
         "stateful" : true
       }, {
         "callback" : "SimHsiHeadingDec",
-        "label" : "Decrease (5�)",
-        "description" : "MAIN: HSI HDG Knob - Decrease (5�)",
+        "label" : "Decrease (5°)",
+        "description" : "MAIN: HSI HDG Knob - Decrease (5°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
         "stateful" : true
       }, {
         "callback" : "SimHsiHdgIncBy1",
-        "label" : "Increase (1�)",
-        "description" : "MAIN: HSI HDG Knob - Increase (1�)",
+        "label" : "Increase (1°)",
+        "description" : "MAIN: HSI HDG Knob - Increase (1°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
         "stateful" : true
       }, {
         "callback" : "SimHsiHdgDecBy1",
-        "label" : "Decrease (1�)",
-        "description" : "MAIN: HSI HDG Knob - Decrease (1�)",
+        "label" : "Decrease (1°)",
+        "description" : "MAIN: HSI HDG Knob - Decrease (1°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9622,32 +9622,32 @@
       "stateful" : true,
       "controlConfigurations" : [ {
         "callback" : "SimHsiCourseInc",
-        "label" : "Increase (5�)",
-        "description" : "MAIN: HSI CRS Knob - Increase (5�)",
+        "label" : "Increase (5°)",
+        "description" : "MAIN: HSI CRS Knob - Increase (5°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
         "stateful" : true
       }, {
         "callback" : "SimHsiCourseDec",
-        "label" : "Decrease (5�)",
-        "description" : "MAIN: HSI CRS Knob - Decrease (5�)",
+        "label" : "Decrease (5°)",
+        "description" : "MAIN: HSI CRS Knob - Decrease (5°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
         "stateful" : true
       }, {
         "callback" : "SimHsiCrsIncBy1",
-        "label" : "Increase (1�)",
-        "description" : "MAIN: HSI CRS Knob - Increase (1�)",
+        "label" : "Increase (1°)",
+        "description" : "MAIN: HSI CRS Knob - Increase (1°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
         "stateful" : true
       }, {
         "callback" : "SimHsiCrsDecBy1",
-        "label" : "Decrease (1�)",
-        "description" : "MAIN: HSI CRS Knob - Decrease (1�)",
+        "label" : "Decrease (1°)",
+        "description" : "MAIN: HSI CRS Knob - Decrease (1°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
@@ -9659,32 +9659,32 @@
       "stateful" : true,
       "controlConfigurations" : [ {
         "callback" : "SimAltPressInc",
-        "label" : "Incr. (5�)",
-        "description" : "MAIN: Altimeter Pressure Knob - Incr. (5�)",
+        "label" : "Incr. (5°)",
+        "description" : "MAIN: Altimeter Pressure Knob - Incr. (5°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
         "stateful" : true
       }, {
         "callback" : "SimAltPressDec",
-        "label" : "Decr. (5�)",
-        "description" : "MAIN: Altimeter Pressure Knob - Decr. (5�)",
+        "label" : "Decr. (5°)",
+        "description" : "MAIN: Altimeter Pressure Knob - Decr. (5°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
         "stateful" : true
       }, {
         "callback" : "SimAltPressIncBy1",
-        "label" : "Incr. (1�)",
-        "description" : "MAIN: Altimeter Pressure Knob - Incr. (1�)",
+        "label" : "Incr. (1°)",
+        "description" : "MAIN: Altimeter Pressure Knob - Incr. (1°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
         "stateful" : true
       }, {
         "callback" : "SimAltPressDecBy1",
-        "label" : "Decr. (1�)",
-        "description" : "MAIN: Altimeter Pressure Knob - Decr. (1�)",
+        "label" : "Decr. (1°)",
+        "description" : "MAIN: Altimeter Pressure Knob - Decr. (1°)",
         "style" : "knob",
         "role" : "none",
         "type" : "button",
