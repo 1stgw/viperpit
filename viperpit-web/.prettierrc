@@ -1,7 +1,0 @@
-{
-  "arrowParens": "avoid",
-  "endOfLine": "crlf",
-  "jsxBracketSameLine": true,
-  "printWidth": 120,
-  "trailingComma": "none"
-}

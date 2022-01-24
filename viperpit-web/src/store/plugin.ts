@@ -1,11 +1,11 @@
 import Vue from "vue";
 import Stomp from "webstomp-client";
 
-export default function stompPlugin(store) {
+export default function stompPlugin(store: any) {
   const agentId = window.location.hostname;
   const url = "ws://" + agentId + ":8090/sockets";
   const socket = new WebSocket(url);
-  var client = Stomp.over(socket, {
+  const client = Stomp.over(socket, {
     debug: false
   });
   Vue.prototype.$stomp = client;

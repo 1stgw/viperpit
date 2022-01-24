@@ -1,4 +1,4 @@
-import Cockpit from "@/components/cockpit/Cockpit";
+import Cockpit from "@/components/cockpit/Cockpit.vue";
 import Vue from "vue";
 import VueRouter from "vue-router";
 

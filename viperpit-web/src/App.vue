@@ -43,10 +43,11 @@
   </v-app>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
 import { mapActions, mapGetters } from "vuex";
 
-export default {
+export default Vue.extend({
   name: "App",
   data() {
     return {
@@ -59,7 +60,7 @@ export default {
   methods: {
     ...mapActions(["resetStates"])
   }
-};
+});
 </script>
 
 <style>

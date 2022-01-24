@@ -86,7 +86,9 @@ export default {
         return null;
       },
       // eslint-disable-next-line no-unused-vars
-      set: function (newValue) {}
+      set: function () {
+        // Empty on purpose
+      }
     }
   },
   methods: {

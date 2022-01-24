@@ -15,9 +15,11 @@
 </template>
 
 <script>
+import Vue from "vue";
 import ControlGroup from "@/components/controls/ControlGroup";
 
-export default {
+export default Vue.extend({
+  // eslint-disable-next-line vue/multi-word-component-names
   name: "Panel",
   components: {
     ControlGroup
@@ -29,5 +31,5 @@ export default {
       default: null
     }
   }
-};
+});
 </script>

@@ -6,14 +6,18 @@
   "author": "sneakpeek <sneakpeek@viperpit.de>",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build --modern",
+    "lint": "vue-cli-service lint",
+    "production": "vue-cli-service serve --mode production"
   },
   "dependencies": {
-    "@mdi/font": "^5.5.55",
-    "roboto-fontface": "*",
-    "typeface-oxanium": "^1.1.4",
+    "@mdi/font": "^6.5.95",
+    "typeface-roboto": "^1.1.13",
+    "typeface-oxanium": "^1.1.13",
     "vue": "^2.6.14",
+    "vue-class-component": "^7.2.6",
+    "vue-loader": "^15.9.8",
+    "vue-property-decorator": "^9.1.2",
     "vue-resource": "^1.5.3",
     "vue-router": "^3.5.3",
     "vuetify": "^2.6.2",
@@ -21,22 +25,59 @@
     "webstomp-client": "^1.2.6"
   },
   "devDependencies": {
-    "@vue/cli": "^4.5.15",
-    "@vue/cli-plugin-babel": "^4.5.15",
-    "@vue/cli-plugin-eslint": "^4.5.15",
-    "@vue/cli-plugin-router": "^4.5.15",
-    "@vue/cli-plugin-vuex": "^4.5.15",
-    "@vue/cli-service": "^4.5.15",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-vue": "^6.2.2",
-    "prettier": "^2.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vue/cli-plugin-babel": "~5.0.0-rc.2",
+    "@vue/cli-plugin-eslint": "~5.0.0-rc.2",
+    "@vue/cli-plugin-pwa": "~5.0.0-rc.2",
+    "@vue/cli-plugin-router": "~5.0.0-rc.2",
+    "@vue/cli-plugin-typescript": "~5.0.0-rc.2",
+    "@vue/cli-plugin-vuex": "~5.0.0-rc.2",
+    "@vue/cli-service": "~5.0.0-rc.2",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.1.1",
     "sass": "~1.32.6",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^12.3.0",
+    "typescript": "^4.5.2",
     "vue-cli-plugin-vuetify": "^2.4.5",
     "vue-template-compiler": "^2.6.14",
     "vuetify-loader": "^1.7.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/strongly-recommended",
+      "@vue/typescript/recommended",
+      "@vue/typescript",
+      "plugin:prettier/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {}
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "endOfLine": "auto",
+    "jsxBracketSameLine": true,
+    "printWidth": 120,
+    "trailingComma": "none"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
   }
 }

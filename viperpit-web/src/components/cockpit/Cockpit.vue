@@ -35,11 +35,13 @@
   </v-container>
 </template>
 
-<script>
-import Panel from "@/components/cockpit/Panel";
+<script lang="ts">
+import Panel from "@/components/cockpit/Panel.vue";
+import Vue from "vue";
 import { mapGetters } from "vuex";
 
-export default {
+export default Vue.extend({
+  // eslint-disable-next-line vue/multi-word-component-names
   name: "Cockpit",
   components: {
     Panel
@@ -68,5 +70,5 @@ export default {
   computed: {
     ...mapGetters(["getConfiguration", "getConsole", "getConsoles", "getPanel", "getPanels", "isConnected"])
   }
-};
+});
 </script>
