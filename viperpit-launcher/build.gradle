@@ -1,6 +1,5 @@
 plugins {
 	id 'java'
-	id 'application'
 	id 'org.springframework.boot'
 	id 'io.spring.dependency-management'
 }
@@ -8,10 +7,16 @@ plugins {
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
-tasks.jar {
+bootJar {
+	classifier = 'boot'
 	manifest {
-		attributes('Automatic-Module-Name': 'de.viperpit.launcher')
+		attributes 'Automatic-Module-Name': 'de.viperpit.launcher'
+		attributes 'Start-Class': 'de.viperpit.launcher.LauncherApplication'
 	}
+}
+
+jar {
+	classifier = ''
 }
 
 dependencies {
@@ -20,24 +25,12 @@ dependencies {
 	implementation 'ch.qos.logback:logback-classic'
 	implementation 'org.springframework.boot:spring-boot'
 	implementation 'org.springframework.boot:spring-boot-autoconfigure'
+	implementation 'org.springframework.boot:spring-boot-loader'
 }
 
-mainClassName = 'de.viperpit.launcher.LauncherApplication'
-
-task assembleJpackageLauncher(type: Copy) {
-	dependsOn jar.archiveFile
-	from jar.archiveFile into "${project.buildDir}/jpackage-libs"
-}
-
-task assembleJpackageDependencies(type: Copy) {
-	dependsOn configurations.runtimeClasspath
-	from configurations.runtimeClasspath into "${project.buildDir}/jpackage-libs"
-}
 
 task runJpackage(type: Exec) {
     dependsOn bootJar
-	dependsOn assembleJpackageLauncher
-	dependsOn assembleJpackageDependencies
 	def javaHome = System.properties['java.home']
 	if (javaHome == null) {
 		throw new RuntimeException("javaHome is not defined.")
@@ -47,17 +40,17 @@ task runJpackage(type: Exec) {
 	def vendor = 'Viper Pits Devs'
 	def resourcesDirectory = project.sourceSets.main.resources.srcDirs.first()
 	commandLine "$javaHome/bin/jpackage",
-				'--resource-dir', "$resourcesDirectory",
-				'--input', "$project.buildDir/jpackage-libs",
+				'--resource-dir', resourcesDirectory,
+				'--input', "$project.buildDir/libs",
 				'--dest', "$project.buildDir/jpackage",
-				'--name', "$name",
-				'--description', "$description",
-				'--vendor', "$vendor",
+				'--name', name,
+				'--description', description,
+				'--vendor', vendor,
 				'--java-options', '-Djava.library.path=$ROOTDIR;$ROOTDIR/app;C:\\Windows\\System32',
 				'--icon', "$resourcesDirectory/icon.ico",
-				'--app-version', "$project.version",
+				'--app-version', project.version,
 				'--main-class', "org.springframework.boot.loader.JarLauncher",
-				'--main-jar', "$jar.archiveName",
+				'--main-jar', bootJar.archiveFileName.get(),
 				'--win-console',
 				'--win-dir-chooser',
 				'--win-per-user-install'
