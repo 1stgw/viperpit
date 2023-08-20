@@ -114,6 +114,9 @@ public abstract class AbstractSharedMemoryStateProvider {
 		"SimFuelSwitchWingInt",
 		"SimFuelTransNorm",
 		"SimFuelTransWing",
+		"SimFuselageLightDown",
+		"SimFuselageLightMid",
+		"SimFuselageLightUp",
 		"SimGPSOff",
 		"SimGPSOn",
 		"SimGndJettOff",
@@ -226,8 +229,12 @@ public abstract class AbstractSharedMemoryStateProvider {
 		"SimUFCOn",
 		"SimVMSOff",
 		"SimVMSOn",
-		"SimWingLightBrt",
-		"SimWingLightOff"
+		"SimWingLightDown",
+		"SimWingLightMid",
+		"SimWingLightUp",
+		"SimXMit1",
+		"SimXMit2",
+		"SimXMit3"
 	);
 
 	@Autowired
@@ -451,6 +458,12 @@ public abstract class AbstractSharedMemoryStateProvider {
 				return getSimFuelTransNorm(callback, sharedMemoryData);
 			case "SimFuelTransWing":
 				return getSimFuelTransWing(callback, sharedMemoryData);
+			case "SimFuselageLightDown":
+				return getSimFuselageLightDown(callback, sharedMemoryData);
+			case "SimFuselageLightMid":
+				return getSimFuselageLightMid(callback, sharedMemoryData);
+			case "SimFuselageLightUp":
+				return getSimFuselageLightUp(callback, sharedMemoryData);
 			case "SimGPSOff":
 				return getSimGPSOff(callback, sharedMemoryData);
 			case "SimGPSOn":
@@ -675,10 +688,18 @@ public abstract class AbstractSharedMemoryStateProvider {
 				return getSimVMSOff(callback, sharedMemoryData);
 			case "SimVMSOn":
 				return getSimVMSOn(callback, sharedMemoryData);
-			case "SimWingLightBrt":
-				return getSimWingLightBrt(callback, sharedMemoryData);
-			case "SimWingLightOff":
-				return getSimWingLightOff(callback, sharedMemoryData);
+			case "SimWingLightDown":
+				return getSimWingLightDown(callback, sharedMemoryData);
+			case "SimWingLightMid":
+				return getSimWingLightMid(callback, sharedMemoryData);
+			case "SimWingLightUp":
+				return getSimWingLightUp(callback, sharedMemoryData);
+			case "SimXMit1":
+				return getSimXMit1(callback, sharedMemoryData);
+			case "SimXMit2":
+				return getSimXMit2(callback, sharedMemoryData);
+			case "SimXMit3":
+				return getSimXMit3(callback, sharedMemoryData);
 			default:
 				return null;
 		}
@@ -1077,6 +1098,18 @@ public abstract class AbstractSharedMemoryStateProvider {
 	}
 	
 	protected Object getSimFuelTransWing(String callback, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getSimFuselageLightDown(String callback, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getSimFuselageLightMid(String callback, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getSimFuselageLightUp(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
@@ -1528,11 +1561,27 @@ public abstract class AbstractSharedMemoryStateProvider {
 		return null;
 	}
 	
-	protected Object getSimWingLightBrt(String callback, SharedMemoryData sharedMemoryData) {
+	protected Object getSimWingLightDown(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	
-	protected Object getSimWingLightOff(String callback, SharedMemoryData sharedMemoryData) {
+	protected Object getSimWingLightMid(String callback, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getSimWingLightUp(String callback, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getSimXMit1(String callback, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getSimXMit2(String callback, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getSimXMit3(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	

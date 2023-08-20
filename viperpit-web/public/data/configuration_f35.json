@@ -190,13 +190,13 @@
           "stateful" : true
         } ]
       }, {
-        "id" : "FLT: FLCS Switch",
-        "label" : "Flcs",
+        "id" : "FLT: FLCS RESET Switch",
+        "label" : "Flcs Reset",
         "stateful" : false,
         "controlConfigurations" : [ {
           "callback" : "SimFLCSReset",
           "label" : "Hold",
-          "description" : "FLT: FLCS Switch - Hold",
+          "description" : "FLT: FLCS RESET Switch - Hold",
           "style" : "button",
           "role" : "none",
           "type" : "button",
@@ -668,7 +668,7 @@
         "label" : "Wing/tail",
         "stateful" : true,
         "controlConfigurations" : [ {
-          "callback" : "SimWingLightBrt",
+          "callback" : "SimWingLightUp",
           "label" : "BRT",
           "description" : "EXT: WING/TAIL Switch - BRT",
           "style" : "switch",
@@ -676,34 +676,113 @@
           "type" : "switch",
           "stateful" : true
         }, {
-          "callback" : "SimWingLightOff",
+          "callback" : "SimWingLightMid",
           "label" : "OFF",
           "description" : "EXT: WING/TAIL Switch - OFF",
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
           "stateful" : true
+        }, {
+          "callback" : "SimWingLightDown",
+          "label" : "DIM",
+          "description" : "EXT: WING/TAIL Switch - DIM",
+          "style" : "switch",
+          "role" : "none",
+          "type" : "switch",
+          "stateful" : true
         } ]
       }, {
-        "id" : "EXT: MASTER Switch",
-        "label" : "Master",
+        "id" : "EXT: FUSELAGE Switch",
+        "label" : "Fuselage",
         "stateful" : true,
         "controlConfigurations" : [ {
-          "callback" : "SimExtlMasterNorm",
-          "label" : "NORM",
-          "description" : "EXT: MASTER Switch - NORM",
+          "callback" : "SimFuselageLightUp",
+          "label" : "BRT",
+          "description" : "EXT: FUSELAGE Switch - BRT",
           "style" : "switch",
-          "role" : "on",
+          "role" : "none",
           "type" : "switch",
           "stateful" : true
         }, {
-          "callback" : "SimExtlMasterOff",
+          "callback" : "SimFuselageLightMid",
           "label" : "OFF",
-          "description" : "EXT: MASTER Switch - OFF",
+          "description" : "EXT: FUSELAGE Switch - OFF",
           "style" : "switch",
           "role" : "off",
           "type" : "switch",
           "stateful" : true
+        }, {
+          "callback" : "SimFuselageLightDown",
+          "label" : "DIM",
+          "description" : "EXT: FUSELAGE Switch - DIM",
+          "style" : "switch",
+          "role" : "none",
+          "type" : "switch",
+          "stateful" : true
+        } ]
+      }, {
+        "id" : "EXT: FORM Knob",
+        "label" : "Form",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "callback" : "SimStepFormationLightsUp",
+          "label" : "Step Up",
+          "description" : "EXT: FORM Knob - Step Up",
+          "style" : "knob",
+          "role" : "up",
+          "type" : "button",
+          "stateful" : false
+        }, {
+          "callback" : "SimStepFormationLightsDown",
+          "label" : "Step Down",
+          "description" : "EXT: FORM Knob - Step Down",
+          "style" : "knob",
+          "role" : "down",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "EXT: MASTER Switch/Knob",
+        "label" : "Master Switch/",
+        "stateful" : true,
+        "controlConfigurations" : [ {
+          "callback" : "SimExtlMasterOff",
+          "label" : "OFF",
+          "description" : "EXT: MASTER Switch/Knob - OFF",
+          "style" : "switch",
+          "role" : "off",
+          "type" : "switch",
+          "stateful" : true
+        }, {
+          "callback" : "SimExtlMasterNorm",
+          "label" : "NORM",
+          "description" : "EXT: MASTER Switch/Knob - NORM",
+          "style" : "switch",
+          "role" : "on",
+          "type" : "switch",
+          "stateful" : true
+        } ]
+      }, {
+        "id" : "EXT: AERIAL REFUELING Knob",
+        "label" : "Aerial Refueling",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "callback" : "SimStepAARLightsUp",
+          "label" : "Step Up",
+          "description" : "EXT: AERIAL REFUELING Knob - Step Up",
+          "style" : "knob",
+          "role" : "up",
+          "type" : "button",
+          "stateful" : false
+        }, {
+          "callback" : "SimStepAARLightsDown",
+          "label" : "Step Down",
+          "description" : "EXT: AERIAL REFUELING Knob - Step Down",
+          "style" : "knob",
+          "role" : "down",
+          "type" : "button",
+          "stateful" : false
         } ]
       } ]
     }, {
@@ -849,6 +928,153 @@
           "role" : "off",
           "type" : "switch",
           "stateful" : true
+        } ]
+      }, {
+        "id" : "ECM: XMT Switch",
+        "label" : "Xmt",
+        "stateful" : true,
+        "controlConfigurations" : [ {
+          "callback" : "SimXMit1",
+          "label" : "1",
+          "description" : "ECM: XMT Switch - 1",
+          "style" : "switch",
+          "role" : "none",
+          "type" : "switch",
+          "stateful" : true
+        }, {
+          "callback" : "SimXMit2",
+          "label" : "2",
+          "description" : "ECM: XMT Switch - 2",
+          "style" : "switch",
+          "role" : "none",
+          "type" : "switch",
+          "stateful" : true
+        }, {
+          "callback" : "SimXMit3",
+          "label" : "3",
+          "description" : "ECM: XMT Switch - 3",
+          "style" : "switch",
+          "role" : "none",
+          "type" : "switch",
+          "stateful" : true
+        } ]
+      }, {
+        "id" : "ECM: BIT Button",
+        "label" : "Bit",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "callback" : "SimECMBit",
+          "label" : "Hold",
+          "description" : "ECM: BIT Button - Hold",
+          "style" : "button",
+          "role" : "none",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "ECM: Mode 1",
+        "label" : "Mode 1",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "callback" : "SimEcmMode1On",
+          "label" : "On",
+          "description" : "ECM: Mode 1 - On",
+          "style" : "button",
+          "role" : "on",
+          "type" : "button",
+          "stateful" : false
+        }, {
+          "callback" : "SimEcmMode1Off",
+          "label" : "Off",
+          "description" : "ECM: Mode 1 - Off",
+          "style" : "button",
+          "role" : "off",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "ECM: Mode 2",
+        "label" : "Mode 2",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "callback" : "SimEcmMode2On",
+          "label" : "On",
+          "description" : "ECM: Mode 2 - On",
+          "style" : "button",
+          "role" : "on",
+          "type" : "button",
+          "stateful" : false
+        }, {
+          "callback" : "SimEcmMode2Off",
+          "label" : "Off",
+          "description" : "ECM: Mode 2 - Off",
+          "style" : "button",
+          "role" : "off",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "ECM: Mode 3",
+        "label" : "Mode 3",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "callback" : "SimEcmMode3On",
+          "label" : "On",
+          "description" : "ECM: Mode 3 - On",
+          "style" : "button",
+          "role" : "on",
+          "type" : "button",
+          "stateful" : false
+        }, {
+          "callback" : "SimEcmMode3Off",
+          "label" : "Off",
+          "description" : "ECM: Mode 3 - Off",
+          "style" : "button",
+          "role" : "off",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "ECM: Mode 4",
+        "label" : "Mode 4",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "callback" : "SimEcmMode4On",
+          "label" : "On",
+          "description" : "ECM: Mode 4 - On",
+          "style" : "button",
+          "role" : "on",
+          "type" : "button",
+          "stateful" : false
+        }, {
+          "callback" : "SimEcmMode4Off",
+          "label" : "Off",
+          "description" : "ECM: Mode 4 - Off",
+          "style" : "button",
+          "role" : "off",
+          "type" : "button",
+          "stateful" : false
+        } ]
+      }, {
+        "id" : "ECM: Mode 5",
+        "label" : "Mode 5",
+        "stateful" : false,
+        "controlConfigurations" : [ {
+          "callback" : "SimEcmMode5On",
+          "label" : "On",
+          "description" : "ECM: Mode 5 - On",
+          "style" : "button",
+          "role" : "on",
+          "type" : "button",
+          "stateful" : false
+        }, {
+          "callback" : "SimEcmMode5Off",
+          "label" : "Off",
+          "description" : "ECM: Mode 5 - Off",
+          "style" : "button",
+          "role" : "off",
+          "type" : "button",
+          "stateful" : false
         } ]
       } ]
     }, {
@@ -3974,52 +4200,56 @@
           "stateful" : false
         } ]
       }, {
-        "id" : "RADIO: Tanker Menu",
-        "label" : "Tanker Menu",
+        "id" : "RADIO: Other Agencies Menu",
+        "label" : "Other Agencies Menu",
         "stateful" : false,
         "controlConfigurations" : [ {
           "callback" : "RadioTankerCommand",
-          "label" : "Tanker Menu",
-          "description" : "RADIO: Tanker Menu",
+          "label" : "Other Agencies Menu",
+          "description" : "RADIO: Other Agencies Menu",
           "style" : "button",
           "role" : "none",
           "type" : "button",
           "stateful" : false
         } ]
-      }, {
-        "id" : "Radio-Send Message Tanker",
-        "label" : "Send Message Tanker",
+      } ]
+    }, {
+      "id" : "flightCommands",
+      "label" : "FLIGHT COMMANDS",
+      "controlGroupConfigurations" : [ {
+        "id" : "Radio-Send Message Other",
+        "label" : "Send Message Other",
         "stateful" : false,
         "controlConfigurations" : [ {
           "callback" : "RadioMessageSend",
-          "label" : "Send Message Tanker",
-          "description" : "Radio-Send Message Tanker",
+          "label" : "Send Message Other",
+          "description" : "Radio-Send Message Other",
           "style" : "button",
           "role" : "none",
           "type" : "button",
           "stateful" : false
         } ]
       }, {
-        "id" : "Radio-Next Menu Tanker",
-        "label" : "Next Menu Tanker",
+        "id" : "Radio-Next Menu Other",
+        "label" : "Next Menu Other",
         "stateful" : false,
         "controlConfigurations" : [ {
           "callback" : "OTWRadioMenuStep",
-          "label" : "Next Menu Tanker",
-          "description" : "Radio-Next Menu Tanker",
+          "label" : "Next Menu Other",
+          "description" : "Radio-Next Menu Other",
           "style" : "button",
           "role" : "none",
           "type" : "button",
           "stateful" : false
         } ]
       }, {
-        "id" : "Radio-Previous Menu Tanker",
-        "label" : "Previous Menu Tanker",
+        "id" : "Radio-Previous Menu Other",
+        "label" : "Previous Menu Other",
         "stateful" : false,
         "controlConfigurations" : [ {
           "callback" : "OTWRadioMenuStepBack",
-          "label" : "Previous Menu Tanker",
-          "description" : "Radio-Previous Menu Tanker",
+          "label" : "Previous Menu Other",
+          "description" : "Radio-Previous Menu Other",
           "style" : "button",
           "role" : "none",
           "type" : "button",
@@ -4159,7 +4389,7 @@
   }, {
     "callback" : "SimFLCSReset",
     "label" : "Hold",
-    "description" : "FLT: FLCS Switch - Hold",
+    "description" : "FLT: FLCS RESET Switch - Hold",
     "style" : "button",
     "role" : "none",
     "type" : "button",
@@ -4525,7 +4755,7 @@
     "type" : "switch",
     "stateful" : true
   }, {
-    "callback" : "SimWingLightBrt",
+    "callback" : "SimWingLightUp",
     "label" : "BRT",
     "description" : "EXT: WING/TAIL Switch - BRT",
     "style" : "switch",
@@ -4533,7 +4763,7 @@
     "type" : "switch",
     "stateful" : true
   }, {
-    "callback" : "SimWingLightOff",
+    "callback" : "SimWingLightMid",
     "label" : "OFF",
     "description" : "EXT: WING/TAIL Switch - OFF",
     "style" : "switch",
@@ -4541,21 +4771,85 @@
     "type" : "switch",
     "stateful" : true
   }, {
+    "callback" : "SimWingLightDown",
+    "label" : "DIM",
+    "description" : "EXT: WING/TAIL Switch - DIM",
+    "style" : "switch",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "callback" : "SimFuselageLightUp",
+    "label" : "BRT",
+    "description" : "EXT: FUSELAGE Switch - BRT",
+    "style" : "switch",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "callback" : "SimFuselageLightMid",
+    "label" : "OFF",
+    "description" : "EXT: FUSELAGE Switch - OFF",
+    "style" : "switch",
+    "role" : "off",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "callback" : "SimFuselageLightDown",
+    "label" : "DIM",
+    "description" : "EXT: FUSELAGE Switch - DIM",
+    "style" : "switch",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "callback" : "SimStepFormationLightsUp",
+    "label" : "Step Up",
+    "description" : "EXT: FORM Knob - Step Up",
+    "style" : "knob",
+    "role" : "up",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimStepFormationLightsDown",
+    "label" : "Step Down",
+    "description" : "EXT: FORM Knob - Step Down",
+    "style" : "knob",
+    "role" : "down",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimExtlMasterOff",
+    "label" : "OFF",
+    "description" : "EXT: MASTER Switch/Knob - OFF",
+    "style" : "switch",
+    "role" : "off",
+    "type" : "switch",
+    "stateful" : true
+  }, {
     "callback" : "SimExtlMasterNorm",
     "label" : "NORM",
-    "description" : "EXT: MASTER Switch - NORM",
+    "description" : "EXT: MASTER Switch/Knob - NORM",
     "style" : "switch",
     "role" : "on",
     "type" : "switch",
     "stateful" : true
   }, {
-    "callback" : "SimExtlMasterOff",
-    "label" : "OFF",
-    "description" : "EXT: MASTER Switch - OFF",
-    "style" : "switch",
-    "role" : "off",
-    "type" : "switch",
-    "stateful" : true
+    "callback" : "SimStepAARLightsUp",
+    "label" : "Step Up",
+    "description" : "EXT: AERIAL REFUELING Knob - Step Up",
+    "style" : "knob",
+    "role" : "up",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimStepAARLightsDown",
+    "label" : "Step Down",
+    "description" : "EXT: AERIAL REFUELING Knob - Step Down",
+    "style" : "knob",
+    "role" : "down",
+    "type" : "button",
+    "stateful" : false
   }, {
     "callback" : "SimEpuOn",
     "label" : "ON",
@@ -4660,6 +4954,118 @@
     "role" : "off",
     "type" : "switch",
     "stateful" : true
+  }, {
+    "callback" : "SimXMit1",
+    "label" : "1",
+    "description" : "ECM: XMT Switch - 1",
+    "style" : "switch",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "callback" : "SimXMit2",
+    "label" : "2",
+    "description" : "ECM: XMT Switch - 2",
+    "style" : "switch",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "callback" : "SimXMit3",
+    "label" : "3",
+    "description" : "ECM: XMT Switch - 3",
+    "style" : "switch",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "callback" : "SimECMBit",
+    "label" : "Hold",
+    "description" : "ECM: BIT Button - Hold",
+    "style" : "button",
+    "role" : "none",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimEcmMode1On",
+    "label" : "On",
+    "description" : "ECM: Mode 1 - On",
+    "style" : "button",
+    "role" : "on",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimEcmMode1Off",
+    "label" : "Off",
+    "description" : "ECM: Mode 1 - Off",
+    "style" : "button",
+    "role" : "off",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimEcmMode2On",
+    "label" : "On",
+    "description" : "ECM: Mode 2 - On",
+    "style" : "button",
+    "role" : "on",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimEcmMode2Off",
+    "label" : "Off",
+    "description" : "ECM: Mode 2 - Off",
+    "style" : "button",
+    "role" : "off",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimEcmMode3On",
+    "label" : "On",
+    "description" : "ECM: Mode 3 - On",
+    "style" : "button",
+    "role" : "on",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimEcmMode3Off",
+    "label" : "Off",
+    "description" : "ECM: Mode 3 - Off",
+    "style" : "button",
+    "role" : "off",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimEcmMode4On",
+    "label" : "On",
+    "description" : "ECM: Mode 4 - On",
+    "style" : "button",
+    "role" : "on",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimEcmMode4Off",
+    "label" : "Off",
+    "description" : "ECM: Mode 4 - Off",
+    "style" : "button",
+    "role" : "off",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimEcmMode5On",
+    "label" : "On",
+    "description" : "ECM: Mode 5 - On",
+    "style" : "button",
+    "role" : "on",
+    "type" : "button",
+    "stateful" : false
+  }, {
+    "callback" : "SimEcmMode5Off",
+    "label" : "Off",
+    "description" : "ECM: Mode 5 - Off",
+    "style" : "button",
+    "role" : "off",
+    "type" : "button",
+    "stateful" : false
   }, {
     "callback" : "SimJfsStartUp",
     "label" : "START 1",
@@ -6870,32 +7276,32 @@
     "stateful" : false
   }, {
     "callback" : "RadioTankerCommand",
-    "label" : "Tanker Menu",
-    "description" : "RADIO: Tanker Menu",
+    "label" : "Other Agencies Menu",
+    "description" : "RADIO: Other Agencies Menu",
     "style" : "button",
     "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
     "callback" : "RadioMessageSend",
-    "label" : "Send Message Tanker",
-    "description" : "Radio-Send Message Tanker",
+    "label" : "Send Message Other",
+    "description" : "Radio-Send Message Other",
     "style" : "button",
     "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
     "callback" : "OTWRadioMenuStep",
-    "label" : "Next Menu Tanker",
-    "description" : "Radio-Next Menu Tanker",
+    "label" : "Next Menu Other",
+    "description" : "Radio-Next Menu Other",
     "style" : "button",
     "role" : "none",
     "type" : "button",
     "stateful" : false
   }, {
     "callback" : "OTWRadioMenuStepBack",
-    "label" : "Previous Menu Tanker",
-    "description" : "Radio-Previous Menu Tanker",
+    "label" : "Previous Menu Other",
+    "description" : "Radio-Previous Menu Other",
     "style" : "button",
     "role" : "none",
     "type" : "button",
@@ -7087,13 +7493,13 @@
         "stateful" : true
       } ]
     }, {
-      "id" : "FLT: FLCS Switch",
-      "label" : "Flcs",
+      "id" : "FLT: FLCS RESET Switch",
+      "label" : "Flcs Reset",
       "stateful" : false,
       "controlConfigurations" : [ {
         "callback" : "SimFLCSReset",
         "label" : "Hold",
-        "description" : "FLT: FLCS Switch - Hold",
+        "description" : "FLT: FLCS RESET Switch - Hold",
         "style" : "button",
         "role" : "none",
         "type" : "button",
@@ -7565,7 +7971,7 @@
       "label" : "Wing/tail",
       "stateful" : true,
       "controlConfigurations" : [ {
-        "callback" : "SimWingLightBrt",
+        "callback" : "SimWingLightUp",
         "label" : "BRT",
         "description" : "EXT: WING/TAIL Switch - BRT",
         "style" : "switch",
@@ -7573,34 +7979,113 @@
         "type" : "switch",
         "stateful" : true
       }, {
-        "callback" : "SimWingLightOff",
+        "callback" : "SimWingLightMid",
         "label" : "OFF",
         "description" : "EXT: WING/TAIL Switch - OFF",
         "style" : "switch",
         "role" : "off",
         "type" : "switch",
         "stateful" : true
+      }, {
+        "callback" : "SimWingLightDown",
+        "label" : "DIM",
+        "description" : "EXT: WING/TAIL Switch - DIM",
+        "style" : "switch",
+        "role" : "none",
+        "type" : "switch",
+        "stateful" : true
       } ]
     }, {
-      "id" : "EXT: MASTER Switch",
-      "label" : "Master",
+      "id" : "EXT: FUSELAGE Switch",
+      "label" : "Fuselage",
       "stateful" : true,
       "controlConfigurations" : [ {
-        "callback" : "SimExtlMasterNorm",
-        "label" : "NORM",
-        "description" : "EXT: MASTER Switch - NORM",
+        "callback" : "SimFuselageLightUp",
+        "label" : "BRT",
+        "description" : "EXT: FUSELAGE Switch - BRT",
         "style" : "switch",
-        "role" : "on",
+        "role" : "none",
         "type" : "switch",
         "stateful" : true
       }, {
-        "callback" : "SimExtlMasterOff",
+        "callback" : "SimFuselageLightMid",
         "label" : "OFF",
-        "description" : "EXT: MASTER Switch - OFF",
+        "description" : "EXT: FUSELAGE Switch - OFF",
         "style" : "switch",
         "role" : "off",
         "type" : "switch",
         "stateful" : true
+      }, {
+        "callback" : "SimFuselageLightDown",
+        "label" : "DIM",
+        "description" : "EXT: FUSELAGE Switch - DIM",
+        "style" : "switch",
+        "role" : "none",
+        "type" : "switch",
+        "stateful" : true
+      } ]
+    }, {
+      "id" : "EXT: FORM Knob",
+      "label" : "Form",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "callback" : "SimStepFormationLightsUp",
+        "label" : "Step Up",
+        "description" : "EXT: FORM Knob - Step Up",
+        "style" : "knob",
+        "role" : "up",
+        "type" : "button",
+        "stateful" : false
+      }, {
+        "callback" : "SimStepFormationLightsDown",
+        "label" : "Step Down",
+        "description" : "EXT: FORM Knob - Step Down",
+        "style" : "knob",
+        "role" : "down",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "EXT: MASTER Switch/Knob",
+      "label" : "Master Switch/",
+      "stateful" : true,
+      "controlConfigurations" : [ {
+        "callback" : "SimExtlMasterOff",
+        "label" : "OFF",
+        "description" : "EXT: MASTER Switch/Knob - OFF",
+        "style" : "switch",
+        "role" : "off",
+        "type" : "switch",
+        "stateful" : true
+      }, {
+        "callback" : "SimExtlMasterNorm",
+        "label" : "NORM",
+        "description" : "EXT: MASTER Switch/Knob - NORM",
+        "style" : "switch",
+        "role" : "on",
+        "type" : "switch",
+        "stateful" : true
+      } ]
+    }, {
+      "id" : "EXT: AERIAL REFUELING Knob",
+      "label" : "Aerial Refueling",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "callback" : "SimStepAARLightsUp",
+        "label" : "Step Up",
+        "description" : "EXT: AERIAL REFUELING Knob - Step Up",
+        "style" : "knob",
+        "role" : "up",
+        "type" : "button",
+        "stateful" : false
+      }, {
+        "callback" : "SimStepAARLightsDown",
+        "label" : "Step Down",
+        "description" : "EXT: AERIAL REFUELING Knob - Step Down",
+        "style" : "knob",
+        "role" : "down",
+        "type" : "button",
+        "stateful" : false
       } ]
     } ]
   }, {
@@ -7746,6 +8231,153 @@
         "role" : "off",
         "type" : "switch",
         "stateful" : true
+      } ]
+    }, {
+      "id" : "ECM: XMT Switch",
+      "label" : "Xmt",
+      "stateful" : true,
+      "controlConfigurations" : [ {
+        "callback" : "SimXMit1",
+        "label" : "1",
+        "description" : "ECM: XMT Switch - 1",
+        "style" : "switch",
+        "role" : "none",
+        "type" : "switch",
+        "stateful" : true
+      }, {
+        "callback" : "SimXMit2",
+        "label" : "2",
+        "description" : "ECM: XMT Switch - 2",
+        "style" : "switch",
+        "role" : "none",
+        "type" : "switch",
+        "stateful" : true
+      }, {
+        "callback" : "SimXMit3",
+        "label" : "3",
+        "description" : "ECM: XMT Switch - 3",
+        "style" : "switch",
+        "role" : "none",
+        "type" : "switch",
+        "stateful" : true
+      } ]
+    }, {
+      "id" : "ECM: BIT Button",
+      "label" : "Bit",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "callback" : "SimECMBit",
+        "label" : "Hold",
+        "description" : "ECM: BIT Button - Hold",
+        "style" : "button",
+        "role" : "none",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "ECM: Mode 1",
+      "label" : "Mode 1",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "callback" : "SimEcmMode1On",
+        "label" : "On",
+        "description" : "ECM: Mode 1 - On",
+        "style" : "button",
+        "role" : "on",
+        "type" : "button",
+        "stateful" : false
+      }, {
+        "callback" : "SimEcmMode1Off",
+        "label" : "Off",
+        "description" : "ECM: Mode 1 - Off",
+        "style" : "button",
+        "role" : "off",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "ECM: Mode 2",
+      "label" : "Mode 2",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "callback" : "SimEcmMode2On",
+        "label" : "On",
+        "description" : "ECM: Mode 2 - On",
+        "style" : "button",
+        "role" : "on",
+        "type" : "button",
+        "stateful" : false
+      }, {
+        "callback" : "SimEcmMode2Off",
+        "label" : "Off",
+        "description" : "ECM: Mode 2 - Off",
+        "style" : "button",
+        "role" : "off",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "ECM: Mode 3",
+      "label" : "Mode 3",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "callback" : "SimEcmMode3On",
+        "label" : "On",
+        "description" : "ECM: Mode 3 - On",
+        "style" : "button",
+        "role" : "on",
+        "type" : "button",
+        "stateful" : false
+      }, {
+        "callback" : "SimEcmMode3Off",
+        "label" : "Off",
+        "description" : "ECM: Mode 3 - Off",
+        "style" : "button",
+        "role" : "off",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "ECM: Mode 4",
+      "label" : "Mode 4",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "callback" : "SimEcmMode4On",
+        "label" : "On",
+        "description" : "ECM: Mode 4 - On",
+        "style" : "button",
+        "role" : "on",
+        "type" : "button",
+        "stateful" : false
+      }, {
+        "callback" : "SimEcmMode4Off",
+        "label" : "Off",
+        "description" : "ECM: Mode 4 - Off",
+        "style" : "button",
+        "role" : "off",
+        "type" : "button",
+        "stateful" : false
+      } ]
+    }, {
+      "id" : "ECM: Mode 5",
+      "label" : "Mode 5",
+      "stateful" : false,
+      "controlConfigurations" : [ {
+        "callback" : "SimEcmMode5On",
+        "label" : "On",
+        "description" : "ECM: Mode 5 - On",
+        "style" : "button",
+        "role" : "on",
+        "type" : "button",
+        "stateful" : false
+      }, {
+        "callback" : "SimEcmMode5Off",
+        "label" : "Off",
+        "description" : "ECM: Mode 5 - Off",
+        "style" : "button",
+        "role" : "off",
+        "type" : "button",
+        "stateful" : false
       } ]
     } ]
   }, {
@@ -10847,52 +11479,56 @@
         "stateful" : false
       } ]
     }, {
-      "id" : "RADIO: Tanker Menu",
-      "label" : "Tanker Menu",
+      "id" : "RADIO: Other Agencies Menu",
+      "label" : "Other Agencies Menu",
       "stateful" : false,
       "controlConfigurations" : [ {
         "callback" : "RadioTankerCommand",
-        "label" : "Tanker Menu",
-        "description" : "RADIO: Tanker Menu",
+        "label" : "Other Agencies Menu",
+        "description" : "RADIO: Other Agencies Menu",
         "style" : "button",
         "role" : "none",
         "type" : "button",
         "stateful" : false
       } ]
-    }, {
-      "id" : "Radio-Send Message Tanker",
-      "label" : "Send Message Tanker",
+    } ]
+  }, {
+    "id" : "flightCommands",
+    "label" : "FLIGHT COMMANDS",
+    "controlGroupConfigurations" : [ {
+      "id" : "Radio-Send Message Other",
+      "label" : "Send Message Other",
       "stateful" : false,
       "controlConfigurations" : [ {
         "callback" : "RadioMessageSend",
-        "label" : "Send Message Tanker",
-        "description" : "Radio-Send Message Tanker",
+        "label" : "Send Message Other",
+        "description" : "Radio-Send Message Other",
         "style" : "button",
         "role" : "none",
         "type" : "button",
         "stateful" : false
       } ]
     }, {
-      "id" : "Radio-Next Menu Tanker",
-      "label" : "Next Menu Tanker",
+      "id" : "Radio-Next Menu Other",
+      "label" : "Next Menu Other",
       "stateful" : false,
       "controlConfigurations" : [ {
         "callback" : "OTWRadioMenuStep",
-        "label" : "Next Menu Tanker",
-        "description" : "Radio-Next Menu Tanker",
+        "label" : "Next Menu Other",
+        "description" : "Radio-Next Menu Other",
         "style" : "button",
         "role" : "none",
         "type" : "button",
         "stateful" : false
       } ]
     }, {
-      "id" : "Radio-Previous Menu Tanker",
-      "label" : "Previous Menu Tanker",
+      "id" : "Radio-Previous Menu Other",
+      "label" : "Previous Menu Other",
       "stateful" : false,
       "controlConfigurations" : [ {
         "callback" : "OTWRadioMenuStepBack",
-        "label" : "Previous Menu Tanker",
-        "description" : "Radio-Previous Menu Tanker",
+        "label" : "Previous Menu Other",
+        "description" : "Radio-Previous Menu Other",
         "style" : "button",
         "role" : "none",
         "type" : "button",

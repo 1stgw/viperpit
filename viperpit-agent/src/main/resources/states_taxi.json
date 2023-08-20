@@ -311,13 +311,48 @@
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "SimWingLightBrt",
-    "relatedStateConfigurations" : [ "SimWingLightOff" ],
+    "callback" : "SimWingLightUp",
+    "relatedStateConfigurations" : [ "SimWingLightMid", "SimWingLightDown" ],
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "SimWingLightOff",
-    "relatedStateConfigurations" : [ "SimWingLightBrt" ],
+    "callback" : "SimWingLightMid",
+    "relatedStateConfigurations" : [ "SimWingLightUp", "SimWingLightDown" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimWingLightDown",
+    "relatedStateConfigurations" : [ "SimWingLightUp", "SimWingLightMid" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimFuselageLightUp",
+    "relatedStateConfigurations" : [ "SimFuselageLightMid", "SimFuselageLightDown" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimFuselageLightMid",
+    "relatedStateConfigurations" : [ "SimFuselageLightUp", "SimFuselageLightDown" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimFuselageLightDown",
+    "relatedStateConfigurations" : [ "SimFuselageLightUp", "SimFuselageLightMid" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimStepFormationLightsUp",
+    "relatedStateConfigurations" : [ "SimStepFormationLightsDown" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimStepFormationLightsDown",
+    "relatedStateConfigurations" : [ "SimStepFormationLightsUp" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimExtlMasterOff",
+    "relatedStateConfigurations" : [ "SimExtlMasterNorm" ],
     "stateful" : true
   }, {
     "active" : true,
@@ -326,9 +361,14 @@
     "stateful" : true
   }, {
     "active" : false,
-    "callback" : "SimExtlMasterOff",
-    "relatedStateConfigurations" : [ "SimExtlMasterNorm" ],
-    "stateful" : true
+    "callback" : "SimStepAARLightsUp",
+    "relatedStateConfigurations" : [ "SimStepAARLightsDown" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimStepAARLightsDown",
+    "relatedStateConfigurations" : [ "SimStepAARLightsUp" ],
+    "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimEpuOn",
@@ -394,6 +434,76 @@
     "callback" : "SimEcmPowerOff",
     "relatedStateConfigurations" : [ "SimEcmPowerOn" ],
     "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimXMit1",
+    "relatedStateConfigurations" : [ "SimXMit2", "SimXMit3" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimXMit2",
+    "relatedStateConfigurations" : [ "SimXMit1", "SimXMit3" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimXMit3",
+    "relatedStateConfigurations" : [ "SimXMit1", "SimXMit2" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimECMBit",
+    "relatedStateConfigurations" : [ ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimEcmMode1On",
+    "relatedStateConfigurations" : [ "SimEcmMode1Off" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimEcmMode1Off",
+    "relatedStateConfigurations" : [ "SimEcmMode1On" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimEcmMode2On",
+    "relatedStateConfigurations" : [ "SimEcmMode2Off" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimEcmMode2Off",
+    "relatedStateConfigurations" : [ "SimEcmMode2On" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimEcmMode3On",
+    "relatedStateConfigurations" : [ "SimEcmMode3Off" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimEcmMode3Off",
+    "relatedStateConfigurations" : [ "SimEcmMode3On" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimEcmMode4On",
+    "relatedStateConfigurations" : [ "SimEcmMode4Off" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimEcmMode4Off",
+    "relatedStateConfigurations" : [ "SimEcmMode4On" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimEcmMode5On",
+    "relatedStateConfigurations" : [ "SimEcmMode5Off" ],
+    "stateful" : false
+  }, {
+    "active" : false,
+    "callback" : "SimEcmMode5Off",
+    "relatedStateConfigurations" : [ "SimEcmMode5On" ],
+    "stateful" : false
   }, {
     "active" : false,
     "callback" : "SimJfsStartUp",
