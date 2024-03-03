@@ -77,13 +77,11 @@ export default {
     },
     selected: {
       get: function () {
-        if (this.controlGroupConfiguration.stateful) {
-          const selected = this.$store.getters.getControlConfigurationWithActiveState(this.controlGroupConfiguration);
-          if (selected) {
-            return selected.id;
-          }
+        if (!this.controlGroupConfiguration.stateful) {
+          return false;
         }
-        return null;
+        const selected = this.$store.getters.getControlConfigurationWithActiveState(this.controlGroupConfiguration);
+        return selected?.callback;
       },
       // eslint-disable-next-line no-unused-vars
       set: function () {

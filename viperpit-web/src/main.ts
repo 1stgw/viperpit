@@ -13,7 +13,7 @@ Vue.use(VueResource);
 new Vue({
   el: "#app",
   components: { App },
-  template: "<App/>",
+  template: "<App />",
   router,
   store,
   vuetify,

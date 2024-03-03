@@ -16,7 +16,7 @@ dependencies {
 	implementation 'com.fasterxml.jackson.core:jackson-core'
 	implementation 'com.fasterxml.jackson.core:jackson-annotations'
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
-	implementation 'org.eclipse.xtend:org.eclipse.xtend.lib:2.25.0'
+	implementation 'org.eclipse.xtend:org.eclipse.xtend.lib:2.34.0'
 }
 
 tasks.jar {
@@ -27,6 +27,6 @@ tasks.jar {
 
 xtend {
 	generator {
-		javaSourceLevel = '11'
+		javaSourceLevel = '17'
 	}
 }

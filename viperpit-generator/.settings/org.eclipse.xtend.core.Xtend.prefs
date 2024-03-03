@@ -1,4 +1,4 @@
-#Sun Aug 20 17:13:28 CEST 2023
+#Sun Mar 03 11:35:20 CET 2024
 generateGeneratedAnnotation=false
 autobuilding=true
 includeDateInGenerated=false
@@ -17,5 +17,5 @@ outlet.DEFAULT_OUTPUT.hideLocalSyntheticVariables=true
 //outlet.DEFAULT_OUTPUT.sourceFolder.src/test/resources.directory=build/xtend/test
 outlet.DEFAULT_OUTPUT.cleanDirectory=true
 ValidatorConfiguration.is_project_specific=true
-targetJavaVersion=Java11
+targetJavaVersion=Java17
 outlet.DEFAULT_OUTPUT.derived=true

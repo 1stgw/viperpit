@@ -1,6 +1,6 @@
 <template>
-  <v-app dark>
-    <v-app-bar app dense flat short clipped-left color="black">
+  <v-app>
+    <v-app-bar app dense flat short clipped-left>
       <v-toolbar-title v-if="isConnected">
         {{ getAgent }}
       </v-toolbar-title>

@@ -95,10 +95,7 @@ const store = new Vuex.Store({
       const actions = state.actions;
       return controlGroupConfiguration.controlConfigurations.find((controlConfiguration: any) => {
         const action = actions[controlConfiguration.callback];
-        if (!action) {
-          return false;
-        }
-        return actions[controlConfiguration.callback].value === true;
+        return action?.value === true ? controlConfiguration : undefined;
       });
     },
     getPanel: state => (consoleId: string, panelId: string) => {

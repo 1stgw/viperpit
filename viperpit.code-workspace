@@ -8,8 +8,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "vetur.validation.template": false,
     "editor.codeActionsOnSave": {
-      "source.fixAll": true,
-      "source.fixAll.eslint": true
+      "source.fixAll": "explicit",
+      "source.fixAll.eslint": "explicit"
     },
     "eslint.workingDirectories": [
       "./viperpit-web"

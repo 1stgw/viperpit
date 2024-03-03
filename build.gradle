@@ -5,7 +5,7 @@ buildscript {
 			url 'https://repo.spring.io/plugins-release/'
 		}
 		dependencies {
-			classpath "org.anarres.gradle:gradle-jnaerator-plugin:1.0.1"
+			classpath "dev.atsushieno:jnaerator-gradle-plugin:1.0.100"
 			classpath "com.nativelibs4java:jnaerator:0.12"
 		}
 	}
