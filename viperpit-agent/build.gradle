@@ -50,7 +50,7 @@ tasks.jar {
 }
 
 // Can be enabled when a new JNA Structure has to be generated from an updated header file.
-jnaerator.enabled = true
+jnaerator.enabled = false
 jnaerator {
 	libraryName 'FlightData'
 	packageName 'de.viperpit.agent.data.jna'

@@ -4,7 +4,6 @@ import static org.slf4j.LoggerFactory.getLogger;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.util.Base64;
 
 import javax.imageio.ImageIO;

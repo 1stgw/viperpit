@@ -7,17 +7,16 @@ plugins {
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
+springBoot {
+	mainClass = 'de.viperpit.launcher.LauncherApplication'
+}
+
 bootJar {
-	classifier = 'boot'
 	manifest {
 		attributes 'Automatic-Module-Name': 'de.viperpit.launcher'
-		attributes 'Start-Class': 'de.viperpit.launcher.LauncherApplication'
 	}
 }
 
-jar {
-	classifier = ''
-}
 
 dependencies {
 	implementation project(':viperpit-agent')

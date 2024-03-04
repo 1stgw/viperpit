@@ -1,0 +1,18 @@
+plugins {
+	id 'java'
+	id 'io.spring.dependency-management'
+	id 'edu.sc.seis.launch4j' version '3.0.5'
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+tasks.jar {
+	manifest {
+		attributes('Automatic-Module-Name': 'de.viperpit.browser')
+	}
+}
+
+launch4j {
+	mainClassName = 'de.viperpit.browser.BrowserApplication'
+}
