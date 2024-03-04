@@ -2,6 +2,13 @@ package de.viperpit.agent.controller;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.Base64;
+
+import javax.imageio.ImageIO;
+
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEvent;
@@ -32,8 +39,13 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 
 	private static final String TOPIC_STATES_UPDATE = "/topic/cockpit/states/update";
 
+	private static final String CPD_IMAGES_UPDATE = "/topic/cpd/images/update";
+
 	@Autowired
 	private KeyDispatcherService keyDispatcherService;
+
+	@Autowired
+	private ScreenshotProvider screenshotProvider;
 
 	@Autowired
 	private StateProvider stateProvider;
@@ -87,6 +99,34 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 			return;
 		}
 		template.convertAndSend(TOPIC_STATES_UPDATE, stateChangeEvent);
+	}
+
+	@Scheduled(fixedRate = 100)
+	public void onCpdImagesUpdate() {
+		try {
+			BufferedImage screenshot = screenshotProvider.getUpdatedScreenshot();
+			if (screenshot == null) {
+				return;
+			}
+
+			ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+			ImageIO.write(screenshot, "png", byteArrayOutputStream);
+			byteArrayOutputStream.close();
+
+			byte[] data = byteArrayOutputStream.toByteArray();
+
+			String encodedString = Base64.getEncoder().encodeToString(data);
+
+			StringBuilder stringBuilder = new StringBuilder();
+			stringBuilder.append("data:");
+			stringBuilder.append("image/png");
+			stringBuilder.append(";base64,");
+			stringBuilder.append(encodedString);
+
+			template.convertAndSend(CPD_IMAGES_UPDATE, stringBuilder.toString());
+		} catch (Exception exception) {
+			LOGGER.error("An error occurred while converting the screenshot", exception);
+		}
 	}
 
 }

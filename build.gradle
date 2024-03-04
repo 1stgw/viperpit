@@ -12,8 +12,8 @@ buildscript {
 }
 
 plugins {
-	id 'org.springframework.boot' version '2.6.3' apply false
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'org.springframework.boot' version '3.2.3' apply false
+	id 'io.spring.dependency-management' version '1.1.14'
 }
 
 allprojects {
@@ -50,6 +50,6 @@ subprojects {
 		}
 	}
 	ext['guava.version'] = '27.1-jre'
-	ext['jna.version'] = '5.5.0'
-	ext['jna-platform.version'] = '5.5.0'
+	ext['jna.version'] = '5.14.0'
+	ext['jna-platform.version'] = '5.14.0'
 }

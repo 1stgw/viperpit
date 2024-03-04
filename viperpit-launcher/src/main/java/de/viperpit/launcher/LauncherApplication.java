@@ -16,7 +16,8 @@ import de.viperpit.agent.AgentConfiguration;
 public class LauncherApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(LauncherApplication.class).bannerMode(OFF).build(args).run(args);
+		System.setProperty("java.awt.headless", "false");
+		new SpringApplicationBuilder(LauncherApplication.class).headless(false).bannerMode(OFF).build(args).run(args);
 	}
 
 	@Override

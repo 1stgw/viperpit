@@ -1,21 +1,28 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import { AGENTS_CONNECT, AGENTS_DISCONNECT, CONFIGURATION_UPDATE, STATES_UPDATE } from "./mutation-types";
+import {
+  AGENTS_CONNECT,
+  AGENTS_DISCONNECT,
+  CENTER_PEDESTAL_DISPLAY_UPDATE,
+  CONFIGURATION_UPDATE,
+  STATES_UPDATE
+} from "./mutation-types";
 import stompPlugin from "./plugin";
 
 Vue.use(Vuex);
 
-class State {
+export class State {
   agentId: string | null = null;
   cockpitId = "f16";
-  actions = {};
+  actions: Record<string, unknown> = {};
   configuration: { consoleConfigurations: []; panelConfigurations: [] } = {
     consoleConfigurations: [],
     panelConfigurations: []
   };
+  latestCenterPedestalDisplayImage?: unknown;
 }
 
-const store = new Vuex.Store({
+const store = new Vuex.Store<State>({
   strict: true,
   plugins: [stompPlugin],
   state: new State(),
@@ -64,6 +71,9 @@ const store = new Vuex.Store({
     },
     updateStates({ commit }, delta) {
       commit(STATES_UPDATE, delta);
+    },
+    updateCenterPedestalDisplay({ commit }, data) {
+      commit(CENTER_PEDESTAL_DISPLAY_UPDATE, data);
     }
   },
   getters: {
@@ -117,6 +127,9 @@ const store = new Vuex.Store({
     getPanels: state => (consoleId: string) => {
       return store.getters.getConsole(consoleId).panelConfigurations;
     },
+    getLatestCenterPedestalDisplayImage: state => {
+      return state.latestCenterPedestalDisplayImage;
+    },
     isConnected: state => {
       return state.actions && state.agentId;
     }
@@ -133,7 +146,7 @@ const store = new Vuex.Store({
     CONFIGURATION_UPDATE(state, configuration) {
       state.configuration = configuration;
     },
-    STATES_UPDATE(state: any, result) {
+    STATES_UPDATE(state, result) {
       for (const callback in result.updatedStates) {
         const value = result.updatedStates[callback];
         const action = state.actions[callback];
@@ -147,6 +160,9 @@ const store = new Vuex.Store({
           Vue.set(state.actions, callback, object);
         }
       }
+    },
+    CENTER_PEDESTAL_DISPLAY_UPDATE(state, data) {
+      state.latestCenterPedestalDisplayImage = data;
     }
   }
 });
