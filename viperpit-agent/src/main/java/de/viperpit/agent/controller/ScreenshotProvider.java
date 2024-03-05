@@ -1,11 +1,8 @@
 package de.viperpit.agent.controller;
 
-import static org.slf4j.LoggerFactory.getLogger;
-
 import java.awt.image.BufferedImage;
 import java.util.List;
 
-import org.slf4j.Logger;
 import org.springframework.stereotype.Component;
 
 import com.sun.jna.platform.DesktopWindow;
@@ -16,8 +13,6 @@ import de.viperpit.agent.data.ScreenshotUtil;
 
 @Component
 public class ScreenshotProvider {
-
-	private static final Logger LOGGER = getLogger(ScreenshotProvider.class);
 
 	private final String filePath;
 
@@ -38,22 +33,30 @@ public class ScreenshotProvider {
 	}
 
 	public BufferedImage getUpdatedScreenshot() {
-		WinDef.HWND hwnd = this.findWindow();
+		try {
+			// We're gonna find and reuse the cached window if possible
+			WinDef.HWND hwnd = this.findWindow();
 
-		BufferedImage screenshot = ScreenshotUtil.getScreenshot(hwnd);
-		if (screenshot == null) {
-			System.out.println("Failed to capture screenshot.");
+			// Get the screenshot
+			BufferedImage screenshot = ScreenshotUtil.getScreenshot(hwnd);
+			if (screenshot == null) {
+				return null;
+			}
+
+			// We want to be conservative with messaging, so we only send new screenshots if
+			// necessary
+			boolean requiresUpdate = requiresUpdate(screenshot);
+
+			this.lastScreenshot = screenshot;
+
+			if (!requiresUpdate) {
+				return null;
+			}
+
+			return screenshot;
+		} catch (Exception exception) {
 			return null;
 		}
-
-		boolean requiresUpdate = requiresUpdate(screenshot);
-		this.lastScreenshot = screenshot;
-
-		if (!requiresUpdate) {
-			return null;
-		}
-
-		return screenshot;
 	}
 
 	private WinDef.HWND findWindow() {
@@ -74,7 +77,6 @@ public class ScreenshotProvider {
 		}
 
 		if (hwnd == null) {
-			LOGGER.info("Window not found.");
 			return null;
 		}
 
