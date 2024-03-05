@@ -1,6 +1,5 @@
 plugins {
 	id 'java'
-	id 'io.spring.dependency-management'
 	id 'dev.atsushieno.jnaerator'
 }
 
@@ -20,6 +19,7 @@ targetCompatibility = JavaVersion.VERSION_17
 dependencies {
 	implementation project(':viperpit-commons')
 	implementation project(':viperpit-web')
+	implementation enforcedPlatform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
 	implementation 'com.google.guava:guava:27.1-jre'
 	implementation 'ch.qos.logback:logback-classic'
 	implementation 'net.java.dev.jna:jna:5.14.0'

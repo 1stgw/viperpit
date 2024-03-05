@@ -2,6 +2,12 @@
   <img :src="getLatestCenterPedestalDisplayImage" />
 </template>
 
+<style>
+html {
+  overflow: auto;
+}
+</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { mapGetters } from "vuex";

@@ -1,7 +1,6 @@
 plugins {
 	id 'java'
 	id 'org.xtext.xtend' version '4.0.0'
-	id 'io.spring.dependency-management'
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -10,6 +9,7 @@ targetCompatibility = JavaVersion.VERSION_17
 dependencies {
 	implementation project(':viperpit-commons')
 	implementation project(':viperpit-agent')
+	implementation enforcedPlatform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
 	implementation 'org.slf4j:slf4j-api'
 	implementation 'ch.qos.logback:logback-classic'
 	implementation 'org.springframework.boot:spring-boot-starter'

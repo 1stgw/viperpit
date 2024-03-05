@@ -13,7 +13,6 @@ buildscript {
 
 plugins {
 	id 'org.springframework.boot' version '3.2.3' apply false
-	id 'io.spring.dependency-management' version '1.1.4'
 }
 
 allprojects {
@@ -43,12 +42,6 @@ allprojects {
 }
 
 subprojects {
-	apply plugin: 'io.spring.dependency-management'
-	dependencyManagement {
-		imports {
-			mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
-		}
-	}
 	ext['guava.version'] = '27.1-jre'
 	ext['jna.version'] = '5.14.0'
 	ext['jna-platform.version'] = '5.14.0'
