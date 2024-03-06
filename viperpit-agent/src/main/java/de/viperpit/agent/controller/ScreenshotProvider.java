@@ -20,8 +20,6 @@ public class ScreenshotProvider {
 
 	private BufferedImage lastScreenshot;
 
-	private WinDef.HWND lastWindow;
-
 	public ScreenshotProvider() {
 		this.filePath = "C:\\Program Files (x86)\\PSUdp\\PSUdp.exe";
 		this.windowTitle = "HSI";
@@ -62,27 +60,16 @@ public class ScreenshotProvider {
 	private WinDef.HWND findWindow() {
 		List<DesktopWindow> windows = WindowUtils.getAllWindows(false);
 
-		WinDef.HWND hwnd = this.lastWindow;
-		if (hwnd != null) {
-			return this.lastWindow;
-		}
-
 		for (DesktopWindow currentWindow : windows) {
 			if (!currentWindow.getFilePath().equals(filePath)) {
 				continue;
 			}
 			if (currentWindow.getTitle().equals(windowTitle)) {
-				hwnd = currentWindow.getHWND();
+				return currentWindow.getHWND();
 			}
 		}
 
-		if (hwnd == null) {
-			return null;
-		}
-
-		this.lastWindow = hwnd;
-
-		return hwnd;
+		return null;
 	}
 
 	private boolean requiresUpdate(BufferedImage nextScreenshot) {
