@@ -22,12 +22,14 @@ import com.sun.jna.Structure;
  */
 public interface FlightDataLibrary extends Library {
 	public static final int FLIGHTDATA_VERSION = (int) 118;
+	public static final int MAX_RWR_OBJECTS = (int) 40;
 	public static final int OSB_STRING_LENGTH = (int) 8;
-	public static final int FLIGHTDATA2_VERSION = (int) 17;
+	public static final int FLIGHTDATA2_VERSION = (int) 20;
 	public static final int RWRINFO_SIZE = (int) 512;
 	public static final int CALLSIGN_LEN = (int) 12;
 	public static final int MAX_CALLSIGNS = (int) 32;
-	public static final int STRINGDATA_VERSION = (int) 3;
+	public static final int MAX_ECM_PROGRAMS = (int) 5;
+	public static final int STRINGDATA_VERSION = (int) 4;
 	public static final int STRINGDATA_AREA_SIZE_MAX = (int) (1024 * 1024);
 	public static final int DRAWINGDATA_VERSION = (int) 1;
 	public static final int DRAWINGDATA_AREA_SIZE_MAX = (int) (1024 * 1024);
@@ -136,9 +138,12 @@ public interface FlightDataLibrary extends Library {
 			/** Lower half of right eyebrow ENG FIRE/ENGINE lamp */
 			public static final int ENGINE = 0x80000000;
 			public static final int AllLampBits2On = 0xFFFFF03F;
-			public static final int AllLampBits2OnExceptCarapace = (int) AllLampBits2On ^ (int) HandOff ^ (int) Launch
-					^ (int) PriMode ^ (int) Naval ^ (int) Unk ^ (int) TgtSep ^ (int) AuxSrch ^ (int) AuxAct
-					^ (int) AuxLow ^ (int) AuxPwr;
+			public static final int AllLampBits2OnExceptCarapace = (int) FlightData.LightBits2.AllLampBits2On
+					^ (int) FlightData.LightBits2.HandOff ^ (int) FlightData2.BlinkBits.Launch
+					^ (int) FlightData2.BlinkBits.PriMode ^ (int) FlightData.LightBits2.Naval
+					^ (int) FlightData2.BlinkBits.Unk ^ (int) FlightData.LightBits2.TgtSep
+					^ (int) FlightData2.BlinkBits.AuxSrch ^ (int) FlightData.LightBits2.AuxAct
+					^ (int) FlightData.LightBits2.AuxLow ^ (int) FlightData.LightBits2.AuxPwr;
 		};
 
 		/** enum values */
@@ -183,7 +188,8 @@ public interface FlightDataLibrary extends Library {
 			public static final int ATF_Not_Engaged = 0x10000000;
 			public static final int Inlet_Icing = 0x20000000;
 			public static final int AllLampBits3On = 0x3147EFFF;
-			public static final int AllLampBits3OnExceptCarapace = (int) AllLampBits3On ^ (int) SysTest;
+			public static final int AllLampBits3OnExceptCarapace = (int) FlightData.LightBits3.AllLampBits3On
+					^ (int) FlightData.LightBits3.SysTest;
 		};
 
 		/** enum values */
@@ -439,7 +445,6 @@ public interface FlightDataLibrary extends Library {
 		};
 	};
 
-	/** OSB capture for MFD button labeling */
 	public static class OsbLabel extends Structure {
 		/** C type : char[8] */
 		public byte[] line1 = new byte[8];
@@ -604,6 +609,8 @@ public interface FlightDataLibrary extends Library {
 			public static final int JFSOn_Slow = 0x400;
 			/** defined in LightBits3 - fast blinking: critical failure */
 			public static final int JFSOn_Fast = 0x800;
+			/** defined in EcmOperStates - system warming up */
+			public static final int ECM_Oper = 0x1000;
 		};
 
 		/** enum values */
@@ -660,6 +667,17 @@ public interface FlightDataLibrary extends Library {
 		};
 
 		/** enum values */
+		public static interface FloodConsole {
+			public static final int FLOOD_CONSOLE_OFF = 0;
+			public static final int FLOOD_CONSOLE_1 = 1;
+			public static final int FLOOD_CONSOLE_2 = 2;
+			public static final int FLOOD_CONSOLE_3 = 3;
+			public static final int FLOOD_CONSOLE_4 = 4;
+			public static final int FLOOD_CONSOLE_5 = 5;
+			public static final int FLOOD_CONSOLE_6 = 6;
+		};
+
+		/** enum values */
 		public static interface BettyBits {
 			public static final int Betty_Allwords = 0x00001;
 			public static final int Betty_Pullup = 0x00002;
@@ -689,9 +707,41 @@ public interface FlightDataLibrary extends Library {
 			public static final int Flcs_Flcc_B = 0x04;
 			public static final int Flcs_Flcc_C = 0x08;
 			public static final int Flcs_Flcc_D = 0x10;
-			/** 0 not powered or failed or WOW , 1 is working OK */
-			public static final int SolenoidStatus = 0x20;
+			/** Not bit by itself! This is the check mask for ALL the Flcs bits. */
 			public static final int AllLampBitsFlccOn = 0x1e;
+			/** 0 not powered or failed or WOW, 1 is working OK */
+			public static final int SolenoidStatus = 0x20;
+		};
+
+		/**
+		 * Note: these are currently not combinable bits, but mutually exclusive
+		 * states!<br>
+		 * enum values
+		 */
+		public static interface EcmBits {
+			public static final int ECM_UNPRESSED_NO_LIT = 0x01;
+			public static final int ECM_UNPRESSED_ALL_LIT = 0x02;
+			public static final int ECM_PRESSED_NO_LIT = 0x04;
+			public static final int ECM_PRESSED_STANDBY = 0x08;
+			public static final int ECM_PRESSED_ACTIVE = 0x10;
+			public static final int ECM_PRESSED_TRANSMIT = 0x20;
+			public static final int ECM_PRESSED_FAIL = 0x40;
+			public static final int ECM_PRESSED_ALL_LIT = 0x80;
+		};
+
+		/** enum values */
+		public static interface EcmOperStates {
+			public static final int ECM_OPER_NO_LIT = 0;
+			public static final int ECM_OPER_STDBY = 1;
+			public static final int ECM_OPER_ACTIVE = 2;
+			public static final int ECM_OPER_ALL_LIT = 3;
+		};
+
+		/** enum values */
+		public static interface JammingStates {
+			public static final int JAMMED_NO = 0;
+			public static final int JAMMED_YES = 1;
+			public static final int JAMMED_SHOULD = 2;
 		};
 
 		/** Ownship engine nozzle2 percent open (0-100) */
@@ -715,7 +765,7 @@ public interface FlightDataLibrary extends Library {
 		 * Tacan band/mode settings for UFC and AUX COMM<br>
 		 * C type : char[NUMBER_OF_SOURCES]
 		 */
-		public byte[] tacanInfo = new byte[(int) TacanSources.NUMBER_OF_SOURCES];
+		public byte[] tacanInfo = new byte[(int) FlightDataLibrary.FlightData2.TacanSources.NUMBER_OF_SOURCES];
 		/** barometric altitude calibration (depends on CalType) */
 		public int AltCalReading;
 		/** various altimeter bits, see AltBits enum for details */
@@ -730,10 +780,10 @@ public interface FlightDataLibrary extends Library {
 		 *      C type : CmdsModes
 		 */
 		public int cmdsMode;
-		/** BUP UHF channel preset */
-		public int BupUhfPreset;
-		/** BUP UHF channel frequency */
-		public int BupUhfFreq;
+		/** BUP UHF channel preset (F16), radio 1 preset (other aircraft). */
+		public int uhf_panel_preset;
+		/** BUP UHF channel frequency, radio 1 frequency (other aircraft). */
+		public int uhf_panel_frequency;
 		/** Ownship cabin altitude */
 		public float cabinAlt;
 		/** Ownship Hydraulic Pressure A */
@@ -786,7 +836,7 @@ public interface FlightDataLibrary extends Library {
 		 * For each area: left/top/right/bottom<br>
 		 * C type : unsigned short[RTT_noOfAreas][4]
 		 */
-		public short[] RTT_area = new short[(((int) RTT_areas.RTT_noOfAreas) * (4))];
+		public short[] RTT_area = new short[(((int) FlightDataLibrary.FlightData2.RTT_areas.RTT_noOfAreas) * (4))];
 		/** IFF panel backup Mode1 digit 1 */
 		public byte iffBackupMode1Digit1;
 		/** IFF panel backup Mode1 digit 2 */
@@ -835,6 +885,48 @@ public interface FlightDataLibrary extends Library {
 		public int DrawingAreaSize;
 		/** actual turn rate (no delay or dampening) in degrees/second */
 		public float turnRate;
+		/**
+		 * @see FloodConsole<br>
+		 *      (unsigned char) current floodconsole brightness setting, see
+		 *      FloodConsole enum for details<br>
+		 *      C type : FloodConsole
+		 */
+		public int floodConsole;
+		/** current mag deviation of the system */
+		public float magDeviationSystem;
+		/** current mag deviation of the system */
+		public float magDeviationReal;
+		/**
+		 * see EcmBits enum for details - Note: these are currently not combinable bits,
+		 * but mutually exclusive states!<br>
+		 * C type : unsigned int[5]
+		 */
+		public int[] ecmBits = new int[5];
+		/**
+		 * @see EcmOperStates<br>
+		 *      (unsigned char) see enum EcmOperStates for details<br>
+		 *      C type : EcmOperStates
+		 */
+		public int ecmOper;
+		/**
+		 * (unsigned) char see enum JammingStates for details<br>
+		 * C type : JammingStates[40]
+		 */
+		public int[] RWRjammingStatus = new int[40];
+		/** Radio 2 channel preset (if present). */
+		public int radio2_preset;
+		/** Radio 2 channel frequency (if present). */
+		public int radio2_frequency;
+		/** mode 1 */
+		public byte iffTransponderActiveCode1;
+		/** mode 2 */
+		public short iffTransponderActiveCode2;
+		/** mode 3A */
+		public short iffTransponderActiveCode3A;
+		/** mode C */
+		public short iffTransponderActiveCodeC;
+		/** mode 4; assumes the correct codeword */
+		public short iffTransponderActiveCode4;
 
 		public FlightData2() {
 			super();
@@ -842,14 +934,17 @@ public interface FlightDataLibrary extends Library {
 
 		protected List<String> getFieldOrder() {
 			return Arrays.asList("nozzlePos2", "rpm2", "ftit2", "oilPressure2", "navMode", "AAUZ", "tacanInfo",
-					"AltCalReading", "altBits", "powerBits", "blinkBits", "cmdsMode", "BupUhfPreset", "BupUhfFreq",
-					"cabinAlt", "hydPressureA", "hydPressureB", "currentTime", "vehicleACD", "VersionNum", "fuelFlow2",
-					"RwrInfo", "lefPos", "tefPos", "vtolPos", "pilotsOnline", "pilotsCallsign", "pilotsStatus",
-					"bumpIntensity", "latitude", "longitude", "RTT_size", "RTT_area", "iffBackupMode1Digit1",
-					"iffBackupMode1Digit2", "iffBackupMode3ADigit1", "iffBackupMode3ADigit2", "instrLight", "bettyBits",
-					"miscBits", "RALT", "bingoFuel", "caraAlow", "bullseyeX", "bullseyeY", "BMSVersionMajor",
-					"BMSVersionMinor", "BMSVersionMicro", "BMSBuildNumber", "StringAreaSize", "StringAreaTime",
-					"DrawingAreaSize", "turnRate");
+					"AltCalReading", "altBits", "powerBits", "blinkBits", "cmdsMode", "uhf_panel_preset",
+					"uhf_panel_frequency", "cabinAlt", "hydPressureA", "hydPressureB", "currentTime", "vehicleACD",
+					"VersionNum", "fuelFlow2", "RwrInfo", "lefPos", "tefPos", "vtolPos", "pilotsOnline",
+					"pilotsCallsign", "pilotsStatus", "bumpIntensity", "latitude", "longitude", "RTT_size", "RTT_area",
+					"iffBackupMode1Digit1", "iffBackupMode1Digit2", "iffBackupMode3ADigit1", "iffBackupMode3ADigit2",
+					"instrLight", "bettyBits", "miscBits", "RALT", "bingoFuel", "caraAlow", "bullseyeX", "bullseyeY",
+					"BMSVersionMajor", "BMSVersionMinor", "BMSVersionMicro", "BMSBuildNumber", "StringAreaSize",
+					"StringAreaTime", "DrawingAreaSize", "turnRate", "floodConsole", "magDeviationSystem",
+					"magDeviationReal", "ecmBits", "ecmOper", "RWRjammingStatus", "radio2_preset", "radio2_frequency",
+					"iffTransponderActiveCode1", "iffTransponderActiveCode2", "iffTransponderActiveCode3A",
+					"iffTransponderActiveCodeC", "iffTransponderActiveCode4");
 		}
 
 		public FlightData2(Pointer peer) {
@@ -918,8 +1013,9 @@ public interface FlightDataLibrary extends Library {
 			 * O2, PT can be concatenated):
 			 */
 			public static final int NavPoint = 33;
+			public static final int ThrTerrdatadir = 34;
 			/** (number of identifiers; add new IDs only *above* this one) */
-			public static final int StringIdentifier_DIM = 34;
+			public static final int StringIdentifier_DIM = 35;
 		};
 
 		public static class StringStruct extends Structure {

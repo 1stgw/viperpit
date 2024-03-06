@@ -20,9 +20,9 @@ import com.sun.jna.Structure;
  * <a href="http://jna.dev.java.net/">JNA</a>.
  */
 public interface IVibeDataLibrary extends Library {
-	/** *** "FalconIntellivibeSharedMemoryArea" *** */
+	/** "FalconIntellivibeSharedMemoryArea" */
 	public static class IntellivibeData extends Structure {
-		/** how many AA missiles fired. */
+		/** how many AA missiles fired */
 		public byte AAMissileFired;
 		/** how many maveric/rockets fired */
 		public byte AGMissileFired;
@@ -34,15 +34,15 @@ public interface IVibeDataLibrary extends Library {
 		public byte ChaffDropped;
 		/** how many bullets shot */
 		public byte BulletsFired;
-		/** Collisions */
+		/** collisions */
 		public int CollisionCounter;
 		/** gun is firing */
 		public byte IsFiringGun;
-		/** Ending the flight from 3d */
+		/** ending the flight from 3d */
 		public byte IsEndFlight;
 		/** we've ejected */
 		public byte IsEjecting;
-		/** In 3D? */
+		/** in 3D? */
 		public byte In3D;
 		/** sim paused? */
 		public byte IsPaused;
@@ -50,9 +50,9 @@ public interface IVibeDataLibrary extends Library {
 		public byte IsFrozen;
 		/** are G limits being exceeded? */
 		public byte IsOverG;
-		/** are we on the ground */
+		/** are we on the ground? */
 		public byte IsOnGround;
-		/** Did we exit Falcon? */
+		/** did we exit Falcon? */
 		public byte IsExitGame;
 		/** what gforce we are feeling */
 		public float Gforce;
@@ -66,6 +66,7 @@ public interface IVibeDataLibrary extends Library {
 		public int lastdamage;
 		/** how big the hit was. */
 		public float damageforce;
+		/** when the hit occured, game time in ms */
 		public int whendamage;
 
 		public IntellivibeData() {
