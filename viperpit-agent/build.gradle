@@ -9,12 +9,13 @@ repositories {
 		url 'https://repo.springsource.org/release/'
 		url 'https://plugins.gradle.org/m2/'
 	}
-	jcenter()
 	mavenCentral()
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+}
 
 dependencies {
 	implementation project(':viperpit-commons')
@@ -43,11 +44,6 @@ sourceSets {
 	}
 }
 
-tasks.jar {
-	manifest {
-		attributes('Automatic-Module-Name': 'de.viperpit.agent')
-	}
-}
 
 // Can be enabled when a new JNA Structure has to be generated from an updated header file.
 jnaerator.enabled = false

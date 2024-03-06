@@ -23,7 +23,6 @@ allprojects {
 				url 'https://plugins.gradle.org/m2/'
 				url 'https://repo.spring.io/plugins-release/'
 			}
-			jcenter()
 			mavenCentral()
 		}
 	}
@@ -34,7 +33,6 @@ allprojects {
 		maven {
 			url 'https://repo.springsource.org/release/'
 		}
-		jcenter()
 		mavenCentral()
 	}
 	group = 'de.viperpit'

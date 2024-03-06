@@ -3,8 +3,10 @@ plugins {
 	id 'org.springframework.boot'
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+}
 
 springBoot {
 	mainClass = 'de.viperpit.launcher.LauncherApplication'
