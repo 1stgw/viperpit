@@ -12,6 +12,8 @@ import static org.eclipse.swt.SWT.Selection;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Properties;
 
 import org.eclipse.swt.browser.Browser;
@@ -102,7 +104,23 @@ public class BrowserApplication {
 	}
 
 	private void run() {
-		BrowserApplicationSettings settings = loadProperties();
+		BrowserApplicationSettings settings = loadSettings();
+		
+		boolean isUrlReachable = false;
+		String url = settings.url();
+		
+		while(!isUrlReachable) {
+			try {
+				Thread.sleep(1000);
+				HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+				connection.setRequestMethod("GET");
+				isUrlReachable = connection.getResponseCode() == 200;
+			} catch (InterruptedException exception) {
+				throw new RuntimeException(exception);
+			} catch (IOException exception) {
+				// This is expected...
+			}
+		}
 
 		Display display = new Display();
 		shell = new Shell(display, NO_TRIM | NO_SCROLL);
@@ -117,7 +135,7 @@ public class BrowserApplication {
 		}
 	}
 
-	private BrowserApplicationSettings loadProperties() {
+	private BrowserApplicationSettings loadSettings() {
 		Properties properties = new Properties();
 		try {
 			File parentFile = new File(".");
