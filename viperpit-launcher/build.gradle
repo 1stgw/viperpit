@@ -49,7 +49,7 @@ task runJpackage(type: Exec) {
 				'--java-options', '-Djava.library.path=$ROOTDIR;$ROOTDIR/app;C:\\Windows\\System32',
 				'--icon', "$resourcesDirectory/icon.ico",
 				'--app-version', project.version,
-				'--main-class', "org.springframework.boot.loader.JarLauncher",
+				'--main-class', "org.springframework.boot.loader.launch.JarLauncher",
 				'--main-jar', bootJar.archiveFileName.get(),
 				'--win-console',
 				'--win-dir-chooser',

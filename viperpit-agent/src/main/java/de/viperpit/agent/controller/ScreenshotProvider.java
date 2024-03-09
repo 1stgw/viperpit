@@ -3,6 +3,7 @@ package de.viperpit.agent.controller;
 import java.awt.image.BufferedImage;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.sun.jna.platform.DesktopWindow;
@@ -20,12 +21,10 @@ public class ScreenshotProvider {
 
 	private BufferedImage lastScreenshot;
 
-	public ScreenshotProvider() {
-		this.filePath = "C:\\Program Files (x86)\\PSUdp\\PSUdp.exe";
-		this.windowTitle = "HSI";
-	}
-
-	public ScreenshotProvider(String filePath, String windowTitle) {
+	public ScreenshotProvider( //
+			@Value("${local.cpd.path}") String filePath, //
+			@Value("${local.cpd.window}") String windowTitle //
+	) {
 		this.filePath = filePath;
 		this.windowTitle = windowTitle;
 	}
@@ -34,6 +33,9 @@ public class ScreenshotProvider {
 		try {
 			// We're gonna find and reuse the cached window if possible
 			WinDef.HWND hwnd = this.findWindow();
+			if(hwnd == null) {
+				return null;
+			}
 
 			// Get the screenshot
 			BufferedImage screenshot = ScreenshotUtil.getScreenshot(hwnd);

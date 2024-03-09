@@ -17,7 +17,11 @@ public class LauncherApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		System.setProperty("java.awt.headless", "false");
-		new SpringApplicationBuilder(LauncherApplication.class).headless(false).bannerMode(OFF).build(args).run(args);
+		new SpringApplicationBuilder(LauncherApplication.class) //
+				.headless(false) //
+				.bannerMode(OFF) //
+				.build(args) //
+				.run(args); //
 	}
 
 	@Override
