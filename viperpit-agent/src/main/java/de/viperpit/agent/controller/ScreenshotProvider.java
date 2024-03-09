@@ -1,8 +1,11 @@
 package de.viperpit.agent.controller;
 
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.awt.image.BufferedImage;
 import java.util.List;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -15,25 +18,28 @@ import de.viperpit.agent.data.ScreenshotUtil;
 @Component
 public class ScreenshotProvider {
 
-	private final String filePath;
+	private static final Logger LOGGER = getLogger(ScreenshotProvider.class);
 
-	private final String windowTitle;
+	private final String processFilePath;
+
+	private final String windowName;
 
 	private BufferedImage lastScreenshot;
 
 	public ScreenshotProvider( //
-			@Value("${local.cpd.path}") String filePath, //
-			@Value("${local.cpd.window}") String windowTitle //
+			@Value("${local.cpd.path}") String processFilePath, //
+			@Value("${local.cpd.window}") String windowName //
 	) {
-		this.filePath = filePath;
-		this.windowTitle = windowTitle;
+		this.processFilePath = processFilePath;
+		this.windowName = windowName;
+		LOGGER.info("Using window " + windowName + " on path " + processFilePath);
 	}
 
 	public BufferedImage getUpdatedScreenshot() {
 		try {
 			// We're gonna find and reuse the cached window if possible
 			WinDef.HWND hwnd = this.findWindow();
-			if(hwnd == null) {
+			if (hwnd == null) {
 				return null;
 			}
 
@@ -63,10 +69,10 @@ public class ScreenshotProvider {
 		List<DesktopWindow> windows = WindowUtils.getAllWindows(false);
 
 		for (DesktopWindow currentWindow : windows) {
-			if (!currentWindow.getFilePath().equals(filePath)) {
+			if (!currentWindow.getFilePath().equals(processFilePath)) {
 				continue;
 			}
-			if (currentWindow.getTitle().equals(windowTitle)) {
+			if (currentWindow.getTitle().equals(windowName)) {
 				return currentWindow.getHWND();
 			}
 		}

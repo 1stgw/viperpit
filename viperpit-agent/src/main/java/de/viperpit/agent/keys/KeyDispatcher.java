@@ -9,9 +9,11 @@ import static de.viperpit.agent.keys.KeyDispatcher.KeyDispatchType.KEY_UP;
 import static java.lang.Thread.sleep;
 import static java.util.Arrays.asList;
 import static java.util.EnumSet.copyOf;
+import static org.slf4j.LoggerFactory.getLogger;
 
 import java.util.EnumSet;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -27,6 +29,8 @@ import de.viperpit.agent.keys.KeyCodeLineConverter.ScanCodeInterval;
 @Component
 public class KeyDispatcher {
 
+	private static final Logger LOGGER = getLogger(KeyDispatcher.class);
+	
 	public static enum KeyDispatchType {
 		KEY_DOWN, KEY_UP
 	}
@@ -37,6 +41,7 @@ public class KeyDispatcher {
 
 	public KeyDispatcher(@Value("${local.bms.window}") String windowName) {
 		this.windowName = windowName;
+		LOGGER.info("Using window " + windowName);
 	}
 
 	private void configure(INPUT input, int scanCode, boolean keyUp) {
