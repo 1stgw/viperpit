@@ -67,14 +67,14 @@ public class ScreenshotProvider {
 
 	private WinDef.HWND findWindow() {
 		List<DesktopWindow> windows = WindowUtils.getAllWindows(false);
-
 		for (DesktopWindow currentWindow : windows) {
 			if (!currentWindow.getFilePath().equals(processFilePath)) {
 				continue;
 			}
-			if (currentWindow.getTitle().equals(windowName)) {
-				return currentWindow.getHWND();
+			if (!currentWindow.getTitle().equals(windowName)) {
+				continue;
 			}
+			return currentWindow.getHWND();
 		}
 
 		return null;
