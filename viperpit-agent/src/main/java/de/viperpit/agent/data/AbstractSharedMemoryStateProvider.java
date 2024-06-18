@@ -184,6 +184,9 @@ public abstract class AbstractSharedMemoryStateProvider {
 		"SimLightsSteady",
 		"SimMFDOff",
 		"SimMFDOn",
+		"SimMIDSLVTOff",
+		"SimMIDSLVTOn",
+		"SimMIDSLVTZero",
 		"SimMainPowerBatt",
 		"SimMainPowerMain",
 		"SimMainPowerOff",
@@ -598,6 +601,12 @@ public abstract class AbstractSharedMemoryStateProvider {
 				return getSimMFDOff(callback, sharedMemoryData);
 			case "SimMFDOn":
 				return getSimMFDOn(callback, sharedMemoryData);
+			case "SimMIDSLVTOff":
+				return getSimMIDSLVTOff(callback, sharedMemoryData);
+			case "SimMIDSLVTOn":
+				return getSimMIDSLVTOn(callback, sharedMemoryData);
+			case "SimMIDSLVTZero":
+				return getSimMIDSLVTZero(callback, sharedMemoryData);
 			case "SimMainPowerBatt":
 				return getSimMainPowerBatt(callback, sharedMemoryData);
 			case "SimMainPowerMain":
@@ -1378,6 +1387,18 @@ public abstract class AbstractSharedMemoryStateProvider {
 	}
 	
 	protected Object getSimMFDOn(String callback, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getSimMIDSLVTOff(String callback, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getSimMIDSLVTOn(String callback, SharedMemoryData sharedMemoryData) {
+		return null;
+	}
+	
+	protected Object getSimMIDSLVTZero(String callback, SharedMemoryData sharedMemoryData) {
 		return null;
 	}
 	

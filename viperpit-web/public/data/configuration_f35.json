@@ -3815,6 +3815,35 @@
           "type" : "switch",
           "stateful" : true
         } ]
+      }, {
+        "id" : "AVIONICS: MIDS Knob",
+        "label" : "Mids",
+        "stateful" : true,
+        "controlConfigurations" : [ {
+          "callback" : "SimMIDSLVTZero",
+          "label" : "ZERO",
+          "description" : "AVIONICS: MIDS Knob - ZERO",
+          "style" : "knob",
+          "role" : "none",
+          "type" : "switch",
+          "stateful" : true
+        }, {
+          "callback" : "SimMIDSLVTOff",
+          "label" : "OFF",
+          "description" : "AVIONICS: MIDS Knob - OFF",
+          "style" : "knob",
+          "role" : "off",
+          "type" : "switch",
+          "stateful" : true
+        }, {
+          "callback" : "SimMIDSLVTOn",
+          "label" : "ON",
+          "description" : "AVIONICS: MIDS Knob - ON",
+          "style" : "knob",
+          "role" : "on",
+          "type" : "switch",
+          "stateful" : true
+        } ]
       } ]
     }, {
       "id" : "oxygenPanel",
@@ -4212,11 +4241,7 @@
           "type" : "button",
           "stateful" : false
         } ]
-      } ]
-    }, {
-      "id" : "flightCommands",
-      "label" : "FLIGHT COMMANDS",
-      "controlGroupConfigurations" : [ {
+      }, {
         "id" : "Radio-Send Message Other",
         "label" : "Send Message Other",
         "stateful" : false,
@@ -7048,6 +7073,30 @@
     "description" : "AVIONICS: DL Switch - OFF",
     "style" : "switch",
     "role" : "off",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "callback" : "SimMIDSLVTZero",
+    "label" : "ZERO",
+    "description" : "AVIONICS: MIDS Knob - ZERO",
+    "style" : "knob",
+    "role" : "none",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "callback" : "SimMIDSLVTOff",
+    "label" : "OFF",
+    "description" : "AVIONICS: MIDS Knob - OFF",
+    "style" : "knob",
+    "role" : "off",
+    "type" : "switch",
+    "stateful" : true
+  }, {
+    "callback" : "SimMIDSLVTOn",
+    "label" : "ON",
+    "description" : "AVIONICS: MIDS Knob - ON",
+    "style" : "knob",
+    "role" : "on",
     "type" : "switch",
     "stateful" : true
   }, {
@@ -11106,6 +11155,35 @@
         "type" : "switch",
         "stateful" : true
       } ]
+    }, {
+      "id" : "AVIONICS: MIDS Knob",
+      "label" : "Mids",
+      "stateful" : true,
+      "controlConfigurations" : [ {
+        "callback" : "SimMIDSLVTZero",
+        "label" : "ZERO",
+        "description" : "AVIONICS: MIDS Knob - ZERO",
+        "style" : "knob",
+        "role" : "none",
+        "type" : "switch",
+        "stateful" : true
+      }, {
+        "callback" : "SimMIDSLVTOff",
+        "label" : "OFF",
+        "description" : "AVIONICS: MIDS Knob - OFF",
+        "style" : "knob",
+        "role" : "off",
+        "type" : "switch",
+        "stateful" : true
+      }, {
+        "callback" : "SimMIDSLVTOn",
+        "label" : "ON",
+        "description" : "AVIONICS: MIDS Knob - ON",
+        "style" : "knob",
+        "role" : "on",
+        "type" : "switch",
+        "stateful" : true
+      } ]
     } ]
   }, {
     "id" : "oxygenPanel",
@@ -11491,11 +11569,7 @@
         "type" : "button",
         "stateful" : false
       } ]
-    } ]
-  }, {
-    "id" : "flightCommands",
-    "label" : "FLIGHT COMMANDS",
-    "controlGroupConfigurations" : [ {
+    }, {
       "id" : "Radio-Send Message Other",
       "label" : "Send Message Other",
       "stateful" : false,

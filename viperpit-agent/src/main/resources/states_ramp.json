@@ -1746,6 +1746,21 @@
     "stateful" : true
   }, {
     "active" : false,
+    "callback" : "SimMIDSLVTZero",
+    "relatedStateConfigurations" : [ "SimMIDSLVTOff", "SimMIDSLVTOn" ],
+    "stateful" : true
+  }, {
+    "active" : true,
+    "callback" : "SimMIDSLVTOff",
+    "relatedStateConfigurations" : [ "SimMIDSLVTZero", "SimMIDSLVTOn" ],
+    "stateful" : true
+  }, {
+    "active" : false,
+    "callback" : "SimMIDSLVTOn",
+    "relatedStateConfigurations" : [ "SimMIDSLVTZero", "SimMIDSLVTOff" ],
+    "stateful" : true
+  }, {
+    "active" : false,
     "callback" : "SimOxySupplyOn",
     "relatedStateConfigurations" : [ "SimOxySupplyOff" ],
     "stateful" : false
