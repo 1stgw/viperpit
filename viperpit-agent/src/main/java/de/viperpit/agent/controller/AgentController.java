@@ -100,7 +100,7 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 		template.convertAndSend(TOPIC_STATES_UPDATE, stateChangeEvent);
 	}
 
-	@Scheduled(fixedRate = 100)
+	@Scheduled(fixedDelay = 100)
 	public void onCpdImagesUpdate() {
 		try {
 			BufferedImage screenshot = screenshotProvider.getUpdatedScreenshot();

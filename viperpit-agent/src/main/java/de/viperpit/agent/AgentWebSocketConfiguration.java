@@ -28,10 +28,10 @@ public class AgentWebSocketConfiguration implements WebSocketMessageBrokerConfig
 
 	@Override
 	public void configureWebSocketTransport(WebSocketTransportRegistration registry) {
-		registry
-			.setTimeToFirstMessage(600_000)
-			.setMessageSizeLimit(4* 1024 * 1024)
-			.setSendBufferSizeLimit(12 * 1024*1024);
+		registry //
+				.setTimeToFirstMessage(600_000) //
+				.setMessageSizeLimit(4 * 1024 * 1024) //
+				.setSendBufferSizeLimit(128 * 1024 * 1024); //
 	}
 
 	@Bean
