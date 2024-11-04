@@ -45,7 +45,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { mapActions, mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 
 export default Vue.extend({
   name: "CockpitFrame",
@@ -58,7 +58,7 @@ export default Vue.extend({
     ...mapGetters(["getAgent", "getConfiguration", "getConsoles", "isConnected"])
   },
   methods: {
-    reload: () => location.reload(),
+    reload: () => location.reload()
   }
 });
 </script>
