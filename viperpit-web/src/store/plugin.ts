@@ -26,7 +26,6 @@ export default function stompPlugin(store: Store<State>) {
       });
       store.dispatch("connectAgent", agentId);
       store.dispatch("initConfiguration");
-      store.dispatch("initStates");
     },
     error => {
       console.log(error);
