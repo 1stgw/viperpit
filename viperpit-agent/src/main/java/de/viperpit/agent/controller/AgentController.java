@@ -19,18 +19,11 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 
 import de.viperpit.agent.keys.KeyDispatcherService;
-import de.viperpit.agent.model.InitializeStateEvent;
-import de.viperpit.agent.model.ResetStateEvent;
 import de.viperpit.agent.model.StateChangeEvent;
 import de.viperpit.agent.model.TriggerStateChangeEvent;
-import de.viperpit.commons.cockpit.StateConfiguration;
 
 @Controller
 public class AgentController implements ApplicationListener<ApplicationEvent> {
-
-	private static final String APP_STATES_INIT = "/cockpit/states/init";
-
-	private static final String APP_STATES_RESET = "/cockpit/states/reset";
 
 	private static final String APP_STATES_TRIGGER_STATE_CHANGE = "/cockpit/states/triggerStateChange";
 
@@ -47,28 +40,11 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 	private ScreenshotProvider screenshotProvider;
 
 	@Autowired
-	private StateProvider stateProvider;
-
-	@Autowired
 	private SimpMessagingTemplate template;
 
 	@Override
 	public void onApplicationEvent(ApplicationEvent event) {
 		LOGGER.debug(event.toString());
-	}
-
-	@MessageMapping(APP_STATES_INIT)
-	@SendTo(TOPIC_STATES_UPDATE)
-	public StateChangeEvent onStatesInit(InitializeStateEvent initializeStateEvent) {
-		LOGGER.info("State intialization requested.");
-		return stateProvider.initializeStates();
-	}
-
-	@MessageMapping(APP_STATES_RESET)
-	@SendTo(TOPIC_STATES_UPDATE)
-	public StateChangeEvent onStatesReset(ResetStateEvent resetStateEvent) {
-		LOGGER.info("State reset requested.");
-		return stateProvider.resetStates();
 	}
 
 	@MessageMapping(APP_STATES_TRIGGER_STATE_CHANGE)
@@ -78,26 +54,16 @@ public class AgentController implements ApplicationListener<ApplicationEvent> {
 			return null;
 		}
 		String callback = triggerStateChangeEvent.getCallback();
-		StateConfiguration stateConfiguration = stateProvider.getStateConfiguration(callback);
-		if (stateConfiguration == null) {
+		if (callback == null) {
 			return null;
 		}
+
 		if (triggerStateChangeEvent.isStart()) {
 			keyDispatcherService.keyDown(callback);
-			return null;
 		} else {
 			keyDispatcherService.keyUp(callback);
-			return stateProvider.toggleBooleanState(stateConfiguration);
 		}
-	}
-
-	@Scheduled(fixedRate = 1000)
-	public void onStatesUpdate() {
-		StateChangeEvent stateChangeEvent = stateProvider.updateStatesFromSharedMemory();
-		if (stateChangeEvent.getUpdatedStates().isEmpty()) {
-			return;
-		}
-		template.convertAndSend(TOPIC_STATES_UPDATE, stateChangeEvent);
+		return null;
 	}
 
 	@Scheduled(fixedDelay = 100)

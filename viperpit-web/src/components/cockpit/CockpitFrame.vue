@@ -23,7 +23,7 @@
         </v-tab>
       </v-tabs>
       <v-spacer />
-      <v-btn icon @click="resetStates()">
+      <v-btn icon @click="reload()">
         <v-icon>mdi-sync</v-icon>
       </v-btn>
     </v-app-bar>
@@ -45,7 +45,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { mapActions, mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 
 export default Vue.extend({
   name: "CockpitFrame",
@@ -58,7 +58,7 @@ export default Vue.extend({
     ...mapGetters(["getAgent", "getConfiguration", "getConsoles", "isConnected"])
   },
   methods: {
-    ...mapActions(["resetStates"])
+    reload: () => location.reload()
   }
 });
 </script>

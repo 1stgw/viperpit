@@ -41,14 +41,6 @@ const store = new Vuex.Store<State>({
         });
       }
     },
-    initStates() {
-      const topic = "/app/cockpit/states/init";
-      Vue.prototype.$stomp.send(topic, JSON.stringify({}));
-    },
-    resetStates() {
-      const topic = "/app/cockpit/states/reset";
-      Vue.prototype.$stomp.send(topic, JSON.stringify({}));
-    },
     startStateChange(context, callback) {
       const topic = "/app/cockpit/states/triggerStateChange";
       Vue.prototype.$stomp.send(
@@ -124,7 +116,7 @@ const store = new Vuex.Store<State>({
       };
     },
     // eslint-disable-next-line no-unused-vars
-    getPanels: state => (consoleId: string) => {
+    getPanels: () => (consoleId: string) => {
       return store.getters.getConsole(consoleId).panelConfigurations;
     },
     getLatestCenterPedestalDisplayImage: state => {

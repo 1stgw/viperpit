@@ -4,8 +4,13 @@ build.scans.enabled=false
 connection.gradle.distribution=GRADLE_DISTRIBUTION(WRAPPER)
 connection.project.dir=
 eclipse.preferences.version=1
+<<<<<<< HEAD
 gradle.user.home=
 java.home=
+=======
+gradle.user.home=D\:/Packages/Gradle
+java.home=C\:/Users/joche/scoop/apps/temurin17-jdk/current
+>>>>>>> branch 'main' of git@github.com:1stgw/viperpit.git
 jvm.arguments=
 offline.mode=false
 override.workspace.settings=false
