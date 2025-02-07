@@ -1,4 +1,7 @@
-declare module "*.vue" {
-  import Vue from "vue";
-  export default Vue;
+import { Http } from "vue-resource/types/vue_resource";
+
+declare module "vue/types/vue" {
+  interface VueConstructor {
+    http: Http;
+  }
 }

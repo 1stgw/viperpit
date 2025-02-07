@@ -2,7 +2,7 @@ package de.viperpit.commons.cockpit;
 
 public enum StateType {
 
-	AIR("air"), RAMP("ramp"), TAXI("taxi");
+	AIR("air"), NONE("none"), RAMP("ramp"), TAXI("taxi");
 
 	private final String label;
 
@@ -16,6 +16,10 @@ public enum StateType {
 
 	public boolean isAir() {
 		return AIR.equals(this);
+	}
+
+	public boolean isNone() {
+		return NONE.equals(this);
 	}
 
 	public boolean isRamp() {

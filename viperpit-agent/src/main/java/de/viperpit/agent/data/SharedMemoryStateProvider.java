@@ -10,6 +10,7 @@ import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits3
 import static de.viperpit.agent.data.jna.FlightDataLibrary.FlightData.LightBits3.RightGearDown;
 import static de.viperpit.commons.cockpit.StateType.AIR;
 import static de.viperpit.commons.cockpit.StateType.RAMP;
+import static de.viperpit.commons.cockpit.StateType.NONE;
 import static de.viperpit.commons.cockpit.StateType.TAXI;
 
 import java.io.File;
@@ -25,8 +26,11 @@ public class SharedMemoryStateProvider extends AbstractSharedMemoryStateProvider
 
 	public StateType getCurrentStateType() {
 		SharedMemoryData sharedMemoryData = getSharedMemoryReader().readData();
-		if (sharedMemoryData == null) {
-			return RAMP;
+		if (sharedMemoryData == null //
+				|| sharedMemoryData.getFlightData2() == null //
+				|| sharedMemoryData.getFlightData2().BMSVersionMajor == 0 //
+		) {
+			return NONE;
 		}
 		if (isBitSet(OnGround, sharedMemoryData.getFlightData().lightBits3)) {
 			if (isBitSet(Power_Off, sharedMemoryData.getFlightData().lightBits3)) {

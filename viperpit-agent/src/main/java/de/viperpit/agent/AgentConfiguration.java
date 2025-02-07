@@ -11,6 +11,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.Resource;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.fasterxml.jackson.core.SerializableString;
 import com.fasterxml.jackson.core.io.CharacterEscapes;
@@ -19,7 +23,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Configuration
 @ComponentScan("de.viperpit.agent")
 @PropertySource("classpath:/agent.properties")
-public class AgentConfiguration {
+@EnableAsync
+public class AgentConfiguration implements WebMvcConfigurer {
 
 	@SuppressWarnings("serial")
 	public static class SafeCharacterEscapes extends CharacterEscapes {
@@ -47,12 +52,26 @@ public class AgentConfiguration {
 
 	}
 
+	@Override
+	public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
+		configurer.setTaskExecutor(mvcTaskExecutor());
+		configurer.setDefaultTimeout(30_000);
+	}
+
 	@Bean
 	public Properties directInputProperties(@Value("classpath:/mapping_directinput.properties") Resource resource)
 			throws IOException {
 		Properties properties = new Properties();
 		properties.load(resource.getInputStream());
 		return properties;
+	}
+
+	@Bean
+	public ThreadPoolTaskExecutor mvcTaskExecutor() {
+		ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
+		threadPoolTaskExecutor.setCorePoolSize(10);
+		threadPoolTaskExecutor.setThreadNamePrefix("mvc-task-");
+		return threadPoolTaskExecutor;
 	}
 
 	@Bean

@@ -2,6 +2,7 @@ package de.viperpit.agent.controller;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.util.List;
 
@@ -35,48 +36,60 @@ public class ScreenshotProvider {
 		LOGGER.info("Using window " + windowName + " on path " + processFilePath);
 	}
 
-	public BufferedImage getUpdatedScreenshot() {
+	public BufferedImage getScreenshot() {
+		return this.lastScreenshot;
+	}
+
+	public boolean isRequiresUpdate() {
 		try {
 			// We're gonna find and reuse the cached window if possible
 			WinDef.HWND hwnd = this.findWindow();
 			if (hwnd == null) {
-				return null;
+				return false;
 			}
 
 			// Get the screenshot
 			BufferedImage screenshot = ScreenshotUtil.getScreenshot(hwnd);
 			if (screenshot == null) {
-				return null;
+				return false;
 			}
 
 			// We want to be conservative with messaging, so we only send new screenshots if
 			// necessary
 			boolean requiresUpdate = requiresUpdate(screenshot);
 
-			this.lastScreenshot = screenshot;
-
 			if (!requiresUpdate) {
-				return null;
+				return false;
 			}
 
-			return screenshot;
+			// Cache the latest screenshot
+			this.lastScreenshot = screenshot;
+
+			return true;
 		} catch (Exception exception) {
-			return null;
+			return false;
 		}
 	}
 
 	private WinDef.HWND findWindow() {
-		List<DesktopWindow> windows = WindowUtils.getAllWindows(false);
-		for (DesktopWindow currentWindow : windows) {
-			if (!currentWindow.getFilePath().equals(processFilePath)) {
-				continue;
+		try {
+			List<DesktopWindow> windows = WindowUtils.getAllWindows(false);
+			for (DesktopWindow currentWindow : windows) {
+				if (!currentWindow.getFilePath().equals(processFilePath)) {
+					continue;
+				}
+				if (!"*".equals(windowName) && !currentWindow.getTitle().equals(windowName)) {
+					continue;
+				}
+				Rectangle locAndSize = currentWindow.getLocAndSize();
+				if (locAndSize.height <= 0 && locAndSize.width <= 0) {
+					continue;
+				}
+				return currentWindow.getHWND();
 			}
-			if (!currentWindow.getTitle().equals(windowName)) {
-				continue;
-			}
-			return currentWindow.getHWND();
+		} catch (Exception exception) {
+			LOGGER.error(exception.getMessage());
 		}
-
 		return null;
 	}
 

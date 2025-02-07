@@ -1,4 +1,5 @@
 import Vue from "vue";
+import { HttpResponse } from "vue-resource/types/vue_resource";
 import Vuex from "vuex";
 import {
   AGENTS_CONNECT,
@@ -7,24 +8,25 @@ import {
   CONFIGURATION_UPDATE,
   STATES_UPDATE
 } from "./mutation-types";
-import stompPlugin from "./plugin";
+import loaderPlugin from "./plugin";
+import { ConsoleConfiguration, ControlGroupConfiguration, PanelConfiguration } from "./types";
 
 Vue.use(Vuex);
 
 export class State {
   agentId: string | null = null;
   cockpitId = "f16";
-  actions: Record<string, unknown> = {};
-  configuration: { consoleConfigurations: []; panelConfigurations: [] } = {
+  actions: Record<string, { value: boolean }> = {};
+  configuration: { consoleConfigurations: ConsoleConfiguration[]; panelConfigurations: PanelConfiguration[] } = {
     consoleConfigurations: [],
     panelConfigurations: []
   };
-  latestCenterPedestalDisplayImage?: unknown;
+  latestCenterPedestalDisplayImage?: string = undefined;
 }
 
 const store = new Vuex.Store<State>({
   strict: true,
-  plugins: [stompPlugin],
+  plugins: [loaderPlugin],
   state: new State(),
   actions: {
     connectAgent({ commit }, agentId) {
@@ -36,30 +38,16 @@ const store = new Vuex.Store<State>({
     initConfiguration(context) {
       const cockpitId = context.getters.getCockpit;
       if (cockpitId) {
-        (Vue as any).http.get("/data/configuration_" + context.getters.getCockpit + ".json").then((response: any) => {
+        Vue.http.get(`/data/configuration_${context.getters.getCockpit}.json`).then((response: HttpResponse) => {
           context.commit(CONFIGURATION_UPDATE, response.data);
         });
       }
     },
     startStateChange(context, callback) {
-      const topic = "/app/cockpit/states/triggerStateChange";
-      Vue.prototype.$stomp.send(
-        topic,
-        JSON.stringify({
-          callback: callback,
-          start: true
-        })
-      );
+      Vue.http.get(`/services/control/trigger/${callback}/start`);
     },
     endStateChange(context, callback) {
-      const topic = "/app/cockpit/states/triggerStateChange";
-      Vue.prototype.$stomp.send(
-        topic,
-        JSON.stringify({
-          callback: callback,
-          start: false
-        })
-      );
+      Vue.http.get(`/services/control/trigger/${callback}/stop`);
     },
     updateStates({ commit }, delta) {
       commit(STATES_UPDATE, delta);
@@ -83,7 +71,7 @@ const store = new Vuex.Store<State>({
     },
     getConsole: state => (id: string) => {
       const consoleConfiguration = state.configuration.consoleConfigurations.find(
-        (consoleConfiguration: any) => consoleConfiguration.id === id
+        consoleConfiguration => consoleConfiguration.id === id
       );
       if (consoleConfiguration) {
         return consoleConfiguration;
@@ -93,17 +81,18 @@ const store = new Vuex.Store<State>({
         };
       }
     },
-    getControlConfigurationWithActiveState: (state: any) => (controlGroupConfiguration: any) => {
-      const actions = state.actions;
-      return controlGroupConfiguration.controlConfigurations.find((controlConfiguration: any) => {
-        const action = actions[controlConfiguration.callback];
-        return action?.value === true ? controlConfiguration : undefined;
-      });
-    },
+    getControlConfigurationWithActiveState:
+      (state: State) => (controlGroupConfiguration: ControlGroupConfiguration) => {
+        const actions = state.actions;
+        return controlGroupConfiguration.controlConfigurations.find(controlConfiguration => {
+          const action = actions[controlConfiguration.callback];
+          return action?.value === true ? controlConfiguration : undefined;
+        });
+      },
     getPanel: state => (consoleId: string, panelId: string) => {
       if (panelId) {
-        const panelConfiguration: any = state.configuration.panelConfigurations.find(
-          (panelConfiguration: any) => panelConfiguration.id === panelId
+        const panelConfiguration = state.configuration.panelConfigurations.find(
+          panelConfiguration => panelConfiguration.id === panelId
         );
         if (panelConfiguration) {
           return panelConfiguration;
@@ -115,7 +104,6 @@ const store = new Vuex.Store<State>({
         controlConfigurations: []
       };
     },
-    // eslint-disable-next-line no-unused-vars
     getPanels: () => (consoleId: string) => {
       return store.getters.getConsole(consoleId).panelConfigurations;
     },
