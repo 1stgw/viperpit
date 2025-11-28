@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --modern",
-    "lint": "vue-cli-service lint",
+    "lint": "npx @biomejs/biome check --write",
     "production": "vue-cli-service serve --mode production"
   },
   "dependencies": {
@@ -25,52 +25,20 @@
     "webstomp-client": "^1.2.6"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.10.4",
-    "@vue/cli-plugin-babel": "^5.0.8",
-    "@vue/cli-plugin-eslint": "^5.0.8",
-    "@vue/cli-plugin-pwa": "^5.0.8",
-    "@vue/cli-plugin-router": "^5.0.8",
-    "@vue/cli-plugin-typescript": "^5.0.8",
-    "@vue/cli-plugin-vuex": "^5.0.8",
-    "@vue/cli-service": "^5.0.8",
-    "@vue/eslint-config-typescript": "^13.0.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-vue": "^9.29.1",
-    "postcss": "^8.4.47",
-    "prettier": "^3.3.3",
-    "sass": "^1.69.7",
-    "sass-loader": "^16.0.2",
-    "typescript": "^5.6.3",
+    "@biomejs/biome": "2.3.8",
+    "@vue/cli-plugin-babel": "^5.0.9",
+    "@vue/cli-plugin-pwa": "^5.0.9",
+    "@vue/cli-plugin-router": "^5.0.9",
+    "@vue/cli-plugin-typescript": "^5.0.9",
+    "@vue/cli-plugin-vuex": "^5.0.9",
+    "@vue/cli-service": "^5.0.9",
+    "postcss": "^8.5.6",
+    "sass": "^1.94.2",
+    "sass-loader": "^16.0.6",
+    "typescript": "^5.9.3",
     "vue-cli-plugin-vuetify": "^2.5.8",
     "vue-template-compiler": "^2.7.16",
     "vuetify-loader": "^1.9.2"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/strongly-recommended",
-      "@vue/typescript/recommended",
-      "@vue/typescript",
-      "plugin:prettier/recommended",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "ecmaVersion": "latest",
-      "sourceType": "module"
-    },
-    "rules": {}
-  },
-  "prettier": {
-    "arrowParens": "avoid",
-    "endOfLine": "auto",
-    "jsxBracketSameLine": true,
-    "printWidth": 120,
-    "trailingComma": "none"
   },
   "browserslist": [
     "> 1%",

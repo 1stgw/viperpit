@@ -48,8 +48,8 @@
 </style>
 
 <script>
-import ButtonContent from "@/components/controls/ButtonContent";
 import { mapActions } from "vuex";
+import ButtonContent from "@/components/controls/ButtonContent";
 
 export default {
   name: "ToggleButtonGroup",
@@ -83,8 +83,7 @@ export default {
         const selected = this.$store.getters.getControlConfigurationWithActiveState(this.controlGroupConfiguration);
         return selected?.callback;
       },
-      // eslint-disable-next-line no-unused-vars
-      set: function () {
+      set: () => {
         // Empty on purpose
       }
     }

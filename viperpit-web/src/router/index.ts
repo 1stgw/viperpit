@@ -1,8 +1,8 @@
+import Vue from "vue";
+import VueRouter from "vue-router";
 import CenterPedestalDisplay from "@/components/cockpit/CenterPedestalDisplay.vue";
 import Cockpit from "@/components/cockpit/Cockpit.vue";
 import CockpitFrame from "@/components/cockpit/CockpitFrame.vue";
-import Vue from "vue";
-import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 

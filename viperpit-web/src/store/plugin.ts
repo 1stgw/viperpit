@@ -1,14 +1,14 @@
-import { toDataUrl } from "@/utils/toDataUrl";
 import Vue from "vue";
 import VueResource from "vue-resource";
-import { Store } from "vuex";
-import { State } from ".";
+import type { Store } from "vuex";
+import { toDataUrl } from "@/utils/toDataUrl";
+import type { State } from ".";
 
 const isServicesAvailable = async () => {
   try {
     const response = await Vue.http.get(`/services/control/state`);
     return response.ok;
-  } catch (error) {
+  } catch (_error) {
     return false;
   }
 };
@@ -32,7 +32,7 @@ const loadImage = async () => {
     }
 
     return toDataUrl(data);
-  } catch (error) {
+  } catch (_error) {
     return null;
   }
 };
@@ -42,7 +42,6 @@ Vue.use(VueResource);
 export default async function loaderPlugin(store: Store<State>) {
   const agentId = window.location.hostname;
 
-  // eslint-disable-next-line prefer-const
   let eventSource: EventSource;
 
   const reconnect = () => {

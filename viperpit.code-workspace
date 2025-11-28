@@ -5,16 +5,15 @@
     }
   ],
   "settings": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "vetur.validation.template": false,
+    "biome.enabled": true,
+    "biome.configurationPath": ".config/biome.json",
     "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.fixAll.eslint": "explicit"
+      "source.fixAll.biome": "explicit",
+      "source.organizeImports.biome": "explicit"
     },
-    "eslint.workingDirectories": [
-      "./viperpit-web"
-    ],
+    "editor.defaultFormatter": "biomejs.biome",
+    "java.compile.nullAnalysis.mode": "automatic",
     "java.configuration.updateBuildConfiguration": "interactive",
-    "java.compile.nullAnalysis.mode": "automatic"
+    "vetur.validation.template": false
   }
 }

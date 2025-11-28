@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { HttpResponse } from "vue-resource/types/vue_resource";
+import type { HttpResponse } from "vue-resource/types/vue_resource";
 import Vuex from "vuex";
 import {
   AGENTS_CONNECT,
@@ -9,7 +9,7 @@ import {
   STATES_UPDATE
 } from "./mutation-types";
 import loaderPlugin from "./plugin";
-import { ConsoleConfiguration, ControlGroupConfiguration, PanelConfiguration } from "./types";
+import type { ConsoleConfiguration, ControlGroupConfiguration, PanelConfiguration } from "./types";
 
 Vue.use(Vuex);
 
@@ -43,10 +43,10 @@ const store = new Vuex.Store<State>({
         });
       }
     },
-    startStateChange(context, callback) {
+    startStateChange(_context, callback) {
       Vue.http.get(`/services/control/trigger/${callback}/start`);
     },
-    endStateChange(context, callback) {
+    endStateChange(_context, callback) {
       Vue.http.get(`/services/control/trigger/${callback}/stop`);
     },
     updateStates({ commit }, delta) {

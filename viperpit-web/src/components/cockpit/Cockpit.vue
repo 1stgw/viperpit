@@ -36,12 +36,11 @@
 </template>
 
 <script lang="ts">
-import Panel from "@/components/cockpit/Panel.vue";
 import Vue from "vue";
 import { mapGetters } from "vuex";
+import Panel from "@/components/cockpit/Panel.vue";
 
 export default Vue.extend({
-  // eslint-disable-next-line vue/multi-word-component-names
   name: "Cockpit",
   components: {
     Panel

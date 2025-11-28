@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import ButtonContent from "@/components/controls/ButtonContent";
 import { mapActions } from "vuex";
+import ButtonContent from "@/components/controls/ButtonContent";
 
 export default {
   name: "ToggleButton",
